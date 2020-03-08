@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Apache Kafka CCDAK Exam Notes - Conding n Concepts</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="Apache Kafka CCDAK Exam Notes">
+	<meta property="og:title" content="Apache Kafka CCDAK Exam Notes" />
+<meta property="og:description" content="Apache Kafka CCDAK Exam Notes" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ashishlahoti.github.io/post/apache-kafka-ccdak-exam-notes/" />
+<meta property="article:published_time" content="2019-06-13T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-06-13T00:00:00+00:00" />
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Apache Kafka CCDAK Exam Notes"/>
+<meta name="twitter:description" content="Apache Kafka CCDAK Exam Notes"/>
+
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="Conding n Concepts" rel="home">
+				<div class="logo__title">Conding n Concepts</div>
+				<div class="logo__tagline">Technical Blog</div>
+			</a>
+		</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About Me</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Apache Kafka CCDAK Exam Notes</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2019-06-13T00:00:00Z">2019-06-13</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/kafka/" rel="category">Kafka</a>
+	</span>
+</div></div>
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#exam-preparation">Exam Preparation</a></li>
+    <li><a href="#exam-questions-from-ccdak">Exam Questions from CCDAK</a></li>
+    <li><a href="#exam-notes">Exam Notes</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#kafka-cli">KAFKA CLI</a></li>
+    <li><a href="#kafka-api">KAFKA API</a></li>
+    <li><a href="#confluent-schema-registry">Confluent Schema Registry</a>
+      <ul>
+        <li><a href="#1-avro">1. Avro</a></li>
+        <li><a href="#2-confluent-schema-notes">2. Confluent Schema Notes</a></li>
+        <li><a href="#3-confluent-schema-compatibility-types">3. Confluent Schema Compatibility Types</a></li>
+      </ul>
+    </li>
+    <li><a href="#kafka-streams">Kafka Streams</a>
+      <ul>
+        <li><a href="#1-stateless-operators">1. Stateless operators</a></li>
+        <li><a href="#2-stateful-operators">2. Stateful operators</a></li>
+        <li><a href="#3-window">3. Window</a></li>
+      </ul>
+    </li>
+    <li><a href="#default-ports">Default Ports</a></li>
+  </ul>
+</nav>
+	</div>
+</div>
+<div class="content post__content clearfix">
+			<p>Hi Readers,</p>
+<p>If you are planning or preparing for Apache Kafka Certification then this is the right place for you.There are many Apache Kafka Certifications are available in the market but CCDAK (Confluent Certified Developer for Apache Kafka) is the most known certification as Kafka is now maintained by Confluent.</p>
+<!-- raw HTML omitted -->
+<p>Confluent has introduced CCOAK certification recently. CCOAK is mainly for devOps engineer focusing on build and manage Kafka cluster. CCDAK is mainly for developers and Solution architects focusing on design, producer and consumer. If you are still not sure, I recommend to go for CCDAK as it is more comprehensive exam as compared to CCOAK.</p>
+<p>From here onward, we will talk about how to prepare for CCDAK.</p>
+<p>I have recently <a href="https://www.credential.net/3e05601c-df11-4ecd-8a53-3e1d21037df8">cracked CCDAK</a> and would suggest that prepare well for the exam. This exam verify your theoretical as well as practical understanding of Kafka. You need to answer 60 questions in 90 minutes from your laptop under the supervision of online proctor. There is no mention of number of questions need to be correct in order to pass the exam. They just tell you pass or fail at the end of exam. At least 40-50 hours of preparation is required.</p>
+<h2 id="exam-preparation">Exam Preparation</h2>
+<hr>
+<p>I have prepared for CCDAK using following:</p>
+<ol>
+<li><a href="https://kafka.apache.org/documentation/">Apacha Kafka Documentation</a></li>
+<li><a href="https://docs.confluent.io/current/index.html">Confluent Kafka Documentation</a></li>
+<li><a href="https://www.confluent.io/wp-content/uploads/confluent-kafka-definitive-guide-complete.pdf">Confluent Kafka Definitive Guide PDF</a></li>
+<li><a href="https://www.udemy.com/course/apache-kafka-tutorial-for-beginners/">Udemy Apache Kafka course for beginners</a></li>
+<li><a href="https://www.udemy.com/course/confluent-certified-developer-for-apache-kafka/">Udemy CCDAK 150 practice exam questions!</a></li>
+</ol>
+<p>You should prepare well in following areas:</p>
+<ol>
+<li>Kafka Architecture
+<ul>
+<li>Read Confluent Kafka Definitive Guide PDF</li>
+<li>Read Apache Kafka Documentation</li>
+<li>Once you read all these, revise using KAFKA THEORY section in this blog. You can expect most of the questions from these notes.</li>
+</ul>
+</li>
+<li>Kafka Java APIs
+<ul>
+<li>Read Apache Kafka Documentation how to create producer and consumer in Java</li>
+</ul>
+</li>
+<li>Kafka CLI
+<ul>
+<li>Read Confluent Kafka Definitive Guide PDF</li>
+<li>Once you read all these, revise using KAFKA CLI section in this blog. You can expect most of the questions from these notes.</li>
+</ul>
+</li>
+<li>Kafka Streams
+<ul>
+<li>Read Confluent Kafka Definitive Guide PDF</li>
+</ul>
+</li>
+<li>Kafka Monitoring (Metrics)
+<ul>
+<li>Read Confluent Kafka Definitive Guide PDF</li>
+<li>Read Apache Kafka Documentation for important metrics</li>
+<li>Read Confluent Kafka Documentation as well</li>
+</ul>
+</li>
+<li>Kafka Security
+<ul>
+<li>Read Apache Kafka Documentation</li>
+</ul>
+</li>
+<li>Confluent KSQL
+<ul>
+<li>Read about KSQL from Confluent Documentation</li>
+</ul>
+</li>
+<li>Confluent REST Proxy
+<ul>
+<li>Read about KSQL from Confluent Documentation</li>
+</ul>
+</li>
+<li>Confluent Schema Registry
+<ul>
+<li>Read about Schema Registry from Confluent Documentation</li>
+<li>You can expect most of the questions regarding Confluent Schema Registry from these notes.</li>
+</ul>
+</li>
+</ol>
+<h2 id="exam-questions-from-ccdak">Exam Questions from CCDAK</h2>
+<hr>
+<ol>
+<li>Kafka Theory</li>
+</ol>
+<ul>
+<li>Kafka is a &hellip;. ? pub-sub system</li>
+<li>Mostly Kafka is written in which language? Scala</li>
+</ul>
+<ol start="2">
+<li>Kafka Streams (Read Kafka Streams notes to get answers of below questions)</li>
+</ol>
+<ul>
+<li>Which of the Kafka Stream operators are stateful ?</li>
+<li>Which of the Kafka Stream operators are stateless ?</li>
+<li>Which window is not having gap ?</li>
+</ul>
+<ol start="3">
+<li>Confluent Schema Registry (Read Confluent Schema Registry notes to get answers of below questions)</li>
+</ol>
+<ul>
+<li>Which of the following is not a primitive type of Avro ?</li>
+<li>Which of the following in not a complex type of Avro?</li>
+<li>Which of the following is not a required field in Avro Schema?</li>
+<li>Delete a field without default value in Avro schema is &hellip;&hellip; compatibility?</li>
+</ul>
+<h2 id="exam-notes">Exam Notes</h2>
+<hr>
+<h6 id="cluster">Cluster</h6>
+<h6 id="rack">Rack</h6>
+<h6 id="broker">Broker</h6>
+<ul>
+<li>Every broker in Kafka is a &ldquo;bootstrap server&rdquo; which knows about all brokers, topics and partitions (metadata) that means Kafka client (e.g. producer,consumer etc) only need to connect to one broker in order to connect to entire cluster.</li>
+<li>At all times, only one broker should be the controller, and one broker must always be the controller in the cluster</li>
+</ul>
+<h6 id="topic">Topic</h6>
+<ul>
+<li>Kafka takes bytes as input without even loading them into memory (that&rsquo;s called zero copy)</li>
+<li>Brokers have defaults for all the topic configuration parameters</li>
+</ul>
+<h6 id="partition">Partition</h6>
+<ul>
+<li>Topic can have one or more partition.</li>
+<li>It is not possible to delete a partition of topic once created.</li>
+<li>Order is guaranteed within the partition and once data is written into partition, its immutable!</li>
+<li>If producer writes at 1 GB/sec and consumer consumes at 250MB/sec then requires 4 partition!</li>
+</ul>
+<h4 id="segment">Segment</h4>
+<ul>
+<li>Partitions are made of segments (<em><strong>.log</strong></em> files)</li>
+<li>At a time only one segment is active in a partition</li>
+<li><strong>log.segment.bytes</strong> = 1 GB (default) Max size of a single segment in bytes</li>
+<li><strong>log.segment.ms</strong> = 1 week (default) Time kafka will wait before closing the segment if not full</li>
+<li>Segment come with two indexes (files):-
+<ol>
+<li>An offset to position index (<em><strong>.index</strong></em>file): Allows kafka where to read to find a message</li>
+<li>A timestamp to offset index (<em><strong>.timeindex</strong></em> file): Allows kafka to find a message with a timestamp</li>
+</ol>
+</li>
+<li><strong>log.cleanup.policy</strong> = delete (Kafka default for all user topics) Delete data based on age of data (default is 1 week)</li>
+<li><strong>log.cleanup.policy</strong> = compact Delete based on keys of your messages. Will delete old duplicate keys after the active segment is committed. (Kafka default  for topic __consumer_offsets)</li>
+<li>Log cleanup happen on partition segments. Smaller/more segments means the log cleanup will happen more often!</li>
+<li>The cleaner checks for work every 15 seconds (log.cleaner.backoff.ms)</li>
+<li><strong>log.retention.hours</strong> = 1 week (default) number of hours to keep data for</li>
+<li><strong>log.retention.bytes</strong> = -1 (infinite default) max size in bytes for each partition</li>
+<li>Old segments will be deleted based on log.retention.hours or log.retention.bytes rule</li>
+<li>The offset of message is immutable.</li>
+<li>Deleted records can still be seen by consumers for a period of delete.retention.ms=24 hours (default)</li>
+</ul>
+<h6 id="offset">Offset</h6>
+<ul>
+<li>Partition is having its own offset starting from 0.</li>
+</ul>
+<h6 id="topic-replication">Topic Replication</h6>
+<ul>
+<li>Replication factor = 3 and partition = 2 means there will be total 6 partition distributed across Kafka cluster. Each partition will be having 1 leader and 2 ISR (in-sync replica).</li>
+<li>Broker contains leader partition called leader of that partition and only leader can receive and serve data for partition.</li>
+<li>Replication factor can not be greater then number of broker in the kafka cluster. If topic is having a replication factor of 3 then each partition will live on 3 different brokers.</li>
+</ul>
+<h6 id="producer">Producer</h6>
+<ul>
+<li>Automatically recover from errors: LEADER_NOT_AVAILABLE, NOT_LEADER_FOR_PARTITION, REBALANCE_IN_PROGRESS</li>
+<li>Non retriable errors: MESSAGE_TOO_LARGE</li>
+<li>When produce to a topic which doesn&rsquo;t exist and auto.create.topic.enable=true then kafka creates the topic automatically with the broker/topic settings num.partition and default.replication.factor</li>
+</ul>
+<h6 id="producer-acknowledgment">Producer Acknowledgment</h6>
+<ul>
+<li>
+<p><strong>acks=0</strong> Producer do not wait for ack (possible data loss)</p>
+</li>
+<li>
+<p><strong>acks=1</strong> Producer wait for leader ack (limited data loss)</p>
+</li>
+<li>
+<p><strong>acks=all</strong> Producer wait for leader+replica ack (no data loss)</p>
+<p>acks=all must be used in conjunction with min.insync.replicas (can be set at broker or topic level)
+min.insync.replica=2 implies that at least 2 brokers that are ISR(including leader) must acknowledge
+e.g. replication.factor=3, min.insync.replicas=2,acks=all can only tolerate 1 broker going down, otherwise the producer will receive an exception NOT_ENOUGH_REPLICAS on send</p>
+</li>
+</ul>
+<h6 id="safe-producer-config">Safe Producer Config</h6>
+<ul>
+<li>min.insync.replicas=2 (set at broker or topic level)</li>
+<li>retries=MAX_INT: number of reties by producer in case of transient failure/exception. (default is 0)</li>
+<li>max.in.flight.per.connection number=5: number of producer request can be made in parellel (default is 5)</li>
+<li>acks=all</li>
+<li>enable.idempotence=true: producer send producerId with each message to identify for duplicate msg at kafka end. When kafka receives duplicate message with same producerId which it already committed. It do not commit it again and send ack to producer (default is false)</li>
+</ul>
+<h6 id="high-throughput-producer-using-compression-and-batching">High Throughput Producer using compression and batching</h6>
+<ul>
+<li>compression.type=snappy: value can be none(default), gzip, lz4, snappy. Compression is enabled at the producer level and doesn&rsquo;t require any config change in broker or consumer Compression is more effective in case of bigger batch of messages being sent to kafka</li>
+<li>linger.ms=20:Number of millisecond a producer is willing to wait before sending a batch out. (default 0). Increase linger.ms value increase the chance of batching.</li>
+<li>batch.size=32KB or 64KB: Maximum number of bytes that will be included in a batch (default 16KB). Any message bigger than the batch size will not be batched</li>
+</ul>
+<h6 id="message-key">Message Key</h6>
+<ul>
+<li>Producer can choose to send a key with message.</li>
+<li>If key= null, data is send in round robin</li>
+<li>If key is sent, then all message for that key will always go to same partition. This can be used to order the messages for a specific key since order is guaranteed in same partition.</li>
+<li>Adding a partition to the topic will loose the guarantee of same key go to same partition.</li>
+<li>Keys are hashed using &ldquo;murmur2&rdquo; algorithm by default.</li>
+</ul>
+<h6 id="consumer">Consumer</h6>
+<ul>
+<li>Per thread one consumer is the rule. Consumer must not be multi threaded.</li>
+<li><strong>records-lag-max</strong> (monitoring metrics) The maximum lag in terms of number of records for any partition in this window. An increasing value over time is your best indication that the consumer group is not keeping up with the producers.</li>
+</ul>
+<h6 id="consumer-group">Consumer Group</h6>
+<h6 id="consumer-offset">Consumer Offset</h6>
+<p>When consumer in a group has processed the data received from Kafka, it commits the offset in Kafka topic named _consumer_offset which is used when a consumer dies, it will be able to read back from where it left off.</p>
+<h6 id="delivery-semantics">Delivery Semantics</h6>
+<p>At most once : Offset are committed as soon as message batch is received. If the processing goes wrong, the message will be lost (it won&rsquo;t be read again)
+At least once (default): Offset are committed after the message is processed.If the processing goes wrong, the message will be read again. This can result in duplicate processing of message. Make sure your processing is idempotent. (i.e. re-processing the message won&rsquo;t impact your systems). For most of the application, we use this and ensure processing are idempotent.
+Exactly once: Can only be achieved for Kafka=&gt;Kafka workflows using Kafka Streams API. For Kafka=&gt;Sink workflows, use an idempotent consumer.</p>
+<h6 id="consumer-offset-commit-strategy">Consumer Offset commit strategy</h6>
+<p>enable.auto.commit=true &amp; synchronous processing of batches: with auto commit, offset will be committed automatically for you at regular interval (auto.commit.interval.ms=5000 by default) every time you call .poll(). If you don&rsquo;t use synchronous processing, you will be in &ldquo;at most once&rdquo; behavior because offsets will be committed before your data is processed.
+enable.auto.commit=false &amp; manual commit of offsets (recommended)</p>
+<h6 id="consumer-offset-reset-behavior">Consumer Offset reset behavior</h6>
+<p>auto.offset.reset=latest: will read from the end of the log
+auto.offset.reset=earliest: will read from the start of the log
+auto.offset.reset=none: will throw exception of no offset is found
+Consumer offset can be lost if hasn&rsquo;t read new data in 7 days. This can be controlled by broker setting offset.retention.minutes</p>
+<h6 id="consumer-poll-behavior">Consumer Poll Behavior</h6>
+<p>fetch.min.bytes = 1 (default): Control how much data you want to pull at least on each request. Help improving throughput and decreasing request number. At the cost of latency.
+max.poll.records = 500 (default): Controls how many records to receive per poll request. Increase if your messages are very small and have a lot of available RAM.
+max.partition.fetch.bytes = 1MB (default): Maximum data returned by broker per partition. If you read from 100 partition, you will need a lot of memory (RAM)
+fetch.max.bytes = 50MB (default): Maximum data returned for each fetch request (covers multiple partition). Consumer performs multiple fetches in parallel.</p>
+<h6 id="consumer-heartbeat-thread">Consumer Heartbeat Thread</h6>
+<p>Heartbeat mechanism is used to detect if consumer application in dead.
+session.timeout.ms=10 seconds (default) If heartbeat is not sent in 10 second period, the consumer is considered dead. Set lower value to faster consumer rebalances
+heartbeat.interval.ms=3 seconds (default) Heartbeat is sent in every 3 seconds interval. Usually 1/3rd of session.timeout.ms</p>
+<h6 id="consumer-poll-thread">Consumer Poll Thread</h6>
+<p>Poll mechanism is also used to detect if consumer application is dead.
+max.poll.interval.ms = 5 minute (default) Max amount of time between two .poll() calls before declaring consumer dead. If processing of message batch takes more time in general in application then should increase the interval.</p>
+<h6 id="kafka-guarantees">Kafka Guarantees</h6>
+<p>Messages are appended to a topic-partition in the order they are sent
+Consumer read the messages in the order stored in topic-partition
+With a replication factor of N, producers and consumers can tolerate upto N-1 brokers being down
+As long as number of partitions remains constant for a topic ( no new partition), the same key will always go to same partition</p>
+<h6 id="client-bi-directional-compatibility">Client Bi-Directional Compatibility</h6>
+<p>an Older client (1.1) can talk to Newer broker (2.0)
+a Newer client (2.0) can talk to Older broker (1.1)</p>
+<h6 id="kafka-connect">Kafka Connect</h6>
+<p>Source connect: Get data from common data source to Kafka
+Sink connect: Publish data from Kafka to common data source</p>
+<h6 id="zookeeper">Zookeeper</h6>
+<p>ZooKeeper servers will be deployed on multiple nodes. This is called an ensemble. An ensemble is a set of 2n + 1 ZooKeeper servers where n is any number greater than 0. The odd number of servers allows ZooKeeper to perform majority elections for leadership. At any given time, there can be up to n failed servers in an ensemble and the ZooKeeper cluster will keep quorum. If at any time, quorum is lost, the ZooKeeper cluster will go down.
+In Zookeeper multi-node configuration, initLimit and syncLimit are used to govern how long following ZooKeeper servers can take to initialize with the current leader and how long they can be out of sync with the leader.
+If tickTime=2000, initLimit=5 and syncLimit=2 then a follower can take (tickTime<em>initLimit) = 10000ms to initialize and may be out of sync for up to (tickTime</em>syncLimit) = 4000ms
+In Zookeeper multi-node configuration, The server.* properties set the ensemble membership. The format is server.<!-- raw HTML omitted -->=<!-- raw HTML omitted -->:<!-- raw HTML omitted -->:<!-- raw HTML omitted -->. Some explanation:
+myid is the server identification number. In this example, there are three servers, so each one will have a different myid with values 1, 2, and 3 respectively. The myid is set by creating a file named myid in the dataDir that contains a single integer in human readable ASCII text. This value must match one of the myid values from the configuration file. If another ensemble member has already been started with a conflicting myid value, an error will be thrown upon startup.
+leaderport is used by followers to connect to the active leader. This port should be open between all ZooKeeper ensemble members.
+electionport is used to perform leader elections between ensemble members. This port should be open between all ZooKeeper ensemble members.</p>
+<h2 id="kafka-cli">KAFKA CLI</h2>
+<hr>
+<ol>
+<li>
+<p>Start a zookeeper at default port 2181</p>
+<blockquote>
+<p>bin/zookeeper-server-start.sh config/zookeeper.properties</p>
+</blockquote>
+</li>
+<li>
+<p>Start a kafka server at default port 9092</p>
+<blockquote>
+<p>bin/kafka-server-start.sh config/server.properties</p>
+</blockquote>
+</li>
+<li>
+<p>Create a kafka topic with name my-first-topic</p>
+<blockquote>
+<p>bin/kafka-topics.sh &ndash;zookeeper localhost:2181 &ndash;topic my-first-topic &ndash;create &ndash;replication-factor 1 &ndash;partitions 1</p>
+</blockquote>
+</li>
+<li>
+<p>List all kafka topics</p>
+<blockquote>
+<p>bin/kafka-topics.sh &ndash;zookeeper localhost:2181 &ndash;list</p>
+</blockquote>
+</li>
+<li>
+<p>Describe kafka topic my-first-topic</p>
+<blockquote>
+<p>bin/kafka-topics.sh &ndash;zookeeper localhost:2181 &ndash;topic my-first-topic &ndash;describe</p>
+</blockquote>
+</li>
+<li>
+<p>Delete kafka topic my-first-topic</p>
+<blockquote>
+<p>bin/kafka-topics.sh &ndash;zookeeper localhost:2181 &ndash;topic my-first-topic &ndash;delete</p>
+</blockquote>
+<p><strong>Note:</strong> This will have no impact if delete.topic.enable is not set to true</p>
+</li>
+<li>
+<p>Find out all the partitions without a leader</p>
+<blockquote>
+<p>bin/kafka-topics.sh &ndash;zookeeper localhost:2181 &ndash;describe &ndash;unavailable-partitions</p>
+</blockquote>
+</li>
+<li>
+<p>Produce messages to Kafka topic my-first-topic</p>
+<blockquote>
+<p>bin/kafka-console-producer.sh &ndash;broker-list localhost:9092 &ndash;topic my-first-topic &ndash;producer-property acks=all</p>
+</blockquote>
+<blockquote>
+<p>hello ashish</p>
+</blockquote>
+<blockquote>
+<p>learning kafka</p>
+</blockquote>
+<blockquote>
+<p>^C</p>
+</blockquote>
+</li>
+<li>
+<p>Start Consuming messages from kafka topic my-first-topic</p>
+<blockquote>
+<p>bin/kafka-console-consumer.sh &ndash;bootstrap-server localhost:9092 &ndash;topic my-first-topic &ndash;from-beginning</p>
+</blockquote>
+<blockquote>
+<p>hello ashish</p>
+</blockquote>
+<blockquote>
+<p>learning kafka</p>
+</blockquote>
+</li>
+<li>
+<p>Start Consuming messages in a consumer group from kafka topic my-first-topic</p>
+<blockquote>
+<p>bin/kafka-console-consumer.sh &ndash;bootstrap-server localhost:9092 &ndash;topic my-first-topic &ndash;group my-first-consumer-group &ndash;from-beginning</p>
+</blockquote>
+</li>
+<li>
+<p>List all consumer groups</p>
+<blockquote>
+<p>bin/kafka-consumer-groups.sh &ndash;bootstrap-server localhost:9092 &ndash;list</p>
+</blockquote>
+</li>
+<li>
+<p>Describe consumer group</p>
+<blockquote>
+<p>bin/kafka-consumer-groups.sh &ndash;bootstrap-server localhost:9092 &ndash;describe -group my-first-consumer-group</p>
+</blockquote>
+</li>
+<li>
+<p>Reset offset of consumer group to replay all messages</p>
+<blockquote>
+<p>bin/kafka-consumer-groups.sh &ndash;bootstrap-server localhost:9092 &ndash;describe -group my-first-consumer-group &ndash;reset-offsets &ndash;to-earliest &ndash;execute &ndash;topic my-first-topic</p>
+</blockquote>
+</li>
+<li>
+<p>Shift offsets by 2 (forward) as another strategy</p>
+<blockquote>
+<p>bin/kafka-consumer-groups &ndash;bootstrap-server localhost:9092 &ndash;group my-first-consumer-group &ndash;reset-offsets &ndash;shift-by 2 &ndash;execute &ndash;topic my-first_topic</p>
+</blockquote>
+</li>
+<li>
+<p>Shift offsets by 2 (backward) as another strategy</p>
+<blockquote>
+<p>bin/kafka-consumer-groups &ndash;bootstrap-server localhost:9092 &ndash;group my-first-consumer-group &ndash;reset-offsets &ndash;shift-by -2 &ndash;execute &ndash;topic my-first_topic</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="kafka-api">KAFKA API</h2>
+<hr>
+<ul>
+<li>Click here to find out how we can create a Safe and high throughput Kafka Producer using Java.</li>
+<li>Click here to find out how we can create a Kafka consumer using Java with manual auto commit enabled.</li>
+</ul>
+<h2 id="confluent-schema-registry">Confluent Schema Registry</h2>
+<hr>
+<h3 id="1-avro">1. Avro</h3>
+<h6 id="primitive-types">Primitive Types</h6>
+<pre><code>1. null
+2. boolean
+3. int (32 bit)
+4. long (64 bit)
+5. float (32 bit)
+6. double (64 bit)
+7. byte[] (8 bit)
+8. string (char squence)
+</code></pre>
+<h6 id="complex-types">Complex Types</h6>
+<pre><code>1. record
+2. enum
+3. array
+4. map
+5. union
+6. fixed
+</code></pre>
+<h6 id="avro-schema-definition">Avro Schema Definition</h6>
+<pre><code>namespace (required)
+type (required) =&gt; record, enum, array, map, union, fixed
+name (required)
+doc (optional)
+aliases (optional)
+fields (required) {
+    name (required)
+    type (required)
+    doc (optional)
+    default (optional)
+    order (optional)
+    aliases (optional)
+}
+</code></pre>
+<h3 id="2-confluent-schema-notes">2. Confluent Schema Notes</h3>
+<ul>
+<li>Schema Registry stores all schemas in a Kafka topic defined by kafkastore.config=_schemas (default) which is a single partition topic with log compacted.</li>
+<li>The default response media type application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+json, application/json are used in response header.</li>
+<li>HTTP and HTTPS client protocol are supported for schema registry.</li>
+<li>Prefix to apply to metric names for the default JMX reporter kafka.schema.registry</li>
+<li>Default port for listener is 8081</li>
+<li>Confluent support primitive types of null, Boolean, Integer, Long, Float, Double, String, byte[], and complex type of IndexedRecord. Sending data of other types to KafkaAvroSerializer will cause a SerializationException</li>
+</ul>
+<h3 id="3-confluent-schema-compatibility-types">3. Confluent Schema Compatibility Types</h3>
+<h6 id="backward">BACKWARD</h6>
+<ul>
+<li>Consumer using schema X can process data produced with schema X or X-1. In case of BACKWARD_TRANSITIVE, consumer using schema X can process data produced with all previous schema X, X-1, X-2 and so on</li>
+<li>Delete field without default value (Required field) is allowed. In this case, Consumer ignore this field.</li>
+<li>Add field with default value (Optional field) is allowed. In this case, Consumer will assign default value.</li>
+<li>BACKWARD is default compatibility type in confluent schema registry.</li>
+<li>There is no assurance that consumers using older schema can read data produced using the new schema. Therefore, upgrade all consumers before you start producing new events.</li>
+</ul>
+<h6 id="forward">FORWARD</h6>
+<ul>
+<li>Data produced using schema X can be ready by consumers with schema X or X-1. In case of FORWARD_TRANSITIVE, data produced using schema X can be ready by consumers with all previous schema X, X-1, X-2 and so on</li>
+<li>Add field without default value (Required field) is allowed. In this case, Consumer ignore this field.</li>
+<li>Delete field with default value (Optional field) is allowed. In this case, Consumer will assign default value.</li>
+<li>There is no assurance that consumers using the new schema can read data produced using older schema. Therefore, first upgrade all producers to using the new schema and make sure the data already produced using the older schema are not available to consumers, then upgrade the consumers.</li>
+</ul>
+<h6 id="full">FULL</h6>
+<ul>
+<li>Backward and forward compatible between schema X and X-1. In case of FULL_TRANSITIVE, backward and forward compatible between all previous schema X and X-1 and X-2 and so on</li>
+<li>Modify field with default value (Optional field) is allowed.</li>
+<li>There are assurances that consumers using older schema can read data produced using the new schema and that consumers using the new schema can read data produced using older schema. Therefore, you can upgrade the producers and consumers independently.</li>
+</ul>
+<h6 id="none">NONE</h6>
+<ul>
+<li>Compatibility type means schema compatibility checks are disabled.</li>
+<li>Upgrading Consumer or Producer depends. For example, modifying a field type from Number to String. In this case, you will either need to upgrade all producers and consumers to the new schema version at the same time</li>
+</ul>
+<h2 id="kafka-streams">Kafka Streams</h2>
+<hr>
+<h3 id="1-stateless-operators">1. Stateless operators</h3>
+<pre><code>branch
+filter
+inverseFilter
+flatMap
+flatMapValues
+foreach
+groupByKey
+groupBy
+map
+mapValues
+</code></pre>
+<h3 id="2-stateful-operators">2. Stateful operators</h3>
+<pre><code>join
+aggregate
+count
+reduce
+windowing
+</code></pre>
+<h3 id="3-window">3. Window</h3>
+<ol>
+<li>Tumbling window
+<ul>
+<li>Time based, Fixed Size, Non overlapping, Gap less windows</li>
+<li>For e.g. if window-size=5min and advance-interval =5min then it looks like [0-5min] [5min-10min] [10min-15min]&hellip;..</li>
+</ul>
+</li>
+<li>Hopping window
+<ul>
+<li>Time based, Fixed Size, Overlapping windows</li>
+<li>For e.g. if widow-size=5min and advance-interval=3min then it looks like [0-5min] [3min-8min] [6min-11min]&hellip;&hellip;</li>
+</ul>
+</li>
+<li>Sliding window
+<ul>
+<li>Fixed size overlapping window that works on the difference between record timestamp</li>
+<li>Used only for join operation</li>
+</ul>
+</li>
+<li>Session window
+<ul>
+<li>Session based, Dynamically sized, Non overlapping, Data driven window.</li>
+<li>Used to aggregate key based events into session.</li>
+</ul>
+</li>
+</ol>
+<p>For more information on windowing, refer <a href="https://kafka.apache.org/20/documentation/streams/developer-guide/dsl-api.html#windowing">Apache Kafka Documentation on windowing</a></p>
+<h2 id="default-ports">Default Ports</h2>
+<hr>
+<ul>
+<li>Zookeeper: 2181</li>
+<li>Zookeeper Leader Port 3888</li>
+<li>Zookeeper Election Port (Peer port) 2888</li>
+<li>Broker: 9092</li>
+<li>REST Proxy: 8082</li>
+<li>Schema Registry: 8081</li>
+<li>KSQL: 8088</li>
+</ul>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link btn" href="/tags/ccdak/" rel="tag">CCDAK</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/apache-kafka/" rel="tag">Apache Kafka</a></li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Ashish Lahoti avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Ashish Lahoti</span>
+	</div>
+	<div class="authorbox__description">
+		Ashish Lahoti is a full stack application developer at DBS Bank | Confluent Certified Developer for Apache KAFKA | SCJP Certified
+	</div>
+</div>
+
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--prev">
+		<a class="post-nav__link" href="/post/vitual-dom-vs-shadow-dom/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Virutal Dom vs Shadow Dom</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next">
+		<a class="post-nav__link" href="/post/ping-pong-using-wait-notify/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Ping pong using wait notify</p></a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 Ashish Lahoti.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>

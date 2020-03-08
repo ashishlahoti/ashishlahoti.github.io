@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Conding n Concepts</title>
+    <link>https://ashishlahoti.github.io/</link>
+    <description>Recent content on Conding n Concepts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Apr 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://ashishlahoti.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Top CSS Interview Questions</title>
+      <link>https://ashishlahoti.github.io/post/top-css-interview-questions/</link>
+      <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ashishlahoti.github.io/post/top-css-interview-questions/</guid>
+      <description>&lt;p&gt;These CSS interview questions are based on my personal interview experience. Likelihood of question being asked in the interview is from top to bottom.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Top Java Interview Questions</title>
+      <link>https://ashishlahoti.github.io/post/top-java-interview-questions/</link>
+      <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ashishlahoti.github.io/post/top-java-interview-questions/</guid>
+      <description>&lt;p&gt;These Java interview questions are based on my personal interview experience. Topics are in the order of recent interview trends. Keep following this post link for regular updates.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Top Javascript Interview Questions</title>
+      <link>https://ashishlahoti.github.io/post/top-javascript-interview-questions/</link>
+      <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ashishlahoti.github.io/post/top-javascript-interview-questions/</guid>
+      <description>&lt;p&gt;These Javascript interview questions are based on my personal interview experience. Likelihood of question being asked in the interview is from top to bottom.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ping pong using wait notify</title>
+      <link>https://ashishlahoti.github.io/post/ping-pong-using-wait-notify/</link>
+      <pubDate>Thu, 04 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ashishlahoti.github.io/post/ping-pong-using-wait-notify/</guid>
+      <description>&lt;p&gt;This problem is frequently asked in the interview to check your understanding on threads and your programming skills. Problem statement might change for e.g.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Print ping pong using two threads.&lt;/li&gt;
+&lt;li&gt;Print alternate number using two threads.&lt;/li&gt;
+&lt;li&gt;Print even numbers by one thread and odd numbers by another thread.&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Apache Kafka CCDAK Exam Notes</title>
+      <link>https://ashishlahoti.github.io/post/apache-kafka-ccdak-exam-notes/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ashishlahoti.github.io/post/apache-kafka-ccdak-exam-notes/</guid>
+      <description>Hi Readers,
+If you are planning or preparing for Apache Kafka Certification then this is the right place for you.There are many Apache Kafka Certifications are available in the market but CCDAK (Confluent Certified Developer for Apache Kafka) is the most known certification as Kafka is now maintained by Confluent.
+Confluent has introduced CCOAK certification recently. CCOAK is mainly for devOps engineer focusing on build and manage Kafka cluster. CCDAK is mainly for developers and Solution architects focusing on design, producer and consumer.</description>
+    </item>
+    
+    <item>
+      <title>Virutal Dom vs Shadow Dom</title>
+      <link>https://ashishlahoti.github.io/post/vitual-dom-vs-shadow-dom/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ashishlahoti.github.io/post/vitual-dom-vs-shadow-dom/</guid>
+      <description>Virtual DOM vs Shadow DOM
+DOM DOM stands for Document Object Model which is object based representation of any structured content such as HTML, XML etc. Browser maintains DOM object to render the HTML and any change in the DOM object cause re-rendering of the whole page.
+Virtual DOM Concept of Virtual DOM is adapted by popular UI libraries like React and Vue to solve mainly the performance issue. Virtual DOM is an in-memory representation of the DOM.</description>
+    </item>
+    
+    <item>
+      <title>Kafka Consumer Using Java</title>
+      <link>https://ashishlahoti.github.io/post/apache-kafka-consumer-using-java/</link>
+      <pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ashishlahoti.github.io/post/apache-kafka-consumer-using-java/</guid>
+      <description>&lt;p&gt;Implementation of Kafka Consumer using Java&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Kafka Producer Using Java</title>
+      <link>https://ashishlahoti.github.io/post/apache-kafka-producer-using-java/</link>
+      <pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ashishlahoti.github.io/post/apache-kafka-producer-using-java/</guid>
+      <description>&lt;p&gt;Implementation of Kafka Producer using Java&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Immutable Class</title>
+      <link>https://ashishlahoti.github.io/post/immutable-class-using-java/</link>
+      <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ashishlahoti.github.io/post/immutable-class-using-java/</guid>
+      <description>&lt;p&gt;This problem is frequently asked in the interview to check your understanding on immutable class. This program answers following artefacts of immutable class:-&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Private Constructor&lt;/li&gt;
+&lt;li&gt;No Setter Methods&lt;/li&gt;
+&lt;li&gt;Returns new instance of mutable properties from Getter Methods&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Singleton Design Pattern Using Java</title>
+      <link>https://ashishlahoti.github.io/post/singleton-design-pattern-using-java/</link>
+      <pubDate>Sat, 22 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://ashishlahoti.github.io/post/singleton-design-pattern-using-java/</guid>
+      <description>&lt;p&gt;This problem is frequently asked in the interview to check your understanding on singleton design pattern. This program answers following artefacts of singleton design pattern:-&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;How to make singleton class thread safe?
+&lt;ul&gt;
+&lt;li&gt;using double checked locking&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;How to prevent deserialization to create new object of singleton class?
+&lt;ul&gt;
+&lt;li&gt;using readResolve method to return same instance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;How to prevent cloning to create a new object of singleton class?
+&lt;ul&gt;
+&lt;li&gt;override clone method to return same instance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;How to prevent reflexion to create a new object of singleton class?
+&lt;ul&gt;
+&lt;li&gt;check instance exist in private constructor and throw exception if already exist
+You can find the singleton pattern implementation here.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>https://ashishlahoti.github.io/about/</link>
+      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://ashishlahoti.github.io/about/</guid>
+      <description>Hey Everyone! I’m Ashish Lahoti. Welcome to my technology blog!
+I created this blog to narrate my coding and concepts learning experiences. I like sharing my experiments and ideas with everyone by writing articles on latest technological trends.
+Primarily I write about Java, Spring, Kafka, Javascript, CSS and the list goes on&amp;hellip;
+Few pointers about me:-
+ Full Stack Certified Kafka and SCJP Developer with 9+ years of extensive experience in Java and JavaScript Technologies.</description>
+    </item>
+    
+  </channel>
+</rss>

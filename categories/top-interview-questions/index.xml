@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Top Interview Questions on Conding n Concepts</title>
+    <link>https://ashishlahoti.github.io/categories/top-interview-questions/</link>
+    <description>Recent content in Top Interview Questions on Conding n Concepts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 07 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://ashishlahoti.github.io/categories/top-interview-questions/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Top CSS Interview Questions</title>
+      <link>https://ashishlahoti.github.io/post/top-css-interview-questions/</link>
+      <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ashishlahoti.github.io/post/top-css-interview-questions/</guid>
+      <description>&lt;p&gt;These CSS interview questions are based on my personal interview experience. Likelihood of question being asked in the interview is from top to bottom.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Top Java Interview Questions</title>
+      <link>https://ashishlahoti.github.io/post/top-java-interview-questions/</link>
+      <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ashishlahoti.github.io/post/top-java-interview-questions/</guid>
+      <description>&lt;p&gt;These Java interview questions are based on my personal interview experience. Topics are in the order of recent interview trends. Keep following this post link for regular updates.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Top Javascript Interview Questions</title>
+      <link>https://ashishlahoti.github.io/post/top-javascript-interview-questions/</link>
+      <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ashishlahoti.github.io/post/top-javascript-interview-questions/</guid>
+      <description>&lt;p&gt;These Javascript interview questions are based on my personal interview experience. Likelihood of question being asked in the interview is from top to bottom.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ping pong using wait notify</title>
+      <link>https://ashishlahoti.github.io/post/ping-pong-using-wait-notify/</link>
+      <pubDate>Thu, 04 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ashishlahoti.github.io/post/ping-pong-using-wait-notify/</guid>
+      <description>&lt;p&gt;This problem is frequently asked in the interview to check your understanding on threads and your programming skills. Problem statement might change for e.g.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Print ping pong using two threads.&lt;/li&gt;
+&lt;li&gt;Print alternate number using two threads.&lt;/li&gt;
+&lt;li&gt;Print even numbers by one thread and odd numbers by another thread.&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Immutable Class</title>
+      <link>https://ashishlahoti.github.io/post/immutable-class-using-java/</link>
+      <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ashishlahoti.github.io/post/immutable-class-using-java/</guid>
+      <description>&lt;p&gt;This problem is frequently asked in the interview to check your understanding on immutable class. This program answers following artefacts of immutable class:-&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Private Constructor&lt;/li&gt;
+&lt;li&gt;No Setter Methods&lt;/li&gt;
+&lt;li&gt;Returns new instance of mutable properties from Getter Methods&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Singleton Design Pattern Using Java</title>
+      <link>https://ashishlahoti.github.io/post/singleton-design-pattern-using-java/</link>
+      <pubDate>Sat, 22 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://ashishlahoti.github.io/post/singleton-design-pattern-using-java/</guid>
+      <description>&lt;p&gt;This problem is frequently asked in the interview to check your understanding on singleton design pattern. This program answers following artefacts of singleton design pattern:-&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;How to make singleton class thread safe?
+&lt;ul&gt;
+&lt;li&gt;using double checked locking&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;How to prevent deserialization to create new object of singleton class?
+&lt;ul&gt;
+&lt;li&gt;using readResolve method to return same instance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;How to prevent cloning to create a new object of singleton class?
+&lt;ul&gt;
+&lt;li&gt;override clone method to return same instance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;How to prevent reflexion to create a new object of singleton class?
+&lt;ul&gt;
+&lt;li&gt;check instance exist in private constructor and throw exception if already exist
+You can find the singleton pattern implementation here.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
