@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>JS on Coding n Concepts</title>
-    <link>https://ashishlahoti.github.io/tags/js/</link>
-    <description>Recent content in JS on Coding n Concepts</description>
+    <title>JS on Coding N Concepts</title>
+    <link>http://codingnconcepts.com/tags/js/</link>
+    <description>Recent content in JS on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 07 Mar 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://ashishlahoti.github.io/tags/js/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://codingnconcepts.com/tags/js/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Top Javascript Interview Questions</title>
-      <link>https://ashishlahoti.github.io/post/top-javascript-interview-questions/</link>
+      <link>http://codingnconcepts.com/post/top-javascript-interview-questions/</link>
       <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ashishlahoti.github.io/post/top-javascript-interview-questions/</guid>
+      <guid>http://codingnconcepts.com/post/top-javascript-interview-questions/</guid>
       <description>&lt;p&gt;These Javascript interview questions are based on my personal interview experience. Likelihood of question being asked in the interview is from top to bottom.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Virutal Dom vs Shadow Dom</title>
-      <link>https://ashishlahoti.github.io/post/vitual-dom-vs-shadow-dom/</link>
+      <link>http://codingnconcepts.com/post/vitual-dom-vs-shadow-dom/</link>
       <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://ashishlahoti.github.io/post/vitual-dom-vs-shadow-dom/</guid>
+      <guid>http://codingnconcepts.com/post/vitual-dom-vs-shadow-dom/</guid>
       <description>Virtual DOM vs Shadow DOM
 DOM DOM stands for Document Object Model which is object based representation of any structured content such as HTML, XML etc. Browser maintains DOM object to render the HTML and any change in the DOM object cause re-rendering of the whole page.
 Virtual DOM Concept of Virtual DOM is adapted by popular UI libraries like React and Vue to solve mainly the performance issue. Virtual DOM is an in-memory representation of the DOM.</description>

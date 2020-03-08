@@ -1,49 +1,49 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Coding n Concepts</title>
-    <link>https://ashishlahoti.github.io/categories/</link>
-    <description>Recent content in Categories on Coding n Concepts</description>
+    <title>Categories on Coding N Concepts</title>
+    <link>http://codingnconcepts.com/categories/</link>
+    <description>Recent content in Categories on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 07 Mar 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://ashishlahoti.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://codingnconcepts.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Top Interview Questions</title>
-      <link>https://ashishlahoti.github.io/categories/top-interview-questions/</link>
+      <link>http://codingnconcepts.com/categories/top-interview-questions/</link>
       <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ashishlahoti.github.io/categories/top-interview-questions/</guid>
+      <guid>http://codingnconcepts.com/categories/top-interview-questions/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Concepts</title>
-      <link>https://ashishlahoti.github.io/categories/concepts/</link>
+      <link>http://codingnconcepts.com/categories/concepts/</link>
       <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://ashishlahoti.github.io/categories/concepts/</guid>
+      <guid>http://codingnconcepts.com/categories/concepts/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kafka</title>
-      <link>https://ashishlahoti.github.io/categories/kafka/</link>
+      <link>http://codingnconcepts.com/categories/kafka/</link>
       <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://ashishlahoti.github.io/categories/kafka/</guid>
+      <guid>http://codingnconcepts.com/categories/kafka/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Java Programs</title>
-      <link>https://ashishlahoti.github.io/categories/java-programs/</link>
+      <link>http://codingnconcepts.com/categories/java-programs/</link>
       <pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://ashishlahoti.github.io/categories/java-programs/</guid>
+      <guid>http://codingnconcepts.com/categories/java-programs/</guid>
       <description></description>
     </item>
     

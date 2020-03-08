@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Java Programs on Coding n Concepts</title>
-    <link>https://ashishlahoti.github.io/categories/java-programs/</link>
-    <description>Recent content in Java Programs on Coding n Concepts</description>
+    <title>Java Programs on Coding N Concepts</title>
+    <link>http://codingnconcepts.com/categories/java-programs/</link>
+    <description>Recent content in Java Programs on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 11 May 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://ashishlahoti.github.io/categories/java-programs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://codingnconcepts.com/categories/java-programs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Kafka Consumer Using Java</title>
-      <link>https://ashishlahoti.github.io/post/apache-kafka-consumer-using-java/</link>
+      <link>http://codingnconcepts.com/post/apache-kafka-consumer-using-java/</link>
       <pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://ashishlahoti.github.io/post/apache-kafka-consumer-using-java/</guid>
+      <guid>http://codingnconcepts.com/post/apache-kafka-consumer-using-java/</guid>
       <description>&lt;p&gt;Implementation of Kafka Consumer using Java&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Kafka Producer Using Java</title>
-      <link>https://ashishlahoti.github.io/post/apache-kafka-producer-using-java/</link>
+      <link>http://codingnconcepts.com/post/apache-kafka-producer-using-java/</link>
       <pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://ashishlahoti.github.io/post/apache-kafka-producer-using-java/</guid>
+      <guid>http://codingnconcepts.com/post/apache-kafka-producer-using-java/</guid>
       <description>&lt;p&gt;Implementation of Kafka Producer using Java&lt;/p&gt;</description>
     </item>
     

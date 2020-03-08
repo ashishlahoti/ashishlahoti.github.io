@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CCDAK on Coding n Concepts</title>
-    <link>https://ashishlahoti.github.io/tags/ccdak/</link>
-    <description>Recent content in CCDAK on Coding n Concepts</description>
+    <title>CCDAK on Coding N Concepts</title>
+    <link>http://codingnconcepts.com/tags/ccdak/</link>
+    <description>Recent content in CCDAK on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 13 Jun 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://ashishlahoti.github.io/tags/ccdak/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://codingnconcepts.com/tags/ccdak/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Apache Kafka CCDAK Exam Notes</title>
-      <link>https://ashishlahoti.github.io/post/apache-kafka-ccdak-exam-notes/</link>
+      <link>http://codingnconcepts.com/post/apache-kafka-ccdak-exam-notes/</link>
       <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://ashishlahoti.github.io/post/apache-kafka-ccdak-exam-notes/</guid>
+      <guid>http://codingnconcepts.com/post/apache-kafka-ccdak-exam-notes/</guid>
       <description>Hi Readers,
 If you are planning or preparing for Apache Kafka Certification then this is the right place for you.There are many Apache Kafka Certifications are available in the market but CCDAK (Confluent Certified Developer for Apache Kafka) is the most known certification as Kafka is now maintained by Confluent.
 Confluent has introduced CCOAK certification recently. CCOAK is mainly for devOps engineer focusing on build and manage Kafka cluster. CCDAK is mainly for developers and Solution architects focusing on design, producer and consumer.</description>

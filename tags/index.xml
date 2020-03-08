@@ -1,94 +1,94 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Coding n Concepts</title>
-    <link>https://ashishlahoti.github.io/tags/</link>
-    <description>Recent content in Tags on Coding n Concepts</description>
+    <title>Tags on Coding N Concepts</title>
+    <link>http://codingnconcepts.com/tags/</link>
+    <description>Recent content in Tags on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 07 Mar 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://ashishlahoti.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://codingnconcepts.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>CSS</title>
-      <link>https://ashishlahoti.github.io/tags/css/</link>
+      <link>http://codingnconcepts.com/tags/css/</link>
       <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ashishlahoti.github.io/tags/css/</guid>
+      <guid>http://codingnconcepts.com/tags/css/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Interview</title>
-      <link>https://ashishlahoti.github.io/tags/interview/</link>
+      <link>http://codingnconcepts.com/tags/interview/</link>
       <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ashishlahoti.github.io/tags/interview/</guid>
+      <guid>http://codingnconcepts.com/tags/interview/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Java</title>
-      <link>https://ashishlahoti.github.io/tags/java/</link>
+      <link>http://codingnconcepts.com/tags/java/</link>
       <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ashishlahoti.github.io/tags/java/</guid>
+      <guid>http://codingnconcepts.com/tags/java/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Javascript</title>
-      <link>https://ashishlahoti.github.io/tags/javascript/</link>
+      <link>http://codingnconcepts.com/tags/javascript/</link>
       <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ashishlahoti.github.io/tags/javascript/</guid>
+      <guid>http://codingnconcepts.com/tags/javascript/</guid>
       <description></description>
     </item>
     
     <item>
       <title>JS</title>
-      <link>https://ashishlahoti.github.io/tags/js/</link>
+      <link>http://codingnconcepts.com/tags/js/</link>
       <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://ashishlahoti.github.io/tags/js/</guid>
+      <guid>http://codingnconcepts.com/tags/js/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Threads</title>
-      <link>https://ashishlahoti.github.io/tags/threads/</link>
+      <link>http://codingnconcepts.com/tags/threads/</link>
       <pubDate>Thu, 04 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://ashishlahoti.github.io/tags/threads/</guid>
+      <guid>http://codingnconcepts.com/tags/threads/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Apache Kafka</title>
-      <link>https://ashishlahoti.github.io/tags/apache-kafka/</link>
+      <link>http://codingnconcepts.com/tags/apache-kafka/</link>
       <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://ashishlahoti.github.io/tags/apache-kafka/</guid>
+      <guid>http://codingnconcepts.com/tags/apache-kafka/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CCDAK</title>
-      <link>https://ashishlahoti.github.io/tags/ccdak/</link>
+      <link>http://codingnconcepts.com/tags/ccdak/</link>
       <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://ashishlahoti.github.io/tags/ccdak/</guid>
+      <guid>http://codingnconcepts.com/tags/ccdak/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kafka</title>
-      <link>https://ashishlahoti.github.io/tags/kafka/</link>
+      <link>http://codingnconcepts.com/tags/kafka/</link>
       <pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://ashishlahoti.github.io/tags/kafka/</guid>
+      <guid>http://codingnconcepts.com/tags/kafka/</guid>
       <description></description>
     </item>
     
