@@ -81,8 +81,32 @@ if (!doNotTrack) {
 	</header><article class="list__item post">
 	<header class="list__header">
 		<h3 class="list__title post__title ">
+			<a href="/post/spring-boot-how-to-change-server-port/" rel="bookmark">
+			Spring Boot - How to change server port
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2020-03-09T00:00:00Z">2020-03-09</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/spring-boot/" rel="category">Spring Boot</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Spring boot web application using embedded server by default runs on port 8080. Following are the ways to change default server port from 8080 to say 9090
+1. application.properties server.port = 9090 2. application.yml server: port: 9090 3. command-line parameter $ java -jar -Dserver.port=9090 spring-boot-app-1.0.jar OR
+$ java -jar spring-boot-app-1.0.jar --server.port=9090 4. SpringBootApplication main method @SpringBootApplication public class SpringBootDemoApplication { public static void main(String[] args) { SpringApplication app = new SpringApplication(SpringBootDemoApplication.
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
 			<a href="/post/spring-boot-how-to-disable-banner/" rel="bookmark">
-			How to disable spring boot banner
+			Spring Boot - How to disable spring boot banner
 			</a>
 		</h3>
 		<div class="list__meta meta">
@@ -293,28 +317,6 @@ Confluent has introduced CCOAK certification recently. CCOAK is mainly for devOp
 DOM DOM stands for Document Object Model which is object based representation of any structured content such as HTML, XML etc. Browser maintains DOM object to render the HTML and any change in the DOM object cause re-rendering of the whole page.
 Virtual DOM Concept of Virtual DOM is adapted by popular UI libraries like React and Vue to solve mainly the performance issue. Virtual DOM is an in-memory representation of the DOM.
 	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/post/apache-kafka-consumer-using-java/" rel="bookmark">
-			Kafka Consumer Using Java
-			</a>
-		</h3>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2019-05-11T00:00:00Z">2019-05-11</time>
-</div>
-
-<div class="meta__item-categories meta__item">
-	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/java-programs/" rel="category">Java Programs</a>, <a class="meta__link" href="/categories/kafka/" rel="category">Kafka</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>Implementation of Kafka Consumer using Java</p>
-	</div>
 </article>
 </main>
 
@@ -339,11 +341,11 @@ Virtual DOM Concept of Virtual DOM is adapted by popular UI libraries like React
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/post/spring-boot-how-to-disable-banner/">How to disable spring boot banner</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/spring-boot-how-to-change-server-port/">Spring Boot - How to change server port</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/spring-boot-how-to-disable-banner/">Spring Boot - How to disable spring boot banner</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/top-spring-boot-interview-questions/">Top Spring Boot Interview Questions</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/top-spring-interview-questions/">Top Spring Interview Questions</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/top-css-interview-questions/">Top CSS Interview Questions</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/top-java-interview-questions/">Top Java Interview Questions</a></li>
 		</ul>
 	</div>
 </div>

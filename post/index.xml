@@ -12,7 +12,18 @@
     
     
     <item>
-      <title>How to disable spring boot banner</title>
+      <title>Spring Boot - How to change server port</title>
+      <link>http://codingnconcepts.com/post/spring-boot-how-to-change-server-port/</link>
+      <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/post/spring-boot-how-to-change-server-port/</guid>
+      <description>Spring boot web application using embedded server by default runs on port 8080. Following are the ways to change default server port from 8080 to say 9090
+1. application.properties server.port = 9090 2. application.yml server: port: 9090 3. command-line parameter $ java -jar -Dserver.port=9090 spring-boot-app-1.0.jar OR
+$ java -jar spring-boot-app-1.0.jar --server.port=9090 4. SpringBootApplication main method @SpringBootApplication public class SpringBootDemoApplication { public static void main(String[] args) { SpringApplication app = new SpringApplication(SpringBootDemoApplication.</description>
+    </item>
+    
+    <item>
+      <title>Spring Boot - How to disable spring boot banner</title>
       <link>http://codingnconcepts.com/post/spring-boot-how-to-disable-banner/</link>
       <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
       

@@ -4,19 +4,19 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Spring Boot - How to disable spring boot banner - Coding N Concepts</title>
+	<title>Spring Boot - How to change server port - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Spring Boot - How to disable spring boot banner">
-	<meta property="og:title" content="Spring Boot - How to disable spring boot banner" />
-<meta property="og:description" content="Spring Boot - How to disable spring boot banner" />
+	<meta name="description" content="Spring Boot - How to change server port">
+	<meta property="og:title" content="Spring Boot - How to change server port" />
+<meta property="og:description" content="Spring Boot - How to change server port" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://codingnconcepts.com/post/spring-boot-how-to-disable-banner/" />
+<meta property="og:url" content="http://codingnconcepts.com/post/spring-boot-how-to-change-server-port/" />
 <meta property="article:published_time" content="2020-03-09T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-03-09T00:00:00+00:00" />
 
 	<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Spring Boot - How to disable spring boot banner"/>
-<meta name="twitter:description" content="Spring Boot - How to disable spring boot banner"/>
+<meta name="twitter:title" content="Spring Boot - How to change server port"/>
+<meta name="twitter:description" content="Spring Boot - How to change server port"/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -78,7 +78,7 @@ if (!doNotTrack) {
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Spring Boot - How to disable spring boot banner</h1>
+			<h1 class="post__title">Spring Boot - How to change server port</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
@@ -91,49 +91,39 @@ if (!doNotTrack) {
 	</span>
 </div></div>
 		</header><div class="content post__content clearfix">
-			<p>You would have seen below spring boot banner when starting a spring boot application</p>
-<pre><code>  .   ____          _            __ _ _
- /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
- \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-  '  |____| .__|_| |_|_| |_\__, | / / / /
- =========|_|==============|___/=/_/_/_/
- :: Spring Boot ::        (v2.1.3.RELEASE)
-</code></pre><p>There are multiple ways to disable spring boot banner as follows:</p>
-<h6 id="1-springbootapplication-main-method">1. SpringBootApplication main method</h6>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.abc<span style="color:#f92672">;</span>
-
-<span style="color:#f92672">import</span> org.springframework.boot.Banner<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.springframework.boot.SpringApplication<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.springframework.boot.autoconfigure.SpringBootApplication<span style="color:#f92672">;</span>
-
-<span style="color:#a6e22e">@SpringBootApplication</span>
+			<p>Spring boot web application using embedded server by default runs on port 8080. Following are the ways to change default server port from 8080 to say 9090</p>
+<h6 id="1-applicationproperties">1. application.properties</h6>
+<pre><code>server.port = 9090
+</code></pre><h6 id="2-applicationyml">2. application.yml</h6>
+<pre><code>server:
+  port: 9090
+</code></pre><h6 id="3-command-line-parameter">3. command-line parameter</h6>
+<pre><code>$ java -jar -Dserver.port=9090 spring-boot-app-1.0.jar
+</code></pre><p>OR</p>
+<pre><code>$ java -jar spring-boot-app-1.0.jar --server.port=9090
+</code></pre><h6 id="4-springbootapplication-main-method">4. SpringBootApplication main method</h6>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@SpringBootApplication</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringBootDemoApplication</span> <span style="color:#f92672">{</span>
 
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 
         SpringApplication app <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SpringApplication<span style="color:#f92672">(</span>SpringBootDemoApplication<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
-        app<span style="color:#f92672">.</span><span style="color:#a6e22e">setBannerMode</span><span style="color:#f92672">(</span>Banner<span style="color:#f92672">.</span><span style="color:#a6e22e">Mode</span><span style="color:#f92672">.</span><span style="color:#a6e22e">OFF</span><span style="color:#f92672">);</span>
+        app<span style="color:#f92672">.</span><span style="color:#a6e22e">setDefaultProperties</span><span style="color:#f92672">(</span>Collections<span style="color:#f92672">.</span><span style="color:#a6e22e">singletonMap</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;server.port&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;9090&#34;</span><span style="color:#f92672">));</span>
         app<span style="color:#f92672">.</span><span style="color:#a6e22e">run</span><span style="color:#f92672">(</span>args<span style="color:#f92672">);</span>
 
     <span style="color:#f92672">}</span>
-
 <span style="color:#f92672">}</span>
-</code></pre></div><pre><code>Three possible values of Banner.Mode are as follows:-
-
-OFF     – Disable printing of the banner.
-CONSOLE – Print the banner to System.out.
-LOG     – Print the banner to the log file
-</code></pre>
-<h6 id="2-applicationproperties">2. application.properties</h6>
-<pre><code>spring.main.banner-mode=off
-</code></pre><h6 id="3-applicationyml">3. application.yml</h6>
-<pre><code>spring:
-  main:
-    banner-mode:&quot;off&quot;
-</code></pre><h6 id="4-command-line-parameter">4. command-line parameter</h6>
-<pre><code>$ java -Dspring.main.banner-mode=off -jar spring-boot-app-1.0.jar
-</code></pre>
+</code></pre></div><h6 id="5-implement-webserverfactorycustomizer-interface">5. implement WebServerFactoryCustomizer interface</h6>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Component</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ServerPortCustomizer</span> 
+  <span style="color:#66d9ef">implements</span> WebServerFactoryCustomizer<span style="color:#f92672">&lt;</span>ConfigurableWebServerFactory<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
+  
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">customize</span><span style="color:#f92672">(</span>ConfigurableWebServerFactory factory<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        factory<span style="color:#f92672">.</span><span style="color:#a6e22e">setPort</span><span style="color:#f92672">(</span>9090<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
 		</div>
 		<footer class="post__footer">
 			
@@ -161,10 +151,7 @@ LOG     – Print the banner to the log file
 
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="/post/top-spring-boot-interview-questions/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Top Spring Boot Interview Questions</p></a>
-	</div>
-	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="/post/spring-boot-how-to-change-server-port/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Spring Boot - How to change server port</p></a>
+		<a class="post-nav__link" href="/post/spring-boot-how-to-disable-banner/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Spring Boot - How to disable spring boot banner</p></a>
 	</div>
 </nav>
 
