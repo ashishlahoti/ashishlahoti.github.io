@@ -6,10 +6,24 @@
     <description>Recent content in Java Programs on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingnconcepts.com/categories/java-programs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ping pong using wait notify</title>
+      <link>http://codingnconcepts.com/post/ping-pong-using-wait-notify/</link>
+      <pubDate>Thu, 04 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/post/ping-pong-using-wait-notify/</guid>
+      <description>&lt;p&gt;This problem is frequently asked in the interview to check your understanding on threads and your programming skills. Problem statement might change for e.g.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Print ping pong using two threads.&lt;/li&gt;
+&lt;li&gt;Print alternate number using two threads.&lt;/li&gt;
+&lt;li&gt;Print even numbers by one thread and odd numbers by another thread.&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     
     <item>
       <title>Kafka Consumer Using Java</title>
@@ -27,6 +41,76 @@
       
       <guid>http://codingnconcepts.com/post/apache-kafka-producer-using-java/</guid>
       <description>&lt;p&gt;Implementation of Kafka Producer using Java&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Immutable Class</title>
+      <link>http://codingnconcepts.com/post/immutable-class-using-java/</link>
+      <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/post/immutable-class-using-java/</guid>
+      <description>&lt;p&gt;This problem is frequently asked in the interview to check your understanding on immutable class. This program answers following artefacts of immutable class:-&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Private Constructor&lt;/li&gt;
+&lt;li&gt;No Setter Methods&lt;/li&gt;
+&lt;li&gt;Returns new instance of mutable properties from Getter Methods&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Singleton Design Pattern Using Java</title>
+      <link>http://codingnconcepts.com/post/singleton-design-pattern-using-java/</link>
+      <pubDate>Sat, 22 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/post/singleton-design-pattern-using-java/</guid>
+      <description>&lt;p&gt;This problem is frequently asked in the interview to check your understanding on singleton design pattern. This program answers following artefacts of singleton design pattern:-&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;How to make singleton class thread safe?
+&lt;ul&gt;
+&lt;li&gt;using double checked locking&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;How to prevent deserialization to create new object of singleton class?
+&lt;ul&gt;
+&lt;li&gt;using readResolve method to return same instance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;How to prevent cloning to create a new object of singleton class?
+&lt;ul&gt;
+&lt;li&gt;override clone method to return same instance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;How to prevent reflexion to create a new object of singleton class?
+&lt;ul&gt;
+&lt;li&gt;check instance exist in private constructor and throw exception if already exist
+You can find the singleton pattern implementation here.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fibonacci Series</title>
+      <link>http://codingnconcepts.com/post/fibonacci-series-using-java/</link>
+      <pubDate>Sun, 12 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/post/fibonacci-series-using-java/</guid>
+      <description>&lt;p&gt;Fibonacci series implementation in java is frequently asked question in interview at fresher level. Moreover, it is a very famous example to show how to use recursive function in java.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Bubble Sort</title>
+      <link>http://codingnconcepts.com/post/bubble-sort-using-java/</link>
+      <pubDate>Tue, 09 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/post/bubble-sort-using-java/</guid>
+      <description>&lt;h3 id=&#34;why-it-is-called-bubble-sort-&#34;&gt;Why it is called bubble sort ?&lt;/h3&gt;
+&lt;p&gt;Bubble Sort is nothing but a comparison algorithm where -&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;At the end of first iteration, largest element in the array get placed at last index&lt;/li&gt;
+&lt;li&gt;At the end of second iteration, second largest element in the array get placed at second last index and so on&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This way large elements are moving towards the last indexes and hence small elements are moving towards the starting indexes which is also termed as smaller elements &amp;ldquo;bubble&amp;rdquo; to the top of the list that is why it is called bubble sort.&lt;/p&gt;</description>
     </item>
     
   </channel>

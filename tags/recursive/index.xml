@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Recursive on Coding N Concepts</title>
+    <link>http://codingnconcepts.com/tags/recursive/</link>
+    <description>Recent content in Recursive on Coding N Concepts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Jul 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://codingnconcepts.com/tags/recursive/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fibonacci Series</title>
+      <link>http://codingnconcepts.com/post/fibonacci-series-using-java/</link>
+      <pubDate>Sun, 12 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/post/fibonacci-series-using-java/</guid>
+      <description>&lt;p&gt;Fibonacci series implementation in java is frequently asked question in interview at fresher level. Moreover, it is a very famous example to show how to use recursive function in java.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
