@@ -6,9 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Top Java Interview Questions - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="List of Java interview questions based on personal interview experience.">
+	<meta name="description" content="Top Java interview questions based on personal interview experience.">
 	<meta property="og:title" content="Top Java Interview Questions" />
-<meta property="og:description" content="List of Java interview questions based on personal interview experience." />
+<meta property="og:description" content="Top Java interview questions based on personal interview experience." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://codingnconcepts.com/post/top-java-interview-questions/" />
 <meta property="article:published_time" content="2020-03-07T00:00:00+00:00" />
@@ -16,7 +16,7 @@
 
 	<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Top Java Interview Questions"/>
-<meta name="twitter:description" content="List of Java interview questions based on personal interview experience."/>
+<meta name="twitter:description" content="Top Java interview questions based on personal interview experience."/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -123,10 +123,13 @@ if (!doNotTrack) {
 <h3 id="singleton-pattern">Singleton Pattern</h3>
 <p>This is one of the most commonly asked question in interviews. Interviewer starts this question asking about design patterns. Candidate generally answers singleton and factory patterns. Then interviewer asks to write a singleton class. You should learn how to create a singleton class with private constructor, static getInstance method, double checked locking. You should also learn enum based singleton class. Follow up questions in singleton pattern are as follows:</p>
 <ul>
-<li>How to make singleton class thread safe?</li>
-<li>How to prevent deserialization to create new object of singleton class?</li>
-<li>How to prevent cloning and reflexion to create new object of singleton class?</li>
+<li>How to make <a href="/post/singleton-design-pattern-using-java/">singleton class</a> thread safe?</li>
+<li>How to prevent deserialization to create new object of <a href="/post/singleton-design-pattern-using-java/">singleton class</a>?</li>
+<li>How to prevent cloning and reflexion to create new object of <a href="/post/singleton-design-pattern-using-java/">singleton class</a>?</li>
 </ul>
+<blockquote>
+<p>Also read <a href="/post/singleton-design-pattern-using-java/">Singleton Design Pattern Using Java</a></p>
+</blockquote>
 <h3 id="hashmap">HashMap</h3>
 <p>This is also most commonly asked question in collections. Interviewer start this question asking about collections and what are the data structure/collection you have used in development. Candidate generally answers HashMap, LinkedList, ArrayList, HashSet.  Then interviewer check your knowledge of equals, hashcode and hashing algorithm. You should be aware of HashMap class internal implementation. Follow up questions in HashMap are as follows:</p>
 <ul>
@@ -163,7 +166,7 @@ if (!doNotTrack) {
 </ol>
 <h3 id="string">String</h3>
 <ol>
-<li>What is immutable object ? How can you write Immutable Class (See example) ? If you know the internal implementation of String class and know how String is immutable, you can answer it easily. Here are few points to remember:-
+<li>What is immutable object? How can you write <a href="/post/immutable-class-using-java/">Immutable Class</a>? If you know the internal implementation of String class and know how String is immutable, you can answer it easily. Here are few points to remember:-
 <ul>
 <li>Declare the class as final so it can’t be extended.</li>
 <li>Initialize all the fields via a constructor. Make all fields private so that direct access is not allowed. Make all fields final so that they’re initialized only once inside the constructor and never modified afterward.</li>
@@ -175,6 +178,9 @@ if (!doNotTrack) {
 <li>Difference between StringBuilder and StringBuffer.</li>
 <li>Why character array is used over String to store password ?</li>
 </ol>
+<blockquote>
+<p>Also read <a href="/post/immutable-class-using-java/">Immutable Class in Java</a></p>
+</blockquote>
 <h2 id="java-theory">Java Theory</h2>
 <h6 id="1-solid-5-class-design-principle-in-java-">1. S.O.L.I.D. (5 class design principle) in Java ?</h6>
 <ul>
@@ -193,15 +199,56 @@ if (!doNotTrack) {
 </ul>
 <h6 id="4-give-example-of-5-6-design-patterns-being-used-in-java-classes">4. Give example of 5-6 design patterns being used in Java classes.</h6>
 <ul>
-<li><strong>Factory</strong>: java.util.Calendar#getInstance()</li>
-<li><strong>Abstract Factory</strong>: javax.xml.parsers.DocumentBuilderFactory#newInstance(), javax.xml.transform.TransformerFactory#newInstance(), javax.xml.xpath.XPathFactory#newInstance()</li>
-<li><strong>Builder</strong>: java.lang.StringBuilder#append(), java.lang.StringBuffer#append()</li>
-<li><strong>Decorator</strong>: All subclasses of java.io.InputStream, OutputStream, Reader and Writer.</li>
-<li><strong>Chain of responsibility</strong>: javax.servlet.Filter#doFilter()</li>
-<li><strong>Iterator</strong>: java.util.Iterator</li>
-<li><strong>Observer</strong>: JMS message listener</li>
-<li><strong>Singleton</strong>: java.lang.Runtime#getRuntime()</li>
-<li><strong>Adapter</strong>: java.util.Arrays#asList(), java.io.InputStreamReader(InputStream) (returns a Reader), java.io.OutputStreamWriter(OutputStream) (returns a Writer)</li>
+<li>
+<p><strong>Factory</strong></p>
+<pre><code>java.util.Calendar#getInstance()
+</code></pre>
+</li>
+<li>
+<p><strong>Abstract Factory</strong></p>
+<pre><code>javax.xml.parsers.DocumentBuilderFactory#newInstance()
+javax.xml.transform.TransformerFactory#newInstance()
+javax.xml.xpath.XPathFactory#newInstance()
+</code></pre>
+</li>
+<li>
+<p><strong>Builder</strong></p>
+<pre><code>java.lang.StringBuilder#append()
+java.lang.StringBuffer#append()
+</code></pre>
+</li>
+<li>
+<p><strong>Decorator</strong></p>
+<pre><code>All subclasses of java.io.InputStream, OutputStream, Reader and Writer.
+</code></pre>
+</li>
+<li>
+<p><strong>Chain of responsibility</strong></p>
+<pre><code>javax.servlet.Filter#doFilter()
+</code></pre>
+</li>
+<li>
+<p><strong>Iterator</strong></p>
+<pre><code>java.util.Iterator
+</code></pre>
+</li>
+<li>
+<p><strong>Observer</strong></p>
+<pre><code>JMS message listener
+</code></pre>
+</li>
+<li>
+<p><strong>Singleton</strong></p>
+<pre><code>java.lang.Runtime#getRuntime()
+</code></pre>
+</li>
+<li>
+<p><strong>Adapter</strong></p>
+<pre><code>java.util.Arrays#asList()
+java.io.InputStreamReader(InputStream) (returns a Reader)
+java.io.OutputStreamWriter(OutputStream) (returns a Writer)
+</code></pre>
+</li>
 </ul>
 <h2 id="java-basics">Java Basics</h2>
 <ol>

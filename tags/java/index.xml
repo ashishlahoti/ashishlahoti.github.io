@@ -39,6 +39,38 @@
     </item>
     
     <item>
+      <title>Singleton Design Pattern Using Java</title>
+      <link>http://codingnconcepts.com/post/singleton-design-pattern-using-java/</link>
+      <pubDate>Mon, 22 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/post/singleton-design-pattern-using-java/</guid>
+      <description>&lt;p&gt;This problem is frequently asked in the interview to check your understanding on singleton design pattern. This program answers following artefacts of singleton design pattern:-&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;How to make singleton class thread safe?
+&lt;ul&gt;
+&lt;li&gt;using double checked locking&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;How to prevent deserialization to create new object of singleton class?
+&lt;ul&gt;
+&lt;li&gt;using readResolve method to return same instance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;How to prevent cloning to create a new object of singleton class?
+&lt;ul&gt;
+&lt;li&gt;override clone method to return same instance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;How to prevent reflexion to create a new object of singleton class?
+&lt;ul&gt;
+&lt;li&gt;check instance exist in private constructor and throw exception if already exist
+You can find the singleton pattern implementation here.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
       <title>Ping pong using wait notify</title>
       <link>http://codingnconcepts.com/post/ping-pong-using-wait-notify/</link>
       <pubDate>Thu, 04 Jul 2019 00:00:00 +0000</pubDate>
@@ -82,38 +114,6 @@
 &lt;li&gt;No Setter Methods&lt;/li&gt;
 &lt;li&gt;Returns new instance of mutable properties from Getter Methods&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Singleton Design Pattern Using Java</title>
-      <link>http://codingnconcepts.com/post/singleton-design-pattern-using-java/</link>
-      <pubDate>Sat, 22 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingnconcepts.com/post/singleton-design-pattern-using-java/</guid>
-      <description>&lt;p&gt;This problem is frequently asked in the interview to check your understanding on singleton design pattern. This program answers following artefacts of singleton design pattern:-&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;How to make singleton class thread safe?
-&lt;ul&gt;
-&lt;li&gt;using double checked locking&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;How to prevent deserialization to create new object of singleton class?
-&lt;ul&gt;
-&lt;li&gt;using readResolve method to return same instance&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;How to prevent cloning to create a new object of singleton class?
-&lt;ul&gt;
-&lt;li&gt;override clone method to return same instance&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;How to prevent reflexion to create a new object of singleton class?
-&lt;ul&gt;
-&lt;li&gt;check instance exist in private constructor and throw exception if already exist
-You can find the singleton pattern implementation here.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;</description>
     </item>
     
     <item>

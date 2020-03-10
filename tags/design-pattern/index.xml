@@ -6,7 +6,7 @@
     <description>Recent content in Design Pattern on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Jul 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingnconcepts.com/tags/design-pattern/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Singleton Design Pattern Using Java</title>
       <link>http://codingnconcepts.com/post/singleton-design-pattern-using-java/</link>
-      <pubDate>Sat, 22 Jul 2017 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 22 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>http://codingnconcepts.com/post/singleton-design-pattern-using-java/</guid>
       <description>&lt;p&gt;This problem is frequently asked in the interview to check your understanding on singleton design pattern. This program answers following artefacts of singleton design pattern:-&lt;/p&gt;
