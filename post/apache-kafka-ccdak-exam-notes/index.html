@@ -6,9 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Apache Kafka CCDAK Exam Notes - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Apache Kafka CCDAK Exam Notes">
+	<meta name="description" content="Exam notes for the preparation of Apache Kafka Certification or CCDAK (Confluent Certified Developer for Apache Kafka)">
 	<meta property="og:title" content="Apache Kafka CCDAK Exam Notes" />
-<meta property="og:description" content="Apache Kafka CCDAK Exam Notes" />
+<meta property="og:description" content="Exam notes for the preparation of Apache Kafka Certification or CCDAK (Confluent Certified Developer for Apache Kafka)" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://codingnconcepts.com/post/apache-kafka-ccdak-exam-notes/" />
 <meta property="article:published_time" content="2019-06-13T00:00:00+00:00" />
@@ -16,7 +16,7 @@
 
 	<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Apache Kafka CCDAK Exam Notes"/>
-<meta name="twitter:description" content="Apache Kafka CCDAK Exam Notes"/>
+<meta name="twitter:description" content="Exam notes for the preparation of Apache Kafka Certification or CCDAK (Confluent Certified Developer for Apache Kafka)"/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -130,12 +130,19 @@ if (!doNotTrack) {
 <!-- raw HTML omitted -->
 <p>Confluent has introduced CCOAK certification recently. CCOAK is mainly for devOps engineer focusing on build and manage Kafka cluster. CCDAK is mainly for developers and Solution architects focusing on design, producer and consumer. If you are still not sure, I recommend to go for CCDAK as it is more comprehensive exam as compared to CCOAK.</p>
 <p>From here onward, we will talk about how to prepare for CCDAK.</p>
-<p>I have recently <a href="https://www.credential.net/3e05601c-df11-4ecd-8a53-3e1d21037df8">cracked CCDAK</a> and would suggest that prepare well for the exam. This exam verify your theoretical as well as practical understanding of Kafka. You need to answer 60 questions in 90 minutes from your laptop under the supervision of online proctor. There is no mention of number of questions need to be correct in order to pass the exam. They just tell you pass or fail at the end of exam. At least 40-50 hours of preparation is required.</p>
+<p>I have recently <a href="https://www.credential.net/3e05601c-df11-4ecd-8a53-3e1d21037df8">cracked CCDAK</a> and would suggest that prepare well for the exam.</p>
+<ul>
+<li>This exam verify your theoretical as well as practical understanding of Kafka.</li>
+<li>You need to answer 60 questions in 90 minutes from your laptop under the supervision of online proctor.</li>
+<li>There is no mention of number of questions need to be correct in order to pass the exam. Result will be shown immediately (PASS or FAIL) at the end of exam. No scoring or percentage is provided.</li>
+<li>There is no negative scoring though so try to answer as many questions as possible.</li>
+<li>At least 40-50 hours of preparation is required.</li>
+</ul>
 <h2 id="exam-preparation">Exam Preparation</h2>
 <hr>
 <p>I have prepared for CCDAK using following:</p>
 <ol>
-<li><a href="https://kafka.apache.org/documentation/">Apacha Kafka Documentation</a></li>
+<li><a href="https://kafka.apache.org/documentation/">Apache Kafka Documentation</a></li>
 <li><a href="https://docs.confluent.io/current/index.html">Confluent Kafka Documentation</a></li>
 <li><a href="https://www.confluent.io/wp-content/uploads/confluent-kafka-definitive-guide-complete.pdf">Confluent Kafka Definitive Guide PDF</a></li>
 <li><a href="https://www.udemy.com/course/apache-kafka-tutorial-for-beginners/">Udemy Apache Kafka course for beginners</a></li>
@@ -299,7 +306,7 @@ e.g. replication.factor=3, min.insync.replicas=2,acks=all can only tolerate 1 br
 <ul>
 <li>min.insync.replicas=2 (set at broker or topic level)</li>
 <li>retries=MAX_INT: number of reties by producer in case of transient failure/exception. (default is 0)</li>
-<li>max.in.flight.per.connection number=5: number of producer request can be made in parellel (default is 5)</li>
+<li>max.in.flight.per.connection number=5: number of producer request can be made in parallel (default is 5)</li>
 <li>acks=all</li>
 <li>enable.idempotence=true: producer send producerId with each message to identify for duplicate msg at kafka end. When kafka receives duplicate message with same producerId which it already committed. It do not commit it again and send ack to producer (default is false)</li>
 </ul>
@@ -495,7 +502,7 @@ electionport is used to perform leader elections between ensemble members. This 
 5. float (32 bit)
 6. double (64 bit)
 7. byte[] (8 bit)
-8. string (char squence)
+8. string (char sequence)
 </code></pre>
 <h6 id="complex-types">Complex Types</h6>
 <pre><code>1. record

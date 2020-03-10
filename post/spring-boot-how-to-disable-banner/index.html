@@ -132,7 +132,9 @@ LOG     – Print the banner to the log file
   main:
     banner-mode:&quot;off&quot;
 </code></pre><h6 id="4-command-line-parameter">4. command-line parameter</h6>
-<pre><code>$ java -Dspring.main.banner-mode=off -jar spring-boot-app-1.0.jar
+<pre><code>$ java -jar -Dspring.main.banner-mode=off spring-boot-app-1.0.jar
+</code></pre><p>OR</p>
+<pre><code>$ java -jar spring-boot-app-1.0.jar --spring.main.banner-mode=off
 </code></pre>
 		</div>
 		<footer class="post__footer">
