@@ -218,6 +218,11 @@
   </url>
   
   <url>
+    <loc>http://codingnconcepts.com/post/elevator-implementation-using-java/</loc>
+    <lastmod>2015-04-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://codingnconcepts.com/about/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
   </url>
@@ -225,6 +230,36 @@
   <url>
     <loc>http://codingnconcepts.com/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/post/puzzle-12-balls-odd-one-out/</loc>
+    <lastmod>2012-04-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/post/puzzle-8-balls-odd-one-out/</loc>
+    <lastmod>2012-04-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/post/puzzle-minimum-set-of-weights/</loc>
+    <lastmod>2012-04-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/categories/puzzles/</loc>
+    <lastmod>2012-04-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/tags/weight-puzzle/</loc>
+    <lastmod>2012-04-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/post/puzzle-contaminated-pills/</loc>
+    <lastmod>2012-04-21T00:00:00+00:00</lastmod>
   </url>
   
 </urlset>

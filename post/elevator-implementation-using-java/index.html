@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Design Elevator (Lift) in Java - Coding N Concepts</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="Implement the behavior of lift or elevator in java">
+	<meta property="og:title" content="Design Elevator (Lift) in Java" />
+<meta property="og:description" content="Implement the behavior of lift or elevator in java" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingnconcepts.com/post/elevator-implementation-using-java/" />
+<meta property="article:published_time" content="2015-04-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2015-04-06T00:00:00+00:00" />
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Design Elevator (Lift) in Java"/>
+<meta name="twitter:description" content="Implement the behavior of lift or elevator in java"/>
+
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-160024498-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="Coding N Concepts" rel="home">
+				<div class="logo__title">Coding N Concepts</div>
+				<div class="logo__tagline">Ashish Lahoti&#39;s Technical Blog</div>
+			</a>
+		</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/spring-boot/">
+				
+				<span class="menu__text">Spring Boot</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/interview-questions/">
+				
+				<span class="menu__text">Interview Questions</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/kafka/">
+				
+				<span class="menu__text">Kafka</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/java-programs/">
+				
+				<span class="menu__text">Java</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/puzzles/">
+				
+				<span class="menu__text">Puzzles</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About Me</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Design Elevator (Lift) in Java</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2015-04-06T00:00:00Z">2015-04-06</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/java-programs/" rel="category">Java Programs</a>
+	</span>
+</div></div>
+		</header><div class="content post__content clearfix">
+			<p>Implementation of Elevator or Lift has been asked in many interviews. I have tried to implement it using muti-threading and TreeSet. TreeSet is used to store incoming request. It is a good choice here as it removes the duplicate requests and implements NavigableSet which provide you methods such as floor and ceiling.</p>
+<p>Elevator in this program implements following features -</p>
+<ul>
+<li>If elevator is going up or down, it checks for nearest floor request to process first in that direction.</li>
+<li>If there is no request to process, it waits at last processed floor.</li>
+<li>If a new request comes while elevator is processing a request. It process the new request first if it is nearest than the processing floor in same direction.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.io.BufferedReader<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.io.InputStreamReader<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.util.TreeSet<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyLift</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Welcome to MyLift&#34;</span><span style="color:#f92672">);</span>
+        
+        <span style="color:#75715e">// RequestListenerThread to read requested floor and add to Set
+</span><span style="color:#75715e"></span>        Thread requestListenerThread <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Thread<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> RequestListener<span style="color:#f92672">(),</span> <span style="color:#e6db74">&#34;RequestListenerThread&#34;</span><span style="color:#f92672">);</span>
+        
+        <span style="color:#75715e">// RequestProcessorThread to read Set and process requested floor
+</span><span style="color:#75715e"></span>        Thread requestProcessorThread <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Thread<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> RequestProcessor<span style="color:#f92672">(),</span> <span style="color:#e6db74">&#34;RequestProcessorThread&#34;</span><span style="color:#f92672">);</span>
+        
+        Elevator<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">().</span><span style="color:#a6e22e">setRequestProcessorThread</span><span style="color:#f92672">(</span>requestProcessorThread<span style="color:#f92672">);</span>        
+        requestListenerThread<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">();</span>
+        requestProcessorThread<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">();</span>       
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Elevator</span> <span style="color:#f92672">{</span>
+    
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> Elevator elevator <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+    
+    <span style="color:#66d9ef">private</span> TreeSet requestSet <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TreeSet<span style="color:#f92672">();</span>
+    
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> currentFloor <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">private</span> Direction direction <span style="color:#f92672">=</span> Direction<span style="color:#f92672">.</span><span style="color:#a6e22e">UP</span><span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">Elevator</span><span style="color:#f92672">()</span> <span style="color:#f92672">{};</span>
+    
+    <span style="color:#66d9ef">private</span> Thread requestProcessorThread<span style="color:#f92672">;</span>
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * @return singleton instance
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">static</span> Elevator <span style="color:#a6e22e">getInstance</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>elevator <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            elevator <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Elevator<span style="color:#f92672">();</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> elevator<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * Add request to Set
+</span><span style="color:#75715e">     * 
+</span><span style="color:#75715e">     * @param floor
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">synchronized</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addFloor</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> f<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        requestSet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>f<span style="color:#f92672">);</span>
+        
+        <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>requestProcessorThread<span style="color:#f92672">.</span><span style="color:#a6e22e">getState</span><span style="color:#f92672">()</span> <span style="color:#f92672">==</span> Thread<span style="color:#f92672">.</span><span style="color:#a6e22e">State</span><span style="color:#f92672">.</span><span style="color:#a6e22e">WAITING</span><span style="color:#f92672">){</span>
+            <span style="color:#75715e">// Notify processor thread that a new request has come if it is waiting
+</span><span style="color:#75715e"></span>            notify<span style="color:#f92672">();</span>
+        <span style="color:#f92672">}</span><span style="color:#66d9ef">else</span><span style="color:#f92672">{</span>
+            <span style="color:#75715e">// Interrupt Processor thread to check if new request should be processed before current request or not. 
+</span><span style="color:#75715e"></span>            requestProcessorThread<span style="color:#f92672">.</span><span style="color:#a6e22e">interrupt</span><span style="color:#f92672">();</span>
+        <span style="color:#f92672">}</span>
+        
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * @return next request to process based on elevator current floor and direction
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">synchronized</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">nextFloor</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+
+        Integer floor <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>direction <span style="color:#f92672">==</span> Direction<span style="color:#f92672">.</span><span style="color:#a6e22e">UP</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>requestSet<span style="color:#f92672">.</span><span style="color:#a6e22e">ceiling</span><span style="color:#f92672">(</span>currentFloor<span style="color:#f92672">)</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                floor <span style="color:#f92672">=</span> requestSet<span style="color:#f92672">.</span><span style="color:#a6e22e">ceiling</span><span style="color:#f92672">(</span>currentFloor<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                floor <span style="color:#f92672">=</span> requestSet<span style="color:#f92672">.</span><span style="color:#a6e22e">floor</span><span style="color:#f92672">(</span>currentFloor<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>requestSet<span style="color:#f92672">.</span><span style="color:#a6e22e">floor</span><span style="color:#f92672">(</span>currentFloor<span style="color:#f92672">)</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                floor <span style="color:#f92672">=</span> requestSet<span style="color:#f92672">.</span><span style="color:#a6e22e">floor</span><span style="color:#f92672">(</span>currentFloor<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                floor <span style="color:#f92672">=</span> requestSet<span style="color:#f92672">.</span><span style="color:#a6e22e">ceiling</span><span style="color:#f92672">(</span>currentFloor<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>floor <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+                System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Waiting at Floor :&#34;</span> <span style="color:#f92672">+</span> getCurrentFloor<span style="color:#f92672">());</span>
+                wait<span style="color:#f92672">();</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>InterruptedException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+            <span style="color:#75715e">// Remove the request from Set as it is the request in Progress.
+</span><span style="color:#75715e"></span>            requestSet<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>floor<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">(</span>floor <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">?</span> <span style="color:#f92672">-</span>1 <span style="color:#f92672">:</span> floor<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getCurrentFloor</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> currentFloor<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * Set current floor and direction based on requested floor
+</span><span style="color:#75715e">     * 
+</span><span style="color:#75715e">     * @param currentFloor
+</span><span style="color:#75715e">     * @throws InterruptedException 
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setCurrentFloor</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> currentFloor<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> InterruptedException <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">currentFloor</span> <span style="color:#f92672">&gt;</span> currentFloor<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            setDirection<span style="color:#f92672">(</span>Direction<span style="color:#f92672">.</span><span style="color:#a6e22e">DOWN</span><span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+            setDirection<span style="color:#f92672">(</span>Direction<span style="color:#f92672">.</span><span style="color:#a6e22e">UP</span><span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">currentFloor</span> <span style="color:#f92672">=</span> currentFloor<span style="color:#f92672">;</span>
+        
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Floor : &#34;</span> <span style="color:#f92672">+</span> currentFloor<span style="color:#f92672">);</span>
+        
+        Thread<span style="color:#f92672">.</span><span style="color:#a6e22e">sleep</span><span style="color:#f92672">(</span>3000<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> Direction <span style="color:#a6e22e">getDirection</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> direction<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setDirection</span><span style="color:#f92672">(</span>Direction direction<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">direction</span> <span style="color:#f92672">=</span> direction<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> Thread <span style="color:#a6e22e">getRequestProcessorThread</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> requestProcessorThread<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setRequestProcessorThread</span><span style="color:#f92672">(</span>Thread requestProcessorThread<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">requestProcessorThread</span> <span style="color:#f92672">=</span> requestProcessorThread<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> TreeSet <span style="color:#a6e22e">getRequestSet</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> requestSet<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setRequestSet</span><span style="color:#f92672">(</span>TreeSet requestSet<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">requestSet</span> <span style="color:#f92672">=</span> requestSet<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RequestProcessor</span> <span style="color:#66d9ef">implements</span> Runnable <span style="color:#f92672">{</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">run</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            Elevator elevator <span style="color:#f92672">=</span> Elevator<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">();</span>
+            <span style="color:#66d9ef">int</span> floor <span style="color:#f92672">=</span> elevator<span style="color:#f92672">.</span><span style="color:#a6e22e">nextFloor</span><span style="color:#f92672">();</span>
+            <span style="color:#66d9ef">int</span> currentFloor <span style="color:#f92672">=</span> elevator<span style="color:#f92672">.</span><span style="color:#a6e22e">getCurrentFloor</span><span style="color:#f92672">();</span>
+            <span style="color:#66d9ef">try</span><span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>floor <span style="color:#f92672">&gt;=</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>currentFloor <span style="color:#f92672">&gt;</span> floor<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>currentFloor <span style="color:#f92672">&gt;</span> floor<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                            elevator<span style="color:#f92672">.</span><span style="color:#a6e22e">setCurrentFloor</span><span style="color:#f92672">(--</span>currentFloor<span style="color:#f92672">);</span>
+                        <span style="color:#f92672">}</span>
+                    <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>currentFloor <span style="color:#f92672">&lt;</span> floor<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                            elevator<span style="color:#f92672">.</span><span style="color:#a6e22e">setCurrentFloor</span><span style="color:#f92672">(++</span>currentFloor<span style="color:#f92672">);</span>
+                        <span style="color:#f92672">}</span>
+                    <span style="color:#f92672">}</span>
+                    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Welcome to Floor : &#34;</span> <span style="color:#f92672">+</span> elevator<span style="color:#f92672">.</span><span style="color:#a6e22e">getCurrentFloor</span><span style="color:#f92672">());</span>
+                <span style="color:#f92672">}</span>
+                
+            <span style="color:#f92672">}</span><span style="color:#66d9ef">catch</span><span style="color:#f92672">(</span>InterruptedException e<span style="color:#f92672">){</span>
+                <span style="color:#75715e">// If a new request has interrupted a current request processing then check -
+</span><span style="color:#75715e"></span>                <span style="color:#75715e">// -if the current request is already processed
+</span><span style="color:#75715e"></span>                <span style="color:#75715e">// -otherwise add it back in request Set
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>elevator<span style="color:#f92672">.</span><span style="color:#a6e22e">getCurrentFloor</span><span style="color:#f92672">()</span> <span style="color:#f92672">!=</span> floor<span style="color:#f92672">){</span>
+                    elevator<span style="color:#f92672">.</span><span style="color:#a6e22e">getRequestSet</span><span style="color:#f92672">().</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>floor<span style="color:#f92672">);</span>
+                <span style="color:#f92672">}</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RequestListener</span> <span style="color:#66d9ef">implements</span> Runnable <span style="color:#f92672">{</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">run</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            String floorNumberStr <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+                <span style="color:#75715e">// Read input from console
+</span><span style="color:#75715e"></span>                BufferedReader bufferedReader <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedReader<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> InputStreamReader<span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">in</span><span style="color:#f92672">));</span>
+                floorNumberStr <span style="color:#f92672">=</span> bufferedReader<span style="color:#f92672">.</span><span style="color:#a6e22e">readLine</span><span style="color:#f92672">();</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+            <span style="color:#f92672">}</span>
+
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>isValidFloorNumber<span style="color:#f92672">(</span>floorNumberStr<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+                System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;User Pressed : &#34;</span> <span style="color:#f92672">+</span> floorNumberStr<span style="color:#f92672">);</span>
+                Elevator elevator <span style="color:#f92672">=</span> Elevator<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">();</span>
+                elevator<span style="color:#f92672">.</span><span style="color:#a6e22e">addFloor</span><span style="color:#f92672">(</span>Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">parseInt</span><span style="color:#f92672">(</span>floorNumberStr<span style="color:#f92672">));</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Floor Request Invalid : &#34;</span> <span style="color:#f92672">+</span> floorNumberStr<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * This method is used to define maximum floors this elevator can process.
+</span><span style="color:#75715e">     * @param s - requested floor
+</span><span style="color:#75715e">     * @return true if requested floor is integer and upto two digits. (max floor = 99)
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isValidFloorNumber</span><span style="color:#f92672">(</span>String s<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">(</span>s <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">&amp;&amp;</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">matches</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;\\d{1,2}&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">enum</span> Direction <span style="color:#f92672">{</span>
+    UP<span style="color:#f92672">,</span> DOWN
+<span style="color:#f92672">}</span>
+</code></pre></div>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link btn" href="/tags/java/" rel="tag">Java</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/design-pattern/" rel="tag">Design Pattern</a></li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Ashish Lahoti avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Ashish Lahoti</span>
+	</div>
+	<div class="authorbox__description">
+		Ashish Lahoti is a full stack application developer at DBS Bank | Confluent Certified Developer for Apache KAFKA | SCJP Certified
+	</div>
+</div>
+
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--prev">
+		<a class="post-nav__link" href="/post/puzzle-12-balls-odd-one-out/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Puzzle - 12 Balls - Odd one out</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next">
+		<a class="post-nav__link" href="/post/bubble-sort-using-java/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Bubble Sort</p></a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 Ashish Lahoti.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script></body>
+</html>
