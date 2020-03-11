@@ -1,0 +1,15 @@
+.logo__title img{
+    width: 32px;
+    height: 32px;
+	width: 2rem;
+	height: 2rem;
+}
+
+@media screen and (max-width: 767px) {
+    .logo__title img{
+        width: 24px;
+        height: 24px;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
