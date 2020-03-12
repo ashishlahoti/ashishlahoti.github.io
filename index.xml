@@ -6,7 +6,7 @@
     <description>Recent content on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Apr 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingnconcepts.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -261,19 +261,6 @@ Virtual DOM Concept of Virtual DOM is adapted by popular UI libraries like React
     </item>
     
     <item>
-      <title>About Me</title>
-      <link>http://codingnconcepts.com/about/</link>
-      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingnconcepts.com/about/</guid>
-      <description>Hey Everyone! I’m Ashish Lahoti. Welcome to my technology blog!
-I created this blog to narrate my coding and concepts learning experiences. I like sharing my experiments and ideas with everyone by writing articles on latest technological trends.
-Primarily I write about Java, Spring, Kafka, Javascript, CSS and the list goes on&amp;hellip;
-Few pointers about me:-
- Full Stack Certified Kafka and SCJP Developer with 9+ years of extensive experience in Java and JavaScript Technologies.</description>
-    </item>
-    
-    <item>
       <title>Puzzle - 12 Balls - Odd one out</title>
       <link>http://codingnconcepts.com/post/puzzle-12-balls-odd-one-out/</link>
       <pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate>
@@ -321,6 +308,19 @@ Few pointers about me:-
 &lt;blockquote&gt;
 &lt;p&gt;You have 5 jars of pills. Each pill weighs 10 gram, except for contaminated pills contained in one jar, where each pill weighs 9 gm. Given a scale, how could you tell which jar had the contaminated pills in just one measurement?”&lt;/p&gt;
 &lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>http://codingnconcepts.com/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/about/</guid>
+      <description>Hey Everyone! I’m Ashish Lahoti. Welcome to my technology blog!
+I created this blog to narrate my coding and concepts learning experiences. I like sharing my experiments and ideas with everyone by writing articles on latest technological trends.
+Primarily I write about Java, Spring, Kafka, Javascript, CSS and the list goes on&amp;hellip;
+Few pointers about me:-
+ Full Stack Certified Kafka and SCJP Developer with 9+ years of extensive experience in Java and JavaScript Technologies.</description>
     </item>
     
   </channel>

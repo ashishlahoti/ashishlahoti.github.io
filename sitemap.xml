@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>http://codingnconcepts.com/</loc>
+    <lastmod>2020-03-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://codingnconcepts.com/post/</loc>
     <lastmod>2020-03-10T00:00:00+00:00</lastmod>
   </url>
@@ -223,16 +228,6 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/about/</loc>
-    <lastmod>2014-04-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingnconcepts.com/</loc>
-    <lastmod>2014-04-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://codingnconcepts.com/post/puzzle-12-balls-odd-one-out/</loc>
     <lastmod>2012-04-22T00:00:00+00:00</lastmod>
   </url>
@@ -260,6 +255,10 @@
   <url>
     <loc>http://codingnconcepts.com/post/puzzle-contaminated-pills/</loc>
     <lastmod>2012-04-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/about/</loc>
   </url>
   
 </urlset>

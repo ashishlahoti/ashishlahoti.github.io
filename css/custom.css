@@ -13,3 +13,12 @@
         height: 1.5rem;
     }
 }
+
+.post__thumbnail img {
+    width: 10%;
+    min-width: 100px;
+}
+
+.list__thumbnail img {
+    max-width: 60px;
+}
