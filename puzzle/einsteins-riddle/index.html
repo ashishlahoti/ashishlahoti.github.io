@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Einstein&#39;s Riddle - Coding N Concepts</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="Einstein&#39;s Riddle">
+	<meta property="og:title" content="Einstein&#39;s Riddle" />
+<meta property="og:description" content="Einstein&#39;s Riddle" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingnconcepts.com/puzzle/einsteins-riddle/" />
+<meta property="article:published_time" content="2020-03-14T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-14T00:00:00+00:00" />
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Einstein&#39;s Riddle"/>
+<meta name="twitter:description" content="Einstein&#39;s Riddle"/>
+
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-160024498-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="Coding N Concepts" rel="home">
+				<div class="logo__title"><img src="/favicon-32x32.png" alt="Einstein&#39;s Riddle"> Coding N Concepts</div>
+				<div class="logo__tagline">Ashish Lahoti&#39;s Technical Blog</div>
+			</a>
+		</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/spring-boot/">
+				
+				<span class="menu__text">Spring Boot</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/interview-questions/">
+				
+				<span class="menu__text">Interview Questions</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/kafka/">
+				
+				<span class="menu__text">Kafka</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/java-programs/">
+				
+				<span class="menu__text">Java</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/puzzles/">
+				
+				<span class="menu__text">Puzzles</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About Me</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Einstein&#39;s Riddle</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2020-03-14T00:00:00Z">March 14, 2020</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/puzzles/" rel="category">Puzzles</a>
+	</span>
+</div></div>
+		</header>
+		<figure class="post__thumbnail">
+			<img src="/img/puzzle/albert-einstein.jpg" alt="Einstein&#39;s Riddle">
+		</figure><div class="content post__content clearfix">
+			<p>The legend says that this problem was created by Albert Einstein in the last century. Einstein said that only 2% of the world could solve it.</p>
+<p>There are no tricks, just pure logic, so good luck and don’t give up.</p>
+<h4 id="problem">Problem</h4>
+<blockquote>
+<ol>
+<li>In a street there are five houses, painted five different colors.</li>
+<li>In each house lives a man of different nationality</li>
+<li>These five homeowners each drink a different kind of beverage, smoke different brand of cigar and keep a different pet.</li>
+</ol>
+<p>The question is <strong>&ldquo;Who owns the fish?&quot;</strong></p>
+</blockquote>
+<p><strong>Clues:</strong></p>
+<pre><code>1. The British man lives in a red house.
+2. The Swedish man keeps dogs as pets.
+3. The Danish man drinks tea.
+4. The Green house is next to, and on the left of the White house.
+5. The owner of the Green house drinks coffee.
+6. The person who smokes Pall Mall rears birds.
+7. The owner of the Yellow house smokes Dunhill.
+8. The man living in the center house drinks milk.
+9. The Norwegian lives in the first house.
+10. The man who smokes Blends lives next to the one who keeps cats.
+11. The man who keeps horses lives next to the man who smokes Dunhill.
+12. The man who smokes Blue Master drinks beer.
+13. The German smokes Prince.
+14. The Norwegian lives next to the blue house.
+15. The Blends smoker lives next to the one who drinks water.
+</code></pre><h4 id="solution">Solution</h4>
+<blockquote>
+<p><strong>It&rsquo;s the German.</strong></p>
+</blockquote>
+<p>How do you solve it?</p>
+<p>Well, we know from examining the clues and the question that:</p>
+<p>The possible nationalities are:
+<code>Norwegian</code>
+<code>British</code>
+<code>Swedish</code>
+<code>Danish</code>
+<code>German</code></p>
+<p>The possible house colors are:
+<code>Red</code>
+<code>Green</code>
+<code>White</code>
+<code>Yellow</code>
+<code>Blue</code></p>
+<p>The possible beverages are:
+<code>Tea</code>
+<code>Coffee</code>
+<code>Milk</code>
+<code>Beer</code>
+<code>Water</code></p>
+<p>The possible cigars are:
+<code>Pall Mall</code>
+<code>Dunhill</code>
+<code>Blends</code>
+<code>BlueMaster</code>
+<code>Prince</code></p>
+<p>The possible pets are:
+<code>Dogs</code>
+<code>Birds</code>
+<code>Cats</code>
+<code>Horses</code>
+<code>Fish</code></p>
+<p>Well, we know there are five houses. We&rsquo;ll assume they&rsquo;re all in a row, and are numbered from left to right. We know the Norwegian is in the first house:</p>
+<table>
+<thead>
+<tr>
+<th align="left">House</th>
+<th align="left">#1</th>
+<th align="left">#2</th>
+<th align="left">#3</th>
+<th align="left">#4</th>
+<th align="left">#5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Color</strong></td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+</tr>
+<tr>
+<td align="left"><strong>Nationality</strong></td>
+<td align="left">Norwegian</td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+</tr>
+<tr>
+<td align="left"><strong>Beverage</strong></td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+</tr>
+<tr>
+<td align="left"><strong>Smokes</strong></td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+</tr>
+<tr>
+<td align="left"><strong>Pet</strong></td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+</tr>
+</tbody>
+</table>
+<p>Since the British lives in the red house, the Norwegian can&rsquo;t. We also know the Norwegian lives next to the blue house, so his house isn&rsquo;t blue. We also know that the green house is to the left of the white house; the Norwegian can&rsquo;t live in the white house since there is no house to the left, and can&rsquo;t live in the green house because his only neighbor, the one to the right, is known to live in the blue house. Therefore, the Norwegian lives in the yellow house.</p>
+<p>We also know the owner of the yellow house smokes Dunhill, and that the Norwegian has a neighbor with a blue house (the Norwegian only has one neighbor, to the right.)</p>
+<p>So here&rsquo;s what our matrix looks like now:</p>
+<table>
+<thead>
+<tr>
+<th align="left">House</th>
+<th align="left">#1</th>
+<th align="left">#2</th>
+<th align="left">#3</th>
+<th align="left">#4</th>
+<th align="left">#5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Color</strong></td>
+<td align="left">Yellow</td>
+<td align="left">Blue</td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+</tr>
+<tr>
+<td align="left"><strong>Nationality</strong></td>
+<td align="left">Norwegian</td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+</tr>
+<tr>
+<td align="left"><strong>Beverage</strong></td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+</tr>
+<tr>
+<td align="left"><strong>Smokes</strong></td>
+<td align="left">Dunhill</td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+</tr>
+<tr>
+<td align="left"><strong>Pet</strong></td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+</tr>
+</tbody>
+</table>
+<p>The man who keeps horses lives next to he man who smokes Dunhill; so the horse owner lives in the blue house. The center house&rsquo;s owner drinks milk, the green house&rsquo;s owner drinks coffee, and the green house is to the left of the white house. Since we know the left two houses are the yellow and blue houses, the only position for the green and white are green as the fourth and white as the fifth, since the middle (third) drinks milk and the owner of the green house drinks coffee. The middle house has to be red, and therefore is the Brit&rsquo;s. So now this is what we know:</p>
+<table>
+<thead>
+<tr>
+<th align="left">House</th>
+<th align="left">#1</th>
+<th align="left">#2</th>
+<th align="left">#3</th>
+<th align="left">#4</th>
+<th align="left">#5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Color</strong></td>
+<td align="left">Yellow</td>
+<td align="left">Blue</td>
+<td align="left">Red</td>
+<td align="left">Green</td>
+<td align="left">White</td>
+</tr>
+<tr>
+<td align="left"><strong>Nationality</strong></td>
+<td align="left">Norwegian</td>
+<td align="left">?</td>
+<td align="left">British</td>
+<td align="left">?</td>
+<td align="left">?</td>
+</tr>
+<tr>
+<td align="left"><strong>Beverage</strong></td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">Milk</td>
+<td align="left">Coffee</td>
+<td align="left">?</td>
+</tr>
+<tr>
+<td align="left"><strong>Smokes</strong></td>
+<td align="left">Dunhill</td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+</tr>
+<tr>
+<td align="left"><strong>Pet</strong></td>
+<td align="left">?</td>
+<td align="left">Horse</td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+</tr>
+</tbody>
+</table>
+<p>The owner who smokes BlueMaster drinks beer; since we know what houses #3 and #4 drink [and neither are beer] and we know what house #1 smokes [and its not BlueMaster], the only possibilities are houses #2 and #5. Keep this information in mind. Since it is evident house #1 cannot drink beer (only house #2 or #5 can), the only possible beverages for house #1 are water and tea, but since the Dane drinks tea, house #1 drinks water. The man who smokes Blends lives next to someone who drinks water; the only house next to #1 (the water-drinking house) is #2. The man who smokes Blends lives next to the one who has cats; so the cat-house is #1 or #3.</p>
+<table>
+<thead>
+<tr>
+<th align="left">House</th>
+<th align="left">#1</th>
+<th align="left">#2</th>
+<th align="left">#3</th>
+<th align="left">#4</th>
+<th align="left">#5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Color</strong></td>
+<td align="left">Yellow</td>
+<td align="left">Blue</td>
+<td align="left">Red</td>
+<td align="left">Green</td>
+<td align="left">White</td>
+</tr>
+<tr>
+<td align="left"><strong>Nationality</strong></td>
+<td align="left">Norwegian</td>
+<td align="left">?</td>
+<td align="left">British</td>
+<td align="left">?</td>
+<td align="left">?</td>
+</tr>
+<tr>
+<td align="left"><strong>Beverage</strong></td>
+<td align="left">?</td>
+<td align="left">Beer?</td>
+<td align="left">Milk</td>
+<td align="left">Coffee</td>
+<td align="left">Beer?</td>
+</tr>
+<tr>
+<td align="left"><strong>Smokes</strong></td>
+<td align="left">Dunhill</td>
+<td align="left">Blends</td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+</tr>
+<tr>
+<td align="left"><strong>Pet</strong></td>
+<td align="left">Cat?</td>
+<td align="left">Horse</td>
+<td align="left">Cat?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+</tr>
+</tbody>
+</table>
+<p>Since the Dane drinks tea, he must live in either house #2 or #5. The Swede and German could live in house #2, #4 or #5.</p>
+<table>
+<thead>
+<tr>
+<th align="left">House</th>
+<th align="left">#1</th>
+<th align="left">#2</th>
+<th align="left">#3</th>
+<th align="left">#4</th>
+<th align="left">#5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Color</strong></td>
+<td align="left">Yellow</td>
+<td align="left">Blue</td>
+<td align="left">Red</td>
+<td align="left">Green</td>
+<td align="left">White</td>
+</tr>
+<tr>
+<td align="left"><strong>Nationality</strong></td>
+<td align="left">Norwegian</td>
+<td align="left">D/S/G?</td>
+<td align="left">British</td>
+<td align="left">S/G?</td>
+<td align="left">D/S/G?</td>
+</tr>
+<tr>
+<td align="left"><strong>Beverage</strong></td>
+<td align="left">?</td>
+<td align="left">Beer?</td>
+<td align="left">Milk</td>
+<td align="left">Coffee</td>
+<td align="left">Beer?</td>
+</tr>
+<tr>
+<td align="left"><strong>Smokes</strong></td>
+<td align="left">Dunhill</td>
+<td align="left">Blends</td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+</tr>
+<tr>
+<td align="left"><strong>Pet</strong></td>
+<td align="left">Cat?</td>
+<td align="left">Horse</td>
+<td align="left">Cat?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+</tr>
+</tbody>
+</table>
+<p>We know the beer-drinker smokes BlueMaster. The only houses that could drink beer are #2 and #5, but since we know that #2 smokes Blends, #5 must be the house which drinks beer and smokes BlueMaster, and #2 has to be the house that drinks tea and the house of the Dane. We can eliminate the possibility of the Dane&rsquo;s residence being house #5.</p>
+<table>
+<thead>
+<tr>
+<th align="left">House</th>
+<th align="left">#1</th>
+<th align="left">#2</th>
+<th align="left">#3</th>
+<th align="left">#4</th>
+<th align="left">#5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Color</strong></td>
+<td align="left">Yellow</td>
+<td align="left">Blue</td>
+<td align="left">Red</td>
+<td align="left">Green</td>
+<td align="left">White</td>
+</tr>
+<tr>
+<td align="left"><strong>Nationality</strong></td>
+<td align="left">Norwegian</td>
+<td align="left">Danish</td>
+<td align="left">British</td>
+<td align="left">S/G?</td>
+<td align="left">S/G?</td>
+</tr>
+<tr>
+<td align="left"><strong>Beverage</strong></td>
+<td align="left">Water</td>
+<td align="left">Tea</td>
+<td align="left">Milk</td>
+<td align="left">Coffee</td>
+<td align="left">Beer</td>
+</tr>
+<tr>
+<td align="left"><strong>Smokes</strong></td>
+<td align="left">Dunhill</td>
+<td align="left">Blends</td>
+<td align="left">?</td>
+<td align="left">?</td>
+<td align="left">BlueMaster</td>
+</tr>
+<tr>
+<td align="left"><strong>Pet</strong></td>
+<td align="left">Cat?</td>
+<td align="left">Horse</td>
+<td align="left">Cat?</td>
+<td align="left">?</td>
+<td align="left">?</td>
+</tr>
+</tbody>
+</table>
+<p>We know the German smokes Prince. Therefore, he could not live at house #5 and therefore has to live at house #4. The Swede must live at house #5; we also know house #5 raises dogs since we know the Swede raises dogs, and that house #4 smokes Prince since the German smokes Prince.</p>
+<table>
+<thead>
+<tr>
+<th align="left">House</th>
+<th align="left">#1</th>
+<th align="left">#2</th>
+<th align="left">#3</th>
+<th align="left">#4</th>
+<th align="left">#5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Color</strong></td>
+<td align="left">Yellow</td>
+<td align="left">Blue</td>
+<td align="left">Red</td>
+<td align="left">Green</td>
+<td align="left">White</td>
+</tr>
+<tr>
+<td align="left"><strong>Nationality</strong></td>
+<td align="left">Norwegian</td>
+<td align="left">Danish</td>
+<td align="left">British</td>
+<td align="left">German</td>
+<td align="left">Swedish</td>
+</tr>
+<tr>
+<td align="left"><strong>Beverage</strong></td>
+<td align="left">Water</td>
+<td align="left">Tea</td>
+<td align="left">Milk</td>
+<td align="left">Coffee</td>
+<td align="left">Beer</td>
+</tr>
+<tr>
+<td align="left"><strong>Smokes</strong></td>
+<td align="left">Dunhill</td>
+<td align="left">Blends</td>
+<td align="left">?</td>
+<td align="left">Prince</td>
+<td align="left">BlueMaster</td>
+</tr>
+<tr>
+<td align="left"><strong>Pet</strong></td>
+<td align="left">Cat?</td>
+<td align="left">Horse</td>
+<td align="left">Cat?</td>
+<td align="left">?</td>
+<td align="left">Dogs</td>
+</tr>
+</tbody>
+</table>
+<p>The only possibility for house #3&rsquo;s smokes is Pall Mall; all of the others are taken. We know that whoever smokes Pall Mall raises birds; so house #3 raises birds, and house #1 therefore has cats, since the only houses which could have had cats were #1 and #3, and #3 has been eliminated.</p>
+<table>
+<thead>
+<tr>
+<th align="left">House</th>
+<th align="left">#1</th>
+<th align="left">#2</th>
+<th align="left">#3</th>
+<th align="left">#4</th>
+<th align="left">#5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Color</strong></td>
+<td align="left">Yellow</td>
+<td align="left">Blue</td>
+<td align="left">Red</td>
+<td align="left">Green</td>
+<td align="left">White</td>
+</tr>
+<tr>
+<td align="left"><strong>Nationality</strong></td>
+<td align="left">Norwegian</td>
+<td align="left">Danish</td>
+<td align="left">British</td>
+<td align="left">German</td>
+<td align="left">Swedish</td>
+</tr>
+<tr>
+<td align="left"><strong>Beverage</strong></td>
+<td align="left">Water</td>
+<td align="left">Tea</td>
+<td align="left">Milk</td>
+<td align="left">Coffee</td>
+<td align="left">Beer</td>
+</tr>
+<tr>
+<td align="left"><strong>Smokes</strong></td>
+<td align="left">Dunhill</td>
+<td align="left">Blends</td>
+<td align="left">Pall Mall</td>
+<td align="left">Prince</td>
+<td align="left">BlueMaster</td>
+</tr>
+<tr>
+<td align="left"><strong>Pet</strong></td>
+<td align="left">Cat</td>
+<td align="left">Horse</td>
+<td align="left">Birds</td>
+<td align="left">?</td>
+<td align="left">Dogs</td>
+</tr>
+</tbody>
+</table>
+<p>The only remaining pet is the fish, which must be owned by the German. We now know who owns the fish, and have solved the puzzle.</p>
+<p>The completed matrix of data is as follows:</p>
+<table>
+<thead>
+<tr>
+<th align="left">House</th>
+<th align="left">#1</th>
+<th align="left">#2</th>
+<th align="left">#3</th>
+<th align="left">#4</th>
+<th align="left">#5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Color</strong></td>
+<td align="left">Yellow</td>
+<td align="left">Blue</td>
+<td align="left">Red</td>
+<td align="left">Green</td>
+<td align="left">White</td>
+</tr>
+<tr>
+<td align="left"><strong>Nationality</strong></td>
+<td align="left">Norwegian</td>
+<td align="left">Danish</td>
+<td align="left">British</td>
+<td align="left">German</td>
+<td align="left">Swedish</td>
+</tr>
+<tr>
+<td align="left"><strong>Beverage</strong></td>
+<td align="left">Water</td>
+<td align="left">Tea</td>
+<td align="left">Milk</td>
+<td align="left">Coffee</td>
+<td align="left">Beer</td>
+</tr>
+<tr>
+<td align="left"><strong>Smokes</strong></td>
+<td align="left">Dunhill</td>
+<td align="left">Blends</td>
+<td align="left">Pall Mall</td>
+<td align="left">Prince</td>
+<td align="left">BlueMaster</td>
+</tr>
+<tr>
+<td align="left"><strong>Pet</strong></td>
+<td align="left">Cat</td>
+<td align="left">Horse</td>
+<td align="left">Birds</td>
+<td align="left"><strong>Fish</strong></td>
+<td align="left">Dogs</td>
+</tr>
+</tbody>
+</table>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link btn" href="/tags/einstein/" rel="tag">Einstein</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/riddle/" rel="tag">Riddle</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/puzzle/" rel="tag">Puzzle</a></li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Ashish Lahoti avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Ashish Lahoti</span>
+	</div>
+	<div class="authorbox__description">
+		Ashish Lahoti is a full stack application developer at DBS Bank | Confluent Certified Developer for Apache KAFKA | SCJP Certified
+	</div>
+</div>
+
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--prev">
+		<a class="post-nav__link" href="/puzzle/the-6s-math-puzzle/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">The 6s Math Puzzle</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next">
+		<a class="post-nav__link" href="/puzzle/burning-rope/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Burning Rope Puzzle</p></a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "codingnconcepts" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 Ashish Lahoti.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script></body>
+</html>
