@@ -12,6 +12,23 @@
     
     
     <item>
+      <title>2 Eggs and 100 Floors Problem</title>
+      <link>http://codingnconcepts.com/puzzle/2-eggs-and-100-floor/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/puzzle/2-eggs-and-100-floor/</guid>
+      <description>&lt;h4 id=&#34;problem&#34;&gt;Problem&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;There is a building of 100 floors. One of the floors is the highest floor (say Nth floor) an egg can be dropped from without breaking.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If an egg is dropped from that floor (N) or above (N+1, N+2, &amp;hellip;), it will break.&lt;/li&gt;
+&lt;li&gt;If it is dropped from any floor below (N-1, N-2, &amp;hellip;), it will not break and you can drop the egg again.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Given two eggs, find the floor (N) an egg can be dropped from without breaking in &lt;strong&gt;minimum number of drops&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
       <title>25 Horses Puzzle</title>
       <link>http://codingnconcepts.com/puzzle/25-horses-puzzle/</link>
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>

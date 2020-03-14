@@ -3,7 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://codingnconcepts.com/puzzle/2-eggs-and-100-floor/</loc>
+    <lastmod>2020-03-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://codingnconcepts.com/puzzle/25-horses-puzzle/</loc>
+    <lastmod>2020-03-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/tags/algorithm/</loc>
     <lastmod>2020-03-14T00:00:00+00:00</lastmod>
   </url>
   
@@ -38,6 +48,11 @@
   </url>
   
   <url>
+    <loc>http://codingnconcepts.com/tags/math-puzzle/</loc>
+    <lastmod>2020-03-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://codingnconcepts.com/tags/puzzle/</loc>
     <lastmod>2020-03-14T00:00:00+00:00</lastmod>
   </url>
@@ -54,6 +69,11 @@
   
   <url>
     <loc>http://codingnconcepts.com/tags/</loc>
+    <lastmod>2020-03-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/puzzle/the-6s-math-puzzle/</loc>
     <lastmod>2020-03-14T00:00:00+00:00</lastmod>
   </url>
   
@@ -240,11 +260,6 @@
   <url>
     <loc>http://codingnconcepts.com/tags/pattern/</loc>
     <lastmod>2018-05-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingnconcepts.com/tags/algorithm/</loc>
-    <lastmod>2015-07-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>

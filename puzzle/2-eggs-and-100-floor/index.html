@@ -4,19 +4,19 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Burning Rope Puzzle - Coding N Concepts</title>
+	<title>2 Eggs and 100 Floors Problem - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Burning Rope Puzzle">
-	<meta property="og:title" content="Burning Rope Puzzle" />
-<meta property="og:description" content="Burning Rope Puzzle" />
+	<meta name="description" content="2 Eggs and 100 Floor Problem">
+	<meta property="og:title" content="2 Eggs and 100 Floors Problem" />
+<meta property="og:description" content="2 Eggs and 100 Floor Problem" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://codingnconcepts.com/puzzle/burning-rope/" />
+<meta property="og:url" content="http://codingnconcepts.com/puzzle/2-eggs-and-100-floor/" />
 <meta property="article:published_time" content="2020-03-14T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-03-14T00:00:00+00:00" />
 
 	<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Burning Rope Puzzle"/>
-<meta name="twitter:description" content="Burning Rope Puzzle"/>
+<meta name="twitter:title" content="2 Eggs and 100 Floors Problem"/>
+<meta name="twitter:description" content="2 Eggs and 100 Floor Problem"/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -43,7 +43,7 @@ if (!doNotTrack) {
 	<div class="container">
 		<div class="logo">
 			<a class="logo__link" href="/" title="Coding N Concepts" rel="home">
-				<div class="logo__title"><img src="/favicon-32x32.png" alt="Burning Rope Puzzle"> Coding N Concepts</div>
+				<div class="logo__title"><img src="/favicon-32x32.png" alt="2 Eggs and 100 Floors Problem"> Coding N Concepts</div>
 				<div class="logo__tagline">Ashish Lahoti&#39;s Technical Blog</div>
 			</a>
 		</div>
@@ -113,7 +113,7 @@ if (!doNotTrack) {
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Burning Rope Puzzle</h1>
+			<h1 class="post__title">2 Eggs and 100 Floors Problem</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
@@ -125,23 +125,75 @@ if (!doNotTrack) {
 	<span class="meta__text"><a class="meta__link" href="/categories/puzzles/" rel="category">Puzzles</a>
 	</span>
 </div></div>
-		</header>
-		<figure class="post__thumbnail">
-			<img src="/img/puzzle/burning-rope-1.png" alt="Burning Rope Puzzle">
-		</figure><div class="content post__content clearfix">
+		</header><div class="content post__content clearfix">
 			<h4 id="problem">Problem</h4>
 <blockquote>
-<p>You have two ropes of varying thickness and length. Each rope burns in exactly 60 minutes. How can you measure 45 mins using only these two ropes.</p>
-<p><strong>Note:</strong> You can’t cut the rope in half because of varying thickness and you don&rsquo;t have a timer or watch to measure the burning time.</p>
+<p>There is a building of 100 floors. One of the floors is the highest floor (say Nth floor) an egg can be dropped from without breaking.</p>
+<ul>
+<li>If an egg is dropped from that floor (N) or above (N+1, N+2, &hellip;), it will break.</li>
+<li>If it is dropped from any floor below (N-1, N-2, &hellip;), it will not break and you can drop the egg again.</li>
+</ul>
+<p>Given two eggs, find the floor (N) an egg can be dropped from without breaking in <strong>minimum number of drops</strong>.</p>
 </blockquote>
-<h4 id="solution">Solution</h4>
-<blockquote>
-<ol>
-<li>Burn first rope at both the ends and the second rope at one end.</li>
-<li>The first rope burns completely after half an hour since you burned it from both end. At this point, burn the other end of the second rope so now it will take 15 mins more to burn completely.</li>
-</ol>
-<p>Phat! total time is 30 + 15 = 45 mins.</p>
-</blockquote>
+<h4 id="solution-1-liner-search">Solution 1 (Liner Search)</h4>
+<p>First solution is linear search strategy which is very straightforward if we don&rsquo;t care about number of drops. We can start dropping egg from floor 1, floor 2, floor 3 and continue till floor 100 until we find the floor N. In worst case it will take 100 drops if egg breaks only at the last (100th) floor.</p>
+<pre><code>    Linear search - worst case - 100 drops
+</code></pre>
+<p>Can we improve worst case using binary search strategy? Lets see in <strong>Solution 2</strong>.</p>
+<h4 id="solution-2-binary-search">Solution 2 (Binary Search)</h4>
+<p>Second solution is binary search strategy where we start from the middle (50th) floor.</p>
+<ul>
+<li>If egg breaks on 50th floor that means our N is below 50.</li>
+<li>If egg doesn&rsquo;t break that means our N is above 50.</li>
+</ul>
+<p>Binary search strategy say that If egg breaks on 50th floor then we should check now from 25th floor but wait, we have a problem here. We have already lost 1 egg and left with only 1 egg now so we are left with linear search only but in this case only from 1st to 50th floor in worst case. So our drops came down to half compare to solution 1</p>
+<pre><code>    Binary Search - worst case - 50 drops
+</code></pre>
+<p>Can we still improve the worst case? Let see in <strong>Solution 3</strong></p>
+<h4 id="solution-3-divide-and-conquer">Solution 3 (Divide and Conquer)</h4>
+<p>Let&rsquo;s apply our learning from previous solutions and apply a mix of linear and binary approach.</p>
+<p>This time we start off by dropping an egg at floor 10, floor 20, floor 30 &hellip;increasing floor by 10</p>
+<ul>
+<li>
+<p>If first egg breaks at floor 10, then we use second egg to linear search from 1 to 9</p>
+</li>
+<li>
+<p>If first egg breaks at floor 20, then we use second egg to linear search from 11 to 19</p>
+</li>
+<li>
+<p>&hellip;.</p>
+</li>
+<li>
+<p>&hellip;.</p>
+</li>
+<li>
+<p>In worst case if egg breaks at last (100th) floor then we use second egg to linear search from 91 to 99. In worst case it will take 19 drops (10th, 20th, 30th &hellip;&hellip; 70th 80th 90th 91th &hellip;.99th)</p>
+<pre><code>  Divide and Conquer - worst case - 19 drops
+</code></pre>
+</li>
+</ul>
+<p>Now when we came to an understanding, lets see <strong>Solution 4</strong></p>
+<h5 id="solution-4-equation">Solution 4 (Equation)</h5>
+<p>The next approach can reduce our worse case scenario by balancing the linear drops and our 10 floor drop increment. If getting to the higher floors means more drops overall, we need to decrease the drops we need to perform linearly. We’re essentially trying to make all possible scenarios take the same number of drops to solve.
+If we drop our first egg from floor x (10 in our 10 floor strategy), the linear portion of our strategy is x-1 (9 in the above strategy). Our drop count is:</p>
+<pre><code>    x + (x - 1)
+</code></pre>
+<p>If the egg doesn’t break on the first drop our drop count increases by one, so we’ll need to remove a drop from our floor by floor drop count — the next drop should be from x-1 floors up. Every additional floor jump will need to have one less floor, so that when we get to the linear portion of the solution we’ll have one less floor to check. We continue removing one floor until we only have 1 floor to check:</p>
+<pre><code>    x + (x-1) + (x-2) + (x-3) + ... + 1
+
+    Which simplifies to:
+    
+    x(x + 1)/2
+</code></pre>
+<p>Because there are 100 floors in our problem, we solve for x when the entire summation is equal to 100:</p>
+<pre><code>    x(x + 1)/2 = 100
+
+    And some math...
+    
+    x = 13.651
+</code></pre>
+<p>This means we want to start dropping from floor 14, jump up 13 floors to drop from floor 27, jump up 12 floors to drop from floor 39, and so on. <strong>Our worst case scenario is then a drop count total of 14.</strong></p>
+<pre><code>    Equation - worst case - 14 drops</code></pre>
 		</div>
 		<footer class="post__footer">
 			
@@ -149,8 +201,9 @@ if (!doNotTrack) {
 	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
 	<ul class="tags__list">
 		<li class="tags__item"><a class="tags__link btn" href="/tags/interview/" rel="tag">Interview</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/google/" rel="tag">Google</a></li>
 		<li class="tags__item"><a class="tags__link btn" href="/tags/interview-questions/" rel="tag">Interview Questions</a></li>
-		<li class="tags__item"><a class="tags__link btn" href="/tags/puzzle/" rel="tag">Puzzle</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/algorithm/" rel="tag">Algorithm</a></li>
 	</ul>
 </div>
 		</footer>
@@ -171,10 +224,7 @@ if (!doNotTrack) {
 
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="/puzzle/the-6s-math-puzzle/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">The 6s Math Puzzle</p></a>
-	</div>
-	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="/puzzle/25-horses-puzzle/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">25 Horses Puzzle</p></a>
+		<a class="post-nav__link" href="/puzzle/25-horses-puzzle/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">25 Horses Puzzle</p></a>
 	</div>
 </nav>
 

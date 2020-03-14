@@ -38,6 +38,31 @@
     </item>
     
     <item>
+      <title>The 6s Math Puzzle</title>
+      <link>http://codingnconcepts.com/puzzle/the-6s-math-puzzle/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/puzzle/the-6s-math-puzzle/</guid>
+      <description>&lt;p&gt;This is a pure mathematical puzzle which evaluate your ability to solve maths equation. This is a great problem for building number sense.&lt;/p&gt;
+&lt;h4 id=&#34;problem&#34;&gt;Problem&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The challenge is to make each below equation true using common mathematical operations. You cannot introduce any new digits (so the cube root ∛ is not allowed since it has a 3).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hint:&lt;/strong&gt; common mathematical operations are &lt;code&gt;+&lt;/code&gt; &lt;code&gt;-&lt;/code&gt; &lt;code&gt;x&lt;/code&gt; &lt;code&gt;/&lt;/code&gt; &lt;code&gt;!&lt;/code&gt; &lt;code&gt;√&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;0 0 0 = 6    
+1 1 1 = 6
+2 2 2 = 6
+3 3 3 = 6
+4 4 4 = 6
+5 5 5 = 6
+6 6 6 = 6
+7 7 7 = 6
+8 8 8 = 6
+9 9 9 = 6
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
       <title>12 Balls Weight Puzzle</title>
       <link>http://codingnconcepts.com/puzzle/12-balls-weight-puzzle/</link>
       <pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate>

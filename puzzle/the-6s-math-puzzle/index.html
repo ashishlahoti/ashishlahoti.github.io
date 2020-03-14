@@ -4,19 +4,19 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Burning Rope Puzzle - Coding N Concepts</title>
+	<title>The 6s Math Puzzle - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Burning Rope Puzzle">
-	<meta property="og:title" content="Burning Rope Puzzle" />
-<meta property="og:description" content="Burning Rope Puzzle" />
+	<meta name="description" content="The 6s Math Puzzle">
+	<meta property="og:title" content="The 6s Math Puzzle" />
+<meta property="og:description" content="The 6s Math Puzzle" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://codingnconcepts.com/puzzle/burning-rope/" />
+<meta property="og:url" content="http://codingnconcepts.com/puzzle/the-6s-math-puzzle/" />
 <meta property="article:published_time" content="2020-03-14T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-03-14T00:00:00+00:00" />
 
 	<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Burning Rope Puzzle"/>
-<meta name="twitter:description" content="Burning Rope Puzzle"/>
+<meta name="twitter:title" content="The 6s Math Puzzle"/>
+<meta name="twitter:description" content="The 6s Math Puzzle"/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -43,7 +43,7 @@ if (!doNotTrack) {
 	<div class="container">
 		<div class="logo">
 			<a class="logo__link" href="/" title="Coding N Concepts" rel="home">
-				<div class="logo__title"><img src="/favicon-32x32.png" alt="Burning Rope Puzzle"> Coding N Concepts</div>
+				<div class="logo__title"><img src="/favicon-32x32.png" alt="The 6s Math Puzzle"> Coding N Concepts</div>
 				<div class="logo__tagline">Ashish Lahoti&#39;s Technical Blog</div>
 			</a>
 		</div>
@@ -113,7 +113,7 @@ if (!doNotTrack) {
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Burning Rope Puzzle</h1>
+			<h1 class="post__title">The 6s Math Puzzle</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
@@ -125,31 +125,109 @@ if (!doNotTrack) {
 	<span class="meta__text"><a class="meta__link" href="/categories/puzzles/" rel="category">Puzzles</a>
 	</span>
 </div></div>
-		</header>
-		<figure class="post__thumbnail">
-			<img src="/img/puzzle/burning-rope-1.png" alt="Burning Rope Puzzle">
-		</figure><div class="content post__content clearfix">
-			<h4 id="problem">Problem</h4>
+		</header><div class="content post__content clearfix">
+			<p>This is a pure mathematical puzzle which evaluate your ability to solve maths equation. This is a great problem for building number sense.</p>
+<h4 id="problem">Problem</h4>
 <blockquote>
-<p>You have two ropes of varying thickness and length. Each rope burns in exactly 60 minutes. How can you measure 45 mins using only these two ropes.</p>
-<p><strong>Note:</strong> You can’t cut the rope in half because of varying thickness and you don&rsquo;t have a timer or watch to measure the burning time.</p>
+<p>The challenge is to make each below equation true using common mathematical operations. You cannot introduce any new digits (so the cube root ∛ is not allowed since it has a 3).</p>
+<p><strong>Hint:</strong> common mathematical operations are <code>+</code> <code>-</code> <code>x</code> <code>/</code> <code>!</code> <code>√</code></p>
 </blockquote>
-<h4 id="solution">Solution</h4>
+<pre><code>0 0 0 = 6    
+1 1 1 = 6
+2 2 2 = 6
+3 3 3 = 6
+4 4 4 = 6
+5 5 5 = 6
+6 6 6 = 6
+7 7 7 = 6
+8 8 8 = 6
+9 9 9 = 6
+</code></pre><h4 id="solution">Solution</h4>
 <blockquote>
-<ol>
-<li>Burn first rope at both the ends and the second rope at one end.</li>
-<li>The first rope burns completely after half an hour since you burned it from both end. At this point, burn the other end of the second rope so now it will take 15 mins more to burn completely.</li>
-</ol>
-<p>Phat! total time is 30 + 15 = 45 mins.</p>
+<p><strong>Note:</strong> Please try on your own before looking at the solution. Also some of the equations has multiple solutions.</p>
 </blockquote>
+<p>Let’s start with some easier ones.</p>
+<pre><code>2 + 2 + 2 = 6
+
+6 + 6 – 6 = 6
+6 × (6/6) = 6
+
+7 – 7/7 = 6
+
+5 + 5/5 = 6
+</code></pre>
+<p>Here are a few solutions for 3.</p>
+<pre><code>3 × 3 – 3 = 6
+3! + 3 – 3 = 6
+3! × (3/3) = 6
+√(3 × 3) + 3 = 6
+</code></pre>
+<p>For the number 9, we can use a trick. Since √(9) = 3, we can take the square root of each number, so the problem is equivalent to solving 3 3 3 = 6, which we have just solved! So we can use any of those solutions, or we can find others too.</p>
+<pre><code>√9 × √9 – √9 = 6
+(√9)! + √9 – √9 = 6
+(√9)! × √9/√9 = 6
+(√9 × √9/√9)! = 6
+</code></pre>
+<p>We can do a similar trick for 4. Since √4 = 2, we can use the solution for 2 2 2 = 6. But there are other solutions too.</p>
+<pre><code>√4 + √4 + √4 = 6
+(4 – 4/4)! = 6
+(√4 + 4/4)! = 6
+</code></pre>
+<p>Now we just have a couple more to solve and we will use 3! = 6 in many of the answers. We can solve for 10 as:</p>
+<pre><code>(√(10 – 10/10))! = 6
+</code></pre>
+<p>Then we have the 1 solution:</p>
+<pre><code>(1 + 1 + 1)! = 6
+</code></pre>
+<p>To solve 0, we use the fact that 0! = 1, and then we have reduced the problem to solving 1 1 1 = 6, which was previously solved.</p>
+<pre><code>(0! + 0! + 0!)! = 6
+</code></pre>
+<p>We just have one more to solve, which many people consider to be the hardest. One way to solve uses nested square roots.</p>
+<pre><code>8 – √(√(8 + 8)) = 6
+</code></pre>
+<p>The other method uses 3! = 6.</p>
+<pre><code>(√(8 + 8/8))! = 6
+</code></pre>
+<p>And we are done! Here are the above solutions listed in numerical order. This is not a comprehensive list. you might have found another way too!</p>
+<pre><code>(0! + 0! + 0!)! = 6
+
+(1 + 1 + 1)! = 6
+
+2 + 2 + 2 = 6
+
+3 × 3 – 3 = 6
+3! + 3 – 3 = 6
+3! × (3/3) = 6
+√(3 × 3) + 3 = 6
+
+√4 + √4 + √4 = 6
+(4 – 4/4)! = 6
+(√4 + 4/4)! = 6
+
+5 + 5/5 = 6
+
+6 + 6 – 6 = 6
+6 ×(6/6) = 6
+
+7 – 7/7 = 6
+
+8 – √(√(8 + 8)) = 6
+(√(8 + 8/8))! = 6
+
+√9 × √9 – √9 = 6
+(√9)! + √9 – √9 = 6
+(√9)! × √9/√9 = 6
+(√9 × √9/√9)! = 6
+
+(√(10 – 10/10))! = 6
+</code></pre>
 		</div>
 		<footer class="post__footer">
 			
 <div class="post__tags tags clearfix">
 	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link btn" href="/tags/interview/" rel="tag">Interview</a></li>
-		<li class="tags__item"><a class="tags__link btn" href="/tags/interview-questions/" rel="tag">Interview Questions</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/math-puzzle/" rel="tag">Math Puzzle</a></li>
 		<li class="tags__item"><a class="tags__link btn" href="/tags/puzzle/" rel="tag">Puzzle</a></li>
 	</ul>
 </div>
@@ -171,10 +249,10 @@ if (!doNotTrack) {
 
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="/puzzle/the-6s-math-puzzle/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">The 6s Math Puzzle</p></a>
+		<a class="post-nav__link" href="/puzzle/12-balls-weight-puzzle/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">12 Balls Weight Puzzle</p></a>
 	</div>
 	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="/puzzle/25-horses-puzzle/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">25 Horses Puzzle</p></a>
+		<a class="post-nav__link" href="/puzzle/burning-rope/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Burning Rope Puzzle</p></a>
 	</div>
 </nav>
 

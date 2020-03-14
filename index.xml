@@ -12,6 +12,23 @@
     
     
     <item>
+      <title>2 Eggs and 100 Floors Problem</title>
+      <link>http://codingnconcepts.com/puzzle/2-eggs-and-100-floor/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/puzzle/2-eggs-and-100-floor/</guid>
+      <description>&lt;h4 id=&#34;problem&#34;&gt;Problem&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;There is a building of 100 floors. One of the floors is the highest floor (say Nth floor) an egg can be dropped from without breaking.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If an egg is dropped from that floor (N) or above (N+1, N+2, &amp;hellip;), it will break.&lt;/li&gt;
+&lt;li&gt;If it is dropped from any floor below (N-1, N-2, &amp;hellip;), it will not break and you can drop the egg again.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Given two eggs, find the floor (N) an egg can be dropped from without breaking in &lt;strong&gt;minimum number of drops&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
       <title>25 Horses Puzzle</title>
       <link>http://codingnconcepts.com/puzzle/25-horses-puzzle/</link>
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
@@ -35,6 +52,31 @@
 &lt;p&gt;You have two ropes of varying thickness and length. Each rope burns in exactly 60 minutes. How can you measure 45 mins using only these two ropes.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; You can’t cut the rope in half because of varying thickness and you don&amp;rsquo;t have a timer or watch to measure the burning time.&lt;/p&gt;
 &lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>The 6s Math Puzzle</title>
+      <link>http://codingnconcepts.com/puzzle/the-6s-math-puzzle/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/puzzle/the-6s-math-puzzle/</guid>
+      <description>&lt;p&gt;This is a pure mathematical puzzle which evaluate your ability to solve maths equation. This is a great problem for building number sense.&lt;/p&gt;
+&lt;h4 id=&#34;problem&#34;&gt;Problem&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The challenge is to make each below equation true using common mathematical operations. You cannot introduce any new digits (so the cube root ∛ is not allowed since it has a 3).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hint:&lt;/strong&gt; common mathematical operations are &lt;code&gt;+&lt;/code&gt; &lt;code&gt;-&lt;/code&gt; &lt;code&gt;x&lt;/code&gt; &lt;code&gt;/&lt;/code&gt; &lt;code&gt;!&lt;/code&gt; &lt;code&gt;√&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;0 0 0 = 6    
+1 1 1 = 6
+2 2 2 = 6
+3 3 3 = 6
+4 4 4 = 6
+5 5 5 = 6
+6 6 6 = 6
+7 7 7 = 6
+8 8 8 = 6
+9 9 9 = 6
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>
