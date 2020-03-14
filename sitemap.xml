@@ -3,17 +3,57 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://codingnconcepts.com/puzzle/burning-rope/</loc>
+    <lastmod>2020-03-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://codingnconcepts.com/categories/</loc>
-    <lastmod>2020-03-10T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://codingnconcepts.com/</loc>
+    <lastmod>2020-03-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/tags/interview/</loc>
+    <lastmod>2020-03-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/tags/puzzle/</loc>
+    <lastmod>2020-03-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/categories/puzzles/</loc>
+    <lastmod>2020-03-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/puzzle/</loc>
+    <lastmod>2020-03-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/tags/</loc>
+    <lastmod>2020-03-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/spring-boot/how-to-configure-swagger/</loc>
     <lastmod>2020-03-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/post/</loc>
+    <loc>http://codingnconcepts.com/spring-boot/how-to-create-custom-banner/</loc>
+    <lastmod>2020-03-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/spring-boot/how-to-disable-command-line-properties/</loc>
     <lastmod>2020-03-10T00:00:00+00:00</lastmod>
   </url>
   
@@ -33,27 +73,17 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/post/spring-boot-how-to-configure-swagger/</loc>
+    <loc>http://codingnconcepts.com/spring-boot/</loc>
     <lastmod>2020-03-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/post/spring-boot-custom-banner/</loc>
-    <lastmod>2020-03-10T00:00:00+00:00</lastmod>
+    <loc>http://codingnconcepts.com/spring-boot/how-to-change-server-port/</loc>
+    <lastmod>2020-03-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/post/spring-boot-how-to-disable-command-line-properties/</loc>
-    <lastmod>2020-03-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingnconcepts.com/tags/</loc>
-    <lastmod>2020-03-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingnconcepts.com/tags/interview/</loc>
+    <loc>http://codingnconcepts.com/spring-boot/how-to-disable-banner/</loc>
     <lastmod>2020-03-09T00:00:00+00:00</lastmod>
   </url>
   
@@ -63,27 +93,22 @@
   </url>
   
   <url>
+    <loc>http://codingnconcepts.com/interview-questions/</loc>
+    <lastmod>2020-03-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://codingnconcepts.com/tags/java/</loc>
     <lastmod>2020-03-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/post/spring-boot-how-to-change-server-port/</loc>
+    <loc>http://codingnconcepts.com/interview-questions/top-spring-boot-interview-questions/</loc>
     <lastmod>2020-03-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/post/spring-boot-how-to-disable-banner/</loc>
-    <lastmod>2020-03-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingnconcepts.com/post/top-spring-boot-interview-questions/</loc>
-    <lastmod>2020-03-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingnconcepts.com/post/top-spring-interview-questions/</loc>
+    <loc>http://codingnconcepts.com/interview-questions/top-spring-interview-questions/</loc>
     <lastmod>2020-03-09T00:00:00+00:00</lastmod>
   </url>
   
@@ -103,17 +128,17 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/post/top-css-interview-questions/</loc>
+    <loc>http://codingnconcepts.com/interview-questions/top-css-interview-questions/</loc>
     <lastmod>2020-03-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/post/top-java-interview-questions/</loc>
+    <loc>http://codingnconcepts.com/interview-questions/top-java-interview-questions/</loc>
     <lastmod>2020-03-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/post/top-javascript-interview-questions/</loc>
+    <loc>http://codingnconcepts.com/interview-questions/top-javascript-interview-questions/</loc>
     <lastmod>2020-03-07T00:00:00+00:00</lastmod>
   </url>
   
@@ -124,6 +149,11 @@
   
   <url>
     <loc>http://codingnconcepts.com/categories/java-programs/</loc>
+    <lastmod>2019-07-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/post/</loc>
     <lastmod>2019-07-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -143,11 +173,6 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/tags/apache-kafka/</loc>
-    <lastmod>2019-06-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://codingnconcepts.com/post/apache-kafka-ccdak-exam-notes/</loc>
     <lastmod>2019-06-13T00:00:00+00:00</lastmod>
   </url>
@@ -163,6 +188,16 @@
   </url>
   
   <url>
+    <loc>http://codingnconcepts.com/tags/confluent/</loc>
+    <lastmod>2019-06-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/tags/kafka/</loc>
+    <lastmod>2019-06-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://codingnconcepts.com/categories/kafka/</loc>
     <lastmod>2019-06-13T00:00:00+00:00</lastmod>
   </url>
@@ -170,11 +205,6 @@
   <url>
     <loc>http://codingnconcepts.com/post/vitual-dom-vs-shadow-dom/</loc>
     <lastmod>2019-06-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingnconcepts.com/tags/kafka/</loc>
-    <lastmod>2019-05-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -228,22 +258,17 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/post/puzzle-12-balls-odd-one-out/</loc>
+    <loc>http://codingnconcepts.com/puzzle/minimum-set-of-weights/</loc>
     <lastmod>2012-04-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/post/puzzle-8-balls-odd-one-out/</loc>
+    <loc>http://codingnconcepts.com/puzzle/12-balls-odd-one-out/</loc>
     <lastmod>2012-04-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/post/puzzle-minimum-set-of-weights/</loc>
-    <lastmod>2012-04-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingnconcepts.com/categories/puzzles/</loc>
+    <loc>http://codingnconcepts.com/puzzle/8-balls-odd-one-out/</loc>
     <lastmod>2012-04-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -253,7 +278,7 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/post/puzzle-contaminated-pills/</loc>
+    <loc>http://codingnconcepts.com/puzzle/contaminated-pills/</loc>
     <lastmod>2012-04-21T00:00:00+00:00</lastmod>
   </url>
   

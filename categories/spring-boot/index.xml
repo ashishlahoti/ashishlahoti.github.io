@@ -12,22 +12,22 @@
     
     
     <item>
-      <title>Spring Boot - How to configure swagger</title>
-      <link>http://codingnconcepts.com/post/spring-boot-how-to-configure-swagger/</link>
+      <title>How to configure swagger in spring boot</title>
+      <link>http://codingnconcepts.com/spring-boot/how-to-configure-swagger/</link>
       <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/post/spring-boot-how-to-configure-swagger/</guid>
+      <guid>http://codingnconcepts.com/spring-boot/how-to-configure-swagger/</guid>
       <description>&lt;p&gt;Swagger library is very useful if you are creating spring boot web application and exposing REST endpoints. Swagger generates web page for you to execute and test GET, POST, PUT, DELETE HTTP endpoints. This is helpful since you do not need to use Postman or some other tool to test REST Apis. Once you configure swagger then web page can be accessible using following URL:-&lt;/p&gt;
 &lt;p&gt;http://localhost:8080/swagger-ui.html&lt;/p&gt;
 &lt;p&gt;Follow the steps to configure swagger in your spring boot application:-&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Spring Boot - How to create and configure custom banner</title>
-      <link>http://codingnconcepts.com/post/spring-boot-custom-banner/</link>
+      <title>How to create and configure custom banner in spring boot</title>
+      <link>http://codingnconcepts.com/spring-boot/how-to-create-custom-banner/</link>
       <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/post/spring-boot-custom-banner/</guid>
+      <guid>http://codingnconcepts.com/spring-boot/how-to-create-custom-banner/</guid>
       <description>&lt;p&gt;Spring boot application comes with default banner which shows up first when you start your application.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;  .   ____          _            __ _ _
  /\\ / ___&#39;_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -40,31 +40,31 @@
     </item>
     
     <item>
-      <title>Spring Boot - How to disable command line properties</title>
-      <link>http://codingnconcepts.com/post/spring-boot-how-to-disable-command-line-properties/</link>
+      <title>How to disable command line properties in spring boot</title>
+      <link>http://codingnconcepts.com/spring-boot/how-to-disable-command-line-properties/</link>
       <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/post/spring-boot-how-to-disable-command-line-properties/</guid>
+      <guid>http://codingnconcepts.com/spring-boot/how-to-disable-command-line-properties/</guid>
       <description>&lt;p&gt;Spring Boot Application converts any command line arguments starting with --, such as &lt;strong&gt;--spring.profiles.active=dev&lt;/strong&gt; to a property by default and adds them to the Spring Environment. Command line properties always take precedence over other property sources.&lt;/p&gt;
 &lt;p&gt;If you do not want command line properties to be added to the Environment, you can disable them from SpringBootApplication main method as follows:-&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Spring Boot - How to change server port</title>
-      <link>http://codingnconcepts.com/post/spring-boot-how-to-change-server-port/</link>
+      <title>How to change server port in spring boot</title>
+      <link>http://codingnconcepts.com/spring-boot/how-to-change-server-port/</link>
       <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/post/spring-boot-how-to-change-server-port/</guid>
+      <guid>http://codingnconcepts.com/spring-boot/how-to-change-server-port/</guid>
       <description>&lt;p&gt;Spring boot web application using embedded server by default runs on port 8080. Following are the ways to change default server port from &lt;strong&gt;8080&lt;/strong&gt; to say &lt;strong&gt;9090&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Follow any of the given five ways to change server port:-&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Spring Boot - How to disable default banner</title>
-      <link>http://codingnconcepts.com/post/spring-boot-how-to-disable-banner/</link>
+      <title>How to disable default banner in spring boot</title>
+      <link>http://codingnconcepts.com/spring-boot/how-to-disable-banner/</link>
       <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/post/spring-boot-how-to-disable-banner/</guid>
+      <guid>http://codingnconcepts.com/spring-boot/how-to-disable-banner/</guid>
       <description>&lt;p&gt;You would have seen below spring boot banner when starting a spring boot application&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;  .   ____          _            __ _ _
  /\\ / ___&#39;_ __ _ _(_)_ __  __ _ \ \ \ \

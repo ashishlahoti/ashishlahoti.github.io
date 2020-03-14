@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingnconcepts.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Interview</title>
+      <link>http://codingnconcepts.com/tags/interview/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/tags/interview/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Puzzle</title>
+      <link>http://codingnconcepts.com/tags/puzzle/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/tags/puzzle/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Spring</title>
@@ -26,15 +44,6 @@
       <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingnconcepts.com/tags/spring-boot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Interview</title>
-      <link>http://codingnconcepts.com/tags/interview/</link>
-      <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingnconcepts.com/tags/interview/</guid>
       <description></description>
     </item>
     
@@ -93,15 +102,6 @@
     </item>
     
     <item>
-      <title>Apache Kafka</title>
-      <link>http://codingnconcepts.com/tags/apache-kafka/</link>
-      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingnconcepts.com/tags/apache-kafka/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>CCDAK</title>
       <link>http://codingnconcepts.com/tags/ccdak/</link>
       <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
@@ -111,9 +111,18 @@
     </item>
     
     <item>
+      <title>Confluent</title>
+      <link>http://codingnconcepts.com/tags/confluent/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/tags/confluent/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Kafka</title>
       <link>http://codingnconcepts.com/tags/kafka/</link>
-      <pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>http://codingnconcepts.com/tags/kafka/</guid>
       <description></description>

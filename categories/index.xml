@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingnconcepts.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Puzzles</title>
+      <link>http://codingnconcepts.com/categories/puzzles/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/categories/puzzles/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Spring Boot</title>
@@ -53,15 +62,6 @@
       <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>http://codingnconcepts.com/categories/kafka/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Puzzles</title>
-      <link>http://codingnconcepts.com/categories/puzzles/</link>
-      <pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingnconcepts.com/categories/puzzles/</guid>
       <description></description>
     </item>
     
