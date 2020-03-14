@@ -12,23 +12,11 @@
     
     
     <item>
-      <title>Minimum set of weight puzzle</title>
-      <link>http://codingnconcepts.com/puzzle/minimum-set-of-weights/</link>
+      <title>12 Balls Weight Puzzle</title>
+      <link>http://codingnconcepts.com/puzzle/12-balls-weight-puzzle/</link>
       <pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/minimum-set-of-weights/</guid>
-      <description>&lt;h4 id=&#34;problem&#34;&gt;Problem&lt;/h4&gt;
-&lt;blockquote&gt;
-&lt;p&gt;What is the minimum number of weights needed for a scale that will be able to weigh objects from the weight of one pound to 100 pounds?&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-    </item>
-    
-    <item>
-      <title>Puzzle - 12 Balls - Odd one out</title>
-      <link>http://codingnconcepts.com/puzzle/12-balls-odd-one-out/</link>
-      <pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingnconcepts.com/puzzle/12-balls-odd-one-out/</guid>
+      <guid>http://codingnconcepts.com/puzzle/12-balls-weight-puzzle/</guid>
       <description>&lt;h4 id=&#34;problem&#34;&gt;Problem&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;You have 12 balls identical in size and appearance but 1 is an odd weight (could be either light or heavy).&lt;/p&gt;
@@ -38,14 +26,26 @@
     </item>
     
     <item>
-      <title>Puzzle - 8 Balls - Odd one out</title>
-      <link>http://codingnconcepts.com/puzzle/8-balls-odd-one-out/</link>
+      <title>8 Balls Weight Puzzle</title>
+      <link>http://codingnconcepts.com/puzzle/8-balls-weight-puzzle/</link>
       <pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/8-balls-odd-one-out/</guid>
+      <guid>http://codingnconcepts.com/puzzle/8-balls-weight-puzzle/</guid>
       <description>&lt;h4 id=&#34;problem&#34;&gt;Problem&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;You have 8 balls. One of them is defective and weighs less than others. You have a balance to measure balls against each other. In 2 weightings how do you find the defective one?&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Minimum set of weight puzzle</title>
+      <link>http://codingnconcepts.com/puzzle/minimum-set-of-weights/</link>
+      <pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/puzzle/minimum-set-of-weights/</guid>
+      <description>&lt;h4 id=&#34;problem&#34;&gt;Problem&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;What is the minimum number of weights needed for a scale that will be able to weigh objects from the weight of one pound to 100 pounds?&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
     

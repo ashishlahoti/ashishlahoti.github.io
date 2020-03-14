@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://codingnconcepts.com/puzzle/25-horses-puzzle/</loc>
+    <lastmod>2020-03-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://codingnconcepts.com/puzzle/burning-rope/</loc>
     <lastmod>2020-03-14T00:00:00+00:00</lastmod>
   </url>
@@ -18,7 +23,17 @@
   </url>
   
   <url>
+    <loc>http://codingnconcepts.com/tags/google/</loc>
+    <lastmod>2020-03-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://codingnconcepts.com/tags/interview/</loc>
+    <lastmod>2020-03-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/tags/interview-questions/</loc>
     <lastmod>2020-03-14T00:00:00+00:00</lastmod>
   </url>
   
@@ -258,17 +273,17 @@
   </url>
   
   <url>
+    <loc>http://codingnconcepts.com/puzzle/12-balls-weight-puzzle/</loc>
+    <lastmod>2012-04-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/puzzle/8-balls-weight-puzzle/</loc>
+    <lastmod>2012-04-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://codingnconcepts.com/puzzle/minimum-set-of-weights/</loc>
-    <lastmod>2012-04-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingnconcepts.com/puzzle/12-balls-odd-one-out/</loc>
-    <lastmod>2012-04-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingnconcepts.com/puzzle/8-balls-odd-one-out/</loc>
     <lastmod>2012-04-22T00:00:00+00:00</lastmod>
   </url>
   

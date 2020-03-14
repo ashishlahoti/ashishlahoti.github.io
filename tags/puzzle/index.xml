@@ -12,6 +12,19 @@
     
     
     <item>
+      <title>25 Horses Puzzle</title>
+      <link>http://codingnconcepts.com/puzzle/25-horses-puzzle/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/puzzle/25-horses-puzzle/</guid>
+      <description>&lt;p&gt;The 25 Horses Puzzle is a famous Google interview question that has been asked in many companies to evaluate candidate&amp;rsquo;s analytical ability and problem solving approach.&lt;/p&gt;
+&lt;h4 id=&#34;problem&#34;&gt;Problem&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You have 25 horses and you need to identify the fastest 3 horses out of those 25. Only 5 horses can run in each race at the same time as there are only 5 tracks. What is the minimum number of races required to identify the fastest 3 horses without using a stopwatch or timer?&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
       <title>Burning Rope Puzzle</title>
       <link>http://codingnconcepts.com/puzzle/burning-rope/</link>
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
@@ -20,7 +33,33 @@
       <description>&lt;h4 id=&#34;problem&#34;&gt;Problem&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;You have two ropes of varying thickness and length. Each rope burns in exactly 60 minutes. How can you measure 45 mins using only these two ropes.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/em&gt; You can’t cut the rope in half because of varying thickness and you don&amp;rsquo;t have a timer or watch to measure the burning time.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; You can’t cut the rope in half because of varying thickness and you don&amp;rsquo;t have a timer or watch to measure the burning time.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>12 Balls Weight Puzzle</title>
+      <link>http://codingnconcepts.com/puzzle/12-balls-weight-puzzle/</link>
+      <pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/puzzle/12-balls-weight-puzzle/</guid>
+      <description>&lt;h4 id=&#34;problem&#34;&gt;Problem&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You have 12 balls identical in size and appearance but 1 is an odd weight (could be either light or heavy).&lt;/p&gt;
+&lt;p&gt;You have a set scales (balance) which will give 3 possible readings: Left = Right, Left &amp;gt; Right or Left &amp;lt; Right (ie Left and Right have equal weight, Left is Heavier, or Left is Lighter).&lt;/p&gt;
+&lt;p&gt;You have only 3 chances to weigh the balls in any combination using the scales. Determine which ball is the odd one and if it’s heavier or lighter than the rest. How do you do it?&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>8 Balls Weight Puzzle</title>
+      <link>http://codingnconcepts.com/puzzle/8-balls-weight-puzzle/</link>
+      <pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/puzzle/8-balls-weight-puzzle/</guid>
+      <description>&lt;h4 id=&#34;problem&#34;&gt;Problem&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You have 8 balls. One of them is defective and weighs less than others. You have a balance to measure balls against each other. In 2 weightings how do you find the defective one?&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
     
