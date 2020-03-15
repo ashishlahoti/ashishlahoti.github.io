@@ -6,10 +6,22 @@
     <description>Recent content in Puzzle on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingnconcepts.com/tags/puzzle/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>3 Basket Puzzle</title>
+      <link>http://codingnconcepts.com/puzzle/3-basket-puzzle/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/puzzle/3-basket-puzzle/</guid>
+      <description>&lt;h4 id=&#34;problem&#34;&gt;Problem&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;There are 3 baskets. One basket has apples only, one has oranges only and the other has mixture of apples and oranges. The labels on their baskets always lie. (i.e. if the label says oranges, that basket is having either mixture or apples only). The task is to pick one basket and pick only one fruit from it and then correctly label all the three baskets.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
     
     <item>
       <title>25 Horses Puzzle</title>

@@ -6,10 +6,22 @@
     <description>Recent content in Puzzles on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingnconcepts.com/puzzle/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>3 Basket Puzzle</title>
+      <link>http://codingnconcepts.com/puzzle/3-basket-puzzle/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/puzzle/3-basket-puzzle/</guid>
+      <description>&lt;h4 id=&#34;problem&#34;&gt;Problem&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;There are 3 baskets. One basket has apples only, one has oranges only and the other has mixture of apples and oranges. The labels on their baskets always lie. (i.e. if the label says oranges, that basket is having either mixture or apples only). The task is to pick one basket and pick only one fruit from it and then correctly label all the three baskets.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
     
     <item>
       <title>2 Eggs and 100 Floors Problem</title>
@@ -17,7 +29,8 @@
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingnconcepts.com/puzzle/2-eggs-and-100-floor/</guid>
-      <description>&lt;h4 id=&#34;problem&#34;&gt;Problem&lt;/h4&gt;
+      <description>&lt;p&gt;This problem is frequently asked in interview to evaluate candidate&amp;rsquo;s understanding on linear search and binary search. I have tried to explain this problem as easy as possible.&lt;/p&gt;
+&lt;h4 id=&#34;problem&#34;&gt;Problem&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;There is a building of 100 floors. One of the floors is the highest floor (say Nth floor) an egg can be dropped from without breaking.&lt;/p&gt;
 &lt;ul&gt;
