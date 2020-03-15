@@ -18,7 +18,6 @@
       
       <guid>http://codingnconcepts.com/puzzle/2-eggs-and-100-floors/</guid>
       <description>&lt;p&gt;This problem is frequently asked in interview to evaluate candidate&amp;rsquo;s understanding on linear search and binary search. I have tried to explain this problem as easy as possible.&lt;/p&gt;
-&lt;h4 id=&#34;problem&#34;&gt;Problem&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;There is a building of 100 floors. One of the floors is the highest floor (say Nth floor) an egg can be dropped from without breaking.&lt;/p&gt;
 &lt;ul&gt;

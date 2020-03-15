@@ -4,19 +4,19 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>3 Basket Puzzle - Coding N Concepts</title>
+	<title>One Light Bulb and Three Switches - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="3 Basket Puzzle">
-	<meta property="og:title" content="3 Basket Puzzle" />
-<meta property="og:description" content="3 Basket Puzzle" />
+	<meta name="description" content="One Light Bulb and Three Switches, 3 Switches and 1 Bulb">
+	<meta property="og:title" content="One Light Bulb and Three Switches" />
+<meta property="og:description" content="One Light Bulb and Three Switches, 3 Switches and 1 Bulb" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://codingnconcepts.com/puzzle/3-basket-puzzle/" />
+<meta property="og:url" content="http://codingnconcepts.com/puzzle/1-light-bulb-and-3-switches/" />
 <meta property="article:published_time" content="2020-03-15T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-03-15T00:00:00+00:00" />
 
 	<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="3 Basket Puzzle"/>
-<meta name="twitter:description" content="3 Basket Puzzle"/>
+<meta name="twitter:title" content="One Light Bulb and Three Switches"/>
+<meta name="twitter:description" content="One Light Bulb and Three Switches, 3 Switches and 1 Bulb"/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -43,7 +43,7 @@ if (!doNotTrack) {
 	<div class="container">
 		<div class="logo">
 			<a class="logo__link" href="/" title="Coding N Concepts" rel="home">
-				<div class="logo__title"><img src="/favicon-32x32.png" alt="3 Basket Puzzle"> Coding N Concepts</div>
+				<div class="logo__title"><img src="/favicon-32x32.png" alt="One Light Bulb and Three Switches"> Coding N Concepts</div>
 				<div class="logo__tagline">Ashish Lahoti&#39;s Technical Blog</div>
 			</a>
 		</div>
@@ -113,7 +113,7 @@ if (!doNotTrack) {
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">3 Basket Puzzle</h1>
+			<h1 class="post__title">One Light Bulb and Three Switches</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
@@ -125,66 +125,24 @@ if (!doNotTrack) {
 	<span class="meta__text"><a class="meta__link" href="/categories/puzzles/" rel="category">Puzzles</a>
 	</span>
 </div></div>
-		</header><div class="content post__content clearfix">
-			<h4 id="problem">Problem</h4>
+		</header>
+		<figure class="post__thumbnail">
+			<img src="/img/puzzle/light-bulb.jpg" alt="One Light Bulb and Three Switches">
+		</figure><div class="content post__content clearfix">
+			<p>This particular problem has been asked several times in interviews to evaluate candidate&rsquo;s analytical skills.</p>
 <blockquote>
-<p>There are 3 baskets. One basket has apples only, one has oranges only and the other has mixture of apples and oranges. The labels on their baskets always lie. (i.e. if the label says oranges, that basket is having either mixture or apples only). The task is to pick one basket and pick only one fruit from it and then correctly label all the three baskets.</p>
+<p>There is a light bulb inside a closet. The door is closed, and you cannot see if the light is on or off through the door. However, you know the light is off at present. Outside of the closet, there are three light switches. One of the switch belongs to the light bulb inside the closet. You can turn on or off the switches however you want, but you are allowed to open the door only once. You are not allowed to touch the switches once you open the door.</p>
+<p>How do you figure out which switch belongs to the light?</p>
 </blockquote>
 <p>Think for a while before looking at the solution.</p>
 <h4 id="solution">Solution</h4>
 <blockquote>
-<p><strong>Pick a fruit from the one labeled MIXTURE</strong></p>
+<p>We are assuming that all the switches are off initially. Turn on switch number 1 and wait for two minutes. After two minutes, turn off the switch number 1 and turn on the switch number 2 and open the door of closet</p>
+<ul>
+<li>If the light bulb is on, then switch number 2 belongs to the bulb.</li>
+<li>If the light bulb is off, then touch the bulb with your hand. If the bulb is hot, then switch number 1 belongs to the bulb otherwise switch number 3 belongs to the bulb.</li>
+</ul>
 </blockquote>
-<ul>
-<li>If that fruit is orange then correct label for this basket is ORANGES. The one which is fake labelled as APPLES must be either ORANGES or MIXTURE. Since we have already found our ORANGES basket. APPLES basket is actually a MIXTURE and the one fake labelled as ORANGES is APPLES.</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="left">Fake Label</th>
-<th align="left">Correct Label</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">MIXTURE</td>
-<td align="left">ORANGES</td>
-</tr>
-<tr>
-<td align="left">APPLES</td>
-<td align="left">MIXTURE</td>
-</tr>
-<tr>
-<td align="left">ORANGES</td>
-<td align="left">APPLES</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>If that fruit is apple then correct label for this basket is APPLES. The one which is fake labelled as ORANGES must be either APPLES or MIXTURE. Since we have already found our APPLES basket. ORANGES basket is actually a MIXTURE and the one fake labelled as APPLES is ORANGES.</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="left">Fake Label</th>
-<th align="left">Correct Label</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">MIXTURE</td>
-<td align="left">APPLES</td>
-</tr>
-<tr>
-<td align="left">ORANGES</td>
-<td align="left">MIXTURE</td>
-</tr>
-<tr>
-<td align="left">APPLES</td>
-<td align="left">ORANGES</td>
-</tr>
-</tbody>
-</table>
 		</div>
 		<footer class="post__footer">
 			
@@ -194,6 +152,7 @@ if (!doNotTrack) {
 		<li class="tags__item"><a class="tags__link btn" href="/tags/interview/" rel="tag">Interview</a></li>
 		<li class="tags__item"><a class="tags__link btn" href="/tags/interview-questions/" rel="tag">Interview Questions</a></li>
 		<li class="tags__item"><a class="tags__link btn" href="/tags/puzzle/" rel="tag">Puzzle</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/analytics/" rel="tag">Analytics</a></li>
 	</ul>
 </div>
 		</footer>
@@ -215,6 +174,9 @@ if (!doNotTrack) {
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--prev">
 		<a class="post-nav__link" href="/puzzle/the-water-jug-riddle/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">The Water Jug Riddle from Die Hard Movie</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next">
+		<a class="post-nav__link" href="/puzzle/fruit-basket-puzzle/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Fruit Basket Puzzle</p></a>
 	</div>
 </nav>
 

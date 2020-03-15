@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Maths Puzzle on Coding N Concepts</title>
+    <link>http://codingnconcepts.com/tags/maths-puzzle/</link>
+    <description>Recent content in Maths Puzzle on Coding N Concepts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://codingnconcepts.com/tags/maths-puzzle/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Water Jug Riddle from Die Hard Movie</title>
+      <link>http://codingnconcepts.com/puzzle/the-water-jug-riddle/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/puzzle/the-water-jug-riddle/</guid>
+      <description>&lt;p&gt;This riddle is featured in Die Hard with a Vengeance where Bruce Willis and Samuel L. Jackson have to diffuse a bomb by placing a 4 gallon jug of water on a set of scales&amp;hellip;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You have a 3-gallon and a 5-gallon jug that you can fill from a fountain of water. The problem is to fill one of the jugs with exactly 4 gallons of water. How do you do it?&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>The 6s Math Puzzle</title>
+      <link>http://codingnconcepts.com/puzzle/the-6s-math-puzzle/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/puzzle/the-6s-math-puzzle/</guid>
+      <description>&lt;p&gt;This is a pure mathematical puzzle which evaluate your ability to solve maths equation. This is a great problem for building number sense.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The challenge is to make each below equation true using common mathematical operations. You cannot introduce any new digits (so the cube root ∛ is not allowed since it has a 3).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hint:&lt;/strong&gt; common mathematical operations are &lt;code&gt;+&lt;/code&gt; &lt;code&gt;-&lt;/code&gt; &lt;code&gt;x&lt;/code&gt; &lt;code&gt;/&lt;/code&gt; &lt;code&gt;!&lt;/code&gt; &lt;code&gt;√&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;0 0 0 = 6    
+1 1 1 = 6
+2 2 2 = 6
+3 3 3 = 6
+4 4 4 = 6
+5 5 5 = 6
+6 6 6 = 6
+7 7 7 = 6
+8 8 8 = 6
+9 9 9 = 6
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>Minimum set of weight puzzle</title>
+      <link>http://codingnconcepts.com/puzzle/minimum-set-of-weights/</link>
+      <pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/puzzle/minimum-set-of-weights/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;What is the minimum number of weights needed for a scale that will be able to weigh objects from the weight of one pound to 100 pounds?&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -115,6 +115,32 @@ if (!doNotTrack) {
 	<article class="list__item post">
 	<header class="list__header">
 		<h3 class="list__title post__title ">
+			<a href="/spring-boot/how-to-disable-command-line-properties/" rel="bookmark">
+			How to disable command line properties in spring boot
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2020-03-10T00:00:00Z">March 10, 2020</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/spring-boot/" rel="category">Spring Boot</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>Spring Boot Application converts any command line arguments starting with --, such as <strong>--spring.profiles.active=dev</strong> to a property by default and adds them to the Spring Environment. Command line properties always take precedence over other property sources.</p>
+<p>If you do not want command line properties to be added to the Environment, you can disable them from SpringBootApplication main method as follows:-</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/spring-boot/how-to-disable-command-line-properties/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
 			<a href="/spring-boot/how-to-change-server-port/" rel="bookmark">
 			How to change server port in spring boot
 			</a>
@@ -374,33 +400,6 @@ You can find the singleton pattern implementation here.</li>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/post/ping-pong-using-wait-notify/">Read more…</a>
 	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/post/apache-kafka-ccdak-exam-notes/" rel="bookmark">
-			Apache Kafka CCDAK Exam Notes
-			</a>
-		</h3>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2019-06-13T00:00:00Z">June 13, 2019</time>
-</div>
-
-<div class="meta__item-categories meta__item">
-	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/kafka/" rel="category">Kafka</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Hi Readers,
-If you are planning or preparing for Apache Kafka Certification then this is the right place for you.There are many Apache Kafka Certifications are available in the market but CCDAK (Confluent Certified Developer for Apache Kafka) is the most known certification as Kafka is now maintained by Confluent.
-Confluent has introduced CCOAK certification recently. CCOAK is mainly for devOps engineer focusing on build and manage Kafka cluster. CCDAK is mainly for developers and Solution architects focusing on design, producer and consumer.
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/post/apache-kafka-ccdak-exam-notes/">Read more…</a>
-	</div>
 </article>
 </main>
 
@@ -425,11 +424,11 @@ Confluent has introduced CCOAK certification recently. CCOAK is mainly for devOp
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/puzzle/3-basket-puzzle/">3 Basket Puzzle</a></li>
+			<li class="widget__item"><a class="widget__link" href="/puzzle/fruit-basket-puzzle/">Fruit Basket Puzzle</a></li>
+			<li class="widget__item"><a class="widget__link" href="/puzzle/1-light-bulb-and-3-switches/">One Light Bulb and Three Switches</a></li>
 			<li class="widget__item"><a class="widget__link" href="/puzzle/the-water-jug-riddle/">The Water Jug Riddle from Die Hard Movie</a></li>
 			<li class="widget__item"><a class="widget__link" href="/puzzle/2-eggs-and-100-floors/">2 Eggs and 100 Floors Problem</a></li>
 			<li class="widget__item"><a class="widget__link" href="/puzzle/25-horses-puzzle/">25 Horses Puzzle</a></li>
-			<li class="widget__item"><a class="widget__link" href="/puzzle/burning-rope/">Burning Rope Puzzle</a></li>
 		</ul>
 	</div>
 </div>
@@ -462,6 +461,7 @@ Confluent has introduced CCOAK certification recently. CCOAK is mainly for devOp
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
 		<a class="widget-taglist__link widget__link btn" href="/tags/algorithm/" title="Algorithm">Algorithm</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/analytics/" title="Analytics">Analytics</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/ccdak/" title="CCDAK">CCDAK</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/confluent/" title="Confluent">Confluent</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/css/" title="CSS">CSS</a>
@@ -475,7 +475,7 @@ Confluent has introduced CCOAK certification recently. CCOAK is mainly for devOp
 		<a class="widget-taglist__link widget__link btn" href="/tags/javascript/" title="Javascript">Javascript</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/js/" title="JS">JS</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/kafka/" title="Kafka">Kafka</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/math-puzzle/" title="Math Puzzle">Math Puzzle</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/maths-puzzle/" title="Maths Puzzle">Maths Puzzle</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/pattern/" title="Pattern">Pattern</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/puzzle/" title="Puzzle">Puzzle</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/recursive/" title="Recursive">Recursive</a>
