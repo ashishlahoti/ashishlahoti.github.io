@@ -6,10 +6,23 @@
     <description>Recent content in Riddle on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingnconcepts.com/tags/riddle/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Water Jug Riddle from Die Hard Movie</title>
+      <link>http://codingnconcepts.com/puzzle/the-water-jug-riddle/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/puzzle/the-water-jug-riddle/</guid>
+      <description>&lt;p&gt;This riddle is featured in Die Hard with a Vengeance where Bruce Willis and Samuel L. Jackson have to diffuse a bomb by placing a 4 gallon jug of water on a set of scales&amp;hellip;&lt;/p&gt;
+&lt;h4 id=&#34;problem&#34;&gt;Problem&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You have a 3-gallon and a 5-gallon jug that you can fill from a fountain of water. The problem is to fill one of the jugs with &lt;strong&gt;precisely&lt;/strong&gt; 4 gallons of water. How do you do it?&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
     
     <item>
       <title>Einstein&#39;s Riddle</title>
