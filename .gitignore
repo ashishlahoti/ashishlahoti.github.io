@@ -1,8 +1,4 @@
-# Ignore Mac system files
 .DS_Store
-# Ignore no jekyll build flag for github 
 .nojekyll
-# Ignore CNAME specific to github pages
-CNAME
-# Ignore README.md file
 README.md
+CNAME
