@@ -165,7 +165,7 @@ if (!doNotTrack) {
 <!-- raw HTML omitted -->
 <p>Confluent has introduced CCOAK certification recently. CCOAK is mainly for devOps engineer focusing on build and manage Kafka cluster. CCDAK is mainly for developers and Solution architects focusing on design, producer and consumer. If you are still not sure, I recommend to go for CCDAK as it is more comprehensive exam as compared to CCOAK.</p>
 <p>From here onward, we will talk about how to prepare for CCDAK.</p>
-<p>I have recently <a href="https://www.credential.net/3e05601c-df11-4ecd-8a53-3e1d21037df8">cracked CCDAK</a> and would suggest that prepare well for the exam.</p>
+<p>I have recently <a href="https://www.credential.net/3e05601c-df11-4ecd-8a53-3e1d21037df8" target="_blank">cracked CCDAK</a> and would suggest that prepare well for the exam.</p>
 <ul>
 <li>This exam verify your theoretical as well as practical understanding of Kafka.</li>
 <li>You need to answer 60 questions in 90 minutes from your laptop under the supervision of online proctor.</li>
@@ -177,11 +177,11 @@ if (!doNotTrack) {
 <hr>
 <p>I have prepared for CCDAK using following:</p>
 <ol>
-<li><a href="https://kafka.apache.org/documentation/">Apache Kafka Documentation</a></li>
-<li><a href="https://docs.confluent.io/current/index.html">Confluent Kafka Documentation</a></li>
-<li><a href="https://www.confluent.io/wp-content/uploads/confluent-kafka-definitive-guide-complete.pdf">Confluent Kafka Definitive Guide PDF</a></li>
-<li><a href="https://www.udemy.com/course/apache-kafka-tutorial-for-beginners/">Udemy Apache Kafka course for beginners</a></li>
-<li><a href="https://www.udemy.com/course/confluent-certified-developer-for-apache-kafka/">Udemy CCDAK 150 practice exam questions!</a></li>
+<li><a href="https://kafka.apache.org/documentation/" target="_blank">Apache Kafka Documentation</a></li>
+<li><a href="https://docs.confluent.io/current/index.html" target="_blank">Confluent Kafka Documentation</a></li>
+<li><a href="https://www.confluent.io/wp-content/uploads/confluent-kafka-definitive-guide-complete.pdf" target="_blank">Confluent Kafka Definitive Guide PDF</a></li>
+<li><a href="https://www.udemy.com/course/apache-kafka-tutorial-for-beginners/" target="_blank">Udemy Apache Kafka Course for Beginners</a></li>
+<li><a href="https://www.udemy.com/course/confluent-certified-developer-for-apache-kafka/" target="_blank">Udemy CCDAK 150 Practice Exam Questions</a></li>
 </ol>
 <p>You should prepare well in following areas:</p>
 <ol>
@@ -189,23 +189,24 @@ if (!doNotTrack) {
 <ul>
 <li>Read Confluent Kafka Definitive Guide PDF</li>
 <li>Read Apache Kafka Documentation</li>
-<li>Once you read all these, revise using KAFKA THEORY section in this blog. You can expect most of the questions from these notes.</li>
+<li>Once you read all these, revise using <a href="#exam-notes">Exam Notes</a> section in this blog. You can expect most of the questions from these notes.</li>
 </ul>
 </li>
 <li>Kafka Java APIs
 <ul>
-<li>Read Apache Kafka Documentation how to create producer and consumer in Java</li>
+<li>Read Apache Kafka Documentation how to create <a href="https://codingnconcepts.com/post/apache-kafka-producer-using-java/" target="_blank">producer</a> and <a href="https://codingnconcepts.com/post/apache-kafka-consumer-using-java/" target="_blank">consumer</a> in Java</li>
 </ul>
 </li>
 <li>Kafka CLI
 <ul>
 <li>Read Confluent Kafka Definitive Guide PDF</li>
-<li>Once you read all these, revise using KAFKA CLI section in this blog. You can expect most of the questions from these notes.</li>
+<li>Once you read all these, revise using <a href="#kafka-cli">KAFKA CLI</a> section in this blog. You can expect most of the questions from these notes.</li>
 </ul>
 </li>
 <li>Kafka Streams
 <ul>
 <li>Read Confluent Kafka Definitive Guide PDF</li>
+<li>Read <a href="#kafka-streams">Kafka Streams</a> section of these notes</li>
 </ul>
 </li>
 <li>Kafka Monitoring (Metrics)
@@ -233,7 +234,7 @@ if (!doNotTrack) {
 <li>Confluent Schema Registry
 <ul>
 <li>Read about Schema Registry from Confluent Documentation</li>
-<li>You can expect most of the questions regarding Confluent Schema Registry from these notes.</li>
+<li>Read <a href="#confluent-schema-registry">Confluent Schema Registry</a> section of these notes</li>
 </ul>
 </li>
 </ol>
@@ -243,11 +244,11 @@ if (!doNotTrack) {
 <li>Kafka Theory</li>
 </ol>
 <ul>
-<li>Kafka is a &hellip;. ? pub-sub system</li>
-<li>Mostly Kafka is written in which language? Scala</li>
+<li>Kafka is a &hellip;. ? <em><strong>pub-sub system</strong></em></li>
+<li>Mostly Kafka is written in which language? <em><strong>Scala</strong></em></li>
 </ul>
 <ol start="2">
-<li>Kafka Streams (Read Kafka Streams notes to get answers of below questions)</li>
+<li>Kafka Streams (Read <a href="#kafka-streams">Kafka Streams</a> notes to get answers of below questions)</li>
 </ol>
 <ul>
 <li>Which of the Kafka Stream operators are stateful ?</li>
@@ -255,7 +256,7 @@ if (!doNotTrack) {
 <li>Which window is not having gap ?</li>
 </ul>
 <ol start="3">
-<li>Confluent Schema Registry (Read Confluent Schema Registry notes to get answers of below questions)</li>
+<li>Confluent Schema Registry (Read <a href="#confluent-schema-registry">Confluent Schema Registry</a> notes to get answers of below questions)</li>
 </ol>
 <ul>
 <li>Which of the following is not a primitive type of Avro ?</li>
@@ -523,8 +524,8 @@ electionport is used to perform leader elections between ensemble members. This 
 <h2 id="kafka-api">KAFKA API</h2>
 <hr>
 <ul>
-<li>Click here to find out how we can create a Safe and high throughput Kafka Producer using Java.</li>
-<li>Click here to find out how we can create a Kafka consumer using Java with manual auto commit enabled.</li>
+<li><a href="https://codingnconcepts.com/post/apache-kafka-producer-using-java/" target="_blank">Click here</a> to find out how we can create a Safe and high throughput Kafka Producer using Java.</li>
+<li><a href="https://codingnconcepts.com/post/apache-kafka-consumer-using-java/" target="_blank">Click here</a> to find out how we can create a Kafka consumer using Java with manual auto commit enabled.</li>
 </ul>
 <h2 id="confluent-schema-registry">Confluent Schema Registry</h2>
 <hr>
