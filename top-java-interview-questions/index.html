@@ -190,6 +190,7 @@ if (!doNotTrack) {
 </blockquote>
 <h2 id="java-theory">Java Theory</h2>
 <h6 id="1-solid-5-class-design-principle-in-java-">1. S.O.L.I.D. (5 class design principle) in Java ?</h6>
+<p>These 5 design principle are know as SOLID principles:-</p>
 <ul>
 <li><strong>Single Responsibility Principle</strong> - One class should have one and only one responsibility</li>
 <li><strong>Open Close Principle</strong> - Software components should be open for extension, but closed for modification</li>
@@ -198,6 +199,12 @@ if (!doNotTrack) {
 <li><strong>Dependency Inversion</strong> - Depend on abstractions, not on concretions</li>
 </ul>
 <h6 id="2-anti-patterns-in-java-what-is-god-class-">2. Anti patterns in Java. What is god class ?</h6>
+<p>Anti patterns in java is:-</p>
+<ul>
+<li>Any pattern or coding habit which is considered as bad practice</li>
+<li>Which are against SOLID design principles</li>
+</ul>
+<p><strong>God class</strong> is one of the Anti pattern example. A god class is a class which is having too many properties or methods or dependencies and hence lots of responsibilities which violates single-responsibility SOLID design principle. Writing thousands lines of code in single class becomes a nightmare to debug, unit-test and document.</p>
 <h6 id="3-how-classes-are-related-to-each-other-through-association-aggregation-and-composition">3. How classes are related to each other through association, aggregation and composition.</h6>
 <ul>
 <li><strong>Association</strong> (bidirectional one to one, one to many, many to one or many to many association, represented by line with arrow in UML) for e.g. Teacher and Student. Multiple students can associate with a single teacher and a single student can associate with multiple teachers but there is no ownership between the objects and both have their own lifecycle.</li>
@@ -258,14 +265,19 @@ java.io.OutputStreamWriter(OutputStream) (returns a Writer)
 </li>
 </ul>
 <h2 id="java-basics">Java Basics</h2>
-<ol>
-<li>
-<p>Explain each keyword in main method i.e. public static void main(String[] args).</p>
-</li>
-<li>
-<p>Can you override a static method and private method ?</p>
-</li>
-</ol>
+<h6 id="1-explain-each-keyword-in-main-method-ie-public-static-void-mainstring-args">1. Explain each keyword in main method i.e. public static void main(String[] args).</h6>
+<ul>
+<li><strong>public</strong> method have public access and can be executed from outside the class. It has to be public so that java runtime can execute this method.</li>
+<li><strong>static</strong> associates the method with class rather than object. This helps JVM to call main method without class instantiation.</li>
+<li><strong>void</strong> is a return type of main method which returns nothing</li>
+<li><strong>main</strong> is name of java main method and it is fixed. When you execute a class fine, it looks for main method.</li>
+<li><strong>String[] args</strong> It stores Java command line arguments and is an array of type String</li>
+</ul>
+<h6 id="2-can-you-override-a-static-method-and-private-method-">2. Can you override a static method and private method ?</h6>
+<ul>
+<li>No, you cannot override static method since static method is associated with a class.</li>
+<li>No, you cannot override private method since private method is not visible outside of a class.</li>
+</ul>
 <h2 id="java-advance">Java Advance</h2>
 <h6 id="1-how-many-ways-you-can-create-an-object-in-java-">1. How many ways you can create an object in java ?</h6>
 <ul>
