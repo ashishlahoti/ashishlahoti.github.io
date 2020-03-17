@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascript on Coding N Concepts</title>
+    <link>http://codingnconcepts.com/categories/javascript/</link>
+    <description>Recent content in Javascript on Coding N Concepts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 17 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://codingnconcepts.com/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Difference between var, let and const</title>
+      <link>http://codingnconcepts.com/difference-between-var-let-and-const/</link>
+      <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/difference-between-var-let-and-const/</guid>
+      <description>A nice feature addition in ES2015 (ES6) was the introduction of let and const keywords for variable declaration. You can use var, let and const keyword interchangeably for variable declaration though it makes a difference in terms of their scope, usage and hoisting. If you are not aware of these differences then please continue to read&amp;hellip;
+Scope  Scope basically means the accessibility of a variable. Variables can have three types of scope:-</description>
+    </item>
+    
+  </channel>
+</rss>

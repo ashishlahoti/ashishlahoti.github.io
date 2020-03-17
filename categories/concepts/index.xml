@@ -13,10 +13,10 @@
     
     <item>
       <title>Virutal Dom vs Shadow Dom</title>
-      <link>http://codingnconcepts.com/post/vitual-dom-vs-shadow-dom/</link>
+      <link>http://codingnconcepts.com/virutal-dom-vs-shadow-dom/</link>
       <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/post/vitual-dom-vs-shadow-dom/</guid>
+      <guid>http://codingnconcepts.com/virutal-dom-vs-shadow-dom/</guid>
       <description>Virtual DOM vs Shadow DOM
 DOM DOM stands for Document Object Model which is object based representation of any structured content such as HTML, XML etc. Browser maintains DOM object to render the HTML and any change in the DOM object cause re-rendering of the whole page.
 Virtual DOM Concept of Virtual DOM is adapted by popular UI libraries like React and Vue to solve mainly the performance issue. Virtual DOM is an in-memory representation of the DOM.</description>

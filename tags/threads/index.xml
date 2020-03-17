@@ -13,10 +13,10 @@
     
     <item>
       <title>Ping pong using wait notify</title>
-      <link>http://codingnconcepts.com/post/ping-pong-using-wait-notify/</link>
+      <link>http://codingnconcepts.com/ping-pong-using-wait-notify/</link>
       <pubDate>Thu, 04 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/post/ping-pong-using-wait-notify/</guid>
+      <guid>http://codingnconcepts.com/ping-pong-using-wait-notify/</guid>
       <description>&lt;p&gt;This problem is frequently asked in the interview to check your understanding on threads and your programming skills. Problem statement might change for e.g.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Print ping pong using two threads.&lt;/li&gt;

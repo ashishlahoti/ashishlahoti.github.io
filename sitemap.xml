@@ -3,17 +3,57 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://codingnconcepts.com/tags/analytics/</loc>
-    <lastmod>2020-03-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://codingnconcepts.com/categories/</loc>
-    <lastmod>2020-03-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://codingnconcepts.com/</loc>
+    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/difference-between-var-let-and-const/</loc>
+    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/tags/interview/</loc>
+    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/tags/java/</loc>
+    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/java/</loc>
+    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/tags/javascript/</loc>
+    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/categories/javascript/</loc>
+    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/tags/js/</loc>
+    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/tags/</loc>
+    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/tags/analytics/</loc>
     <lastmod>2020-03-15T00:00:00+00:00</lastmod>
   </url>
   
@@ -24,11 +64,6 @@
   
   <url>
     <loc>http://codingnconcepts.com/puzzle/fruit-basket-puzzle/</loc>
-    <lastmod>2020-03-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingnconcepts.com/tags/interview/</loc>
     <lastmod>2020-03-15T00:00:00+00:00</lastmod>
   </url>
   
@@ -64,11 +99,6 @@
   
   <url>
     <loc>http://codingnconcepts.com/tags/riddle/</loc>
-    <lastmod>2020-03-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingnconcepts.com/tags/</loc>
     <lastmod>2020-03-15T00:00:00+00:00</lastmod>
   </url>
   
@@ -173,11 +203,6 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/tags/java/</loc>
-    <lastmod>2020-03-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://codingnconcepts.com/top-spring-boot-interview-questions/</loc>
     <lastmod>2020-03-09T00:00:00+00:00</lastmod>
   </url>
@@ -189,16 +214,6 @@
   
   <url>
     <loc>http://codingnconcepts.com/tags/css/</loc>
-    <lastmod>2020-03-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingnconcepts.com/tags/javascript/</loc>
-    <lastmod>2020-03-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingnconcepts.com/tags/js/</loc>
     <lastmod>2020-03-07T00:00:00+00:00</lastmod>
   </url>
   
@@ -228,17 +243,12 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/post/</loc>
+    <loc>http://codingnconcepts.com/singleton-design-pattern-using-java/</loc>
     <lastmod>2019-07-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/post/singleton-design-pattern-using-java/</loc>
-    <lastmod>2019-07-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingnconcepts.com/post/ping-pong-using-wait-notify/</loc>
+    <loc>http://codingnconcepts.com/ping-pong-using-wait-notify/</loc>
     <lastmod>2019-07-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -278,7 +288,12 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/post/vitual-dom-vs-shadow-dom/</loc>
+    <loc>http://codingnconcepts.com/post/</loc>
+    <lastmod>2019-06-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/virutal-dom-vs-shadow-dom/</loc>
     <lastmod>2019-06-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -293,7 +308,7 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/post/immutable-class-using-java/</loc>
+    <loc>http://codingnconcepts.com/immutable-class/</loc>
     <lastmod>2018-05-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -303,7 +318,7 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/post/fibonacci-series-using-java/</loc>
+    <loc>http://codingnconcepts.com/fibonacci-series/</loc>
     <lastmod>2015-07-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -313,7 +328,7 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/post/bubble-sort-using-java/</loc>
+    <loc>http://codingnconcepts.com/bubble-sort/</loc>
     <lastmod>2015-06-09T00:00:00+00:00</lastmod>
   </url>
   
@@ -323,7 +338,7 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/post/elevator-implementation-using-java/</loc>
+    <loc>http://codingnconcepts.com/design-elevator-lift-in-java/</loc>
     <lastmod>2015-04-06T00:00:00+00:00</lastmod>
   </url>
   

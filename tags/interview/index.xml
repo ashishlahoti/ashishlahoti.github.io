@@ -6,10 +6,20 @@
     <description>Recent content in Interview on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingnconcepts.com/tags/interview/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Difference between var, let and const</title>
+      <link>http://codingnconcepts.com/difference-between-var-let-and-const/</link>
+      <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/difference-between-var-let-and-const/</guid>
+      <description>A nice feature addition in ES2015 (ES6) was the introduction of let and const keywords for variable declaration. You can use var, let and const keyword interchangeably for variable declaration though it makes a difference in terms of their scope, usage and hoisting. If you are not aware of these differences then please continue to read&amp;hellip;
+Scope  Scope basically means the accessibility of a variable. Variables can have three types of scope:-</description>
+    </item>
     
     <item>
       <title>Fruit Basket Puzzle</title>
@@ -123,10 +133,10 @@
     
     <item>
       <title>Virutal Dom vs Shadow Dom</title>
-      <link>http://codingnconcepts.com/post/vitual-dom-vs-shadow-dom/</link>
+      <link>http://codingnconcepts.com/virutal-dom-vs-shadow-dom/</link>
       <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/post/vitual-dom-vs-shadow-dom/</guid>
+      <guid>http://codingnconcepts.com/virutal-dom-vs-shadow-dom/</guid>
       <description>Virtual DOM vs Shadow DOM
 DOM DOM stands for Document Object Model which is object based representation of any structured content such as HTML, XML etc. Browser maintains DOM object to render the HTML and any change in the DOM object cause re-rendering of the whole page.
 Virtual DOM Concept of Virtual DOM is adapted by popular UI libraries like React and Vue to solve mainly the performance issue. Virtual DOM is an in-memory representation of the DOM.</description>
