@@ -6,7 +6,7 @@
     <description>Recent content in Categories on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingnconcepts.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Javascript</title>
       <link>http://codingnconcepts.com/categories/javascript/</link>
-      <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingnconcepts.com/categories/javascript/</guid>
       <description></description>
@@ -53,15 +53,6 @@
       <pubDate>Mon, 22 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>http://codingnconcepts.com/categories/java-programs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Concepts</title>
-      <link>http://codingnconcepts.com/categories/concepts/</link>
-      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingnconcepts.com/categories/concepts/</guid>
       <description></description>
     </item>
     

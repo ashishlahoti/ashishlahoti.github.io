@@ -3,13 +3,59 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://codingnconcepts.com/javascript/</loc>
+    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://codingnconcepts.com/categories/</loc>
-    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://codingnconcepts.com/</loc>
-    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/const-vs-object-freeze/</loc>
+    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/tags/interview/</loc>
+    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/tags/java/</loc>
+    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/tags/javascript/</loc>
+    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/categories/javascript/</loc>
+    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/tags/js/</loc>
+    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/tags/</loc>
+    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/object-methods-in-javascript/</loc>
+    <lastmod>2020-03-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -18,38 +64,9 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/tags/interview/</loc>
-    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingnconcepts.com/tags/java/</loc>
-    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingnconcepts.com/java/</loc>
-    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingnconcepts.com/tags/javascript/</loc>
-    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingnconcepts.com/categories/javascript/</loc>
-    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingnconcepts.com/tags/js/</loc>
-    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingnconcepts.com/tags/</loc>
-    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
+    <loc>http://codingnconcepts.com/puzzle/</loc>
+    <lastmod>2020-03-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -89,11 +106,6 @@
   
   <url>
     <loc>http://codingnconcepts.com/categories/puzzles/</loc>
-    <lastmod>2020-03-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingnconcepts.com/puzzle/</loc>
     <lastmod>2020-03-15T00:00:00+00:00</lastmod>
   </url>
   
@@ -148,6 +160,12 @@
   </url>
   
   <url>
+    <loc>http://codingnconcepts.com/spring-boot/</loc>
+    <lastmod>2020-03-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://codingnconcepts.com/spring-boot/how-to-configure-swagger/</loc>
     <lastmod>2020-03-10T00:00:00+00:00</lastmod>
   </url>
@@ -178,8 +196,9 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/spring-boot/</loc>
-    <lastmod>2020-03-10T00:00:00+00:00</lastmod>
+    <loc>http://codingnconcepts.com/interview-questions/</loc>
+    <lastmod>2020-03-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -194,11 +213,6 @@
   
   <url>
     <loc>http://codingnconcepts.com/categories/interview-questions/</loc>
-    <lastmod>2020-03-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingnconcepts.com/interview-questions/</loc>
     <lastmod>2020-03-09T00:00:00+00:00</lastmod>
   </url>
   
@@ -230,6 +244,12 @@
   <url>
     <loc>http://codingnconcepts.com/top-javascript-interview-questions/</loc>
     <lastmod>2020-03-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/java/</loc>
+    <lastmod>2019-07-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -268,11 +288,6 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/categories/concepts/</loc>
-    <lastmod>2019-06-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://codingnconcepts.com/tags/confluent/</loc>
     <lastmod>2019-06-13T00:00:00+00:00</lastmod>
   </url>
@@ -293,7 +308,7 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/virutal-dom-vs-shadow-dom/</loc>
+    <loc>http://codingnconcepts.com/virtual-dom-vs-shadow-dom/</loc>
     <lastmod>2019-06-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -308,7 +323,7 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/immutable-class/</loc>
+    <loc>http://codingnconcepts.com/immutable-class-using-java/</loc>
     <lastmod>2018-05-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -318,7 +333,7 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/fibonacci-series/</loc>
+    <loc>http://codingnconcepts.com/fibonacci-series-using-java/</loc>
     <lastmod>2015-07-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -328,7 +343,7 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/bubble-sort/</loc>
+    <loc>http://codingnconcepts.com/bubble-sort-using-java/</loc>
     <lastmod>2015-06-09T00:00:00+00:00</lastmod>
   </url>
   
@@ -338,7 +353,7 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/design-elevator-lift-in-java/</loc>
+    <loc>http://codingnconcepts.com/elevator-implementation-using-java/</loc>
     <lastmod>2015-04-06T00:00:00+00:00</lastmod>
   </url>
   

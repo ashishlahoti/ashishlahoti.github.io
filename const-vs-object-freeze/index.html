@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Difference in const and Object.freeze() in JavaScript - Coding N Concepts</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="This post describes what are the best practices to define constants and configuration values in JavaScript using const and Object.freeze() and the differences between const and Object.freeze()">
+	<meta property="og:title" content="Difference in const and Object.freeze() in JavaScript" />
+<meta property="og:description" content="This post describes what are the best practices to define constants and configuration values in JavaScript using const and Object.freeze() and the differences between const and Object.freeze()" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingnconcepts.com/const-vs-object-freeze/" />
+<meta property="article:published_time" content="2020-03-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-20T00:00:00+00:00" />
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Difference in const and Object.freeze() in JavaScript"/>
+<meta name="twitter:description" content="This post describes what are the best practices to define constants and configuration values in JavaScript using const and Object.freeze() and the differences between const and Object.freeze()"/>
+
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-160024498-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="Coding N Concepts" rel="home">
+				<div class="logo__title"><img src="/favicon-32x32.png" alt="Difference in const and Object.freeze() in JavaScript"> Coding N Concepts</div>
+				<div class="logo__tagline">Ashish Lahoti&#39;s Technical Blog</div>
+			</a>
+		</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/java/">
+				
+				<span class="menu__text">Java</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/javascript/">
+				
+				<span class="menu__text">JavaScript</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/spring-boot/">
+				
+				<span class="menu__text">Spring Boot</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/interview-questions/">
+				
+				<span class="menu__text">Interview Questions</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/kafka/">
+				
+				<span class="menu__text">Kafka</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/puzzle/">
+				
+				<span class="menu__text">Puzzles</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About Me</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Difference in const and Object.freeze() in JavaScript</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2020-03-20T00:00:00Z">March 20, 2020</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/javascript/" rel="category">Javascript</a>
+	</span>
+</div></div>
+		</header><div class="content post__content clearfix">
+			<p>This post describes what are the best practices to define constants and configuration values in JavaScript using const and Object.freeze() and the differences between const and Object.freeze().</p>
+<p>We often define constants and configuration values to be used across our JavaScript application. Generally these are global variables and can be accessed from anywhere.</p>
+<p>What if some program change the definition of these variables, now this changed definition will be used across application.</p>
+<p>Let&rsquo;s look at the example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">APP_NAME</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Coding N Concepts&#34;</span>;
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getApplicationName</span>() {
+  <span style="color:#a6e22e">APP_NAME</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Unkown App&#34;</span>;
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">APP_NAME</span>;
+}
+
+<span style="color:#a6e22e">getApplicationName</span>(); <span style="color:#75715e">// Unkown App
+</span></code></pre></div><p>In the above example, function <code>getApplicationName()</code> has changed the value of <code>APP_NAME</code>. How do we prevent changing value of a global variable?</p>
+<p>We can use <code>const</code> to define a constant variable instead of <code>let</code> to prevent it from changing value.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">APP_NAME</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Coding N Concepts&#34;</span>;
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getApplicationName</span>() {
+  <span style="color:#a6e22e">APP_NAME</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Unkown App&#34;</span>; <span style="color:#75715e">// This will throw TypeError
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">APP_NAME</span>;
+}
+</code></pre></div><p>Trying to change value of a variable defined using <code>const</code> resulting into this error:</p>
+<pre><code>“TypeError: Assignment to constant variable.”
+</code></pre><p>So this is it? Let&rsquo;s find out</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fruits</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;mango&#39;</span>, <span style="color:#e6db74">&#39;apple&#39;</span>];
+<span style="color:#a6e22e">fruits</span>.<span style="color:#a6e22e">push</span>(<span style="color:#e6db74">&#39;banana&#39;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">fruits</span>); <span style="color:#75715e">// [&#39;mango&#39;, &#39;apple&#39;, &#39;banana&#39;]
+</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">constants</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">APP_NAME</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Coding N Concepts&#34;</span>
+};
+<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">APP_NAME</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Unknown App&#34;</span>;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">APP_NAME</span>); <span style="color:#75715e">// &#34;Unknown App&#34;
+</span></code></pre></div><p>You can see in the above two examples that you can change the value of an <code>array</code> or an <code>object</code> even if you are using <code>const</code> because:</p>
+<blockquote>
+<p><code>const</code> does not make the <em>value</em> of the variable <em>immutable</em> but instead makes the <em>binding</em> of the variable <em>immutable</em>.</p>
+</blockquote>
+<blockquote>
+<p>All primitive types like <code>integer</code>, <code>boolean</code> and <code>string</code> <em>binding</em> data <strong>by value</strong> whereas types like <code>array</code> and <code>object</code> <em>binding</em> data <strong>by reference</strong>.</p>
+</blockquote>
+<p>Now we know that in case of <code>array</code> and <code>object</code>, we cannot change the reference but can change the value.</p>
+<p>So how do we prevent changing value of <code>array</code> and <code>object</code>?</p>
+<p>Here is where <code>Object.freeze()</code> comes into play. <code>Object.freeze</code> ignore the change in value of <code>object</code> and <code>array</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">constants</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">freeze</span>({
+  <span style="color:#a6e22e">APP_NAME</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Coding N Concepts&#34;</span>
+});
+
+<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">APP_NAME</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Unknown App&#34;</span>;
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">APP_NAME</span>); <span style="color:#75715e">// &#34;Coding N Concepts&#34;
+</span></code></pre></div><p>You can see in example that it doesn&rsquo;t throw any error if you try to change the value but it won&rsquo;t affect the object state.</p>
+<p><code>Object.freeze()</code> prevents from changing value of an  <code>object</code> but we can still change the reference as below:-</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">constants</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">freeze</span>({
+  <span style="color:#a6e22e">APP_NAME</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Coding N Concepts&#34;</span>
+});
+
+<span style="color:#a6e22e">constants</span> <span style="color:#f92672">=</span> { 
+  <span style="color:#a6e22e">APP_NAME</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Unknown App&#34;</span>
+};
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">APP_NAME</span>); <span style="color:#75715e">// &#34;Unknown App&#34;
+</span></code></pre></div><p>If we summarize:-</p>
+<blockquote>
+<p><code>const</code> doesn&rsquo;t allow to change reference of <code>object</code> or <code>array</code> though you can change the value.</p>
+</blockquote>
+<blockquote>
+<p><code>Object.freeze()</code> ignores the change in value of <code>object</code> or <code>array</code></p>
+</blockquote>
+<p>Combining them together will prevent change in both <code>reference</code> and <code>value</code> of an <code>object</code> or <code>array</code></p>
+<p>Here is an example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">constants</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">freeze</span>({
+  <span style="color:#a6e22e">APP_NAME</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Coding N Concepts&#34;</span>
+});
+
+<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">APP_NAME</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Unknown App&#34;</span>; <span style="color:#75715e">// This is ignored
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">constants</span> <span style="color:#f92672">=</span> { 
+  <span style="color:#a6e22e">APP_NAME</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Unknown App&#34;</span> 
+}; <span style="color:#75715e">// This will throw TypeError
+</span></code></pre></div><p>The above example shows that combining both <code>const</code> and <code>Object.freeze()</code> is very useful to define constants and configuration in JavaScript.</p>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link btn" href="/tags/interview/" rel="tag">Interview</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/javascript/" rel="tag">Javascript</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/js/" rel="tag">JS</a></li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Ashish Lahoti avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Ashish Lahoti</span>
+	</div>
+	<div class="authorbox__description">
+		Ashish Lahoti is a full stack application developer at DBS Bank | Confluent Certified Developer for Apache KAFKA | SCJP Certified
+	</div>
+</div>
+
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--prev">
+		<a class="post-nav__link" href="/object-methods-in-javascript/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Object methods in JavaScript</p></a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "codingnconcepts" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 Ashish Lahoti.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script></body>
+</html>

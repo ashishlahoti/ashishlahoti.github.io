@@ -12,7 +12,7 @@
 <meta property="og:description" content="Ashish Lahoti&#39;s Technical Blog" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://codingnconcepts.com/" />
-<meta property="og:updated_time" content="2020-03-17T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-03-20T00:00:00+00:00" />
 
 	<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Coding N Concepts"/>
@@ -62,14 +62,28 @@ if (!doNotTrack) {
 			</a>
 		</li>
 		<li class="menu__item">
-			<a class="menu__link" href="/categories/spring-boot/">
+			<a class="menu__link" href="/java/">
+				
+				<span class="menu__text">Java</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/javascript/">
+				
+				<span class="menu__text">JavaScript</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/spring-boot/">
 				
 				<span class="menu__text">Spring Boot</span>
 				
 			</a>
 		</li>
 		<li class="menu__item">
-			<a class="menu__link" href="/categories/interview-questions/">
+			<a class="menu__link" href="/interview-questions/">
 				
 				<span class="menu__text">Interview Questions</span>
 				
@@ -83,14 +97,7 @@ if (!doNotTrack) {
 			</a>
 		</li>
 		<li class="menu__item">
-			<a class="menu__link" href="/categories/java-programs/">
-				
-				<span class="menu__text">Java</span>
-				
-			</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/categories/puzzles/">
+			<a class="menu__link" href="/puzzle/">
 				
 				<span class="menu__text">Puzzles</span>
 				
@@ -113,6 +120,73 @@ if (!doNotTrack) {
 			
 <main class="main list" role="main">
 	<article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/puzzle/the-6s-math-puzzle/" rel="bookmark">
+			The 6s Math Puzzle
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2020-03-14T00:00:00Z">March 14, 2020</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/puzzles/" rel="category">Puzzles</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>This is a pure mathematical puzzle which evaluate your ability to solve maths equation. This is a great problem for building number sense.</p>
+<blockquote>
+<p>The challenge is to make each below equation true using common mathematical operations. You cannot introduce any new digits (so the cube root ∛ is not allowed since it has a 3).</p>
+<p><strong>Hint:</strong> common mathematical operations are <code>+</code> <code>-</code> <code>x</code> <code>/</code> <code>!</code> <code>√</code></p>
+</blockquote>
+<pre><code>0 0 0 = 6    
+1 1 1 = 6
+2 2 2 = 6
+3 3 3 = 6
+4 4 4 = 6
+5 5 5 = 6
+6 6 6 = 6
+7 7 7 = 6
+8 8 8 = 6
+9 9 9 = 6
+</code></pre>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/puzzle/the-6s-math-puzzle/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/spring-boot/how-to-configure-swagger/" rel="bookmark">
+			How to configure swagger in spring boot
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2020-03-10T00:00:00Z">March 10, 2020</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/spring-boot/" rel="category">Spring Boot</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>Swagger library is very useful if you are creating spring boot web application and exposing REST endpoints. Swagger generates web page for you to execute and test GET, POST, PUT, DELETE HTTP endpoints. This is helpful since you do not need to use Postman or some other tool to test REST Apis. Once you configure swagger then web page can be accessible using following URL:-</p>
+<p>http://localhost:8080/swagger-ui.html</p>
+<p>Follow the steps to configure swagger in your spring boot application:-</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/spring-boot/how-to-configure-swagger/">Read more…</a>
+	</div>
+</article><article class="list__item post">
 	<header class="list__header">
 		<h3 class="list__title post__title ">
 			<a href="/spring-boot/how-to-create-custom-banner/" rel="bookmark">
@@ -330,79 +404,6 @@ if (!doNotTrack) {
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/top-java-interview-questions/">Read more…</a>
 	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/top-javascript-interview-questions/" rel="bookmark">
-			Top Javascript Interview Questions
-			</a>
-		</h3>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2020-03-07T00:00:00Z">March 07, 2020</time>
-</div>
-
-<div class="meta__item-categories meta__item">
-	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/interview-questions/" rel="category">Interview Questions</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>These Javascript interview questions are based on my personal interview experience. Likelihood of question being asked in the interview is from top to bottom.</p>
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/top-javascript-interview-questions/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/singleton-design-pattern-using-java/" rel="bookmark">
-			Singleton Design Pattern Using Java
-			</a>
-		</h3>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2019-07-22T00:00:00Z">July 22, 2019</time>
-</div>
-
-<div class="meta__item-categories meta__item">
-	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/java-programs/" rel="category">Java Programs</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>This problem is frequently asked in the interview to check your understanding on singleton design pattern. This program answers following artefacts of singleton design pattern:-</p>
-<ol>
-<li>How to make singleton class thread safe?
-<ul>
-<li>using double checked locking</li>
-</ul>
-</li>
-<li>How to prevent deserialization to create new object of singleton class?
-<ul>
-<li>using readResolve method to return same instance</li>
-</ul>
-</li>
-<li>How to prevent cloning to create a new object of singleton class?
-<ul>
-<li>override clone method to return same instance</li>
-</ul>
-</li>
-<li>How to prevent reflexion to create a new object of singleton class?
-<ul>
-<li>check instance exist in private constructor and throw exception if already exist
-You can find the singleton pattern implementation here.</li>
-</ul>
-</li>
-</ol>
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/singleton-design-pattern-using-java/">Read more…</a>
-	</div>
 </article>
 </main>
 
@@ -427,11 +428,11 @@ You can find the singleton pattern implementation here.</li>
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/const-vs-object-freeze/">Difference in const and Object.freeze() in JavaScript</a></li>
+			<li class="widget__item"><a class="widget__link" href="/object-methods-in-javascript/">Object methods in JavaScript</a></li>
 			<li class="widget__item"><a class="widget__link" href="/difference-between-var-let-and-const/">Difference between var, let and const</a></li>
 			<li class="widget__item"><a class="widget__link" href="/puzzle/fruit-basket-puzzle/">Fruit Basket Puzzle</a></li>
 			<li class="widget__item"><a class="widget__link" href="/puzzle/1-light-bulb-and-3-switches/">One Light Bulb and Three Switches</a></li>
-			<li class="widget__item"><a class="widget__link" href="/puzzle/the-water-jug-riddle/">The Water Jug Riddle from Die Hard Movie</a></li>
-			<li class="widget__item"><a class="widget__link" href="/puzzle/2-eggs-and-100-floors/">2 Eggs and 100 Floors Problem</a></li>
 		</ul>
 	</div>
 </div>
@@ -439,9 +440,6 @@ You can find the singleton pattern implementation here.</li>
 	<h4 class="widget__title">Categories</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item">
-				<a class="widget__link" href="/categories/concepts/">Concepts</a>
-			</li>
 			<li class="widget__item">
 				<a class="widget__link" href="/categories/interview-questions/">Interview Questions</a>
 			</li>

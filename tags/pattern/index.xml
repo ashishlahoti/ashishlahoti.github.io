@@ -13,10 +13,10 @@
     
     <item>
       <title>Immutable Class</title>
-      <link>http://codingnconcepts.com/immutable-class/</link>
+      <link>http://codingnconcepts.com/immutable-class-using-java/</link>
       <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/immutable-class/</guid>
+      <guid>http://codingnconcepts.com/immutable-class-using-java/</guid>
       <description>&lt;p&gt;This problem is frequently asked in the interview to check your understanding on immutable class. This program answers following artefacts of immutable class:-&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Private Constructor&lt;/li&gt;

@@ -30,19 +30,19 @@
     
     <item>
       <title>Fibonacci Series</title>
-      <link>http://codingnconcepts.com/fibonacci-series/</link>
+      <link>http://codingnconcepts.com/fibonacci-series-using-java/</link>
       <pubDate>Sun, 12 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/fibonacci-series/</guid>
+      <guid>http://codingnconcepts.com/fibonacci-series-using-java/</guid>
       <description>&lt;p&gt;Fibonacci series implementation in java is frequently asked question in interview at fresher level. Moreover, it is a very famous example to show how to use recursive function in java.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Bubble Sort</title>
-      <link>http://codingnconcepts.com/bubble-sort/</link>
+      <link>http://codingnconcepts.com/bubble-sort-using-java/</link>
       <pubDate>Tue, 09 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/bubble-sort/</guid>
+      <guid>http://codingnconcepts.com/bubble-sort-using-java/</guid>
       <description>&lt;h3 id=&#34;why-it-is-called-bubble-sort-&#34;&gt;Why it is called bubble sort ?&lt;/h3&gt;
 &lt;p&gt;Bubble Sort is nothing but a comparison algorithm where -&lt;/p&gt;
 &lt;ul&gt;

@@ -563,6 +563,10 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	margin-bottom: 1.25rem;
 }
 
+.main__content h1, .main__header h1{
+	color: #e22d30;
+}
+
 .meta {
 	font-size: 13px;
 	font-size: .8125rem;
@@ -855,7 +859,6 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 
 .list__footer-readmore {
 	float: right;
-	margin-top: 10px;
 }
 
 /* Pagination */

@@ -6,10 +6,28 @@
     <description>Recent content on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingnconcepts.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Difference in const and Object.freeze() in JavaScript</title>
+      <link>http://codingnconcepts.com/const-vs-object-freeze/</link>
+      <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/const-vs-object-freeze/</guid>
+      <description>&lt;p&gt;This post describes what are the best practices to define constants and configuration values in JavaScript using const and Object.freeze() and the differences between const and Object.freeze().&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Object methods in JavaScript</title>
+      <link>http://codingnconcepts.com/object-methods-in-javascript/</link>
+      <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/object-methods-in-javascript/</guid>
+      <description>&lt;p&gt;This post describes the usage of various Object methods like &lt;code&gt;Object.create()&lt;/code&gt;, &lt;code&gt;Object.assign()&lt;/code&gt;, &lt;code&gt;Object.freeze()&lt;/code&gt;, &lt;code&gt;Object.seal()&lt;/code&gt; and many more available in JavaScript with examples.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Difference between var, let and const</title>
@@ -17,8 +35,7 @@
       <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingnconcepts.com/difference-between-var-let-and-const/</guid>
-      <description>A nice feature addition in ES2015 (ES6) was the introduction of let and const keywords for variable declaration. You can use var, let and const keyword interchangeably for variable declaration though it makes a difference in terms of their scope, usage and hoisting. If you are not aware of these differences then please continue to read&amp;hellip;
-Scope  Scope basically means the accessibility of a variable. Variables can have three types of scope:-</description>
+      <description>&lt;p&gt;A nice feature addition in ES2015 (ES6) was the introduction of &lt;code&gt;let&lt;/code&gt; and &lt;code&gt;const&lt;/code&gt; keywords for variable declaration. You can use &lt;code&gt;var&lt;/code&gt;, &lt;code&gt;let&lt;/code&gt; and &lt;code&gt;const&lt;/code&gt; keyword interchangeably for variable declaration though it makes a difference in terms of their scope, usage and hoisting. If you are not aware of these differences then please continue to read&amp;hellip;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -308,14 +325,12 @@ Confluent has introduced CCOAK certification recently. CCOAK is mainly for devOp
     </item>
     
     <item>
-      <title>Virutal Dom vs Shadow Dom</title>
-      <link>http://codingnconcepts.com/virutal-dom-vs-shadow-dom/</link>
+      <title>Virtual Dom vs Shadow Dom</title>
+      <link>http://codingnconcepts.com/virtual-dom-vs-shadow-dom/</link>
       <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/virutal-dom-vs-shadow-dom/</guid>
-      <description>Virtual DOM vs Shadow DOM
-DOM DOM stands for Document Object Model which is object based representation of any structured content such as HTML, XML etc. Browser maintains DOM object to render the HTML and any change in the DOM object cause re-rendering of the whole page.
-Virtual DOM Concept of Virtual DOM is adapted by popular UI libraries like React and Vue to solve mainly the performance issue. Virtual DOM is an in-memory representation of the DOM.</description>
+      <guid>http://codingnconcepts.com/virtual-dom-vs-shadow-dom/</guid>
+      <description>&lt;p&gt;This post describe the difference in Virtual Dom and Shadow Dom&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -338,10 +353,10 @@ Virtual DOM Concept of Virtual DOM is adapted by popular UI libraries like React
     
     <item>
       <title>Immutable Class</title>
-      <link>http://codingnconcepts.com/immutable-class/</link>
+      <link>http://codingnconcepts.com/immutable-class-using-java/</link>
       <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/immutable-class/</guid>
+      <guid>http://codingnconcepts.com/immutable-class-using-java/</guid>
       <description>&lt;p&gt;This problem is frequently asked in the interview to check your understanding on immutable class. This program answers following artefacts of immutable class:-&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Private Constructor&lt;/li&gt;
@@ -352,19 +367,19 @@ Virtual DOM Concept of Virtual DOM is adapted by popular UI libraries like React
     
     <item>
       <title>Fibonacci Series</title>
-      <link>http://codingnconcepts.com/fibonacci-series/</link>
+      <link>http://codingnconcepts.com/fibonacci-series-using-java/</link>
       <pubDate>Sun, 12 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/fibonacci-series/</guid>
+      <guid>http://codingnconcepts.com/fibonacci-series-using-java/</guid>
       <description>&lt;p&gt;Fibonacci series implementation in java is frequently asked question in interview at fresher level. Moreover, it is a very famous example to show how to use recursive function in java.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Bubble Sort</title>
-      <link>http://codingnconcepts.com/bubble-sort/</link>
+      <link>http://codingnconcepts.com/bubble-sort-using-java/</link>
       <pubDate>Tue, 09 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/bubble-sort/</guid>
+      <guid>http://codingnconcepts.com/bubble-sort-using-java/</guid>
       <description>&lt;h3 id=&#34;why-it-is-called-bubble-sort-&#34;&gt;Why it is called bubble sort ?&lt;/h3&gt;
 &lt;p&gt;Bubble Sort is nothing but a comparison algorithm where -&lt;/p&gt;
 &lt;ul&gt;
@@ -376,10 +391,10 @@ Virtual DOM Concept of Virtual DOM is adapted by popular UI libraries like React
     
     <item>
       <title>Design Elevator (Lift) in Java</title>
-      <link>http://codingnconcepts.com/design-elevator-lift-in-java/</link>
+      <link>http://codingnconcepts.com/elevator-implementation-using-java/</link>
       <pubDate>Mon, 06 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/design-elevator-lift-in-java/</guid>
+      <guid>http://codingnconcepts.com/elevator-implementation-using-java/</guid>
       <description>&lt;p&gt;Implementation of Elevator or Lift has been asked in many interviews. I have tried to implement it using muti-threading and TreeSet. TreeSet is used to store incoming request. It is a good choice here as it removes the duplicate requests and implements NavigableSet which provide you methods such as floor and ceiling.&lt;/p&gt;
 &lt;p&gt;Elevator in this program implements following features -&lt;/p&gt;
 &lt;ul&gt;

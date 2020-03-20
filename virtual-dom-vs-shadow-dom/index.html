@@ -4,19 +4,19 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Virutal Dom vs Shadow Dom - Coding N Concepts</title>
+	<title>Virtual Dom vs Shadow Dom - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Virutal Dom vs Shadow Dom.">
-	<meta property="og:title" content="Virutal Dom vs Shadow Dom" />
-<meta property="og:description" content="Virutal Dom vs Shadow Dom." />
+	<meta name="description" content="Virtual Dom vs Shadow Dom.">
+	<meta property="og:title" content="Virtual Dom vs Shadow Dom" />
+<meta property="og:description" content="Virtual Dom vs Shadow Dom." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://codingnconcepts.com/virutal-dom-vs-shadow-dom/" />
+<meta property="og:url" content="http://codingnconcepts.com/virtual-dom-vs-shadow-dom/" />
 <meta property="article:published_time" content="2019-06-13T00:00:00+00:00" />
 <meta property="article:modified_time" content="2019-06-13T00:00:00+00:00" />
 
 	<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Virutal Dom vs Shadow Dom"/>
-<meta name="twitter:description" content="Virutal Dom vs Shadow Dom."/>
+<meta name="twitter:title" content="Virtual Dom vs Shadow Dom"/>
+<meta name="twitter:description" content="Virtual Dom vs Shadow Dom."/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -43,7 +43,7 @@ if (!doNotTrack) {
 	<div class="container">
 		<div class="logo">
 			<a class="logo__link" href="/" title="Coding N Concepts" rel="home">
-				<div class="logo__title"><img src="/favicon-32x32.png" alt="Virutal Dom vs Shadow Dom"> Coding N Concepts</div>
+				<div class="logo__title"><img src="/favicon-32x32.png" alt="Virtual Dom vs Shadow Dom"> Coding N Concepts</div>
 				<div class="logo__tagline">Ashish Lahoti&#39;s Technical Blog</div>
 			</a>
 		</div>
@@ -61,14 +61,28 @@ if (!doNotTrack) {
 			</a>
 		</li>
 		<li class="menu__item">
-			<a class="menu__link" href="/categories/spring-boot/">
+			<a class="menu__link" href="/java/">
+				
+				<span class="menu__text">Java</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/javascript/">
+				
+				<span class="menu__text">JavaScript</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/spring-boot/">
 				
 				<span class="menu__text">Spring Boot</span>
 				
 			</a>
 		</li>
 		<li class="menu__item">
-			<a class="menu__link" href="/categories/interview-questions/">
+			<a class="menu__link" href="/interview-questions/">
 				
 				<span class="menu__text">Interview Questions</span>
 				
@@ -82,14 +96,7 @@ if (!doNotTrack) {
 			</a>
 		</li>
 		<li class="menu__item">
-			<a class="menu__link" href="/categories/java-programs/">
-				
-				<span class="menu__text">Java</span>
-				
-			</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/categories/puzzles/">
+			<a class="menu__link" href="/puzzle/">
 				
 				<span class="menu__text">Puzzles</span>
 				
@@ -113,7 +120,7 @@ if (!doNotTrack) {
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Virutal Dom vs Shadow Dom</h1>
+			<h1 class="post__title">Virtual Dom vs Shadow Dom</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
@@ -122,12 +129,11 @@ if (!doNotTrack) {
 
 <div class="meta__item-categories meta__item">
 	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/concepts/" rel="category">Concepts</a>
+	<span class="meta__text"><a class="meta__link" href="/categories/javascript/" rel="category">Javascript</a>
 	</span>
 </div></div>
 		</header><div class="content post__content clearfix">
-			<p>Virtual DOM vs Shadow DOM</p>
-<!-- raw HTML omitted -->
+			<p>This post describe the difference in Virtual Dom and Shadow Dom</p>
 <h4 id="dom">DOM</h4>
 <p>DOM stands for Document Object Model which is object based representation of any structured content such as HTML, XML etc. Browser maintains DOM object to render the HTML and any change in the DOM object cause re-rendering of the whole page.</p>
 <h4 id="virtual-dom">Virtual DOM</h4>
@@ -135,7 +141,6 @@ if (!doNotTrack) {
 Virtual DOM is an in-memory representation of the DOM. Any update in the DOM first applied to Virtual DOM instead of applying directly to actual DOM. Then it compare the changes against actual DOM through a process call &ldquo;diffing&rdquo; and apply the changes efficiently to actual DOM by only re-rendering the changed elements.</p>
 <h4 id="shadow-dom">Shadow DOM</h4>
 <p>Concept of Shadow DOM is natively supported by browser (Not all browsers are currently supporting). Shadow DOM is mostly about encapsulation of the implementation. You can make reusable native web components which follows Shadow DOM concept. Implementation and styling of native web component is hidden within the Shadow DOM and having no impact from the outer DOM.</p>
-
 		</div>
 		<footer class="post__footer">
 			
@@ -164,11 +169,8 @@ Virtual DOM is an in-memory representation of the DOM. Any update in the DOM fir
 </div>
 
 <nav class="post-nav flex">
-	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="/immutable-class/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Immutable Class</p></a>
-	</div>
 	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="/ping-pong-using-wait-notify/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Ping pong using wait notify</p></a>
+		<a class="post-nav__link" href="/difference-between-var-let-and-const/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Difference between var, let and const</p></a>
 	</div>
 </nav>
 

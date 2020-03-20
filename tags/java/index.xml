@@ -6,7 +6,7 @@
     <description>Recent content in Java on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingnconcepts.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
@@ -104,10 +104,10 @@ You can find the singleton pattern implementation here.&lt;/li&gt;
     
     <item>
       <title>Immutable Class</title>
-      <link>http://codingnconcepts.com/immutable-class/</link>
+      <link>http://codingnconcepts.com/immutable-class-using-java/</link>
       <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/immutable-class/</guid>
+      <guid>http://codingnconcepts.com/immutable-class-using-java/</guid>
       <description>&lt;p&gt;This problem is frequently asked in the interview to check your understanding on immutable class. This program answers following artefacts of immutable class:-&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Private Constructor&lt;/li&gt;
@@ -118,19 +118,19 @@ You can find the singleton pattern implementation here.&lt;/li&gt;
     
     <item>
       <title>Fibonacci Series</title>
-      <link>http://codingnconcepts.com/fibonacci-series/</link>
+      <link>http://codingnconcepts.com/fibonacci-series-using-java/</link>
       <pubDate>Sun, 12 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/fibonacci-series/</guid>
+      <guid>http://codingnconcepts.com/fibonacci-series-using-java/</guid>
       <description>&lt;p&gt;Fibonacci series implementation in java is frequently asked question in interview at fresher level. Moreover, it is a very famous example to show how to use recursive function in java.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Bubble Sort</title>
-      <link>http://codingnconcepts.com/bubble-sort/</link>
+      <link>http://codingnconcepts.com/bubble-sort-using-java/</link>
       <pubDate>Tue, 09 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/bubble-sort/</guid>
+      <guid>http://codingnconcepts.com/bubble-sort-using-java/</guid>
       <description>&lt;h3 id=&#34;why-it-is-called-bubble-sort-&#34;&gt;Why it is called bubble sort ?&lt;/h3&gt;
 &lt;p&gt;Bubble Sort is nothing but a comparison algorithm where -&lt;/p&gt;
 &lt;ul&gt;
@@ -142,10 +142,10 @@ You can find the singleton pattern implementation here.&lt;/li&gt;
     
     <item>
       <title>Design Elevator (Lift) in Java</title>
-      <link>http://codingnconcepts.com/design-elevator-lift-in-java/</link>
+      <link>http://codingnconcepts.com/elevator-implementation-using-java/</link>
       <pubDate>Mon, 06 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/design-elevator-lift-in-java/</guid>
+      <guid>http://codingnconcepts.com/elevator-implementation-using-java/</guid>
       <description>&lt;p&gt;Implementation of Elevator or Lift has been asked in many interviews. I have tried to implement it using muti-threading and TreeSet. TreeSet is used to store incoming request. It is a good choice here as it removes the duplicate requests and implements NavigableSet which provide you methods such as floor and ceiling.&lt;/p&gt;
 &lt;p&gt;Elevator in this program implements following features -&lt;/p&gt;
 &lt;ul&gt;
