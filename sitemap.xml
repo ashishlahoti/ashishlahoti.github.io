@@ -3,19 +3,50 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://codingnconcepts.com/javascript/</loc>
-    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
+    <loc>http://codingnconcepts.com/java/</loc>
+    <lastmod>2020-03-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://codingnconcepts.com/categories/</loc>
-    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://codingnconcepts.com/</loc>
+    <lastmod>2020-03-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/java/decorator-design-pattern-using-java/</loc>
+    <lastmod>2020-03-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/tags/design-pattern/</loc>
+    <lastmod>2020-03-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/tags/java/</loc>
+    <lastmod>2020-03-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/categories/java/</loc>
+    <lastmod>2020-03-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/tags/</loc>
+    <lastmod>2020-03-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/javascript/</loc>
     <lastmod>2020-03-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -34,16 +65,6 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/tags/java/</loc>
-    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingnconcepts.com/categories/java/</loc>
-    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://codingnconcepts.com/tags/javascript/</loc>
     <lastmod>2020-03-20T00:00:00+00:00</lastmod>
   </url>
@@ -55,11 +76,6 @@
   
   <url>
     <loc>http://codingnconcepts.com/tags/js/</loc>
-    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingnconcepts.com/tags/</loc>
     <lastmod>2020-03-20T00:00:00+00:00</lastmod>
   </url>
   
@@ -254,17 +270,6 @@
   <url>
     <loc>http://codingnconcepts.com/top-javascript-interview-questions/</loc>
     <lastmod>2020-03-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingnconcepts.com/java/</loc>
-    <lastmod>2019-07-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://codingnconcepts.com/tags/design-pattern/</loc>
-    <lastmod>2019-07-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
