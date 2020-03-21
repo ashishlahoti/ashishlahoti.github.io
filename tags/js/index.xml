@@ -13,28 +13,28 @@
     
     <item>
       <title>Difference in const and Object.freeze() in JavaScript</title>
-      <link>http://codingnconcepts.com/const-vs-object-freeze/</link>
+      <link>http://codingnconcepts.com/javascript/const-vs-object-freeze/</link>
       <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/const-vs-object-freeze/</guid>
+      <guid>http://codingnconcepts.com/javascript/const-vs-object-freeze/</guid>
       <description>&lt;p&gt;This post describes the best practices to define constants and configuration values in JavaScript using &lt;code&gt;const&lt;/code&gt; and &lt;code&gt;Object.freeze()&lt;/code&gt; and the difference between &lt;code&gt;const&lt;/code&gt; and &lt;code&gt;Object.freeze()&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Object methods in JavaScript</title>
-      <link>http://codingnconcepts.com/object-methods-in-javascript/</link>
+      <link>http://codingnconcepts.com/javascript/object-methods-in-javascript/</link>
       <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/object-methods-in-javascript/</guid>
+      <guid>http://codingnconcepts.com/javascript/object-methods-in-javascript/</guid>
       <description>&lt;p&gt;This post describes the usage of various Object methods like &lt;code&gt;Object.create()&lt;/code&gt;, &lt;code&gt;Object.assign()&lt;/code&gt;, &lt;code&gt;Object.freeze()&lt;/code&gt;, &lt;code&gt;Object.seal()&lt;/code&gt; and many more available in JavaScript with examples.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Difference between var, let and const</title>
-      <link>http://codingnconcepts.com/difference-between-var-let-and-const/</link>
+      <link>http://codingnconcepts.com/javascript/difference-between-var-let-and-const/</link>
       <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/difference-between-var-let-and-const/</guid>
+      <guid>http://codingnconcepts.com/javascript/difference-between-var-let-and-const/</guid>
       <description>&lt;p&gt;A nice feature addition in ES2015 (ES6) was the introduction of &lt;code&gt;let&lt;/code&gt; and &lt;code&gt;const&lt;/code&gt; keywords for variable declaration. You can use &lt;code&gt;var&lt;/code&gt;, &lt;code&gt;let&lt;/code&gt; and &lt;code&gt;const&lt;/code&gt; keyword interchangeably for variable declaration though it makes a difference in terms of their scope, usage and hoisting. If you are not aware of these differences then please continue to read&amp;hellip;&lt;/p&gt;</description>
     </item>
     
@@ -49,10 +49,10 @@
     
     <item>
       <title>Virtual Dom vs Shadow Dom</title>
-      <link>http://codingnconcepts.com/virtual-dom-vs-shadow-dom/</link>
+      <link>http://codingnconcepts.com/javascript/virtual-dom-vs-shadow-dom/</link>
       <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/virtual-dom-vs-shadow-dom/</guid>
+      <guid>http://codingnconcepts.com/javascript/virtual-dom-vs-shadow-dom/</guid>
       <description>&lt;p&gt;This post describe the difference in Virtual Dom and Shadow Dom&lt;/p&gt;</description>
     </item>
     

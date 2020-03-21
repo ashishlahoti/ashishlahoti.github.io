@@ -19,7 +19,7 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/const-vs-object-freeze/</loc>
+    <loc>http://codingnconcepts.com/javascript/const-vs-object-freeze/</loc>
     <lastmod>2020-03-20T00:00:00+00:00</lastmod>
   </url>
   
@@ -64,12 +64,12 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/object-methods-in-javascript/</loc>
+    <loc>http://codingnconcepts.com/javascript/object-methods-in-javascript/</loc>
     <lastmod>2020-03-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/difference-between-var-let-and-const/</loc>
+    <loc>http://codingnconcepts.com/javascript/difference-between-var-let-and-const/</loc>
     <lastmod>2020-03-17T00:00:00+00:00</lastmod>
   </url>
   
@@ -268,12 +268,12 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/singleton-design-pattern-using-java/</loc>
+    <loc>http://codingnconcepts.com/java/singleton-design-pattern-using-java/</loc>
     <lastmod>2019-07-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/ping-pong-using-wait-notify/</loc>
+    <loc>http://codingnconcepts.com/java/ping-pong-using-wait-notify/</loc>
     <lastmod>2019-07-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -313,7 +313,7 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/virtual-dom-vs-shadow-dom/</loc>
+    <loc>http://codingnconcepts.com/javascript/virtual-dom-vs-shadow-dom/</loc>
     <lastmod>2019-06-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -328,7 +328,7 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/immutable-class-using-java/</loc>
+    <loc>http://codingnconcepts.com/java/immutable-class-using-java/</loc>
     <lastmod>2018-05-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -338,7 +338,7 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/fibonacci-series-using-java/</loc>
+    <loc>http://codingnconcepts.com/java/fibonacci-series-using-java/</loc>
     <lastmod>2015-07-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -348,7 +348,7 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/bubble-sort-using-java/</loc>
+    <loc>http://codingnconcepts.com/java/bubble-sort-using-java/</loc>
     <lastmod>2015-06-09T00:00:00+00:00</lastmod>
   </url>
   
@@ -358,7 +358,7 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/elevator-implementation-using-java/</loc>
+    <loc>http://codingnconcepts.com/java/elevator-implementation-using-java/</loc>
     <lastmod>2015-04-06T00:00:00+00:00</lastmod>
   </url>
   

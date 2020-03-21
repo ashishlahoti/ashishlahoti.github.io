@@ -13,19 +13,19 @@
     
     <item>
       <title>Difference in const and Object.freeze() in JavaScript</title>
-      <link>http://codingnconcepts.com/const-vs-object-freeze/</link>
+      <link>http://codingnconcepts.com/javascript/const-vs-object-freeze/</link>
       <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/const-vs-object-freeze/</guid>
+      <guid>http://codingnconcepts.com/javascript/const-vs-object-freeze/</guid>
       <description>&lt;p&gt;This post describes the best practices to define constants and configuration values in JavaScript using &lt;code&gt;const&lt;/code&gt; and &lt;code&gt;Object.freeze()&lt;/code&gt; and the difference between &lt;code&gt;const&lt;/code&gt; and &lt;code&gt;Object.freeze()&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Difference between var, let and const</title>
-      <link>http://codingnconcepts.com/difference-between-var-let-and-const/</link>
+      <link>http://codingnconcepts.com/javascript/difference-between-var-let-and-const/</link>
       <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/difference-between-var-let-and-const/</guid>
+      <guid>http://codingnconcepts.com/javascript/difference-between-var-let-and-const/</guid>
       <description>&lt;p&gt;A nice feature addition in ES2015 (ES6) was the introduction of &lt;code&gt;let&lt;/code&gt; and &lt;code&gt;const&lt;/code&gt; keywords for variable declaration. You can use &lt;code&gt;var&lt;/code&gt;, &lt;code&gt;let&lt;/code&gt; and &lt;code&gt;const&lt;/code&gt; keyword interchangeably for variable declaration though it makes a difference in terms of their scope, usage and hoisting. If you are not aware of these differences then please continue to read&amp;hellip;&lt;/p&gt;</description>
     </item>
     
