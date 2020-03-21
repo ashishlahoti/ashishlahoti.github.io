@@ -22,7 +22,7 @@
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/custom.css">
+	
 	<link rel="shortcut icon" href="/favicon.ico">
 		
 <script type="application/javascript">
@@ -120,7 +120,7 @@ if (!doNotTrack) {
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Top Javascript Interview Questions</h1>
+			<h1 class="post__title"><img class="post__thumbnail" src="/img/logo/interview.jpg" alt="Top Javascript Interview Questions"> Top Javascript Interview Questions</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
@@ -148,19 +148,21 @@ if (!doNotTrack) {
 <li>While <strong>var</strong> and <strong>let</strong> can be declared without being initialized, <strong>const</strong> must be initialized during declaration.</li>
 </ul>
 <blockquote>
-<p>Also read <a href="/difference-between-var-let-and-const">this post for more details on difference between var, let and const</a></p>
+<p>Also read <a href="http://codingnconcepts.com/difference-between-var-let-and-const/">this post for more details on difference between var, let and const</a></p>
 </blockquote>
 <h4 id="8-difference-between-null-and-undefined-">8. Difference between null and undefined ?</h4>
 <h4 id="9-object-oriented-programming-in-javascript---what-is-constructor-and-prototype-do-you-know-about-prototypal-inheritance-how-do-you-define-class-using-es6">9. Object Oriented programming in Javascript - What is constructor and prototype? Do you know about prototypal inheritance. How do you define Class using ES6.</h4>
 <h4 id="10-what-are-the-methods-available-in-object--">10. What are the methods available in Object -</h4>
 <ul>
-<li><strong>create</strong> It is used to create a shallow copy of Object. Shallow copy means it copies only the properties and functions of the object but doesn&rsquo;t copy prototype inheritance.</li>
-<li><strong>assign</strong> It is used to copy the properties and functions of one object in another object. doesn&rsquo;t copy prototype inheritance.
-setPrototypeOf</li>
-<li><strong>freeze</strong> It is used to freeze object. New properties cannot be added and existing properties cannot be modified.</li>
-<li><strong>seal</strong> It is used to seal the schema of object. New properties cannot be added but existing properties can be modified.</li>
-<li><strong>defineProperty</strong> It is used to define property. Can make the property readonly using this method.</li>
+<li><strong>create</strong> method is used to create a new object with its prototype set to existing object.</li>
+<li><strong>assign</strong> method is used to copy the properties and functions of one object in another object.</li>
+<li><strong>freeze</strong> freezes the state of an Object once this method is called. It ignores if any existing property is modified, and if any new property is added.</li>
+<li><strong>seal</strong> seals the state of an Object once this method is called. It allows the modification of existing properties, but ignores if any new property is added.</li>
+<li><strong>defineProperty</strong> is used to define new property in existing object or modifying existing property. Property can be marked writable, configurable and enumerable.</li>
 </ul>
+<blockquote>
+<p>Also read <a href="http://codingnconcepts.com/object-methods-in-javascript/">this post for more details on Object methods with examples</a></p>
+</blockquote>
 <h4 id="11-currying-functions-in-javascript">11. Currying functions in javascript?</h4>
 <h4 id="12-lexical-scoping-and-variable-hoisting-in-javascript">12. Lexical scoping and variable hoisting in Javascript?</h4>
 		</div>
@@ -177,6 +179,26 @@ setPrototypeOf</li>
 		</footer>
 	</article>
 </main>
+
+
+
+<div class="related_post_section">
+    <h2 class = "related_post_title">See Also</h2>
+    <ul class = "related_post">
+        
+        <li><a href="/virtual-dom-vs-shadow-dom/">Virtual Dom vs Shadow Dom</a></li>
+        
+        <li><a href="/top-css-interview-questions/">Top CSS Interview Questions</a></li>
+        
+        <li><a href="/top-java-interview-questions/">Top Java Interview Questions</a></li>
+        
+        <li><a href="/puzzle/12-balls-weight-puzzle/">12 Balls Weight Puzzle</a></li>
+        
+        <li><a href="/puzzle/8-balls-weight-puzzle/">8 Balls Weight Puzzle</a></li>
+        
+    </ul>
+</div>
+
 
 <div class="authorbox clearfix">
 	<figure class="authorbox__avatar">
@@ -234,5 +256,5 @@ setPrototypeOf</li>
 </footer>
 	</div>
 <script async defer src="/js/menu.js"></script>
-<script src="/js/custom.js"></script></body>
+</body>
 </html>

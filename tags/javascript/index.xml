@@ -17,7 +17,7 @@
       <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingnconcepts.com/const-vs-object-freeze/</guid>
-      <description>&lt;p&gt;This post describes what are the best practices to define constants and configuration values in JavaScript using const and Object.freeze() and the differences between const and Object.freeze().&lt;/p&gt;</description>
+      <description>&lt;p&gt;This post describes the best practices to define constants and configuration values in JavaScript using &lt;code&gt;const&lt;/code&gt; and &lt;code&gt;Object.freeze()&lt;/code&gt; and the difference between &lt;code&gt;const&lt;/code&gt; and &lt;code&gt;Object.freeze()&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -45,15 +45,6 @@
       
       <guid>http://codingnconcepts.com/top-javascript-interview-questions/</guid>
       <description>&lt;p&gt;These Javascript interview questions are based on my personal interview experience. Likelihood of question being asked in the interview is from top to bottom.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Virtual Dom vs Shadow Dom</title>
-      <link>http://codingnconcepts.com/virtual-dom-vs-shadow-dom/</link>
-      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://codingnconcepts.com/virtual-dom-vs-shadow-dom/</guid>
-      <description>&lt;p&gt;This post describe the difference in Virtual Dom and Shadow Dom&lt;/p&gt;</description>
     </item>
     
   </channel>

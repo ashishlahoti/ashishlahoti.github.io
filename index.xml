@@ -17,7 +17,7 @@
       <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingnconcepts.com/const-vs-object-freeze/</guid>
-      <description>&lt;p&gt;This post describes what are the best practices to define constants and configuration values in JavaScript using const and Object.freeze() and the differences between const and Object.freeze().&lt;/p&gt;</description>
+      <description>&lt;p&gt;This post describes the best practices to define constants and configuration values in JavaScript using &lt;code&gt;const&lt;/code&gt; and &lt;code&gt;Object.freeze()&lt;/code&gt; and the difference between &lt;code&gt;const&lt;/code&gt; and &lt;code&gt;Object.freeze()&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -121,7 +121,11 @@
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingnconcepts.com/puzzle/einsteins-riddle/</guid>
-      <description>&lt;p&gt;The legend says that this problem was created by Albert Einstein in the last century. Einstein said that only 2% of the world could solve it.&lt;/p&gt;
+      <description>&lt;figure&gt;
+    &lt;img src=&#34;http://codingnconcepts.com/img/puzzle/albert-einstein.jpg&#34;/&gt; 
+&lt;/figure&gt;
+
+&lt;p&gt;The legend says that this problem was created by Albert Einstein in the last century. Einstein said that only 2% of the world could solve it.&lt;/p&gt;
 &lt;p&gt;There are no tricks, just pure logic, so good luck and don’t give up.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ol&gt;
@@ -456,7 +460,8 @@ Confluent has introduced CCOAK certification recently. CCOAK is mainly for devOp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://codingnconcepts.com/about/</guid>
-      <description>Hey Everyone! I’m Ashish Lahoti. Welcome to my technology blog!
+      <description>Ashish Lahoti
+  Hey Everyone! I’m Ashish Lahoti. Welcome to my technology blog!
 I created this blog to narrate my coding and concepts learning experiences. I like sharing my experiments and ideas with everyone by writing articles on latest technological trends.
 Primarily I write about Java, Spring, Kafka, Javascript, CSS and the list goes on&amp;hellip;
 Few pointers about me:-

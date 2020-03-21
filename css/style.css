@@ -398,6 +398,13 @@ select {
 	color: #000;
 }
 
+.logo__title img{
+    width: 32px;
+    height: 32px;
+	width: 2rem;
+	height: 2rem;
+}
+
 .logo__tagline {
 	display: inline-block;
 	padding-top: 10px;
@@ -519,6 +526,10 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	transition: visibility .15s ease, transform .15s ease, -webkit-transform .15s ease;
 }
 
+.center {
+	text-align: center;
+}
+
 @media screen and (min-width: 767px) {
 	.menu {
 		border-bottom: 5px solid #e22d30;
@@ -623,13 +634,10 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 }
 
 .post__thumbnail {
-	max-width: 1030px;
-	margin: 0 0 20px;
-	margin-bottom: 0 0 1.25rem;
-}
-
-.post__thumbnail img {
-	width: 100%;
+	height: 32px;
+	width: 32px;
+	height: 2.3rem;
+	width: 2.3rem;
 }
 
 .content a,
@@ -854,7 +862,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 
 .list__thumbnail img {
 	width: 100%;
-	max-width: 235px;
+	max-width: 60px;
 }
 
 .list__footer-readmore {
@@ -1144,6 +1152,15 @@ textarea {
 	text-decoration: underline;
 }
 
+.related_post_section {
+	padding: 10px;
+	background-color: rgb(240,240,240);
+}
+
+.related_post {
+	padding: 10px 20px;
+}
+
 /* Media Queries */
 @media screen and (max-width: 1475px) {
 	.container--outer {
@@ -1200,6 +1217,13 @@ textarea {
 		font-size: 24px;
 		font-size: 1.5rem;
 	}
+
+	.logo__title img{
+        width: 24px;
+        height: 24px;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
 
 	.sidebar {
 		margin-top: 20px;

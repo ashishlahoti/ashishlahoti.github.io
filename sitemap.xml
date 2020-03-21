@@ -24,12 +24,22 @@
   </url>
   
   <url>
+    <loc>http://codingnconcepts.com/tags/es6/</loc>
+    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://codingnconcepts.com/tags/interview/</loc>
     <lastmod>2020-03-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://codingnconcepts.com/tags/java/</loc>
+    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/categories/java/</loc>
     <lastmod>2020-03-20T00:00:00+00:00</lastmod>
   </url>
   
@@ -75,7 +85,7 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/tags/die-hard/</loc>
+    <loc>http://codingnconcepts.com/tags/die-hard-puzzle/</loc>
     <lastmod>2020-03-15T00:00:00+00:00</lastmod>
   </url>
   
@@ -85,7 +95,7 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/tags/interview-questions/</loc>
+    <loc>http://codingnconcepts.com/tags/interview-puzzle/</loc>
     <lastmod>2020-03-15T00:00:00+00:00</lastmod>
   </url>
   
@@ -140,7 +150,7 @@
   </url>
   
   <url>
-    <loc>http://codingnconcepts.com/tags/einstein/</loc>
+    <loc>http://codingnconcepts.com/tags/einstein-riddle/</loc>
     <lastmod>2020-03-14T00:00:00+00:00</lastmod>
   </url>
   
@@ -254,11 +264,6 @@
   
   <url>
     <loc>http://codingnconcepts.com/tags/design-pattern/</loc>
-    <lastmod>2019-07-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingnconcepts.com/categories/java-programs/</loc>
     <lastmod>2019-07-22T00:00:00+00:00</lastmod>
   </url>
   
