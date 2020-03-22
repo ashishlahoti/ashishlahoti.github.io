@@ -166,7 +166,7 @@ if (!doNotTrack) {
 
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">car</span>.<span style="color:#a6e22e">isPrototypeOf</span>(<span style="color:#a6e22e">newCar</span>)); <span style="color:#75715e">//true
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">newCar</span>.<span style="color:#a6e22e">drive</span>();
-</code></pre></div><pre><code>output:
+</code></pre></div><pre><code><div class="code_output">Output</div>
 true
 Driving a top model black color Honda car
 </code></pre><p>Here <code>newCar</code> creates a completely new object with its prototype set to <code>Car</code>. We set the <code>brand</code> and <code>isTopModel</code> values whereas value of <code>color</code> will be inherited. When we call <code>drive()</code> method, it finds the <code>drive()</code> in the prototype chain on <code>car</code> and execute.</p>
@@ -187,7 +187,7 @@ Driving a top model black color Honda car
 
 <span style="color:#75715e">// Merge the objects
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Object.<span style="color:#a6e22e">assign</span>(<span style="color:#a6e22e">favorites</span>, <span style="color:#a6e22e">somemore</span>));
-</code></pre></div><pre><code>output:
+</code></pre></div><pre><code><div class="code_output">Output</div>
 {color: &quot;Red&quot;, number: 5, fruit: &quot;Mango&quot;, movies: [&quot;Spider Man&quot;, &quot;Conjuring&quot;]}
 </code></pre><p>Also can be used in Class <code>constructor</code> to assign all values to <code>this</code> as follows:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Car</span> {
@@ -209,7 +209,7 @@ Driving a top model black color Honda car
 <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">active</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
 
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">user</span>);
-</code></pre></div><pre><code>Output:
+</code></pre></div><pre><code><div class="code_output">Output</div>
 {username: &quot;admin&quot;, password: &quot;password@123&quot;}
 </code></pre><h2 id="objectseal">Object.seal()</h2>
 <p><code>Object.seal()</code> seals the state of an Object once this method is called. It allows the modification of existing properties, but ignores if any new property is added.</p>
@@ -225,7 +225,7 @@ Driving a top model black color Honda car
 <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">active</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
 
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">user</span>);
-</code></pre></div><pre><code>Output:
+</code></pre></div><pre><code><div class="code_output">Output</div>
 {name: &quot;admin&quot;, password: &quot;*******&quot;}
 </code></pre><h2 id="objectdefineproperty">Object.defineProperty()</h2>
 <p><code>Object.defineProperty()</code> is used to define new property in existing object.</p>
@@ -254,7 +254,7 @@ Object.<span style="color:#a6e22e">defineProperty</span>(<span style="color:#a6e
 });
 
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">user</span>);
-</code></pre></div><pre><code>output:
+</code></pre></div><pre><code><div class="code_output">Output</div>
 {name: &quot;admin&quot;}
 </code></pre><h2 id="objectdefineproperties">Object.defineProperties()</h2>
 <p><code>Object.defineProperties()</code> can be used to define multiple properites in existing object.</p>
@@ -274,7 +274,7 @@ Object.<span style="color:#a6e22e">defineProperties</span>(<span style="color:#a
 });
 
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">user</span>);
-</code></pre></div><pre><code>output:
+</code></pre></div><pre><code><div class="code_output">Output</div>
 {name: &quot;admin&quot;, password: &quot;password@123&quot;}
 </code></pre><h2 id="objectkeys-objectvalues--objectentries">Object.keys(), Object.values() &amp; Object.entries()</h2>
 <p><code>Object.keys()</code>, <code>Object.values()</code> and <code>Object.entries()</code> can be used iterator from the object as follows:</p>
@@ -289,8 +289,7 @@ Object.<span style="color:#a6e22e">defineProperties</span>(<span style="color:#a
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;values&#34;</span>, Object.<span style="color:#a6e22e">values</span>(<span style="color:#a6e22e">favorites</span>));
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;entries&#34;</span>, Object.<span style="color:#a6e22e">entries</span>(<span style="color:#a6e22e">favorites</span>));
 
-</code></pre></div><pre><code>output:
-
+</code></pre></div><pre><code><div class="code_output">Output</div>
 keys [&quot;color&quot;, &quot;number&quot;, &quot;vegan&quot;, &quot;movies&quot;]
 
 values [&quot;Red&quot;, 5, true, [&quot;Spider Man&quot;, &quot;Conjuring&quot;]]

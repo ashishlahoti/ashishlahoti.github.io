@@ -209,11 +209,11 @@ if (!doNotTrack) {
 }
 
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">i</span>);
-</code></pre></div><pre><code>output:
-// 0
-// 1
-// 2
-// 3
+</code></pre></div><pre><code><div class="code_output">Output</div>
+0
+1
+2
+3
 </code></pre><p>Since <code>var</code> is function-scoped. The variable <code>i</code> can be accessed outside for-loop (block of code)</p>
 <h6 id="var-reassigning">var reassigning</h6>
 <p>Variable using <code>var</code> can be reassigned with new value and also can be redefined.</p>
@@ -226,8 +226,8 @@ if (!doNotTrack) {
 }
 
 <span style="color:#a6e22e">myFn</span>();
-</code></pre></div><pre><code>output:
-// 101
+</code></pre></div><pre><code><div class="code_output">Output</div>
+101
 </code></pre><h2 id="2-let">2. &ldquo;let&rdquo;</h2>
 <h6 id="let-outside-of-a-for-loop">let outside of a for-loop</h6>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// for-loop
@@ -236,11 +236,11 @@ if (!doNotTrack) {
 }
 
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">i</span>);
-</code></pre></div><pre><code>output:
-// 0
-// 1
-// 2
-// ReferenceError: i is not defined
+</code></pre></div><pre><code><div class="code_output">Output</div>
+0
+1
+2
+ReferenceError: i is not defined
 </code></pre><p>Since <code>let</code> is block-scoped. The variable <code>i</code> is not accessible outside for-loop (block of code)</p>
 <h6 id="let-reassigning-and-redefining">let reassigning and redefining</h6>
 <p>Variable using <code>let</code> can be reassigned with new value but can not be redefined.</p>
@@ -253,8 +253,8 @@ if (!doNotTrack) {
 }
 
 <span style="color:#a6e22e">myFn</span>();
-</code></pre></div><pre><code>output:
-// error: Identifier 'foo' has already been declared
+</code></pre></div><pre><code><div class="code_output">Output</div>
+error: Identifier 'foo' has already been declared
 </code></pre><p>However, if the <code>let</code> variable is defined in different scopes, there will be no error.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
 
@@ -272,10 +272,10 @@ if (!doNotTrack) {
 
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foo</span>);
 <span style="color:#a6e22e">myFn</span>();
-</code></pre></div><pre><code>output:
-// 1
-// 2
-// 3
+</code></pre></div><pre><code><div class="code_output">Output</div>
+1
+2
+3
 </code></pre><p>Why is there no error? This is because all three instances are treated as different variables since they have different scopes.</p>
 <h2 id="3-const">3. &ldquo;const&rdquo;</h2>
 <p>The keyword <code>const</code> is similar to <code>let</code>, it’s block-scoped, however, you can’t reassign the value to it.</p>
@@ -345,8 +345,8 @@ if (!doNotTrack) {
 </code></pre></div><p>Just like <code>var</code>, <code>let</code> declarations also hoisted to the top but unlike <code>var</code> which is initialized as undefined, the <code>let</code> variable is not initialized. So if you try to use a <code>let</code> variable before declaration, you&rsquo;ll get a Reference Error. <code>const</code> variables are similar to <code>let</code> variables in terms of hoisting.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foo</span>);
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-</code></pre></div><pre><code>output:
-// ReferenceError: foo is not defined
+</code></pre></div><pre><code><div class="code_output">Output</div>
+ReferenceError: foo is not defined
 </code></pre><h6 id="can-you-guess-what-is-output-of-below-code-snippet-1">Can you guess what is output of below code snippet?</h6>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
 

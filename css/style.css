@@ -1154,11 +1154,17 @@ textarea {
 
 .related_post_section {
 	padding: 10px;
-	background-color: rgb(240,240,240);
+	background-color: #f5f5f5;
+	border: 1px solid #ebebeb; 
 }
 
 .related_post {
 	padding: 10px 20px;
+}
+
+.code_output {
+	color: grey;
+	cursor: default;
 }
 
 /* Media Queries */

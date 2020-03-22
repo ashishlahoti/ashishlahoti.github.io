@@ -6,10 +6,28 @@
     <description>Recent content in Java on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 21 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingnconcepts.com/categories/java/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>M power N Using Recursive function</title>
+      <link>http://codingnconcepts.com/java/m-power-n-using-recursive/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/java/m-power-n-using-recursive/</guid>
+      <description>&lt;p&gt;This is one of the example of using recursive function in Java to find M power N&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Print All String Combinations Using Recursive function</title>
+      <link>http://codingnconcepts.com/java/print-all-string-combinations-using-recursive/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/java/print-all-string-combinations-using-recursive/</guid>
+      <description>&lt;p&gt;Print all the possible combinations of a given String using Recursive function in Java&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Decorator Design Pattern Using Java</title>
@@ -99,11 +117,11 @@ You can find the singleton pattern implementation here.&lt;/li&gt;
     </item>
     
     <item>
-      <title>Fibonacci Series</title>
-      <link>http://codingnconcepts.com/java/fibonacci-series-using-java/</link>
+      <title>Fibonacci Series Using Recursive function</title>
+      <link>http://codingnconcepts.com/java/fibonacci-series-using-recursive/</link>
       <pubDate>Sun, 12 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/java/fibonacci-series-using-java/</guid>
+      <guid>http://codingnconcepts.com/java/fibonacci-series-using-recursive/</guid>
       <description>&lt;p&gt;Fibonacci series implementation in java is frequently asked question in interview at fresher level. Moreover, it is a very famous example to show how to use recursive function in java.&lt;/p&gt;</description>
     </item>
     
