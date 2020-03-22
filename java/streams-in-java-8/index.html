@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Streams in Java 8 - Coding N Concepts</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="Streams in Java 8 with Examples">
+	<meta property="og:title" content="Streams in Java 8" />
+<meta property="og:description" content="Streams in Java 8 with Examples" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingnconcepts.com/java/streams-in-java-8/" />
+<meta property="article:published_time" content="2020-03-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-22T00:00:00+00:00" />
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Streams in Java 8"/>
+<meta name="twitter:description" content="Streams in Java 8 with Examples"/>
+
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-160024498-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="Coding N Concepts" rel="home">
+				<div class="logo__title"><img src="/favicon-32x32.png" alt="Streams in Java 8"> Coding N Concepts</div>
+				<div class="logo__tagline">Ashish Lahoti&#39;s Technical Blog</div>
+			</a>
+		</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/java/">
+				
+				<span class="menu__text">Java</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/javascript/">
+				
+				<span class="menu__text">JavaScript</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/spring-boot/">
+				
+				<span class="menu__text">Spring Boot</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/interview-questions/">
+				
+				<span class="menu__text">Interview Questions</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/kafka/">
+				
+				<span class="menu__text">Kafka</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/puzzle/">
+				
+				<span class="menu__text">Puzzles</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About Me</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title"><img class="post__thumbnail" src="/img/logo/java.png" alt="Streams in Java 8"> Streams in Java 8</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2020-03-22T00:00:00Z">March 22, 2020</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/java/" rel="category">Java</a>
+	</span>
+</div></div>
+		</header><div class="content post__content clearfix">
+			<p>One of the major feature of Java 8 is addition of Stream. It also has introduced the functional programming in Java. We will discuss different stream operations available in Collection, Array, IntStream with examples. We will also discuss the difference between Intermediate and Terminal operations.</p>
+<h1 id="collection-stream">Collection Stream</h1>
+<hr>
+<h3 id="stream-operations">Stream Operations</h3>
+<p>There are mainly three types of stream operations -</p>
+<h6 id="1-stream-operation">1. Stream Operation</h6>
+<p>Stream operation converts any collection to a stream</p>
+<p><code>stream()</code></p>
+<h6 id="2-intermediate-operation">2. Intermediate Operation</h6>
+<p>Intermediate operation converts a stream to another stream as a result. They can be chained together to form a pipeline of Stream operations.</p>
+<p><code>filter()</code>, <code>map()</code>, <code>sorted()</code>, <code>distinct()</code>, <code>limit()</code>, <code>skip()</code></p>
+<h6 id="3-terminal-operation">3. Terminal Operation</h6>
+<p>Terminal operation converts a stream to a collection as a result. They can not be chained together. Any Stream operation pipeline must end with terminal operation.</p>
+<p><code>collect()</code>, <code>reduce()</code>, <code>min()</code>, <code>max()</code>, <code>count()</code>, <code>anyMatch()</code>, <code>allMatch()</code>, <code>noneMatch()</code>, <code>findFirst()</code>, <code>findAny()</code></p>
+<h3 id="intermediate-vs-terminal-operations">Intermediate vs Terminal Operations</h3>
+<p><strong>1. Output:</strong> Output of intermediate operation is another stream whereas output of terminal operation is a collection, array or primitive.</p>
+<p><strong>2. Chaining:</strong> Stream operation pipeline can have as many as intermediate operators chained together but pipeline must end with terminal operator.</p>
+<p><strong>3. Lazy Evaluation:</strong> Intermediate operations are evaluated lazily whereas terminal operations are eager. The intermediate operations just remain as a pipeline, and executed only when the terminal operation is executed</p>
+<p><strong>4. Pipeline:</strong> Stream operations pipeline can have many intermediate operations but only one terminal operation.</p>
+<h3 id="examples">Examples</h3>
+<p>We will look at various stream operations pipelines. Let&rsquo;s define a <code>fruits</code> List collection first</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> fruits <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;mango&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;apple&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;banana&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;grapes&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;orange&#34;</span><span style="color:#f92672">);</span>
+</code></pre></div><p>We now execute various examples of streams operations pipeline</p>
+<blockquote>
+<p>Stream Operation | Intermediate Operation | &hellip; | &hellip; | Intermediate Operation | Terminal Operation</p>
+</blockquote>
+<h6 id="1-stream--filter--collect">1. stream() | filter() | collect()</h6>
+<p>Filter out <code>grapes</code> from list of <code>fruits</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> result <span style="color:#f92672">=</span> fruits<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>                   <span style="color:#75715e">// convert list to stream
+</span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">filter</span><span style="color:#f92672">(</span>fruit <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">!</span><span style="color:#e6db74">&#34;grapes&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>fruit<span style="color:#f92672">))</span>   <span style="color:#75715e">// filter out grapes
+</span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">collect</span><span style="color:#f92672">(</span>Collectors<span style="color:#f92672">.</span><span style="color:#a6e22e">toList</span><span style="color:#f92672">());</span>              <span style="color:#75715e">// collect the output and convert streams to a List
+</span><span style="color:#75715e"></span>
+result<span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
+</code></pre></div><pre><code><div class="code_output">Output</div>
+mango
+apple
+banana
+orange
+</code></pre><h6 id="2-stream--map--collect">2. stream() | map() | collect()</h6>
+<p>Map all <code>fruits</code> to uppercase</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> result <span style="color:#f92672">=</span> fruits<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>            <span style="color:#75715e">// convert list to stream
+</span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>fruit <span style="color:#f92672">-&gt;</span> fruit<span style="color:#f92672">.</span><span style="color:#a6e22e">toUpperCase</span><span style="color:#f92672">())</span>   <span style="color:#75715e">// map to uppercase
+</span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">collect</span><span style="color:#f92672">(</span>Collectors<span style="color:#f92672">.</span><span style="color:#a6e22e">toList</span><span style="color:#f92672">());</span>       <span style="color:#75715e">// collect the output and convert streams to a List
+</span><span style="color:#75715e"></span>
+result<span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
+</code></pre></div><pre><code><div class="code_output">Output</div>
+MANGO
+APPLE
+BANANA
+GRAPES
+ORANGE
+</code></pre><h6 id="3-stream--sorted--collect">3. stream() | sorted() | collect()</h6>
+<p>Sort all <code>fruits</code> in alphabetical order</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> result <span style="color:#f92672">=</span> fruits<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>        <span style="color:#75715e">// convert list to stream
+</span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">sorted</span><span style="color:#f92672">()</span>                        <span style="color:#75715e">// sort in alphabetical order
+</span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">collect</span><span style="color:#f92672">(</span>Collectors<span style="color:#f92672">.</span><span style="color:#a6e22e">toList</span><span style="color:#f92672">());</span>   <span style="color:#75715e">// collect the output and convert streams to a List
+</span><span style="color:#75715e"></span>
+result<span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
+</code></pre></div><pre><code><div class="code_output">Output</div>
+apple
+banana
+grapes
+mango
+orange
+</code></pre><h6 id="4-stream--filter--map--sorted--collect">4. stream() | filter() | map() | sorted() | collect()</h6>
+<p>Operations all together on <code>fruits</code>. Filter out <code>grapes</code>, Map all to uppercase, Sort all alphabetically</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> result <span style="color:#f92672">=</span> fruits<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>                   <span style="color:#75715e">// convert list to stream
+</span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">filter</span><span style="color:#f92672">(</span>fruit <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">!</span><span style="color:#e6db74">&#34;grapes&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>fruit<span style="color:#f92672">))</span>   <span style="color:#75715e">// filter out grapes
+</span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>fruit <span style="color:#f92672">-&gt;</span> fruit<span style="color:#f92672">.</span><span style="color:#a6e22e">toUpperCase</span><span style="color:#f92672">())</span>          <span style="color:#75715e">// map to uppercase
+</span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">sorted</span><span style="color:#f92672">()</span>                                   <span style="color:#75715e">// sort in alphabetical order
+</span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">collect</span><span style="color:#f92672">(</span>Collectors<span style="color:#f92672">.</span><span style="color:#a6e22e">toList</span><span style="color:#f92672">());</span>              <span style="color:#75715e">// collect the output and convert streams to a List
+</span><span style="color:#75715e"></span>
+result<span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
+</code></pre></div><pre><code><div class="code_output">Output</div>
+APPLE
+BANANA
+MANGO
+ORANGE
+</code></pre><h6 id="5-stream--filter--findany--orelse">5. stream() | filter() | findAny() | orElse()</h6>
+<p>Filter <code>mango</code> from <code>fruits</code>, Return <code>mango</code> if found or else return <code>null</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String fruit <span style="color:#f92672">=</span> fruits<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>                         <span style="color:#75715e">// convert list to stream
+</span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">filter</span><span style="color:#f92672">(</span>fruit <span style="color:#f92672">-&gt;</span> <span style="color:#e6db74">&#34;mango&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>fruit<span style="color:#f92672">))</span>    <span style="color:#75715e">// we love mango
+</span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">findAny</span><span style="color:#f92672">()</span>                                 <span style="color:#75715e">// If `findAny` then return found
+</span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">orElse</span><span style="color:#f92672">(</span><span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>                             <span style="color:#75715e">// If not found, return null
+</span><span style="color:#75715e"></span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>fruit<span style="color:#f92672">);</span>
+</code></pre></div><pre><code><div class="code_output">Output</div>
+mango
+</code></pre><h1 id="array-stream">Array Stream</h1>
+<hr>
+<p>Get the sum, count, min, max and distinct elements of given array</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> intArray <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]{</span>1<span style="color:#f92672">,</span> 3<span style="color:#f92672">,</span> 5<span style="color:#f92672">,</span> 7<span style="color:#f92672">,</span> 9<span style="color:#f92672">,</span> 3<span style="color:#f92672">,</span> 5<span style="color:#f92672">,</span> 99<span style="color:#f92672">};</span>
+<span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">(</span>intArray<span style="color:#f92672">)</span>
+                <span style="color:#f92672">.</span><span style="color:#a6e22e">sum</span><span style="color:#f92672">();</span>
+
+<span style="color:#66d9ef">long</span> count <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">(</span>intArray<span style="color:#f92672">)</span>
+                <span style="color:#f92672">.</span><span style="color:#a6e22e">count</span><span style="color:#f92672">();</span>
+
+<span style="color:#66d9ef">int</span> min <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">(</span>intArray<span style="color:#f92672">)</span>
+                <span style="color:#f92672">.</span><span style="color:#a6e22e">min</span><span style="color:#f92672">()</span>
+                <span style="color:#f92672">.</span><span style="color:#a6e22e">getAsInt</span><span style="color:#f92672">();</span>
+
+<span style="color:#66d9ef">int</span> max <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">(</span>intArray<span style="color:#f92672">)</span>
+                <span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">()</span>
+                <span style="color:#f92672">.</span><span style="color:#a6e22e">getAsInt</span><span style="color:#f92672">();</span>
+
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;sum: &#34;</span> <span style="color:#f92672">+</span> sum<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;count: &#34;</span> <span style="color:#f92672">+</span> count<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;min: &#34;</span> <span style="color:#f92672">+</span> min<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;max: &#34;</span> <span style="color:#f92672">+</span> max<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;distinct:&#34;</span><span style="color:#f92672">);</span>
+
+Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">(</span>intArray<span style="color:#f92672">)</span>
+        <span style="color:#f92672">.</span><span style="color:#a6e22e">distinct</span><span style="color:#f92672">()</span>
+        <span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
+
+</code></pre></div><pre><code><div class="code_output">Output</div>
+sum: 132
+count: 8
+min: 1
+max: 99
+distinct:
+1
+3
+5
+7
+9
+99
+</code></pre><h1 id="intstream">IntStream</h1>
+<hr>
+<h6 id="foreach">forEach()</h6>
+<p>Print number 1 to 10</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">IntStream<span style="color:#f92672">.</span><span style="color:#a6e22e">range</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> 6<span style="color:#f92672">)</span>
+         <span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
+</code></pre></div><pre><code><div class="code_output">Output</div>
+1
+2
+3
+4
+5
+</code></pre><h6 id="reduce">reduce()</h6>
+<p>Sum all the elements from 1 to 100</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> IntStream<span style="color:#f92672">.</span><span style="color:#a6e22e">range</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> 101<span style="color:#f92672">)</span>
+         <span style="color:#f92672">.</span><span style="color:#a6e22e">reduce</span><span style="color:#f92672">((</span>a<span style="color:#f92672">,</span> s<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> s <span style="color:#f92672">+=</span> a<span style="color:#f92672">)</span>
+         <span style="color:#f92672">.</span><span style="color:#a6e22e">getAsInt</span><span style="color:#f92672">();</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;sum: &#34;</span> <span style="color:#f92672">+</span> sum<span style="color:#f92672">);</span>
+</code></pre></div><pre><code><div class="code_output">Output</div>
+sum: 5050
+</code></pre>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link btn" href="/tags/java-8/" rel="tag">Java 8</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/java/" rel="tag">Java</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/streams/" rel="tag">Streams</a></li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+
+<div class="related_post_section">
+    <h2 class = "related_post_title">See Also</h2>
+    <ul class = "related_post">
+        
+        <li><a href="/java/m-power-n-using-recursive/">M power N Using Recursive function</a></li>
+        
+        <li><a href="/java/print-all-string-combinations-using-recursive/">Print All String Combinations Using Recursive function</a></li>
+        
+        <li><a href="/java/decorator-design-pattern-using-java/">Decorator Design Pattern Using Java</a></li>
+        
+        <li><a href="/top-spring-boot-interview-questions/">Top Spring Boot Interview Questions</a></li>
+        
+        <li><a href="/top-spring-interview-questions/">Top Spring Interview Questions</a></li>
+        
+    </ul>
+</div>
+
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Ashish Lahoti avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Ashish Lahoti</span>
+	</div>
+	<div class="authorbox__description">
+		Ashish Lahoti is a full stack application developer at DBS Bank | Confluent Certified Developer for Apache KAFKA | SCJP Certified
+	</div>
+</div>
+
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--prev">
+		<a class="post-nav__link" href="/java/decorator-design-pattern-using-java/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Decorator Design Pattern Using Java</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next">
+		<a class="post-nav__link" href="/java/print-all-string-combinations-using-recursive/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Print All String Combinations Using Recursive function</p></a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "codingnconcepts" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 Ashish Lahoti.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

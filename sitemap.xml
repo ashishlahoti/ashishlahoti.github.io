@@ -34,6 +34,11 @@
   </url>
   
   <url>
+    <loc>http://codingnconcepts.com/tags/java-8/</loc>
+    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://codingnconcepts.com/java/m-power-n-using-recursive/</loc>
     <lastmod>2020-03-22T00:00:00+00:00</lastmod>
   </url>
@@ -45,6 +50,16 @@
   
   <url>
     <loc>http://codingnconcepts.com/tags/recursive/</loc>
+    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/tags/streams/</loc>
+    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/java/streams-in-java-8/</loc>
     <lastmod>2020-03-22T00:00:00+00:00</lastmod>
   </url>
   

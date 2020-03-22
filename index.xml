@@ -30,6 +30,15 @@
     </item>
     
     <item>
+      <title>Streams in Java 8</title>
+      <link>http://codingnconcepts.com/java/streams-in-java-8/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/java/streams-in-java-8/</guid>
+      <description>&lt;p&gt;One of the major feature of Java 8 is addition of Stream. It also has introduced the functional programming in Java. We will discuss different stream operations available in Collection, Array, IntStream with examples. We will also discuss the difference between Intermediate and Terminal operations.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Decorator Design Pattern Using Java</title>
       <link>http://codingnconcepts.com/java/decorator-design-pattern-using-java/</link>
       <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
