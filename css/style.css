@@ -640,6 +640,10 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	width: 2.3rem;
 }
 
+.content.post__content {
+    padding: 20px 0px;
+}
+
 .content a,
 .warning a {
 	font-weight: 700;

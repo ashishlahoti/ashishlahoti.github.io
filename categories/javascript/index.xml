@@ -6,10 +6,19 @@
     <description>Recent content in Javascript on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingnconcepts.com/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Lexical Scope, Closures and Currying in JavaScript</title>
+      <link>http://codingnconcepts.com/javascript/lexical-scope-closures-and-currying/</link>
+      <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/javascript/lexical-scope-closures-and-currying/</guid>
+      <description>&lt;p&gt;This post describes the &lt;a href=&#34;#lexical-scope&#34;&gt;Lexical Scope&lt;/a&gt;, &lt;a href=&#34;#closures&#34;&gt;Closures&lt;/a&gt;  and &lt;a href=&#34;#currying&#34;&gt;Currying Function&lt;/a&gt; in JavaScript and their relations with examples.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Difference in const and Object.freeze() in JavaScript</title>
