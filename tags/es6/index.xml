@@ -30,6 +30,15 @@
     </item>
     
     <item>
+      <title>Object methods in JavaScript</title>
+      <link>http://codingnconcepts.com/javascript/object-methods-in-javascript/</link>
+      <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/javascript/object-methods-in-javascript/</guid>
+      <description>&lt;p&gt;This post describes the usage of various Object methods like &lt;code&gt;Object.create()&lt;/code&gt;, &lt;code&gt;Object.assign()&lt;/code&gt;, &lt;code&gt;Object.freeze()&lt;/code&gt;, &lt;code&gt;Object.seal()&lt;/code&gt; and many more available in JavaScript with examples.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Difference between var, let and const</title>
       <link>http://codingnconcepts.com/javascript/difference-between-var-let-and-const/</link>
       <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>

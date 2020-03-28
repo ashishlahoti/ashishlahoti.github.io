@@ -155,8 +155,20 @@ if (!doNotTrack) {
 <blockquote>
 <p>Also read <a href="http://codingnconcepts.com/javascript/call-vs-bind-vs-apply/">this post for more details on difference between call, bind and apply with their practical usage</a></p>
 </blockquote>
-<h4 id="5-what-is-arrow-functions-and-how-it-is-different-from-normal-functions-">5. What is Arrow functions and how it is different from normal functions ?</h4>
-<h4 id="6-what-is-the-difference-between--and--operator">6. What is the difference between &ldquo;==&rdquo; and &ldquo;===&rdquo; operator?</h4>
+<p><br /></p>
+<h4 id="5-what-is-arrow-functions-and-how-it-is-different-from-normal-functions">5. What is Arrow functions and how it is different from normal functions?</h4>
+<ul>
+<li>Arrow functions are introduced in ES6 and allow us to write shorter function syntax.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">helloES5</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Hello World&#34;</span>;
+}
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">helloES6</span> <span style="color:#f92672">=</span> () =&gt; <span style="color:#e6db74">&#34;Hello World&#34;</span>;
+</code></pre></div></li>
+<li>In normal function <code>this</code> keyword represents the object that called the function but in arrow function <code>this</code> keyword always represents the object that defined the arrow function.</li>
+</ul>
+<p><br /></p>
+<h4 id="6-what-is-a-difference-between--and--operator">6. What is a difference between &ldquo;==&rdquo; and &ldquo;===&rdquo; operator?</h4>
 <ol>
 <li><code>==</code> is abstract comparison operator which only compares the content and not its type
 <pre><code>   1 == 1            // true, content and its type is same
@@ -177,10 +189,18 @@ null === undefined     false
 <blockquote>
 <p>Also read <a href="http://codingnconcepts.com/javascript/comparison-operators-in-javascript/">this post for more details on == and === operators with many examples</a></p>
 </blockquote>
-<h4 id="7-difference-between-null-and-undefined-">7. Difference between null and undefined ?</h4>
+<p><br /></p>
+<h4 id="7-what-is-a-difference-between-undefined-and-null-">7. What is a difference between undefined and null ?</h4>
 <ul>
-<li><code>null</code> is an assigned value</li>
+<li><code>undefined</code> means a variable has been declared but not assigned a value yet.</li>
+<li><code>null</code> is an assignment value. It can be assigned to a variable that represents null, empty or non-existent value.</li>
+<li><code>undefined</code> is type of <code>undefined</code> whereas <code>null</code> is an object.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span>;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">typeof</span>(<span style="color:#a6e22e">a</span>));     <span style="color:#75715e">// undefined
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">typeof</span>(<span style="color:#66d9ef">null</span>));  <span style="color:#75715e">// object
+</span></code></pre></div></li>
 </ul>
+<p><br /></p>
 <h4 id="8-difference-between-var-let-and-const-keywords-">8. Difference between var, let and const keywords ?</h4>
 <ul>
 <li><strong>var</strong> declarations are globally scoped or function scoped while <strong>let</strong> and <strong>const</strong> are block scoped.</li>
@@ -191,18 +211,22 @@ null === undefined     false
 <blockquote>
 <p>Also read <a href="http://codingnconcepts.com/javascript/difference-between-var-let-and-const/">this post for more details on difference between var, let and const</a></p>
 </blockquote>
+<p><br /></p>
 <h4 id="9-object-oriented-programming-in-javascript---what-is-constructor-and-prototype-do-you-know-about-prototypal-inheritance-how-do-you-define-class-using-es6">9. Object Oriented programming in Javascript - What is constructor and prototype? Do you know about prototypal inheritance. How do you define Class using ES6.</h4>
+<p><br /></p>
 <h4 id="10-what-are-the-methods-available-in-object--">10. What are the methods available in Object -</h4>
 <ul>
-<li><strong>create</strong> method is used to create a new object with its prototype set to existing object.</li>
-<li><strong>assign</strong> method is used to copy the properties and functions of one object in another object.</li>
-<li><strong>freeze</strong> freezes the state of an Object once this method is called. It ignores if any existing property is modified, and if any new property is added.</li>
-<li><strong>seal</strong> seals the state of an Object once this method is called. It allows the modification of existing properties, but ignores if any new property is added.</li>
-<li><strong>defineProperty</strong> is used to define new property in existing object or modifying existing property. Property can be marked writable, configurable and enumerable.</li>
+<li><strong>Object.create()</strong> method is used to create a new object with its prototype set to existing object.</li>
+<li><strong>Object.assign()</strong> method is used to copy the properties and functions of one object in another object.</li>
+<li><strong>Object.freeze()</strong> freezes the state of an Object once this method is called. It ignores if any existing property is modified, and if any new property is added.</li>
+<li><strong>Object.seal()</strong> seals the state of an Object once this method is called. It allows the modification of existing properties, but ignores if any new property is added.</li>
+<li><strong>Object.defineProperty()</strong> is used to define new property in existing object or modifying existing property. Property can be marked writable, configurable and enumerable.</li>
+<li><strong>Object.is()</strong> is used to compare two values. Return true or false.</li>
 </ul>
 <blockquote>
 <p>Also read <a href="http://codingnconcepts.com/javascript/object-methods-in-javascript/">this post for more details on Object methods with examples</a></p>
 </blockquote>
+<p><br /></p>
 <h4 id="11-currying-functions-in-javascript">11. Currying functions in javascript?</h4>
 <h4 id="12-lexical-scoping-and-variable-hoisting-in-javascript">12. Lexical scoping and variable hoisting in Javascript?</h4>
 		</div>
