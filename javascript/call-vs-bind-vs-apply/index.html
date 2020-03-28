@@ -11,8 +11,8 @@
 <meta property="og:description" content="Understand call(), bind() and apply() in JavaScript and difference between call vs bind vs apply with practical examples." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://codingnconcepts.com/javascript/call-vs-bind-vs-apply/" />
-<meta property="article:published_time" content="2020-03-28T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-03-28T00:00:00+00:00" />
+<meta property="article:published_time" content="2020-03-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-25T00:00:00+00:00" />
 
 	<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Understand call, bind and apply methods in JavaScript"/>
@@ -124,7 +124,7 @@ if (!doNotTrack) {
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2020-03-28T00:00:00Z">March 28, 2020</time>
+	<time class="meta__text" datetime="2020-03-25T00:00:00Z">March 25, 2020</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -133,11 +133,11 @@ if (!doNotTrack) {
 	</span>
 </div></div>
 		</header><div class="content post__content clearfix">
-			<p>This post describes the Function prototype methods call(), apply() and bind() with their syntax, usage and practical examples.</p>
+			<p>This post describes the Function prototype methods <code>call()</code>, <code>apply()</code> and <code>bind()</code> with their syntax, usage and practical examples.</p>
 <h1 id="functionprototype">Function.prototype</h1>
 <hr>
 <p>First of all we need to understand that all these three functions call, apply and bind are prototype of <code>Function</code>. What does that mean?</p>
-<p>Let&rsquo;s print Function&rsquo;s structure to understand</p>
+<p>Let&rsquo;s print Function&rsquo;s structure to understand it.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">dir</span>(Function);
 </code></pre></div><pre><code>▼ ƒ Function()
       arguments: (...)
@@ -180,12 +180,12 @@ if (!doNotTrack) {
 3
 4
 </code></pre><p>We can see in above code snippet that we called same <code>increment()</code> function in three different context which changes the <code>this</code> reference and resulting into three different output.</p>
-<p>Here</p>
+<p>Here,</p>
 <ul>
 <li>first <code>increment()</code> function is called in global context where <code>this</code> binds to global object. <code>window</code> is the global object if you are working in browser.</li>
 <li>next two <code>increment()</code> functions are called in implicit context where <code>this</code> binds to the object on which function is called. This is called implicit context because function is tightly coupled with object (defined inside object) and <code>this</code> reference binds to object at compile time when you call a function from object like <code>obj.ƒn()</code></li>
 </ul>
-<p>Sometime we may want to call a function in explicit context where we can control on <code>this</code> reference at runtime when calling a function. This is where call(), apply() and bind() comes into play. Let&rsquo;s call the same <code>increment()</code> function using call(), apply() and bind()</p>
+<p>Sometime we may want to call a function in explicit context where we can control on <code>this</code> reference at runtime when calling a function. This is where call(), apply() and bind() comes into play. Let&rsquo;s call the same <code>increment()</code> function using call(), apply() and bind() methods.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">increment</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(){
     <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);  
 }
@@ -216,16 +216,17 @@ if (!doNotTrack) {
 <li>All these three call(), apply() and bind() providing different object context (obj1, obj2) at runtime and resulting into different output.</li>
 <li>Where call() and apply() execute a function immediately, bind() returns a bound function which can be executed later.</li>
 </ol>
-<p>Now that we have understood the basic usage of these prototype functions, let&rsquo;s look at their syntax, examples and practical usage</p>
+<p>Now that we have understood the basic usage of these prototype functions, let&rsquo;s look at their syntax and practical usage with example.</p>
 <br/>
 <h1 id="call">call()</h1>
 <hr>
+<h3 id="syntax">Syntax</h3>
 <pre><code>functionName.call(thisArg, arg1, arg2, ...) 
 </code></pre>
 <p>When a function is called using <code>call()</code>,</p>
 <ol>
-<li><code>this</code> refers to firstArg</li>
-<li>Comma separated arguments arg1, arg2 &hellip; are the arguments of function</li>
+<li><code>this</code> refers to <code>thisArg</code></li>
+<li>Comma separated arguments <code>arg1, arg2 ...</code> are the arguments of function</li>
 </ol>
 <blockquote>
 <p><strong>Remember:</strong> “call() arguments are separated by commas”.</p>
@@ -278,9 +279,9 @@ if (!doNotTrack) {
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">Array.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">concat</span>.<span style="color:#a6e22e">call</span>([<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>], [<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]);
 Array.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">join</span>.<span style="color:#a6e22e">call</span>([<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>], <span style="color:#e6db74">&#34;:&#34;</span>)
 </code></pre></div><pre><code><div class="code_output">Output</div>
-(5) [1, 2, 3, 4, 5]
+[1, 2, 3, 4, 5]
 1:2:3:4:5
-</code></pre><p>Similarly borrow the <code>start</code> function of <code>car</code> object for <code>airplane</code></p>
+</code></pre><p>Similarly borrow the <code>start</code> functionality of <code>car</code> object to use it for <code>aircraft</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">car</span> <span style="color:#f92672">=</span> {
     <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;car&#39;</span>,
     <span style="color:#a6e22e">start</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() { 
@@ -325,12 +326,13 @@ Start the aircraft
 <br/>
 <h1 id="apply">apply()</h1>
 <hr>
-<pre><code>functionName.apply(firstArg, [arg1, arg2, ...]) 
+<h3 id="syntax-1">Syntax</h3>
+<pre><code>functionName.apply(thisArg, [arg1, arg2, ...]) 
 </code></pre>
 <p>When a function is called using apply() method,</p>
 <ol>
-<li><code>this</code> refers to firstArg</li>
-<li>second argument is an array of values, are the arguments of function</li>
+<li><code>this</code> refers to <code>thisArg</code></li>
+<li>second argument is an array of values <code>[arg1, arg2, ...]</code>, are the arguments of function</li>
 </ol>
 <blockquote>
 <p><strong>Remember:</strong> “apply() accepts arguments as an Array”</p>
@@ -343,11 +345,12 @@ Start the aircraft
 </span></code></pre></div><br/>
 <h1 id="bind">bind()</h1>
 <hr>
+<h3 id="syntax-2">Syntax</h3>
 <pre><code>functionName.bind(thisArg)
 </code></pre>
 <p>When a function is called using bind() method,</p>
 <ol>
-<li><code>this</code> refers to thisArg</li>
+<li><code>this</code> refers to <code>thisArg</code></li>
 <li>returns new bound function which can be called later</li>
 </ol>
 <blockquote>
@@ -398,7 +401,7 @@ OK clicked
 5
 10
 10
-</code></pre><p>Another example</p>
+</code></pre><p>Another example,</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) {
   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>;
 };
@@ -436,7 +439,7 @@ OK clicked
 12
 11
 12
-</code></pre><p>Thanks for Reading, Please like, share and comment.</p>
+</code></pre><p>Thanks for Reading. Please like, share and comment.</p>
 		</div>
 		<footer class="post__footer">
 			
@@ -545,6 +548,9 @@ OK clicked
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--prev">
 		<a class="post-nav__link" href="/javascript/lexical-scope-closures-and-currying/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Lexical Scope, Closures and Currying in JavaScript</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next">
+		<a class="post-nav__link" href="/javascript/comparison-operators-in-javascript/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Difference in == and === comparison operators in JavaScript</p></a>
 	</div>
 </nav>
 

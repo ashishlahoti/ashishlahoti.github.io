@@ -12,12 +12,21 @@
     
     
     <item>
-      <title>Understand call, bind and apply methods in JavaScript</title>
-      <link>http://codingnconcepts.com/javascript/call-vs-bind-vs-apply/</link>
+      <title>Difference in == and === comparison operators in JavaScript</title>
+      <link>http://codingnconcepts.com/javascript/comparison-operators-in-javascript/</link>
       <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
       
+      <guid>http://codingnconcepts.com/javascript/comparison-operators-in-javascript/</guid>
+      <description>&lt;p&gt;This is frequently asked question in JavaScript interview. We can compare primitive types, array and object using two comparison operators &lt;code&gt;==&lt;/code&gt; and &lt;code&gt;===&lt;/code&gt; available in JavaScript.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Understand call, bind and apply methods in JavaScript</title>
+      <link>http://codingnconcepts.com/javascript/call-vs-bind-vs-apply/</link>
+      <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
+      
       <guid>http://codingnconcepts.com/javascript/call-vs-bind-vs-apply/</guid>
-      <description>&lt;p&gt;This post describes the Function prototype methods call(), apply() and bind() with their syntax, usage and practical examples.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This post describes the Function prototype methods &lt;code&gt;call()&lt;/code&gt;, &lt;code&gt;apply()&lt;/code&gt; and &lt;code&gt;bind()&lt;/code&gt; with their syntax, usage and practical examples.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -71,7 +80,7 @@
       <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingnconcepts.com/javascript/const-vs-object-freeze/</guid>
-      <description>&lt;p&gt;This post describes the best practices to define constants and configuration values in JavaScript using &lt;code&gt;const&lt;/code&gt; and &lt;code&gt;Object.freeze()&lt;/code&gt; and the difference between &lt;code&gt;const&lt;/code&gt; and &lt;code&gt;Object.freeze()&lt;/code&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This post describes the best practices to define constants and configuration values in JavaScript using &lt;code&gt;const&lt;/code&gt; and &lt;code&gt;Object.freeze()&lt;/code&gt; and the difference between them.&lt;/p&gt;</description>
     </item>
     
     <item>

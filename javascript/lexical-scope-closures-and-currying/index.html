@@ -174,30 +174,30 @@ Closure is created at runtime for inner function bundled with outer function&rsq
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">dir</span>(<span style="color:#a6e22e">outerFunc</span>(<span style="color:#ae81ff">3</span>)(<span style="color:#ae81ff">4</span>));     <span style="color:#75715e">//2. innerMostFunc
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">outerFunc</span>(<span style="color:#ae81ff">3</span>)(<span style="color:#ae81ff">4</span>)(<span style="color:#ae81ff">5</span>));  <span style="color:#75715e">//3. 15
 </span></code></pre></div><pre><code><div class="code_output">Output</div>
-ƒ innerFunc(c)
-  length: 1
-  name: &quot;innerFunc&quot;
-  arguments: null
-  caller: null
-  prototype: {constructor: ƒ}
-  __proto__: ƒ ()
-  [[FunctionLocation]]:
-  [[Scopes]]: Scopes[2]
-    0: Closure (outerFunc) {c: 3, a: 1}
-    1: Global {parent: Window, opener: null, top: Window, length: 1, frames: Window, …}
+<mark>▼ ƒ innerFunc(c)</mark>
+    length: 1
+    name: &quot;innerFunc&quot;
+    arguments: null
+    caller: null
+  ➤ prototype: {constructor: ƒ}
+  ➤ __proto__: ƒ ()
+    [[FunctionLocation]]:
+  ▼ [[Scopes]]: Scopes[2]
+    <mark>➤ 0: Closure (outerFunc) {c: 3, a: 1}</mark>
+    ➤ 1: Global {parent: Window, opener: null, top: Window, length: 1, frames: Window, …}
 
-ƒ innerMostFunc(c)
-  length: 1
-  name: &quot;innerMostFunc&quot;
-  arguments: null
-  caller: null
-  prototype: {constructor: ƒ}
-  __proto__: ƒ ()
-  [[FunctionLocation]]:
-  [[Scopes]]: Scopes[3]
-  0: Closure (innerFunc) {d: 4, b: 2}
-  1: Closure (outerFunc) {c: 3, a: 1}
-  2: Global {parent: Window, opener: null, top: Window, length: 1, frames: Window, …}
+<mark>▼ ƒ innerMostFunc(c)</mark>
+    length: 1
+    name: &quot;innerMostFunc&quot;
+    arguments: null
+    caller: null
+  ➤ prototype: {constructor: ƒ}
+  ➤ __proto__: ƒ ()
+    [[FunctionLocation]]:
+  ▼ [[Scopes]]: Scopes[3]
+    <mark>➤ 0: Closure (innerFunc) {d: 4, b: 2}</mark>
+    <mark>➤ 1: Closure (outerFunc) {c: 3, a: 1}</mark>
+    ➤ 2: Global {parent: Window, opener: null, top: Window, length: 1, frames: Window, …}
 
 15
 </code></pre><p>We have three console dir/log. Let&rsquo;s discuss them one by one:</p>

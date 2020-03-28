@@ -26,7 +26,7 @@
       <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingnconcepts.com/javascript/const-vs-object-freeze/</guid>
-      <description>&lt;p&gt;This post describes the best practices to define constants and configuration values in JavaScript using &lt;code&gt;const&lt;/code&gt; and &lt;code&gt;Object.freeze()&lt;/code&gt; and the difference between &lt;code&gt;const&lt;/code&gt; and &lt;code&gt;Object.freeze()&lt;/code&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This post describes the best practices to define constants and configuration values in JavaScript using &lt;code&gt;const&lt;/code&gt; and &lt;code&gt;Object.freeze()&lt;/code&gt; and the difference between them.&lt;/p&gt;</description>
     </item>
     
     <item>

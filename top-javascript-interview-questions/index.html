@@ -138,9 +138,50 @@ if (!doNotTrack) {
 <h4 id="2-what-is-promises-and-why-do-we-use-it-">2. What is promises and why do we use it ?</h4>
 <h4 id="3-how-to-use-async-and-await-and-what-problem-it-solves-">3. How to use async and await and what problem it solves ?</h4>
 <h4 id="4-difference-between-call-apply-and-bind-">4. Difference between call, apply and bind ?</h4>
+<ul>
+<li>All three call, apply and bind are prototype methods of Function that means you can execute these three methods on any function.</li>
+<li>All three call, apply and bind methods are used to execute the function in explicit context where <code>this</code> refers to the first argument passed in method.</li>
+<li>call() - accepts the function arguments as comma separated values arg1, arg2, &hellip;
+<pre><code>functionName.call(thisArg, arg1, arg2, ...) 
+</code></pre></li>
+<li>apply() - accepts the function arguments as array of values [arg1, arg2, &hellip;]
+<pre><code>functionName.apply(thisArg, [arg1, arg2, ...])
+</code></pre></li>
+<li>bind() - returns a new bounded function which can be executed later.
+<pre><code>functionName.bind(thisArg)
+</code></pre></li>
+<li>call() and apply() methods are executed immediately whereas bind() method return a new bounded function which can be executed later.</li>
+</ul>
+<blockquote>
+<p>Also read <a href="http://codingnconcepts.com/javascript/call-vs-bind-vs-apply/">this post for more details on difference between call, bind and apply with their practical usage</a></p>
+</blockquote>
 <h4 id="5-what-is-arrow-functions-and-how-it-is-different-from-normal-functions-">5. What is Arrow functions and how it is different from normal functions ?</h4>
-<h4 id="6-difference-between--and--">6. Difference between &ldquo;==&rdquo; and &ldquo;===&rdquo; ?</h4>
-<h4 id="7-difference-between-var-let-and-const-keywords-">7. Difference between var, let and const keywords ?</h4>
+<h4 id="6-what-is-the-difference-between--and--operator">6. What is the difference between &ldquo;==&rdquo; and &ldquo;===&rdquo; operator?</h4>
+<ol>
+<li><code>==</code> is abstract comparison operator which only compares the content and not its type
+<pre><code>   1 == 1            // true, content and its type is same
+ '1' == 1            // true, auto type conversion, string converted into number
+null == undefined    // true, because null is equivalent of undefined
+   0 == false        // true, because false is equivalent of 0
+  &quot;&quot; == false        // true, because false is equivalent of empty string
+</code></pre></li>
+<li><code>===</code> is strict comparison operator which compare both content and its type
+<pre><code>   1 === 1             true
+ '1' === 1             false
+null === undefined     false
+   0 === false         false
+  &quot;&quot; === false         false
+</code></pre></li>
+<li><code>===</code> is faster then <code>==</code> because <code>==</code> converts the operands to the compatible type before comparison whereas <code>===</code> compares directly without any conversion.</li>
+</ol>
+<blockquote>
+<p>Also read <a href="http://codingnconcepts.com/javascript/comparison-operators-in-javascript/">this post for more details on == and === operators with many examples</a></p>
+</blockquote>
+<h4 id="7-difference-between-null-and-undefined-">7. Difference between null and undefined ?</h4>
+<ul>
+<li><code>null</code> is an assigned value</li>
+</ul>
+<h4 id="8-difference-between-var-let-and-const-keywords-">8. Difference between var, let and const keywords ?</h4>
 <ul>
 <li><strong>var</strong> declarations are globally scoped or function scoped while <strong>let</strong> and <strong>const</strong> are block scoped.</li>
 <li><strong>var</strong> variables can be updated and re-declared within its scope; <strong>let</strong> variables can be updated but not re-declared; <strong>const</strong> variables can neither be updated nor re-declared.</li>
@@ -150,7 +191,6 @@ if (!doNotTrack) {
 <blockquote>
 <p>Also read <a href="http://codingnconcepts.com/javascript/difference-between-var-let-and-const/">this post for more details on difference between var, let and const</a></p>
 </blockquote>
-<h4 id="8-difference-between-null-and-undefined-">8. Difference between null and undefined ?</h4>
 <h4 id="9-object-oriented-programming-in-javascript---what-is-constructor-and-prototype-do-you-know-about-prototypal-inheritance-how-do-you-define-class-using-es6">9. Object Oriented programming in Javascript - What is constructor and prototype? Do you know about prototypal inheritance. How do you define Class using ES6.</h4>
 <h4 id="10-what-are-the-methods-available-in-object--">10. What are the methods available in Object -</h4>
 <ul>
