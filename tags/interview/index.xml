@@ -17,7 +17,7 @@
       <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingnconcepts.com/javascript/comparison-operators-in-javascript/</guid>
-      <description>&lt;p&gt;This is frequently asked question in JavaScript interview. We can compare primitive types, array and object using two comparison operators &lt;code&gt;==&lt;/code&gt; and &lt;code&gt;===&lt;/code&gt; available in JavaScript.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This is frequently asked question in JavaScript interview. We can compare primitive types, array and object using two comparison operators &lt;code&gt;==&lt;/code&gt; and &lt;code&gt;===&lt;/code&gt; available in JavaScript. This post describes the difference between these two with many examples.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingnconcepts.com/javascript/call-vs-bind-vs-apply/</guid>
-      <description>&lt;p&gt;This post describes the Function prototype methods &lt;code&gt;call()&lt;/code&gt;, &lt;code&gt;apply()&lt;/code&gt; and &lt;code&gt;bind()&lt;/code&gt; with their syntax, usage and practical examples.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This is frequently asked question in JavaScript interview. This post describes the Function prototype methods &lt;code&gt;call()&lt;/code&gt;, &lt;code&gt;apply()&lt;/code&gt; and &lt;code&gt;bind()&lt;/code&gt; with their syntax, usage and practical examples.&lt;/p&gt;</description>
     </item>
     
     <item>
