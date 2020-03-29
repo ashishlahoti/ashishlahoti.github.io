@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>Understand all about &#39;this&#39; keyword in JavaScript</title>
+      <link>http://codingnconcepts.com/javascript/this-keyword-in-javascript/</link>
+      <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/javascript/this-keyword-in-javascript/</guid>
+      <description>&lt;p&gt;The &lt;code&gt;this&lt;/code&gt; keyword in JavaScript is very important concept but at the same time very confusing to understand.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Understand call, bind and apply methods in JavaScript</title>
       <link>http://codingnconcepts.com/javascript/call-vs-bind-vs-apply/</link>
       <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>

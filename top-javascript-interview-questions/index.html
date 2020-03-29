@@ -350,15 +350,19 @@ null === undefined     false
 </blockquote>
 <p><br /></p>
 <h3 id="11-what-is-this-keyword-in-javascript">11. What is <code>this</code> keyword in Javascript?</h3>
-<p>In JavaScript, <code>this</code> keyword refers to the object it belongs to.</p>
+<p>In JavaScript, <code>this</code> keyword refers to the object it belongs to. It has different values depending on where it is used:</p>
 <ul>
-<li>In a method, <code>this</code> refers to the <strong>owner object</strong>.</li>
-<li>Alone, <code>this</code> refers to the <strong>global object</strong>. If you are working in browser, global object is <strong>window</strong>.</li>
+<li>In a method, <code>this</code> refers to the <strong>owner object</strong> where method is defined.</li>
+<li>Alone, <code>this</code> refers to the <strong>global object</strong>.</li>
 <li>In a function, <code>this</code> refers to the <strong>global object</strong>.</li>
 <li>In a function, in strict mode, <code>this</code> is <code>undefined</code>.</li>
+<li>When a function called with <strong>new</strong> keyword, <code>this</code> refers to <strong>new object instance</strong>.</li>
 <li>In a DOM event, <code>this</code> refers to the <strong>element</strong> that received the event.</li>
 <li>Function prototype methods call(), apply() and bind() can be used to refer <code>this</code> to <strong>any object</strong>.</li>
 </ul>
+<blockquote>
+<p>Also read <a href="http://codingnconcepts.com/javascript/this-keyword-in-javascript/">this post to understand all about this keyword with examples</a></p>
+</blockquote>
 <p><br /></p>
 <h3 id="12-object-oriented-programming-in-javascript-what-is-constructor-and-prototype-do-you-know-about-prototypal-inheritance-how-do-you-define-class-using-es6">12. Object Oriented programming in Javascript, What is constructor and prototype? Do you know about prototypal inheritance. How do you define Class using ES6.</h3>
 <h3 id="13-what-is-global-function-and-block-scope-in-javascript">13. What is global, function and block scope in Javascript?</h3>
