@@ -134,7 +134,7 @@ if (!doNotTrack) {
 </div></div>
 		</header><div class="content post__content clearfix">
 			<p>This post is a collection of tricky JavaScript interview questions.</p>
-<h3 id="1-what-is-the-output-of-below-code-snippet">1. What is the output of below code snippet?</h3>
+<h3 id="1-guess-the-output-">1. Guess the output ?</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Person</span>(<span style="color:#e6db74">&#34;a&#34;</span>);
 <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Person</span> 
 <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Person</span>(<span style="color:#e6db74">&#34;c&#34;</span>);
@@ -147,20 +147,21 @@ if (!doNotTrack) {
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;2.&#34;</span>, <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">fname</span>);    
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;3.&#34;</span>, <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">fname</span>);    
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;4.&#34;</span>, <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">fname</span>);
-</code></pre></div><pre><code><div class="code_output">Output</div>
+</code></pre></div><p>Think for a while before looking at the output.</p>
+<pre><code><div class="code_output">Output</div>
 1. c
 2. a
 3. undefined
 Uncaught TypeError: Cannot read property 'fname' of undefined
-</code></pre><p>Let&rsquo;s understand,</p>
+</code></pre><p>Here is the explanation,</p>
 <ol>
-<li><code>fname</code> will print <strong>c</strong>. When you execute <code>Person(&quot;c&quot;)</code>, <code>this</code> refers to global object <strong>window</strong> and <code>this.fname</code> is assigned value as <strong>c</strong>.</li>
+<li><code>fname</code> will print <strong>c</strong>. When you execute <code>Person(&quot;c&quot;)</code> function, <code>this</code> refers to global object <strong>window</strong> and <code>this.fname</code> is assigned value as <strong>c</strong>.</li>
 <li><code>a.fname</code> will print <strong>a</strong>. When you execute function using <strong>new</strong> keyword <code>new Person(&quot;a&quot;)</code>, <code>this</code> refers to newly created object.</li>
-<li><code>b.fname</code> will print <code>undefined</code> since you are just assigning object and not executing any function. <code>Person</code> object is not having property name <code>fname</code></li>
-<li><code>c.fname</code> will throw error because <code>Person(&quot;c&quot;)</code> doesn&rsquo;t return anything so <strong>c</strong> is undefined.</li>
+<li><code>b.fname</code> will print <code>undefined</code> since you are just assigning a function object and not executing it. <code>Person</code> object is not having property named as <code>fname</code></li>
+<li>function <code>Person(&quot;c&quot;)</code> doesn&rsquo;t return anything so <strong>c</strong> is <code>undefined</code> and <code>c.fname</code> will throw error</li>
 </ol>
 <p><br /></p>
-<h3 id="2-can-you-guess-what-is-output-of-below-code-snippet">2. Can you guess what is output of below code snippet?</h3>
+<h3 id="2-guess-the-output-">2. Guess the output ?</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
 
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">myFun</span>(){
@@ -184,8 +185,42 @@ function myFun(){
 }
 
 myFun();
+</code></pre><p><br /></p>
+<h3 id="3-guess-the-output-">3. Guess the output ?</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(   <span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;2&#34;</span> );  
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#e6db74">&#34;2&#34;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;2&#34;</span> );
 
-</code></pre>
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(   <span style="color:#ae81ff">2</span> <span style="color:#f92672">-</span> <span style="color:#e6db74">&#34;2&#34;</span> );
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#e6db74">&#34;2&#34;</span> <span style="color:#f92672">-</span> <span style="color:#e6db74">&#34;2&#34;</span> );
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#e6db74">&#34;A&#34;</span> <span style="color:#f92672">-</span> <span style="color:#e6db74">&#34;A&#34;</span> );
+</code></pre></div><p>Think for a while before looking at the output.</p>
+<pre><code><div class="code_output">Output</div>
+22
+22
+
+0
+0
+NaN
+</code></pre><p>Here is the explanation,</p>
+<p>Javascript <code>+</code> operator behaves as,</p>
+<ul>
+<li><strong>number operator</strong> when both operands are number</li>
+<li><strong>concat operator</strong> if any one or both of the operands are string.</li>
+</ul>
+<p>Javascript <code>-</code> operator <strong>always</strong> behaves as <strong>number operator</strong>. if any one or both of the operands are string, Javascript attempts to convert it to a number, if not able to convert then return NaN.</p>
+<p><br /></p>
+<h3 id="4-guess-the-output-">4. Guess the output ?</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#ae81ff">10</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">20</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">30</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#ae81ff">30</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">20</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span>);
+</code></pre></div><p>Have you guessed <code>true</code> in both the cases ? No, its not correct.</p>
+<pre><code><div class="code_output">Output</div>
+true
+false
+</code></pre><p>The output is <code>true</code> and <code>false</code>. Here is the explanation,</p>
+<p>In Javascript relational operators are evaluated from left to right, false equals 0, and true equals 1 for number comparisons.</p>
+<p>So comparison evaluation is something like this,</p>
+<pre><code>10 &lt; 20 &lt; 30  =&gt;  true &lt; 30  =&gt;  1 &lt; 30  =&gt; true
+30 &gt; 20 &gt; 10  =&gt;  true &gt; 10  =&gt;  1 &gt; 10  =&gt; false</code></pre>
 		</div>
 		<footer class="post__footer">
 			
