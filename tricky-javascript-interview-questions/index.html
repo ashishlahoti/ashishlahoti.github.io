@@ -133,8 +133,85 @@ if (!doNotTrack) {
 	</span>
 </div></div>
 		</header><div class="content post__content clearfix">
-			<p>This post is a collection of tricky JavaScript interview questions.</p>
-<h3 id="1-guess-the-output-">1. Guess the output ?</h3>
+			<p>This post is a collection of tricky JavaScript interview questions. The sequence of questions starts with less trickier one and ends with more difficult one. Each question is based on different concept in JavaScript.</p>
+<h3 id="1-number-operators-guess-the-output">1. Number operators. Guess the output?</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(   <span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;2&#34;</span> );  
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#e6db74">&#34;2&#34;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;2&#34;</span> );
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(   <span style="color:#ae81ff">2</span> <span style="color:#f92672">-</span> <span style="color:#e6db74">&#34;2&#34;</span> );
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#e6db74">&#34;2&#34;</span> <span style="color:#f92672">-</span> <span style="color:#e6db74">&#34;2&#34;</span> );
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#e6db74">&#34;A&#34;</span> <span style="color:#f92672">-</span> <span style="color:#e6db74">&#34;A&#34;</span> );
+</code></pre></div><p>Think for a while before looking at the output.</p>
+<pre><code><div class="code_output">Output</div>
+22
+22
+
+0
+0
+NaN
+</code></pre><p>Here is the explanation,</p>
+<p>Javascript <code>+</code> operator behaves as,</p>
+<ul>
+<li><strong>number operator</strong> when both operands are number</li>
+<li><strong>concat operator</strong> if any one or both of the operands are string.</li>
+</ul>
+<p>Javascript <code>-</code> operator <strong>always</strong> behaves as <strong>number operator</strong>. if any one or both of the operands are string, Javascript attempts to convert it to a number, if not able to convert then return NaN.</p>
+<p><br /></p>
+<h3 id="2-relational-operators-guess-the-output-">2. Relational Operators. Guess the output ?</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#ae81ff">10</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">20</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">30</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#ae81ff">30</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">20</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span>);
+</code></pre></div><p>Have you guessed <code>true</code> in both the cases ? No, its not correct.</p>
+<pre><code><div class="code_output">Output</div>
+true
+false
+</code></pre><p>The output is <code>true</code> and <code>false</code>. Here is the explanation,</p>
+<p>In Javascript relational operators are evaluated from left to right, false equals 0, and true equals 1 for number comparisons.</p>
+<p>So comparison evaluation is something like this,</p>
+<pre><code>10 &lt; 20 &lt; 30  =&gt;  true &lt; 30  =&gt;  1 &lt; 30  =&gt; true
+30 &gt; 20 &gt; 10  =&gt;  true &gt; 10  =&gt;  1 &gt; 10  =&gt; false
+</code></pre>
+<p><br /></p>
+<h3 id="3-variable-hoisting-guess-the-output">3. Variable <code>hoisting</code>. Guess the output?</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">myFun</span>(){
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foo</span>);
+  
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+}
+
+<span style="color:#a6e22e">myFun</span>();
+</code></pre></div><p>Have you guessed <code>foo = 1</code> or <code>foo = 2</code>?</p>
+<p>It&rsquo;s neither one of them. It will print <code>undefined</code>. Let’s see how it is interpreted by the compiler in hoisting process,</p>
+<pre><code>var foo;
+foo = 1;
+
+function myFun(){
+  
+  var foo;          // var hoisted and initialized with undefined
+  console.log(foo); // undefined
+  
+  foo = 2;
+}
+
+myFun();
+</code></pre><p><br /></p>
+<h3 id="4-closure-guess-the-output">4. <code>Closure</code>. Guess the output?</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+  <span style="color:#a6e22e">setTimeout</span>(<span style="color:#66d9ef">function</span>() { <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">i</span>); }, <span style="color:#a6e22e">i</span><span style="color:#f92672">*</span><span style="color:#ae81ff">1000</span>);
+}
+</code></pre></div><p>Have you guessed it will print 0, 1, 2 after every 1 second ? Let&rsquo;s look at the output,</p>
+<pre><code><div class="code_output">Output</div>
+3
+3
+3
+</code></pre><p>Actually it will print 3, 3, 3 after every 1 second. This is because of JavaScript Closure. Here is the explanation,</p>
+<p>A JavaScript closure is when an inner function has access to its outer function&rsquo;s scope. In the following line of code:</p>
+<pre><code>setTimeout(function() { console.log(i); }, i*1000);
+</code></pre>
+<p>variable <code>i</code> is used in an inner function whereas it is actually declared in outer for loop. Inner function will be able to access the value of <code>i</code> through Closure. Each of the inner functions refers to the same variable <code>i</code>, which at the end of the for loop is equal to 3.</p>
+<p><br /></p>
+<h3 id="5-this-keyword-guess-the-output">5. <code>this</code> keyword. Guess the output?</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Person</span>(<span style="color:#e6db74">&#34;a&#34;</span>);
 <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Person</span> 
 <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Person</span>(<span style="color:#e6db74">&#34;c&#34;</span>);
@@ -161,66 +238,6 @@ Uncaught TypeError: Cannot read property 'fname' of undefined
 <li>function <code>Person(&quot;c&quot;)</code> doesn&rsquo;t return anything so <strong>c</strong> is <code>undefined</code> and <code>c.fname</code> will throw error</li>
 </ol>
 <p><br /></p>
-<h3 id="2-guess-the-output-">2. Guess the output ?</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">myFun</span>(){
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foo</span>);
-  
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
-}
-
-<span style="color:#a6e22e">myFun</span>();
-</code></pre></div><p>Have you guessed <code>foo = 1</code> or <code>foo = 2</code>?</p>
-<p>It&rsquo;s neither one of them. It will print <code>undefined</code>. Let’s see how it is interpreted by the compiler in hoisting process,</p>
-<pre><code>var foo;
-foo = 1;
-
-function myFun(){
-  
-  var foo;          // var hoisted and initialized with undefined
-  console.log(foo); // undefined
-  
-  foo = 2;
-}
-
-myFun();
-</code></pre><p><br /></p>
-<h3 id="3-guess-the-output-">3. Guess the output ?</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(   <span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;2&#34;</span> );  
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#e6db74">&#34;2&#34;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;2&#34;</span> );
-
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(   <span style="color:#ae81ff">2</span> <span style="color:#f92672">-</span> <span style="color:#e6db74">&#34;2&#34;</span> );
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#e6db74">&#34;2&#34;</span> <span style="color:#f92672">-</span> <span style="color:#e6db74">&#34;2&#34;</span> );
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#e6db74">&#34;A&#34;</span> <span style="color:#f92672">-</span> <span style="color:#e6db74">&#34;A&#34;</span> );
-</code></pre></div><p>Think for a while before looking at the output.</p>
-<pre><code><div class="code_output">Output</div>
-22
-22
-
-0
-0
-NaN
-</code></pre><p>Here is the explanation,</p>
-<p>Javascript <code>+</code> operator behaves as,</p>
-<ul>
-<li><strong>number operator</strong> when both operands are number</li>
-<li><strong>concat operator</strong> if any one or both of the operands are string.</li>
-</ul>
-<p>Javascript <code>-</code> operator <strong>always</strong> behaves as <strong>number operator</strong>. if any one or both of the operands are string, Javascript attempts to convert it to a number, if not able to convert then return NaN.</p>
-<p><br /></p>
-<h3 id="4-guess-the-output-">4. Guess the output ?</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#ae81ff">10</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">20</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">30</span>);
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#ae81ff">30</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">20</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span>);
-</code></pre></div><p>Have you guessed <code>true</code> in both the cases ? No, its not correct.</p>
-<pre><code><div class="code_output">Output</div>
-true
-false
-</code></pre><p>The output is <code>true</code> and <code>false</code>. Here is the explanation,</p>
-<p>In Javascript relational operators are evaluated from left to right, false equals 0, and true equals 1 for number comparisons.</p>
-<p>So comparison evaluation is something like this,</p>
-<pre><code>10 &lt; 20 &lt; 30  =&gt;  true &lt; 30  =&gt;  1 &lt; 30  =&gt; true
-30 &gt; 20 &gt; 10  =&gt;  true &gt; 10  =&gt;  1 &gt; 10  =&gt; false</code></pre>
 		</div>
 		<footer class="post__footer">
 			
