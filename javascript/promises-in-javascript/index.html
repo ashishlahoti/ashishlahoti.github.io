@@ -134,16 +134,19 @@ if (!doNotTrack) {
 </div></div>
 		</header><div class="content post__content clearfix">
 			<p>Promises are introduced natively in ES6. They are very similar to our promises. As we keep or break the promise, Javascript promises are either resolve or reject. In this post we will talk about promise syntax, its different states, practical usage and different methods available to use promises.</p>
-<p>In earlier days, you would have used <strong>callbacks</strong> to handle asynchronous operations. However, callbacks have limited functionality and often leads to unmanageable code if you are handling multiple async calls also known as <strong>callback hell</strong>.</p>
+<p><br /></p>
+<h2 id="why-promises">Why Promises?</h2>
+<p>In earlier days, you would have used <strong>callbacks</strong> to handle asynchronous operations. However, callbacks have limited functionality and often leads to unmanageable code if you are handling multiple async calls, it leads to heavily nested callback code which is also known as <strong>callback hell</strong>.</p>
 <p>Promises were introduced to improve code readability and better handling of async calls and errors.</p>
-<h2 id="syntax">Syntax</h2>
+<p><br /></p>
+<h2 id="promise-syntax">Promise Syntax</h2>
 <p>Let&rsquo;s look at the syntax of simple promise object.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">promise</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) {
   <span style="color:#75715e">// asynchronous call
 </span><span style="color:#75715e"></span>});
 </code></pre></div><p>Promise takes a callback function as an argument and that callback function takes two arguments — the first is a <strong>resolve</strong> function, and the second one is a <strong>reject</strong> function. A promise can either be <em>fulfilled</em> with a value or <em>rejected</em> with a reason (error).</p>
 <p><br /></p>
-<h2 id="states">States</h2>
+<h2 id="promise-states">Promise States</h2>
 <p>A promise object has one of three states:</p>
 <ul>
 <li><strong>pending:</strong> is the initial state.</li>
@@ -180,7 +183,7 @@ if (!doNotTrack) {
   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">error</span>);
 });
 </code></pre></div><p><br /></p>
-<h2 id="promise-chaining">Promise Chaining</h2>
+<h2 id="chained-promises">Chained Promises</h2>
 <p>Promise chaining comes into play when you have to use output of one async call as input of another async call. You can chain multiple promises in this case.</p>
 <p>Let’s look at the below example:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//create a common getData function
@@ -197,7 +200,7 @@ if (!doNotTrack) {
     });
 });
 
-<span style="color:#75715e">//chain the common to fetch all posts by first user (userId = 1)
+<span style="color:#75715e">//chained promises to fetch all posts by first user (userId = 1)
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">getData</span>(<span style="color:#e6db74">&#39;https://jsonplaceholder.typicode.com/users&#39;</span>)
 .<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">data</span>) =&gt; {
   <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">data</span>[<span style="color:#ae81ff">0</span>];
@@ -229,7 +232,7 @@ if (!doNotTrack) {
 <p>Promise.all() is useful when you want to execute multiple async calls and wait for all of them to finish and get collective output.</p>
 <p>Promise.all() takes an array of promises and return an array of the results in the same sequence of promises. It throws an exception if any one of the async call fails.</p>
 <p>Let’s look at the below example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//create a general getData function
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//create a common getData function
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getData</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">url</span>) =&gt; <span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span> ){
   <span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">url</span>)
     .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">response</span> =&gt; {
@@ -243,15 +246,15 @@ if (!doNotTrack) {
     });
 });
 
-<span style="color:#75715e">//create multiple promises
+<span style="color:#75715e">//create multiple promises from common getData function
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getUsers</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getData</span>(<span style="color:#e6db74">&#39;https://jsonplaceholder.typicode.com/users&#39;</span>);
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getPosts</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getData</span>(<span style="color:#e6db74">&#39;https://jsonplaceholder.typicode.com/posts&#39;</span>);
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getComments</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getData</span>(<span style="color:#e6db74">&#39;https://jsonplaceholder.typicode.com/comments&#39;</span>);
 
-<span style="color:#75715e">//fetch data 
+<span style="color:#75715e">//fetch data to get users, posts and comments collectively
 </span><span style="color:#75715e"></span>Promise.<span style="color:#a6e22e">all</span>([<span style="color:#a6e22e">getUsers</span>, <span style="color:#a6e22e">getPosts</span>, <span style="color:#a6e22e">getComments</span>]).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">result</span> =&gt; {
   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">result</span>);
-})
+});
 </code></pre></div><pre><code><div class="code_output">Output</div>
 ▼ (3) [Array(10), Array(100), Array(500)]
   ➤ 0: (10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
@@ -259,7 +262,103 @@ if (!doNotTrack) {
   ➤ 2: (500) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, …]
     length: 3
   ➤ __proto__: Array(0)
-</code></pre>
+</code></pre><p><br /></p>
+<h2 id="promiseallsettled">Promise.allSettled()</h2>
+<p>Promise.allSettled() is similar to Promise.all() to execute multiple async calls. The only difference between these two,</p>
+<ul>
+<li>Promise.all() is either all resolve or any reject, means if any async call fails, it returns an error.</li>
+<li>Promise.allSettled() is all settle, means it doesn&rsquo;t return error if any async call fails. It gives the collective output of all successful and failed async calls.</li>
+</ul>
+<p>Let&rsquo;s look at the below example, where <code>getPostsFails</code> aync call returns 404 error since url endpoint doesn&rsquo;t exist but you still able to fetch data for <code>getUsers</code> and <code>getComments</code> async calls.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//create a common getData function
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getData</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">url</span>) =&gt; <span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span> ){
+  <span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">url</span>)
+    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">response</span> =&gt; {
+        <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">ok</span>){
+          <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>();
+        }<span style="color:#66d9ef">else</span>{
+          <span style="color:#66d9ef">throw</span> <span style="color:#e6db74">`Error </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">status</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+        }     
+    })
+    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">data</span> =&gt; {
+        <span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">data</span>);
+    })
+    .<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">error</span> =&gt; {
+        <span style="color:#a6e22e">reject</span>(<span style="color:#a6e22e">error</span>);
+    });
+});
+
+<span style="color:#75715e">//create multiple promises from common getData function
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getUsers</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getData</span>(<span style="color:#e6db74">&#39;https://jsonplaceholder.typicode.com/users&#39;</span>);
+<span style="display:block;width:100%;background-color:#3c3d38"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getPostsFails</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getData</span>(<span style="color:#e6db74">&#39;https://jsonplaceholder.typicode.com/postsfailes&#39;</span>);
+</span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getComments</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getData</span>(<span style="color:#e6db74">&#39;https://jsonplaceholder.typicode.com/comments&#39;</span>);
+
+<span style="color:#75715e">//fetch data to get users, posts and comments collectively regardless of any error
+</span><span style="color:#75715e"></span>Promise.<span style="color:#a6e22e">allSettled</span>([<span style="color:#a6e22e">getUsers</span>, <span style="color:#a6e22e">getPostsFails</span>, <span style="color:#a6e22e">getComments</span>]).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">result</span> =&gt; {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">result</span>);
+});
+</code></pre></div><pre><code><div class="code_output">Output</div>
+▼ (3) [{…}, {…}, {…}]
+  ➤ 0: {status: &quot;fulfilled&quot;, value: Array(10)}
+  <mark>➤ 1: {status: &#34;rejected&#34;, reason: &#34;Error 404&#34;}</mark>
+  ➤ 2: {status: &quot;fulfilled&quot;, value: Array(500)}
+    length: 3
+  ➤ __proto__: Array(0)
+</code></pre><p><br /></p>
+<h2 id="promiserace">Promise.race()</h2>
+<p>Promise.race() is useful when you are interested in fetching data from any one of the async call out of multiple async calls, whichever resolve first.</p>
+<p>Look at the below example where we are interested in any data out of <code>getTodos</code>, <code>getUsers</code> and <code>getComments</code>, whichever resolves first. In our case <code>getUsers</code> resolved first and returned user list.</p>
+<p>Please note that if you execute the same code snippet again and again, result might differ based on network connectivity and which one resolve first.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//create a common getData function
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getData</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">url</span>) =&gt; <span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span> ){
+  <span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">url</span>)
+    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">response</span> =&gt; {
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>();
+    })
+    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">data</span> =&gt; {
+        <span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">data</span>);
+    })
+    .<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">error</span> =&gt; {
+        <span style="color:#a6e22e">reject</span>(<span style="color:#a6e22e">error</span>);
+    });
+});
+
+<span style="color:#75715e">//create multiple promises from common getData function
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getTodos</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getData</span>(<span style="color:#e6db74">&#39;https://jsonplaceholder.typicode.com/todos&#39;</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getUsers</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getData</span>(<span style="color:#e6db74">&#39;https://jsonplaceholder.typicode.com/users&#39;</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getComments</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getData</span>(<span style="color:#e6db74">&#39;https://jsonplaceholder.typicode.com/comments&#39;</span>);
+
+
+<span style="color:#75715e">//fetch either todos or users or comments whichever resolves first
+</span><span style="color:#75715e"></span>Promise.<span style="color:#a6e22e">race</span>([<span style="color:#a6e22e">getTodos</span>, <span style="color:#a6e22e">getUsers</span>, <span style="color:#a6e22e">getComments</span>]).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">result</span> =&gt; {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">result</span>);
+});
+</code></pre></div><pre><code><div class="code_output">Output</div>
+▼ (10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+  ➤ 0: {id: 1, name: &quot;Leanne Graham&quot;, username: &quot;Bret&quot;, email: &quot;Sincere@april.biz&quot;, address: {…}, …}
+  ➤ 1: {id: 2, name: &quot;Ervin Howell&quot;, username: &quot;Antonette&quot;, email: &quot;Shanna@melissa.tv&quot;, address: {…}, …}
+  ➤ 2: {id: 3, name: &quot;Clementine Bauch&quot;, username: &quot;Samantha&quot;, email: &quot;Nathan@yesenia.net&quot;, address: {…}, …}
+  ➤ 3: {id: 4, name: &quot;Patricia Lebsack&quot;, username: &quot;Karianne&quot;, email: &quot;Julianne.OConner@kory.org&quot;, address: {…}, …}
+  ➤ 4: {id: 5, name: &quot;Chelsey Dietrich&quot;, username: &quot;Kamren&quot;, email: &quot;Lucio_Hettinger@annie.ca&quot;, address: {…}, …}
+  ➤ 5: {id: 6, name: &quot;Mrs. Dennis Schulist&quot;, username: &quot;Leopoldo_Corkery&quot;, email: &quot;Karley_Dach@jasper.info&quot;, address: {…}, …}
+  ➤ 6: {id: 7, name: &quot;Kurtis Weissnat&quot;, username: &quot;Elwyn.Skiles&quot;, email: &quot;Telly.Hoeger@billy.biz&quot;, address: {…}, …}
+  ➤ 7: {id: 8, name: &quot;Nicholas Runolfsdottir V&quot;, username: &quot;Maxime_Nienow&quot;, email: &quot;Sherwood@rosamond.me&quot;, address: {…}, …}
+  ➤ 8: {id: 9, name: &quot;Glenna Reichert&quot;, username: &quot;Delphine&quot;, email: &quot;Chaim_McDermott@dana.io&quot;, address: {…}, …}
+  ➤ 9: {id: 10, name: &quot;Clementina DuBuque&quot;, username: &quot;Moriah.Stanton&quot;, email: &quot;Rey.Padberg@karina.biz&quot;, address: {…}, …}
+    length: 10
+  ➤ __proto__: Array(0)
+</code></pre><p><br /></p>
+<h2 id="summary">Summary</h2>
+<p>It is always better to use Promises over callback functions as Promises has a lot to offer in terms of,</p>
+<ul>
+<li>Resolve a successful anyc call response using <code>Promise.resolve(response)</code></li>
+<li>Reject async call response based on status or data using <code>Promise.reject(response)</code></li>
+<li>Better error handling using <code>Promise.catch(onRejection)</code></li>
+<li>Chaining of multiple async calls using <code>Promise.then(onFulfillment, onRejection)</code></li>
+<li>Get collective result of multiple async calls using <code>Promise.all([promise1, promise2, ...])</code></li>
+<li>Get collective result of multiple async calls regardless of any error using <code>Promise.allSettled([promise1, promise2, ...])</code></li>
+<li>Get any one result whichever resolves first out of many async calls using <code>Promise.race([promise1, promise2, ...])</code></li>
+</ul>
 		</div>
 		<footer class="post__footer">
 			
