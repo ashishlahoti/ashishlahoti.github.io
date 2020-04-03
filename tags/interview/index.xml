@@ -6,10 +6,19 @@
     <description>Recent content in Interview on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 31 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingnconcepts.com/tags/interview/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Promises in JavaScript</title>
+      <link>http://codingnconcepts.com/javascript/promises-in-javascript/</link>
+      <pubDate>Fri, 03 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/javascript/promises-in-javascript/</guid>
+      <description>&lt;p&gt;Promises are introduced natively in ES6. They are very similar to our promises. As we keep or break the promise, Javascript promises are either resolve or reject. In this post we will talk about promise syntax, its different states, practical usage and different methods available to use promises.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Tricky Javascript Interview Questions</title>
@@ -17,7 +26,7 @@
       <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingnconcepts.com/tricky-javascript-interview-questions/</guid>
-      <description>&lt;p&gt;This post is a collection of tricky JavaScript interview questions. The sequence of questions starts with less trickier one and ends with more difficult one. Each question is based on different concept in JavaScript.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This post is a collection of tricky interview questions based on different concepts in JavaScript. The difficulty level of question will increase as you read forward down the line in this post.&lt;/p&gt;</description>
     </item>
     
     <item>

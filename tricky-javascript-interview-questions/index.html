@@ -133,7 +133,7 @@ if (!doNotTrack) {
 	</span>
 </div></div>
 		</header><div class="content post__content clearfix">
-			<p>This post is a collection of tricky JavaScript interview questions. The sequence of questions starts with less trickier one and ends with more difficult one. Each question is based on different concept in JavaScript.</p>
+			<p>This post is a collection of tricky interview questions based on different concepts in JavaScript. The difficulty level of question will increase as you read forward down the line in this post.</p>
 <h3 id="1-number-operators-guess-the-output">1. Number operators. Guess the output?</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(   <span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;2&#34;</span> );  
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#e6db74">&#34;2&#34;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;2&#34;</span> );
@@ -158,8 +158,8 @@ NaN
 <p>Javascript <code>-</code> operator <strong>always</strong> behaves as <strong>number operator</strong>. if any one or both of the operands are string, Javascript attempts to convert it to a number, if not able to convert then return NaN.</p>
 <p><br /></p>
 <h3 id="2-relational-operators-guess-the-output-">2. Relational Operators. Guess the output ?</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#ae81ff">10</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">20</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">30</span>);
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#ae81ff">30</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">20</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#ae81ff">10</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">20</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">30</span> );
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#ae81ff">30</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">20</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span> );
 </code></pre></div><p>Have you guessed <code>true</code> in both the cases ? No, its not correct.</p>
 <pre><code><div class="code_output">Output</div>
 true
@@ -171,7 +171,29 @@ false
 30 &gt; 20 &gt; 10  =&gt;  true &gt; 10  =&gt;  1 &gt; 10  =&gt; false
 </code></pre>
 <p><br /></p>
-<h3 id="3-variable-hoisting-guess-the-output">3. Variable <code>hoisting</code>. Guess the output?</h3>
+<h3 id="3-comparison-operators-guess-the-output-">3. Comparison Operators. Guess the output ?</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#66d9ef">null</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> );
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#66d9ef">null</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>  );
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#66d9ef">null</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> );
+</code></pre></div><p>You might have guessed <code>false</code> in all the three cases but its not correct.</p>
+<pre><code><div class="code_output">Output</div>
+false
+false
+true
+</code></pre><p>In Javascript, equality check <code>==</code> and comparisons <code>&gt; &lt; &gt;= &lt;=</code> behaves differently.</p>
+<p>For equality comparison,</p>
+<ul>
+<li><strong>null</strong> and <strong>undefined</strong> are comparable.</li>
+<li><strong>0</strong>, <strong>false</strong> and <strong>&quot;&quot;</strong> (empty string) are comparable.</li>
+<li><strong>null</strong> and <strong>0</strong> are not comparable so <code>null == 0</code> returns false.</li>
+</ul>
+<p>For number comparison,</p>
+<ul>
+<li>if one operand is number, it attempts to convert other operand to number.</li>
+<li><strong>null</strong> becomes <strong>0</strong> and <strong>undefined</strong> becomes <strong>NaN</strong> for number comparison so <code>null &gt; 0</code> returns false whereas <code>null &gt;= 0</code> returns true.</li>
+</ul>
+<p><br /></p>
+<h3 id="4-variable-hoisting-guess-the-output">4. Variable <code>hoisting</code>. Guess the output?</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
 
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">myFun</span>(){
@@ -196,7 +218,7 @@ function myFun(){
 
 myFun();
 </code></pre><p><br /></p>
-<h3 id="4-closure-guess-the-output">4. <code>Closure</code>. Guess the output?</h3>
+<h3 id="5-closure-guess-the-output">5. <code>Closure</code>. Guess the output?</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
   <span style="color:#a6e22e">setTimeout</span>(<span style="color:#66d9ef">function</span>() { <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">i</span>); }, <span style="color:#a6e22e">i</span><span style="color:#f92672">*</span><span style="color:#ae81ff">1000</span>);
 }
@@ -211,7 +233,7 @@ myFun();
 </code></pre>
 <p>variable <code>i</code> is used in an inner function whereas it is actually declared in outer for loop. Inner function will be able to access the value of <code>i</code> through Closure. Each of the inner functions refers to the same variable <code>i</code>, which at the end of the for loop is equal to 3.</p>
 <p><br /></p>
-<h3 id="5-this-keyword-guess-the-output">5. <code>this</code> keyword. Guess the output?</h3>
+<h3 id="6-this-keyword-guess-the-output">6. <code>this</code> keyword. Guess the output?</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Person</span>(<span style="color:#e6db74">&#34;a&#34;</span>);
 <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Person</span> 
 <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Person</span>(<span style="color:#e6db74">&#34;c&#34;</span>);

@@ -6,10 +6,19 @@
     <description>Recent content in Javascript on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingnconcepts.com/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Promises in JavaScript</title>
+      <link>http://codingnconcepts.com/javascript/promises-in-javascript/</link>
+      <pubDate>Fri, 03 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/javascript/promises-in-javascript/</guid>
+      <description>&lt;p&gt;Promises are introduced natively in ES6. They are very similar to our promises. As we keep or break the promise, Javascript promises are either resolve or reject. In this post we will talk about promise syntax, its different states, practical usage and different methods available to use promises.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Difference in == and === comparison operators in JavaScript</title>
