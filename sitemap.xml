@@ -4,62 +4,67 @@
   
   <url>
     <loc>http://codingnconcepts.com/javascript/</loc>
-    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>http://codingnconcepts.com/javascript/async-await-in-javascript/</loc>
+    <lastmod>2020-04-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://codingnconcepts.com/categories/</loc>
-    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://codingnconcepts.com/</loc>
-    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://codingnconcepts.com/tags/es6/</loc>
-    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://codingnconcepts.com/tags/interview/</loc>
-    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://codingnconcepts.com/tags/java/</loc>
-    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://codingnconcepts.com/categories/java/</loc>
-    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://codingnconcepts.com/tags/javascript/</loc>
-    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://codingnconcepts.com/categories/javascript/</loc>
-    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://codingnconcepts.com/tags/js/</loc>
-    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://codingnconcepts.com/javascript/promises-in-javascript/</loc>
-    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://codingnconcepts.com/tags/</loc>
+    <lastmod>2020-04-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://codingnconcepts.com/javascript/promises-in-javascript/</loc>
     <lastmod>2020-04-03T00:00:00+00:00</lastmod>
   </url>
   

@@ -1282,6 +1282,10 @@ ul.share-icons li > * .label {
 	cursor: default;
 }
 
+.code_error {
+	color: #e22d30;
+}
+
 /* Media Queries */
 @media screen and (max-width: 1475px) {
 	.container--outer {

@@ -236,18 +236,54 @@ if (!doNotTrack) {
 </ul>
 <p><br /></p>
 <h3 id="2-what-are-promises-and-why-do-we-use-it">2. What are <code>Promises</code> and why do we use it?</h3>
+<ul>
+<li>
 <p>Promises are introduced natively in ES6. They are very similar to our promises. As we keep or break the promise, Javascript promises are either resolve or reject.</p>
-<p>In earlier days, you would have used <strong>callbacks</strong> to handle asynchronous operations. However, callbacks have limited functionality and often leads to unmanageable code if you are handling multiple async calls also known as <strong>callback hell</strong>.</p>
-<p>Promises were introduced to improve code readability and better handling of async calls and errors.</p>
+</li>
+<li>
+<p>In earlier days, you would have used <strong>callbacks</strong> to handle asynchronous operations. However, callbacks have limited functionality and often leads to unmanageable code if you are handling multiple async calls also known as <strong>callback hell</strong>. Promises were introduced to improve code readability and better handling of async calls and errors.</p>
+</li>
+<li>
 <p>Syntax of simple promise object.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">promise</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) {
   <span style="color:#75715e">// asynchronous call
 </span><span style="color:#75715e"></span>});
-</code></pre></div><blockquote>
-<p>Also read <a href="http://codingnconcepts.com/javascript/promises-in-javascript/">this post for more details promises in javascript</a></p>
+</code></pre></div></li>
+</ul>
+<blockquote>
+<p>Also read <a href="http://codingnconcepts.com/javascript/promises-in-javascript/">this post for more details on promises in javascript</a></p>
 </blockquote>
 <p><br /></p>
 <h3 id="3-how-to-use-async-and-await-and-what-problem-does-it-solve">3. How to use <code>async</code> and <code>await</code> and what problem does it solve?</h3>
+<ul>
+<li>
+<p>Async/Await introduced in ECMAScript2017 is a new way to handle asynchronous operation. Its underlying is Promise with improved syntax to write concise, readable and easy to debug code as compare to promises and callbacks.</p>
+</li>
+<li>
+<p>When <strong>Async</strong> keyword is applied before a function, it turns into asynchronous function and always return a promise object.</p>
+</li>
+<li>
+<p><code>await</code> keyword works only inside async function and it makes the function execution wait until the returned promise settles (either resolve or reject).</p>
+</li>
+<li>
+<p>Usage of async/await:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#a6e22e">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">hello</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">promise</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span>    <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;Hello&#34;</span>), <span style="color:#ae81ff">5000</span>)
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>  });
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">promise</span>; <span style="color:#75715e">// wait until the promise resolves
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span style="color:#75715e"></span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">value</span>;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span style="color:#a6e22e">hello</span>().<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">data</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>));
+</code></pre></div><p>Please note that in above code snippet when we execute async function <code>hello()</code>, function execution literally waits for 5s at line 6 before returning resolved promise object. <em>CPU</em> resources are not utilized in this wait period and can be used for other work.</p>
+</li>
+</ul>
+<blockquote>
+<p>Also read <a href="http://codingnconcepts.com/javascript/async-await-in-javascript/">this post for more details on async/await in javascript</a></p>
+</blockquote>
 <p><br /></p>
 <h3 id="4-what-is-a-difference-between-call-apply-and-bind-in-javascript">4. What is a difference between <code>call</code>, <code>apply</code> and <code>bind</code> in JavaScript?</h3>
 <ul>
