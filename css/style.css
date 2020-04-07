@@ -44,8 +44,8 @@ html {
 body {
 	margin: 0;
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
-	font-size: 14px;
-	font-size: .875rem;
+	font-size: 16px;
+	font-size: 1rem;
 	line-height: 1.6;
 	word-wrap: break-word;
 	background: #f7f7f7;
