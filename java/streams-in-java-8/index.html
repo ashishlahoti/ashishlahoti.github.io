@@ -134,32 +134,33 @@ if (!doNotTrack) {
 </div></div>
 		</header><div class="content post__content clearfix">
 			<p>One of the major feature of Java 8 is addition of Stream. It also has introduced the functional programming in Java. We will discuss different stream operations available in Collection, Array, IntStream with examples. We will also discuss the difference between Intermediate and Terminal operations.</p>
-<h1 id="collection-stream">Collection Stream</h1>
+<h2 id="collection-stream">Collection Stream</h2>
 <hr>
 <h3 id="stream-operations">Stream Operations</h3>
 <p>There are mainly three types of stream operations -</p>
-<h6 id="1-stream-operation">1. Stream Operation</h6>
+<h4 id="1-stream-operation">1. Stream Operation</h4>
 <p>Stream operation converts any collection to a stream</p>
 <p><code>stream()</code></p>
-<h6 id="2-intermediate-operation">2. Intermediate Operation</h6>
+<h4 id="2-intermediate-operation">2. Intermediate Operation</h4>
 <p>Intermediate operation converts a stream to another stream as a result. They can be chained together to form a pipeline of Stream operations.</p>
 <p><code>filter()</code>, <code>map()</code>, <code>sorted()</code>, <code>distinct()</code>, <code>limit()</code>, <code>skip()</code></p>
-<h6 id="3-terminal-operation">3. Terminal Operation</h6>
+<h4 id="3-terminal-operation">3. Terminal Operation</h4>
 <p>Terminal operation converts a stream to a collection as a result. They can not be chained together. Any Stream operation pipeline must end with terminal operation.</p>
 <p><code>collect()</code>, <code>reduce()</code>, <code>min()</code>, <code>max()</code>, <code>count()</code>, <code>anyMatch()</code>, <code>allMatch()</code>, <code>noneMatch()</code>, <code>findFirst()</code>, <code>findAny()</code></p>
-<h3 id="intermediate-vs-terminal-operations">Intermediate vs Terminal Operations</h3>
+<h2 id="intermediate-vs-terminal-operations">Intermediate vs Terminal Operations</h2>
 <p><strong>1. Output:</strong> Output of intermediate operation is another stream whereas output of terminal operation is a collection, array or primitive.</p>
 <p><strong>2. Chaining:</strong> Stream operation pipeline can have as many as intermediate operators chained together but pipeline must end with terminal operator.</p>
 <p><strong>3. Lazy Evaluation:</strong> Intermediate operations are evaluated lazily whereas terminal operations are eager. The intermediate operations just remain as a pipeline, and executed only when the terminal operation is executed</p>
 <p><strong>4. Pipeline:</strong> Stream operations pipeline can have many intermediate operations but only one terminal operation.</p>
-<h3 id="examples">Examples</h3>
+<h2 id="examples">Examples</h2>
 <p>We will look at various stream operations pipelines. Let&rsquo;s define a <code>fruits</code> List collection first</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> fruits <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;mango&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;apple&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;banana&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;grapes&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;orange&#34;</span><span style="color:#f92672">);</span>
 </code></pre></div><p>We now execute various examples of streams operations pipeline</p>
 <blockquote>
 <p>Stream Operation | Intermediate Operation | &hellip; | &hellip; | Intermediate Operation | Terminal Operation</p>
 </blockquote>
-<h6 id="1-stream--filter--collect">1. stream() | filter() | collect()</h6>
+<p><br /></p>
+<h4 id="1-stream--filter--collect">1. stream() | filter() | collect()</h4>
 <p>Filter out <code>grapes</code> from list of <code>fruits</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> result <span style="color:#f92672">=</span> fruits<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>                   <span style="color:#75715e">// convert list to stream
 </span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">filter</span><span style="color:#f92672">(</span>fruit <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">!</span><span style="color:#e6db74">&#34;grapes&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>fruit<span style="color:#f92672">))</span>   <span style="color:#75715e">// filter out grapes
@@ -171,7 +172,8 @@ mango
 apple
 banana
 orange
-</code></pre><h6 id="2-stream--map--collect">2. stream() | map() | collect()</h6>
+</code></pre><p><br /></p>
+<h4 id="2-stream--map--collect">2. stream() | map() | collect()</h4>
 <p>Map all <code>fruits</code> to uppercase</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> result <span style="color:#f92672">=</span> fruits<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>            <span style="color:#75715e">// convert list to stream
 </span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>fruit <span style="color:#f92672">-&gt;</span> fruit<span style="color:#f92672">.</span><span style="color:#a6e22e">toUpperCase</span><span style="color:#f92672">())</span>   <span style="color:#75715e">// map to uppercase
@@ -184,7 +186,8 @@ APPLE
 BANANA
 GRAPES
 ORANGE
-</code></pre><h6 id="3-stream--sorted--collect">3. stream() | sorted() | collect()</h6>
+</code></pre><p><br /></p>
+<h4 id="3-stream--sorted--collect">3. stream() | sorted() | collect()</h4>
 <p>Sort all <code>fruits</code> in alphabetical order</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> result <span style="color:#f92672">=</span> fruits<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>        <span style="color:#75715e">// convert list to stream
 </span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">sorted</span><span style="color:#f92672">()</span>                        <span style="color:#75715e">// sort in alphabetical order
@@ -197,7 +200,8 @@ banana
 grapes
 mango
 orange
-</code></pre><h6 id="4-stream--filter--map--sorted--collect">4. stream() | filter() | map() | sorted() | collect()</h6>
+</code></pre><p><br /></p>
+<h4 id="4-stream--filter--map--sorted--collect">4. stream() | filter() | map() | sorted() | collect()</h4>
 <p>Operations all together on <code>fruits</code>. Filter out <code>grapes</code>, Map all to uppercase, Sort all alphabetically</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> result <span style="color:#f92672">=</span> fruits<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>                   <span style="color:#75715e">// convert list to stream
 </span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">filter</span><span style="color:#f92672">(</span>fruit <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">!</span><span style="color:#e6db74">&#34;grapes&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>fruit<span style="color:#f92672">))</span>   <span style="color:#75715e">// filter out grapes
@@ -211,7 +215,8 @@ APPLE
 BANANA
 MANGO
 ORANGE
-</code></pre><h6 id="5-stream--filter--findany--orelse">5. stream() | filter() | findAny() | orElse()</h6>
+</code></pre><p><br /></p>
+<h4 id="5-stream--filter--findany--orelse">5. stream() | filter() | findAny() | orElse()</h4>
 <p>Filter <code>mango</code> from <code>fruits</code>, Return <code>mango</code> if found or else return <code>null</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String fruit <span style="color:#f92672">=</span> fruits<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>                         <span style="color:#75715e">// convert list to stream
 </span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">filter</span><span style="color:#f92672">(</span>fruit <span style="color:#f92672">-&gt;</span> <span style="color:#e6db74">&#34;mango&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>fruit<span style="color:#f92672">))</span>    <span style="color:#75715e">// we love mango
@@ -221,7 +226,7 @@ ORANGE
 System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>fruit<span style="color:#f92672">);</span>
 </code></pre></div><pre><code><div class="code_output">Output</div>
 mango
-</code></pre><h1 id="array-stream">Array Stream</h1>
+</code></pre><h2 id="array-stream">Array Stream</h2>
 <hr>
 <p>Get the sum, count, min, max and distinct elements of given array</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> intArray <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]{</span>1<span style="color:#f92672">,</span> 3<span style="color:#f92672">,</span> 5<span style="color:#f92672">,</span> 7<span style="color:#f92672">,</span> 9<span style="color:#f92672">,</span> 3<span style="color:#f92672">,</span> 5<span style="color:#f92672">,</span> 99<span style="color:#f92672">};</span>
@@ -261,9 +266,9 @@ distinct:
 7
 9
 99
-</code></pre><h1 id="intstream">IntStream</h1>
+</code></pre><h2 id="intstream">IntStream</h2>
 <hr>
-<h6 id="foreach">forEach()</h6>
+<h4 id="foreach">forEach()</h4>
 <p>Print number 1 to 10</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">IntStream<span style="color:#f92672">.</span><span style="color:#a6e22e">range</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> 6<span style="color:#f92672">)</span>
          <span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
@@ -273,7 +278,8 @@ distinct:
 3
 4
 5
-</code></pre><h6 id="reduce">reduce()</h6>
+</code></pre><p><br /></p>
+<h4 id="reduce">reduce()</h4>
 <p>Sum all the elements from 1 to 100</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> IntStream<span style="color:#f92672">.</span><span style="color:#a6e22e">range</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> 101<span style="color:#f92672">)</span>
          <span style="color:#f92672">.</span><span style="color:#a6e22e">reduce</span><span style="color:#f92672">((</span>a<span style="color:#f92672">,</span> s<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> s <span style="color:#f92672">+=</span> a<span style="color:#f92672">)</span>

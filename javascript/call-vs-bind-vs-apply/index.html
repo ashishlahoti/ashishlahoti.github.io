@@ -134,7 +134,7 @@ if (!doNotTrack) {
 </div></div>
 		</header><div class="content post__content clearfix">
 			<p>This is frequently asked question in JavaScript interview. This post describes the Function prototype methods <code>call()</code>, <code>apply()</code> and <code>bind()</code> with their syntax, usage and practical examples.</p>
-<h1 id="functionprototype">Function.prototype</h1>
+<h2 id="functionprototype">Function.prototype</h2>
 <hr>
 <p>First of all we need to understand that all these three functions call, apply and bind are prototype of <code>Function</code>. What does that mean?</p>
 <p>Let&rsquo;s print Function&rsquo;s structure to understand it.</p>
@@ -160,7 +160,6 @@ if (!doNotTrack) {
         ➤ get caller: ƒ ()
         ➤ set caller: ƒ ()
 </code></pre><p>You can see <mark>apply</mark>, <mark>bind</mark> and <mark>call</mark> are prototype functions of <code>Function</code>, that means you can use these three functions on any new function you define.</p>
-<p><br /></p>
 <h1 id="when-to-use-these-functions">When to use these functions</h1>
 <hr>
 <p>When you define a new function and call it from somewhere in your code, it is executed in a context. This context is called <code>this</code> and it refers to an object. This object can vary depending upon how you called a function.</p>
@@ -217,7 +216,6 @@ if (!doNotTrack) {
 <li>Where call() and apply() execute a function immediately, bind() returns a bound function which can be executed later.</li>
 </ol>
 <p>Now that we have understood the basic usage of these prototype functions, let&rsquo;s look at their syntax and practical usage with example.</p>
-<br/>
 <h1 id="call">call()</h1>
 <hr>
 <h3 id="syntax">Syntax</h3>
@@ -323,7 +321,6 @@ Start the aircraft
 
 <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dialog</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Dialog</span>(<span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">200</span>, <span style="color:#e6db74">&#39;Title&#39;</span>);
 </code></pre></div><p>We can see in above code snippet how we can chain the constructors by calling parent constructor function in current <code>this</code> context</p>
-<br/>
 <h1 id="apply">apply()</h1>
 <hr>
 <h3 id="syntax-1">Syntax</h3>
@@ -342,8 +339,7 @@ Start the aircraft
 <p>We can pass arguments as an array using apply() function to call any function which accepts args as comma separated values.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">Math.<span style="color:#a6e22e">min</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>);           <span style="color:#75715e">//args as comma separated
 </span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">min</span>.<span style="color:#a6e22e">apply</span>([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>]);   <span style="color:#75715e">//args as an array
-</span></code></pre></div><br/>
-<h1 id="bind">bind()</h1>
+</span></code></pre></div><h1 id="bind">bind()</h1>
 <hr>
 <h3 id="syntax-2">Syntax</h3>
 <pre><code>functionName.bind(thisArg)
@@ -411,8 +407,7 @@ OK clicked
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">add5</span>(<span style="color:#ae81ff">10</span>)); <span style="color:#75715e">//b =10
 </span></code></pre></div><pre><code><div class="code_output">Output</div>
 15
-</code></pre><br/>
-<h1 id="summary">Summary</h1>
+</code></pre><h1 id="summary">Summary</h1>
 <hr>
 <p>Let&rsquo;s look at last example of this post and use call(), apply() and bind() methods all together</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">numObj1</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">num</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>};

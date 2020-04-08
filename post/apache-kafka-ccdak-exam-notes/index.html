@@ -6,9 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Apache Kafka CCDAK Exam Notes - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Exam notes for the preparation of Apache Kafka Certification or CCDAK (Confluent Certified Developer for Apache Kafka)">
+	<meta name="description" content="Study guide for Kafka Certification CCDAK (Certified Developer for Apache Kafka) and CCOAK (Certified Operator for Apache Kafka) preparation with sample exam questions.">
 	<meta property="og:title" content="Apache Kafka CCDAK Exam Notes" />
-<meta property="og:description" content="Exam notes for the preparation of Apache Kafka Certification or CCDAK (Confluent Certified Developer for Apache Kafka)" />
+<meta property="og:description" content="Study guide for Kafka Certification CCDAK (Certified Developer for Apache Kafka) and CCOAK (Certified Operator for Apache Kafka) preparation with sample exam questions." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://codingnconcepts.com/post/apache-kafka-ccdak-exam-notes/" />
 <meta property="article:published_time" content="2019-06-13T00:00:00+00:00" />
@@ -16,7 +16,7 @@
 
 	<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Apache Kafka CCDAK Exam Notes"/>
-<meta name="twitter:description" content="Exam notes for the preparation of Apache Kafka Certification or CCDAK (Confluent Certified Developer for Apache Kafka)"/>
+<meta name="twitter:description" content="Study guide for Kafka Certification CCDAK (Certified Developer for Apache Kafka) and CCOAK (Certified Operator for Apache Kafka) preparation with sample exam questions."/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -139,7 +139,7 @@ if (!doNotTrack) {
 		<nav id="TableOfContents">
   <ul>
     <li><a href="#exam-preparation">Exam Preparation</a></li>
-    <li><a href="#exam-questions-from-ccdak">Exam Questions from CCDAK</a></li>
+    <li><a href="#sample-exam-questions">Sample Exam Questions</a></li>
     <li><a href="#exam-notes">Exam Notes</a>
       <ul>
         <li></li>
@@ -245,7 +245,7 @@ if (!doNotTrack) {
 </ul>
 </li>
 </ol>
-<h2 id="exam-questions-from-ccdak">Exam Questions from CCDAK</h2>
+<h2 id="sample-exam-questions">Sample Exam Questions</h2>
 <hr>
 <ol>
 <li>Kafka Theory</li>
@@ -277,12 +277,12 @@ if (!doNotTrack) {
 <h6 id="rack">Rack</h6>
 <h6 id="broker">Broker</h6>
 <ul>
-<li>Every broker in Kafka is a &ldquo;bootstrap server&rdquo; which knows about all brokers, topics and partitions (metadata) that means Kafka client (e.g. producer,consumer etc) only need to connect to one broker in order to connect to entire cluster.</li>
+<li>Every broker in Kafka is a <strong>bootstrap server</strong> which knows about all brokers, topics and partitions (metadata) that means Kafka client (e.g. producer,consumer etc) only need to connect to one broker in order to connect to entire cluster.</li>
 <li>At all times, only one broker should be the controller, and one broker must always be the controller in the cluster</li>
 </ul>
 <h6 id="topic">Topic</h6>
 <ul>
-<li>Kafka takes bytes as input without even loading them into memory (that&rsquo;s called zero copy)</li>
+<li>Kafka takes bytes as input without even loading them into memory (that&rsquo;s called <strong>zero copy</strong>)</li>
 <li>Brokers have defaults for all the topic configuration parameters</li>
 </ul>
 <h6 id="partition">Partition</h6>
@@ -294,25 +294,25 @@ if (!doNotTrack) {
 </ul>
 <h4 id="segment">Segment</h4>
 <ul>
-<li>Partitions are made of segments (<em><strong>.log</strong></em> files)</li>
+<li>Partitions are made of segments (<strong>.log</strong> files)</li>
 <li>At a time only one segment is active in a partition</li>
-<li><strong>log.segment.bytes</strong> = 1 GB (default) Max size of a single segment in bytes</li>
-<li><strong>log.segment.ms</strong> = 1 week (default) Time kafka will wait before closing the segment if not full</li>
+<li><strong>log.segment.bytes = 1 GB (default)</strong>, Max size of a single segment in bytes</li>
+<li><strong>log.segment.ms = 1 week (default)</strong>, Time kafka will wait before closing the segment if not full</li>
 <li>Segment come with two indexes (files):-
 <ol>
-<li>An offset to position index (<em><strong>.index</strong></em>file): Allows kafka where to read to find a message</li>
-<li>A timestamp to offset index (<em><strong>.timeindex</strong></em> file): Allows kafka to find a message with a timestamp</li>
+<li>An offset to position index (<strong>.index</strong> file): Allows kafka where to read to find a message</li>
+<li>A timestamp to offset index (<strong>.timeindex</strong> file): Allows kafka to find a message with a timestamp</li>
 </ol>
 </li>
-<li><strong>log.cleanup.policy</strong> = delete (Kafka default for all user topics) Delete data based on age of data (default is 1 week)</li>
-<li><strong>log.cleanup.policy</strong> = compact Delete based on keys of your messages. Will delete old duplicate keys after the active segment is committed. (Kafka default  for topic __consumer_offsets)</li>
+<li><strong>log.cleanup.policy = delete</strong> (Kafka default for all user topics), Delete data based on age of data (default is 1 week)</li>
+<li><strong>log.cleanup.policy = compact</strong>, Delete based on keys of your messages. Will delete old duplicate keys after the active segment is committed. (Kafka default for topic __consumer_offsets)</li>
 <li>Log cleanup happen on partition segments. Smaller/more segments means the log cleanup will happen more often!</li>
 <li>The cleaner checks for work every 15 seconds (log.cleaner.backoff.ms)</li>
-<li><strong>log.retention.hours</strong> = 1 week (default) number of hours to keep data for</li>
-<li><strong>log.retention.bytes</strong> = -1 (infinite default) max size in bytes for each partition</li>
-<li>Old segments will be deleted based on log.retention.hours or log.retention.bytes rule</li>
+<li><strong>log.retention.hours = 1 week (default)</strong>, number of hours to keep data for</li>
+<li><strong>log.retention.bytes = -1 (infinite default)</strong>, max size in bytes for each partition</li>
+<li>Old segments will be deleted based on <strong>log.retention.hours</strong> or <strong>log.retention.bytes</strong> rule</li>
 <li>The offset of message is immutable.</li>
-<li>Deleted records can still be seen by consumers for a period of delete.retention.ms=24 hours (default)</li>
+<li>Deleted records can still be seen by consumers for a period of <strong>delete.retention.ms=24 hours (default)</strong></li>
 </ul>
 <h6 id="offset">Offset</h6>
 <ul>
@@ -321,14 +321,14 @@ if (!doNotTrack) {
 <h6 id="topic-replication">Topic Replication</h6>
 <ul>
 <li>Replication factor = 3 and partition = 2 means there will be total 6 partition distributed across Kafka cluster. Each partition will be having 1 leader and 2 ISR (in-sync replica).</li>
-<li>Broker contains leader partition called leader of that partition and only leader can receive and serve data for partition.</li>
+<li>Broker contains leader partition called <strong>leader</strong> of that partition and only leader can receive and serve data for partition.</li>
 <li>Replication factor can not be greater then number of broker in the kafka cluster. If topic is having a replication factor of 3 then each partition will live on 3 different brokers.</li>
 </ul>
 <h6 id="producer">Producer</h6>
 <ul>
 <li>Automatically recover from errors: LEADER_NOT_AVAILABLE, NOT_LEADER_FOR_PARTITION, REBALANCE_IN_PROGRESS</li>
 <li>Non retriable errors: MESSAGE_TOO_LARGE</li>
-<li>When produce to a topic which doesn&rsquo;t exist and auto.create.topic.enable=true then kafka creates the topic automatically with the broker/topic settings num.partition and default.replication.factor</li>
+<li>When produce to a topic which doesn&rsquo;t exist and <strong>auto.create.topic.enable=true</strong> then kafka creates the topic automatically with the broker/topic settings <strong>num.partition</strong> and <strong>default.replication.factor</strong></li>
 </ul>
 <h6 id="producer-acknowledgment">Producer Acknowledgment</h6>
 <ul>
@@ -341,31 +341,31 @@ if (!doNotTrack) {
 <li>
 <p><strong>acks=all</strong> Producer wait for leader+replica ack (no data loss)</p>
 <p>acks=all must be used in conjunction with min.insync.replicas (can be set at broker or topic level)
-min.insync.replica=2 implies that at least 2 brokers that are ISR(including leader) must acknowledge
-e.g. replication.factor=3, min.insync.replicas=2,acks=all can only tolerate 1 broker going down, otherwise the producer will receive an exception NOT_ENOUGH_REPLICAS on send</p>
+min.insync.replica=2 implies that at least 2 brokers that are ISR (including leader) must acknowledge
+e.g. replication.factor=3, min.insync.replicas=2, acks=all can only tolerate 1 broker going down, otherwise the producer will receive an exception NOT_ENOUGH_REPLICAS on send</p>
 </li>
 </ul>
 <h6 id="safe-producer-config">Safe Producer Config</h6>
 <ul>
-<li>min.insync.replicas=2 (set at broker or topic level)</li>
-<li>retries=MAX_INT: number of reties by producer in case of transient failure/exception. (default is 0)</li>
-<li>max.in.flight.per.connection number=5: number of producer request can be made in parallel (default is 5)</li>
-<li>acks=all</li>
-<li>enable.idempotence=true: producer send producerId with each message to identify for duplicate msg at kafka end. When kafka receives duplicate message with same producerId which it already committed. It do not commit it again and send ack to producer (default is false)</li>
+<li><strong>min.insync.replicas=2</strong> (set at broker or topic level)</li>
+<li><strong>retries=MAX_INT</strong> number of reties by producer in case of transient failure/exception. (default is 0)</li>
+<li><strong>max.in.flight.per.connection number=5</strong> number of producer request can be made in parallel (default is 5)</li>
+<li><strong>acks=all</strong></li>
+<li><strong>enable.idempotence=true</strong> producer send producerId with each message to identify for duplicate msg at kafka end. When kafka receives duplicate message with same producerId which it already committed. It do not commit it again and send ack to producer (default is false)</li>
 </ul>
 <h6 id="high-throughput-producer-using-compression-and-batching">High Throughput Producer using compression and batching</h6>
 <ul>
-<li>compression.type=snappy: value can be none(default), gzip, lz4, snappy. Compression is enabled at the producer level and doesn&rsquo;t require any config change in broker or consumer Compression is more effective in case of bigger batch of messages being sent to kafka</li>
-<li>linger.ms=20:Number of millisecond a producer is willing to wait before sending a batch out. (default 0). Increase linger.ms value increase the chance of batching.</li>
-<li>batch.size=32KB or 64KB: Maximum number of bytes that will be included in a batch (default 16KB). Any message bigger than the batch size will not be batched</li>
+<li><strong>compression.type=snappy</strong> value can be none(default), gzip, lz4, snappy. Compression is enabled at the producer level and doesn&rsquo;t require any config change in broker or consumer Compression is more effective in case of bigger batch of messages being sent to kafka</li>
+<li><strong>linger.ms=20</strong> Number of millisecond a producer is willing to wait before sending a batch out. (default 0). Increase linger.ms value increase the chance of batching.</li>
+<li><strong>batch.size=32KB or 64KB</strong> Maximum number of bytes that will be included in a batch (default 16KB). Any message bigger than the batch size will not be batched</li>
 </ul>
 <h6 id="message-key">Message Key</h6>
 <ul>
 <li>Producer can choose to send a key with message.</li>
-<li>If key= null, data is send in round robin</li>
+<li>If key = null, data is send in round robin</li>
 <li>If key is sent, then all message for that key will always go to same partition. This can be used to order the messages for a specific key since order is guaranteed in same partition.</li>
 <li>Adding a partition to the topic will loose the guarantee of same key go to same partition.</li>
-<li>Keys are hashed using &ldquo;murmur2&rdquo; algorithm by default.</li>
+<li>Keys are hashed using <strong>murmur2</strong> algorithm by default.</li>
 </ul>
 <h6 id="consumer">Consumer</h6>
 <ul>
@@ -374,50 +374,90 @@ e.g. replication.factor=3, min.insync.replicas=2,acks=all can only tolerate 1 br
 </ul>
 <h6 id="consumer-group">Consumer Group</h6>
 <h6 id="consumer-offset">Consumer Offset</h6>
-<p>When consumer in a group has processed the data received from Kafka, it commits the offset in Kafka topic named _consumer_offset which is used when a consumer dies, it will be able to read back from where it left off.</p>
+<p>When consumer in a group has processed the data received from Kafka, it commits the offset in Kafka topic named <strong>_consumer_offset</strong> which is used when a consumer dies, it will be able to read back from where it left off.</p>
 <h6 id="delivery-semantics">Delivery Semantics</h6>
-<p>At most once : Offset are committed as soon as message batch is received. If the processing goes wrong, the message will be lost (it won&rsquo;t be read again)
-At least once (default): Offset are committed after the message is processed.If the processing goes wrong, the message will be read again. This can result in duplicate processing of message. Make sure your processing is idempotent. (i.e. re-processing the message won&rsquo;t impact your systems). For most of the application, we use this and ensure processing are idempotent.
-Exactly once: Can only be achieved for Kafka=&gt;Kafka workflows using Kafka Streams API. For Kafka=&gt;Sink workflows, use an idempotent consumer.</p>
+<ul>
+<li>
+<p><strong>At most once</strong> Offset are committed as soon as message batch is received. If the processing goes wrong, the message will be lost (it won&rsquo;t be read again)</p>
+</li>
+<li>
+<p><strong>At least once (default)</strong> Offset are committed after the message is processed. If the processing goes wrong, the message will be read again. This can result in duplicate processing of message.</p>
+<p>Make sure your processing is idempotent. (i.e. re-processing the message won&rsquo;t impact your systems). For most of the application, we use this and ensure processing are idempotent.</p>
+</li>
+<li>
+<p><strong>Exactly once</strong> Can only be achieved for Kafka=&gt;Kafka workflows using Kafka Streams API. For Kafka=&gt;Sink workflows, use an idempotent consumer.</p>
+</li>
+</ul>
 <h6 id="consumer-offset-commit-strategy">Consumer Offset commit strategy</h6>
-<p>enable.auto.commit=true &amp; synchronous processing of batches: with auto commit, offset will be committed automatically for you at regular interval (auto.commit.interval.ms=5000 by default) every time you call .poll(). If you don&rsquo;t use synchronous processing, you will be in &ldquo;at most once&rdquo; behavior because offsets will be committed before your data is processed.
-enable.auto.commit=false &amp; manual commit of offsets (recommended)</p>
+<ul>
+<li>
+<p><strong>enable.auto.commit=true &amp; synchronous processing of batches</strong> with auto commit, offset will be committed automatically for you at regular interval (auto.commit.interval.ms=5000 by default) every time you call .poll(). If you don&rsquo;t use synchronous processing, you will be in &ldquo;at most once&rdquo; behavior because offsets will be committed before your data is processed.</p>
+</li>
+<li>
+<p><strong>enable.auto.commit=false &amp; manual commit of offsets (recommended)</strong></p>
+</li>
+</ul>
 <h6 id="consumer-offset-reset-behavior">Consumer Offset reset behavior</h6>
-<p>auto.offset.reset=latest: will read from the end of the log
-auto.offset.reset=earliest: will read from the start of the log
-auto.offset.reset=none: will throw exception of no offset is found
-Consumer offset can be lost if hasn&rsquo;t read new data in 7 days. This can be controlled by broker setting offset.retention.minutes</p>
+<ul>
+<li><strong>auto.offset.reset=latest</strong> will read from the end of the log</li>
+<li><strong>auto.offset.reset=earliest</strong> will read from the start of the log</li>
+<li><strong>auto.offset.reset=none</strong> will throw exception of no offset is found</li>
+<li>Consumer offset can be lost if hasn&rsquo;t read new data in 7 days. This can be controlled by broker setting offset.retention.minutes</li>
+</ul>
 <h6 id="consumer-poll-behavior">Consumer Poll Behavior</h6>
-<p>fetch.min.bytes = 1 (default): Control how much data you want to pull at least on each request. Help improving throughput and decreasing request number. At the cost of latency.
-max.poll.records = 500 (default): Controls how many records to receive per poll request. Increase if your messages are very small and have a lot of available RAM.
-max.partition.fetch.bytes = 1MB (default): Maximum data returned by broker per partition. If you read from 100 partition, you will need a lot of memory (RAM)
-fetch.max.bytes = 50MB (default): Maximum data returned for each fetch request (covers multiple partition). Consumer performs multiple fetches in parallel.</p>
+<ul>
+<li><strong>fetch.min.bytes = 1 (default)</strong>, Control how much data you want to pull at least on each request. Help improving throughput and decreasing request number. At the cost of latency.</li>
+<li><strong>max.poll.records = 500 (default)</strong>, Controls how many records to receive per poll request. Increase if your messages are very small and have a lot of available RAM.</li>
+<li><strong>max.partition.fetch.bytes = 1MB (default)</strong>, Maximum data returned by broker per partition. If you read from 100 partition, you will need a lot of memory (RAM)</li>
+<li><strong>fetch.max.bytes = 50MB (default)</strong>, Maximum data returned for each fetch request (covers multiple partition). Consumer performs multiple fetches in parallel.</li>
+</ul>
 <h6 id="consumer-heartbeat-thread">Consumer Heartbeat Thread</h6>
-<p>Heartbeat mechanism is used to detect if consumer application in dead.
-session.timeout.ms=10 seconds (default) If heartbeat is not sent in 10 second period, the consumer is considered dead. Set lower value to faster consumer rebalances
-heartbeat.interval.ms=3 seconds (default) Heartbeat is sent in every 3 seconds interval. Usually 1/3rd of session.timeout.ms</p>
+<ul>
+<li>Heartbeat mechanism is used to detect if consumer application in dead.</li>
+<li><strong>session.timeout.ms=10s (default)</strong>, If heartbeat is not sent in 10 second period, the consumer is considered dead. Set lower value to faster consumer rebalances</li>
+<li><strong>heartbeat.interval.ms=3s (default)</strong>, Heartbeat is sent in every 3 seconds interval. Usually 1/3rd of session.timeout.ms</li>
+</ul>
 <h6 id="consumer-poll-thread">Consumer Poll Thread</h6>
-<p>Poll mechanism is also used to detect if consumer application is dead.
-max.poll.interval.ms = 5 minute (default) Max amount of time between two .poll() calls before declaring consumer dead. If processing of message batch takes more time in general in application then should increase the interval.</p>
+<ul>
+<li>Poll mechanism is also used to detect if consumer application is dead.</li>
+<li><strong>max.poll.interval.ms = 5min (default)</strong>, Max amount of time between two .poll() calls before declaring consumer dead. If processing of message batch takes more time in general in application then should increase the interval.</li>
+</ul>
 <h6 id="kafka-guarantees">Kafka Guarantees</h6>
-<p>Messages are appended to a topic-partition in the order they are sent
-Consumer read the messages in the order stored in topic-partition
-With a replication factor of N, producers and consumers can tolerate upto N-1 brokers being down
-As long as number of partitions remains constant for a topic ( no new partition), the same key will always go to same partition</p>
+<ul>
+<li>Messages are appended to a topic-partition in the order they are sent</li>
+<li>Consumer read the messages in the order stored in topic-partition</li>
+<li>With a replication factor of N, producers and consumers can tolerate upto N-1 brokers being down</li>
+<li>As long as number of partitions remains constant for a topic ( no new partition), the same key will always go to same partition</li>
+</ul>
 <h6 id="client-bi-directional-compatibility">Client Bi-Directional Compatibility</h6>
-<p>an Older client (1.1) can talk to Newer broker (2.0)
-a Newer client (2.0) can talk to Older broker (1.1)</p>
+<ul>
+<li>an Older client (1.1) can talk to Newer broker (2.0)</li>
+<li>a Newer client (2.0) can talk to Older broker (1.1)</li>
+</ul>
 <h6 id="kafka-connect">Kafka Connect</h6>
-<p>Source connect: Get data from common data source to Kafka
-Sink connect: Publish data from Kafka to common data source</p>
+<ul>
+<li><strong>Source connect</strong> Get data from common data source to Kafka</li>
+<li><strong>Sink connect</strong> Publish data from Kafka to common data source</li>
+</ul>
 <h6 id="zookeeper">Zookeeper</h6>
-<p>ZooKeeper servers will be deployed on multiple nodes. This is called an ensemble. An ensemble is a set of 2n + 1 ZooKeeper servers where n is any number greater than 0. The odd number of servers allows ZooKeeper to perform majority elections for leadership. At any given time, there can be up to n failed servers in an ensemble and the ZooKeeper cluster will keep quorum. If at any time, quorum is lost, the ZooKeeper cluster will go down.
-In Zookeeper multi-node configuration, initLimit and syncLimit are used to govern how long following ZooKeeper servers can take to initialize with the current leader and how long they can be out of sync with the leader.
-If tickTime=2000, initLimit=5 and syncLimit=2 then a follower can take (tickTime<em>initLimit) = 10000ms to initialize and may be out of sync for up to (tickTime</em>syncLimit) = 4000ms
-In Zookeeper multi-node configuration, The server.* properties set the ensemble membership. The format is server.<myid>=<hostname>:<leaderport>:<electionport>. Some explanation:
-myid is the server identification number. In this example, there are three servers, so each one will have a different myid with values 1, 2, and 3 respectively. The myid is set by creating a file named myid in the dataDir that contains a single integer in human readable ASCII text. This value must match one of the myid values from the configuration file. If another ensemble member has already been started with a conflicting myid value, an error will be thrown upon startup.
-leaderport is used by followers to connect to the active leader. This port should be open between all ZooKeeper ensemble members.
-electionport is used to perform leader elections between ensemble members. This port should be open between all ZooKeeper ensemble members.</p>
+<ul>
+<li>
+<p>ZooKeeper servers will be deployed on multiple nodes. This is called an ensemble. An ensemble is a set of 2n + 1 ZooKeeper servers where n is any number greater than 0. The odd number of servers allows ZooKeeper to perform majority elections for leadership. At any given time, there can be up to n failed servers in an ensemble and the ZooKeeper cluster will keep quorum. If at any time, quorum is lost, the ZooKeeper cluster will go down.</p>
+</li>
+<li>
+<p>In Zookeeper multi-node configuration, <strong>initLimit</strong> and <strong>syncLimit</strong> are used to govern how long following ZooKeeper servers can take to initialize with the current leader and how long they can be out of sync with the leader.
+If tickTime=2000, initLimit=5 and syncLimit=2 then a follower can take (tickTime<em>initLimit) = 10000ms to initialize and may be out of sync for up to (tickTime</em>syncLimit) = 4000ms</p>
+</li>
+<li>
+<p>In Zookeeper multi-node configuration, The server.* properties set the ensemble membership. The format is</p>
+<p><b>server.&lt;myid&gt;=&lt;hostname&gt;:&lt;leaderport&gt;:&lt;electionport&gt;</b>, where:</p>
+<ul>
+<li><strong>myid</strong> is the server identification number. In this example, there are three servers, so each one will have a different myid with values 1, 2, and 3 respectively. The myid is set by creating a file named myid in the dataDir that contains a single integer in human readable ASCII text. This value must match one of the myid values from the configuration file. If another ensemble member has already been started with a conflicting myid value, an error will be thrown upon startup.</li>
+<li><strong>leaderport</strong> is used by followers to connect to the active leader. This port should be open between all ZooKeeper ensemble members.</li>
+<li><strong>electionport</strong> is used to perform leader elections between ensemble members. This port should be open between all ZooKeeper ensemble members.</li>
+</ul>
+</li>
+</ul>
 <h2 id="kafka-cli">KAFKA CLI</h2>
 <hr>
 <ol>
@@ -721,7 +761,7 @@ windowing
       
       
       <li>
-        <a href="whatsapp://send?text=Apache%20Kafka%20CCDAK%20Exam%20Notes%2c%20by%20Coding%20N%20Concepts%0aExam%20notes%20for%20the%20preparation%20of%20Apache%20Kafka%20Certification%20or%20CCDAK%20%28Confluent%20Certified%20Developer%20for%20Apache%20Kafka%29%0a%0ahttp%3a%2f%2fcodingnconcepts.com%2fpost%2fapache-kafka-ccdak-exam-notes%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=Apache%20Kafka%20CCDAK%20Exam%20Notes%2c%20by%20Coding%20N%20Concepts%0aStudy%20guide%20for%20Kafka%20Certification%20CCDAK%20%28Certified%20Developer%20for%20Apache%20Kafka%29%20and%20CCOAK%20%28Certified%20Operator%20for%20Apache%20Kafka%29%20preparation%20with%20sample%20exam%20questions.%0a%0ahttp%3a%2f%2fcodingnconcepts.com%2fpost%2fapache-kafka-ccdak-exam-notes%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>Email</p>
         </a>
@@ -731,7 +771,7 @@ windowing
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - Apache%20Kafka%20CCDAK%20Exam%20Notes.&amp;body=Apache%20Kafka%20CCDAK%20Exam%20Notes%2c%20by%20Coding%20N%20Concepts%0aExam%20notes%20for%20the%20preparation%20of%20Apache%20Kafka%20Certification%20or%20CCDAK%20%28Confluent%20Certified%20Developer%20for%20Apache%20Kafka%29%0a%0ahttp%3a%2f%2fcodingnconcepts.com%2fpost%2fapache-kafka-ccdak-exam-notes%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - Apache%20Kafka%20CCDAK%20Exam%20Notes.&amp;body=Apache%20Kafka%20CCDAK%20Exam%20Notes%2c%20by%20Coding%20N%20Concepts%0aStudy%20guide%20for%20Kafka%20Certification%20CCDAK%20%28Certified%20Developer%20for%20Apache%20Kafka%29%20and%20CCOAK%20%28Certified%20Operator%20for%20Apache%20Kafka%29%20preparation%20with%20sample%20exam%20questions.%0a%0ahttp%3a%2f%2fcodingnconcepts.com%2fpost%2fapache-kafka-ccdak-exam-notes%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>

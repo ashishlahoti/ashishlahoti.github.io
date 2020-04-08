@@ -144,8 +144,7 @@ if (!doNotTrack) {
 <li>In a DOM event, <code>this</code> refers to the <strong>element</strong> that received the event.</li>
 <li>Function prototype methods call(), apply() and bind() can be used to refer <code>this</code> to <strong>any object</strong>.</li>
 </ul>
-<p><br /></p>
-<h1 id="this-in-a-method"><code>this</code> in a Method</h1>
+<h2 id="this-in-a-method"><code>this</code> in a Method</h2>
 <hr>
 <p>When you execute a method of an object, <code>this</code> refers to the object where method is defined.</p>
 <p>In the below example <code>this</code> refers to the <code>person</code> object since <code>fullName()</code> method is defined inside <code>person</code> object.</p>
@@ -171,8 +170,7 @@ if (!doNotTrack) {
 </span></code></pre></div><pre><code><div class="code_output">Output</div>
 2
 3
-</code></pre><p><br /></p>
-<h1 id="this-alone"><code>this</code> Alone</h1>
+</code></pre><h2 id="this-alone"><code>this</code> Alone</h2>
 <hr>
 <p>When you use <code>this</code> alone, it refers to global object</p>
 <p>Let&rsquo;s try what is the value of <code>this</code> when used alone:</p>
@@ -181,8 +179,7 @@ if (!doNotTrack) {
 Window {parent: Window, opener: null, top: Window, length: 4, frames: Window, …}
 </code></pre><p>We see that <code>this</code> refers to <code>Window</code> object, which is global object of browser.</p>
 <p><strong>Remember:</strong> In strict mode, when used alone, <code>this</code> also refers to the global object.</p>
-<p><br /></p>
-<h1 id="this-in-a-function-default"><code>this</code> in a Function (default)</h1>
+<h2 id="this-in-a-function-default"><code>this</code> in a Function (default)</h2>
 <hr>
 <p>For a function (which is at top level or not inside any function), <code>this</code> refers to global object.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">topLevelFunction</span>(){
@@ -191,8 +188,7 @@ Window {parent: Window, opener: null, top: Window, length: 4, frames: Window, 
 
 <span style="color:#a6e22e">topLevelFunction</span>(); <span style="color:#75715e">//this = window
 </span></code></pre></div><p>In the above case <code>this</code> refers to the global object <code>window</code> of browser</p>
-<p><br /></p>
-<h1 id="this-in-a-function-strict"><code>this</code> in a Function (strict)</h1>
+<h2 id="this-in-a-function-strict"><code>this</code> in a Function (strict)</h2>
 <hr>
 <p>However, for a function (which is at top level or not inside any function) in <code>strict mode</code>, <code>this</code> refers to <code>undefined</code></p>
 <p>Look at the below example where <code>this</code> refers to <code>undefined</code> in strict mode function:</p>
@@ -212,8 +208,7 @@ Window {parent: Window, opener: null, top: Window, length: 4, frames: Window, 
 <span style="color:#a6e22e">increment</span>(); <span style="color:#75715e">//this = undefined
 </span></code></pre></div><pre><code><div class="code_output">Output</div>
 Uncaught TypeError: Cannot read property 'a' of undefined
-</code></pre><p><br /></p>
-<h1 id="this-with-new"><code>this</code> with new</h1>
+</code></pre><h2 id="this-with-new"><code>this</code> with new</h2>
 <hr>
 <p>When a function is called using <code>new</code> keyword, then the function is known as a constructor function and returns a new object. In this case, <code>this</code> refers to a newly created object.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">Person</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">firstName</span>, <span style="color:#a6e22e">lastName</span>){
@@ -232,8 +227,7 @@ Uncaught TypeError: Cannot read property 'a' of undefined
 </span></code></pre></div><pre><code><div class="code_output">Output</div>
 Albert Einstein
 Isaac Newton
-</code></pre><p><br /></p>
-<h1 id="this-with-explicit-binding"><code>this</code> with Explicit binding</h1>
+</code></pre><h2 id="this-with-explicit-binding"><code>this</code> with Explicit binding</h2>
 <hr>
 <p>Function has call(), apply() and bind() prototype methods which can be called on function to change the context of <code>this</code> explictly.</p>
 <p>Let&rsquo;s look at these methods one by one and also see the differences</p>
@@ -248,7 +242,7 @@ Isaac Newton
 <blockquote>
 <p><strong>Remember:</strong> “call() arguments are separated by commas”.</p>
 </blockquote>
-<h2 id="apply">apply()</h2>
+<h3 id="apply">apply()</h3>
 <pre><code>ƒ.apply(this, [arg1, arg2, ...]) 
 </code></pre>
 <p>When a function is called using apply() method,</p>
@@ -259,7 +253,7 @@ Isaac Newton
 <blockquote>
 <p><strong>Remember:</strong> “apply() accepts arguments as an Array”</p>
 </blockquote>
-<h2 id="bind">bind()</h2>
+<h3 id="bind">bind()</h3>
 <pre><code>ƒ.bind(this)
 </code></pre>
 <p>When a function is called using bind() method</p>

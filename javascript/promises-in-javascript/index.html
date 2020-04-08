@@ -134,18 +134,15 @@ if (!doNotTrack) {
 </div></div>
 		</header><div class="content post__content clearfix">
 			<p>Promises are introduced natively in ES6. They are very similar to our promises. As we keep or break our promises, Javascript promises are also either resolve or reject. In this post we will talk about why we should use promises, promise syntax, promise states and its practical usage with examples using fetch API.</p>
-<p><br /></p>
 <h2 id="why-promises">Why Promises?</h2>
 <p>In earlier days, you would have used <strong>callbacks</strong> to handle asynchronous operations. However, callbacks have limited functionality and often leads to unmanageable code if you are handling multiple async calls, it leads to heavily nested callback code which is also known as <strong>callback hell</strong>.</p>
 <p>Promises were introduced to improve code readability and better handling of async calls and errors.</p>
-<p><br /></p>
 <h2 id="promise-syntax">Promise Syntax</h2>
 <p>Let&rsquo;s look at the syntax of simple promise object.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">promise</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) {
   <span style="color:#75715e">// asynchronous call
 </span><span style="color:#75715e"></span>});
 </code></pre></div><p>Promise takes a callback function as an argument and that callback function takes two arguments — the first is a <strong>resolve</strong> function, and the second one is a <strong>reject</strong> function. A promise can either be <em>fulfilled</em> with a value or <em>rejected</em> with a reason (error).</p>
-<p><br /></p>
 <h2 id="promise-states">Promise States</h2>
 <p>A promise object has one of three states:</p>
 <ul>
@@ -157,7 +154,6 @@ if (!doNotTrack) {
     <img src="/img/javascript/promise-states.svg"/> 
 </figure>
 
-<p><br /></p>
 <h2 id="usage">Usage</h2>
 <p>We generally use async calls using fetch API to get data from the <em>HTTP</em> endpoints. Let&rsquo;s look at the example, how promises can be used in such case.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//create a promise object
@@ -182,8 +178,7 @@ if (!doNotTrack) {
 .<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">error</span> =&gt; {
   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">error</span>);
 });
-</code></pre></div><p><br /></p>
-<h2 id="chained-promises">Chained Promises</h2>
+</code></pre></div><h2 id="chained-promises">Chained Promises</h2>
 <p>Promise chaining comes into play when you have to use output of one async call as input of another async call. You can chain multiple promises in this case.</p>
 <p>Let’s look at the below example where we first fetch users list using <code>getUser</code> async call then chain it with <code>getPosts</code> by passing userId.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//create a common getData function
@@ -229,8 +224,7 @@ if (!doNotTrack) {
     length: 10
   ➤ __proto__: Array(0)
 
-</code></pre><p><br /></p>
-<h2 id="promiseall">Promise.all()</h2>
+</code></pre><h2 id="promiseall">Promise.all()</h2>
 <p>Promise.all() is useful when you want to execute multiple async calls and wait for all of them to finish and get collective output.</p>
 <p>Promise.all() takes an array of promises and return an array of the results in the same sequence of promises. It throws an exception if any one of the async call fails.</p>
 <p>Let’s look at the below example, where we fetch the result of three async calls <code>getUsers</code>, <code>getPosts</code> and <code>getComments</code> all together.</p>
@@ -264,8 +258,7 @@ if (!doNotTrack) {
   ➤ 2: (500) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, …]
     length: 3
   ➤ __proto__: Array(0)
-</code></pre><p><br /></p>
-<h2 id="promiseallsettled">Promise.allSettled()</h2>
+</code></pre><h2 id="promiseallsettled">Promise.allSettled()</h2>
 <p>Promise.allSettled() is similar to Promise.all() to execute multiple async calls. The only difference between these two,</p>
 <ul>
 <li>Promise.all() is either all resolve or any reject, means if any async call fails, it returns an error.</li>
@@ -306,8 +299,7 @@ if (!doNotTrack) {
   ➤ 2: {status: &quot;fulfilled&quot;, value: Array(500)}
     length: 3
   ➤ __proto__: Array(0)
-</code></pre><p><br /></p>
-<h2 id="promiserace">Promise.race()</h2>
+</code></pre><h2 id="promiserace">Promise.race()</h2>
 <p>Promise.race() is useful when you are interested in fetching data from any one of the async call out of multiple async calls, whichever resolve first.</p>
 <p>Look at the below example where we are interested in any data out of <code>getTodos</code>, <code>getUsers</code> and <code>getComments</code>, whichever resolves first. In our case <code>getUsers</code> resolved first and returned user list.</p>
 <p>Please note that if you execute the same code snippet again and again, result might differ based on network connectivity and which one resolve first.</p>
@@ -349,8 +341,7 @@ if (!doNotTrack) {
   ➤ 9: {id: 10, name: &quot;Clementina DuBuque&quot;, username: &quot;Moriah.Stanton&quot;, email: &quot;Rey.Padberg@karina.biz&quot;, address: {…}, …}
     length: 10
   ➤ __proto__: Array(0)
-</code></pre><p><br /></p>
-<h2 id="summary">Summary</h2>
+</code></pre><h2 id="summary">Summary</h2>
 <p>It is always better to use Promises over callback functions as Promises has a lot to offer in terms of,</p>
 <ul>
 <li>Resolve a successful anyc call response using <code>Promise.resolve(response)</code></li>

@@ -133,8 +133,7 @@ if (!doNotTrack) {
 	</span>
 </div></div>
 		</header><div class="content post__content clearfix">
-			<p>Async functions and Await keyword are latest additions in JavaSCript as part of ECMAScript 2017 release which introduced a new way of writing asynchronous functions. In this post we will talk about why we should use async/wait, its syntax and practical usage with example.</p>
-<p><br /></p>
+			<p>Async functions and Await keyword are latest additions in JavaScript as part of ECMAScript 2017 release which introduced a new way of writing asynchronous functions. In this post we will talk about why we should use async/wait, its syntax and practical usage with example.</p>
 <h2 id="why-asyncawait">Why Async/Await?</h2>
 <p>In earlier days, you would have used <strong>callbacks</strong> to handle asynchronous operations. However, callbacks have limited functionality and often leads to unmanageable code if you are handling multiple async calls, it leads to heavily nested callback code which is also known as <strong>callback hell</strong>.</p>
 <p>Later, <strong>Promises</strong> were introduced in ES6 to overcome the problems of callback functions and improved code readability. Finally <strong>Async/Await</strong> introduced in ES2017, which are nothing but the syntactic improved version of promises. Its underlying is Promise with improved syntax which provides,</p>
@@ -147,7 +146,6 @@ if (!doNotTrack) {
 <blockquote>
 <p>Also read <a href="http://codingnconcepts.com/javascript/promises-in-javascript/">this post for more details on promises in javascript</a></p>
 </blockquote>
-<p><br /></p>
 <h2 id="syntax">Syntax</h2>
 <h3 id="async">async</h3>
 <p>When <code>async</code> keyword is applied before a function, it turns into asynchronous function and always return a promise object.</p>
@@ -185,8 +183,7 @@ Hello
   let value = await promise; <span class="code_error">ⓧ Uncaught SyntaxError: await is only valid in async function</span>
   return value;
 }
-</code></pre><p><br /></p>
-<h2 id="usage">Usage</h2>
+</code></pre><h2 id="usage">Usage</h2>
 <p>Let&rsquo;s see one of the practical example of getting data from multiple <em>HTTP</em> endpoints using fetch API.</p>
 <h4 id="1-create-three-promise-objects">1. Create three promise objects</h4>
 <p>We have created a common function <code>getData</code> and used this to create three parameterized promise objects <code>getUser</code>, <code>getPosts</code> and <code>getComments</code> to fetch data from their respective <em>HTTP</em> endpoint.</p>
@@ -254,8 +251,7 @@ Hello
   ➤ 4: {postId: 1, id: 5, name: &quot;vero eaque aliquid doloribus et culpa&quot;, email: &quot;Hayden@althea.biz&quot;, body: &quot;harum non quasi et ratione↵tempore iure ex volupta…ugit inventore cupiditate↵voluptates magni quo et&quot;}
     length: 5
   ➤ __proto__: Array(0)
-</code></pre><p><br /></p>
-<h2 id="summary">Summary</h2>
+</code></pre><h2 id="summary">Summary</h2>
 <p>We see that async/await are much easier to use as compare to promises.</p>
 		</div>
 		<footer class="post__footer">

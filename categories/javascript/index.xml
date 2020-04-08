@@ -17,7 +17,7 @@
       <pubDate>Sun, 05 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>http://codingnconcepts.com/javascript/async-await-in-javascript/</guid>
-      <description>&lt;p&gt;Async functions and Await keyword are latest additions in JavaSCript as part of ECMAScript 2017 release which introduced a new way of writing asynchronous functions. In this post we will talk about why we should use async/wait, its syntax and practical usage with example.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Async functions and Await keyword are latest additions in JavaScript as part of ECMAScript 2017 release which introduced a new way of writing asynchronous functions. In this post we will talk about why we should use async/wait, its syntax and practical usage with example.&lt;/p&gt;</description>
     </item>
     
     <item>
