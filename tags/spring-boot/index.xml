@@ -6,10 +6,19 @@
     <description>Recent content in Spring Boot on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingnconcepts.com/tags/spring-boot/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Configure Kafka Producer and Consumer in spring boot</title>
+      <link>http://codingnconcepts.com/spring-boot/configure-kafka-producer-and-consumer/</link>
+      <pubDate>Sat, 11 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/spring-boot/configure-kafka-producer-and-consumer/</guid>
+      <description>&lt;p&gt;This post describes how to configure Kafka producer and consumer in spring boot application and also explains how to create service classes to send and receive Kafka messages to and from configured kafka topic respectively.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>How to configure swagger in spring boot</title>

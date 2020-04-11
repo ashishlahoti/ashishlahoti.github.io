@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Configure Kafka Producer and Consumer in spring boot - Coding N Concepts</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="How to configure Kafka Producer to send messages to kafka topic and configure Kafka consumer to receive messages from kafka topic in spring boot application.">
+	<meta property="og:title" content="Configure Kafka Producer and Consumer in spring boot" />
+<meta property="og:description" content="How to configure Kafka Producer to send messages to kafka topic and configure Kafka consumer to receive messages from kafka topic in spring boot application." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://codingnconcepts.com/spring-boot/configure-kafka-producer-and-consumer/" />
+<meta property="article:published_time" content="2020-04-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-04-11T00:00:00+00:00" />
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Configure Kafka Producer and Consumer in spring boot"/>
+<meta name="twitter:description" content="How to configure Kafka Producer to send messages to kafka topic and configure Kafka consumer to receive messages from kafka topic in spring boot application."/>
+
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-160024498-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="Coding N Concepts" rel="home">
+				<div class="logo__title"><img src="/favicon-32x32.png" alt="Configure Kafka Producer and Consumer in spring boot"> Coding N Concepts</div>
+				<div class="logo__tagline">Ashish Lahoti&#39;s Technical Blog</div>
+			</a>
+		</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/java/">
+				
+				<span class="menu__text">Java</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/javascript/">
+				
+				<span class="menu__text">JavaScript</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/spring-boot/">
+				
+				<span class="menu__text">Spring Boot</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/interview-questions/">
+				
+				<span class="menu__text">Interview Questions</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/kafka/">
+				
+				<span class="menu__text">Kafka</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/puzzle/">
+				
+				<span class="menu__text">Puzzles</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About Me</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title"><img class="post__thumbnail" src="/img/logo/springboot.png" alt="Configure Kafka Producer and Consumer in spring boot"> Configure Kafka Producer and Consumer in spring boot</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2020-04-11T00:00:00Z">April 11, 2020</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/spring-boot/" rel="category">Spring Boot</a>
+	</span>
+</div></div>
+		</header><div class="content post__content clearfix">
+			<p>This post describes how to configure Kafka producer and consumer in spring boot application and also explains how to create service classes to send and receive Kafka messages to and from configured kafka topic respectively.</p>
+<h3 id="pomxml">pom.xml</h3>
+<p>First of all, if you are using maven to build your spring boot project then add <strong>org.springframework.kafka</strong> dependency in <strong>pom.xml</strong> as highlighted below:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+<span style="color:#f92672">&lt;project</span> <span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://maven.apache.org/POM/4.0.0&#34;</span> <span style="color:#a6e22e">xmlns:xsi=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
+	<span style="color:#a6e22e">xsi:schemaLocation=</span><span style="color:#e6db74">&#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&#34;</span><span style="color:#f92672">&gt;</span>
+	<span style="color:#f92672">&lt;modelVersion&gt;</span>4.0.0<span style="color:#f92672">&lt;/modelVersion&gt;</span>
+	<span style="color:#f92672">&lt;parent&gt;</span>
+		<span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+		<span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-parent<span style="color:#f92672">&lt;/artifactId&gt;</span>
+		<span style="color:#f92672">&lt;version&gt;</span>2.1.3.RELEASE<span style="color:#f92672">&lt;/version&gt;</span>
+		<span style="color:#f92672">&lt;relativePath/&gt;</span> <span style="color:#75715e">&lt;!-- lookup parent from repository --&gt;</span>
+	<span style="color:#f92672">&lt;/parent&gt;</span>
+	<span style="color:#f92672">&lt;groupId&gt;</span>com.abc<span style="color:#f92672">&lt;/groupId&gt;</span>
+	<span style="color:#f92672">&lt;artifactId&gt;</span>springboot-kafka<span style="color:#f92672">&lt;/artifactId&gt;</span>
+	<span style="color:#f92672">&lt;version&gt;</span>0.0.1-SNAPSHOT<span style="color:#f92672">&lt;/version&gt;</span>
+	<span style="color:#f92672">&lt;name&gt;</span>springboot-kafka<span style="color:#f92672">&lt;/name&gt;</span>
+	<span style="color:#f92672">&lt;description&gt;</span>Kafka configuration for Spring Boot<span style="color:#f92672">&lt;/description&gt;</span>
+
+	<span style="color:#f92672">&lt;properties&gt;</span>
+		<span style="color:#f92672">&lt;java.version&gt;</span>1.8<span style="color:#f92672">&lt;/java.version&gt;</span>
+	<span style="color:#f92672">&lt;/properties&gt;</span>
+
+	<span style="color:#f92672">&lt;dependencies&gt;</span>
+		<span style="color:#f92672">&lt;dependency&gt;</span>
+			<span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+			<span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter<span style="color:#f92672">&lt;/artifactId&gt;</span>
+		<span style="color:#f92672">&lt;/dependency&gt;</span>
+<span style="display:block;width:100%;background-color:#3c3d38">		<span style="color:#f92672">&lt;dependency&gt;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">			<span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.kafka<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">			<span style="color:#f92672">&lt;artifactId&gt;</span>spring-kafka<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">		<span style="color:#f92672">&lt;/dependency&gt;</span>
+</span>
+		<span style="color:#f92672">&lt;dependency&gt;</span>
+			<span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+			<span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-test<span style="color:#f92672">&lt;/artifactId&gt;</span>
+			<span style="color:#f92672">&lt;scope&gt;</span>test<span style="color:#f92672">&lt;/scope&gt;</span>
+		<span style="color:#f92672">&lt;/dependency&gt;</span>
+<span style="display:block;width:100%;background-color:#3c3d38">		<span style="color:#f92672">&lt;dependency&gt;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">			<span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.kafka<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">			<span style="color:#f92672">&lt;artifactId&gt;</span>spring-kafka-test<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">			<span style="color:#f92672">&lt;scope&gt;</span>test<span style="color:#f92672">&lt;/scope&gt;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">		<span style="color:#f92672">&lt;/dependency&gt;</span>
+</span>	<span style="color:#f92672">&lt;/dependencies&gt;</span>
+
+	<span style="color:#f92672">&lt;build&gt;</span>
+		<span style="color:#f92672">&lt;plugins&gt;</span>
+			<span style="color:#f92672">&lt;plugin&gt;</span>
+				<span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+				<span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-maven-plugin<span style="color:#f92672">&lt;/artifactId&gt;</span>
+			<span style="color:#f92672">&lt;/plugin&gt;</span>
+		<span style="color:#f92672">&lt;/plugins&gt;</span>
+	<span style="color:#f92672">&lt;/build&gt;</span>
+
+<span style="color:#f92672">&lt;/project&gt;</span>
+</code></pre></div><p>Note: If you build your spring boot project using gradle then please add kafka dependency similarly.</p>
+<p><br /></p>
+<h3 id="applicationyml">application.yml</h3>
+<p>Next, add the configuration related to Kafka producer and consumer in <strong>application.yml</strong>.</p>
+<p>Things to note here,</p>
+<ul>
+<li><strong>app.topic.cosumer</strong> You can give the comma separated kafka topic names if you want consumer service to consume from multiple kafka topics</li>
+<li><strong>app.topic.producer</strong> You can give only one kafka topic name where you want producer service to publish messages</li>
+<li><strong>spring.kafka.properties.ssl</strong> If you want to configure secure SSL communication between consumer/producer and kafka server then configure key-store and trust-store otherwise remove this config.</li>
+<li><strong>spring.kafka.properties.ssl.endpoint.identification.algorithm</strong> Provide an empty string to this property if you have enabled SSL for kafka, otherwise spring boot startup throw error.</li>
+<li><strong>spring.kafka.properties.producer</strong> Kafka producer config</li>
+<li><strong>spring.kafka.properties.consumer</strong> Kafka consumer config</li>
+</ul>
+<p>Here assumption is Kafka is running as a cluster of 3 server - <em>localhost:9200, localhost:9300, localhost:9400</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e">#APP SPECIFIC CUSTOM PROPERTIES</span>
+<span style="color:#66d9ef">app</span>:
+  <span style="color:#66d9ef">topic</span>:
+    <span style="color:#66d9ef">producer</span>: &lt;PRODUCER_TOPIC_NAME<span style="color:#e6db74">&gt;
+</span><span style="color:#e6db74">    consumer: &lt;CONSUMER_TOPIC_NAME_1, CONSUMER_TOPIC_NAME_2, CONSUMER_TOPIC_NAME_3&gt;</span>
+<span style="color:#75715e">#LOGGING PROPERTIES</span>
+<span style="color:#66d9ef">logging</span>:
+  <span style="color:#66d9ef">level</span>:
+    <span style="color:#66d9ef">root</span>: DEBUG
+<span style="color:#75715e">#SPRING PROPETIES</span>
+<span style="color:#66d9ef">spring</span>:
+  <span style="color:#66d9ef">kafka</span>:
+    <span style="color:#66d9ef">properties</span>:
+      <span style="color:#75715e">#Server host name verification is disabled by setting ssl.endpoint.identification.algorithm to an empty string</span>
+      <span style="color:#66d9ef">ssl.endpoint.identification.algorithm</span>:
+    <span style="color:#66d9ef">ssl</span>:
+      <span style="color:#66d9ef">protocol</span>: SSL
+      <span style="color:#66d9ef">trust-store-location</span>: &lt;/app/store/truststore.jks&gt;,
+      <span style="color:#66d9ef">trust-store-password</span>: &lt;TURST_STORE_PASSWORD<span style="color:#e6db74">&gt;
+</span><span style="color:#e6db74">      key-store-location: &lt;/app/store/keystore.jks&gt;</span>
+      <span style="color:#66d9ef">key-store-password</span>: &lt;KEY_STORE_PASSWORD<span style="color:#e6db74">&gt;
+</span><span style="color:#e6db74">	  key-password: &lt;KEY_PASSWORD&gt;</span>
+	<span style="color:#66d9ef">producer</span>:
+      <span style="color:#66d9ef">bootstrap-servers</span>: &lt;localhost:<span style="color:#ae81ff">9200</span>,localhost:<span style="color:#ae81ff">9300</span>,localhost:<span style="color:#ae81ff">9400</span><span style="color:#e6db74">&gt;
+</span><span style="color:#e6db74">      retries: 0</span>
+      <span style="color:#66d9ef">acks</span>: all
+      <span style="color:#66d9ef">key-serializer</span>: org.apache.kafka.common.serialization.StringSerializer
+      <span style="color:#66d9ef">value-serializer</span>: org.apache.kafka.common.serialization.StringSerializer
+    <span style="color:#66d9ef">consumer</span>:
+      <span style="color:#66d9ef">bootstrap-servers</span>: &lt;localhost:<span style="color:#ae81ff">9200</span>,localhost:<span style="color:#ae81ff">9300</span>,localhost:<span style="color:#ae81ff">9400</span><span style="color:#e6db74">&gt;
+</span><span style="color:#e6db74">      group-id: &lt;KAFKA_CONSUMER_GROUP_ID&gt;</span>
+      <span style="color:#66d9ef">auto-offset-reset</span>: earliest
+      <span style="color:#66d9ef">key-deserializer</span>: org.apache.kafka.common.serialization.StringDeserializer
+      <span style="color:#66d9ef">value-deserializer</span>: org.apache.kafka.common.serialization.StringDeserializer
+</code></pre></div><p><br /></p>
+<h3 id="kafka-producer">Kafka Producer</h3>
+<p>If you want to create a producer service to send messages to a Kafka topic then you need to create two Classes,</p>
+<h6 id="1-create-kafkaproducerconfig">1. Create KafkaProducerConfig</h6>
+<p>First, create a <strong>KafkaProducerConfig</strong> class which uses producer configuration defined in <strong>application.yml</strong> and define a <code>KafkaTemplate</code> bean which creates an instance of Kafka producer. We will use this instance in our producer service class.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.abc.demo.config<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import</span> java.util.HashMap<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.util.Map<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.apache.kafka.common.config.SslConfigs<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.beans.factory.annotation.Autowired<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.context.annotation.Bean<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.context.annotation.Configuration<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.kafka.core.DefaultKafkaProducerFactory<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.kafka.core.KafkaTemplate<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.kafka.core.ProducerFactory<span style="color:#f92672">;</span>
+
+<span style="color:#a6e22e">@Configuration</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">KafkaProducerConfig</span> <span style="color:#f92672">{</span>
+
+	<span style="color:#a6e22e">@Autowired</span>
+	<span style="color:#66d9ef">private</span> ProducerFactory<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;</span> producerFactory<span style="color:#f92672">;</span>
+	
+	<span style="color:#66d9ef">public</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">producerConfig</span><span style="color:#f92672">(){</span>
+		Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span> kafkaAutoConfig <span style="color:#f92672">=</span> <span style="color:#f92672">((</span>DefaultKafkaProducerFactory<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;)</span> producerFactory<span style="color:#f92672">).</span><span style="color:#a6e22e">getConfigurationProperties</span><span style="color:#f92672">();</span>
+		Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span> producerConfig <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;();</span>
+		producerConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">putAll</span><span style="color:#f92672">(</span>kafkaAutoConfig<span style="color:#f92672">);</span>
+		producerConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">compute</span><span style="color:#f92672">(</span>SslConfigs<span style="color:#f92672">.</span><span style="color:#a6e22e">SSL_TRUSTSTORE_PASSWORD_CONFIG</span><span style="color:#f92672">,</span> <span style="color:#f92672">(</span>k<span style="color:#f92672">,</span>v<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span>v<span style="color:#f92672">);</span>
+		producerConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">compute</span><span style="color:#f92672">(</span>SslConfigs<span style="color:#f92672">.</span><span style="color:#a6e22e">SSL_KEYSTORE_PASSWORD_CONFIG</span><span style="color:#f92672">,</span> <span style="color:#f92672">(</span>k<span style="color:#f92672">,</span>v<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span>v<span style="color:#f92672">);</span>
+		producerConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">compute</span><span style="color:#f92672">(</span>SslConfigs<span style="color:#f92672">.</span><span style="color:#a6e22e">SSL_KEY_PASSWORD_CONFIG</span><span style="color:#f92672">,</span> <span style="color:#f92672">(</span>k<span style="color:#f92672">,</span>v<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span>v<span style="color:#f92672">);</span>
+		<span style="color:#66d9ef">return</span> producerConfig<span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+	
+	<span style="color:#a6e22e">@Bean</span>
+	<span style="color:#66d9ef">public</span> KafkaTemplate<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">kafkaTemplate</span><span style="color:#f92672">(){</span>
+		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> KafkaTemplate<span style="color:#f92672">&lt;&gt;(</span><span style="color:#66d9ef">new</span> DefaultKafkaProducerFactory<span style="color:#f92672">&lt;&gt;(</span>producerConfig<span style="color:#f92672">()));</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><br /></p>
+<h6 id="2-create-kafkaproducerservice">2. Create KafkaProducerService</h6>
+<p>Second, create a <strong>KafkaProducerService</strong> class and its implementation class <strong>KafkaProducerServiceImpl</strong>. We are using producer instance created by KafkaTemplate to send kafka message to given kafka topic.</p>
+<p>Please read more about <a href="https://docs.spring.io/spring-kafka/api/org/springframework/kafka/core/KafkaTemplate.html">KafkaTemplate</a> which comes with overloaded <strong>send</strong> method to send messages with key, partition and routing information.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.abc.demo.service<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">KafkaProducerService</span> <span style="color:#f92672">{</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">send</span><span style="color:#f92672">(</span>String topic<span style="color:#f92672">,</span> String data<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.abc.demo.service<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import</span> org.springframework.beans.factory.annotation.Autowired<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.kafka.core.KafkaTemplate<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.stereotype.Service<span style="color:#f92672">;</span>
+
+<span style="color:#a6e22e">@Service</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">KafkaProducerServiceImpl</span> <span style="color:#66d9ef">implements</span> KafkaProducerService <span style="color:#f92672">{</span>
+
+	<span style="color:#a6e22e">@Autowired</span>
+	<span style="color:#66d9ef">private</span> KafkaTemplate<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;</span> kafkaTemplate<span style="color:#f92672">;</span>
+
+	<span style="color:#a6e22e">@Override</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">send</span><span style="color:#f92672">(</span>String topic<span style="color:#f92672">,</span> String data<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		kafkaTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">send</span><span style="color:#f92672">(</span>topic<span style="color:#f92672">,</span> data<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+
+</code></pre></div><p><br /></p>
+<h3 id="kafka-consumer">Kafka Consumer</h3>
+<p>If you want to create a consumer service to receive messages from a single Kafka topic or multiple Kafka topics then you need to create two Classes,</p>
+<h6 id="1-create-kafkaconsumerconfig">1. Create KafkaConsumerConfig</h6>
+<p>First, create a <strong>KafkaConsumerConfig</strong> class which uses consumer configuration defined in <strong>application.yml</strong> and define a <code>ConcurrentKafkaListenerContainerFactory</code> bean which is responsible to create listener for given Kafka bootstrap server. We have also used <code>@EnableKafka</code> annotation at class level which tells spring boot to detect <code>@KafkaListener</code> annotation applied to any method in spring boot application. We will use this annotation in our consumer service class.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.abc.demo.config<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import</span> java.util.HashMap<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.util.Map<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import</span> org.apache.kafka.common.config.SslConfigs<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.beans.factory.annotation.Autowired<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.context.annotation.Bean<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.context.annotation.Configuration<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.kafka.annotation.EnableKafka<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.kafka.core.ConsumerFactory<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.kafka.core.DefaultKafkaConsumerFactory<span style="color:#f92672">;</span>
+
+<span style="color:#a6e22e">@EnableKafka</span>
+<span style="color:#a6e22e">@Configuration</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">KafkaConsumerConfig</span> <span style="color:#f92672">{</span>
+
+	<span style="color:#a6e22e">@Autowired</span>
+	<span style="color:#66d9ef">private</span> ConsumerFactory<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;</span> consumerFactory<span style="color:#f92672">;</span>
+	
+	<span style="color:#66d9ef">public</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">consumerConfig</span><span style="color:#f92672">(){</span>
+		Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span> kafkaAutoConfig <span style="color:#f92672">=</span> <span style="color:#f92672">((</span>DefaultKafkaConsumerFactory<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;)</span> consumerFactory<span style="color:#f92672">).</span><span style="color:#a6e22e">getConfigurationProperties</span><span style="color:#f92672">();</span>
+		Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span> consumerConfig <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;();</span>
+		consumerConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">putAll</span><span style="color:#f92672">(</span>kafkaAutoConfig<span style="color:#f92672">);</span>
+		consumerConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">compute</span><span style="color:#f92672">(</span>SslConfigs<span style="color:#f92672">.</span><span style="color:#a6e22e">SSL_TRUSTSTORE_PASSWORD_CONFIG</span><span style="color:#f92672">,</span> <span style="color:#f92672">(</span>k<span style="color:#f92672">,</span>v<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span>v<span style="color:#f92672">);</span>
+		consumerConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">compute</span><span style="color:#f92672">(</span>SslConfigs<span style="color:#f92672">.</span><span style="color:#a6e22e">SSL_KEYSTORE_PASSWORD_CONFIG</span><span style="color:#f92672">,</span> <span style="color:#f92672">(</span>k<span style="color:#f92672">,</span>v<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> String<span style="color:#f92672">)</span>v<span style="color:#f92672">);</span>
+		consumerConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">compute</span><span style="color:#f92672">(</span>SslConfigs<span style="color:#f92672">.</span><span style="color:#a6e22e">SSL_KEY_PASSWORD_CONFIG</span><span style="color:#f92672">,</span> <span style="color:#f92672">(</span>k<span style="color:#f92672">,</span>v<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span>v<span style="color:#f92672">);</span>
+		<span style="color:#66d9ef">return</span> consumerConfig<span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+	
+	<span style="color:#a6e22e">@Bean</span>
+	<span style="color:#66d9ef">public</span> ConcurrentKafkaListenerContainerFactory<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">kafkaListenerContainerFactory</span><span style="color:#f92672">(){</span>
+		ConcurrentKafkaListenerContainerFactory<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;</span> factory <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ConcurrentKafkaListenerContainerFactory<span style="color:#f92672">&lt;&gt;();</span>
+		factory<span style="color:#f92672">.</span><span style="color:#a6e22e">setConsumerFactory</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> DefaultKafkaConsumerFactory<span style="color:#f92672">&lt;&gt;(</span>consumerConfig<span style="color:#f92672">()));</span>
+		<span style="color:#66d9ef">return</span> factory<span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><br /></p>
+<h6 id="2-create-kafkaconsumerservice">2. Create KafkaConsumerService</h6>
+<p>Second, create a <strong>KafkaConsumerService</strong> class and its implementation class <strong>KafkaConsumerServiceImpl</strong>. We have used <code>@KafkaListener</code> annotation at method passing kafka consumer topic names, which will be detected by spring boot application automatically. You will be able to consumer messages from kafka topic using this method.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.abc.demo.service<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">KafkaConsumerService</span> <span style="color:#f92672">{</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">receive</span><span style="color:#f92672">(</span>String data<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.abc.demo.service<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import</span> org.slf4j.Logger<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.slf4j.LoggerFactory<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.kafka.annotation.KafkaListener<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.messaging.handler.annotation.Payload<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.stereotype.Service<span style="color:#f92672">;</span>
+
+<span style="color:#a6e22e">@Service</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">KafkaConsumerServiceImpl</span> <span style="color:#66d9ef">implements</span> KafkaConsumerService<span style="color:#f92672">{</span>
+
+	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> Logger logger <span style="color:#f92672">=</span> LoggerFactory<span style="color:#f92672">.</span><span style="color:#a6e22e">getLogger</span><span style="color:#f92672">(</span>KafkaConsumerServiceImpl<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
+	
+	<span style="color:#a6e22e">@KafkaListener</span><span style="color:#f92672">(</span>topics <span style="color:#f92672">=</span> <span style="color:#f92672">{</span><span style="color:#e6db74">&#34;#{&#39;${spring.kafka.consumer.topic}&#39;.split(&#39;,&#39;)}&#34;</span><span style="color:#f92672">})</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">receive</span><span style="color:#f92672">(</span><span style="color:#a6e22e">@Payload</span> String data<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		logger<span style="color:#f92672">.</span><span style="color:#a6e22e">info</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;data: {}&#34;</span><span style="color:#f92672">,</span> data<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+	
+<span style="color:#f92672">}</span>
+</code></pre></div><p><br /></p>
+<h3 id="summary">Summary</h3>
+<p>Spring boot provides a wrapper over kafka producer and consumer implementation in Java which helps us to easily configure-</p>
+<ul>
+<li>Kafka Producer using <code>KafkaTemplate</code> which provides overloaded <strong>send</strong> method to send messages in multiple ways with keys, partitions and routing information.</li>
+<li>Kafka Consumer using <code>@EnableKafka</code> annotation which auto detects <code>@KafkaListener</code> annotation applied to any method and that methods becomes a Kafka Listener.</li>
+</ul>
+<p>You can download complete source code from <a href="https://github.com/ashishlahoti/springboot-kafka">github</a></p>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link btn" href="/tags/spring-boot/" rel="tag">Spring Boot</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/kafka/" rel="tag">Kafka</a></li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+  
+  
+  
+
+  <section class="social-share">
+    <ul class="share-icons">
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?hashtags=codingnconcepts&amp;url=http%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fconfigure-kafka-producer-and-consumer%2f&amp;text=Configure%20Kafka%20Producer%20and%20Consumer%20in%20spring%20boot" target="_blank" rel="noopener" aria-label="Share on Twitter" class="share-btn twitter">
+          <svg class="widget-social__link-icon icon icon-twitter" width="24" height="24" viewBox="0 0 384 312"><path d="m384 36.9c-14.1 6.3-29.3 10.5-45.2 12.4 16.3-9.7 28.8-25.2 34.6-43.6-15.2 9-32.1 15.6-50 19.1-14.4-15.2-34.9-24.8-57.5-24.8-43.5 0-78.8 35.3-78.8 78.8 0 6.2.7 12.2 2 17.9-65.5-3.3-123.5-34.6-162.4-82.3-6.7 11.6-10.6 25.2-10.6 39.6 0 27.3 13.9 51.4 35 65.6-12.9-.4-25.1-4-35.7-9.9v1c0 38.2 27.2 70 63.2 77.2-6.6 1.8-13.6 2.8-20.8 2.8-5.1 0-10-.5-14.8-1.4 10 31.3 39.1 54.1 73.6 54.7-27 21.1-60.9 33.7-97.8 33.7-6.4 0-12.6-.4-18.8-1.1 34.9 22.4 76.3 35.4 120.8 35.4 144.9 0 224.1-120 224.1-224.1 0-3.4-.1-6.8-.2-10.2 15.4-11.1 28.7-25 39.3-40.8z"/></svg>
+          <p>Twitter</p>
+          </a>
+      </li>
+      
+
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fconfigure-kafka-producer-and-consumer%2f" target="_blank" rel="noopener" aria-label="Share on Facebook" class="share-btn facebook">
+          <svg class="widget-social__link-icon icon icon-facebook" width="24" height="24" viewBox="0 0 352 352"><path d="m0 32v288c0 17.5 14.5 32 32 32h288c17.5 0 32-14.5 32-32v-288c0-17.5-14.5-32-32-32h-288c-17.5 0-32 14.5-32 32zm320 0v288h-83v-108h41.5l6-48h-47.5v-31c0-14 3.5-23.5 23.5-23.5h26v-43.5c-4.4-.6-19.8-1.5-37.5-1.5-36.9 0-62 22.2-62 63.5v36h-42v48h42v108h-155v-288z"/></svg>
+          <p>Facebook</p>
+          </a>
+      </li>
+      
+
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fconfigure-kafka-producer-and-consumer%2f&amp;source=http%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fconfigure-kafka-producer-and-consumer%2f&amp;title=Configure%20Kafka%20Producer%20and%20Consumer%20in%20spring%20boot&amp;summary=Configure%20Kafka%20Producer%20and%20Consumer%20in%20spring%20boot" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="share-btn linkedin">
+          <svg class="widget-social__link-icon icon icon-linkedin" width="24" height="24" viewBox="0 0 352 352"><path d="M0,40v272c0,21.9,18.1,40,40,40h272c21.9,0,40-18.1,40-40V40c0-21.9-18.1-40-40-40H40C18.1,0,0,18.1,0,40z M312,32 c4.6,0,8,3.4,8,8v272c0,4.6-3.4,8-8,8H40c-4.6,0-8-3.4-8-8V40c0-4.6,3.4-8,8-8H312z M59.5,87c0,15.2,12.3,27.5,27.5,27.5 c15.2,0,27.5-12.3,27.5-27.5c0-15.2-12.3-27.5-27.5-27.5C71.8,59.5,59.5,71.8,59.5,87z M187,157h-1v-21h-45v152h47v-75 c0-19.8,3.9-39,28.5-39c24.2,0,24.5,22.4,24.5,40v74h47v-83.5c0-40.9-8.7-72-56.5-72C208.5,132.5,193.3,145.1,187,157z M64,288h47.5 V136H64V288z"/></svg>
+            <p>LinkedIn</p>
+          </a>
+      </li>
+      
+
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Configure%20Kafka%20Producer%20and%20Consumer%20in%20spring%20boot%2c%20by%20Coding%20N%20Concepts%0aHow%20to%20configure%20Kafka%20Producer%20to%20send%20messages%20to%20kafka%20topic%20and%20configure%20Kafka%20consumer%20to%20receive%20messages%20from%20kafka%20topic%20in%20spring%20boot%20application.%0a%0ahttp%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fconfigure-kafka-producer-and-consumer%2f%0a" target="_blank" class="share-btn whatsapp">
+          <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
+          <p>Email</p>
+        </a>
+      </li>
+      
+
+      
+      
+      <li>
+        <a href="mailto:?subject=Coding%20N%20Concepts - Configure%20Kafka%20Producer%20and%20Consumer%20in%20spring%20boot.&amp;body=Configure%20Kafka%20Producer%20and%20Consumer%20in%20spring%20boot%2c%20by%20Coding%20N%20Concepts%0aHow%20to%20configure%20Kafka%20Producer%20to%20send%20messages%20to%20kafka%20topic%20and%20configure%20Kafka%20consumer%20to%20receive%20messages%20from%20kafka%20topic%20in%20spring%20boot%20application.%0a%0ahttp%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fconfigure-kafka-producer-and-consumer%2f%0a" target="_blank" class="share-btn email">
+          <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
+          <p>Email</p>
+        </a>
+      </li>
+    </ul>
+  </section>
+  
+
+
+
+<div class="related_post_section">
+    <h2 class = "related_post_title">See Also</h2>
+    <ul class = "related_post">
+        
+        <li><a href="/spring-boot/how-to-configure-swagger/">How to configure swagger in spring boot</a></li>
+        
+        <li><a href="/spring-boot/how-to-create-custom-banner/">How to create and configure custom banner in spring boot</a></li>
+        
+        <li><a href="/spring-boot/how-to-disable-command-line-properties/">How to disable command line properties in spring boot</a></li>
+        
+        <li><a href="/spring-boot/how-to-change-server-port/">How to change server port in spring boot</a></li>
+        
+        <li><a href="/spring-boot/how-to-disable-banner/">How to disable default banner in spring boot</a></li>
+        
+    </ul>
+</div>
+
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Ashish Lahoti avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Ashish Lahoti</span>
+	</div>
+	<div class="authorbox__description">
+		Ashish Lahoti is a full stack application developer at DBS Bank | Confluent Certified Developer for Apache KAFKA | SCJP Certified
+	</div>
+</div>
+
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--prev">
+		<a class="post-nav__link" href="/spring-boot/how-to-configure-swagger/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">How to configure swagger in spring boot</p></a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "codingnconcepts" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 Ashish Lahoti.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>
