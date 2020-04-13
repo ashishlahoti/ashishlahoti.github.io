@@ -6,10 +6,23 @@
     <description>Recent content in Spring Boot on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingnconcepts.com/categories/spring-boot/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Pretty print JSON response in spring boot</title>
+      <link>http://codingnconcepts.com/spring-boot/pretty-print-json-response/</link>
+      <pubDate>Mon, 13 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/spring-boot/pretty-print-json-response/</guid>
+      <description>&lt;p&gt;When you create a Spring &lt;code&gt;@RestController&lt;/code&gt; in a Spring Boot application to define API endpoints then it renders JSON response by default if jackson2 is in classpath.&lt;/p&gt;
+&lt;!--
+Spring uses `HttpMessageConverters` for content conversion for e.g. Java Object to JSON or XML in order to render responses from `@RestController` class methods. Spring boot provides a default `MappingJackson2HttpMessageConverter` (if jackson2 is in classpath) to render JSON response.
+--&gt;
+&lt;p&gt;JSON responses are not pretty print by default but you can enable it with just one property change.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Configure Kafka Producer and Consumer in spring boot</title>
