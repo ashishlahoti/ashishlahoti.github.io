@@ -139,7 +139,11 @@ if (!doNotTrack) {
 		<nav id="TableOfContents">
   <ul>
     <li><a href="#exam-preparation">Exam Preparation</a></li>
-    <li><a href="#sample-exam-questions">Sample Exam Questions</a></li>
+    <li><a href="#sample-exam-questions">Sample Exam Questions</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
     <li><a href="#exam-notes">Exam Notes</a>
       <ul>
         <li></li>
@@ -225,7 +229,7 @@ if (!doNotTrack) {
 </li>
 <li>Kafka Security
 <ul>
-<li>Read Apache Kafka Documentation</li>
+<li>Read Apache Kafka Documentation <a href="https://kafka.apache.org/documentation/#security" target="_blank">security section</a></li>
 </ul>
 </li>
 <li>Confluent KSQL
@@ -247,47 +251,84 @@ if (!doNotTrack) {
 </ol>
 <h2 id="sample-exam-questions">Sample Exam Questions</h2>
 <hr>
-<ol>
-<li>Kafka Theory</li>
-</ol>
+<p>Please note that these are not the actual questions from the CCDAK exam but most likelihood to ask in exam.</p>
+<h5 id="1-kafka-theory">1. Kafka Theory</h5>
 <ul>
-<li>Kafka is a &hellip;. ? <em><strong>pub-sub system</strong></em></li>
-<li>Mostly Kafka is written in which language? <em><strong>Scala</strong></em></li>
+<li>Kafka is a &hellip;. ?<br>
+<em><strong>pub-sub system</strong></em></li>
+<li>Mostly Kafka is written in which language?<br>
+<em><strong>Scala</strong></em></li>
+<li>Which errors are retriable from Kafka Producer?<br>
+<em><strong>LEADER_NOT_AVAILABLE, NOT_LEADER_FOR_PARTITION, REBALANCE_IN_PROGRESS</strong></em></li>
+<li>What is a generic unique id which can be used for a messages received from a consumer?<br>
+<em><strong>Topic + Partition + Offset</strong></em></li>
 </ul>
-<ol start="2">
-<li>Kafka Streams (Read <a href="#kafka-streams">Kafka Streams</a> notes to get answers of below questions)</li>
-</ol>
+<h5 id="2-kafka-streams-read-kafka-streamshahahugoshortcode-s13-hbhb-notes-to-get-answers-of-below-questions">2. Kafka Streams (Read <a href="#kafka-streams">Kafka Streams</a> notes to get answers of below questions)</h5>
 <ul>
+<li>To transform data from a Kafka topic to another one, You should use ?<br>
+<em><strong>Kafka Streams</strong></em></li>
 <li>Which of the Kafka Stream operators are stateful ?</li>
 <li>Which of the Kafka Stream operators are stateless ?</li>
 <li>Which window is not having gap ?</li>
 </ul>
-<ol start="3">
-<li>Confluent Schema Registry (Read <a href="#confluent-schema-registry">Confluent Schema Registry</a> notes to get answers of below questions)</li>
-</ol>
+<h5 id="3-confluent-schema-registry-read-confluent-schema-registryhahahugoshortcode-s14-hbhb-notes-to-get-answers-of-below-questions">3. Confluent Schema Registry (Read <a href="#confluent-schema-registry">Confluent Schema Registry</a> notes to get answers of below questions)</h5>
 <ul>
 <li>Which of the following is not a primitive type of Avro ?</li>
 <li>Which of the following in not a complex type of Avro?</li>
 <li>Which of the following is not a required field in Avro Schema?</li>
-<li>Delete a field without default value in Avro schema is &hellip;&hellip; compatibility?</li>
+<li>Delete a field without default value in Avro schema is &hellip;&hellip; compatibility?<br>
+<em><strong>backward</strong></em></li>
+<li>Adding a field to record without default value is &hellip;&hellip; schema evolution?<br>
+<em><strong>forward</strong></em></li>
+<li>In Avro, removing or adding a field that has a default value is a  &hellip;&hellip; schema evolution?<br>
+<em><strong>full</strong></em></li>
+<li>What client protocols are supported for the schema registry?<br>
+<em><strong>HTTP, HTTPS</strong></em></li>
+<li>Where are Avro schema stored in Confluent Schema Registry?<br>
+<em><strong>_schemas Kafka topic</strong></em></li>
+</ul>
+<h5 id="4-confluent-ksql">4. Confluent KSQL</h5>
+<ul>
+<li>is KSQL ANSI SQL Compliant?<br>
+<em><strong>No</strong></em></li>
+<li>What Java library is KSQL based on?<br>
+<em><strong>Kafka Streams</strong></em></li>
+</ul>
+<h5 id="5-kafka-security">5. Kafka Security</h5>
+<ul>
+<li>What are the valid authentication mechanism in KAFKA?<br>
+<em><strong>SSL</strong></em><br>
+<em><strong>SASL/GSSAPI (Kerberos)</strong></em><br>
+<em><strong>SASL/PLAIN</strong></em><br>
+<em><strong>SASL/SCRAM-SHA-256 and SASL/SCRAM-SHA-512</strong></em><br>
+<em><strong>SASL/OAUTHBEARER</strong></em></li>
 </ul>
 <h2 id="exam-notes">Exam Notes</h2>
 <hr>
-<h6 id="cluster">Cluster</h6>
-<h6 id="rack">Rack</h6>
-<h6 id="broker">Broker</h6>
+<h5 id="cluster">Cluster</h5>
+<ul>
+<li>Cluster is group of Kafka brokers.</li>
+</ul>
+<h5 id="rack">Rack</h5>
+<ul>
+<li>A racks belongs to a cluster.</li>
+<li>A broker belongs to a rack when property <strong>broker.rack=&lt;rack-id&gt;</strong> is specified at broker level. This enables the rack awareness feature which spreads replicas of the same partition across different racks.</li>
+<li>Let&rsquo;s say you have 6 brokers and 2 racks. Brokers 1, 2, 3 are on the <strong>rack_1</strong>, and brokers 4, 5, 6 are on <strong>rack_2</strong>.<br>
+Now when you create a topic with 6 partition, instead of assigning broker to partition in order from 1, 2, 3, 4, 5, 6, each partition is assigned to each rack repeatedly i.e. 1, 4, 2, 5, 3, 6.</li>
+</ul>
+<h5 id="broker">Broker</h5>
 <ul>
 <li>Every broker in Kafka is a <strong>bootstrap server</strong> which knows about all brokers, topics and partitions (metadata) that means Kafka client (e.g. producer,consumer etc) only need to connect to one broker in order to connect to entire cluster.</li>
 <li>At all times, only one broker should be the controller, and one broker must always be the controller in the cluster</li>
 </ul>
-<h6 id="topic">Topic</h6>
+<h5 id="topic">Topic</h5>
 <ul>
 <li>Kafka takes bytes as input without even loading them into memory (that&rsquo;s called <strong>zero copy</strong>)</li>
 <li>Brokers have defaults for all the topic configuration parameters</li>
 </ul>
-<h6 id="partition">Partition</h6>
+<h5 id="partition">Partition</h5>
 <ul>
-<li>Topic can have one or more partition.</li>
+<li>Topic can have one or more partition. One partition is a leader while the others are replica.</li>
 <li>It is not possible to delete a partition of topic once created.</li>
 <li>Order is guaranteed within the partition and once data is written into partition, its immutable!</li>
 <li>If producer writes at 1 GB/sec and consumer consumes at 250MB/sec then requires 4 partition!</li>
@@ -314,38 +355,50 @@ if (!doNotTrack) {
 <li>The offset of message is immutable.</li>
 <li>Deleted records can still be seen by consumers for a period of <strong>delete.retention.ms=24 hours (default)</strong></li>
 </ul>
-<h6 id="offset">Offset</h6>
+<h5 id="offset">Offset</h5>
 <ul>
 <li>Partition is having its own offset starting from 0.</li>
 </ul>
-<h6 id="topic-replication">Topic Replication</h6>
+<h5 id="topic-replication">Topic Replication</h5>
 <ul>
 <li>Replication factor = 3 and partition = 2 means there will be total 6 partition distributed across Kafka cluster. Each partition will be having 1 leader and 2 ISR (in-sync replica).</li>
 <li>Broker contains leader partition called <strong>leader</strong> of that partition and only leader can receive and serve data for partition.</li>
 <li>Replication factor can not be greater then number of broker in the kafka cluster. If topic is having a replication factor of 3 then each partition will live on 3 different brokers.</li>
 </ul>
-<h6 id="producer">Producer</h6>
+<h5 id="producer">Producer</h5>
 <ul>
-<li>Automatically recover from errors: LEADER_NOT_AVAILABLE, NOT_LEADER_FOR_PARTITION, REBALANCE_IN_PROGRESS</li>
-<li>Non retriable errors: MESSAGE_TOO_LARGE</li>
+<li>Kafka Producer automatically recover from following retriable errors:<br>
+<em>LEADER_NOT_AVAILABLE</em><br>
+<em>NOT_LEADER_FOR_PARTITION</em><br>
+<em>REBALANCE_IN_PROGRESS</em></li>
+<li>Kafka Producer throw error for following non retriable errors:<br>
+<em>MESSAGE_TOO_LARGE</em></li>
+<li>If you send a message of size 3 MB to a topic with default message size configuration. Then producer will throw MessageSizeTooLarge exception immediately since it is not a retriable exception.</li>
 <li>When produce to a topic which doesn&rsquo;t exist and <strong>auto.create.topic.enable=true</strong> then kafka creates the topic automatically with the broker/topic settings <strong>num.partition</strong> and <strong>default.replication.factor</strong></li>
 </ul>
-<h6 id="producer-acknowledgment">Producer Acknowledgment</h6>
+<h5 id="producer-acknowledgment">Producer Acknowledgment</h5>
 <ul>
-<li>
-<p><strong>acks=0</strong> Producer do not wait for ack (possible data loss)</p>
-</li>
-<li>
-<p><strong>acks=1</strong> Producer wait for leader ack (limited data loss)</p>
-</li>
-<li>
-<p><strong>acks=all</strong> Producer wait for leader+replica ack (no data loss)</p>
-<p>acks=all must be used in conjunction with min.insync.replicas (can be set at broker or topic level)
-min.insync.replica=2 implies that at least 2 brokers that are ISR (including leader) must acknowledge
-e.g. replication.factor=3, min.insync.replicas=2, acks=all can only tolerate 1 broker going down, otherwise the producer will receive an exception NOT_ENOUGH_REPLICAS on send</p>
+<li><strong>acks=0</strong> Producer do not wait for ack (possible data loss)</li>
+<li><strong>acks=1</strong> Producer wait for leader ack (limited data loss)</li>
+<li><strong>acks=all</strong> Producer wait for leader+replica ack (no data loss)</li>
+<li><strong>acks=all</strong> must be used in conjunction with <strong>min.insync.replicas</strong> (can be set at broker or topic level)
+<ul>
+<li><strong>min.insync.replica</strong> only matters if acks=all</li>
+<li><strong>acks=all, min.insync.replica=2</strong> implies that at least 2 brokers that are ISR (including leader) must acknowledge</li>
+<li><strong>replication.factor=3, acks=all, min.insync.replicas=2</strong> can only tolerate 1 broker going down, otherwise the producer will receive an exception NOT_ENOUGH_REPLICAS on send</li>
+<li><strong>acks=all, min.insync.replica=1</strong> implies that at least 1 brokers that is ISR (including leader) must acknowledge</li>
+<li>A kafka topic with <strong>replication.factor=3, acks=all, min.insync.replicas=1</strong>, maximum number of 2 brokers can go down so that a producer can still produce to the topic.</li>
+</ul>
 </li>
 </ul>
-<h6 id="safe-producer-config">Safe Producer Config</h6>
+<h5 id="producer-configuration">Producer Configuration</h5>
+<ul>
+<li>Mandatory properties to configure Kafka producer is as follows:<br>
+<em>bootstrap.servers</em><br>
+<em>key.serializer</em><br>
+<em>value.serializer</em></li>
+</ul>
+<h5 id="safe-producer-configuration">Safe Producer Configuration</h5>
 <ul>
 <li><strong>min.insync.replicas=2</strong> (set at broker or topic level)</li>
 <li><strong>retries=MAX_INT</strong> number of reties by producer in case of transient failure/exception. (default is 0)</li>
@@ -353,13 +406,13 @@ e.g. replication.factor=3, min.insync.replicas=2, acks=all can only tolerate 1 b
 <li><strong>acks=all</strong></li>
 <li><strong>enable.idempotence=true</strong> producer send producerId with each message to identify for duplicate msg at kafka end. When kafka receives duplicate message with same producerId which it already committed. It do not commit it again and send ack to producer (default is false)</li>
 </ul>
-<h6 id="high-throughput-producer-using-compression-and-batching">High Throughput Producer using compression and batching</h6>
+<h5 id="high-throughput-producer-using-compression-and-batching">High Throughput Producer using compression and batching</h5>
 <ul>
 <li><strong>compression.type=snappy</strong> value can be none(default), gzip, lz4, snappy. Compression is enabled at the producer level and doesn&rsquo;t require any config change in broker or consumer Compression is more effective in case of bigger batch of messages being sent to kafka</li>
 <li><strong>linger.ms=20</strong> Number of millisecond a producer is willing to wait before sending a batch out. (default 0). Increase linger.ms value increase the chance of batching.</li>
 <li><strong>batch.size=32KB or 64KB</strong> Maximum number of bytes that will be included in a batch (default 16KB). Any message bigger than the batch size will not be batched</li>
 </ul>
-<h6 id="message-key">Message Key</h6>
+<h5 id="message-key">Message Key</h5>
 <ul>
 <li>Producer can choose to send a key with message.</li>
 <li>If key = null, data is send in round robin</li>
@@ -367,44 +420,46 @@ e.g. replication.factor=3, min.insync.replicas=2, acks=all can only tolerate 1 b
 <li>Adding a partition to the topic will loose the guarantee of same key go to same partition.</li>
 <li>Keys are hashed using <strong>murmur2</strong> algorithm by default.</li>
 </ul>
-<h6 id="consumer">Consumer</h6>
+<h5 id="consumer">Consumer</h5>
 <ul>
 <li>Per thread one consumer is the rule. Consumer must not be multi threaded.</li>
+<li>Each consumer is assigned to different partition in same consumer group.
+<ul>
+<li>If there are 5 consumers of same consumer group consuming from a topic with 10 partition then 2 partitions will be  assigned to each consumer and no consumer will remain idle.</li>
+<li>If there are 10 consumers of same consumer group consuming from a topic with 10 partition then 5 partition will be  assigned to 5 consumers and rest 5 consumers will remain idle.</li>
+</ul>
+</li>
 <li><strong>records-lag-max</strong> (monitoring metrics) The maximum lag in terms of number of records for any partition in this window. An increasing value over time is your best indication that the consumer group is not keeping up with the producers.</li>
 </ul>
-<h6 id="consumer-group">Consumer Group</h6>
-<h6 id="consumer-offset">Consumer Offset</h6>
+<h5 id="consumer-group">Consumer Group</h5>
+<ul>
+<li>If two applications want to process all the messages independently from a kafka topic having 4 partition, then you should create 2 consumer groups with 4 consumers in each group for optimal performance.</li>
+</ul>
+<h5 id="consumer-offset">Consumer Offset</h5>
 <p>When consumer in a group has processed the data received from Kafka, it commits the offset in Kafka topic named <strong>_consumer_offset</strong> which is used when a consumer dies, it will be able to read back from where it left off.</p>
-<h6 id="delivery-semantics">Delivery Semantics</h6>
+<h5 id="delivery-semantics">Delivery Semantics</h5>
 <ul>
-<li>
-<p><strong>At most once</strong> Offset are committed as soon as message batch is received. If the processing goes wrong, the message will be lost (it won&rsquo;t be read again)</p>
-</li>
-<li>
-<p><strong>At least once (default)</strong> Offset are committed after the message is processed. If the processing goes wrong, the message will be read again. This can result in duplicate processing of message.</p>
-<p>Make sure your processing is idempotent. (i.e. re-processing the message won&rsquo;t impact your systems). For most of the application, we use this and ensure processing are idempotent.</p>
-</li>
-<li>
-<p><strong>Exactly once</strong> Can only be achieved for Kafka=&gt;Kafka workflows using Kafka Streams API. For Kafka=&gt;Sink workflows, use an idempotent consumer.</p>
-</li>
-</ul>
-<h6 id="consumer-offset-commit-strategy">Consumer Offset commit strategy</h6>
+<li><strong>At most once</strong> Offset are committed as soon as message batch is received. If the processing goes wrong, the message will be lost (it won&rsquo;t be read again)</li>
+<li><strong>At least once (default)</strong> Offset are committed after the message is processed. If the processing goes wrong, the message will be read again. This can result in duplicate processing of message.
 <ul>
-<li>
-<p><strong>enable.auto.commit=true &amp; synchronous processing of batches</strong> with auto commit, offset will be committed automatically for you at regular interval (auto.commit.interval.ms=5000 by default) every time you call .poll(). If you don&rsquo;t use synchronous processing, you will be in &ldquo;at most once&rdquo; behavior because offsets will be committed before your data is processed.</p>
-</li>
-<li>
-<p><strong>enable.auto.commit=false &amp; manual commit of offsets (recommended)</strong></p>
-</li>
+<li>Make sure your processing is idempotent. (i.e. re-processing the message won&rsquo;t impact your systems). For most of the application, we use this and ensure processing are idempotent.</li>
 </ul>
-<h6 id="consumer-offset-reset-behavior">Consumer Offset reset behavior</h6>
+</li>
+<li><strong>Exactly once</strong> Can only be achieved for Kafka=&gt;Kafka workflows using Kafka Streams API. For Kafka=&gt;Sink workflows, use an idempotent consumer.</li>
+</ul>
+<h5 id="consumer-offset-commit-strategy">Consumer Offset commit strategy</h5>
+<ul>
+<li><strong>enable.auto.commit=true &amp; synchronous processing of batches</strong> with auto commit, offset will be committed automatically for you at regular interval (auto.commit.interval.ms=5000 by default) every time you call .poll(). If you don&rsquo;t use synchronous processing, you will be in &ldquo;at most once&rdquo; behavior because offsets will be committed before your data is processed.</li>
+<li><strong>enable.auto.commit=false &amp; manual commit of offsets (recommended)</strong></li>
+</ul>
+<h5 id="consumer-offset-reset-behavior">Consumer Offset reset behavior</h5>
 <ul>
 <li><strong>auto.offset.reset=latest</strong> will read from the end of the log</li>
 <li><strong>auto.offset.reset=earliest</strong> will read from the start of the log</li>
 <li><strong>auto.offset.reset=none</strong> will throw exception of no offset is found</li>
 <li>Consumer offset can be lost if hasn&rsquo;t read new data in 7 days. This can be controlled by broker setting offset.retention.minutes</li>
 </ul>
-<h6 id="consumer-poll-behavior">Consumer Poll Behavior</h6>
+<h5 id="consumer-poll-behavior">Consumer Poll Behavior</h5>
 <ul>
 <li><strong>fetch.min.bytes = 1 (default)</strong>, Control how much data you want to pull at least on each request. Help improving throughput and decreasing request number. At the cost of latency.</li>
 <li><strong>max.poll.records = 500 (default)</strong>, Controls how many records to receive per poll request. Increase if your messages are very small and have a lot of available RAM.</li>
@@ -417,32 +472,35 @@ e.g. replication.factor=3, min.insync.replicas=2, acks=all can only tolerate 1 b
 <li><strong>session.timeout.ms=10s (default)</strong>, If heartbeat is not sent in 10 second period, the consumer is considered dead. Set lower value to faster consumer rebalances</li>
 <li><strong>heartbeat.interval.ms=3s (default)</strong>, Heartbeat is sent in every 3 seconds interval. Usually 1/3rd of session.timeout.ms</li>
 </ul>
-<h6 id="consumer-poll-thread">Consumer Poll Thread</h6>
+<h5 id="consumer-poll-thread">Consumer Poll Thread</h5>
 <ul>
 <li>Poll mechanism is also used to detect if consumer application is dead.</li>
 <li><strong>max.poll.interval.ms = 5min (default)</strong>, Max amount of time between two .poll() calls before declaring consumer dead. If processing of message batch takes more time in general in application then should increase the interval.</li>
 </ul>
-<h6 id="kafka-guarantees">Kafka Guarantees</h6>
+<h5 id="kafka-guarantees">Kafka Guarantees</h5>
 <ul>
 <li>Messages are appended to a topic-partition in the order they are sent</li>
 <li>Consumer read the messages in the order stored in topic-partition</li>
 <li>With a replication factor of N, producers and consumers can tolerate upto N-1 brokers being down</li>
 <li>As long as number of partitions remains constant for a topic ( no new partition), the same key will always go to same partition</li>
 </ul>
-<h6 id="client-bi-directional-compatibility">Client Bi-Directional Compatibility</h6>
+<h5 id="client-bi-directional-compatibility">Client Bi-Directional Compatibility</h5>
 <ul>
 <li>an Older client (1.1) can talk to Newer broker (2.0)</li>
 <li>a Newer client (2.0) can talk to Older broker (1.1)</li>
 </ul>
-<h6 id="kafka-connect">Kafka Connect</h6>
+<h5 id="kafka-connect">Kafka Connect</h5>
 <ul>
-<li><strong>Source connect</strong> Get data from common data source to Kafka</li>
-<li><strong>Sink connect</strong> Publish data from Kafka to common data source</li>
+<li><strong>Source connect</strong> Get data from common data source to Kafka for e.g. import data from external database to kafka</li>
+<li><strong>Sink connect</strong> Publish data from Kafka to common data source for e.g. export data from Kafka to external database</li>
 </ul>
-<h6 id="zookeeper">Zookeeper</h6>
+<h5 id="zookeeper">Zookeeper</h5>
 <ul>
 <li>
-<p>ZooKeeper servers will be deployed on multiple nodes. This is called an ensemble. An ensemble is a set of 2n + 1 ZooKeeper servers where n is any number greater than 0. The odd number of servers allows ZooKeeper to perform majority elections for leadership. At any given time, there can be up to n failed servers in an ensemble and the ZooKeeper cluster will keep quorum. If at any time, quorum is lost, the ZooKeeper cluster will go down.</p>
+<p>ZooKeeper servers will be deployed on multiple nodes. This is called an <strong>ensemble</strong>. An ensemble is a set of <strong>2n + 1</strong> ZooKeeper servers where n is any number greater than 0. The odd number of servers allows ZooKeeper to perform majority elections for leadership. At any given time, there can be up to n failed servers in an ensemble and the ZooKeeper cluster will keep quorum. If at any time, quorum is lost, the ZooKeeper cluster will go down.</p>
+</li>
+<li>
+<p>Zookeeper cluster to withstand loss of 2 server, require total of 2*2+1 = 5 servers.</p>
 </li>
 <li>
 <p>In Zookeeper multi-node configuration, <strong>initLimit</strong> and <strong>syncLimit</strong> are used to govern how long following ZooKeeper servers can take to initialize with the current leader and how long they can be out of sync with the leader.
@@ -462,110 +520,70 @@ If tickTime=2000, initLimit=5 and syncLimit=2 then a follower can take (tickTime
 <hr>
 <ol>
 <li>
-<p>Start a zookeeper at default port 2181</p>
-<blockquote>
-<p>bin/zookeeper-server-start.sh config/zookeeper.properties</p>
-</blockquote>
+<p>Start a zookeeper at default port 2181<br>
+<code>$bin/zookeeper-server-start.sh config/zookeeper.properties</code></p>
 </li>
 <li>
-<p>Start a kafka server at default port 9092</p>
-<blockquote>
-<p>bin/kafka-server-start.sh config/server.properties</p>
-</blockquote>
+<p>Start a kafka server at default port 9092<br>
+<code>$bin/kafka-server-start.sh config/server.properties</code></p>
 </li>
 <li>
-<p>Create a kafka topic with name my-first-topic</p>
-<blockquote>
-<p>bin/kafka-topics.sh &ndash;zookeeper localhost:2181 &ndash;topic my-first-topic &ndash;create &ndash;replication-factor 1 &ndash;partitions 1</p>
-</blockquote>
+<p>Create a kafka topic &lsquo;my-first-topic&rsquo; with 3 partitions and 3 replicas<br>
+<code>$bin/kafka-topics.sh --zookeeper localhost:2181 --topic my-first-topic --create --replication-factor 3 --partitions 3</code></p>
 </li>
 <li>
-<p>List all kafka topics</p>
-<blockquote>
-<p>bin/kafka-topics.sh &ndash;zookeeper localhost:2181 &ndash;list</p>
-</blockquote>
+<p>List all kafka topics<br>
+<code>$bin/kafka-topics.sh --zookeeper localhost:2181 --list</code></p>
 </li>
 <li>
-<p>Describe kafka topic my-first-topic</p>
-<blockquote>
-<p>bin/kafka-topics.sh &ndash;zookeeper localhost:2181 &ndash;topic my-first-topic &ndash;describe</p>
-</blockquote>
+<p>Describe kafka topic &lsquo;my-first-topic&rsquo;<br>
+<code>$bin/kafka-topics.sh --zookeeper localhost:2181 --topic my-first-topic --describe</code></p>
 </li>
 <li>
-<p>Delete kafka topic my-first-topic</p>
-<blockquote>
-<p>bin/kafka-topics.sh &ndash;zookeeper localhost:2181 &ndash;topic my-first-topic &ndash;delete</p>
-</blockquote>
-<p><strong>Note:</strong> This will have no impact if delete.topic.enable is not set to true</p>
+<p>Delete kafka topic &lsquo;my-first-topic&rsquo;<br>
+<code>$bin/kafka-topics.sh --zookeeper localhost:2181 --topic my-first-topic --delete</code><br>
+<strong>Note:</strong> This will have no impact if delete.topic.enable is not set to true</p>
 </li>
 <li>
-<p>Find out all the partitions without a leader</p>
-<blockquote>
-<p>bin/kafka-topics.sh &ndash;zookeeper localhost:2181 &ndash;describe &ndash;unavailable-partitions</p>
-</blockquote>
+<p>Find out all the partitions without a leader<br>
+<code>$bin/kafka-topics.sh --zookeeper localhost:2181 --describe --unavailable-partitions</code></p>
 </li>
 <li>
-<p>Produce messages to Kafka topic my-first-topic</p>
-<blockquote>
-<p>bin/kafka-console-producer.sh &ndash;broker-list localhost:9092 &ndash;topic my-first-topic &ndash;producer-property acks=all</p>
-</blockquote>
-<blockquote>
-<p>hello ashish</p>
-</blockquote>
-<blockquote>
-<p>learning kafka</p>
-</blockquote>
-<blockquote>
-<p>^C</p>
-</blockquote>
+<p>Produce messages to Kafka topic my-first-topic<br>
+<code>$bin/kafka-console-producer.sh --broker-list localhost:9092 --topic my-first-topic --producer-property acks=all</code></p>
+<p><code>message 1</code></p>
+<p><code>message 2</code></p>
+<p><code>^C</code></p>
 </li>
 <li>
-<p>Start Consuming messages from kafka topic my-first-topic</p>
-<blockquote>
-<p>bin/kafka-console-consumer.sh &ndash;bootstrap-server localhost:9092 &ndash;topic my-first-topic &ndash;from-beginning</p>
-</blockquote>
-<blockquote>
-<p>hello ashish</p>
-</blockquote>
-<blockquote>
-<p>learning kafka</p>
-</blockquote>
+<p>Start Consuming messages from kafka topic my-first-topic<br>
+<code>$bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic my-first-topic --from-beginning</code></p>
+<p><code>message 1</code></p>
+<p><code>message 2</code></p>
 </li>
 <li>
-<p>Start Consuming messages in a consumer group from kafka topic my-first-topic</p>
-<blockquote>
-<p>bin/kafka-console-consumer.sh &ndash;bootstrap-server localhost:9092 &ndash;topic my-first-topic &ndash;group my-first-consumer-group &ndash;from-beginning</p>
-</blockquote>
+<p>Start Consuming messages in a consumer group from kafka topic my-first-topic<br>
+<code>$bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic my-first-topic --group my-first-consumer-group --from-beginning</code></p>
 </li>
 <li>
-<p>List all consumer groups</p>
-<blockquote>
-<p>bin/kafka-consumer-groups.sh &ndash;bootstrap-server localhost:9092 &ndash;list</p>
-</blockquote>
+<p>List all consumer groups<br>
+<code>$bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --list</code></p>
 </li>
 <li>
-<p>Describe consumer group</p>
-<blockquote>
-<p>bin/kafka-consumer-groups.sh &ndash;bootstrap-server localhost:9092 &ndash;describe -group my-first-consumer-group</p>
-</blockquote>
+<p>Describe consumer group<br>
+<code>$bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe -group my-first-consumer-group</code></p>
 </li>
 <li>
-<p>Reset offset of consumer group to replay all messages</p>
-<blockquote>
-<p>bin/kafka-consumer-groups.sh &ndash;bootstrap-server localhost:9092 &ndash;describe -group my-first-consumer-group &ndash;reset-offsets &ndash;to-earliest &ndash;execute &ndash;topic my-first-topic</p>
-</blockquote>
+<p>Reset offset of consumer group to replay all messages<br>
+<code>$bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe -group my-first-consumer-group --reset-offsets --to-earliest --execute --topic my-first-topic</code></p>
 </li>
 <li>
-<p>Shift offsets by 2 (forward) as another strategy</p>
-<blockquote>
-<p>bin/kafka-consumer-groups &ndash;bootstrap-server localhost:9092 &ndash;group my-first-consumer-group &ndash;reset-offsets &ndash;shift-by 2 &ndash;execute &ndash;topic my-first_topic</p>
-</blockquote>
+<p>Shift offsets by 2 (forward) as another strategy<br>
+<code>bin/kafka-consumer-groups --bootstrap-server localhost:9092 --group my-first-consumer-group --reset-offsets --shift-by 2 --execute --topic my-first_topic</code></p>
 </li>
 <li>
-<p>Shift offsets by 2 (backward) as another strategy</p>
-<blockquote>
-<p>bin/kafka-consumer-groups &ndash;bootstrap-server localhost:9092 &ndash;group my-first-consumer-group &ndash;reset-offsets &ndash;shift-by -2 &ndash;execute &ndash;topic my-first_topic</p>
-</blockquote>
+<p>Shift offsets by 2 (backward) as another strategy<br>
+<code>bin/kafka-consumer-groups --bootstrap-server localhost:9092 --group my-first-consumer-group --reset-offsets --shift-by -2 --execute --topic my-first_topic</code></p>
 </li>
 </ol>
 <h2 id="kafka-api">KAFKA API</h2>
@@ -612,12 +630,12 @@ fields (required) {
 </code></pre>
 <h3 id="2-confluent-schema-notes">2. Confluent Schema Notes</h3>
 <ul>
-<li>Schema Registry stores all schemas in a Kafka topic defined by kafkastore.config=_schemas (default) which is a single partition topic with log compacted.</li>
-<li>The default response media type application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+json, application/json are used in response header.</li>
-<li>HTTP and HTTPS client protocol are supported for schema registry.</li>
-<li>Prefix to apply to metric names for the default JMX reporter kafka.schema.registry</li>
-<li>Default port for listener is 8081</li>
-<li>Confluent support primitive types of null, Boolean, Integer, Long, Float, Double, String, byte[], and complex type of IndexedRecord. Sending data of other types to KafkaAvroSerializer will cause a SerializationException</li>
+<li>Schema Registry stores all schemas in a Kafka topic _schemas defined by <strong>kafkastore.config = _schemas (default)</strong> which is a single partition topic with log compacted.</li>
+<li>The default response media type <strong>application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+json, application/json</strong> are used in response header.</li>
+<li><strong>HTTP</strong> and <strong>HTTPS</strong> client protocol are supported for schema registry.</li>
+<li>Prefix to apply to metric names for the default JMX reporter <strong>kafka.schema.registry</strong></li>
+<li>Default port for listener is <strong>8081</strong></li>
+<li>Confluent support primitive types of <strong>null, Boolean, Integer, Long, Float, Double, String, byte[]</strong>, and complex type of <strong>IndexedRecord</strong>. Sending data of other types to KafkaAvroSerializer will cause a SerializationException</li>
 </ul>
 <h3 id="3-confluent-schema-compatibility-types">3. Confluent Schema Compatibility Types</h3>
 <h6 id="backward">BACKWARD</h6>
@@ -648,6 +666,7 @@ fields (required) {
 </ul>
 <h2 id="kafka-streams">Kafka Streams</h2>
 <hr>
+<p>Kafka Streams is used for building streaming applications which transform data of one Kafka topics and feeds to another Kafka topic.</p>
 <h3 id="1-stateless-operators">1. Stateless operators</h3>
 <pre><code>branch
 filter
@@ -698,9 +717,9 @@ windowing
 <h2 id="default-ports">Default Ports</h2>
 <hr>
 <ul>
-<li>Zookeeper: 2181</li>
-<li>Zookeeper Leader Port 3888</li>
-<li>Zookeeper Election Port (Peer port) 2888</li>
+<li>Zookeeper Client Port: 2181</li>
+<li>Zookeeper Leader Port: 3888</li>
+<li>Zookeeper Election Port (Peer port): 2888</li>
 <li>Broker: 9092</li>
 <li>REST Proxy: 8082</li>
 <li>Schema Registry: 8081</li>
