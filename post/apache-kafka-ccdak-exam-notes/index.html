@@ -426,7 +426,7 @@ Now when you create a topic with 6 partition, instead of assigning broker to par
 <li>Each consumer is assigned to different partition in same consumer group.
 <ul>
 <li>If there are 5 consumers of same consumer group consuming from a topic with 10 partition then 2 partitions will be  assigned to each consumer and no consumer will remain idle.</li>
-<li>If there are 10 consumers of same consumer group consuming from a topic with 10 partition then 5 partition will be  assigned to 5 consumers and rest 5 consumers will remain idle.</li>
+<li>If there are 10 consumers of same consumer group consuming from a topic with 5 partition then 5 partition will be  assigned to 5 consumers and rest 5 consumers will remain idle.</li>
 </ul>
 </li>
 <li><strong>records-lag-max</strong> (monitoring metrics) The maximum lag in terms of number of records for any partition in this window. An increasing value over time is your best indication that the consumer group is not keeping up with the producers.</li>
