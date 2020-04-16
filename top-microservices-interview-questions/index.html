@@ -156,24 +156,12 @@ if (!doNotTrack) {
 <td>Each microservice can be <strong>developed, build, deployed and tested independently</strong> and code change in one microservice doesn&rsquo;t affect entire application.</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
 <td>Single code base for entire application so can be written in one technology.</td>
 <td>Each Microservice can be written in <strong>different technology stack</strong> like Java, Scala, Python, NodeJs etc.</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
 <td>Monolithic application can be scaled vertically by adding more servers.</td>
 <td>It can be <strong>scaled both vertically and horizontally</strong> by adding more servers and running multiple copies of each microservice behind a load balancer.</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
 </tr>
 <tr>
 <td>If something goes wrong with monolithic application and its down means whole application is down.</td>
@@ -227,11 +215,50 @@ if (!doNotTrack) {
 <li><strong>ActiveMQ, RabbitMQ, Kafka</strong> can be used for asynchronous communication across microservices.</li>
 </ul>
 <p><br /></p>
-<h4 id="8-what-is-service-discovery-">8. What is service discovery ?</h4>
-<p><strong>Service discovery</strong> is one of the microservice based server running under microservices architecture, which registers entries of all of the microservices running under that application. Whenever a microservice is up and running, it registers itself with service discovery server and then service discovery poll to its heartbeat to check if microservice is running or down.</p>
-<p>Service discovery server is also useful to monitor all the microservices and their running status.<br>
-<br /></p>
-<h4 id="9-what-is-12-factor-app-">9. What is 12 Factor App ?</h4>
+<h4 id="8-what-is-service-discovery-pattern-in-microservices-">8. What is service discovery pattern in microservices ?</h4>
+<p><strong>Service discovery</strong> is one of the microservice based server running under microservices architecture, which registers entries of all of the services running under that application. Whenever a service is up and running, it registers itself with discovery server and thereof discovery server polls service to check its heartbeat if it is up or down.</p>
+<p>Service discovery server is also useful to monitor all the microservices and their running status. Service discovery server is a broker between client and service.</p>
+<p>When client wants to access any of the service, it can talk to discovery server in two ways:-</p>
+<ol>
+<li>
+<p><strong>Client side service discovery</strong> Client asks the address of service from discovery server and then once client gets the address, it requests to the service directly.</p>
+<p>Client <small>ask service_address ⟹</small> Discovery Server <small>give service_address ⟹</small> Client <small>make request ⟹</small> Service <small>return response ⟹</small> Client</p>
+<p><code>Netflix Eureka</code> is one of the implementation of client side service discovery pattern.</p>
+</li>
+<li>
+<p><strong>Server side service discovery</strong> Client request to discovery server which redirect the request to appropriate service and get the response back and redirect to client.</p>
+<p>Client <small>make request ⟹</small> Discovery Server <small>redirect request ⟹</small> Service <small>return response ⟹</small>  Discovery Server <small>redirect response ⟹</small>  Client</p>
+</li>
+</ol>
+<p><br /></p>
+<h4 id="9-what-is-circuit-breaker-pattern-in-microservices-">9. What is circuit breaker pattern in microservices ?</h4>
+<p><strong>Circuit breaker</strong> is popular pattern for fault tolerance in microservices.</p>
+<p><strong>Problem:</strong> Services sometimes call other services to handle requests. There is always a possibility that the other service is unavailable or taking longer time to respond. Precious resources such as threads might be consumed in the caller service while waiting for the other service to respond. This might lead to resource exhaustion, which would make the calling service unable to handle other requests. The failure of one service can potentially cascade to other services throughout the application.</p>
+<p>Thats where <strong>circuit breaker</strong> comes into play to prevent service failure from cascading to other services.</p>
+<p>Consider one service calling another service like an electric circuit breaker. When all works fine circuit breaker is in <strong>closed state</strong>.</p>
+<ol>
+<li>
+<p>When service detects that something is wrong with another service, the circuit breaks (circuit breaker is in <strong>open state</strong>).<br>
+✦ <strong>When to break circuit?</strong><br>
+✓ When m out of last n requests failed <em>(When 3 out of last 5 requests failed)</em><br>
+✓ Request is considered failed if it responds after timeout period of t seconds <em>(say 2s)</em></p>
+</li>
+<li>
+<p>Once circuit breaks, service do not attempt to call another service.<br>
+✦ <strong>What to do when circuit breaks?</strong><br>
+● throw an error <em><strong>or</strong></em><br>
+● return a fallback &ldquo;default&rdquo; response <em><strong>or</strong></em><br>
+● save previous responses from cache</p>
+</li>
+<li>
+<p>After waiting for sleep window of x seconds <em>(say 10s)</em>, service attempts to call another service (circuit breaker is in <strong>half open state</strong>)<br>
+● If request fails then circuit breaks (goes back in open state). It repeats step 2 and 3 again.<br>
+● If gets a response back then circuit goes back in closed state. Resume the requests again. All works fine.</p>
+</li>
+</ol>
+<p><code>Netflix Hystrix</code> is one of the implementation of circuit breaker pattern.</p>
+<p><br /></p>
+<h4 id="10-what-is-12-factor-app-">10. What is 12 Factor App ?</h4>
 <p><a href="https://12factor.net/">The Twelve-Factor App</a> is a mythology for writing microservices having following factors:-</p>
 <ol>
 <li>
