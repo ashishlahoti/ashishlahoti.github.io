@@ -143,29 +143,45 @@ if (!doNotTrack) {
 <p>This kind of setup is known as microservices based architecture.<br>
 <br /></p>
 <h4 id="2-what-are-the-advantage-of-microservices-over-monolithic-application">2. What are the advantage of microservices over monolithic application?</h4>
-<ol>
-<li>
-<p>Monolithic application is having single code base for entire application so one small code change requires the build process, testing and deployment of entire application<br>
-<em><strong>whereas,</strong></em><br>
-In Microservices based application, each microservice can be developed, build, deployed and tested independently and code change in one microservice doesn&rsquo;t affect entire application.</p>
-</li>
-<li>
-<p>Monolithic application is having single code base for entire application so can be written in one technology<br>
-<em><strong>whereas,</strong></em><br>
-In Microservices based application, each Microservice can be written in different technologies like Java, Scala, Python, NodeJs etc.</p>
-</li>
-<li>
-<p>Monolithic application can be scaled vertically by adding more servers<br>
-<em><strong>whereas,</strong></em><br>
-Microservices based application can be scaled both vertically by adding more servers and horizontally by running multiple copies of each microservice behind a load balancer.</p>
-</li>
-<li>
-<p>If something goes wrong with monolithic application and its down means whole application is down<br>
-<em><strong>whereas,</strong></em><br>
-Microservices based application continue to run with limited functionality if something goes wrong in few microservices and they are down.<br>
-<br /></p>
-</li>
-</ol>
+<table>
+<thead>
+<tr>
+<th>Monolithic  application</th>
+<th>Microservices based application</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Single code base for entire application so one small code change requires the build process, testing and deployment of entire application.</td>
+<td>Each microservice can be <strong>developed, build, deployed and tested independently</strong> and code change in one microservice doesn&rsquo;t affect entire application.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Single code base for entire application so can be written in one technology.</td>
+<td>Each Microservice can be written in <strong>different technology stack</strong> like Java, Scala, Python, NodeJs etc.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Monolithic application can be scaled vertically by adding more servers.</td>
+<td>It can be <strong>scaled both vertically and horizontally</strong> by adding more servers and running multiple copies of each microservice behind a load balancer.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>If something goes wrong with monolithic application and its down means whole application is down.</td>
+<td>It is <strong>fault tolerant</strong> and continue to run with limited functionality if something goes wrong in few microservices and they are down.</td>
+</tr>
+</tbody>
+</table>
+<p><br /></p>
 <h4 id="3-you-have-to-migrate-an-existing-monolithic-application-to-microservices-what-will-be-your-approach">3. You have to migrate an existing monolithic application to microservices. What will be your approach?</h4>
 <p>Migrating from monolithic application to microservices is a long term process where we gradually :-</p>
 <ol>
@@ -177,33 +193,111 @@ Microservices based application continue to run with limited functionality if so
 </ol>
 <p>Repeat the above 5 steps until our entire monolithic application is converted into microservices.<br>
 <br /></p>
-<h4 id="4-what-are-the-challenges-in-microservices-based-application-">4. What are the challenges in microservices based application ?</h4>
+<h4 id="4-what-are-the-best-practices-to-design-microservices-based-application-">4. What are the best practices to design microservices based application ?</h4>
+<p>These are few best practices to design microservice:-</p>
+<ul>
+<li>One functionality one microservice</li>
+<li>Separate data source for each microservice</li>
+</ul>
+<p><br /></p>
+<h4 id="5-what-are-the-challenges-in-microservices-based-application-">5. What are the challenges in microservices based application ?</h4>
 <p>The challenges with microservices are as follows:-</p>
 <ol>
 <li>Require good investment for infrastructure setup.</li>
 <li>It is a nightmare to manage development, build, test, deployment and release cycles manually. DevOps is must to implement CI/CD (Continuous integration, continuous delivery) automation.</li>
-<li>Debug an issue is difficult if it is span across multiple microservices.</li>
-<li>Inter communication overhead between microservices</li>
-<li>Integration testing challenges across microservices.</li>
+<li>Difficult to troubleshoot or debug an issue spanning across multiple microservices.</li>
+<li>Overhead of inter communication between microservices</li>
+<li>Challenges in development and testing where two or more microservices are involved.</li>
+<li>Difficult to make configuration change across large fleet of microservices.</li>
+<li>Operation and maintenance overhead.</li>
+<li>Challenges comes with distributes system such as Network latency, fault tolerance, distributed transactions, unreliable networks, handling asynchronous operations.</li>
 </ol>
 <p><br /></p>
-<h4 id="5-how-do-you-debug-an-issue-in-microservices-based-application-">5. How do you debug an issue in microservices based application ?</h4>
+<h4 id="6-how-do-you-debug-an-issue-in-microservices-based-application-">6. How do you debug an issue in microservices based application ?</h4>
 <p>For debugging and logging in microservices based application,</p>
 <ul>
 <li>We should have a centralized logging system where each microservice push their logs to <strong>Splunk</strong> or <strong>ELK (Elastic Logstash Kibana)</strong> and we can use their built in dashboards to look at the logs for debugging.</li>
 <li>We can generate a <strong>Request_ID</strong> for each request, which would be passed through all the microservices which serves the request. This Request_ID will be logged in splunk or ELK. Later if something goes wrong with a particular request, we can filter out logs from all microservices based on Request_ID to trace the request flow.</li>
 </ul>
 <p><br /></p>
-<h4 id="6-how-do-microservices-communicate-with-each-other-">6. How do microservices communicate with each other ?</h4>
+<h4 id="7-how-do-microservices-communicate-with-each-other-">7. How do microservices communicate with each other ?</h4>
 <p>Microservices often communicate with each other using <strong>RESTful APIs</strong> over <strong>HTTP</strong>. The communication can be broadly divided into two categories:-</p>
 <ul>
 <li><strong>RestTemplate, WebClient, FeignClient</strong> can be used for synchronous communication between microservices</li>
 <li><strong>ActiveMQ, RabbitMQ, Kafka</strong> can be used for asynchronous communication across microservices.</li>
 </ul>
 <p><br /></p>
-<h4 id="7-what-is-service-discovery-">7. What is service discovery ?</h4>
+<h4 id="8-what-is-service-discovery-">8. What is service discovery ?</h4>
 <p><strong>Service discovery</strong> is one of the microservice based server running under microservices architecture, which registers entries of all of the microservices running under that application. Whenever a microservice is up and running, it registers itself with service discovery server and then service discovery poll to its heartbeat to check if microservice is running or down.</p>
-<p>Service discovery server is also useful to monitor all the microservices and their running status.</p>
+<p>Service discovery server is also useful to monitor all the microservices and their running status.<br>
+<br /></p>
+<h4 id="9-what-is-12-factor-app-">9. What is 12 Factor App ?</h4>
+<p><a href="https://12factor.net/">The Twelve-Factor App</a> is a mythology for writing microservices having following factors:-</p>
+<ol>
+<li>
+<p><mark><strong>Codebase</strong></mark><br>
+<em>One codebase, multiple deploys.</em><br>
+We should have only one repository for each microservice in our source control such as <code>git</code>, <code>subversion</code>. All the microservice deployment should be from that repository.</p>
+</li>
+<li>
+<p><mark><strong>Dependencies</strong></mark><br>
+<em>Explicitly declare and isolate dependencies.</em><br>
+We should use dependency manager in our microservice such as <code>maven (pom.xml)</code> or <code>gradle (build.gradle)</code> for <strong>Java</strong>.  Benefit is new developer can check out code onto their machine, requiring only language runtime and dependency manager as prerequisite.</p>
+</li>
+<li>
+<p><mark><strong>Config</strong></mark><br>
+<em>Store config in the environment.</em><br>
+We should create a <code>Spring Cloud Config Server</code> to manage configurations of all microservices across all environments like dev, staging, prod.<br>
+We should not declare configuration inside source code because configuration varies across deployments but code does not.</p>
+</li>
+<li>
+<p><mark><strong>Backing services</strong></mark><br>
+<em>Treat backing services as attached resources.</em><br>
+We should integrate microservice with resources like datastores, messaging systems, caching system or other microservices from the configuration only. All the resource URL, locator, credentials should come from configuration no matter if it is a thirdparty resource or developed by your organization.</p>
+</li>
+<li>
+<p><mark><strong>Build, Release &amp; Run</strong></mark><br>
+<em>Strictly separate build and run stages.</em><br>
+We should use release management tools like <code>Jenkins</code> to create pipelines to separate the <strong>build</strong> (building executable by compiling source code), <strong>release</strong> (executable with configuration) and <strong>run</strong> (deployment of release to specific environment) stages.<br>
+Release should have a unique id such as timestamp or version like v1.0.0 which can not be mutated. Any change must be a new release.</p>
+</li>
+<li>
+<p><mark><strong>Processes</strong></mark><br>
+<em>Execute the app as one or more stateless processes.</em><br>
+Microservice we build, should be stateless and should not rely on in-memory cache or filesystem to store data since it usually wiped out on restart. Any data that need to be persist must be stored in backing service like database. However distributed cache like <code>memcache</code>, <code>ehcache</code> or <code>Redis</code> can be used.<br>
+We should also never use and rely on &ldquo;sticky sessions&rdquo;.</p>
+</li>
+<li>
+<p><mark><strong>Port Binding</strong></mark><br>
+<em>Export services via port binding.</em><br>
+We should always create a standalone microservice using <code>spring boot</code> which is having embedded <code>Tomcat</code> or <code>Jetty</code> webserver. As soon as service starts, it is ready to serve over HTTP by binding to a port. We should not rely on creating a war and then deploying to webserver.</p>
+</li>
+<li>
+<p><mark><strong>Concurrency</strong></mark><br>
+<em>Scale out via the process model.</em><br>
+Each microservice in application should be able to handle more load by scaling out (deploying multiple copies on microservice behind load balancer).</p>
+</li>
+<li>
+<p><mark><strong>Disposability</strong></mark><br>
+<em>Maximize robustness with fast startup and graceful shutdown</em><br>
+We should try to minimize the startup time of microservice and handle the shutdown gracefully. Microservice should be able to start and stop at moment&rsquo;s notice to facilitate fast elastic scaling, rapid deployment of code or config changes.</p>
+</li>
+<li>
+<p><mark><strong>Dev/Prod parity</strong></mark><br>
+<em>Keep development, staging, and production as similar as possible.</em><br>
+We should adapt CI/CD (Continuous Integration/Continuos Delivery) by combining DevOps automation tools like <code>Jenkins</code> to build pipelines, <code>Docker</code> to containerize build with all dependencies, <code>Chef</code> and <code>Puppet</code> to automate delivery process. CI/CD process minimize the gap between development, testing, staging and production environments.</p>
+</li>
+<li>
+<p><mark><strong>Logs</strong></mark><br>
+<em>Treat logs as event streams</em><br>
+Microservice should not manage log files itself, instead treat it as event stream and route it to a centralized log indexing and analysis system such as <code>Splunk</code> or <code>ELK (Elastic logstash Kibana)</code> or data warehousing system such as <code>Hadoop/Hive</code>.</p>
+</li>
+<li>
+<p><mark><strong>Admin processes</strong></mark><br>
+<em>Run admin/management tasks as one-off processes</em><br>
+All admin/management tasks for a microservice like database migration should be deployed and run separately.</p>
+</li>
+</ol>
 		</div>
 		<footer class="post__footer">
 			
