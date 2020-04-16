@@ -134,8 +134,8 @@ if (!doNotTrack) {
 </div></div>
 		</header><div class="content post__content clearfix">
 			<p>These Spring Boot interview questions are based on my personal interview experience. Topics are in the order of recent interview trends. Keep following this post for regular updates.</p>
-<h6 id="1-what-is-spring-boot-and-why-we-need-this">1. What is Spring Boot and why we need this?</h6>
-<p>Spring framework has become complicated over the years with loads of feature. Initial Spring project setup takes time due to following :-</p>
+<h4 id="1-what-is-spring-boot-and-why-we-need-this">1. What is Spring Boot and why we need this?</h4>
+<p>Spring framework has become complicated over the years with lot of features. Initial Spring project setup takes time due to following :-</p>
 <ol>
 <li>Include all required spring modules and related thirdparty libraries</li>
 <li>Take care of version compatibility of spring module with other thirdparty jars</li>
@@ -144,25 +144,27 @@ if (!doNotTrack) {
 <li>Build process to generate jar/war and deployment process</li>
 <li>Best practices to use spring modules</li>
 </ol>
-<p>Spring boot solves all this problems and help to create stand-alone, production-grade Spring based applications that you can just run</p>
+<p><strong>✰ Spring boot solves all this problems and help to create stand-alone, production-grade Spring based applications that you can just run.</strong></p>
 <p>Spring Boot take an opinionated view of the Spring platform and third-party libraries so you can get started with minimum fuss. Most Spring Boot applications need very little Spring configuration.</p>
-<p><em><strong>Features</strong></em></p>
+<h6 id="features">Features</h6>
 <ol>
 <li>Create stand-alone Spring applications</li>
 <li>Embedded server (like Tomcat, Jetty or Undertow) to avoid complexity in application (WAR files) deployment</li>
 <li>Provide opinionated &lsquo;starter&rsquo; dependencies to simplify your build and application configuration</li>
 <li>Automatically configure Spring and 3rd party libraries whenever possible</li>
 <li>Provide production-ready features such as metrics, health checks and externalized configuration</li>
-<li>Absolutely no code generation and no requirement for XML configuration</li>
+<li>Absolutely no code generation and no requirement for XML configuration<br>
+<br /></li>
 </ol>
-<h6 id="2-what-springbootapplication-annotation-do">2. What @SpringBootApplication annotation do?</h6>
+<h4 id="2-what-springbootapplication-annotation-do">2. What @SpringBootApplication annotation do?</h4>
 <p><a href="https://docs.spring.io/spring-boot/docs/current/reference/html/using-spring-boot.html#using-boot-using-springbootapplication-annotation">@SpringBootApplication</a> comprises of three annotations which are widely used:-</p>
 <ul>
 <li><a href="https://docs.spring.io/spring-boot/docs/current/reference/html/using-spring-boot.html#using-boot-auto-configuration">@EnableAutoConfiguration</a> enable Spring Boot’s auto-configuration mechanism</li>
 <li><a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/annotation/ComponentScan.html">@ComponentScan</a> enable @Component scan on the package where the application is located</li>
 <li><a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/annotation/Configuration.html">@Configuration</a> allow to register extra beans in the context or import additional configuration classes</li>
 </ul>
-<h6 id="3-what-are-the-things-happens-in-the-background-when-springboot-web-application-starts">3. What are the things happens in the background when springboot web application starts?</h6>
+<p><br /></p>
+<h4 id="3-what-are-the-things-happens-in-the-background-when-springboot-web-application-starts">3. What are the things happens in the background when springboot web application starts?</h4>
 <ol>
 <li>Looks for active profile and initialize properties and beans based on profile</li>
 <li>Start embedded tomcat server if creating web application</li>

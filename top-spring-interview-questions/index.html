@@ -134,10 +134,9 @@ if (!doNotTrack) {
 </div></div>
 		</header><div class="content post__content clearfix">
 			<p>These Spring interview questions are based on my personal interview experience. Topics are in the order of recent interview trends. Keep following this post for regular updates.</p>
-<h2 id="dependency-injection-di">Dependency Injection (DI)</h2>
-<ul>
-<li>Dependency Injection means injecting (passing) the dependency of one object in another object</li>
-<li>Spring provide two ways for dependency injection:-
+<h4 id="1-what-is-dependency-injection-di-and-what-are-different-ways-to-inject-dependencies-in-spring-">1. What is Dependency Injection (DI) and what are different ways to inject dependencies in Spring ?</h4>
+<p><strong>Dependency Injection</strong> means injecting (passing) the dependency of one object in another object.</p>
+<p>Spring provide two ways for dependency injection:-</p>
 <ol>
 <li><strong>Setter based</strong>
 <ul>
@@ -152,9 +151,9 @@ if (!doNotTrack) {
 </ul>
 </li>
 </ol>
-</li>
-</ul>
-<h2 id="spring-bean-life-cycle">Spring bean life cycle</h2>
+<p><br /></p>
+<h4 id="2-explain-spring-bean-life-cycle-">2. Explain Spring bean life cycle ?</h4>
+<p>Spring bean follow the following sequence in its life cycle:-</p>
 <ol>
 <li>Default constructor will be called.</li>
 <li>All properties setter methods will be called.</li>
@@ -168,7 +167,9 @@ if (!doNotTrack) {
 <li>If class implements DisposableBean then destroy method will be called.</li>
 <li>If class has custom destroy method defined then it will be called.</li>
 </ol>
-<h2 id="spring-mvc-flow">Spring MVC flow</h2>
+<p><br /></p>
+<h4 id="3-explain-spring-mvc-workflow-">3. Explain Spring MVC workflow ?</h4>
+<p>When you request from spring MVC application then it follow the following sequence:-</p>
 <ol>
 <li>
 <p>Dipatcher Servlet which is also know as <strong>front controller</strong> of Spring application handles all the request mapped to it in <strong>web.xml</strong> and ask for appropriate controller from Handler Mapping</p>
