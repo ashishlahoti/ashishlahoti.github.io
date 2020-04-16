@@ -144,25 +144,21 @@ if (!doNotTrack) {
         <li></li>
       </ul>
     </li>
-    <li><a href="#exam-notes">Exam Notes</a>
+    <li><a href="#kafka-architecture">Kafka Architecture</a>
       <ul>
         <li></li>
       </ul>
     </li>
     <li><a href="#kafka-cli">KAFKA CLI</a></li>
+    <li><a href="#kafka-streams">Kafka Streams</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
     <li><a href="#kafka-api">KAFKA API</a></li>
     <li><a href="#confluent-schema-registry">Confluent Schema Registry</a>
       <ul>
-        <li><a href="#1-avro">1. Avro</a></li>
-        <li><a href="#2-confluent-schema-notes">2. Confluent Schema Notes</a></li>
-        <li><a href="#3-confluent-schema-compatibility-types">3. Confluent Schema Compatibility Types</a></li>
-      </ul>
-    </li>
-    <li><a href="#kafka-streams">Kafka Streams</a>
-      <ul>
-        <li><a href="#1-stateless-operators">1. Stateless operators</a></li>
-        <li><a href="#2-stateful-operators">2. Stateful operators</a></li>
-        <li><a href="#3-window">3. Window</a></li>
+        <li></li>
       </ul>
     </li>
     <li><a href="#default-ports">Default Ports</a></li>
@@ -194,59 +190,43 @@ if (!doNotTrack) {
 <li><a href="https://www.udemy.com/course/apache-kafka-tutorial-for-beginners/" target="_blank">Udemy Apache Kafka Course for Beginners</a></li>
 <li><a href="https://www.udemy.com/course/confluent-certified-developer-for-apache-kafka/" target="_blank">Udemy CCDAK 150 Practice Exam Questions</a></li>
 </ol>
-<p>You should prepare well in following areas:</p>
+<p>You should prepare well for following topics. Recommended to study topics in the same sequence.</p>
 <ol>
-<li>Kafka Architecture
-<ul>
-<li>Read Confluent Kafka Definitive Guide PDF</li>
-<li>Read Apache Kafka Documentation</li>
-<li>Once you read all these, revise using <a href="#exam-notes">Exam Notes</a> section in this blog. You can expect most of the questions from these notes.</li>
-</ul>
+<li>
+<p><strong>Kafka Architecture</strong><br>
+Read <a href="https://www.confluent.io/wp-content/uploads/confluent-kafka-definitive-guide-complete.pdf" target="_blank">Confluent Kafka Definitive Guide PDF</a> and <a href="https://kafka.apache.org/documentation/" target="_blank">Apache Kafka Documentation</a>. Once you read both, revise using <a href="#kafka-architecture">Kafka Architecture</a> section in this post.</p>
 </li>
-<li>Kafka Java APIs
-<ul>
-<li>Read Apache Kafka Documentation how to create <a href="https://codingnconcepts.com/post/apache-kafka-producer-using-java/" target="_blank">producer</a> and <a href="https://codingnconcepts.com/post/apache-kafka-consumer-using-java/" target="_blank">consumer</a> in Java</li>
-</ul>
+<li>
+<p><strong>Kafka CLI</strong><br>
+Read <a href="https://www.confluent.io/wp-content/uploads/confluent-kafka-definitive-guide-complete.pdf" target="_blank">Confluent Kafka Definitive Guide PDF</a> and revise using <a href="#kafka-cli">KAFKA CLI</a> section of this post.</p>
 </li>
-<li>Kafka CLI
-<ul>
-<li>Read Confluent Kafka Definitive Guide PDF</li>
-<li>Once you read all these, revise using <a href="#kafka-cli">KAFKA CLI</a> section in this blog. You can expect most of the questions from these notes.</li>
-</ul>
+<li>
+<p><strong>Kafka Streams</strong><br>
+Read <a href="https://www.confluent.io/wp-content/uploads/confluent-kafka-definitive-guide-complete.pdf" target="_blank">Confluent Kafka Definitive Guide PDF</a> and revise using <a href="#kafka-streams">Kafka Streams</a> section of this post.</p>
 </li>
-<li>Kafka Streams
-<ul>
-<li>Read Confluent Kafka Definitive Guide PDF</li>
-<li>Read <a href="#kafka-streams">Kafka Streams</a> section of these notes</li>
-</ul>
+<li>
+<p><strong>Kafka Security</strong><br>
+Read <a href="https://kafka.apache.org/documentation/#security" target="_blank">Apache Kafka Documentation Security Section</a></p>
 </li>
-<li>Kafka Monitoring (Metrics)
-<ul>
-<li>Read Confluent Kafka Definitive Guide PDF</li>
-<li>Read Apache Kafka Documentation for important metrics</li>
-<li>Read Confluent Kafka Documentation as well</li>
-</ul>
+<li>
+<p><strong>Kafka APIs</strong><br>
+Read <a href="https://kafka.apache.org/documentation/#api" target="_blank">Apache Kafka Documentation API section</a> and revise using <a href="#kafka-api">KAFKA API</a> section of this post.</p>
 </li>
-<li>Kafka Security
-<ul>
-<li>Read Apache Kafka Documentation <a href="https://kafka.apache.org/documentation/#security" target="_blank">security section</a></li>
-</ul>
+<li>
+<p><strong>Kafka Monitoring (Metrics)</strong><br>
+Read <a href="https://www.confluent.io/wp-content/uploads/confluent-kafka-definitive-guide-complete.pdf" target="_blank">Confluent Kafka Definitive Guide PDF</a> and <a href="https://kafka.apache.org/documentation/" target="_blank">Apache Kafka Documentation</a> for important metrics. Read <a href="https://docs.confluent.io/current/index.html" target="_blank">Confluent Kafka Documentation</a> as well.</p>
 </li>
-<li>Confluent KSQL
-<ul>
-<li>Read about KSQL from Confluent Documentation</li>
-</ul>
+<li>
+<p><strong>Confluent Schema Registry</strong><br>
+Read <a href="https://docs.confluent.io/current/index.html" target="_blank">Confluent Kafka Documentation</a> and revise using <a href="#confluent-schema-registry">Confluent Schema Registry</a> section of this post.</p>
 </li>
-<li>Confluent REST Proxy
-<ul>
-<li>Read about KSQL from Confluent Documentation</li>
-</ul>
+<li>
+<p><strong>Confluent KSQL</strong><br>
+Read  <a href="https://docs.confluent.io/current/streams-ksql.html" target="_blank">Confluent Kafka Documentation KSQL and Kafka Streams section</a></p>
 </li>
-<li>Confluent Schema Registry
-<ul>
-<li>Read about Schema Registry from Confluent Documentation</li>
-<li>Read <a href="#confluent-schema-registry">Confluent Schema Registry</a> section of these notes</li>
-</ul>
+<li>
+<p><strong>Confluent REST Proxy</strong><br>
+Read  <a href="https://docs.confluent.io/current/kafka-rest/index.html#" target="_blank">Confluent Kafka Documentation Rest Proxy Section</a></p>
 </li>
 </ol>
 <h2 id="sample-exam-questions">Sample Exam Questions</h2>
@@ -263,7 +243,10 @@ if (!doNotTrack) {
 <li>What is a generic unique id which can be used for a messages received from a consumer?<br>
 <em><strong>Topic + Partition + Offset</strong></em></li>
 </ul>
-<h5 id="2-kafka-streams-read-kafka-streamshahahugoshortcode-s13-hbhb-notes-to-get-answers-of-below-questions">2. Kafka Streams (Read <a href="#kafka-streams">Kafka Streams</a> notes to get answers of below questions)</h5>
+<blockquote>
+<p>Read <a href="#kafka-architecture">Kafka Architecture</a> section of this post for more questions and answers</p>
+</blockquote>
+<h5 id="2-kafka-streams">2. Kafka Streams</h5>
 <ul>
 <li>To transform data from a Kafka topic to another one, You should use ?<br>
 <em><strong>Kafka Streams</strong></em></li>
@@ -271,7 +254,10 @@ if (!doNotTrack) {
 <li>Which of the Kafka Stream operators are stateless ?</li>
 <li>Which window is not having gap ?</li>
 </ul>
-<h5 id="3-confluent-schema-registry-read-confluent-schema-registryhahahugoshortcode-s14-hbhb-notes-to-get-answers-of-below-questions">3. Confluent Schema Registry (Read <a href="#confluent-schema-registry">Confluent Schema Registry</a> notes to get answers of below questions)</h5>
+<blockquote>
+<p>Read <a href="#kafka-streams">Kafka Streams</a> section of this post for answers</p>
+</blockquote>
+<h5 id="3-confluent-schema-registry">3. Confluent Schema Registry</h5>
 <ul>
 <li>Which of the following is not a primitive type of Avro ?</li>
 <li>Which of the following in not a complex type of Avro?</li>
@@ -287,6 +273,9 @@ if (!doNotTrack) {
 <li>Where are Avro schema stored in Confluent Schema Registry?<br>
 <em><strong>_schemas Kafka topic</strong></em></li>
 </ul>
+<blockquote>
+<p>Read <a href="#confluent-schema-registry">Confluent Schema Registry</a> section of this post for answers</p>
+</blockquote>
 <h5 id="4-confluent-ksql">4. Confluent KSQL</h5>
 <ul>
 <li>is KSQL ANSI SQL Compliant?<br>
@@ -303,7 +292,7 @@ if (!doNotTrack) {
 <em><strong>SASL/SCRAM-SHA-256 and SASL/SCRAM-SHA-512</strong></em><br>
 <em><strong>SASL/OAUTHBEARER</strong></em></li>
 </ul>
-<h2 id="exam-notes">Exam Notes</h2>
+<h2 id="kafka-architecture">Kafka Architecture</h2>
 <hr>
 <h5 id="cluster">Cluster</h5>
 <ul>
@@ -330,19 +319,21 @@ Now when you create a topic with 6 partition, instead of assigning broker to par
 <ul>
 <li>Topic can have one or more partition. One partition is a leader while the others are replica.</li>
 <li>It is not possible to delete a partition of topic once created.</li>
-<li>Order is guaranteed within the partition and once data is written into partition, its immutable!</li>
+<li>Order is guaranteed within the partition and once data is written into partition, <strong>its immutable!</strong></li>
 <li>If producer writes at 1 GB/sec and consumer consumes at 250MB/sec then requires 4 partition!</li>
 </ul>
 <h4 id="segment">Segment</h4>
 <ul>
-<li>Partitions are made of segments (<strong>.log</strong> files)</li>
+<li>Partitions are made of segments <em>(<strong>.log</strong> files)</em></li>
 <li>At a time only one segment is active in a partition</li>
 <li><strong>log.segment.bytes = 1 GB (default)</strong>, Max size of a single segment in bytes</li>
 <li><strong>log.segment.ms = 1 week (default)</strong>, Time kafka will wait before closing the segment if not full</li>
 <li>Segment come with two indexes (files):-
 <ol>
-<li>An offset to position index (<strong>.index</strong> file): Allows kafka where to read to find a message</li>
-<li>A timestamp to offset index (<strong>.timeindex</strong> file): Allows kafka to find a message with a timestamp</li>
+<li>An offset to position index <em>(<strong>.index</strong> file)</em><br>
+Allows kafka where to read to find a message</li>
+<li>A timestamp to offset index <em>(<strong>.timeindex</strong> file)</em><br>
+Allows kafka to find a message with a timestamp</li>
 </ol>
 </li>
 <li><strong>log.cleanup.policy = delete</strong> (Kafka default for all user topics), Delete data based on age of data (default is 1 week)</li>
@@ -361,7 +352,7 @@ Now when you create a topic with 6 partition, instead of assigning broker to par
 </ul>
 <h5 id="topic-replication">Topic Replication</h5>
 <ul>
-<li>Replication factor = 3 and partition = 2 means there will be total 6 partition distributed across Kafka cluster. Each partition will be having 1 leader and 2 ISR (in-sync replica).</li>
+<li>Replication factor = 3 and partition = 2 means there will be total 6 partition distributed across Kafka cluster. Each partition will be having 1 leader and 2 ISR <em>(in-sync replica)</em>.</li>
 <li>Broker contains leader partition called <strong>leader</strong> of that partition and only leader can receive and serve data for partition.</li>
 <li>Replication factor can not be greater then number of broker in the kafka cluster. If topic is having a replication factor of 3 then each partition will live on 3 different brokers.</li>
 </ul>
@@ -378,15 +369,15 @@ Now when you create a topic with 6 partition, instead of assigning broker to par
 </ul>
 <h5 id="producer-acknowledgment">Producer Acknowledgment</h5>
 <ul>
-<li><strong>acks=0</strong> Producer do not wait for ack (possible data loss)</li>
-<li><strong>acks=1</strong> Producer wait for leader ack (limited data loss)</li>
-<li><strong>acks=all</strong> Producer wait for leader+replica ack (no data loss)</li>
-<li><strong>acks=all</strong> must be used in conjunction with <strong>min.insync.replicas</strong> (can be set at broker or topic level)
+<li><strong>acks=0</strong> Producer do not wait for ack <em>( possible data loss )</em></li>
+<li><strong>acks=1</strong> Producer wait for leader ack <em>( limited data loss )</em></li>
+<li><strong>acks=all</strong> Producer wait for leader+replica ack <em>( no data loss )</em></li>
+<li><strong>acks=all</strong> must be used in conjunction with <strong>min.insync.replicas</strong> <em>( can be set at broker or topic level )</em>
 <ul>
 <li><strong>min.insync.replica</strong> only matters if acks=all</li>
-<li><strong>acks=all, min.insync.replica=2</strong> implies that at least 2 brokers that are ISR (including leader) must acknowledge</li>
+<li><strong>acks=all, min.insync.replica=2</strong> implies that at least 2 brokers that are ISR <em>(including leader)</em> must acknowledge</li>
 <li><strong>replication.factor=3, acks=all, min.insync.replicas=2</strong> can only tolerate 1 broker going down, otherwise the producer will receive an exception NOT_ENOUGH_REPLICAS on send</li>
-<li><strong>acks=all, min.insync.replica=1</strong> implies that at least 1 brokers that is ISR (including leader) must acknowledge</li>
+<li><strong>acks=all, min.insync.replica=1</strong> implies that at least 1 brokers that is ISR <em>(including leader)</em> must acknowledge</li>
 <li>A kafka topic with <strong>replication.factor=3, acks=all, min.insync.replicas=1</strong>, maximum number of 2 brokers can go down so that a producer can still produce to the topic.</li>
 </ul>
 </li>
@@ -586,6 +577,56 @@ If tickTime=2000, initLimit=5 and syncLimit=2 then a follower can take (tickTime
 <code>bin/kafka-consumer-groups --bootstrap-server localhost:9092 --group my-first-consumer-group --reset-offsets --shift-by -2 --execute --topic my-first_topic</code></p>
 </li>
 </ol>
+<h2 id="kafka-streams">Kafka Streams</h2>
+<hr>
+<p>Kafka Streams is used for building streaming applications which transform data of one Kafka topics and feeds to another Kafka topic.</p>
+<h4 id="1-stateless-operators">1. Stateless operators</h4>
+<pre><code>branch
+filter
+inverseFilter
+flatMap
+flatMapValues
+foreach
+groupByKey
+groupBy
+map
+mapValues
+</code></pre>
+<h4 id="2-stateful-operators">2. Stateful operators</h4>
+<pre><code>join
+aggregate
+count
+reduce
+windowing
+</code></pre>
+<h4 id="3-window">3. Window</h4>
+<ol>
+<li>Tumbling window
+<ul>
+<li>Time based, Fixed Size, Non overlapping, Gap less windows</li>
+<li>For e.g. if window-size=5min and advance-interval =5min then it looks like [0-5min] [5min-10min] [10min-15min]&hellip;..</li>
+</ul>
+</li>
+<li>Hopping window
+<ul>
+<li>Time based, Fixed Size, Overlapping windows</li>
+<li>For e.g. if widow-size=5min and advance-interval=3min then it looks like [0-5min] [3min-8min] [6min-11min]&hellip;&hellip;</li>
+</ul>
+</li>
+<li>Sliding window
+<ul>
+<li>Fixed size overlapping window that works on the difference between record timestamp</li>
+<li>Used only for join operation</li>
+</ul>
+</li>
+<li>Session window
+<ul>
+<li>Session based, Dynamically sized, Non overlapping, Data driven window.</li>
+<li>Used to aggregate key based events into session.</li>
+</ul>
+</li>
+</ol>
+<p>For more information on windowing, refer <a href="https://kafka.apache.org/20/documentation/streams/developer-guide/dsl-api.html#windowing" target="_blank">Apache Kafka Documentation on windowing</a></p>
 <h2 id="kafka-api">KAFKA API</h2>
 <hr>
 <ul>
@@ -594,7 +635,7 @@ If tickTime=2000, initLimit=5 and syncLimit=2 then a follower can take (tickTime
 </ul>
 <h2 id="confluent-schema-registry">Confluent Schema Registry</h2>
 <hr>
-<h3 id="1-avro">1. Avro</h3>
+<h4 id="1-avro">1. Avro</h4>
 <h6 id="primitive-types">Primitive Types</h6>
 <pre><code>1. null
 2. boolean
@@ -628,7 +669,8 @@ fields (required) {
     aliases (optional)
 }
 </code></pre>
-<h3 id="2-confluent-schema-notes">2. Confluent Schema Notes</h3>
+<p><br /></p>
+<h4 id="2-confluent-schema-notes">2. Confluent Schema Notes</h4>
 <ul>
 <li>Schema Registry stores all schemas in a Kafka topic _schemas defined by <strong>kafkastore.config = _schemas (default)</strong> which is a single partition topic with log compacted.</li>
 <li>The default response media type <strong>application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+json, application/json</strong> are used in response header.</li>
@@ -637,7 +679,8 @@ fields (required) {
 <li>Default port for listener is <strong>8081</strong></li>
 <li>Confluent support primitive types of <strong>null, Boolean, Integer, Long, Float, Double, String, byte[]</strong>, and complex type of <strong>IndexedRecord</strong>. Sending data of other types to KafkaAvroSerializer will cause a SerializationException</li>
 </ul>
-<h3 id="3-confluent-schema-compatibility-types">3. Confluent Schema Compatibility Types</h3>
+<p><br /></p>
+<h4 id="3-confluent-schema-compatibility-types">3. Confluent Schema Compatibility Types</h4>
 <h6 id="backward">BACKWARD</h6>
 <ul>
 <li>Consumer using schema X can process data produced with schema X or X-1. In case of BACKWARD_TRANSITIVE, consumer using schema X can process data produced with all previous schema X, X-1, X-2 and so on</li>
@@ -664,56 +707,6 @@ fields (required) {
 <li>Compatibility type means schema compatibility checks are disabled.</li>
 <li>Upgrading Consumer or Producer depends. For example, modifying a field type from Number to String. In this case, you will either need to upgrade all producers and consumers to the new schema version at the same time</li>
 </ul>
-<h2 id="kafka-streams">Kafka Streams</h2>
-<hr>
-<p>Kafka Streams is used for building streaming applications which transform data of one Kafka topics and feeds to another Kafka topic.</p>
-<h3 id="1-stateless-operators">1. Stateless operators</h3>
-<pre><code>branch
-filter
-inverseFilter
-flatMap
-flatMapValues
-foreach
-groupByKey
-groupBy
-map
-mapValues
-</code></pre>
-<h3 id="2-stateful-operators">2. Stateful operators</h3>
-<pre><code>join
-aggregate
-count
-reduce
-windowing
-</code></pre>
-<h3 id="3-window">3. Window</h3>
-<ol>
-<li>Tumbling window
-<ul>
-<li>Time based, Fixed Size, Non overlapping, Gap less windows</li>
-<li>For e.g. if window-size=5min and advance-interval =5min then it looks like [0-5min] [5min-10min] [10min-15min]&hellip;..</li>
-</ul>
-</li>
-<li>Hopping window
-<ul>
-<li>Time based, Fixed Size, Overlapping windows</li>
-<li>For e.g. if widow-size=5min and advance-interval=3min then it looks like [0-5min] [3min-8min] [6min-11min]&hellip;&hellip;</li>
-</ul>
-</li>
-<li>Sliding window
-<ul>
-<li>Fixed size overlapping window that works on the difference between record timestamp</li>
-<li>Used only for join operation</li>
-</ul>
-</li>
-<li>Session window
-<ul>
-<li>Session based, Dynamically sized, Non overlapping, Data driven window.</li>
-<li>Used to aggregate key based events into session.</li>
-</ul>
-</li>
-</ol>
-<p>For more information on windowing, refer <a href="https://kafka.apache.org/20/documentation/streams/developer-guide/dsl-api.html#windowing">Apache Kafka Documentation on windowing</a></p>
 <h2 id="default-ports">Default Ports</h2>
 <hr>
 <ul>
