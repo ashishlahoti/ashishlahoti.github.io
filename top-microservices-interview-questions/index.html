@@ -201,24 +201,29 @@ if (!doNotTrack) {
 <li>Challenges comes with distributes system such as Network latency, fault tolerance, distributed transactions, unreliable networks, handling asynchronous operations.</li>
 </ol>
 <p><br /></p>
-<h4 id="6-how-do-you-debug-an-issue-in-microservices-based-application-">6. How do you debug an issue in microservices based application ?</h4>
-<p>For debugging and logging in microservices based application,</p>
+<h4 id="6-how-do-you-troubleshoot-an-issue-using-logs-in-microservices-based-application-">6. How do you troubleshoot an issue using logs in microservices based application ?</h4>
+<p>For troubleshooting an issue using logs in microservices based application,</p>
 <ul>
-<li>We should have a centralized logging system where each microservice push their logs to <strong>Splunk</strong> or <strong>ELK (Elastic Logstash Kibana)</strong> and we can use their built in dashboards to look at the logs for debugging.</li>
-<li>We can generate a <strong>Request_ID</strong> for each request, which would be passed through all the microservices which serves the request. This Request_ID will be logged in splunk or ELK. Later if something goes wrong with a particular request, we can filter out logs from all microservices based on Request_ID to trace the request flow.</li>
+<li>We should have a centralized logging system where each microservice push their logs to <code>Splunk</code> or <code>ELK (Elastic Logstash Kibana)</code> and we can use their built in dashboards to look at the logs for debugging.</li>
+<li>We can generate a <strong>request_id</strong> for each external request, which is passed to all the microservices which are involved in handling the request. Include this <em>request_id</em> in all log messages pushed to <em>splunk</em> or <em>ELK</em>. We can troubleshoot any request end to end using this <em>request_id</em> if something goes wrong.</li>
 </ul>
 <p><br /></p>
-<h4 id="7-how-do-microservices-communicate-with-each-other-">7. How do microservices communicate with each other ?</h4>
+<h4 id="7-how-do-you-manage-configuration-in-microservices-based-application-">7. How do you manage configuration in microservices based application ?</h4>
+<p>If we want to modify the configuration for a microservice that has been replicated a hundred times (one hundred processes are running). If the configuration for this microservice is packaged with the microservice itself, we’ll have to redeploy each of the one hundred instances. This can result in some instances using the old configuration, and some using the new one, at some point. Moreover, sometimes microservices use external connections which, for example, require URLs, usernames, and passwords. If you want to update these settings, it would be useful to have this configuration shared across services.</p>
+<p>We use <strong>externalize configuration</strong> to solve this problem by keeping the configuration information in an external store such as github, database, filesystem, or environment variables or even a configuration server. At startup, microservices load the configuration from the external store or configuration server.</p>
+<p><code>Netflix Archaius</code> and <code>Spring Cloud Config Server</code> provides ready made solution for externalize configuration.</p>
+<p><br /></p>
+<h4 id="8-how-do-microservices-communicate-with-each-other-">8. How do microservices communicate with each other ?</h4>
 <p>Microservices often communicate with each other using <strong>RESTful APIs</strong> over <strong>HTTP</strong>. The communication can be broadly divided into two categories:-</p>
 <ul>
-<li><strong>RestTemplate, WebClient, FeignClient</strong> can be used for synchronous communication between microservices</li>
-<li><strong>ActiveMQ, RabbitMQ, Kafka</strong> can be used for asynchronous communication across microservices.</li>
+<li><code>RestTemplate</code>, <code>WebClient</code>, <code>FeignClient</code> can be used for <strong>synchronous communication</strong> between microservices</li>
+<li><code>ActiveMQ</code>, <code>RabbitMQ</code>, <code>Kafka</code> can be used for <strong>asynchronous communication</strong> across microservices.</li>
 </ul>
 <p><br /></p>
-<h4 id="8-what-is-service-discovery-pattern-in-microservices-">8. What is service discovery pattern in microservices ?</h4>
-<p><strong>Service discovery</strong> is one of the microservice based server running under microservices architecture, which registers entries of all of the services running under that application. Whenever a service is up and running, it registers itself with discovery server and thereof discovery server polls service to check its heartbeat if it is up or down.</p>
-<p>Service discovery server is also useful to monitor all the microservices and their running status. Service discovery server is a broker between client and service.</p>
-<p>When client wants to access any of the service, it can talk to discovery server in two ways:-</p>
+<h4 id="9-what-is-service-discovery-pattern-in-microservices-">9. What is service discovery pattern in microservices ?</h4>
+<p><strong>Service discovery</strong> is a pattern in microservices which solves the problem of service registry and discovery.</p>
+<p>Service Discovery registers entries of all of the services running under that application. Whenever a service is up and running, it registers itself with discovery server and thereafter discovery server polls those services to check their heartbeats if they are up or down.</p>
+<p>When one service (client) wants to make a request to another service, it can talk to discovery server to locate the service in two ways:-</p>
 <ol>
 <li>
 <p><strong>Client side service discovery</strong> Client asks the address of service from discovery server and then once client gets the address, it requests to the service directly.</p>
@@ -231,14 +236,21 @@ if (!doNotTrack) {
 </li>
 </ol>
 <p><br /></p>
-<h4 id="9-what-is-circuit-breaker-pattern-in-microservices-">9. What is circuit breaker pattern in microservices ?</h4>
+<h4 id="10-what-is-circuit-breaker-pattern-in-microservices-">10. What is circuit breaker pattern in microservices ?</h4>
 <p><strong>Circuit breaker</strong> is popular pattern for fault tolerance in microservices.</p>
 <p><strong>Problem:</strong> Services sometimes call other services to handle requests. There is always a possibility that the other service is unavailable or taking longer time to respond. Precious resources such as threads might be consumed in the caller service while waiting for the other service to respond. This might lead to resource exhaustion, which would make the calling service unable to handle other requests. The failure of one service can potentially cascade to other services throughout the application.</p>
 <p>Thats where <strong>circuit breaker</strong> comes into play to prevent service failure from cascading to other services.</p>
-<p>Consider one service calling another service like an electric circuit breaker. When all works fine circuit breaker is in <strong>closed state</strong>.</p>
+<figure class="center">
+    <img src="/img/interview/circuit-breaker-pattern.png"
+         alt="Circuit Breaker"/> <figcaption>
+            <p>Circuit Breaker</p>
+        </figcaption>
+</figure>
+
+<p>Consider one service calling another service like an <em>electric circuit breaker</em>. When all works fine circuit breaker is <strong>closed</strong>.</p>
 <ol>
 <li>
-<p>When service detects that something is wrong with another service, the circuit breaks (circuit breaker is in <strong>open state</strong>).<br>
+<p>When service detects that something is wrong with another service, the circuit breaks (circuit breaker is <strong>open</strong>).<br>
 ✦ <strong>When to break circuit?</strong><br>
 ✓ When m out of last n requests failed <em>(When 3 out of last 5 requests failed)</em><br>
 ✓ Request is considered failed if it responds after timeout period of t seconds <em>(say 2s)</em></p>
@@ -251,14 +263,71 @@ if (!doNotTrack) {
 ● save previous responses from cache</p>
 </li>
 <li>
-<p>After waiting for sleep window of x seconds <em>(say 10s)</em>, service attempts to call another service (circuit breaker is in <strong>half open state</strong>)<br>
-● If request fails then circuit breaks (goes back in open state). It repeats step 2 and 3 again.<br>
-● If gets a response back then circuit goes back in closed state. Resume the requests again. All works fine.</p>
+<p>After waiting for sleep window of x seconds <em>(say 10s)</em>, service attempts to call another service (circuit breaker is <strong>half open</strong>)<br>
+● If request fails then circuit breaks (circuit breaker is open). It repeats step 2 and 3 again.<br>
+● If gets a successful response back then circuit gets closed. Resume the requests again. All works fine.</p>
 </li>
 </ol>
 <p><code>Netflix Hystrix</code> is one of the implementation of circuit breaker pattern.</p>
 <p><br /></p>
-<h4 id="10-what-is-12-factor-app-">10. What is 12 Factor App ?</h4>
+<h4 id="11-what-is-api-gateway-pattern-in-microservices-">11. What is API gateway pattern in microservices ?</h4>
+<p>API gateway pattern is a good approach to consider when building large or complex microservices based application.</p>
+<figure class="center">
+    <img src="/img/interview/api-gateway.png"
+         alt="API Gateway"/> <figcaption>
+            <p>API Gateway</p>
+        </figcaption>
+</figure>
+
+<p>API gateway provides a single entry point to access microservices and facilitate following features:-</p>
+<ol>
+<li>
+<p><strong>Reverse proxy or gateway routing</strong> The API Gateway offers a reverse proxy to redirect or route HTTP requests to the endpoints of the internal microservices. The gateway provides a single endpoint or URL for the client apps and then internally maps the requests to a group of internal microservices. This routing feature helps to decouple the client apps from the microservices.</p>
+</li>
+<li>
+<p><strong>Request aggregation</strong> As part of the gateway pattern you can aggregate multiple client HTTP requests targeting multiple internal microservices into a single client request. This pattern is especially convenient when a client page/screen needs information from several microservices. With this approach, the client app sends a single request to the API Gateway that dispatches several requests to the internal microservices and then aggregates the results and sends everything back to the client app. The main benefit and goal of this design pattern is to reduce chattiness and round-trips between the client apps and the backend API.</p>
+</li>
+<li>
+<p><strong>Cross-cutting concerns or gateway offloading.</strong> Depending on the features offered by each API Gateway product, you can offload functionality from individual microservices to the gateway, which simplifies the implementation of each microservice by consolidating cross-cutting concerns into one tier. This is especially convenient for specialized features that can be complex to implement properly in every internal microservice, such as the following functionality:</p>
+<ul>
+<li><strong>Authentication &amp; Authorization</strong>  <br>
+Authentication and Authorization is done at API gateway level and services do not need do further check.<br>
+API gateway authenticates incoming request by evaluating OAuth token given by OAuth authentication server on successful authentication. This OAuth token can be used in subsequent requests.
+After successful authentication API gateway authorize the request using access token (eg, send in custom HTTP header). Based on authorization, gateway route the request to services.</li>
+<li><strong>Logging, debugging</strong> <br>
+API gateway logs each incoming requests and outgoing response to centralized logging system where other microservices also push their logs. API gateway generates a <em>request_id</em> for each incoming request which is passed through all the microservices serving that request. Any request can be traced end to end using this <em>request_id</em>.</li>
+<li><strong>Response Caching</strong><br>
+API gateway can use caching mechanism for some of the request to provide response without routing request to underlying microservices.</li>
+<li><strong>Load balancing</strong><br>
+API gateway can load balance incoming request if multiple instances of same microservice is running.</li>
+<li>Retry policies, circuit breaker
+API gateway can provide a fault tolerant system by implementing retry policies and circuit breaker.</li>
+<li><strong>IP whitelisting</strong><br>
+Advantage of API gateway is that you need to provide only one IP for whitelisting when distributing APIs to thirdparty if required.</li>
+<li><strong>Encryption</strong><br>
+API gateway can provide encrypted communication to clients while underlying microservices communication remain unencrypted. API gateway decrypts the incoming request, route to microservices, encrypt the response and send to clients.</li>
+<li><strong>SSL Certificate management</strong><br>
+API gateway communication can be secured by providing SSL certificate to clients since API gateway is exposed whereas underlying microservices can communicate without SSL certification under a secure network.</li>
+</ul>
+</li>
+</ol>
+<figure class="center">
+    <img src="/img/interview/api-gateway-offloading.png"
+         alt="API Gateway - Cross Cutting Concerns"/> <figcaption>
+            <p>API Gateway - Cross Cutting Concerns</p>
+        </figcaption>
+</figure>
+
+<p>When you have multiple API gateways and each API gateway provide different API tailored for different clients app then this pattern is called <strong>Backend for Frontend (BFF)</strong> pattern.</p>
+<figure class="center">
+    <img src="/img/interview/multiple-api-gateways.png"
+         alt="Multiple API Gateways - Backend for Frontend (BFF)"/> <figcaption>
+            <p>Multiple API Gateways - Backend for Frontend (BFF)</p>
+        </figcaption>
+</figure>
+
+<p><br /></p>
+<h4 id="12-what-is-12-factor-app-">12. What is 12 Factor App ?</h4>
 <p><a href="https://12factor.net/">The Twelve-Factor App</a> is a mythology for writing microservices having following factors:-</p>
 <ol>
 <li>
