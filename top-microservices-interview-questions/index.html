@@ -36,6 +36,11 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
+
+	
+
+<script async src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
+
 </head>
 <body class="body">
 	<div class="container container--outer">
@@ -132,9 +137,37 @@ if (!doNotTrack) {
 	<span class="meta__text"><a class="meta__link" href="/categories/interview-questions/" rel="category">Interview Questions</a>
 	</span>
 </div></div>
-		</header><div class="content post__content clearfix">
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-what-do-you-understand-by-microservices">1. What do you understand by microservices?</a></li>
+        <li><a href="#2-what-are-the-advantage-of-microservices-over-monolithic-application">2. What are the advantage of microservices over monolithic application?</a></li>
+        <li><a href="#3-you-have-to-migrate-an-existing-monolithic-application-to-microservices-what-will-be-your-approach">3. You have to migrate an existing monolithic application to microservices. What will be your approach?</a></li>
+        <li><a href="#4-what-are-the-best-practices-to-design-microservices-based-application-">4. What are the best practices to design microservices based application ?</a></li>
+        <li><a href="#5-what-are-the-challenges-in-microservices-based-application-">5. What are the challenges in microservices based application ?</a></li>
+        <li><a href="#6-how-do-you-troubleshoot-an-issue-using-logs-in-microservices-based-application-">6. How do you troubleshoot an issue using logs in microservices based application ?</a></li>
+        <li><a href="#7-how-do-you-manage-configuration-in-microservices-based-application-">7. How do you manage configuration in microservices based application ?</a></li>
+        <li><a href="#8-how-do-microservices-communicate-with-each-other-">8. How do microservices communicate with each other ?</a></li>
+        <li><a href="#9-how-do-you-manage-authentication-and-authorization-in-microservices-based-application-">9. How do you manage authentication and authorization in microservices based application ?</a></li>
+        <li><a href="#10-how-do-you-handle-distributed-transaction-across-microservices-">10. How do you handle distributed transaction across microservices ?</a></li>
+        <li><a href="#11-what-is-service-discovery-pattern-in-microservices-">11. What is service discovery pattern in microservices ?</a></li>
+        <li><a href="#12-what-is-circuit-breaker-pattern-in-microservices-">12. What is circuit breaker pattern in microservices ?</a></li>
+        <li><a href="#13-what-is-api-gateway-pattern-in-microservices-">13. What is API gateway pattern in microservices ?</a></li>
+        <li><a href="#14-what-is-12-factor-app-">14. What is 12 Factor App ?</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div>
+<div class="content post__content clearfix">
 			<p>These Microservices based interview questions are based on my personal interview experience and feedback from other interviewees. Keep following this post for regular updates.</p>
-<h4 id="1-what-do-you-understand-by-microservices">1. What do you understand by microservices?</h4>
+<h3 id="1-what-do-you-understand-by-microservices">1. What do you understand by microservices?</h3>
 <p>When you break an entire application architecture into smaller services where</p>
 <ul>
 <li>Each service is independently serves a functionality of that application</li>
@@ -142,7 +175,7 @@ if (!doNotTrack) {
 </ul>
 <p>This kind of setup is known as microservices based architecture.<br>
 <br /></p>
-<h4 id="2-what-are-the-advantage-of-microservices-over-monolithic-application">2. What are the advantage of microservices over monolithic application?</h4>
+<h3 id="2-what-are-the-advantage-of-microservices-over-monolithic-application">2. What are the advantage of microservices over monolithic application?</h3>
 <table>
 <thead>
 <tr>
@@ -170,7 +203,7 @@ if (!doNotTrack) {
 </tbody>
 </table>
 <p><br /></p>
-<h4 id="3-you-have-to-migrate-an-existing-monolithic-application-to-microservices-what-will-be-your-approach">3. You have to migrate an existing monolithic application to microservices. What will be your approach?</h4>
+<h3 id="3-you-have-to-migrate-an-existing-monolithic-application-to-microservices-what-will-be-your-approach">3. You have to migrate an existing monolithic application to microservices. What will be your approach?</h3>
 <p>Migrating from monolithic application to microservices is a long term process where we gradually :-</p>
 <ol>
 <li>Pick one functionality of monolithic application</li>
@@ -181,14 +214,14 @@ if (!doNotTrack) {
 </ol>
 <p>Repeat the above 5 steps until our entire monolithic application is converted into microservices.<br>
 <br /></p>
-<h4 id="4-what-are-the-best-practices-to-design-microservices-based-application-">4. What are the best practices to design microservices based application ?</h4>
+<h3 id="4-what-are-the-best-practices-to-design-microservices-based-application-">4. What are the best practices to design microservices based application ?</h3>
 <p>These are few best practices to design microservice:-</p>
 <ul>
 <li>One functionality one microservice</li>
 <li>Separate data source for each microservice</li>
 </ul>
 <p><br /></p>
-<h4 id="5-what-are-the-challenges-in-microservices-based-application-">5. What are the challenges in microservices based application ?</h4>
+<h3 id="5-what-are-the-challenges-in-microservices-based-application-">5. What are the challenges in microservices based application ?</h3>
 <p>The challenges with microservices are as follows:-</p>
 <ol>
 <li>Require good investment for infrastructure setup.</li>
@@ -201,44 +234,167 @@ if (!doNotTrack) {
 <li>Challenges comes with distributes system such as Network latency, fault tolerance, distributed transactions, unreliable networks, handling asynchronous operations.</li>
 </ol>
 <p><br /></p>
-<h4 id="6-how-do-you-troubleshoot-an-issue-using-logs-in-microservices-based-application-">6. How do you troubleshoot an issue using logs in microservices based application ?</h4>
+<h3 id="6-how-do-you-troubleshoot-an-issue-using-logs-in-microservices-based-application-">6. How do you troubleshoot an issue using logs in microservices based application ?</h3>
 <p>For troubleshooting an issue using logs in microservices based application,</p>
 <ul>
 <li>We should have a centralized logging system where each microservice push their logs to <code>Splunk</code> or <code>ELK (Elastic Logstash Kibana)</code> and we can use their built in dashboards to look at the logs for debugging.</li>
 <li>We can generate a <strong>request_id</strong> for each external request, which is passed to all the microservices which are involved in handling the request. Include this <em>request_id</em> in all log messages pushed to <em>splunk</em> or <em>ELK</em>. We can troubleshoot any request end to end using this <em>request_id</em> if something goes wrong.</li>
 </ul>
 <p><br /></p>
-<h4 id="7-how-do-you-manage-configuration-in-microservices-based-application-">7. How do you manage configuration in microservices based application ?</h4>
+<h3 id="7-how-do-you-manage-configuration-in-microservices-based-application-">7. How do you manage configuration in microservices based application ?</h3>
 <p>If we want to modify the configuration for a microservice that has been replicated a hundred times (one hundred processes are running). If the configuration for this microservice is packaged with the microservice itself, we’ll have to redeploy each of the one hundred instances. This can result in some instances using the old configuration, and some using the new one, at some point. Moreover, sometimes microservices use external connections which, for example, require URLs, usernames, and passwords. If you want to update these settings, it would be useful to have this configuration shared across services.</p>
 <p>We use <strong>externalize configuration</strong> to solve this problem by keeping the configuration information in an external store such as github, database, filesystem, or environment variables or even a configuration server. At startup, microservices load the configuration from the external store or configuration server.</p>
 <p><code>Netflix Archaius</code> and <code>Spring Cloud Config Server</code> provides ready made solution for externalize configuration.</p>
 <p><br /></p>
-<h4 id="8-how-do-microservices-communicate-with-each-other-">8. How do microservices communicate with each other ?</h4>
+<h3 id="8-how-do-microservices-communicate-with-each-other-">8. How do microservices communicate with each other ?</h3>
 <p>Microservices often communicate with each other using <strong>RESTful APIs</strong> over <strong>HTTP</strong>. The communication can be broadly divided into two categories:-</p>
 <ul>
 <li><code>RestTemplate</code>, <code>WebClient</code>, <code>FeignClient</code> can be used for <strong>synchronous communication</strong> between microservices</li>
 <li><code>ActiveMQ</code>, <code>RabbitMQ</code>, <code>Kafka</code> can be used for <strong>asynchronous communication</strong> across microservices.</li>
 </ul>
 <p><br /></p>
-<h4 id="9-what-is-service-discovery-pattern-in-microservices-">9. What is service discovery pattern in microservices ?</h4>
+<h3 id="9-how-do-you-manage-authentication-and-authorization-in-microservices-based-application-">9. How do you manage authentication and authorization in microservices based application ?</h3>
+<p>Session based authentication works well with stateful monolith applications but token based authentication and authorization is recommended for microservices based application to maintain the statelessness. A typical flow of token based authentication is as follows:-</p>
+<ol>
+<li>User sends a login request with username and password.</li>
+<li>If you are using Api gateway then it is responsible for generating the token and hence authentication. It achieves this by communicating with authorization and users service.</li>
+<li>User receives a token on successful login which is typically stored in browser cookies. Token holds the user&rsquo;s information in the encrypted format.</li>
+<li>When user make any request of resources, this token is sent in Authorization header of each request.</li>
+<li>Microservices decrypts the token and evaluate user information to authorize for resource access and send the response accordingly.</li>
+</ol>
+<h4 id="jwt">JWT</h4>
+<p><code>JWT (Json Web Token)</code> is widely used token based authentication mechanism. JWT consist of three parts:</p>
+<ul>
+<li><strong>header</strong>  contains type, fixed value JWT and the hashing algorithm used by JWT
+<pre><code>{
+  &quot;typ&quot;: &quot;JWT&quot;,
+  &quot;alg&quot;: &quot;HS256&quot;
+}
+</code></pre></li>
+<li><strong>payload</strong> typically contains user authorization related information such as id, name, roles, permissions etc. It also contains the expiry period of token.
+<pre><code>{ 
+&quot;id&quot;: 12345, 
+&quot;name&quot;: &quot;admin_user&quot;,
+&quot;email&quot;: &quot;admin_user@organization.com&quot;,
+&quot;roles&quot;: [&quot;admin&quot;],
+&quot;permissions&quot;: [&quot;can_access_resource_1&quot;, &quot;can_access_resource_2&quot;]
+}
+</code></pre></li>
+<li><strong>signature</strong> is required to verify the authenticity of token. It consists of the encoded header, the payload and the secret key.
+<pre><code>HMACSHA256(
+  base64UrlEncode(header) + &quot;.&quot; +
+  base64UrlEncode(payload),
+  secret
+)
+</code></pre></li>
+</ul>
+<p>All microservices can verify the token based on the signature so there are no further calls to the authorization server after login.</p>
+<h4 id="authentication--authorization-flow-using-jwt">Authentication &amp; Authorization flow using JWT</h4>
+<figure class="center">
+    <img src="/img/interview/jwt-authentication.png"
+         alt="User Authentication &amp;amp; Authorization flow using JWT"/> <figcaption>
+            <p>User Authentication &amp; Authorization flow using JWT</p>
+        </figcaption>
+</figure>
+
+<hr>
+<p><br /></p>
+<h3 id="10-how-do-you-handle-distributed-transaction-across-microservices-">10. How do you handle distributed transaction across microservices ?</h3>
+<p>Transactions are easy to handle in monolithic application with single code base, single data source and deployment on single server whereas it becomes a challenge to handle a distributed transaction across microservices where each microservice has its own data store and deployed on different servers. There are different approach to handle distributed transactions:</p>
+<h4 id="1-avoid-if-at-all-possible">1. Avoid if at all possible</h4>
+<p><em>First and foremost approach is to avoid them completely.</em><br>
+If we can not avoid transaction between two microservices. Just think,<br>
+Are they meant to be together? Merge them in one microservice?<br>
+Can we redesign them in such a way so that transaction becomes unnecessary.</p>
+<h4 id="2-two-phase-commit-protocol-2pc">2. Two-phase commit protocol (2PC)</h4>
+<p>Two phase commit protocol commits into 2 steps:</p>
+<ol>
+<li><strong>Prepare Phase</strong> The transaction coordinator send a prepare command to each participant in the transaction
+Each participant then checks if they could commit the transaction.</li>
+<li><strong>Commit Phase</strong> If that’s the case, they respond with “prepared” and the transaction coordinator sends a commit command to all participants. The transaction was successful, and all changes get committed.<br>
+<strong>or Rollback Phase</strong> If any of the participant doesn’t answer the prepare command or responds with “failed”, the transaction coordinator sends an abort command to all participants. This rolls back all the changes performed within the transaction.</li>
+</ol>
+<p>Its an old, complicated and slow approach because of all the coordination things and should be avoided.</p>
+<h4 id="3-the-saga-pattern">3. The Saga pattern</h4>
+<p>Saga is one of the well known pattern for distributed transactions.<br>
+A saga is a sequence of local transactions where each transaction updates data within a single service. The first transaction is initiated by an external request corresponding to the system operation, and then each subsequent step is triggered by the completion of the previous one.</p>
+<p>There are a two ways to implement a saga transaction:-</p>
+<h5 id="eventschoreography">Events/Choreography</h5>
+<p>In this approach there is no central coordination, executes a transaction and then publishes an event. This event is listened by one or more services which execute local transactions and publish (or not) new events.</p>
+<p>The distributed transaction ends when the last service executes its local transaction and does not publish any events or the event published is not heard by any of the saga’s participants.</p>
+<p>Let’s see how it would look like in our e-commerce example:</p>
+<div class="mermaid" align="left">
+graph LR;
+    A(Order Service) -->|ORDER_CREATED_EVENT| B(Payment Service)
+    B --> |BILLED_ORDER_EVENT| C(Stock Service)
+    C --> |ORDER_PREPARED_EVENT| D(Delivery Service)
+    D --> |ORDER_DELIVERED_EVENT| A
+</div>
+<p><br /></p>
+<ol>
+<li>Order Service saves a new order, set the state as pending and publish an event called ORDER_CREATED_EVENT.</li>
+<li>The Payment Service listens to ORDER_CREATED_EVENT, charge the client and publish the event BILLED_ORDER_EVENT.</li>
+<li>The Stock Service listens to BILLED_ORDER_EVENT, update the stock, prepare the products bought in the order and publish ORDER_PREPARED_EVENT.</li>
+<li>Delivery Service listens to ORDER_PREPARED_EVENT and then pick up and deliver the product. At the end, it publishes an ORDER_DELIVERED_EVENT</li>
+<li>Finally, Order Service listens to ORDER_DELIVERED_EVENT and set the state of the order as concluded.</li>
+</ol>
+<p>In the case above, if the state of the order needs to be tracked, Order Service could simply listen to all events and update its state.</p>
+<h6 id="rollback">Rollback</h6>
+<p>For Rollback, you have to implement another operation/transaction to compensate for what has been done before.</p>
+<p>Suppose that Stock Service has failed during a transaction. Let’s see what the rollback would look like:</p>
+<div class="mermaid" align="left">
+graph LR;
+    A(Order Service) -->|ORDER_CREATED_EVENT| B(Payment Service)
+    B --> |BILLED_ORDER_EVENT| C(Stock Service)
+    C --> |PRODUCT_OUT_OF_STOCK_EVENT| A
+</div>
+<p><br /></p>
+<ol>
+<li>Stock Service produces PRODUCT_OUT_OF_STOCK_EVENT;</li>
+<li>Both Order Service and Payment Service listen to the previous message:
+<ol>
+<li>Payment Service refund the client</li>
+<li>Order Service set the order state as failed</li>
+</ol>
+</li>
+</ol>
+<p>Note that it is crucial to define a common shared ID for each transaction, so whenever you throw an event, all listeners can know right away which transaction it refers to.</p>
+<p>It is simple, easy to understand, does not require much effort to build.</p>
+<h5 id="commandorchestration">Command/Orchestration</h5>
+<p>when a coordinator service is responsible for centralizing the saga’s decision making and sequencing business logic.
+Please read this post for <a href="https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part-2/">Command/Orchestration pattern</a></p>
+<p><br /></p>
+<h3 id="11-what-is-service-discovery-pattern-in-microservices-">11. What is service discovery pattern in microservices ?</h3>
 <p><strong>Service discovery</strong> is a pattern in microservices which solves the problem of service registry and discovery.</p>
 <p>Service Discovery registers entries of all of the services running under that application. Whenever a service is up and running, it registers itself with discovery server and thereafter discovery server polls those services to check their heartbeats if they are up or down.</p>
 <p>When one service (client) wants to make a request to another service, it can talk to discovery server to locate the service in two ways:-</p>
-<ol>
-<li>
-<p><strong>Client side service discovery</strong> Client asks the address of service from discovery server and then once client gets the address, it requests to the service directly.</p>
-<p>Client <small>ask service_address ⟹</small> Discovery Server <small>give service_address ⟹</small> Client <small>make request ⟹</small> Service <small>return response ⟹</small> Client</p>
+<h5 id="1-client-side-service-discovery">1. Client side service discovery</h5>
+<p>Client asks the address of service from discovery server and then once client gets the address, it requests to the service directly.</p>
+<pre><code><div class="mermaid" align="left">
+    graph LR;
+        A(Client) -->|ask service_address| B(Discovery Server)
+        B --> |give service_address| A
+        A --> |make request| C(Service)
+        C --> |return response| A
+    </div>
+</code></pre>
 <p><code>Netflix Eureka</code> is one of the implementation of client side service discovery pattern.</p>
-</li>
-<li>
-<p><strong>Server side service discovery</strong> Client request to discovery server which redirect the request to appropriate service and get the response back and redirect to client.</p>
-<p>Client <small>make request ⟹</small> Discovery Server <small>redirect request ⟹</small> Service <small>return response ⟹</small>  Discovery Server <small>redirect response ⟹</small>  Client</p>
-</li>
-</ol>
+<h5 id="2-server-side-service-discovery">2. Server side service discovery</h5>
+<p>Client request to discovery server which redirect the request to appropriate service and get the response back and redirect to client.</p>
+<pre><code><div class="mermaid" align="left">
+    graph LR;
+        A(Client) -->|make request| B(Discovery Server)
+        B --> |redirect request | C(Service)
+        C --> |return response| B
+        B --> |redirect response| A
+    </div>
+</code></pre>
 <p><br /></p>
-<h4 id="10-what-is-circuit-breaker-pattern-in-microservices-">10. What is circuit breaker pattern in microservices ?</h4>
+<h3 id="12-what-is-circuit-breaker-pattern-in-microservices-">12. What is circuit breaker pattern in microservices ?</h3>
 <p><strong>Circuit breaker</strong> is popular pattern for fault tolerance in microservices.</p>
-<p><strong>Problem:</strong> Services sometimes call other services to handle requests. There is always a possibility that the other service is unavailable or taking longer time to respond. Precious resources such as threads might be consumed in the caller service while waiting for the other service to respond. This might lead to resource exhaustion, which would make the calling service unable to handle other requests. The failure of one service can potentially cascade to other services throughout the application.</p>
+<h4 id="problem">Problem</h4>
+<p>Services sometimes call other services to handle requests. There is always a possibility that the other service is unavailable or taking longer time to respond. Precious resources such as threads might be consumed in the caller service while waiting for the other service to respond. This might lead to resource exhaustion, which would make the calling service unable to handle other requests. The failure of one service can potentially cascade to other services throughout the application.</p>
+<h4 id="solution">Solution</h4>
 <p>Thats where <strong>circuit breaker</strong> comes into play to prevent service failure from cascading to other services.</p>
 <figure class="center">
     <img src="/img/interview/circuit-breaker-pattern.png"
@@ -270,8 +426,9 @@ if (!doNotTrack) {
 </ol>
 <p><code>Netflix Hystrix</code> is one of the implementation of circuit breaker pattern.</p>
 <p><br /></p>
-<h4 id="11-what-is-api-gateway-pattern-in-microservices-">11. What is API gateway pattern in microservices ?</h4>
+<h3 id="13-what-is-api-gateway-pattern-in-microservices-">13. What is API gateway pattern in microservices ?</h3>
 <p>API gateway pattern is a good approach to consider when building large or complex microservices based application.</p>
+<h4 id="api-gateway-flow">API Gateway Flow</h4>
 <figure class="center">
     <img src="/img/interview/api-gateway.png"
          alt="API Gateway"/> <figcaption>
@@ -279,6 +436,7 @@ if (!doNotTrack) {
         </figcaption>
 </figure>
 
+<h4 id="api-gateway-features">API Gateway Features</h4>
 <p>API gateway provides a single entry point to access microservices and facilitate following features:-</p>
 <ol>
 <li>
@@ -311,6 +469,7 @@ API gateway communication can be secured by providing SSL certificate to clients
 </ul>
 </li>
 </ol>
+<h4 id="api-gateway---cross-cutting-concerns">API Gateway - Cross Cutting Concerns</h4>
 <figure class="center">
     <img src="/img/interview/api-gateway-offloading.png"
          alt="API Gateway - Cross Cutting Concerns"/> <figcaption>
@@ -318,6 +477,7 @@ API gateway communication can be secured by providing SSL certificate to clients
         </figcaption>
 </figure>
 
+<h4 id="backend-for-frontend-bff">Backend for Frontend (BFF)</h4>
 <p>When you have multiple API gateways and each API gateway provide different API tailored for different clients app then this pattern is called <strong>Backend for Frontend (BFF)</strong> pattern.</p>
 <figure class="center">
     <img src="/img/interview/multiple-api-gateways.png"
@@ -326,74 +486,49 @@ API gateway communication can be secured by providing SSL certificate to clients
         </figcaption>
 </figure>
 
+<hr>
 <p><br /></p>
-<h4 id="12-what-is-12-factor-app-">12. What is 12 Factor App ?</h4>
+<h3 id="14-what-is-12-factor-app-">14. What is 12 Factor App ?</h3>
 <p><a href="https://12factor.net/">The Twelve-Factor App</a> is a mythology for writing microservices having following factors:-</p>
-<ol>
-<li>
-<p><mark><strong>Codebase</strong></mark><br>
-<em>One codebase, multiple deploys.</em><br>
+<h5 id="1-codebase">1. Codebase</h5>
+<p><em>One codebase, multiple deploys.</em><br>
 We should have only one repository for each microservice in our source control such as <code>git</code>, <code>subversion</code>. All the microservice deployment should be from that repository.</p>
-</li>
-<li>
-<p><mark><strong>Dependencies</strong></mark><br>
-<em>Explicitly declare and isolate dependencies.</em><br>
+<h5 id="2-dependencies">2. Dependencies</h5>
+<p><em>Explicitly declare and isolate dependencies.</em><br>
 We should use dependency manager in our microservice such as <code>maven (pom.xml)</code> or <code>gradle (build.gradle)</code> for <strong>Java</strong>.  Benefit is new developer can check out code onto their machine, requiring only language runtime and dependency manager as prerequisite.</p>
-</li>
-<li>
-<p><mark><strong>Config</strong></mark><br>
-<em>Store config in the environment.</em><br>
+<h5 id="3-config">3. Config</h5>
+<p><em>Store config in the environment.</em><br>
 We should create a <code>Spring Cloud Config Server</code> to manage configurations of all microservices across all environments like dev, staging, prod.<br>
 We should not declare configuration inside source code because configuration varies across deployments but code does not.</p>
-</li>
-<li>
-<p><mark><strong>Backing services</strong></mark><br>
-<em>Treat backing services as attached resources.</em><br>
+<h5 id="4-backing-services">4. Backing services</h5>
+<p><em>Treat backing services as attached resources.</em><br>
 We should integrate microservice with resources like datastores, messaging systems, caching system or other microservices from the configuration only. All the resource URL, locator, credentials should come from configuration no matter if it is a thirdparty resource or developed by your organization.</p>
-</li>
-<li>
-<p><mark><strong>Build, Release &amp; Run</strong></mark><br>
-<em>Strictly separate build and run stages.</em><br>
+<h5 id="5-build-release--run">5. Build, Release &amp; Run</h5>
+<p><em>Strictly separate build and run stages.</em><br>
 We should use release management tools like <code>Jenkins</code> to create pipelines to separate the <strong>build</strong> (building executable by compiling source code), <strong>release</strong> (executable with configuration) and <strong>run</strong> (deployment of release to specific environment) stages.<br>
 Release should have a unique id such as timestamp or version like v1.0.0 which can not be mutated. Any change must be a new release.</p>
-</li>
-<li>
-<p><mark><strong>Processes</strong></mark><br>
-<em>Execute the app as one or more stateless processes.</em><br>
+<h5 id="6-processes">6. Processes</h5>
+<p><em>Execute the app as one or more stateless processes.</em><br>
 Microservice we build, should be stateless and should not rely on in-memory cache or filesystem to store data since it usually wiped out on restart. Any data that need to be persist must be stored in backing service like database. However distributed cache like <code>memcache</code>, <code>ehcache</code> or <code>Redis</code> can be used.<br>
 We should also never use and rely on &ldquo;sticky sessions&rdquo;.</p>
-</li>
-<li>
-<p><mark><strong>Port Binding</strong></mark><br>
-<em>Export services via port binding.</em><br>
+<h5 id="7-port-binding">7. Port Binding</h5>
+<p><em>Export services via port binding.</em><br>
 We should always create a standalone microservice using <code>spring boot</code> which is having embedded <code>Tomcat</code> or <code>Jetty</code> webserver. As soon as service starts, it is ready to serve over HTTP by binding to a port. We should not rely on creating a war and then deploying to webserver.</p>
-</li>
-<li>
-<p><mark><strong>Concurrency</strong></mark><br>
-<em>Scale out via the process model.</em><br>
+<h5 id="8-concurrency">8. Concurrency</h5>
+<p><em>Scale out via the process model.</em><br>
 Each microservice in application should be able to handle more load by scaling out (deploying multiple copies on microservice behind load balancer).</p>
-</li>
-<li>
-<p><mark><strong>Disposability</strong></mark><br>
-<em>Maximize robustness with fast startup and graceful shutdown</em><br>
+<h5 id="9-disposability">9. Disposability</h5>
+<p><em>Maximize robustness with fast startup and graceful shutdown</em><br>
 We should try to minimize the startup time of microservice and handle the shutdown gracefully. Microservice should be able to start and stop at moment&rsquo;s notice to facilitate fast elastic scaling, rapid deployment of code or config changes.</p>
-</li>
-<li>
-<p><mark><strong>Dev/Prod parity</strong></mark><br>
-<em>Keep development, staging, and production as similar as possible.</em><br>
+<h5 id="10-devprod-parity">10. Dev/Prod parity</h5>
+<p><em>Keep development, staging, and production as similar as possible.</em><br>
 We should adapt CI/CD (Continuous Integration/Continuos Delivery) by combining DevOps automation tools like <code>Jenkins</code> to build pipelines, <code>Docker</code> to containerize build with all dependencies, <code>Chef</code> and <code>Puppet</code> to automate delivery process. CI/CD process minimize the gap between development, testing, staging and production environments.</p>
-</li>
-<li>
-<p><mark><strong>Logs</strong></mark><br>
-<em>Treat logs as event streams</em><br>
+<h5 id="11-logs">11. Logs</h5>
+<p><em>Treat logs as event streams</em><br>
 Microservice should not manage log files itself, instead treat it as event stream and route it to a centralized log indexing and analysis system such as <code>Splunk</code> or <code>ELK (Elastic logstash Kibana)</code> or data warehousing system such as <code>Hadoop/Hive</code>.</p>
-</li>
-<li>
-<p><mark><strong>Admin processes</strong></mark><br>
-<em>Run admin/management tasks as one-off processes</em><br>
+<h5 id="12-admin-processes">12. Admin processes</h5>
+<p><em>Run admin/management tasks as one-off processes</em><br>
 All admin/management tasks for a microservice like database migration should be deployed and run separately.</p>
-</li>
-</ol>
 		</div>
 		<footer class="post__footer">
 			
@@ -542,5 +677,7 @@ All admin/management tasks for a microservice like database migration should be 
 </footer>
 	</div>
 <script async defer src="/js/menu.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.5.0/mermaid.min.js" async></script>
 </body>
 </html>
