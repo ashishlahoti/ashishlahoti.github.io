@@ -6,10 +6,19 @@
     <description>Recent content in Spring Boot on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://codingnconcepts.com/categories/spring-boot/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Info and health endpoints in spring boot microservice.</title>
+      <link>http://codingnconcepts.com/spring-boot/microservices-info-and-health-endpoints/</link>
+      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://codingnconcepts.com/spring-boot/microservices-info-and-health-endpoints/</guid>
+      <description>&lt;p&gt;In spring boot microservices based application, where microservices talks to each other using RESTFul APIs. We can expose some important information about microservice such as name, version, description over some endpoints say &lt;em&gt;/info&lt;/em&gt; and also realtime status or health over some endpoint say &lt;em&gt;/health&lt;/em&gt; to create application dashboards, realtime alerts, track microservice updates and so on&amp;hellip;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Pretty print JSON response in spring boot</title>
