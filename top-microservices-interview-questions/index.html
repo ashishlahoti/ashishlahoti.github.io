@@ -219,6 +219,7 @@ if (!doNotTrack) {
 <ul>
 <li>One functionality one microservice</li>
 <li>Separate data source for each microservice</li>
+<li>Follow twelve factors from <a href="https://12factor.net/" target="_blank">The Twelve-Factor App</a></li>
 </ul>
 <p><br /></p>
 <h3 id="5-what-are-the-challenges-in-microservices-based-application-">5. What are the challenges in microservices based application ?</h3>
@@ -361,8 +362,8 @@ graph LR;
 <p>Note that it is crucial to define a common shared ID for each transaction, so whenever you throw an event, all listeners can know right away which transaction it refers to.</p>
 <p>It is simple, easy to understand, does not require much effort to build.</p>
 <h5 id="commandorchestration">Command/Orchestration</h5>
-<p>when a coordinator service is responsible for centralizing the saga’s decision making and sequencing business logic.
-Please read this post for <a href="https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part-2/">Command/Orchestration pattern</a></p>
+<p>when a coordinator service is responsible for centralizing the saga’s decision making and sequencing business logic.</p>
+<p>Please read <a href="https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part-2/" target="_blank">this post for for more details on Command/Orchestration pattern</a></p>
 <p><br /></p>
 <h3 id="11-what-is-service-discovery-pattern-in-microservices-">11. What is service discovery pattern in microservices ?</h3>
 <p><strong>Service discovery</strong> is a pattern in microservices which solves the problem of service registry and discovery.</p>
@@ -489,7 +490,7 @@ API gateway communication can be secured by providing SSL certificate to clients
 <hr>
 <p><br /></p>
 <h3 id="14-what-is-12-factor-app-">14. What is 12 Factor App ?</h3>
-<p><a href="https://12factor.net/">The Twelve-Factor App</a> is a mythology for writing microservices having following factors:-</p>
+<p><a href="https://12factor.net/" target="_blank">The Twelve-Factor App</a> is a mythology for writing microservices. Following is an easy to understand summary of those 12 factors:-</p>
 <h5 id="1-codebase">1. Codebase</h5>
 <p><em>One codebase, multiple deploys.</em><br>
 We should have only one repository for each microservice in our source control such as <code>git</code>, <code>subversion</code>. All the microservice deployment should be from that repository.</p>
