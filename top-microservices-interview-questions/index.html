@@ -239,9 +239,12 @@ if (!doNotTrack) {
 <p>For troubleshooting an issue using logs in microservices based application,</p>
 <ul>
 <li>We should have a centralized logging system where each microservice push their logs to <code>Splunk</code> or <code>ELK (Elastic Logstash Kibana)</code> and we can use their built in dashboards to look at the logs for debugging.</li>
-<li>We can generate a <strong>request_id</strong> for each external request, which is passed to all the microservices which are involved in handling the request. Include this <em>request_id</em> in all log messages pushed to <em>splunk</em> or <em>ELK</em>. We can troubleshoot any request end to end using this <em>request_id</em> if something goes wrong.</li>
+<li>We can generate a <strong>requestId</strong> for each external request, which is passed to all the microservices which are involved in handling the request. Include this <em>requestId</em> in all log messages pushed to <em>splunk</em> or <em>ELK</em>. We can troubleshoot any request end to end using this <em>requestId</em> if something goes wrong.</li>
 </ul>
-<p><br /></p>
+<blockquote>
+<p>Also read <a href="http://codingnconcepts.com/spring-boot/custom-api-request-response-logging/">how to create custom logger to print API request and response along with incoming requestId</a>
+<br /></p>
+</blockquote>
 <h3 id="7-how-do-you-manage-configuration-in-microservices-based-application-">7. How do you manage configuration in microservices based application ?</h3>
 <p>If we want to modify the configuration for a microservice that has been replicated a hundred times (one hundred processes are running). If the configuration for this microservice is packaged with the microservice itself, we’ll have to redeploy each of the one hundred instances. This can result in some instances using the old configuration, and some using the new one, at some point. Moreover, sometimes microservices use external connections which, for example, require URLs, usernames, and passwords. If you want to update these settings, it would be useful to have this configuration shared across services.</p>
 <p>We use <strong>externalize configuration</strong> to solve this problem by keeping the configuration information in an external store such as github, database, filesystem, or environment variables or even a configuration server. At startup, microservices load the configuration from the external store or configuration server.</p>
