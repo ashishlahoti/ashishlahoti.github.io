@@ -163,14 +163,44 @@ if (!doNotTrack) {
 <ul>
 <li><a href="https://docs.spring.io/spring-boot/docs/current/reference/html/using-spring-boot.html#using-boot-auto-configuration">@EnableAutoConfiguration</a> enable Spring Boot’s auto-configuration mechanism</li>
 <li><a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/annotation/ComponentScan.html">@ComponentScan</a> enable @Component scan on the package where the application is located</li>
-<li><a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/annotation/Configuration.html">@Configuration</a> allow to register extra beans in the context or import additional configuration classes</li>
+<li><a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/annotation/Configuration.html">@Configuration</a> allow to register extra beans in the context or import additional configuration classes<br>
+<br /></li>
 </ul>
-<p><br /></p>
 <h4 id="3-what-are-the-things-happens-in-the-background-when-springboot-web-application-starts">3. What are the things happens in the background when springboot web application starts?</h4>
 <ol>
 <li>Looks for active profile and initialize properties and beans based on profile</li>
-<li>Start embedded tomcat server if creating web application</li>
+<li>Start embedded tomcat server if creating web application<br>
+<br /></li>
 </ol>
+<h4 id="4-what-is-spring-initializer">4. What is Spring Initializer?</h4>
+<p>We can quickly generate spring boot project by choosing language <em>(Java, Kotlin, Groovy)</em>, builder <em>(Maven,, Gradle)</em>, spring boot version, project metadata <em>(group, artifact, name, description, package name, java version)</em> and spring boot dependencies <em>(spring-boot-starter-web, spring-boot-starter-jpa etc.)</em> using <a href="https://start.spring.io/" target="_blank">Spring Initializer</a><br>
+<br /></p>
+<h4 id="5-what-is-spring-boot-starter-parent">5. What is spring-boot-starter-parent?</h4>
+<p>The <code>spring-boot-starter-parent</code> is spring boot starter project. It can be used as a parent in our project&rsquo;s pom.xml:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-pom.xml" data-lang="pom.xml"><span style="color:#f92672">&lt;parent&gt;</span>
+    <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+    <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-parent<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#f92672">&lt;version&gt;</span>2.2.6.RELEASE<span style="color:#f92672">&lt;/version&gt;</span>
+<span style="color:#f92672">&lt;/parent&gt;</span>
+</code></pre></div><p>parent project provide following things:-</p>
+<ol>
+<li>Default Java compiler version</li>
+<li>UTF-8 source encoding</li>
+<li>Dependency management inherited from <code>spring-boot-dependencies</code> POM which allow us to omit <code>version</code> tag for common dependencies.</li>
+<li><strong>Resource filtering</strong> only import required thirdparty libraries based on <code>application.properties</code> or <code>application.yml</code></li>
+<li>Default configuration for maven plugins such as maven-failsafe-plugin, maven-jar-plugin, maven-surefire-plugin, maven-war-plugin.<br>
+<br /></li>
+</ol>
+<h4 id="6-what-is-default-embedded-server-and-port-in-spring-boot-how-to-change-server-port">6. What is default embedded server and port in spring boot? How to change server port?</h4>
+<p>Spring boot provides support for many embedded servers such as Tomcat, Jetty, Netty and Undertow. Default embedded server is <strong>Tomcat</strong> and default port is <strong>8080</strong>.</p>
+<p>Default server port can be changed using <code>server.port</code> property or command line argument <code>-Dserver.port</code>.</p>
+<blockquote>
+<p>Also read <a href="http://codingnconcepts.com/spring-boot/how-to-change-server-port/">different ways to change server port in spring boot</a></p>
+</blockquote>
+<p>You can always change the default server tomcat to another embedded server such as jetty, Netty or Undertow by excluding the dependency of tomcat <code>spring-boot-starter-tomcat</code> from <code>spring-boot-starter-web</code> and adding the dependency of other server like jetty <code>spring-boot-starter-jetty</code>.</p>
+<blockquote>
+<p>Also read <a href="http://codingnconcepts.com/spring-boot/configure-embedded-jetty-server/">how to configure jetty server in spring boot</a></p>
+</blockquote>
 		</div>
 		<footer class="post__footer">
 			
