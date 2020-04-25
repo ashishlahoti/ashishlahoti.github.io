@@ -138,7 +138,8 @@ if (!doNotTrack) {
 			<p>When we create RESTFul APIs in spring boot application in microservices environment. It becomes essential to log incoming API request and response and push it to centralized logging system such as Splunk or ELK for debugging. Also all the logs related to one request should have some common id to relate them. In this post we are going to solve these problems.</p>
 <h3 id="create-restful-api">Create RESTFul API</h3>
 <p>Let&rsquo;s create a RestController to expose RESTFul API</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/posts&#34;</span><span style="color:#f92672">)</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RestController</span>
+<span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/posts&#34;</span><span style="color:#f92672">)</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PostController</span> <span style="color:#f92672">{</span>
 
 	<span style="color:#a6e22e">@GetMapping</span>
@@ -660,13 +661,13 @@ Default Spring Boot Logging Pattern is as follows:-
     <h2 class = "related_post_title">See Also</h2>
     <ul class = "related_post">
         
-        <li><a href="/spring-boot/configure-info-and-health-endpoints/">Info and health endpoints in spring boot microservice.</a></li>
+        <li><a href="/spring-boot/configure-info-and-health-endpoints/">Info and health endpoints in spring boot.</a></li>
+        
+        <li><a href="/spring-boot/how-to-configure-swagger/">How to configure swagger in spring boot</a></li>
         
         <li><a href="/spring-boot/pretty-print-json-response/">Pretty print JSON response in spring boot</a></li>
         
         <li><a href="/spring-boot/configure-kafka-producer-and-consumer/">Configure Kafka Producer and Consumer in spring boot</a></li>
-        
-        <li><a href="/spring-boot/how-to-configure-swagger/">How to configure swagger in spring boot</a></li>
         
         <li><a href="/spring-boot/how-to-create-custom-banner/">How to create and configure custom banner in spring boot</a></li>
         
@@ -688,7 +689,7 @@ Default Spring Boot Logging Pattern is as follows:-
 
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="/spring-boot/configure-info-and-health-endpoints/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Info and health endpoints in spring boot microservice.</p></a>
+		<a class="post-nav__link" href="/spring-boot/configure-info-and-health-endpoints/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Info and health endpoints in spring boot.</p></a>
 	</div>
 </nav>
 

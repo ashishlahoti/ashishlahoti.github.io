@@ -158,7 +158,8 @@ if (!doNotTrack) {
         <li><a href="#11-what-is-service-discovery-pattern-in-microservices-">11. What is service discovery pattern in microservices ?</a></li>
         <li><a href="#12-what-is-circuit-breaker-pattern-in-microservices-">12. What is circuit breaker pattern in microservices ?</a></li>
         <li><a href="#13-what-is-api-gateway-pattern-in-microservices-">13. What is API gateway pattern in microservices ?</a></li>
-        <li><a href="#14-what-is-12-factor-app-">14. What is 12 Factor App ?</a></li>
+        <li><a href="#14-could-you-explain-a-high-level-microservice-architecture-">14. Could you explain a high level microservice architecture ?</a></li>
+        <li><a href="#15-what-is-12-factor-app-">15. What is 12 Factor App ?</a></li>
       </ul>
     </li>
   </ul>
@@ -493,7 +494,29 @@ API gateway communication can be secured by providing SSL certificate to clients
 
 <hr>
 <p><br /></p>
-<h3 id="14-what-is-12-factor-app-">14. What is 12 Factor App ?</h3>
+<h3 id="14-could-you-explain-a-high-level-microservice-architecture-">14. Could you explain a high level microservice architecture ?</h3>
+<figure class="center">
+    <img src="/img/interview/microservice-high-level-architecture.jpeg"
+         alt="Microservice High Level Architecture"/> <figcaption>
+            <p>Microservice High Level Architecture</p>
+        </figcaption>
+</figure>
+
+<p>The diagram say it all, Let&rsquo;s see them one by one:</p>
+<ol>
+<li><strong>Client</strong> — Client can be a Mobile App, Dynamic Single Page Web Application using Angular, ReactJS, Vue, WebComponents or any traditional clients which renders HTML.</li>
+<li><strong>CDN (Content Delivery Network)</strong> — CDN is a system of distributed servers or networks of servers in locations all over the world. It delivers content from the website or mobile application to people more quickly and efficiently, based on the geographic locations of the user, the origin of the webpage, and the content delivery server.</li>
+<li><strong>Load Balancer (Hardware/Software)</strong> — If there is a high value of incoming traffic and it is affecting system performance and ultimately user experience, application traffic needs to be distributed evenly and efficiently at multiple servers in a server farm. The load balancer sits between client devices and backend servers, receiving and then distributing incoming requests to any available server based on the load balancing algorithm such as Round Robin, Weighted Round Robin, Random, Least Connection, Weighted Least Connection, etc.</li>
+<li><strong>Web Apps</strong> — Clients like Mobile App or SPA can talk to API gateway directly whereas traditional clients can talk to API gateway through load balanced web apps which are hosted on any web server like Apache, Tomcat, Heroku, etc.</li>
+<li><strong>API Gateway (Zuul)</strong> — It’s a server that provides single entry point to talk with microservices. It offers reverse proxy for request routing and request aggregation. It is also responsible for cross cutting concerns such as Authentication &amp; Authorization, logging, Response caching, Encryption, SSL certificate management, rate limiting, spike arrest. Any request coming from clients first go through the API Gateway after that it routes requests to the appropriate microservice. Netflix Zuul provides implementation of API Gateway.</li>
+<li><strong>Service Discovery (Eureka)</strong> — Service Discovery holds the information like IP address, running port about all the microservices under applications. Microservice registers themselves with discovery server when up and running. Netflix Eureka provides implementation of Service Discovery.</li>
+<li><strong>Management</strong> — Management Endpoints (Actuator endpoints) allow you to monitor and interact with your application. Spring Boot actuator includes several built-in endpoints and you can also add your own. Like, the health endpoint provides basic application health information. It’s widely used by containers to check the health and other parameters of the application.</li>
+<li><strong>Microservices</strong> — These microservices are designed around business capabilities, can be deployed independently and loosely coupled. Communication among themselves happens through rest call.</li>
+<li><strong>Event Bus (Kafka, RabbitMQ)</strong> — Event buses are used in microservices based application to avoid messy communication network and keep the communication across microservices clean, loosely coupled, non blocking, asynchronous. Event buses are nothing but a publish/subscribe system like Kafka, RabbitMQ which are used for async tasks like notifications, alerts, background jobs etc to improve performance significantly.</li>
+<li><strong>Logging and Monitoring (ELK, Splunk)</strong> — Microservices based applications requires a centralized logging and monitoring system. One client request could be served by many services all together. In case of any failure, we need to track the request flow end to end across microservice, and this is where logging and monitoring tools helps like ELK (Elastic Search, Logstash and Kibana), Splunk, Grafana.</li>
+</ol>
+<p><br /></p>
+<h3 id="15-what-is-12-factor-app-">15. What is 12 Factor App ?</h3>
 <p><a href="https://12factor.net/" target="_blank">The Twelve-Factor App</a> is a mythology for writing microservices. Following is an easy to understand summary of those 12 factors:-</p>
 <h5 id="1-codebase">1. Codebase</h5>
 <p><em>One codebase, multiple deploys.</em><br>
