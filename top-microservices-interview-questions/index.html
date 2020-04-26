@@ -243,9 +243,9 @@ if (!doNotTrack) {
 <li>We can generate a <strong>requestId</strong> for each external request, which is passed to all the microservices which are involved in handling the request. Include this <em>requestId</em> in all log messages pushed to <em>splunk</em> or <em>ELK</em>. We can troubleshoot any request end to end using this <em>requestId</em> if something goes wrong.</li>
 </ul>
 <blockquote>
-<p>Also read <a href="http://codingnconcepts.com/spring-boot/custom-api-request-response-logging/">how to create custom logger to print API request and response along with incoming requestId</a>
-<br /></p>
+<p>Also read <a href="http://codingnconcepts.com/spring-boot/custom-api-request-response-logging/">how to create custom logger to print API request and response along with incoming requestId</a></p>
 </blockquote>
+<p><br /></p>
 <h3 id="7-how-do-you-manage-configuration-in-microservices-based-application-">7. How do you manage configuration in microservices based application ?</h3>
 <p>If we want to modify the configuration for a microservice that has been replicated a hundred times (one hundred processes are running). If the configuration for this microservice is packaged with the microservice itself, we’ll have to redeploy each of the one hundred instances. This can result in some instances using the old configuration, and some using the new one, at some point. Moreover, sometimes microservices use external connections which, for example, require URLs, usernames, and passwords. If you want to update these settings, it would be useful to have this configuration shared across services.</p>
 <p>We use <strong>externalize configuration</strong> to solve this problem by keeping the configuration information in an external store such as github, database, filesystem, or environment variables or even a configuration server. At startup, microservices load the configuration from the external store or configuration server.</p>
@@ -267,7 +267,7 @@ if (!doNotTrack) {
 <li>When user make any request of resources, this token is sent in Authorization header of each request.</li>
 <li>Microservices decrypts the token and evaluate user information to authorize for resource access and send the response accordingly.</li>
 </ol>
-<h4 id="jwt">JWT</h4>
+<h5 id="jwt">JWT</h5>
 <p><code>JWT (Json Web Token)</code> is widely used token based authentication mechanism. JWT consist of three parts:</p>
 <ul>
 <li><strong>header</strong>  contains type, fixed value JWT and the hashing algorithm used by JWT
@@ -302,7 +302,6 @@ if (!doNotTrack) {
         </figcaption>
 </figure>
 
-<hr>
 <p><br /></p>
 <h3 id="10-how-do-you-handle-distributed-transaction-across-microservices-">10. How do you handle distributed transaction across microservices ?</h3>
 <p>Transactions are easy to handle in monolithic application with single code base, single data source and deployment on single server whereas it becomes a challenge to handle a distributed transaction across microservices where each microservice has its own data store and deployed on different servers. There are different approach to handle distributed transactions:</p>
@@ -328,13 +327,10 @@ A saga is a sequence of local transactions where each transaction updates data w
 <p>In this approach there is no central coordination, executes a transaction and then publishes an event. This event is listened by one or more services which execute local transactions and publish (or not) new events.</p>
 <p>The distributed transaction ends when the last service executes its local transaction and does not publish any events or the event published is not heard by any of the saga’s participants.</p>
 <p>Let’s see how it would look like in our e-commerce example:</p>
-<div class="mermaid" align="left">
-graph LR;
-    A(Order Service) -->|ORDER_CREATED_EVENT| B(Payment Service)
-    B --> |BILLED_ORDER_EVENT| C(Stock Service)
-    C --> |ORDER_PREPARED_EVENT| D(Delivery Service)
-    D --> |ORDER_DELIVERED_EVENT| A
-</div>
+<figure class="center">
+    <img src="/img/interview/microservice-saga-pattern-event-1.png" width="50%"/> 
+</figure>
+
 <p><br /></p>
 <ol>
 <li>Order Service saves a new order, set the state as pending and publish an event called ORDER_CREATED_EVENT.</li>
@@ -347,12 +343,10 @@ graph LR;
 <h6 id="rollback">Rollback</h6>
 <p>For Rollback, you have to implement another operation/transaction to compensate for what has been done before.</p>
 <p>Suppose that Stock Service has failed during a transaction. Let’s see what the rollback would look like:</p>
-<div class="mermaid" align="left">
-graph LR;
-    A(Order Service) -->|ORDER_CREATED_EVENT| B(Payment Service)
-    B --> |BILLED_ORDER_EVENT| C(Stock Service)
-    C --> |PRODUCT_OUT_OF_STOCK_EVENT| A
-</div>
+<figure class="center">
+    <img src="/img/interview/microservice-saga-pattern-event-2.png" width="50%"/> 
+</figure>
+
 <p><br /></p>
 <ol>
 <li>Stock Service produces PRODUCT_OUT_OF_STOCK_EVENT;</li>
@@ -367,7 +361,9 @@ graph LR;
 <p>It is simple, easy to understand, does not require much effort to build.</p>
 <h5 id="commandorchestration">Command/Orchestration</h5>
 <p>when a coordinator service is responsible for centralizing the saga’s decision making and sequencing business logic.</p>
+<blockquote>
 <p>Please read <a href="https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part-2/" target="_blank">this post for for more details on Command/Orchestration pattern</a></p>
+</blockquote>
 <p><br /></p>
 <h3 id="11-what-is-service-discovery-pattern-in-microservices-">11. What is service discovery pattern in microservices ?</h3>
 <p><strong>Service discovery</strong> is a pattern in microservices which solves the problem of service registry and discovery.</p>
