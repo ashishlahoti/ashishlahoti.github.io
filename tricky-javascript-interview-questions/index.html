@@ -195,7 +195,38 @@ true
 <li><strong>null</strong> becomes <strong>0</strong> and <strong>undefined</strong> becomes <strong>NaN</strong> for number comparison so <code>null &gt; 0</code> returns false whereas <code>null &gt;= 0</code> returns true.</li>
 </ul>
 <p><br /></p>
-<h3 id="4-variable-hoisting-guess-the-output">4. Variable <code>hoisting</code>. Guess the output?</h3>
+<h3 id="4-foreach-loop-guess-the-output">4. <code>forEach</code> loop. Guess the output?</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">elements</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>];
+
+<span style="color:#a6e22e">elements</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">element</span> =&gt; {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">element</span>);
+
+  <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">element</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>){
+    <span style="color:#66d9ef">return</span>;
+    <span style="color:#75715e">//break;
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//continue;
+</span><span style="color:#75715e"></span>  }
+})
+</code></pre></div><p>Have you guessed it will print 1 and 2 ? Let&rsquo;s look at the output,</p>
+<pre><code><div class="code_output">Output</div>
+1
+2
+3
+4
+5
+</code></pre><p>Yes, its confusing in Javascript. The reason is that we are passing a <strong>callback function</strong> in <code>forEach</code> loop which will be executed for each element no matter if we <code>return</code>.</p>
+<p>If you use <code>break</code> or <code>continue</code> instead of <code>return</code>, you get either one of the error since these are not applicable for a callback function:</p>
+<pre><code>Uncaught SyntaxError: Illegal break statement
+Uncaught SyntaxError: Illegal continue statement
+</code></pre><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">From Official MDN docs:</a><br>
+There is no way to <strong>stop</strong> or <strong>break</strong> a <code>forEach</code> loop other than throwing an exception. If you need such behavior, the <code>forEach</code> method is the wrong tool.
+Early termination may be accomplished with:</p>
+<ul>
+<li>A simple <code>for</code> loop</li>
+<li>A <code>for...of</code> / <code>for...in</code> loops</li>
+</ul>
+<p><br /></p>
+<h3 id="5-variable-hoisting-guess-the-output">5. Variable <code>hoisting</code>. Guess the output?</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
 
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">myFun</span>(){
@@ -222,7 +253,7 @@ function myFun(){
 
 myFun();
 </code></pre><p><br /></p>
-<h3 id="5-closure-guess-the-output">5. <code>Closure</code>. Guess the output?</h3>
+<h3 id="6-closure-guess-the-output">6. <code>Closure</code>. Guess the output?</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
   <span style="color:#a6e22e">setTimeout</span>(<span style="color:#66d9ef">function</span>() { <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">i</span>); }, <span style="color:#a6e22e">i</span><span style="color:#f92672">*</span><span style="color:#ae81ff">1000</span>);
 }
@@ -251,7 +282,7 @@ myFun();
 1
 2
 </code></pre><p><br /></p>
-<h3 id="6-this-keyword-guess-the-output">6. <code>this</code> keyword. Guess the output?</h3>
+<h3 id="7-this-keyword-guess-the-output">7. <code>this</code> keyword. Guess the output?</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Person</span>(<span style="color:#e6db74">&#34;a&#34;</span>);
 <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Person</span> 
 <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Person</span>(<span style="color:#e6db74">&#34;c&#34;</span>);
