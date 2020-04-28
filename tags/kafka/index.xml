@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kafka on Coding N Concepts</title>
-    <link>http://codingnconcepts.com/tags/kafka/</link>
+    <link>https://codingnconcepts.com/tags/kafka/</link>
     <description>Recent content in Kafka on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 11 Apr 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://codingnconcepts.com/tags/kafka/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://codingnconcepts.com/tags/kafka/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Configure Kafka Producer and Consumer in spring boot</title>
-      <link>http://codingnconcepts.com/spring-boot/configure-kafka-producer-and-consumer/</link>
+      <link>https://codingnconcepts.com/spring-boot/configure-kafka-producer-and-consumer/</link>
       <pubDate>Sat, 11 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/spring-boot/configure-kafka-producer-and-consumer/</guid>
+      <guid>https://codingnconcepts.com/spring-boot/configure-kafka-producer-and-consumer/</guid>
       <description>&lt;p&gt;This post describes how to configure Kafka producer and consumer in spring boot application and also explains how to create service classes to send and receive Kafka messages to and from configured kafka topic respectively.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Apache Kafka CCDAK Exam Notes</title>
-      <link>http://codingnconcepts.com/post/apache-kafka-ccdak-exam-notes/</link>
+      <link>https://codingnconcepts.com/post/apache-kafka-ccdak-exam-notes/</link>
       <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/post/apache-kafka-ccdak-exam-notes/</guid>
+      <guid>https://codingnconcepts.com/post/apache-kafka-ccdak-exam-notes/</guid>
       <description>Hi Readers,
 If you are planning or preparing for Apache Kafka Certification then this is the right place for you.There are many Apache Kafka Certifications are available in the market but CCDAK (Confluent Certified Developer for Apache Kafka) is the most known certification as Kafka is now maintained by Confluent.
 Confluent has introduced CCOAK certification recently. CCOAK is mainly for devOps engineer focusing on build and manage Kafka cluster. CCDAK is mainly for developers and Solution architects focusing on design, producer and consumer.</description>
@@ -33,19 +33,19 @@ Confluent has introduced CCOAK certification recently. CCOAK is mainly for devOp
     
     <item>
       <title>Kafka Consumer Using Java</title>
-      <link>http://codingnconcepts.com/post/apache-kafka-consumer-using-java/</link>
+      <link>https://codingnconcepts.com/post/apache-kafka-consumer-using-java/</link>
       <pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/post/apache-kafka-consumer-using-java/</guid>
+      <guid>https://codingnconcepts.com/post/apache-kafka-consumer-using-java/</guid>
       <description>&lt;p&gt;Implementation of Kafka Consumer using Java&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Kafka Producer Using Java</title>
-      <link>http://codingnconcepts.com/post/apache-kafka-producer-using-java/</link>
+      <link>https://codingnconcepts.com/post/apache-kafka-producer-using-java/</link>
       <pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/post/apache-kafka-producer-using-java/</guid>
+      <guid>https://codingnconcepts.com/post/apache-kafka-producer-using-java/</guid>
       <description>&lt;p&gt;Implementation of Kafka Producer using Java&lt;/p&gt;</description>
     </item>
     

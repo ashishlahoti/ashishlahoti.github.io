@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Coding N Concepts</title>
-    <link>http://codingnconcepts.com/spring-boot/</link>
+    <link>https://codingnconcepts.com/spring-boot/</link>
     <description>Recent content on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 25 Apr 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://codingnconcepts.com/spring-boot/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://codingnconcepts.com/spring-boot/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Configure embedded Jetty server in spring boot.</title>
-      <link>http://codingnconcepts.com/spring-boot/configure-embedded-jetty-server/</link>
+      <title>Configure embedded Jetty server in spring boot</title>
+      <link>https://codingnconcepts.com/spring-boot/configure-embedded-jetty-server/</link>
       <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/spring-boot/configure-embedded-jetty-server/</guid>
+      <guid>https://codingnconcepts.com/spring-boot/configure-embedded-jetty-server/</guid>
       <description>&lt;p&gt;Spring boot use &lt;strong&gt;tomcat&lt;/strong&gt; as default embedded tomcat server to run a web application but you can configure &lt;strong&gt;jetty&lt;/strong&gt; server to replace tomcat in easy steps.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Custom API Request &amp; Response Logging in spring boot.</title>
-      <link>http://codingnconcepts.com/spring-boot/custom-api-request-response-logging/</link>
+      <link>https://codingnconcepts.com/spring-boot/custom-api-request-response-logging/</link>
       <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/spring-boot/custom-api-request-response-logging/</guid>
+      <guid>https://codingnconcepts.com/spring-boot/custom-api-request-response-logging/</guid>
       <description>&lt;p&gt;When we create RESTFul APIs in spring boot application in microservices environment. It becomes essential to log incoming API request and response and push it to centralized logging system such as Splunk or ELK for debugging. Also all the logs related to one request should have some common id to relate them. In this post we are going to solve these problems.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>info and health endpoints in spring boot</title>
-      <link>http://codingnconcepts.com/spring-boot/configure-info-and-health-endpoints/</link>
+      <link>https://codingnconcepts.com/spring-boot/configure-info-and-health-endpoints/</link>
       <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/spring-boot/configure-info-and-health-endpoints/</guid>
+      <guid>https://codingnconcepts.com/spring-boot/configure-info-and-health-endpoints/</guid>
       <description>&lt;p&gt;In spring boot microservices based application, where microservices talks to each other using RESTFul APIs. We can expose some important information about microservice such as name, version, description over some endpoints say &lt;em&gt;/info&lt;/em&gt; and also realtime status or health over some endpoint say &lt;em&gt;/health&lt;/em&gt; to create application dashboards, realtime alerts, track microservice updates and so on&amp;hellip;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Pretty print JSON response in spring boot</title>
-      <link>http://codingnconcepts.com/spring-boot/pretty-print-json-response/</link>
+      <link>https://codingnconcepts.com/spring-boot/pretty-print-json-response/</link>
       <pubDate>Mon, 13 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/spring-boot/pretty-print-json-response/</guid>
+      <guid>https://codingnconcepts.com/spring-boot/pretty-print-json-response/</guid>
       <description>&lt;p&gt;When you create a Spring &lt;code&gt;@RestController&lt;/code&gt; in a Spring Boot application to define API endpoints then it renders JSON response by default if jackson2 is in classpath.&lt;/p&gt;
 &lt;!--
 Spring uses `HttpMessageConverters` for content conversion for e.g. Java Object to JSON or XML in order to render responses from `@RestController` class methods. Spring boot provides a default `MappingJackson2HttpMessageConverter` (if jackson2 is in classpath) to render JSON response.
@@ -53,19 +53,19 @@ Spring uses `HttpMessageConverters` for content conversion for e.g. Java Object 
     
     <item>
       <title>Configure Kafka Producer and Consumer in spring boot</title>
-      <link>http://codingnconcepts.com/spring-boot/configure-kafka-producer-and-consumer/</link>
+      <link>https://codingnconcepts.com/spring-boot/configure-kafka-producer-and-consumer/</link>
       <pubDate>Sat, 11 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/spring-boot/configure-kafka-producer-and-consumer/</guid>
+      <guid>https://codingnconcepts.com/spring-boot/configure-kafka-producer-and-consumer/</guid>
       <description>&lt;p&gt;This post describes how to configure Kafka producer and consumer in spring boot application and also explains how to create service classes to send and receive Kafka messages to and from configured kafka topic respectively.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>How to configure swagger in spring boot</title>
-      <link>http://codingnconcepts.com/spring-boot/how-to-configure-swagger/</link>
+      <link>https://codingnconcepts.com/spring-boot/how-to-configure-swagger/</link>
       <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/spring-boot/how-to-configure-swagger/</guid>
+      <guid>https://codingnconcepts.com/spring-boot/how-to-configure-swagger/</guid>
       <description>&lt;p&gt;Swagger library is very useful if you are creating spring boot web application and exposing REST endpoints. Swagger generates web page for you to execute and test GET, POST, PUT, DELETE HTTP endpoints. This is helpful since you do not need to use Postman or some other tool to test REST Apis. Once you configure swagger then web page can be accessible using following URL:-&lt;/p&gt;
 &lt;p&gt;http://localhost:8080/swagger-ui.html&lt;/p&gt;
 &lt;p&gt;Follow the steps to configure swagger in your spring boot application:-&lt;/p&gt;</description>
@@ -73,10 +73,10 @@ Spring uses `HttpMessageConverters` for content conversion for e.g. Java Object 
     
     <item>
       <title>How to create and configure custom banner in spring boot</title>
-      <link>http://codingnconcepts.com/spring-boot/how-to-create-custom-banner/</link>
+      <link>https://codingnconcepts.com/spring-boot/how-to-create-custom-banner/</link>
       <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/spring-boot/how-to-create-custom-banner/</guid>
+      <guid>https://codingnconcepts.com/spring-boot/how-to-create-custom-banner/</guid>
       <description>&lt;p&gt;Spring boot application comes with default banner which shows up first when you start your application.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;  .   ____          _            __ _ _
  /\\ / ___&#39;_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -90,30 +90,30 @@ Spring uses `HttpMessageConverters` for content conversion for e.g. Java Object 
     
     <item>
       <title>How to disable command line properties in spring boot</title>
-      <link>http://codingnconcepts.com/spring-boot/how-to-disable-command-line-properties/</link>
+      <link>https://codingnconcepts.com/spring-boot/how-to-disable-command-line-properties/</link>
       <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/spring-boot/how-to-disable-command-line-properties/</guid>
+      <guid>https://codingnconcepts.com/spring-boot/how-to-disable-command-line-properties/</guid>
       <description>&lt;p&gt;Spring Boot Application converts any command line arguments starting with --, such as &lt;strong&gt;--spring.profiles.active=dev&lt;/strong&gt; to a property by default and adds them to the Spring Environment. Command line properties always take precedence over other property sources.&lt;/p&gt;
 &lt;p&gt;If you do not want command line properties to be added to the Environment, you can disable them from SpringBootApplication main method as follows:-&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>How to change server port in spring boot</title>
-      <link>http://codingnconcepts.com/spring-boot/how-to-change-server-port/</link>
+      <link>https://codingnconcepts.com/spring-boot/how-to-change-server-port/</link>
       <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/spring-boot/how-to-change-server-port/</guid>
+      <guid>https://codingnconcepts.com/spring-boot/how-to-change-server-port/</guid>
       <description>&lt;p&gt;Spring boot web application using embedded server by default runs on port 8080. Following are the ways to change default server port from &lt;strong&gt;8080&lt;/strong&gt; to say &lt;strong&gt;9090&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Follow any of the given five ways to change server port:-&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>How to disable default banner in spring boot</title>
-      <link>http://codingnconcepts.com/spring-boot/how-to-disable-banner/</link>
+      <link>https://codingnconcepts.com/spring-boot/how-to-disable-banner/</link>
       <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/spring-boot/how-to-disable-banner/</guid>
+      <guid>https://codingnconcepts.com/spring-boot/how-to-disable-banner/</guid>
       <description>&lt;p&gt;You would have seen below spring boot banner when starting a spring boot application&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;  .   ____          _            __ _ _
  /\\ / ___&#39;_ __ _ _(_)_ __  __ _ \ \ \ \

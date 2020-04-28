@@ -643,6 +643,8 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	width: 32px;
 	height: 2.3rem;
 	width: 2.3rem;
+	float: left;
+	margin-right: 10px;
 }
 
 .content.post__content {

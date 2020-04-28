@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Weight Puzzle on Coding N Concepts</title>
-    <link>http://codingnconcepts.com/tags/weight-puzzle/</link>
+    <link>https://codingnconcepts.com/tags/weight-puzzle/</link>
     <description>Recent content in Weight Puzzle on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 22 Apr 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://codingnconcepts.com/tags/weight-puzzle/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://codingnconcepts.com/tags/weight-puzzle/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>12 Balls Weight Puzzle</title>
-      <link>http://codingnconcepts.com/puzzle/12-balls-weight-puzzle/</link>
+      <link>https://codingnconcepts.com/puzzle/12-balls-weight-puzzle/</link>
       <pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/12-balls-weight-puzzle/</guid>
+      <guid>https://codingnconcepts.com/puzzle/12-balls-weight-puzzle/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;You have 12 balls identical in size and appearance but 1 is an odd weight (could be either light or heavy).&lt;/p&gt;
 &lt;p&gt;You have a set scales (balance) which will give 3 possible readings: Left = Right, Left &amp;gt; Right or Left &amp;lt; Right (ie Left and Right have equal weight, Left is Heavier, or Left is Lighter).&lt;/p&gt;
@@ -26,10 +26,10 @@
     
     <item>
       <title>8 Balls Weight Puzzle</title>
-      <link>http://codingnconcepts.com/puzzle/8-balls-weight-puzzle/</link>
+      <link>https://codingnconcepts.com/puzzle/8-balls-weight-puzzle/</link>
       <pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/8-balls-weight-puzzle/</guid>
+      <guid>https://codingnconcepts.com/puzzle/8-balls-weight-puzzle/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;You have 8 balls. One of them is defective and weighs less than others. You have a balance to measure balls against each other. In 2 weightings how do you find the defective one?&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -37,10 +37,10 @@
     
     <item>
       <title>Minimum set of weight puzzle</title>
-      <link>http://codingnconcepts.com/puzzle/minimum-set-of-weights/</link>
+      <link>https://codingnconcepts.com/puzzle/minimum-set-of-weights/</link>
       <pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/minimum-set-of-weights/</guid>
+      <guid>https://codingnconcepts.com/puzzle/minimum-set-of-weights/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;What is the minimum number of weights needed for a scale that will be able to weigh objects from the weight of one pound to 100 pounds?&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -48,10 +48,10 @@
     
     <item>
       <title>Contaminated Pills Puzzle</title>
-      <link>http://codingnconcepts.com/puzzle/contaminated-pills/</link>
+      <link>https://codingnconcepts.com/puzzle/contaminated-pills/</link>
       <pubDate>Sat, 21 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/contaminated-pills/</guid>
+      <guid>https://codingnconcepts.com/puzzle/contaminated-pills/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;You have 5 jars of pills. Each pill weighs 10 gram, except for contaminated pills contained in one jar, where each pill weighs 9 gm. Given a scale, how could you tell which jar had the contaminated pills in just one measurement?”&lt;/p&gt;
 &lt;/blockquote&gt;</description>

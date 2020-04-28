@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sorting on Coding N Concepts</title>
-    <link>http://codingnconcepts.com/tags/sorting/</link>
+    <link>https://codingnconcepts.com/tags/sorting/</link>
     <description>Recent content in Sorting on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 09 Jun 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://codingnconcepts.com/tags/sorting/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://codingnconcepts.com/tags/sorting/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bubble Sort</title>
-      <link>http://codingnconcepts.com/java/bubble-sort-using-java/</link>
+      <link>https://codingnconcepts.com/java/bubble-sort-using-java/</link>
       <pubDate>Tue, 09 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/java/bubble-sort-using-java/</guid>
+      <guid>https://codingnconcepts.com/java/bubble-sort-using-java/</guid>
       <description>&lt;h3 id=&#34;why-it-is-called-bubble-sort-&#34;&gt;Why it is called bubble sort ?&lt;/h3&gt;
 &lt;p&gt;Bubble Sort is nothing but a comparison algorithm where -&lt;/p&gt;
 &lt;ul&gt;

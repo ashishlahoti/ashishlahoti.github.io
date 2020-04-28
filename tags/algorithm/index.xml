@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Algorithm on Coding N Concepts</title>
-    <link>http://codingnconcepts.com/tags/algorithm/</link>
+    <link>https://codingnconcepts.com/tags/algorithm/</link>
     <description>Recent content in Algorithm on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 22 Mar 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://codingnconcepts.com/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://codingnconcepts.com/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>M power N Using Recursive function</title>
-      <link>http://codingnconcepts.com/java/m-power-n-using-recursive/</link>
+      <link>https://codingnconcepts.com/java/m-power-n-using-recursive/</link>
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/java/m-power-n-using-recursive/</guid>
+      <guid>https://codingnconcepts.com/java/m-power-n-using-recursive/</guid>
       <description>&lt;p&gt;This is one of the example of using recursive function in Java to find M power N&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Print All String Combinations Using Recursive function</title>
-      <link>http://codingnconcepts.com/java/print-all-string-combinations-using-recursive/</link>
+      <link>https://codingnconcepts.com/java/print-all-string-combinations-using-recursive/</link>
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/java/print-all-string-combinations-using-recursive/</guid>
+      <guid>https://codingnconcepts.com/java/print-all-string-combinations-using-recursive/</guid>
       <description>&lt;p&gt;Print all the possible combinations of a given String using Recursive function in Java&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>2 Eggs and 100 Floors Problem</title>
-      <link>http://codingnconcepts.com/puzzle/2-eggs-and-100-floors/</link>
+      <link>https://codingnconcepts.com/puzzle/2-eggs-and-100-floors/</link>
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/2-eggs-and-100-floors/</guid>
+      <guid>https://codingnconcepts.com/puzzle/2-eggs-and-100-floors/</guid>
       <description>&lt;p&gt;This problem is frequently asked in interview to evaluate candidate&amp;rsquo;s understanding on linear search and binary search. I have tried to explain this problem as easy as possible.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;There is a building of 100 floors. One of the floors is the highest floor (say Nth floor) an egg can be dropped from without breaking.&lt;/p&gt;
@@ -48,19 +48,19 @@
     
     <item>
       <title>Fibonacci Series Using Recursive function</title>
-      <link>http://codingnconcepts.com/java/fibonacci-series-using-recursive/</link>
+      <link>https://codingnconcepts.com/java/fibonacci-series-using-recursive/</link>
       <pubDate>Sun, 12 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/java/fibonacci-series-using-recursive/</guid>
+      <guid>https://codingnconcepts.com/java/fibonacci-series-using-recursive/</guid>
       <description>&lt;p&gt;Fibonacci series implementation in java is frequently asked question in interview at fresher level. Moreover, it is a very famous example to show how to use recursive function in java.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Bubble Sort</title>
-      <link>http://codingnconcepts.com/java/bubble-sort-using-java/</link>
+      <link>https://codingnconcepts.com/java/bubble-sort-using-java/</link>
       <pubDate>Tue, 09 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/java/bubble-sort-using-java/</guid>
+      <guid>https://codingnconcepts.com/java/bubble-sort-using-java/</guid>
       <description>&lt;h3 id=&#34;why-it-is-called-bubble-sort-&#34;&gt;Why it is called bubble sort ?&lt;/h3&gt;
 &lt;p&gt;Bubble Sort is nothing but a comparison algorithm where -&lt;/p&gt;
 &lt;ul&gt;

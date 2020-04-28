@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Maths Puzzle on Coding N Concepts</title>
-    <link>http://codingnconcepts.com/tags/maths-puzzle/</link>
+    <link>https://codingnconcepts.com/tags/maths-puzzle/</link>
     <description>Recent content in Maths Puzzle on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://codingnconcepts.com/tags/maths-puzzle/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://codingnconcepts.com/tags/maths-puzzle/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>The Water Jug Riddle from Die Hard Movie</title>
-      <link>http://codingnconcepts.com/puzzle/the-water-jug-riddle/</link>
+      <link>https://codingnconcepts.com/puzzle/the-water-jug-riddle/</link>
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/the-water-jug-riddle/</guid>
+      <guid>https://codingnconcepts.com/puzzle/the-water-jug-riddle/</guid>
       <description>&lt;p&gt;You might have seen this riddle in Die Hard movie where Bruce Willis and Jackson have to diffuse a bomb by placing exactly 4-gallon water on a scale&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;You have a 3-gallon and a 5-gallon jug that you can fill multiple times from a pond of water. The problem is to measure exactly 4 gallons of water. How do you do it?&lt;/p&gt;
@@ -25,10 +25,10 @@
     
     <item>
       <title>The 6s Math Puzzle</title>
-      <link>http://codingnconcepts.com/puzzle/the-6s-math-puzzle/</link>
+      <link>https://codingnconcepts.com/puzzle/the-6s-math-puzzle/</link>
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/the-6s-math-puzzle/</guid>
+      <guid>https://codingnconcepts.com/puzzle/the-6s-math-puzzle/</guid>
       <description>&lt;p&gt;This is a pure mathematical puzzle which evaluate your ability to solve maths equation. This is a great problem for building number sense.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The challenge is to make each below equation true using common mathematical operations. You cannot introduce any new digits (so the cube root ∛ is not allowed since it has a 3).&lt;/p&gt;
@@ -49,10 +49,10 @@
     
     <item>
       <title>Minimum set of weight puzzle</title>
-      <link>http://codingnconcepts.com/puzzle/minimum-set-of-weights/</link>
+      <link>https://codingnconcepts.com/puzzle/minimum-set-of-weights/</link>
       <pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/minimum-set-of-weights/</guid>
+      <guid>https://codingnconcepts.com/puzzle/minimum-set-of-weights/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;What is the minimum number of weights needed for a scale that will be able to weigh objects from the weight of one pound to 100 pounds?&lt;/p&gt;
 &lt;/blockquote&gt;</description>

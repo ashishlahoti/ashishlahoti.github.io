@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Design Pattern on Coding N Concepts</title>
-    <link>http://codingnconcepts.com/tags/design-pattern/</link>
+    <link>https://codingnconcepts.com/tags/design-pattern/</link>
     <description>Recent content in Design Pattern on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 21 Mar 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://codingnconcepts.com/tags/design-pattern/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://codingnconcepts.com/tags/design-pattern/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Decorator Design Pattern Using Java</title>
-      <link>http://codingnconcepts.com/java/decorator-design-pattern-using-java/</link>
+      <link>https://codingnconcepts.com/java/decorator-design-pattern-using-java/</link>
       <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/java/decorator-design-pattern-using-java/</guid>
+      <guid>https://codingnconcepts.com/java/decorator-design-pattern-using-java/</guid>
       <description>&lt;p&gt;Decorator design pattern is used to add a new feature on the existing object by wrapping it with a decorator class.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Singleton Design Pattern Using Java</title>
-      <link>http://codingnconcepts.com/java/singleton-design-pattern-using-java/</link>
+      <link>https://codingnconcepts.com/java/singleton-design-pattern-using-java/</link>
       <pubDate>Mon, 22 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/java/singleton-design-pattern-using-java/</guid>
+      <guid>https://codingnconcepts.com/java/singleton-design-pattern-using-java/</guid>
       <description>&lt;p&gt;This problem is frequently asked in the interview to check your understanding on singleton design pattern. This program answers following artefacts of singleton design pattern:-&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;How to make singleton class thread safe?
@@ -54,10 +54,10 @@ You can find the singleton pattern implementation here.&lt;/li&gt;
     
     <item>
       <title>Design Elevator (Lift) in Java</title>
-      <link>http://codingnconcepts.com/java/elevator-implementation-using-java/</link>
+      <link>https://codingnconcepts.com/java/elevator-implementation-using-java/</link>
       <pubDate>Mon, 06 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/java/elevator-implementation-using-java/</guid>
+      <guid>https://codingnconcepts.com/java/elevator-implementation-using-java/</guid>
       <description>&lt;p&gt;Implementation of Elevator or Lift has been asked in many interviews. I have tried to implement it using muti-threading and TreeSet. TreeSet is used to store incoming request. It is a good choice here as it removes the duplicate requests and implements NavigableSet which provide you methods such as floor and ceiling.&lt;/p&gt;
 &lt;p&gt;Elevator in this program implements following features -&lt;/p&gt;
 &lt;ul&gt;

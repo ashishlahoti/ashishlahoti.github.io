@@ -2,84 +2,84 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Java on Coding N Concepts</title>
-    <link>http://codingnconcepts.com/tags/java/</link>
+    <link>https://codingnconcepts.com/tags/java/</link>
     <description>Recent content in Java on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 05 Apr 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://codingnconcepts.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://codingnconcepts.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>M power N Using Recursive function</title>
-      <link>http://codingnconcepts.com/java/m-power-n-using-recursive/</link>
+      <link>https://codingnconcepts.com/java/m-power-n-using-recursive/</link>
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/java/m-power-n-using-recursive/</guid>
+      <guid>https://codingnconcepts.com/java/m-power-n-using-recursive/</guid>
       <description>&lt;p&gt;This is one of the example of using recursive function in Java to find M power N&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Print All String Combinations Using Recursive function</title>
-      <link>http://codingnconcepts.com/java/print-all-string-combinations-using-recursive/</link>
+      <link>https://codingnconcepts.com/java/print-all-string-combinations-using-recursive/</link>
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/java/print-all-string-combinations-using-recursive/</guid>
+      <guid>https://codingnconcepts.com/java/print-all-string-combinations-using-recursive/</guid>
       <description>&lt;p&gt;Print all the possible combinations of a given String using Recursive function in Java&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Streams in Java 8</title>
-      <link>http://codingnconcepts.com/java/streams-in-java-8/</link>
+      <link>https://codingnconcepts.com/java/streams-in-java-8/</link>
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/java/streams-in-java-8/</guid>
+      <guid>https://codingnconcepts.com/java/streams-in-java-8/</guid>
       <description>&lt;p&gt;One of the major feature of Java 8 is addition of Stream. It also has introduced the functional programming in Java. We will discuss different stream operations available in Collection, Array, IntStream with examples. We will also discuss the difference between Intermediate and Terminal operations.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Decorator Design Pattern Using Java</title>
-      <link>http://codingnconcepts.com/java/decorator-design-pattern-using-java/</link>
+      <link>https://codingnconcepts.com/java/decorator-design-pattern-using-java/</link>
       <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/java/decorator-design-pattern-using-java/</guid>
+      <guid>https://codingnconcepts.com/java/decorator-design-pattern-using-java/</guid>
       <description>&lt;p&gt;Decorator design pattern is used to add a new feature on the existing object by wrapping it with a decorator class.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Top Spring Boot Interview Questions</title>
-      <link>http://codingnconcepts.com/top-spring-boot-interview-questions/</link>
+      <link>https://codingnconcepts.com/top-spring-boot-interview-questions/</link>
       <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/top-spring-boot-interview-questions/</guid>
+      <guid>https://codingnconcepts.com/top-spring-boot-interview-questions/</guid>
       <description>&lt;p&gt;These Spring Boot interview questions are based on my personal interview experience. Topics are in the order of recent interview trends. Keep following this post for regular updates.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Top Spring Interview Questions</title>
-      <link>http://codingnconcepts.com/top-spring-interview-questions/</link>
+      <link>https://codingnconcepts.com/top-spring-interview-questions/</link>
       <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/top-spring-interview-questions/</guid>
+      <guid>https://codingnconcepts.com/top-spring-interview-questions/</guid>
       <description>&lt;p&gt;These Spring interview questions are based on my personal interview experience. Topics are in the order of recent interview trends. Keep following this post for regular updates.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Top Java Interview Questions</title>
-      <link>http://codingnconcepts.com/top-java-interview-questions/</link>
+      <link>https://codingnconcepts.com/top-java-interview-questions/</link>
       <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/top-java-interview-questions/</guid>
+      <guid>https://codingnconcepts.com/top-java-interview-questions/</guid>
       <description>&lt;p&gt;These Java interview questions are based on my personal interview experience. Topics are in the order of recent interview trends. Keep following this post link for regular updates.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Singleton Design Pattern Using Java</title>
-      <link>http://codingnconcepts.com/java/singleton-design-pattern-using-java/</link>
+      <link>https://codingnconcepts.com/java/singleton-design-pattern-using-java/</link>
       <pubDate>Mon, 22 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/java/singleton-design-pattern-using-java/</guid>
+      <guid>https://codingnconcepts.com/java/singleton-design-pattern-using-java/</guid>
       <description>&lt;p&gt;This problem is frequently asked in the interview to check your understanding on singleton design pattern. This program answers following artefacts of singleton design pattern:-&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;How to make singleton class thread safe?
@@ -108,10 +108,10 @@ You can find the singleton pattern implementation here.&lt;/li&gt;
     
     <item>
       <title>Ping pong using wait notify</title>
-      <link>http://codingnconcepts.com/java/ping-pong-using-wait-notify/</link>
+      <link>https://codingnconcepts.com/java/ping-pong-using-wait-notify/</link>
       <pubDate>Thu, 04 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/java/ping-pong-using-wait-notify/</guid>
+      <guid>https://codingnconcepts.com/java/ping-pong-using-wait-notify/</guid>
       <description>&lt;p&gt;This problem is frequently asked in the interview to check your understanding on threads and your programming skills. Problem statement might change for e.g.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Print ping pong using two threads.&lt;/li&gt;
@@ -122,28 +122,28 @@ You can find the singleton pattern implementation here.&lt;/li&gt;
     
     <item>
       <title>Kafka Consumer Using Java</title>
-      <link>http://codingnconcepts.com/post/apache-kafka-consumer-using-java/</link>
+      <link>https://codingnconcepts.com/post/apache-kafka-consumer-using-java/</link>
       <pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/post/apache-kafka-consumer-using-java/</guid>
+      <guid>https://codingnconcepts.com/post/apache-kafka-consumer-using-java/</guid>
       <description>&lt;p&gt;Implementation of Kafka Consumer using Java&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Kafka Producer Using Java</title>
-      <link>http://codingnconcepts.com/post/apache-kafka-producer-using-java/</link>
+      <link>https://codingnconcepts.com/post/apache-kafka-producer-using-java/</link>
       <pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/post/apache-kafka-producer-using-java/</guid>
+      <guid>https://codingnconcepts.com/post/apache-kafka-producer-using-java/</guid>
       <description>&lt;p&gt;Implementation of Kafka Producer using Java&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Immutable Class</title>
-      <link>http://codingnconcepts.com/java/immutable-class-using-java/</link>
+      <link>https://codingnconcepts.com/java/immutable-class-using-java/</link>
       <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/java/immutable-class-using-java/</guid>
+      <guid>https://codingnconcepts.com/java/immutable-class-using-java/</guid>
       <description>&lt;p&gt;This problem is frequently asked in the interview to check your understanding on immutable class. This program answers following artefacts of immutable class:-&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Private Constructor&lt;/li&gt;
@@ -154,19 +154,19 @@ You can find the singleton pattern implementation here.&lt;/li&gt;
     
     <item>
       <title>Fibonacci Series Using Recursive function</title>
-      <link>http://codingnconcepts.com/java/fibonacci-series-using-recursive/</link>
+      <link>https://codingnconcepts.com/java/fibonacci-series-using-recursive/</link>
       <pubDate>Sun, 12 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/java/fibonacci-series-using-recursive/</guid>
+      <guid>https://codingnconcepts.com/java/fibonacci-series-using-recursive/</guid>
       <description>&lt;p&gt;Fibonacci series implementation in java is frequently asked question in interview at fresher level. Moreover, it is a very famous example to show how to use recursive function in java.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Bubble Sort</title>
-      <link>http://codingnconcepts.com/java/bubble-sort-using-java/</link>
+      <link>https://codingnconcepts.com/java/bubble-sort-using-java/</link>
       <pubDate>Tue, 09 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/java/bubble-sort-using-java/</guid>
+      <guid>https://codingnconcepts.com/java/bubble-sort-using-java/</guid>
       <description>&lt;h3 id=&#34;why-it-is-called-bubble-sort-&#34;&gt;Why it is called bubble sort ?&lt;/h3&gt;
 &lt;p&gt;Bubble Sort is nothing but a comparison algorithm where -&lt;/p&gt;
 &lt;ul&gt;
@@ -178,10 +178,10 @@ You can find the singleton pattern implementation here.&lt;/li&gt;
     
     <item>
       <title>Design Elevator (Lift) in Java</title>
-      <link>http://codingnconcepts.com/java/elevator-implementation-using-java/</link>
+      <link>https://codingnconcepts.com/java/elevator-implementation-using-java/</link>
       <pubDate>Mon, 06 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/java/elevator-implementation-using-java/</guid>
+      <guid>https://codingnconcepts.com/java/elevator-implementation-using-java/</guid>
       <description>&lt;p&gt;Implementation of Elevator or Lift has been asked in many interviews. I have tried to implement it using muti-threading and TreeSet. TreeSet is used to store incoming request. It is a good choice here as it removes the duplicate requests and implements NavigableSet which provide you methods such as floor and ceiling.&lt;/p&gt;
 &lt;p&gt;Elevator in this program implements following features -&lt;/p&gt;
 &lt;ul&gt;

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Streams on Coding N Concepts</title>
-    <link>http://codingnconcepts.com/tags/streams/</link>
+    <link>https://codingnconcepts.com/tags/streams/</link>
     <description>Recent content in Streams on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 22 Mar 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://codingnconcepts.com/tags/streams/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://codingnconcepts.com/tags/streams/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Streams in Java 8</title>
-      <link>http://codingnconcepts.com/java/streams-in-java-8/</link>
+      <link>https://codingnconcepts.com/java/streams-in-java-8/</link>
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/java/streams-in-java-8/</guid>
+      <guid>https://codingnconcepts.com/java/streams-in-java-8/</guid>
       <description>&lt;p&gt;One of the major feature of Java 8 is addition of Stream. It also has introduced the functional programming in Java. We will discuss different stream operations available in Collection, Array, IntStream with examples. We will also discuss the difference between Intermediate and Terminal operations.&lt;/p&gt;</description>
     </item>
     

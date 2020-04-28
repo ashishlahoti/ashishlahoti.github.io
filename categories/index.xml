@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Coding N Concepts</title>
-    <link>http://codingnconcepts.com/categories/</link>
+    <link>https://codingnconcepts.com/categories/</link>
     <description>Recent content in Categories on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 25 Apr 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://codingnconcepts.com/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://codingnconcepts.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Spring Boot</title>
-      <link>http://codingnconcepts.com/categories/spring-boot/</link>
+      <link>https://codingnconcepts.com/categories/spring-boot/</link>
       <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/categories/spring-boot/</guid>
+      <guid>https://codingnconcepts.com/categories/spring-boot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Interview Questions</title>
-      <link>http://codingnconcepts.com/categories/interview-questions/</link>
+      <link>https://codingnconcepts.com/categories/interview-questions/</link>
       <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/categories/interview-questions/</guid>
+      <guid>https://codingnconcepts.com/categories/interview-questions/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Java</title>
-      <link>http://codingnconcepts.com/categories/java/</link>
+      <link>https://codingnconcepts.com/categories/java/</link>
       <pubDate>Sun, 05 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/categories/java/</guid>
+      <guid>https://codingnconcepts.com/categories/java/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Javascript</title>
-      <link>http://codingnconcepts.com/categories/javascript/</link>
+      <link>https://codingnconcepts.com/categories/javascript/</link>
       <pubDate>Sun, 05 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/categories/javascript/</guid>
+      <guid>https://codingnconcepts.com/categories/javascript/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Puzzles</title>
-      <link>http://codingnconcepts.com/categories/puzzles/</link>
+      <link>https://codingnconcepts.com/categories/puzzles/</link>
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/categories/puzzles/</guid>
+      <guid>https://codingnconcepts.com/categories/puzzles/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kafka</title>
-      <link>http://codingnconcepts.com/categories/kafka/</link>
+      <link>https://codingnconcepts.com/categories/kafka/</link>
       <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/categories/kafka/</guid>
+      <guid>https://codingnconcepts.com/categories/kafka/</guid>
       <description></description>
     </item>
     

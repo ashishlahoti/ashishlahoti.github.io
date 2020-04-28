@@ -2,111 +2,111 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Javascript on Coding N Concepts</title>
-    <link>http://codingnconcepts.com/tags/javascript/</link>
+    <link>https://codingnconcepts.com/tags/javascript/</link>
     <description>Recent content in Javascript on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 05 Apr 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://codingnconcepts.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://codingnconcepts.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Async/Await in JavaScript</title>
-      <link>http://codingnconcepts.com/javascript/async-await-in-javascript/</link>
+      <link>https://codingnconcepts.com/javascript/async-await-in-javascript/</link>
       <pubDate>Sun, 05 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/javascript/async-await-in-javascript/</guid>
+      <guid>https://codingnconcepts.com/javascript/async-await-in-javascript/</guid>
       <description>&lt;p&gt;Async functions and Await keyword are latest additions in JavaScript as part of ECMAScript 2017 release which introduced a new way of writing asynchronous functions. In this post we will talk about why we should use async/wait, its syntax and practical usage with example.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Promises in JavaScript</title>
-      <link>http://codingnconcepts.com/javascript/promises-in-javascript/</link>
+      <link>https://codingnconcepts.com/javascript/promises-in-javascript/</link>
       <pubDate>Fri, 03 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/javascript/promises-in-javascript/</guid>
+      <guid>https://codingnconcepts.com/javascript/promises-in-javascript/</guid>
       <description>&lt;p&gt;Promises are introduced natively in ES6. They are very similar to our promises. As we keep or break our promises, Javascript promises are also either resolve or reject. In this post we will talk about why we should use promises, promise syntax, promise states and its practical usage with examples using fetch API.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Tricky Javascript Interview Questions</title>
-      <link>http://codingnconcepts.com/tricky-javascript-interview-questions/</link>
+      <link>https://codingnconcepts.com/tricky-javascript-interview-questions/</link>
       <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/tricky-javascript-interview-questions/</guid>
+      <guid>https://codingnconcepts.com/tricky-javascript-interview-questions/</guid>
       <description>&lt;p&gt;This post is a collection of tricky interview questions based on different concepts in JavaScript. The difficulty level of question will increase as you read forward down the line in this post.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Difference in == and === comparison operators in JavaScript</title>
-      <link>http://codingnconcepts.com/javascript/comparison-operators-in-javascript/</link>
+      <link>https://codingnconcepts.com/javascript/comparison-operators-in-javascript/</link>
       <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/javascript/comparison-operators-in-javascript/</guid>
+      <guid>https://codingnconcepts.com/javascript/comparison-operators-in-javascript/</guid>
       <description>&lt;p&gt;This is frequently asked question in JavaScript interview. We can compare primitive types, array and object using two comparison operators &lt;code&gt;==&lt;/code&gt; and &lt;code&gt;===&lt;/code&gt; available in JavaScript. This post describes the difference between these two with many examples.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Understand all about &#39;this&#39; keyword in JavaScript</title>
-      <link>http://codingnconcepts.com/javascript/this-keyword-in-javascript/</link>
+      <link>https://codingnconcepts.com/javascript/this-keyword-in-javascript/</link>
       <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/javascript/this-keyword-in-javascript/</guid>
+      <guid>https://codingnconcepts.com/javascript/this-keyword-in-javascript/</guid>
       <description>&lt;p&gt;The &lt;code&gt;this&lt;/code&gt; keyword in JavaScript is very important concept but at the same time very confusing to understand.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Understand call, bind and apply methods in JavaScript</title>
-      <link>http://codingnconcepts.com/javascript/call-vs-bind-vs-apply/</link>
+      <link>https://codingnconcepts.com/javascript/call-vs-bind-vs-apply/</link>
       <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/javascript/call-vs-bind-vs-apply/</guid>
+      <guid>https://codingnconcepts.com/javascript/call-vs-bind-vs-apply/</guid>
       <description>&lt;p&gt;This is frequently asked question in JavaScript interview. This post describes the Function prototype methods &lt;code&gt;call()&lt;/code&gt;, &lt;code&gt;apply()&lt;/code&gt; and &lt;code&gt;bind()&lt;/code&gt; with their syntax, usage and practical examples.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Lexical Scope, Closures and Currying in JavaScript</title>
-      <link>http://codingnconcepts.com/javascript/lexical-scope-closures-and-currying/</link>
+      <link>https://codingnconcepts.com/javascript/lexical-scope-closures-and-currying/</link>
       <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/javascript/lexical-scope-closures-and-currying/</guid>
+      <guid>https://codingnconcepts.com/javascript/lexical-scope-closures-and-currying/</guid>
       <description>&lt;p&gt;This post describes the &lt;a href=&#34;#lexical-scope&#34;&gt;Lexical Scope&lt;/a&gt;, &lt;a href=&#34;#closures&#34;&gt;Closures&lt;/a&gt;  and &lt;a href=&#34;#currying&#34;&gt;Currying Function&lt;/a&gt; in JavaScript and their relations with examples.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Difference in const and Object.freeze() in JavaScript</title>
-      <link>http://codingnconcepts.com/javascript/const-vs-object-freeze/</link>
+      <link>https://codingnconcepts.com/javascript/const-vs-object-freeze/</link>
       <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/javascript/const-vs-object-freeze/</guid>
+      <guid>https://codingnconcepts.com/javascript/const-vs-object-freeze/</guid>
       <description>&lt;p&gt;This post describes the best practices to define constants and configuration values in JavaScript using &lt;code&gt;const&lt;/code&gt; and &lt;code&gt;Object.freeze()&lt;/code&gt; and the difference between them.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Object methods in JavaScript</title>
-      <link>http://codingnconcepts.com/javascript/object-methods-in-javascript/</link>
+      <link>https://codingnconcepts.com/javascript/object-methods-in-javascript/</link>
       <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/javascript/object-methods-in-javascript/</guid>
+      <guid>https://codingnconcepts.com/javascript/object-methods-in-javascript/</guid>
       <description>&lt;p&gt;This post describes the usage of various Object methods like &lt;code&gt;Object.create()&lt;/code&gt;, &lt;code&gt;Object.assign()&lt;/code&gt;, &lt;code&gt;Object.freeze()&lt;/code&gt;, &lt;code&gt;Object.seal()&lt;/code&gt; and many more available in JavaScript with examples.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Difference between var, let and const</title>
-      <link>http://codingnconcepts.com/javascript/difference-between-var-let-and-const/</link>
+      <link>https://codingnconcepts.com/javascript/difference-between-var-let-and-const/</link>
       <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/javascript/difference-between-var-let-and-const/</guid>
+      <guid>https://codingnconcepts.com/javascript/difference-between-var-let-and-const/</guid>
       <description>&lt;p&gt;A nice feature addition in ES2015 (ES6) was the introduction of &lt;code&gt;let&lt;/code&gt; and &lt;code&gt;const&lt;/code&gt; keywords for variable declaration. You can use &lt;code&gt;var&lt;/code&gt;, &lt;code&gt;let&lt;/code&gt; and &lt;code&gt;const&lt;/code&gt; keyword interchangeably for variable declaration though it makes a difference in terms of their scope, usage and hoisting. If you are not aware of these differences then please continue to read&amp;hellip;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Top Javascript Interview Questions</title>
-      <link>http://codingnconcepts.com/top-javascript-interview-questions/</link>
+      <link>https://codingnconcepts.com/top-javascript-interview-questions/</link>
       <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/top-javascript-interview-questions/</guid>
+      <guid>https://codingnconcepts.com/top-javascript-interview-questions/</guid>
       <description>&lt;p&gt;These Javascript interview questions are based on my personal interview experience. Likelihood of question being asked in the interview is from top to bottom.&lt;/p&gt;</description>
     </item>
     

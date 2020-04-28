@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Einstein Riddle on Coding N Concepts</title>
-    <link>http://codingnconcepts.com/tags/einstein-riddle/</link>
+    <link>https://codingnconcepts.com/tags/einstein-riddle/</link>
     <description>Recent content in Einstein Riddle on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 14 Mar 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://codingnconcepts.com/tags/einstein-riddle/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://codingnconcepts.com/tags/einstein-riddle/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Einstein&#39;s Riddle</title>
-      <link>http://codingnconcepts.com/puzzle/einsteins-riddle/</link>
+      <link>https://codingnconcepts.com/puzzle/einsteins-riddle/</link>
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/einsteins-riddle/</guid>
+      <guid>https://codingnconcepts.com/puzzle/einsteins-riddle/</guid>
       <description>&lt;figure&gt;
-    &lt;img src=&#34;http://codingnconcepts.com/img/puzzle/albert-einstein.jpg&#34;/&gt; 
+    &lt;img src=&#34;https://codingnconcepts.com/img/puzzle/albert-einstein.jpg&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;p&gt;The legend says that this problem was created by Albert Einstein in the last century. Einstein said that only 2% of the world could solve it.&lt;/p&gt;

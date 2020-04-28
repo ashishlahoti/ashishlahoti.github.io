@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Coding N Concepts</title>
-    <link>http://codingnconcepts.com/puzzle/</link>
+    <link>https://codingnconcepts.com/puzzle/</link>
     <description>Recent content on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://codingnconcepts.com/puzzle/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://codingnconcepts.com/puzzle/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Fruit Basket Puzzle</title>
-      <link>http://codingnconcepts.com/puzzle/fruit-basket-puzzle/</link>
+      <link>https://codingnconcepts.com/puzzle/fruit-basket-puzzle/</link>
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/fruit-basket-puzzle/</guid>
+      <guid>https://codingnconcepts.com/puzzle/fruit-basket-puzzle/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;There are 3 baskets. One basket has apples only, one has oranges only and the other has mixture of apples and oranges. All the three baskets have wrong labels on it that means if basket is labelled as ORANGES, it is having either mixture or apples. You have to pick only one fruit from any of the one basket and correctly label all the three baskets. How do you do it?&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>One Light Bulb and Three Switches</title>
-      <link>http://codingnconcepts.com/puzzle/1-light-bulb-and-3-switches/</link>
+      <link>https://codingnconcepts.com/puzzle/1-light-bulb-and-3-switches/</link>
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/1-light-bulb-and-3-switches/</guid>
+      <guid>https://codingnconcepts.com/puzzle/1-light-bulb-and-3-switches/</guid>
       <description>&lt;p&gt;This particular problem has been asked several times in interviews to evaluate candidate&amp;rsquo;s analytical skills.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;There is a light bulb inside a closed room (no windows) with one door. You cannot see the light bulb is on or off as the door is closed. However, you can assume that the light is off initially. There are three light switches outside the room. One of the switch belongs to the light bulb inside the room. You can turn on or off the switches however you want, but you are allowed to open the door only once. You are not allowed to touch the switches once you open the door.&lt;/p&gt;
@@ -37,10 +37,10 @@
     
     <item>
       <title>The Water Jug Riddle from Die Hard Movie</title>
-      <link>http://codingnconcepts.com/puzzle/the-water-jug-riddle/</link>
+      <link>https://codingnconcepts.com/puzzle/the-water-jug-riddle/</link>
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/the-water-jug-riddle/</guid>
+      <guid>https://codingnconcepts.com/puzzle/the-water-jug-riddle/</guid>
       <description>&lt;p&gt;You might have seen this riddle in Die Hard movie where Bruce Willis and Jackson have to diffuse a bomb by placing exactly 4-gallon water on a scale&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;You have a 3-gallon and a 5-gallon jug that you can fill multiple times from a pond of water. The problem is to measure exactly 4 gallons of water. How do you do it?&lt;/p&gt;
@@ -49,10 +49,10 @@
     
     <item>
       <title>2 Eggs and 100 Floors Problem</title>
-      <link>http://codingnconcepts.com/puzzle/2-eggs-and-100-floors/</link>
+      <link>https://codingnconcepts.com/puzzle/2-eggs-and-100-floors/</link>
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/2-eggs-and-100-floors/</guid>
+      <guid>https://codingnconcepts.com/puzzle/2-eggs-and-100-floors/</guid>
       <description>&lt;p&gt;This problem is frequently asked in interview to evaluate candidate&amp;rsquo;s understanding on linear search and binary search. I have tried to explain this problem as easy as possible.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;There is a building of 100 floors. One of the floors is the highest floor (say Nth floor) an egg can be dropped from without breaking.&lt;/p&gt;
@@ -66,10 +66,10 @@
     
     <item>
       <title>25 Horses Puzzle</title>
-      <link>http://codingnconcepts.com/puzzle/25-horses-puzzle/</link>
+      <link>https://codingnconcepts.com/puzzle/25-horses-puzzle/</link>
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/25-horses-puzzle/</guid>
+      <guid>https://codingnconcepts.com/puzzle/25-horses-puzzle/</guid>
       <description>&lt;p&gt;The 25 Horses Puzzle is a famous Google interview question that has been asked in many companies to evaluate candidate&amp;rsquo;s analytical ability and problem solving approach.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;You have 25 horses and you need to identify the fastest 3 horses out of those 25. Only 5 horses can run in each race at the same time as there are only 5 tracks. What is the minimum number of races required to identify the fastest 3 horses without using a stopwatch or timer?&lt;/p&gt;
@@ -78,10 +78,10 @@
     
     <item>
       <title>Burning Rope Puzzle</title>
-      <link>http://codingnconcepts.com/puzzle/burning-rope/</link>
+      <link>https://codingnconcepts.com/puzzle/burning-rope/</link>
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/burning-rope/</guid>
+      <guid>https://codingnconcepts.com/puzzle/burning-rope/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;You have two ropes of varying thickness and length. Each rope burns in exactly 60 minutes. How can you measure 45 mins using only these two ropes.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; You can’t cut the rope in half because of varying thickness and you don&amp;rsquo;t have a timer or watch to measure the burning time.&lt;/p&gt;
@@ -90,12 +90,12 @@
     
     <item>
       <title>Einstein&#39;s Riddle</title>
-      <link>http://codingnconcepts.com/puzzle/einsteins-riddle/</link>
+      <link>https://codingnconcepts.com/puzzle/einsteins-riddle/</link>
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/einsteins-riddle/</guid>
+      <guid>https://codingnconcepts.com/puzzle/einsteins-riddle/</guid>
       <description>&lt;figure&gt;
-    &lt;img src=&#34;http://codingnconcepts.com/img/puzzle/albert-einstein.jpg&#34;/&gt; 
+    &lt;img src=&#34;https://codingnconcepts.com/img/puzzle/albert-einstein.jpg&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;p&gt;The legend says that this problem was created by Albert Einstein in the last century. Einstein said that only 2% of the world could solve it.&lt;/p&gt;
@@ -112,10 +112,10 @@
     
     <item>
       <title>The 6s Math Puzzle</title>
-      <link>http://codingnconcepts.com/puzzle/the-6s-math-puzzle/</link>
+      <link>https://codingnconcepts.com/puzzle/the-6s-math-puzzle/</link>
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/the-6s-math-puzzle/</guid>
+      <guid>https://codingnconcepts.com/puzzle/the-6s-math-puzzle/</guid>
       <description>&lt;p&gt;This is a pure mathematical puzzle which evaluate your ability to solve maths equation. This is a great problem for building number sense.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The challenge is to make each below equation true using common mathematical operations. You cannot introduce any new digits (so the cube root ∛ is not allowed since it has a 3).&lt;/p&gt;
@@ -136,10 +136,10 @@
     
     <item>
       <title>12 Balls Weight Puzzle</title>
-      <link>http://codingnconcepts.com/puzzle/12-balls-weight-puzzle/</link>
+      <link>https://codingnconcepts.com/puzzle/12-balls-weight-puzzle/</link>
       <pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/12-balls-weight-puzzle/</guid>
+      <guid>https://codingnconcepts.com/puzzle/12-balls-weight-puzzle/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;You have 12 balls identical in size and appearance but 1 is an odd weight (could be either light or heavy).&lt;/p&gt;
 &lt;p&gt;You have a set scales (balance) which will give 3 possible readings: Left = Right, Left &amp;gt; Right or Left &amp;lt; Right (ie Left and Right have equal weight, Left is Heavier, or Left is Lighter).&lt;/p&gt;
@@ -149,10 +149,10 @@
     
     <item>
       <title>8 Balls Weight Puzzle</title>
-      <link>http://codingnconcepts.com/puzzle/8-balls-weight-puzzle/</link>
+      <link>https://codingnconcepts.com/puzzle/8-balls-weight-puzzle/</link>
       <pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/8-balls-weight-puzzle/</guid>
+      <guid>https://codingnconcepts.com/puzzle/8-balls-weight-puzzle/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;You have 8 balls. One of them is defective and weighs less than others. You have a balance to measure balls against each other. In 2 weightings how do you find the defective one?&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -160,10 +160,10 @@
     
     <item>
       <title>Minimum set of weight puzzle</title>
-      <link>http://codingnconcepts.com/puzzle/minimum-set-of-weights/</link>
+      <link>https://codingnconcepts.com/puzzle/minimum-set-of-weights/</link>
       <pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/minimum-set-of-weights/</guid>
+      <guid>https://codingnconcepts.com/puzzle/minimum-set-of-weights/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;What is the minimum number of weights needed for a scale that will be able to weigh objects from the weight of one pound to 100 pounds?&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -171,10 +171,10 @@
     
     <item>
       <title>Contaminated Pills Puzzle</title>
-      <link>http://codingnconcepts.com/puzzle/contaminated-pills/</link>
+      <link>https://codingnconcepts.com/puzzle/contaminated-pills/</link>
       <pubDate>Sat, 21 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/contaminated-pills/</guid>
+      <guid>https://codingnconcepts.com/puzzle/contaminated-pills/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;You have 5 jars of pills. Each pill weighs 10 gram, except for contaminated pills contained in one jar, where each pill weighs 9 gm. Given a scale, how could you tell which jar had the contaminated pills in just one measurement?”&lt;/p&gt;
 &lt;/blockquote&gt;</description>

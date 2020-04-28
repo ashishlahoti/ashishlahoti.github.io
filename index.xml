@@ -2,57 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Coding N Concepts</title>
-    <link>http://codingnconcepts.com/</link>
+    <link>https://codingnconcepts.com/</link>
     <description>Recent content on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 25 Apr 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://codingnconcepts.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://codingnconcepts.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Configure embedded Jetty server in spring boot.</title>
-      <link>http://codingnconcepts.com/spring-boot/configure-embedded-jetty-server/</link>
+      <title>Configure embedded Jetty server in spring boot</title>
+      <link>https://codingnconcepts.com/spring-boot/configure-embedded-jetty-server/</link>
       <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/spring-boot/configure-embedded-jetty-server/</guid>
+      <guid>https://codingnconcepts.com/spring-boot/configure-embedded-jetty-server/</guid>
       <description>&lt;p&gt;Spring boot use &lt;strong&gt;tomcat&lt;/strong&gt; as default embedded tomcat server to run a web application but you can configure &lt;strong&gt;jetty&lt;/strong&gt; server to replace tomcat in easy steps.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Custom API Request &amp; Response Logging in spring boot.</title>
-      <link>http://codingnconcepts.com/spring-boot/custom-api-request-response-logging/</link>
+      <link>https://codingnconcepts.com/spring-boot/custom-api-request-response-logging/</link>
       <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/spring-boot/custom-api-request-response-logging/</guid>
+      <guid>https://codingnconcepts.com/spring-boot/custom-api-request-response-logging/</guid>
       <description>&lt;p&gt;When we create RESTFul APIs in spring boot application in microservices environment. It becomes essential to log incoming API request and response and push it to centralized logging system such as Splunk or ELK for debugging. Also all the logs related to one request should have some common id to relate them. In this post we are going to solve these problems.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>info and health endpoints in spring boot</title>
-      <link>http://codingnconcepts.com/spring-boot/configure-info-and-health-endpoints/</link>
+      <link>https://codingnconcepts.com/spring-boot/configure-info-and-health-endpoints/</link>
       <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/spring-boot/configure-info-and-health-endpoints/</guid>
+      <guid>https://codingnconcepts.com/spring-boot/configure-info-and-health-endpoints/</guid>
       <description>&lt;p&gt;In spring boot microservices based application, where microservices talks to each other using RESTFul APIs. We can expose some important information about microservice such as name, version, description over some endpoints say &lt;em&gt;/info&lt;/em&gt; and also realtime status or health over some endpoint say &lt;em&gt;/health&lt;/em&gt; to create application dashboards, realtime alerts, track microservice updates and so on&amp;hellip;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Top Microservices Interview Questions</title>
-      <link>http://codingnconcepts.com/top-microservices-interview-questions/</link>
+      <link>https://codingnconcepts.com/top-microservices-interview-questions/</link>
       <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/top-microservices-interview-questions/</guid>
+      <guid>https://codingnconcepts.com/top-microservices-interview-questions/</guid>
       <description>&lt;p&gt;These Microservices based interview questions are based on my personal interview experience and feedback from other interviewees. Keep following this post for regular updates.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Pretty print JSON response in spring boot</title>
-      <link>http://codingnconcepts.com/spring-boot/pretty-print-json-response/</link>
+      <link>https://codingnconcepts.com/spring-boot/pretty-print-json-response/</link>
       <pubDate>Mon, 13 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/spring-boot/pretty-print-json-response/</guid>
+      <guid>https://codingnconcepts.com/spring-boot/pretty-print-json-response/</guid>
       <description>&lt;p&gt;When you create a Spring &lt;code&gt;@RestController&lt;/code&gt; in a Spring Boot application to define API endpoints then it renders JSON response by default if jackson2 is in classpath.&lt;/p&gt;
 &lt;!--
 Spring uses `HttpMessageConverters` for content conversion for e.g. Java Object to JSON or XML in order to render responses from `@RestController` class methods. Spring boot provides a default `MappingJackson2HttpMessageConverter` (if jackson2 is in classpath) to render JSON response.
@@ -62,145 +62,145 @@ Spring uses `HttpMessageConverters` for content conversion for e.g. Java Object 
     
     <item>
       <title>Configure Kafka Producer and Consumer in spring boot</title>
-      <link>http://codingnconcepts.com/spring-boot/configure-kafka-producer-and-consumer/</link>
+      <link>https://codingnconcepts.com/spring-boot/configure-kafka-producer-and-consumer/</link>
       <pubDate>Sat, 11 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/spring-boot/configure-kafka-producer-and-consumer/</guid>
+      <guid>https://codingnconcepts.com/spring-boot/configure-kafka-producer-and-consumer/</guid>
       <description>&lt;p&gt;This post describes how to configure Kafka producer and consumer in spring boot application and also explains how to create service classes to send and receive Kafka messages to and from configured kafka topic respectively.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Async/Await in JavaScript</title>
-      <link>http://codingnconcepts.com/javascript/async-await-in-javascript/</link>
+      <link>https://codingnconcepts.com/javascript/async-await-in-javascript/</link>
       <pubDate>Sun, 05 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/javascript/async-await-in-javascript/</guid>
+      <guid>https://codingnconcepts.com/javascript/async-await-in-javascript/</guid>
       <description>&lt;p&gt;Async functions and Await keyword are latest additions in JavaScript as part of ECMAScript 2017 release which introduced a new way of writing asynchronous functions. In this post we will talk about why we should use async/wait, its syntax and practical usage with example.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Promises in JavaScript</title>
-      <link>http://codingnconcepts.com/javascript/promises-in-javascript/</link>
+      <link>https://codingnconcepts.com/javascript/promises-in-javascript/</link>
       <pubDate>Fri, 03 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/javascript/promises-in-javascript/</guid>
+      <guid>https://codingnconcepts.com/javascript/promises-in-javascript/</guid>
       <description>&lt;p&gt;Promises are introduced natively in ES6. They are very similar to our promises. As we keep or break our promises, Javascript promises are also either resolve or reject. In this post we will talk about why we should use promises, promise syntax, promise states and its practical usage with examples using fetch API.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Tricky Javascript Interview Questions</title>
-      <link>http://codingnconcepts.com/tricky-javascript-interview-questions/</link>
+      <link>https://codingnconcepts.com/tricky-javascript-interview-questions/</link>
       <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/tricky-javascript-interview-questions/</guid>
+      <guid>https://codingnconcepts.com/tricky-javascript-interview-questions/</guid>
       <description>&lt;p&gt;This post is a collection of tricky interview questions based on different concepts in JavaScript. The difficulty level of question will increase as you read forward down the line in this post.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Difference in == and === comparison operators in JavaScript</title>
-      <link>http://codingnconcepts.com/javascript/comparison-operators-in-javascript/</link>
+      <link>https://codingnconcepts.com/javascript/comparison-operators-in-javascript/</link>
       <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/javascript/comparison-operators-in-javascript/</guid>
+      <guid>https://codingnconcepts.com/javascript/comparison-operators-in-javascript/</guid>
       <description>&lt;p&gt;This is frequently asked question in JavaScript interview. We can compare primitive types, array and object using two comparison operators &lt;code&gt;==&lt;/code&gt; and &lt;code&gt;===&lt;/code&gt; available in JavaScript. This post describes the difference between these two with many examples.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Understand all about &#39;this&#39; keyword in JavaScript</title>
-      <link>http://codingnconcepts.com/javascript/this-keyword-in-javascript/</link>
+      <link>https://codingnconcepts.com/javascript/this-keyword-in-javascript/</link>
       <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/javascript/this-keyword-in-javascript/</guid>
+      <guid>https://codingnconcepts.com/javascript/this-keyword-in-javascript/</guid>
       <description>&lt;p&gt;The &lt;code&gt;this&lt;/code&gt; keyword in JavaScript is very important concept but at the same time very confusing to understand.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Understand call, bind and apply methods in JavaScript</title>
-      <link>http://codingnconcepts.com/javascript/call-vs-bind-vs-apply/</link>
+      <link>https://codingnconcepts.com/javascript/call-vs-bind-vs-apply/</link>
       <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/javascript/call-vs-bind-vs-apply/</guid>
+      <guid>https://codingnconcepts.com/javascript/call-vs-bind-vs-apply/</guid>
       <description>&lt;p&gt;This is frequently asked question in JavaScript interview. This post describes the Function prototype methods &lt;code&gt;call()&lt;/code&gt;, &lt;code&gt;apply()&lt;/code&gt; and &lt;code&gt;bind()&lt;/code&gt; with their syntax, usage and practical examples.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Lexical Scope, Closures and Currying in JavaScript</title>
-      <link>http://codingnconcepts.com/javascript/lexical-scope-closures-and-currying/</link>
+      <link>https://codingnconcepts.com/javascript/lexical-scope-closures-and-currying/</link>
       <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/javascript/lexical-scope-closures-and-currying/</guid>
+      <guid>https://codingnconcepts.com/javascript/lexical-scope-closures-and-currying/</guid>
       <description>&lt;p&gt;This post describes the &lt;a href=&#34;#lexical-scope&#34;&gt;Lexical Scope&lt;/a&gt;, &lt;a href=&#34;#closures&#34;&gt;Closures&lt;/a&gt;  and &lt;a href=&#34;#currying&#34;&gt;Currying Function&lt;/a&gt; in JavaScript and their relations with examples.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>M power N Using Recursive function</title>
-      <link>http://codingnconcepts.com/java/m-power-n-using-recursive/</link>
+      <link>https://codingnconcepts.com/java/m-power-n-using-recursive/</link>
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/java/m-power-n-using-recursive/</guid>
+      <guid>https://codingnconcepts.com/java/m-power-n-using-recursive/</guid>
       <description>&lt;p&gt;This is one of the example of using recursive function in Java to find M power N&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Print All String Combinations Using Recursive function</title>
-      <link>http://codingnconcepts.com/java/print-all-string-combinations-using-recursive/</link>
+      <link>https://codingnconcepts.com/java/print-all-string-combinations-using-recursive/</link>
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/java/print-all-string-combinations-using-recursive/</guid>
+      <guid>https://codingnconcepts.com/java/print-all-string-combinations-using-recursive/</guid>
       <description>&lt;p&gt;Print all the possible combinations of a given String using Recursive function in Java&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Streams in Java 8</title>
-      <link>http://codingnconcepts.com/java/streams-in-java-8/</link>
+      <link>https://codingnconcepts.com/java/streams-in-java-8/</link>
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/java/streams-in-java-8/</guid>
+      <guid>https://codingnconcepts.com/java/streams-in-java-8/</guid>
       <description>&lt;p&gt;One of the major feature of Java 8 is addition of Stream. It also has introduced the functional programming in Java. We will discuss different stream operations available in Collection, Array, IntStream with examples. We will also discuss the difference between Intermediate and Terminal operations.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Decorator Design Pattern Using Java</title>
-      <link>http://codingnconcepts.com/java/decorator-design-pattern-using-java/</link>
+      <link>https://codingnconcepts.com/java/decorator-design-pattern-using-java/</link>
       <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/java/decorator-design-pattern-using-java/</guid>
+      <guid>https://codingnconcepts.com/java/decorator-design-pattern-using-java/</guid>
       <description>&lt;p&gt;Decorator design pattern is used to add a new feature on the existing object by wrapping it with a decorator class.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Difference in const and Object.freeze() in JavaScript</title>
-      <link>http://codingnconcepts.com/javascript/const-vs-object-freeze/</link>
+      <link>https://codingnconcepts.com/javascript/const-vs-object-freeze/</link>
       <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/javascript/const-vs-object-freeze/</guid>
+      <guid>https://codingnconcepts.com/javascript/const-vs-object-freeze/</guid>
       <description>&lt;p&gt;This post describes the best practices to define constants and configuration values in JavaScript using &lt;code&gt;const&lt;/code&gt; and &lt;code&gt;Object.freeze()&lt;/code&gt; and the difference between them.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Object methods in JavaScript</title>
-      <link>http://codingnconcepts.com/javascript/object-methods-in-javascript/</link>
+      <link>https://codingnconcepts.com/javascript/object-methods-in-javascript/</link>
       <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/javascript/object-methods-in-javascript/</guid>
+      <guid>https://codingnconcepts.com/javascript/object-methods-in-javascript/</guid>
       <description>&lt;p&gt;This post describes the usage of various Object methods like &lt;code&gt;Object.create()&lt;/code&gt;, &lt;code&gt;Object.assign()&lt;/code&gt;, &lt;code&gt;Object.freeze()&lt;/code&gt;, &lt;code&gt;Object.seal()&lt;/code&gt; and many more available in JavaScript with examples.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Difference between var, let and const</title>
-      <link>http://codingnconcepts.com/javascript/difference-between-var-let-and-const/</link>
+      <link>https://codingnconcepts.com/javascript/difference-between-var-let-and-const/</link>
       <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/javascript/difference-between-var-let-and-const/</guid>
+      <guid>https://codingnconcepts.com/javascript/difference-between-var-let-and-const/</guid>
       <description>&lt;p&gt;A nice feature addition in ES2015 (ES6) was the introduction of &lt;code&gt;let&lt;/code&gt; and &lt;code&gt;const&lt;/code&gt; keywords for variable declaration. You can use &lt;code&gt;var&lt;/code&gt;, &lt;code&gt;let&lt;/code&gt; and &lt;code&gt;const&lt;/code&gt; keyword interchangeably for variable declaration though it makes a difference in terms of their scope, usage and hoisting. If you are not aware of these differences then please continue to read&amp;hellip;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Fruit Basket Puzzle</title>
-      <link>http://codingnconcepts.com/puzzle/fruit-basket-puzzle/</link>
+      <link>https://codingnconcepts.com/puzzle/fruit-basket-puzzle/</link>
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/fruit-basket-puzzle/</guid>
+      <guid>https://codingnconcepts.com/puzzle/fruit-basket-puzzle/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;There are 3 baskets. One basket has apples only, one has oranges only and the other has mixture of apples and oranges. All the three baskets have wrong labels on it that means if basket is labelled as ORANGES, it is having either mixture or apples. You have to pick only one fruit from any of the one basket and correctly label all the three baskets. How do you do it?&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -208,10 +208,10 @@ Spring uses `HttpMessageConverters` for content conversion for e.g. Java Object 
     
     <item>
       <title>One Light Bulb and Three Switches</title>
-      <link>http://codingnconcepts.com/puzzle/1-light-bulb-and-3-switches/</link>
+      <link>https://codingnconcepts.com/puzzle/1-light-bulb-and-3-switches/</link>
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/1-light-bulb-and-3-switches/</guid>
+      <guid>https://codingnconcepts.com/puzzle/1-light-bulb-and-3-switches/</guid>
       <description>&lt;p&gt;This particular problem has been asked several times in interviews to evaluate candidate&amp;rsquo;s analytical skills.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;There is a light bulb inside a closed room (no windows) with one door. You cannot see the light bulb is on or off as the door is closed. However, you can assume that the light is off initially. There are three light switches outside the room. One of the switch belongs to the light bulb inside the room. You can turn on or off the switches however you want, but you are allowed to open the door only once. You are not allowed to touch the switches once you open the door.&lt;/p&gt;
@@ -221,10 +221,10 @@ Spring uses `HttpMessageConverters` for content conversion for e.g. Java Object 
     
     <item>
       <title>The Water Jug Riddle from Die Hard Movie</title>
-      <link>http://codingnconcepts.com/puzzle/the-water-jug-riddle/</link>
+      <link>https://codingnconcepts.com/puzzle/the-water-jug-riddle/</link>
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/the-water-jug-riddle/</guid>
+      <guid>https://codingnconcepts.com/puzzle/the-water-jug-riddle/</guid>
       <description>&lt;p&gt;You might have seen this riddle in Die Hard movie where Bruce Willis and Jackson have to diffuse a bomb by placing exactly 4-gallon water on a scale&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;You have a 3-gallon and a 5-gallon jug that you can fill multiple times from a pond of water. The problem is to measure exactly 4 gallons of water. How do you do it?&lt;/p&gt;
@@ -233,10 +233,10 @@ Spring uses `HttpMessageConverters` for content conversion for e.g. Java Object 
     
     <item>
       <title>2 Eggs and 100 Floors Problem</title>
-      <link>http://codingnconcepts.com/puzzle/2-eggs-and-100-floors/</link>
+      <link>https://codingnconcepts.com/puzzle/2-eggs-and-100-floors/</link>
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/2-eggs-and-100-floors/</guid>
+      <guid>https://codingnconcepts.com/puzzle/2-eggs-and-100-floors/</guid>
       <description>&lt;p&gt;This problem is frequently asked in interview to evaluate candidate&amp;rsquo;s understanding on linear search and binary search. I have tried to explain this problem as easy as possible.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;There is a building of 100 floors. One of the floors is the highest floor (say Nth floor) an egg can be dropped from without breaking.&lt;/p&gt;
@@ -250,10 +250,10 @@ Spring uses `HttpMessageConverters` for content conversion for e.g. Java Object 
     
     <item>
       <title>25 Horses Puzzle</title>
-      <link>http://codingnconcepts.com/puzzle/25-horses-puzzle/</link>
+      <link>https://codingnconcepts.com/puzzle/25-horses-puzzle/</link>
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/25-horses-puzzle/</guid>
+      <guid>https://codingnconcepts.com/puzzle/25-horses-puzzle/</guid>
       <description>&lt;p&gt;The 25 Horses Puzzle is a famous Google interview question that has been asked in many companies to evaluate candidate&amp;rsquo;s analytical ability and problem solving approach.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;You have 25 horses and you need to identify the fastest 3 horses out of those 25. Only 5 horses can run in each race at the same time as there are only 5 tracks. What is the minimum number of races required to identify the fastest 3 horses without using a stopwatch or timer?&lt;/p&gt;
@@ -262,10 +262,10 @@ Spring uses `HttpMessageConverters` for content conversion for e.g. Java Object 
     
     <item>
       <title>Burning Rope Puzzle</title>
-      <link>http://codingnconcepts.com/puzzle/burning-rope/</link>
+      <link>https://codingnconcepts.com/puzzle/burning-rope/</link>
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/burning-rope/</guid>
+      <guid>https://codingnconcepts.com/puzzle/burning-rope/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;You have two ropes of varying thickness and length. Each rope burns in exactly 60 minutes. How can you measure 45 mins using only these two ropes.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; You can’t cut the rope in half because of varying thickness and you don&amp;rsquo;t have a timer or watch to measure the burning time.&lt;/p&gt;
@@ -274,12 +274,12 @@ Spring uses `HttpMessageConverters` for content conversion for e.g. Java Object 
     
     <item>
       <title>Einstein&#39;s Riddle</title>
-      <link>http://codingnconcepts.com/puzzle/einsteins-riddle/</link>
+      <link>https://codingnconcepts.com/puzzle/einsteins-riddle/</link>
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/einsteins-riddle/</guid>
+      <guid>https://codingnconcepts.com/puzzle/einsteins-riddle/</guid>
       <description>&lt;figure&gt;
-    &lt;img src=&#34;http://codingnconcepts.com/img/puzzle/albert-einstein.jpg&#34;/&gt; 
+    &lt;img src=&#34;https://codingnconcepts.com/img/puzzle/albert-einstein.jpg&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;p&gt;The legend says that this problem was created by Albert Einstein in the last century. Einstein said that only 2% of the world could solve it.&lt;/p&gt;
@@ -296,10 +296,10 @@ Spring uses `HttpMessageConverters` for content conversion for e.g. Java Object 
     
     <item>
       <title>The 6s Math Puzzle</title>
-      <link>http://codingnconcepts.com/puzzle/the-6s-math-puzzle/</link>
+      <link>https://codingnconcepts.com/puzzle/the-6s-math-puzzle/</link>
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/the-6s-math-puzzle/</guid>
+      <guid>https://codingnconcepts.com/puzzle/the-6s-math-puzzle/</guid>
       <description>&lt;p&gt;This is a pure mathematical puzzle which evaluate your ability to solve maths equation. This is a great problem for building number sense.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The challenge is to make each below equation true using common mathematical operations. You cannot introduce any new digits (so the cube root ∛ is not allowed since it has a 3).&lt;/p&gt;
@@ -320,10 +320,10 @@ Spring uses `HttpMessageConverters` for content conversion for e.g. Java Object 
     
     <item>
       <title>How to configure swagger in spring boot</title>
-      <link>http://codingnconcepts.com/spring-boot/how-to-configure-swagger/</link>
+      <link>https://codingnconcepts.com/spring-boot/how-to-configure-swagger/</link>
       <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/spring-boot/how-to-configure-swagger/</guid>
+      <guid>https://codingnconcepts.com/spring-boot/how-to-configure-swagger/</guid>
       <description>&lt;p&gt;Swagger library is very useful if you are creating spring boot web application and exposing REST endpoints. Swagger generates web page for you to execute and test GET, POST, PUT, DELETE HTTP endpoints. This is helpful since you do not need to use Postman or some other tool to test REST Apis. Once you configure swagger then web page can be accessible using following URL:-&lt;/p&gt;
 &lt;p&gt;http://localhost:8080/swagger-ui.html&lt;/p&gt;
 &lt;p&gt;Follow the steps to configure swagger in your spring boot application:-&lt;/p&gt;</description>
@@ -331,10 +331,10 @@ Spring uses `HttpMessageConverters` for content conversion for e.g. Java Object 
     
     <item>
       <title>How to create and configure custom banner in spring boot</title>
-      <link>http://codingnconcepts.com/spring-boot/how-to-create-custom-banner/</link>
+      <link>https://codingnconcepts.com/spring-boot/how-to-create-custom-banner/</link>
       <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/spring-boot/how-to-create-custom-banner/</guid>
+      <guid>https://codingnconcepts.com/spring-boot/how-to-create-custom-banner/</guid>
       <description>&lt;p&gt;Spring boot application comes with default banner which shows up first when you start your application.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;  .   ____          _            __ _ _
  /\\ / ___&#39;_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -348,30 +348,30 @@ Spring uses `HttpMessageConverters` for content conversion for e.g. Java Object 
     
     <item>
       <title>How to disable command line properties in spring boot</title>
-      <link>http://codingnconcepts.com/spring-boot/how-to-disable-command-line-properties/</link>
+      <link>https://codingnconcepts.com/spring-boot/how-to-disable-command-line-properties/</link>
       <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/spring-boot/how-to-disable-command-line-properties/</guid>
+      <guid>https://codingnconcepts.com/spring-boot/how-to-disable-command-line-properties/</guid>
       <description>&lt;p&gt;Spring Boot Application converts any command line arguments starting with --, such as &lt;strong&gt;--spring.profiles.active=dev&lt;/strong&gt; to a property by default and adds them to the Spring Environment. Command line properties always take precedence over other property sources.&lt;/p&gt;
 &lt;p&gt;If you do not want command line properties to be added to the Environment, you can disable them from SpringBootApplication main method as follows:-&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>How to change server port in spring boot</title>
-      <link>http://codingnconcepts.com/spring-boot/how-to-change-server-port/</link>
+      <link>https://codingnconcepts.com/spring-boot/how-to-change-server-port/</link>
       <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/spring-boot/how-to-change-server-port/</guid>
+      <guid>https://codingnconcepts.com/spring-boot/how-to-change-server-port/</guid>
       <description>&lt;p&gt;Spring boot web application using embedded server by default runs on port 8080. Following are the ways to change default server port from &lt;strong&gt;8080&lt;/strong&gt; to say &lt;strong&gt;9090&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Follow any of the given five ways to change server port:-&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>How to disable default banner in spring boot</title>
-      <link>http://codingnconcepts.com/spring-boot/how-to-disable-banner/</link>
+      <link>https://codingnconcepts.com/spring-boot/how-to-disable-banner/</link>
       <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/spring-boot/how-to-disable-banner/</guid>
+      <guid>https://codingnconcepts.com/spring-boot/how-to-disable-banner/</guid>
       <description>&lt;p&gt;You would have seen below spring boot banner when starting a spring boot application&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;  .   ____          _            __ _ _
  /\\ / ___&#39;_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -385,55 +385,55 @@ Spring uses `HttpMessageConverters` for content conversion for e.g. Java Object 
     
     <item>
       <title>Top Spring Boot Interview Questions</title>
-      <link>http://codingnconcepts.com/top-spring-boot-interview-questions/</link>
+      <link>https://codingnconcepts.com/top-spring-boot-interview-questions/</link>
       <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/top-spring-boot-interview-questions/</guid>
+      <guid>https://codingnconcepts.com/top-spring-boot-interview-questions/</guid>
       <description>&lt;p&gt;These Spring Boot interview questions are based on my personal interview experience. Topics are in the order of recent interview trends. Keep following this post for regular updates.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Top Spring Interview Questions</title>
-      <link>http://codingnconcepts.com/top-spring-interview-questions/</link>
+      <link>https://codingnconcepts.com/top-spring-interview-questions/</link>
       <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/top-spring-interview-questions/</guid>
+      <guid>https://codingnconcepts.com/top-spring-interview-questions/</guid>
       <description>&lt;p&gt;These Spring interview questions are based on my personal interview experience. Topics are in the order of recent interview trends. Keep following this post for regular updates.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Top CSS Interview Questions</title>
-      <link>http://codingnconcepts.com/top-css-interview-questions/</link>
+      <link>https://codingnconcepts.com/top-css-interview-questions/</link>
       <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/top-css-interview-questions/</guid>
+      <guid>https://codingnconcepts.com/top-css-interview-questions/</guid>
       <description>&lt;p&gt;These CSS interview questions are based on my personal interview experience. Likelihood of question being asked in the interview is from top to bottom.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Top Java Interview Questions</title>
-      <link>http://codingnconcepts.com/top-java-interview-questions/</link>
+      <link>https://codingnconcepts.com/top-java-interview-questions/</link>
       <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/top-java-interview-questions/</guid>
+      <guid>https://codingnconcepts.com/top-java-interview-questions/</guid>
       <description>&lt;p&gt;These Java interview questions are based on my personal interview experience. Topics are in the order of recent interview trends. Keep following this post link for regular updates.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Top Javascript Interview Questions</title>
-      <link>http://codingnconcepts.com/top-javascript-interview-questions/</link>
+      <link>https://codingnconcepts.com/top-javascript-interview-questions/</link>
       <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/top-javascript-interview-questions/</guid>
+      <guid>https://codingnconcepts.com/top-javascript-interview-questions/</guid>
       <description>&lt;p&gt;These Javascript interview questions are based on my personal interview experience. Likelihood of question being asked in the interview is from top to bottom.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Singleton Design Pattern Using Java</title>
-      <link>http://codingnconcepts.com/java/singleton-design-pattern-using-java/</link>
+      <link>https://codingnconcepts.com/java/singleton-design-pattern-using-java/</link>
       <pubDate>Mon, 22 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/java/singleton-design-pattern-using-java/</guid>
+      <guid>https://codingnconcepts.com/java/singleton-design-pattern-using-java/</guid>
       <description>&lt;p&gt;This problem is frequently asked in the interview to check your understanding on singleton design pattern. This program answers following artefacts of singleton design pattern:-&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;How to make singleton class thread safe?
@@ -462,10 +462,10 @@ You can find the singleton pattern implementation here.&lt;/li&gt;
     
     <item>
       <title>Ping pong using wait notify</title>
-      <link>http://codingnconcepts.com/java/ping-pong-using-wait-notify/</link>
+      <link>https://codingnconcepts.com/java/ping-pong-using-wait-notify/</link>
       <pubDate>Thu, 04 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/java/ping-pong-using-wait-notify/</guid>
+      <guid>https://codingnconcepts.com/java/ping-pong-using-wait-notify/</guid>
       <description>&lt;p&gt;This problem is frequently asked in the interview to check your understanding on threads and your programming skills. Problem statement might change for e.g.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Print ping pong using two threads.&lt;/li&gt;
@@ -476,10 +476,10 @@ You can find the singleton pattern implementation here.&lt;/li&gt;
     
     <item>
       <title>Apache Kafka CCDAK Exam Notes</title>
-      <link>http://codingnconcepts.com/post/apache-kafka-ccdak-exam-notes/</link>
+      <link>https://codingnconcepts.com/post/apache-kafka-ccdak-exam-notes/</link>
       <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/post/apache-kafka-ccdak-exam-notes/</guid>
+      <guid>https://codingnconcepts.com/post/apache-kafka-ccdak-exam-notes/</guid>
       <description>Hi Readers,
 If you are planning or preparing for Apache Kafka Certification then this is the right place for you.There are many Apache Kafka Certifications are available in the market but CCDAK (Confluent Certified Developer for Apache Kafka) is the most known certification as Kafka is now maintained by Confluent.
 Confluent has introduced CCOAK certification recently. CCOAK is mainly for devOps engineer focusing on build and manage Kafka cluster. CCDAK is mainly for developers and Solution architects focusing on design, producer and consumer.</description>
@@ -487,37 +487,37 @@ Confluent has introduced CCOAK certification recently. CCOAK is mainly for devOp
     
     <item>
       <title>Virtual Dom vs Shadow Dom</title>
-      <link>http://codingnconcepts.com/javascript/virtual-dom-vs-shadow-dom/</link>
+      <link>https://codingnconcepts.com/javascript/virtual-dom-vs-shadow-dom/</link>
       <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/javascript/virtual-dom-vs-shadow-dom/</guid>
+      <guid>https://codingnconcepts.com/javascript/virtual-dom-vs-shadow-dom/</guid>
       <description>&lt;p&gt;This post describe the difference in Virtual Dom and Shadow Dom&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Kafka Consumer Using Java</title>
-      <link>http://codingnconcepts.com/post/apache-kafka-consumer-using-java/</link>
+      <link>https://codingnconcepts.com/post/apache-kafka-consumer-using-java/</link>
       <pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/post/apache-kafka-consumer-using-java/</guid>
+      <guid>https://codingnconcepts.com/post/apache-kafka-consumer-using-java/</guid>
       <description>&lt;p&gt;Implementation of Kafka Consumer using Java&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Kafka Producer Using Java</title>
-      <link>http://codingnconcepts.com/post/apache-kafka-producer-using-java/</link>
+      <link>https://codingnconcepts.com/post/apache-kafka-producer-using-java/</link>
       <pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/post/apache-kafka-producer-using-java/</guid>
+      <guid>https://codingnconcepts.com/post/apache-kafka-producer-using-java/</guid>
       <description>&lt;p&gt;Implementation of Kafka Producer using Java&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Immutable Class</title>
-      <link>http://codingnconcepts.com/java/immutable-class-using-java/</link>
+      <link>https://codingnconcepts.com/java/immutable-class-using-java/</link>
       <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/java/immutable-class-using-java/</guid>
+      <guid>https://codingnconcepts.com/java/immutable-class-using-java/</guid>
       <description>&lt;p&gt;This problem is frequently asked in the interview to check your understanding on immutable class. This program answers following artefacts of immutable class:-&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Private Constructor&lt;/li&gt;
@@ -528,19 +528,19 @@ Confluent has introduced CCOAK certification recently. CCOAK is mainly for devOp
     
     <item>
       <title>Fibonacci Series Using Recursive function</title>
-      <link>http://codingnconcepts.com/java/fibonacci-series-using-recursive/</link>
+      <link>https://codingnconcepts.com/java/fibonacci-series-using-recursive/</link>
       <pubDate>Sun, 12 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/java/fibonacci-series-using-recursive/</guid>
+      <guid>https://codingnconcepts.com/java/fibonacci-series-using-recursive/</guid>
       <description>&lt;p&gt;Fibonacci series implementation in java is frequently asked question in interview at fresher level. Moreover, it is a very famous example to show how to use recursive function in java.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Bubble Sort</title>
-      <link>http://codingnconcepts.com/java/bubble-sort-using-java/</link>
+      <link>https://codingnconcepts.com/java/bubble-sort-using-java/</link>
       <pubDate>Tue, 09 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/java/bubble-sort-using-java/</guid>
+      <guid>https://codingnconcepts.com/java/bubble-sort-using-java/</guid>
       <description>&lt;h3 id=&#34;why-it-is-called-bubble-sort-&#34;&gt;Why it is called bubble sort ?&lt;/h3&gt;
 &lt;p&gt;Bubble Sort is nothing but a comparison algorithm where -&lt;/p&gt;
 &lt;ul&gt;
@@ -552,10 +552,10 @@ Confluent has introduced CCOAK certification recently. CCOAK is mainly for devOp
     
     <item>
       <title>Design Elevator (Lift) in Java</title>
-      <link>http://codingnconcepts.com/java/elevator-implementation-using-java/</link>
+      <link>https://codingnconcepts.com/java/elevator-implementation-using-java/</link>
       <pubDate>Mon, 06 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/java/elevator-implementation-using-java/</guid>
+      <guid>https://codingnconcepts.com/java/elevator-implementation-using-java/</guid>
       <description>&lt;p&gt;Implementation of Elevator or Lift has been asked in many interviews. I have tried to implement it using muti-threading and TreeSet. TreeSet is used to store incoming request. It is a good choice here as it removes the duplicate requests and implements NavigableSet which provide you methods such as floor and ceiling.&lt;/p&gt;
 &lt;p&gt;Elevator in this program implements following features -&lt;/p&gt;
 &lt;ul&gt;
@@ -567,10 +567,10 @@ Confluent has introduced CCOAK certification recently. CCOAK is mainly for devOp
     
     <item>
       <title>12 Balls Weight Puzzle</title>
-      <link>http://codingnconcepts.com/puzzle/12-balls-weight-puzzle/</link>
+      <link>https://codingnconcepts.com/puzzle/12-balls-weight-puzzle/</link>
       <pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/12-balls-weight-puzzle/</guid>
+      <guid>https://codingnconcepts.com/puzzle/12-balls-weight-puzzle/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;You have 12 balls identical in size and appearance but 1 is an odd weight (could be either light or heavy).&lt;/p&gt;
 &lt;p&gt;You have a set scales (balance) which will give 3 possible readings: Left = Right, Left &amp;gt; Right or Left &amp;lt; Right (ie Left and Right have equal weight, Left is Heavier, or Left is Lighter).&lt;/p&gt;
@@ -580,10 +580,10 @@ Confluent has introduced CCOAK certification recently. CCOAK is mainly for devOp
     
     <item>
       <title>8 Balls Weight Puzzle</title>
-      <link>http://codingnconcepts.com/puzzle/8-balls-weight-puzzle/</link>
+      <link>https://codingnconcepts.com/puzzle/8-balls-weight-puzzle/</link>
       <pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/8-balls-weight-puzzle/</guid>
+      <guid>https://codingnconcepts.com/puzzle/8-balls-weight-puzzle/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;You have 8 balls. One of them is defective and weighs less than others. You have a balance to measure balls against each other. In 2 weightings how do you find the defective one?&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -591,10 +591,10 @@ Confluent has introduced CCOAK certification recently. CCOAK is mainly for devOp
     
     <item>
       <title>Minimum set of weight puzzle</title>
-      <link>http://codingnconcepts.com/puzzle/minimum-set-of-weights/</link>
+      <link>https://codingnconcepts.com/puzzle/minimum-set-of-weights/</link>
       <pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/minimum-set-of-weights/</guid>
+      <guid>https://codingnconcepts.com/puzzle/minimum-set-of-weights/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;What is the minimum number of weights needed for a scale that will be able to weigh objects from the weight of one pound to 100 pounds?&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -602,10 +602,10 @@ Confluent has introduced CCOAK certification recently. CCOAK is mainly for devOp
     
     <item>
       <title>Contaminated Pills Puzzle</title>
-      <link>http://codingnconcepts.com/puzzle/contaminated-pills/</link>
+      <link>https://codingnconcepts.com/puzzle/contaminated-pills/</link>
       <pubDate>Sat, 21 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/contaminated-pills/</guid>
+      <guid>https://codingnconcepts.com/puzzle/contaminated-pills/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;You have 5 jars of pills. Each pill weighs 10 gram, except for contaminated pills contained in one jar, where each pill weighs 9 gm. Given a scale, how could you tell which jar had the contaminated pills in just one measurement?”&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -613,73 +613,73 @@ Confluent has introduced CCOAK certification recently. CCOAK is mainly for devOp
     
     <item>
       <title>अबला या बला ?</title>
-      <link>http://codingnconcepts.com/poetry/abla-ya-bala/</link>
+      <link>https://codingnconcepts.com/poetry/abla-ya-bala/</link>
       <pubDate>Wed, 07 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/poetry/abla-ya-bala/</guid>
+      <guid>https://codingnconcepts.com/poetry/abla-ya-bala/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Yaar Anmulle</title>
-      <link>http://codingnconcepts.com/poetry/yaar-anmulle/</link>
+      <link>https://codingnconcepts.com/poetry/yaar-anmulle/</link>
       <pubDate>Sun, 07 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/poetry/yaar-anmulle/</guid>
+      <guid>https://codingnconcepts.com/poetry/yaar-anmulle/</guid>
       <description></description>
     </item>
     
     <item>
       <title>पापा</title>
-      <link>http://codingnconcepts.com/poetry/papa/</link>
+      <link>https://codingnconcepts.com/poetry/papa/</link>
       <pubDate>Sun, 19 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/poetry/papa/</guid>
+      <guid>https://codingnconcepts.com/poetry/papa/</guid>
       <description></description>
     </item>
     
     <item>
       <title>I&#39;m still a child !!</title>
-      <link>http://codingnconcepts.com/poetry/i-am-still-a-child/</link>
+      <link>https://codingnconcepts.com/poetry/i-am-still-a-child/</link>
       <pubDate>Sat, 28 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/poetry/i-am-still-a-child/</guid>
+      <guid>https://codingnconcepts.com/poetry/i-am-still-a-child/</guid>
       <description></description>
     </item>
     
     <item>
       <title>जिंदगी क्या है ?</title>
-      <link>http://codingnconcepts.com/poetry/jindagi-kya-hai/</link>
+      <link>https://codingnconcepts.com/poetry/jindagi-kya-hai/</link>
       <pubDate>Sun, 01 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/poetry/jindagi-kya-hai/</guid>
+      <guid>https://codingnconcepts.com/poetry/jindagi-kya-hai/</guid>
       <description></description>
     </item>
     
     <item>
       <title>याद आता है - VIT !!!</title>
-      <link>http://codingnconcepts.com/poetry/yaad-aata-hai-vit/</link>
+      <link>https://codingnconcepts.com/poetry/yaad-aata-hai-vit/</link>
       <pubDate>Sat, 23 Apr 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/poetry/yaad-aata-hai-vit/</guid>
+      <guid>https://codingnconcepts.com/poetry/yaad-aata-hai-vit/</guid>
       <description></description>
     </item>
     
     <item>
       <title>छोटा था तो अच्छा था !</title>
-      <link>http://codingnconcepts.com/poetry/chota-tha-to-accha-tha/</link>
+      <link>https://codingnconcepts.com/poetry/chota-tha-to-accha-tha/</link>
       <pubDate>Fri, 08 Apr 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/poetry/chota-tha-to-accha-tha/</guid>
+      <guid>https://codingnconcepts.com/poetry/chota-tha-to-accha-tha/</guid>
       <description></description>
     </item>
     
     <item>
       <title>About Me</title>
-      <link>http://codingnconcepts.com/about/</link>
+      <link>https://codingnconcepts.com/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/about/</guid>
+      <guid>https://codingnconcepts.com/about/</guid>
       <description>Hey Everyone! I’m Ashish Lahoti. Welcome to my technology blog!
 I created this blog to narrate my coding and concepts learning experiences. I like sharing my experiments and ideas with everyone by writing articles on latest technological trends.
 Primarily I write about Java, Spring, Kafka, Javascript, CSS and the list goes on&amp;hellip;

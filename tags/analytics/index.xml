@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Analytics on Coding N Concepts</title>
-    <link>http://codingnconcepts.com/tags/analytics/</link>
+    <link>https://codingnconcepts.com/tags/analytics/</link>
     <description>Recent content in Analytics on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://codingnconcepts.com/tags/analytics/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://codingnconcepts.com/tags/analytics/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Fruit Basket Puzzle</title>
-      <link>http://codingnconcepts.com/puzzle/fruit-basket-puzzle/</link>
+      <link>https://codingnconcepts.com/puzzle/fruit-basket-puzzle/</link>
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/fruit-basket-puzzle/</guid>
+      <guid>https://codingnconcepts.com/puzzle/fruit-basket-puzzle/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;There are 3 baskets. One basket has apples only, one has oranges only and the other has mixture of apples and oranges. All the three baskets have wrong labels on it that means if basket is labelled as ORANGES, it is having either mixture or apples. You have to pick only one fruit from any of the one basket and correctly label all the three baskets. How do you do it?&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>One Light Bulb and Three Switches</title>
-      <link>http://codingnconcepts.com/puzzle/1-light-bulb-and-3-switches/</link>
+      <link>https://codingnconcepts.com/puzzle/1-light-bulb-and-3-switches/</link>
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/1-light-bulb-and-3-switches/</guid>
+      <guid>https://codingnconcepts.com/puzzle/1-light-bulb-and-3-switches/</guid>
       <description>&lt;p&gt;This particular problem has been asked several times in interviews to evaluate candidate&amp;rsquo;s analytical skills.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;There is a light bulb inside a closed room (no windows) with one door. You cannot see the light bulb is on or off as the door is closed. However, you can assume that the light is off initially. There are three light switches outside the room. One of the switch belongs to the light bulb inside the room. You can turn on or off the switches however you want, but you are allowed to open the door only once. You are not allowed to touch the switches once you open the door.&lt;/p&gt;
@@ -37,10 +37,10 @@
     
     <item>
       <title>25 Horses Puzzle</title>
-      <link>http://codingnconcepts.com/puzzle/25-horses-puzzle/</link>
+      <link>https://codingnconcepts.com/puzzle/25-horses-puzzle/</link>
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/25-horses-puzzle/</guid>
+      <guid>https://codingnconcepts.com/puzzle/25-horses-puzzle/</guid>
       <description>&lt;p&gt;The 25 Horses Puzzle is a famous Google interview question that has been asked in many companies to evaluate candidate&amp;rsquo;s analytical ability and problem solving approach.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;You have 25 horses and you need to identify the fastest 3 horses out of those 25. Only 5 horses can run in each race at the same time as there are only 5 tracks. What is the minimum number of races required to identify the fastest 3 horses without using a stopwatch or timer?&lt;/p&gt;
@@ -49,10 +49,10 @@
     
     <item>
       <title>Burning Rope Puzzle</title>
-      <link>http://codingnconcepts.com/puzzle/burning-rope/</link>
+      <link>https://codingnconcepts.com/puzzle/burning-rope/</link>
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/burning-rope/</guid>
+      <guid>https://codingnconcepts.com/puzzle/burning-rope/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;You have two ropes of varying thickness and length. Each rope burns in exactly 60 minutes. How can you measure 45 mins using only these two ropes.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; You can’t cut the rope in half because of varying thickness and you don&amp;rsquo;t have a timer or watch to measure the burning time.&lt;/p&gt;
@@ -61,12 +61,12 @@
     
     <item>
       <title>Einstein&#39;s Riddle</title>
-      <link>http://codingnconcepts.com/puzzle/einsteins-riddle/</link>
+      <link>https://codingnconcepts.com/puzzle/einsteins-riddle/</link>
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/einsteins-riddle/</guid>
+      <guid>https://codingnconcepts.com/puzzle/einsteins-riddle/</guid>
       <description>&lt;figure&gt;
-    &lt;img src=&#34;http://codingnconcepts.com/img/puzzle/albert-einstein.jpg&#34;/&gt; 
+    &lt;img src=&#34;https://codingnconcepts.com/img/puzzle/albert-einstein.jpg&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;p&gt;The legend says that this problem was created by Albert Einstein in the last century. Einstein said that only 2% of the world could solve it.&lt;/p&gt;
@@ -83,10 +83,10 @@
     
     <item>
       <title>Contaminated Pills Puzzle</title>
-      <link>http://codingnconcepts.com/puzzle/contaminated-pills/</link>
+      <link>https://codingnconcepts.com/puzzle/contaminated-pills/</link>
       <pubDate>Sat, 21 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://codingnconcepts.com/puzzle/contaminated-pills/</guid>
+      <guid>https://codingnconcepts.com/puzzle/contaminated-pills/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;You have 5 jars of pills. Each pill weighs 10 gram, except for contaminated pills contained in one jar, where each pill weighs 9 gm. Given a scale, how could you tell which jar had the contaminated pills in just one measurement?”&lt;/p&gt;
 &lt;/blockquote&gt;</description>
