@@ -6,10 +6,19 @@
     <description>Recent content in Java on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://codingnconcepts.com/categories/java/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Double Colon (::) Operator in Java 8</title>
+      <link>https://codingnconcepts.com/java/double-colon-operator-in-java-8/</link>
+      <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/java/double-colon-operator-in-java-8/</guid>
+      <description>&lt;p&gt;The double colon &lt;code&gt;::&lt;/code&gt; is a operator is introduced in Java 8 for method reference. We are going to understand its usage with loads of examples.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>M power N Using Recursive function</title>

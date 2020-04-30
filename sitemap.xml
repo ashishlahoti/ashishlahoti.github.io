@@ -3,19 +3,55 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://codingnconcepts.com/spring-boot/</loc>
-    <lastmod>2020-04-25T00:00:00+00:00</lastmod>
+    <loc>https://codingnconcepts.com/java/</loc>
+    <lastmod>2020-04-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/categories/</loc>
-    <lastmod>2020-04-28T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/</loc>
-    <lastmod>2020-04-28T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/java/double-colon-operator-in-java-8/</loc>
+    <lastmod>2020-04-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/java/</loc>
+    <lastmod>2020-04-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/java/</loc>
+    <lastmod>2020-04-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/java-8/</loc>
+    <lastmod>2020-04-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/streams/</loc>
+    <lastmod>2020-04-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/</loc>
+    <lastmod>2020-04-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/spring-boot/</loc>
+    <lastmod>2020-04-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -36,11 +72,6 @@
   <url>
     <loc>https://codingnconcepts.com/categories/spring-boot/</loc>
     <lastmod>2020-04-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/</loc>
-    <lastmod>2020-04-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -116,16 +147,6 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/java/</loc>
-    <lastmod>2020-04-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/java/</loc>
-    <lastmod>2020-04-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/tags/javascript/</loc>
     <lastmod>2020-04-05T00:00:00+00:00</lastmod>
   </url>
@@ -171,18 +192,7 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/java/</loc>
-    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/tags/algorithm/</loc>
-    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/java-8/</loc>
     <lastmod>2020-03-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -198,11 +208,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/recursive/</loc>
-    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/streams/</loc>
     <lastmod>2020-03-22T00:00:00+00:00</lastmod>
   </url>
   
