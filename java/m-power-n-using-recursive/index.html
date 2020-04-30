@@ -188,17 +188,17 @@ if (!doNotTrack) {
 </div></div>
 		</header><div class="content post__content clearfix">
 			<p>This is one of the example of using recursive function in Java to find M power N</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MPowerN</span> <span style="color:#f92672">{</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">MPowerN</span> <span style="color:#333">{</span>
 	
-	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">pow</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> m<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> n<span style="color:#f92672">){</span>
-		<span style="color:#66d9ef">return</span> <span style="color:#f92672">(</span>n<span style="color:#f92672">&gt;</span>1<span style="color:#f92672">)</span> <span style="color:#f92672">?</span> m<span style="color:#f92672">*</span>pow<span style="color:#f92672">(</span>m<span style="color:#f92672">,</span> n<span style="color:#f92672">-</span>1<span style="color:#f92672">)</span> <span style="color:#f92672">:</span> m<span style="color:#f92672">;</span>
-	<span style="color:#f92672">}</span>
+	<span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">static</span> <span style="color:#339;font-weight:bold">int</span> <span style="color:#06b;font-weight:bold">pow</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">int</span> m<span style="color:#333">,</span> <span style="color:#339;font-weight:bold">int</span> n<span style="color:#333">){</span>
+		<span style="color:#080;font-weight:bold">return</span> <span style="color:#333">(</span>n<span style="color:#333">&gt;</span>1<span style="color:#333">)</span> <span style="color:#333">?</span> m<span style="color:#333">*</span>pow<span style="color:#333">(</span>m<span style="color:#333">,</span> n<span style="color:#333">-</span>1<span style="color:#333">)</span> <span style="color:#333">:</span> m<span style="color:#333">;</span>
+	<span style="color:#333">}</span>
 	
-<span style="color:#f92672">}</span>
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Test</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-    assertEquals<span style="color:#f92672">(</span>pow<span style="color:#f92672">(</span>2<span style="color:#f92672">,</span>3<span style="color:#f92672">),</span> 8<span style="color:#f92672">);</span>
-<span style="color:#f92672">}</span>
+<span style="color:#333">}</span>
+</code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#555;font-weight:bold">@Test</span>
+<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">test</span><span style="color:#333">()</span> <span style="color:#333">{</span>
+    assertEquals<span style="color:#333">(</span>pow<span style="color:#333">(</span>2<span style="color:#333">,</span>3<span style="color:#333">),</span> 8<span style="color:#333">);</span>
+<span style="color:#333">}</span>
 </code></pre></div>
 		</div>
 		<footer class="post__footer">

@@ -1293,6 +1293,10 @@ ul.share-icons li > * .label {
 	color: #e22d30;
 }
 
+.related_post_title {
+	margin: 0;
+}
+
 /* Media Queries */
 @media screen and (max-width: 1475px) {
 	.container--outer {

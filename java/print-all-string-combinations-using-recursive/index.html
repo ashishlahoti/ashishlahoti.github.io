@@ -188,34 +188,34 @@ if (!doNotTrack) {
 </div></div>
 		</header><div class="content post__content clearfix">
 			<p>Print all the possible combinations of a given String using Recursive function in Java</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PrintAllCombinationOfString</span> <span style="color:#f92672">{</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">PrintAllCombinationOfString</span> <span style="color:#333">{</span>
 
-	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">){</span>
-		String s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abc&#34;</span><span style="color:#f92672">;</span>
-		<span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">();</span> i<span style="color:#f92672">++){</span>
-			substring<span style="color:#f92672">(</span>s<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">,</span> i<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-	<span style="color:#f92672">}</span>
+	<span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">static</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">main</span><span style="color:#333">(</span>String<span style="color:#333">[]</span> args<span style="color:#333">){</span>
+		String s <span style="color:#333">=</span> <span style="background-color:#fff0f0">&#34;abc&#34;</span><span style="color:#333">;</span>
+		<span style="color:#080;font-weight:bold">for</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">int</span> i<span style="color:#333">=</span>0<span style="color:#333">;</span> i <span style="color:#333">&lt;</span> s<span style="color:#333">.</span><span style="color:#00c">length</span><span style="color:#333">();</span> i<span style="color:#333">++){</span>
+			substring<span style="color:#333">(</span>s<span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;&#34;</span><span style="color:#333">,</span> i<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+	<span style="color:#333">}</span>
 	
-	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">substring</span><span style="color:#f92672">(</span>String content<span style="color:#f92672">,</span> String part<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> index<span style="color:#f92672">){</span>
-		<span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>index <span style="color:#f92672">&gt;=</span> content<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">()){</span>
-			<span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
-		<span style="color:#f92672">}</span>
-		String sub <span style="color:#f92672">=</span> part <span style="color:#f92672">+</span> content<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>index<span style="color:#f92672">);</span>
+	<span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">static</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">substring</span><span style="color:#333">(</span>String content<span style="color:#333">,</span> String part<span style="color:#333">,</span> <span style="color:#339;font-weight:bold">int</span> index<span style="color:#333">){</span>
+		<span style="color:#080;font-weight:bold">if</span><span style="color:#333">(</span>index <span style="color:#333">&gt;=</span> content<span style="color:#333">.</span><span style="color:#00c">length</span><span style="color:#333">()){</span>
+			<span style="color:#080;font-weight:bold">return</span><span style="color:#333">;</span>
+		<span style="color:#333">}</span>
+		String sub <span style="color:#333">=</span> part <span style="color:#333">+</span> content<span style="color:#333">.</span><span style="color:#00c">charAt</span><span style="color:#333">(</span>index<span style="color:#333">);</span>
 
-		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>sub<span style="color:#f92672">);</span> <span style="color:#75715e">//print combinations
-</span><span style="color:#75715e"></span>
-		substring<span style="color:#f92672">(</span>content<span style="color:#f92672">,</span> sub<span style="color:#f92672">,</span> index <span style="color:#f92672">+</span> 1<span style="color:#f92672">);</span> <span style="color:#75715e">//a index=0 //ab index=1 //abc index=2
-</span><span style="color:#75715e"></span>	<span style="color:#f92672">}</span>
+		System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">.</span><span style="color:#00c">println</span><span style="color:#333">(</span>sub<span style="color:#333">);</span> <span style="color:#888">//print combinations
+</span><span style="color:#888"></span>
+		substring<span style="color:#333">(</span>content<span style="color:#333">,</span> sub<span style="color:#333">,</span> index <span style="color:#333">+</span> 1<span style="color:#333">);</span> <span style="color:#888">//a index=0 //ab index=1 //abc index=2
+</span><span style="color:#888"></span>	<span style="color:#333">}</span>
 	
-	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> String <span style="color:#a6e22e">swap</span><span style="color:#f92672">(</span>String a<span style="color:#f92672">){</span>
-		<span style="color:#66d9ef">char</span><span style="color:#f92672">[]</span> charArray <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">[</span>a<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">()];</span>
-		<span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>0<span style="color:#f92672">,</span> j<span style="color:#f92672">=</span>a<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">()-</span>1<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span>a<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">()</span> <span style="color:#f92672">&amp;&amp;</span> j<span style="color:#f92672">&gt;=</span>0<span style="color:#f92672">;</span> i<span style="color:#f92672">++,</span>j<span style="color:#f92672">--){</span>
-			charArray<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>j<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> String<span style="color:#f92672">(</span>charArray<span style="color:#f92672">);</span>
-	<span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
+	<span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">static</span> String <span style="color:#06b;font-weight:bold">swap</span><span style="color:#333">(</span>String a<span style="color:#333">){</span>
+		<span style="color:#339;font-weight:bold">char</span><span style="color:#333">[]</span> charArray <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> <span style="color:#339;font-weight:bold">char</span><span style="color:#333">[</span>a<span style="color:#333">.</span><span style="color:#00c">length</span><span style="color:#333">()];</span>
+		<span style="color:#080;font-weight:bold">for</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">int</span> i<span style="color:#333">=</span>0<span style="color:#333">,</span> j<span style="color:#333">=</span>a<span style="color:#333">.</span><span style="color:#00c">length</span><span style="color:#333">()-</span>1<span style="color:#333">;</span> i <span style="color:#333">&lt;</span>a<span style="color:#333">.</span><span style="color:#00c">length</span><span style="color:#333">()</span> <span style="color:#333">&amp;&amp;</span> j<span style="color:#333">&gt;=</span>0<span style="color:#333">;</span> i<span style="color:#333">++,</span>j<span style="color:#333">--){</span>
+			charArray<span style="color:#333">[</span>i<span style="color:#333">]</span> <span style="color:#333">=</span> a<span style="color:#333">.</span><span style="color:#00c">charAt</span><span style="color:#333">(</span>j<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+		<span style="color:#080;font-weight:bold">return</span> <span style="color:#080;font-weight:bold">new</span> String<span style="color:#333">(</span>charArray<span style="color:#333">);</span>
+	<span style="color:#333">}</span>
+<span style="color:#333">}</span>
 </code></pre></div><pre><code><div class="code_output">Output</div>
 a
 ab

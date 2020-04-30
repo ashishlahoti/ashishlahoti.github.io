@@ -188,57 +188,57 @@ if (!doNotTrack) {
 </div></div>
 		</header><div class="content post__content clearfix">
 			<p>Implementation of Kafka Consumer using Java</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">ppackage com<span style="color:#f92672">.</span><span style="color:#a6e22e">abc</span><span style="color:#f92672">;</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">ppackage com<span style="color:#333">.</span><span style="color:#00c">abc</span><span style="color:#333">;</span>
 
-<span style="color:#f92672">import</span> java.time.Duration<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.Collections<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.Properties<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.concurrent.ExecutionException<span style="color:#f92672">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">java.time.Duration</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">java.util.Collections</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">java.util.Properties</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">java.util.concurrent.ExecutionException</span><span style="color:#333">;</span>
 
-<span style="color:#f92672">import</span> org.apache.kafka.clients.consumer.ConsumerConfig<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.apache.kafka.clients.consumer.ConsumerRecord<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.apache.kafka.clients.consumer.ConsumerRecords<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.apache.kafka.clients.consumer.KafkaConsumer<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.apache.kafka.common.serialization.StringDeserializer<span style="color:#f92672">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">org.apache.kafka.clients.consumer.ConsumerConfig</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">org.apache.kafka.clients.consumer.ConsumerRecord</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">org.apache.kafka.clients.consumer.ConsumerRecords</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">org.apache.kafka.clients.consumer.KafkaConsumer</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">org.apache.kafka.common.serialization.StringDeserializer</span><span style="color:#333">;</span>
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">KafkaConsumerTest</span> <span style="color:#f92672">{</span>
+<span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">KafkaConsumerTest</span> <span style="color:#333">{</span>
 
- <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> InterruptedException<span style="color:#f92672">,</span> ExecutionException<span style="color:#f92672">{</span>
-  <span style="color:#75715e">//Create consumer property
-</span><span style="color:#75715e"></span>  String bootstrapServer <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;localhost:9092&#34;</span><span style="color:#f92672">;</span>
-  String groupId <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;my-first-consumer-group&#34;</span><span style="color:#f92672">;</span>
-  String topicName <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;my-first-topic&#34;</span><span style="color:#f92672">;</span>
+ <span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">static</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">main</span><span style="color:#333">(</span>String<span style="color:#333">[]</span> args<span style="color:#333">)</span> <span style="color:#080;font-weight:bold">throws</span> InterruptedException<span style="color:#333">,</span> ExecutionException<span style="color:#333">{</span>
+  <span style="color:#888">//Create consumer property
+</span><span style="color:#888"></span>  String bootstrapServer <span style="color:#333">=</span> <span style="background-color:#fff0f0">&#34;localhost:9092&#34;</span><span style="color:#333">;</span>
+  String groupId <span style="color:#333">=</span> <span style="background-color:#fff0f0">&#34;my-first-consumer-group&#34;</span><span style="color:#333">;</span>
+  String topicName <span style="color:#333">=</span> <span style="background-color:#fff0f0">&#34;my-first-topic&#34;</span><span style="color:#333">;</span>
   
-  Properties properties <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Properties<span style="color:#f92672">();</span>
-  properties<span style="color:#f92672">.</span><span style="color:#a6e22e">setProperty</span><span style="color:#f92672">(</span>ConsumerConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">BOOTSTRAP_SERVERS_CONFIG</span><span style="color:#f92672">,</span> bootstrapServer<span style="color:#f92672">);</span>
-  properties<span style="color:#f92672">.</span><span style="color:#a6e22e">setProperty</span><span style="color:#f92672">(</span>ConsumerConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">KEY_DESERIALIZER_CLASS_CONFIG</span><span style="color:#f92672">,</span> StringDeserializer<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">());</span>
-  properties<span style="color:#f92672">.</span><span style="color:#a6e22e">setProperty</span><span style="color:#f92672">(</span>ConsumerConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">VALUE_DESERIALIZER_CLASS_CONFIG</span><span style="color:#f92672">,</span> StringDeserializer<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">());</span>
-  properties<span style="color:#f92672">.</span><span style="color:#a6e22e">setProperty</span><span style="color:#f92672">(</span>ConsumerConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">GROUP_ID_CONFIG</span><span style="color:#f92672">,</span> groupId<span style="color:#f92672">);</span>
-  properties<span style="color:#f92672">.</span><span style="color:#a6e22e">setProperty</span><span style="color:#f92672">(</span>ConsumerConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">AUTO_OFFSET_RESET_CONFIG</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;earliest&#34;</span><span style="color:#f92672">);</span>
-  properties<span style="color:#f92672">.</span><span style="color:#a6e22e">setProperty</span><span style="color:#f92672">(</span>ConsumerConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">ENABLE_AUTO_COMMIT_CONFIG</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;false&#34;</span><span style="color:#f92672">);</span>
+  Properties properties <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> Properties<span style="color:#333">();</span>
+  properties<span style="color:#333">.</span><span style="color:#00c">setProperty</span><span style="color:#333">(</span>ConsumerConfig<span style="color:#333">.</span><span style="color:#00c">BOOTSTRAP_SERVERS_CONFIG</span><span style="color:#333">,</span> bootstrapServer<span style="color:#333">);</span>
+  properties<span style="color:#333">.</span><span style="color:#00c">setProperty</span><span style="color:#333">(</span>ConsumerConfig<span style="color:#333">.</span><span style="color:#00c">KEY_DESERIALIZER_CLASS_CONFIG</span><span style="color:#333">,</span> StringDeserializer<span style="color:#333">.</span><span style="color:#00c">class</span><span style="color:#333">.</span><span style="color:#00c">getName</span><span style="color:#333">());</span>
+  properties<span style="color:#333">.</span><span style="color:#00c">setProperty</span><span style="color:#333">(</span>ConsumerConfig<span style="color:#333">.</span><span style="color:#00c">VALUE_DESERIALIZER_CLASS_CONFIG</span><span style="color:#333">,</span> StringDeserializer<span style="color:#333">.</span><span style="color:#00c">class</span><span style="color:#333">.</span><span style="color:#00c">getName</span><span style="color:#333">());</span>
+  properties<span style="color:#333">.</span><span style="color:#00c">setProperty</span><span style="color:#333">(</span>ConsumerConfig<span style="color:#333">.</span><span style="color:#00c">GROUP_ID_CONFIG</span><span style="color:#333">,</span> groupId<span style="color:#333">);</span>
+  properties<span style="color:#333">.</span><span style="color:#00c">setProperty</span><span style="color:#333">(</span>ConsumerConfig<span style="color:#333">.</span><span style="color:#00c">AUTO_OFFSET_RESET_CONFIG</span><span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;earliest&#34;</span><span style="color:#333">);</span>
+  properties<span style="color:#333">.</span><span style="color:#00c">setProperty</span><span style="color:#333">(</span>ConsumerConfig<span style="color:#333">.</span><span style="color:#00c">ENABLE_AUTO_COMMIT_CONFIG</span><span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;false&#34;</span><span style="color:#333">);</span>
   
-  <span style="color:#75715e">//Create consumer
-</span><span style="color:#75715e"></span>  KafkaConsumer<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;</span> consumer <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> KafkaConsumer<span style="color:#f92672">&lt;&gt;(</span>properties<span style="color:#f92672">);</span>
+  <span style="color:#888">//Create consumer
+</span><span style="color:#888"></span>  KafkaConsumer<span style="color:#333">&lt;</span>String<span style="color:#333">,</span> String<span style="color:#333">&gt;</span> consumer <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> KafkaConsumer<span style="color:#333">&lt;&gt;(</span>properties<span style="color:#333">);</span>
   
-  <span style="color:#75715e">//Subscribe consumer to topic(s)
-</span><span style="color:#75715e"></span>  consumer<span style="color:#f92672">.</span><span style="color:#a6e22e">subscribe</span><span style="color:#f92672">(</span>Collections<span style="color:#f92672">.</span><span style="color:#a6e22e">singleton</span><span style="color:#f92672">(</span>topicName<span style="color:#f92672">));</span>
+  <span style="color:#888">//Subscribe consumer to topic(s)
+</span><span style="color:#888"></span>  consumer<span style="color:#333">.</span><span style="color:#00c">subscribe</span><span style="color:#333">(</span>Collections<span style="color:#333">.</span><span style="color:#00c">singleton</span><span style="color:#333">(</span>topicName<span style="color:#333">));</span>
   
   
-  <span style="color:#75715e">//Poll for new data
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">while</span><span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">){</span>
-   ConsumerRecords<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;</span> records <span style="color:#f92672">=</span> consumer<span style="color:#f92672">.</span><span style="color:#a6e22e">poll</span><span style="color:#f92672">(</span>Duration<span style="color:#f92672">.</span><span style="color:#a6e22e">ofMillis</span><span style="color:#f92672">(</span>1000<span style="color:#f92672">));</span>
+  <span style="color:#888">//Poll for new data
+</span><span style="color:#888"></span>  <span style="color:#080;font-weight:bold">while</span><span style="color:#333">(</span><span style="color:#080;font-weight:bold">true</span><span style="color:#333">){</span>
+   ConsumerRecords<span style="color:#333">&lt;</span>String<span style="color:#333">,</span> String<span style="color:#333">&gt;</span> records <span style="color:#333">=</span> consumer<span style="color:#333">.</span><span style="color:#00c">poll</span><span style="color:#333">(</span>Duration<span style="color:#333">.</span><span style="color:#00c">ofMillis</span><span style="color:#333">(</span>1000<span style="color:#333">));</span>
    
-   <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span>ConsumerRecord<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;</span> record<span style="color:#f92672">:</span> records<span style="color:#f92672">){</span>
-    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>record<span style="color:#f92672">.</span><span style="color:#a6e22e">key</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> record<span style="color:#f92672">.</span><span style="color:#a6e22e">value</span><span style="color:#f92672">());</span>
-    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>record<span style="color:#f92672">.</span><span style="color:#a6e22e">topic</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> record<span style="color:#f92672">.</span><span style="color:#a6e22e">partition</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> record<span style="color:#f92672">.</span><span style="color:#a6e22e">offset</span><span style="color:#f92672">());</span>
-   <span style="color:#f92672">}</span>
+   <span style="color:#080;font-weight:bold">for</span><span style="color:#333">(</span>ConsumerRecord<span style="color:#333">&lt;</span>String<span style="color:#333">,</span> String<span style="color:#333">&gt;</span> record<span style="color:#333">:</span> records<span style="color:#333">){</span>
+    System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">.</span><span style="color:#00c">println</span><span style="color:#333">(</span>record<span style="color:#333">.</span><span style="color:#00c">key</span><span style="color:#333">()</span> <span style="color:#333">+</span> record<span style="color:#333">.</span><span style="color:#00c">value</span><span style="color:#333">());</span>
+    System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">.</span><span style="color:#00c">println</span><span style="color:#333">(</span>record<span style="color:#333">.</span><span style="color:#00c">topic</span><span style="color:#333">()</span> <span style="color:#333">+</span> record<span style="color:#333">.</span><span style="color:#00c">partition</span><span style="color:#333">()</span> <span style="color:#333">+</span> record<span style="color:#333">.</span><span style="color:#00c">offset</span><span style="color:#333">());</span>
+   <span style="color:#333">}</span>
    
-   <span style="color:#75715e">//Commit consumer offset manually (recommended)
-</span><span style="color:#75715e"></span>   consumer<span style="color:#f92672">.</span><span style="color:#a6e22e">commitAsync</span><span style="color:#f92672">();</span>
-  <span style="color:#f92672">}</span>
+   <span style="color:#888">//Commit consumer offset manually (recommended)
+</span><span style="color:#888"></span>   consumer<span style="color:#333">.</span><span style="color:#00c">commitAsync</span><span style="color:#333">();</span>
+  <span style="color:#333">}</span>
   
- <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
+ <span style="color:#333">}</span>
+<span style="color:#333">}</span>
 </code></pre></div>
 		</div>
 		<footer class="post__footer">

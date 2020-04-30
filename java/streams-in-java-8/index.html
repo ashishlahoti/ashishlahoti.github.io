@@ -208,7 +208,7 @@ if (!doNotTrack) {
 <p><strong>4. Pipeline:</strong> Stream operations pipeline can have many intermediate operations but only one terminal operation.</p>
 <h2 id="examples">Examples</h2>
 <p>We will look at various stream operations pipelines. Let&rsquo;s define a <code>fruits</code> List collection first</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> fruits <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;mango&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;apple&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;banana&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;grapes&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;orange&#34;</span><span style="color:#f92672">);</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#333">&lt;</span>String<span style="color:#333">&gt;</span> fruits <span style="color:#333">=</span> Arrays<span style="color:#333">.</span><span style="color:#00c">asList</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;mango&#34;</span><span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;apple&#34;</span><span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;banana&#34;</span><span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;grapes&#34;</span><span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;orange&#34;</span><span style="color:#333">);</span>
 </code></pre></div><p>We now execute various examples of streams operations pipeline</p>
 <blockquote>
 <p>Stream Operation | Intermediate Operation | &hellip; | &hellip; | Intermediate Operation | Terminal Operation</p>
@@ -216,11 +216,11 @@ if (!doNotTrack) {
 <p><br /></p>
 <h4 id="1-stream--filter--collect">1. stream() | filter() | collect()</h4>
 <p>Filter out <code>grapes</code> from list of <code>fruits</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> result <span style="color:#f92672">=</span> fruits<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>                   <span style="color:#75715e">// convert list to stream
-</span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">filter</span><span style="color:#f92672">(</span>fruit <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">!</span><span style="color:#e6db74">&#34;grapes&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>fruit<span style="color:#f92672">))</span>   <span style="color:#75715e">// filter out grapes
-</span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">collect</span><span style="color:#f92672">(</span>Collectors<span style="color:#f92672">.</span><span style="color:#a6e22e">toList</span><span style="color:#f92672">());</span>              <span style="color:#75715e">// collect the output and convert streams to a List
-</span><span style="color:#75715e"></span>
-result<span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#333">&lt;</span>String<span style="color:#333">&gt;</span> result <span style="color:#333">=</span> fruits<span style="color:#333">.</span><span style="color:#00c">stream</span><span style="color:#333">()</span>                   <span style="color:#888">// convert list to stream
+</span><span style="color:#888"></span>            <span style="color:#333">.</span><span style="color:#00c">filter</span><span style="color:#333">(</span>fruit <span style="color:#333">-&gt;</span> <span style="color:#333">!</span><span style="background-color:#fff0f0">&#34;grapes&#34;</span><span style="color:#333">.</span><span style="color:#00c">equals</span><span style="color:#333">(</span>fruit<span style="color:#333">))</span>   <span style="color:#888">// filter out grapes
+</span><span style="color:#888"></span>            <span style="color:#333">.</span><span style="color:#00c">collect</span><span style="color:#333">(</span>Collectors<span style="color:#333">.</span><span style="color:#00c">toList</span><span style="color:#333">());</span>              <span style="color:#888">// collect the output and convert streams to a List
+</span><span style="color:#888"></span>
+result<span style="color:#333">.</span><span style="color:#00c">forEach</span><span style="color:#333">(</span>System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">::</span>println<span style="color:#333">);</span>
 </code></pre></div><pre><code><div class="code_output">Output</div>
 mango
 apple
@@ -229,11 +229,11 @@ orange
 </code></pre><p><br /></p>
 <h4 id="2-stream--map--collect">2. stream() | map() | collect()</h4>
 <p>Map all <code>fruits</code> to uppercase</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> result <span style="color:#f92672">=</span> fruits<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>            <span style="color:#75715e">// convert list to stream
-</span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>fruit <span style="color:#f92672">-&gt;</span> fruit<span style="color:#f92672">.</span><span style="color:#a6e22e">toUpperCase</span><span style="color:#f92672">())</span>   <span style="color:#75715e">// map to uppercase
-</span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">collect</span><span style="color:#f92672">(</span>Collectors<span style="color:#f92672">.</span><span style="color:#a6e22e">toList</span><span style="color:#f92672">());</span>       <span style="color:#75715e">// collect the output and convert streams to a List
-</span><span style="color:#75715e"></span>
-result<span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#333">&lt;</span>String<span style="color:#333">&gt;</span> result <span style="color:#333">=</span> fruits<span style="color:#333">.</span><span style="color:#00c">stream</span><span style="color:#333">()</span>            <span style="color:#888">// convert list to stream
+</span><span style="color:#888"></span>            <span style="color:#333">.</span><span style="color:#00c">map</span><span style="color:#333">(</span>fruit <span style="color:#333">-&gt;</span> fruit<span style="color:#333">.</span><span style="color:#00c">toUpperCase</span><span style="color:#333">())</span>   <span style="color:#888">// map to uppercase
+</span><span style="color:#888"></span>            <span style="color:#333">.</span><span style="color:#00c">collect</span><span style="color:#333">(</span>Collectors<span style="color:#333">.</span><span style="color:#00c">toList</span><span style="color:#333">());</span>       <span style="color:#888">// collect the output and convert streams to a List
+</span><span style="color:#888"></span>
+result<span style="color:#333">.</span><span style="color:#00c">forEach</span><span style="color:#333">(</span>System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">::</span>println<span style="color:#333">);</span>
 </code></pre></div><pre><code><div class="code_output">Output</div>
 MANGO
 APPLE
@@ -243,11 +243,11 @@ ORANGE
 </code></pre><p><br /></p>
 <h4 id="3-stream--sorted--collect">3. stream() | sorted() | collect()</h4>
 <p>Sort all <code>fruits</code> in alphabetical order</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> result <span style="color:#f92672">=</span> fruits<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>        <span style="color:#75715e">// convert list to stream
-</span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">sorted</span><span style="color:#f92672">()</span>                        <span style="color:#75715e">// sort in alphabetical order
-</span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">collect</span><span style="color:#f92672">(</span>Collectors<span style="color:#f92672">.</span><span style="color:#a6e22e">toList</span><span style="color:#f92672">());</span>   <span style="color:#75715e">// collect the output and convert streams to a List
-</span><span style="color:#75715e"></span>
-result<span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#333">&lt;</span>String<span style="color:#333">&gt;</span> result <span style="color:#333">=</span> fruits<span style="color:#333">.</span><span style="color:#00c">stream</span><span style="color:#333">()</span>        <span style="color:#888">// convert list to stream
+</span><span style="color:#888"></span>            <span style="color:#333">.</span><span style="color:#00c">sorted</span><span style="color:#333">()</span>                        <span style="color:#888">// sort in alphabetical order
+</span><span style="color:#888"></span>            <span style="color:#333">.</span><span style="color:#00c">collect</span><span style="color:#333">(</span>Collectors<span style="color:#333">.</span><span style="color:#00c">toList</span><span style="color:#333">());</span>   <span style="color:#888">// collect the output and convert streams to a List
+</span><span style="color:#888"></span>
+result<span style="color:#333">.</span><span style="color:#00c">forEach</span><span style="color:#333">(</span>System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">::</span>println<span style="color:#333">);</span>
 </code></pre></div><pre><code><div class="code_output">Output</div>
 apple
 banana
@@ -257,13 +257,13 @@ orange
 </code></pre><p><br /></p>
 <h4 id="4-stream--filter--map--sorted--collect">4. stream() | filter() | map() | sorted() | collect()</h4>
 <p>Operations all together on <code>fruits</code>. Filter out <code>grapes</code>, Map all to uppercase, Sort all alphabetically</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> result <span style="color:#f92672">=</span> fruits<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>                   <span style="color:#75715e">// convert list to stream
-</span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">filter</span><span style="color:#f92672">(</span>fruit <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">!</span><span style="color:#e6db74">&#34;grapes&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>fruit<span style="color:#f92672">))</span>   <span style="color:#75715e">// filter out grapes
-</span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>fruit <span style="color:#f92672">-&gt;</span> fruit<span style="color:#f92672">.</span><span style="color:#a6e22e">toUpperCase</span><span style="color:#f92672">())</span>          <span style="color:#75715e">// map to uppercase
-</span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">sorted</span><span style="color:#f92672">()</span>                                   <span style="color:#75715e">// sort in alphabetical order
-</span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">collect</span><span style="color:#f92672">(</span>Collectors<span style="color:#f92672">.</span><span style="color:#a6e22e">toList</span><span style="color:#f92672">());</span>              <span style="color:#75715e">// collect the output and convert streams to a List
-</span><span style="color:#75715e"></span>
-result<span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#333">&lt;</span>String<span style="color:#333">&gt;</span> result <span style="color:#333">=</span> fruits<span style="color:#333">.</span><span style="color:#00c">stream</span><span style="color:#333">()</span>                   <span style="color:#888">// convert list to stream
+</span><span style="color:#888"></span>            <span style="color:#333">.</span><span style="color:#00c">filter</span><span style="color:#333">(</span>fruit <span style="color:#333">-&gt;</span> <span style="color:#333">!</span><span style="background-color:#fff0f0">&#34;grapes&#34;</span><span style="color:#333">.</span><span style="color:#00c">equals</span><span style="color:#333">(</span>fruit<span style="color:#333">))</span>   <span style="color:#888">// filter out grapes
+</span><span style="color:#888"></span>            <span style="color:#333">.</span><span style="color:#00c">map</span><span style="color:#333">(</span>fruit <span style="color:#333">-&gt;</span> fruit<span style="color:#333">.</span><span style="color:#00c">toUpperCase</span><span style="color:#333">())</span>          <span style="color:#888">// map to uppercase
+</span><span style="color:#888"></span>            <span style="color:#333">.</span><span style="color:#00c">sorted</span><span style="color:#333">()</span>                                   <span style="color:#888">// sort in alphabetical order
+</span><span style="color:#888"></span>            <span style="color:#333">.</span><span style="color:#00c">collect</span><span style="color:#333">(</span>Collectors<span style="color:#333">.</span><span style="color:#00c">toList</span><span style="color:#333">());</span>              <span style="color:#888">// collect the output and convert streams to a List
+</span><span style="color:#888"></span>
+result<span style="color:#333">.</span><span style="color:#00c">forEach</span><span style="color:#333">(</span>System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">::</span>println<span style="color:#333">);</span>
 </code></pre></div><pre><code><div class="code_output">Output</div>
 APPLE
 BANANA
@@ -272,41 +272,41 @@ ORANGE
 </code></pre><p><br /></p>
 <h4 id="5-stream--filter--findany--orelse">5. stream() | filter() | findAny() | orElse()</h4>
 <p>Filter <code>mango</code> from <code>fruits</code>, Return <code>mango</code> if found or else return <code>null</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String fruit <span style="color:#f92672">=</span> fruits<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>                         <span style="color:#75715e">// convert list to stream
-</span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">filter</span><span style="color:#f92672">(</span>fruit <span style="color:#f92672">-&gt;</span> <span style="color:#e6db74">&#34;mango&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>fruit<span style="color:#f92672">))</span>    <span style="color:#75715e">// we love mango
-</span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">findAny</span><span style="color:#f92672">()</span>                                 <span style="color:#75715e">// If `findAny` then return found
-</span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">orElse</span><span style="color:#f92672">(</span><span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>                             <span style="color:#75715e">// If not found, return null
-</span><span style="color:#75715e"></span>
-System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>fruit<span style="color:#f92672">);</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String fruit <span style="color:#333">=</span> fruits<span style="color:#333">.</span><span style="color:#00c">stream</span><span style="color:#333">()</span>                         <span style="color:#888">// convert list to stream
+</span><span style="color:#888"></span>            <span style="color:#333">.</span><span style="color:#00c">filter</span><span style="color:#333">(</span>fruit <span style="color:#333">-&gt;</span> <span style="background-color:#fff0f0">&#34;mango&#34;</span><span style="color:#333">.</span><span style="color:#00c">equals</span><span style="color:#333">(</span>fruit<span style="color:#333">))</span>    <span style="color:#888">// we love mango
+</span><span style="color:#888"></span>            <span style="color:#333">.</span><span style="color:#00c">findAny</span><span style="color:#333">()</span>                                 <span style="color:#888">// If `findAny` then return found
+</span><span style="color:#888"></span>            <span style="color:#333">.</span><span style="color:#00c">orElse</span><span style="color:#333">(</span><span style="color:#080;font-weight:bold">null</span><span style="color:#333">);</span>                             <span style="color:#888">// If not found, return null
+</span><span style="color:#888"></span>
+System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">.</span><span style="color:#00c">println</span><span style="color:#333">(</span>fruit<span style="color:#333">);</span>
 </code></pre></div><pre><code><div class="code_output">Output</div>
 mango
 </code></pre><h2 id="array-stream">Array Stream</h2>
 <hr>
 <p>Get the sum, count, min, max and distinct elements of given array</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> intArray <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]{</span>1<span style="color:#f92672">,</span> 3<span style="color:#f92672">,</span> 5<span style="color:#f92672">,</span> 7<span style="color:#f92672">,</span> 9<span style="color:#f92672">,</span> 3<span style="color:#f92672">,</span> 5<span style="color:#f92672">,</span> 99<span style="color:#f92672">};</span>
-<span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">(</span>intArray<span style="color:#f92672">)</span>
-                <span style="color:#f92672">.</span><span style="color:#a6e22e">sum</span><span style="color:#f92672">();</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#339;font-weight:bold">int</span><span style="color:#333">[]</span> intArray <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> <span style="color:#339;font-weight:bold">int</span><span style="color:#333">[]{</span>1<span style="color:#333">,</span> 3<span style="color:#333">,</span> 5<span style="color:#333">,</span> 7<span style="color:#333">,</span> 9<span style="color:#333">,</span> 3<span style="color:#333">,</span> 5<span style="color:#333">,</span> 99<span style="color:#333">};</span>
+<span style="color:#339;font-weight:bold">int</span> sum <span style="color:#333">=</span> Arrays<span style="color:#333">.</span><span style="color:#00c">stream</span><span style="color:#333">(</span>intArray<span style="color:#333">)</span>
+                <span style="color:#333">.</span><span style="color:#00c">sum</span><span style="color:#333">();</span>
 
-<span style="color:#66d9ef">long</span> count <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">(</span>intArray<span style="color:#f92672">)</span>
-                <span style="color:#f92672">.</span><span style="color:#a6e22e">count</span><span style="color:#f92672">();</span>
+<span style="color:#339;font-weight:bold">long</span> count <span style="color:#333">=</span> Arrays<span style="color:#333">.</span><span style="color:#00c">stream</span><span style="color:#333">(</span>intArray<span style="color:#333">)</span>
+                <span style="color:#333">.</span><span style="color:#00c">count</span><span style="color:#333">();</span>
 
-<span style="color:#66d9ef">int</span> min <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">(</span>intArray<span style="color:#f92672">)</span>
-                <span style="color:#f92672">.</span><span style="color:#a6e22e">min</span><span style="color:#f92672">()</span>
-                <span style="color:#f92672">.</span><span style="color:#a6e22e">getAsInt</span><span style="color:#f92672">();</span>
+<span style="color:#339;font-weight:bold">int</span> min <span style="color:#333">=</span> Arrays<span style="color:#333">.</span><span style="color:#00c">stream</span><span style="color:#333">(</span>intArray<span style="color:#333">)</span>
+                <span style="color:#333">.</span><span style="color:#00c">min</span><span style="color:#333">()</span>
+                <span style="color:#333">.</span><span style="color:#00c">getAsInt</span><span style="color:#333">();</span>
 
-<span style="color:#66d9ef">int</span> max <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">(</span>intArray<span style="color:#f92672">)</span>
-                <span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">()</span>
-                <span style="color:#f92672">.</span><span style="color:#a6e22e">getAsInt</span><span style="color:#f92672">();</span>
+<span style="color:#339;font-weight:bold">int</span> max <span style="color:#333">=</span> Arrays<span style="color:#333">.</span><span style="color:#00c">stream</span><span style="color:#333">(</span>intArray<span style="color:#333">)</span>
+                <span style="color:#333">.</span><span style="color:#00c">max</span><span style="color:#333">()</span>
+                <span style="color:#333">.</span><span style="color:#00c">getAsInt</span><span style="color:#333">();</span>
 
-System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;sum: &#34;</span> <span style="color:#f92672">+</span> sum<span style="color:#f92672">);</span>
-System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;count: &#34;</span> <span style="color:#f92672">+</span> count<span style="color:#f92672">);</span>
-System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;min: &#34;</span> <span style="color:#f92672">+</span> min<span style="color:#f92672">);</span>
-System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;max: &#34;</span> <span style="color:#f92672">+</span> max<span style="color:#f92672">);</span>
-System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;distinct:&#34;</span><span style="color:#f92672">);</span>
+System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">.</span><span style="color:#00c">println</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;sum: &#34;</span> <span style="color:#333">+</span> sum<span style="color:#333">);</span>
+System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">.</span><span style="color:#00c">println</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;count: &#34;</span> <span style="color:#333">+</span> count<span style="color:#333">);</span>
+System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">.</span><span style="color:#00c">println</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;min: &#34;</span> <span style="color:#333">+</span> min<span style="color:#333">);</span>
+System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">.</span><span style="color:#00c">println</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;max: &#34;</span> <span style="color:#333">+</span> max<span style="color:#333">);</span>
+System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">.</span><span style="color:#00c">println</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;distinct:&#34;</span><span style="color:#333">);</span>
 
-Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">(</span>intArray<span style="color:#f92672">)</span>
-        <span style="color:#f92672">.</span><span style="color:#a6e22e">distinct</span><span style="color:#f92672">()</span>
-        <span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
+Arrays<span style="color:#333">.</span><span style="color:#00c">stream</span><span style="color:#333">(</span>intArray<span style="color:#333">)</span>
+        <span style="color:#333">.</span><span style="color:#00c">distinct</span><span style="color:#333">()</span>
+        <span style="color:#333">.</span><span style="color:#00c">forEach</span><span style="color:#333">(</span>System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">::</span>println<span style="color:#333">);</span>
 
 </code></pre></div><pre><code><div class="code_output">Output</div>
 sum: 132
@@ -324,8 +324,8 @@ distinct:
 <hr>
 <h4 id="foreach">forEach()</h4>
 <p>Print number 1 to 10</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">IntStream<span style="color:#f92672">.</span><span style="color:#a6e22e">range</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> 6<span style="color:#f92672">)</span>
-         <span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">IntStream<span style="color:#333">.</span><span style="color:#00c">range</span><span style="color:#333">(</span>1<span style="color:#333">,</span> 6<span style="color:#333">)</span>
+         <span style="color:#333">.</span><span style="color:#00c">forEach</span><span style="color:#333">(</span>System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">::</span>println<span style="color:#333">);</span>
 </code></pre></div><pre><code><div class="code_output">Output</div>
 1
 2
@@ -335,10 +335,10 @@ distinct:
 </code></pre><p><br /></p>
 <h4 id="reduce">reduce()</h4>
 <p>Sum all the elements from 1 to 100</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> IntStream<span style="color:#f92672">.</span><span style="color:#a6e22e">range</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> 101<span style="color:#f92672">)</span>
-         <span style="color:#f92672">.</span><span style="color:#a6e22e">reduce</span><span style="color:#f92672">((</span>a<span style="color:#f92672">,</span> s<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> s <span style="color:#f92672">+=</span> a<span style="color:#f92672">)</span>
-         <span style="color:#f92672">.</span><span style="color:#a6e22e">getAsInt</span><span style="color:#f92672">();</span>
-System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;sum: &#34;</span> <span style="color:#f92672">+</span> sum<span style="color:#f92672">);</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#339;font-weight:bold">int</span> sum <span style="color:#333">=</span> IntStream<span style="color:#333">.</span><span style="color:#00c">range</span><span style="color:#333">(</span>1<span style="color:#333">,</span> 101<span style="color:#333">)</span>
+         <span style="color:#333">.</span><span style="color:#00c">reduce</span><span style="color:#333">((</span>a<span style="color:#333">,</span> s<span style="color:#333">)</span> <span style="color:#333">-&gt;</span> s <span style="color:#333">+=</span> a<span style="color:#333">)</span>
+         <span style="color:#333">.</span><span style="color:#00c">getAsInt</span><span style="color:#333">();</span>
+System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">.</span><span style="color:#00c">println</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;sum: &#34;</span> <span style="color:#333">+</span> sum<span style="color:#333">);</span>
 </code></pre></div><pre><code><div class="code_output">Output</div>
 sum: 5050
 </code></pre>

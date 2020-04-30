@@ -234,38 +234,38 @@ if (!doNotTrack) {
 <ul>
 <li>
 <p><strong>BeanNameUrlHandlerMapping</strong> This is a default spring handler mapping. Name of bean considered as URL.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;/welcome.htm&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;com.abc.controller.WelcomeController&#34;</span><span style="color:#f92672">/&gt;</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#070">&lt;bean</span> <span style="color:#00c">name=</span><span style="background-color:#fff0f0">&#34;/welcome.htm&#34;</span> <span style="color:#00c">class=</span><span style="background-color:#fff0f0">&#34;com.abc.controller.WelcomeController&#34;</span><span style="color:#070">/&gt;</span>
 </code></pre></div></li>
 <li>
 <p><strong>SimpleUrlHandlerMapping</strong> - Map with key value pair of URL and controller bean name.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;org.springframework.web.servlet.handler.SimpleUrlHandlerMapping&#34;</span><span style="color:#f92672">&gt;</span>
-  <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;mappings&#34;</span><span style="color:#f92672">&gt;</span>
-    <span style="color:#f92672">&lt;props&gt;</span>
-      <span style="color:#f92672">&lt;prop</span> <span style="color:#a6e22e">key=</span><span style="color:#e6db74">&#34;/welcome.htm&#34;</span><span style="color:#f92672">&gt;</span>welcomeController<span style="color:#f92672">&lt;/prop&gt;</span>
-    <span style="color:#f92672">&lt;/props&gt;</span>
-  <span style="color:#f92672">&lt;/property&gt;</span>
-<span style="color:#f92672">&lt;/bean&gt;</span>
-<span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;welcomeController&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;com.abc.controller.WelcomeController&#34;</span> <span style="color:#f92672">/&gt;</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#070">&lt;bean</span> <span style="color:#00c">class=</span><span style="background-color:#fff0f0">&#34;org.springframework.web.servlet.handler.SimpleUrlHandlerMapping&#34;</span><span style="color:#070">&gt;</span>
+  <span style="color:#070">&lt;property</span> <span style="color:#00c">name=</span><span style="background-color:#fff0f0">&#34;mappings&#34;</span><span style="color:#070">&gt;</span>
+    <span style="color:#070">&lt;props&gt;</span>
+      <span style="color:#070">&lt;prop</span> <span style="color:#00c">key=</span><span style="background-color:#fff0f0">&#34;/welcome.htm&#34;</span><span style="color:#070">&gt;</span>welcomeController<span style="color:#070">&lt;/prop&gt;</span>
+    <span style="color:#070">&lt;/props&gt;</span>
+  <span style="color:#070">&lt;/property&gt;</span>
+<span style="color:#070">&lt;/bean&gt;</span>
+<span style="color:#070">&lt;bean</span> <span style="color:#00c">id=</span><span style="background-color:#fff0f0">&#34;welcomeController&#34;</span> <span style="color:#00c">class=</span><span style="background-color:#fff0f0">&#34;com.abc.controller.WelcomeController&#34;</span> <span style="color:#070">/&gt;</span>
 </code></pre></div></li>
 <li>
 <p><strong>DefaultAnnotationHandlerMapping</strong>  Annotation based @RequestMapping at class and method level.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.abc.controller<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.springframework.stereotype.Controller<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.springframework.web.bind.annotation.RequestMapping<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.springframework.web.bind.annotation.RequestMethod<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.springframework.web.servlet.ModelAndView<span style="color:#f92672">;</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-weight:bold">package</span> <span style="color:#0e84b5;font-weight:bold">com.abc.controller</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">org.springframework.stereotype.Controller</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">org.springframework.web.bind.annotation.RequestMapping</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">org.springframework.web.bind.annotation.RequestMethod</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">org.springframework.web.servlet.ModelAndView</span><span style="color:#333">;</span>
 
-<span style="color:#a6e22e">@Controller</span>
-<span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/welcome&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WelcomeController</span><span style="color:#f92672">{</span>
+<span style="color:#555;font-weight:bold">@Controller</span>
+<span style="color:#555;font-weight:bold">@RequestMapping</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;/welcome&#34;</span><span style="color:#333">)</span>
+<span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">WelcomeController</span><span style="color:#333">{</span>
 
-  <span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span>method <span style="color:#f92672">=</span> RequestMethod<span style="color:#f92672">.</span><span style="color:#a6e22e">GET</span><span style="color:#f92672">)</span>
-  <span style="color:#66d9ef">public</span> ModelAndView <span style="color:#a6e22e">helloWorld</span><span style="color:#f92672">(){</span>
-    ModelAndView model <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ModelAndView<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;WelcomePage&#34;</span><span style="color:#f92672">);</span>
-    model<span style="color:#f92672">.</span><span style="color:#a6e22e">addObject</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;msg&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;hello world&#34;</span><span style="color:#f92672">);</span>
-    <span style="color:#66d9ef">return</span> model<span style="color:#f92672">;</span>
-  <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
+  <span style="color:#555;font-weight:bold">@RequestMapping</span><span style="color:#333">(</span>method <span style="color:#333">=</span> RequestMethod<span style="color:#333">.</span><span style="color:#00c">GET</span><span style="color:#333">)</span>
+  <span style="color:#080;font-weight:bold">public</span> ModelAndView <span style="color:#06b;font-weight:bold">helloWorld</span><span style="color:#333">(){</span>
+    ModelAndView model <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> ModelAndView<span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;WelcomePage&#34;</span><span style="color:#333">);</span>
+    model<span style="color:#333">.</span><span style="color:#00c">addObject</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;msg&#34;</span><span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;hello world&#34;</span><span style="color:#333">);</span>
+    <span style="color:#080;font-weight:bold">return</span> model<span style="color:#333">;</span>
+  <span style="color:#333">}</span>
+<span style="color:#333">}</span>
 </code></pre></div></li>
 </ul>
 </li>

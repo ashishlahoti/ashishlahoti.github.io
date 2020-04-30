@@ -192,16 +192,16 @@ if (!doNotTrack) {
 <hr>
 <p>Variables defined using <code>var</code> keywords are having <code>function scope</code> which means new scope is created everytime you create a new function.</p>
 <p>Lexical scope is associated with function scope. Lexical scope of variables is defined by their position in source code. JavaScript resolves the variable starting at the innermost scope and searches outwards until it finds the variable it was looking for.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">me</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;global&#34;</span>;
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">whoami</span>(){
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">me</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;local&#34;</span>;
-    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">func</span>() {
-        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">me</span>;
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#080;font-weight:bold">var</span> me <span style="color:#333">=</span> <span style="background-color:#fff0f0">&#34;global&#34;</span>;
+<span style="color:#080;font-weight:bold">function</span> whoami(){
+    <span style="color:#080;font-weight:bold">var</span> me <span style="color:#333">=</span> <span style="background-color:#fff0f0">&#34;local&#34;</span>;
+    <span style="color:#080;font-weight:bold">function</span> func() {
+        <span style="color:#080;font-weight:bold">return</span> me;
     }
-    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">func</span>;
+    <span style="color:#080;font-weight:bold">return</span> func;
 }
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">me</span>);          <span style="color:#75715e">// global
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">whoami</span>()());  <span style="color:#75715e">// local
+console.log(me);          <span style="color:#888">// global
+</span><span style="color:#888"></span>console.log(whoami()());  <span style="color:#888">// local
 </span></code></pre></div><p>The value of the variable <code>me</code> outside is <code>global</code> whereas if you execute function <code>whoami()</code> from outside, value is <code>local</code></p>
 <h2 id="closures">Closures</h2>
 <hr>
@@ -212,20 +212,20 @@ if (!doNotTrack) {
 <p>When you define an inner function inside outer function,
 Closure is created at runtime for inner function bundled with outer function&rsquo;s scope.</p>
 <p>Let&rsquo;s look at the example to understand Closures</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">outerFunc</span>  <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">c</span>){ 
-   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">innerFunc</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">d</span>) {
-	  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
-      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">innerMostFunc</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">e</span>) {
-		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">c</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">d</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">e</span>;
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#080;font-weight:bold">var</span> outerFunc  <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">function</span>(c){ 
+   <span style="color:#080;font-weight:bold">var</span> a <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">1</span>;
+   <span style="color:#080;font-weight:bold">var</span> innerFunc <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">function</span>(d) {
+	  <span style="color:#080;font-weight:bold">var</span> b <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">2</span>;
+      <span style="color:#080;font-weight:bold">var</span> innerMostFunc <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">function</span>(e) {
+		<span style="color:#080;font-weight:bold">return</span> a <span style="color:#333">+</span> b <span style="color:#333">+</span> c <span style="color:#333">+</span> d <span style="color:#333">+</span> e;
 	  }
-	  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">innerMostFunc</span>;
+	  <span style="color:#080;font-weight:bold">return</span> innerMostFunc;
    }
-   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">innerFunc</span>;
+   <span style="color:#080;font-weight:bold">return</span> innerFunc;
 }
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">dir</span>(<span style="color:#a6e22e">outerFunc</span>(<span style="color:#ae81ff">3</span>));        <span style="color:#75715e">//1. innerFunc
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">dir</span>(<span style="color:#a6e22e">outerFunc</span>(<span style="color:#ae81ff">3</span>)(<span style="color:#ae81ff">4</span>));     <span style="color:#75715e">//2. innerMostFunc
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">outerFunc</span>(<span style="color:#ae81ff">3</span>)(<span style="color:#ae81ff">4</span>)(<span style="color:#ae81ff">5</span>));  <span style="color:#75715e">//3. 15
+console.dir(outerFunc(<span style="color:#00d;font-weight:bold">3</span>));        <span style="color:#888">//1. innerFunc
+</span><span style="color:#888"></span>console.dir(outerFunc(<span style="color:#00d;font-weight:bold">3</span>)(<span style="color:#00d;font-weight:bold">4</span>));     <span style="color:#888">//2. innerMostFunc
+</span><span style="color:#888"></span>console.log(outerFunc(<span style="color:#00d;font-weight:bold">3</span>)(<span style="color:#00d;font-weight:bold">4</span>)(<span style="color:#00d;font-weight:bold">5</span>));  <span style="color:#888">//3. 15
 </span></code></pre></div><pre><code><div class="code_output">Output</div>
 <mark>▼ ƒ innerFunc(c)</mark>
     length: 1
@@ -284,30 +284,30 @@ Closure is created at runtime for inner function bundled with outer function&rsq
 </blockquote>
 <pre><code>f(a, b, c) =&gt; Currying =&gt; f(a)(b)(c)
 </code></pre><p>Let&rsquo;s convert this function</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">add</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">c</span>){
-    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">c</span>;
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#080;font-weight:bold">var</span> add <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">function</span>(a, b, c){
+    <span style="color:#080;font-weight:bold">return</span> a <span style="color:#333">+</span> b <span style="color:#333">+</span> c;
 }
 
-<span style="color:#a6e22e">add</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>); <span style="color:#75715e">//6
+add(<span style="color:#00d;font-weight:bold">1</span>, <span style="color:#00d;font-weight:bold">2</span>, <span style="color:#00d;font-weight:bold">3</span>); <span style="color:#888">//6
 </span></code></pre></div><p>to currying function</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">add</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">a</span>){
-    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">b</span>){
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">c</span>){
-            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">c</span>;
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#080;font-weight:bold">var</span> add <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">function</span>(a){
+    <span style="color:#080;font-weight:bold">return</span> <span style="color:#080;font-weight:bold">function</span>(b){
+        <span style="color:#080;font-weight:bold">return</span> <span style="color:#080;font-weight:bold">function</span>(c){
+            <span style="color:#080;font-weight:bold">return</span> a <span style="color:#333">+</span> b <span style="color:#333">+</span> c;
         }
     }
 }
-<span style="color:#a6e22e">add</span>(<span style="color:#ae81ff">1</span>)(<span style="color:#ae81ff">2</span>)(<span style="color:#ae81ff">3</span>); <span style="color:#75715e">//6
+add(<span style="color:#00d;font-weight:bold">1</span>)(<span style="color:#00d;font-weight:bold">2</span>)(<span style="color:#00d;font-weight:bold">3</span>); <span style="color:#888">//6
 </span></code></pre></div><p>One more example:-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sayWhat</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">a</span>){
-    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">b</span>){
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">c</span>){
-            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`say </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">a</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> to </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">b</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> using </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">c</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#080;font-weight:bold">var</span> sayWhat <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">function</span>(a){
+    <span style="color:#080;font-weight:bold">return</span> <span style="color:#080;font-weight:bold">function</span>(b){
+        <span style="color:#080;font-weight:bold">return</span> <span style="color:#080;font-weight:bold">function</span>(c){
+            console.log(<span style="background-color:#fff0f0">`say </span><span style="background-color:#eee">${</span>a<span style="background-color:#eee">}</span><span style="background-color:#fff0f0"> to </span><span style="background-color:#eee">${</span>b<span style="background-color:#eee">}</span><span style="background-color:#fff0f0"> using </span><span style="background-color:#eee">${</span>c<span style="background-color:#eee">}</span><span style="background-color:#fff0f0">`</span>);
         }
     }
 }
 
-<span style="color:#a6e22e">sayWhat</span>(<span style="color:#e6db74">&#34;hello&#34;</span>)(<span style="color:#e6db74">&#34;friends&#34;</span>)(<span style="color:#e6db74">&#34;currying function&#34;</span>);
+sayWhat(<span style="background-color:#fff0f0">&#34;hello&#34;</span>)(<span style="background-color:#fff0f0">&#34;friends&#34;</span>)(<span style="background-color:#fff0f0">&#34;currying function&#34;</span>);
 </code></pre></div><pre><code><div class="code_output">Output</div>
 say hello to friends using currying function
 </code></pre><p>In currying function, each nested function is keeping track of arguments passed in outer function in their closure,</p>

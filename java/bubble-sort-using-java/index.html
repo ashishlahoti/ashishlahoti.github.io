@@ -212,56 +212,56 @@ if (!doNotTrack) {
 <p>( 1 <strong>2 4</strong> 5 8 ) &mdash;&mdash; ( 1 <strong>2 4</strong> 5 8 )</p>
 <p>( 1 2 <strong>4 5</strong> 8 ) &mdash;&mdash; ( 1 2 <strong>4 5</strong> 8 )</p>
 <p>( 1 2 4 <strong>5 8</strong> ) &mdash;&mdash; ( 1 2 4 <strong>5 8</strong> )</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.abc<span style="color:#f92672">;</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-weight:bold">package</span> <span style="color:#0e84b5;font-weight:bold">com.abc</span><span style="color:#333">;</span>
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BubbleSort</span> <span style="color:#f92672">{</span>
+<span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">BubbleSort</span> <span style="color:#333">{</span>
 
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">){</span>
-        <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> array <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]{</span>5<span style="color:#f92672">,</span> 1<span style="color:#f92672">,</span> 12<span style="color:#f92672">,</span> <span style="color:#f92672">-</span>5<span style="color:#f92672">,</span> 16<span style="color:#f92672">};</span>
-        BubbleSort<span style="color:#f92672">.</span><span style="color:#a6e22e">sort</span><span style="color:#f92672">(</span>array<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
+    <span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">static</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">main</span><span style="color:#333">(</span>String<span style="color:#333">[]</span> args<span style="color:#333">){</span>
+        <span style="color:#339;font-weight:bold">int</span><span style="color:#333">[]</span> array <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> <span style="color:#339;font-weight:bold">int</span><span style="color:#333">[]{</span>5<span style="color:#333">,</span> 1<span style="color:#333">,</span> 12<span style="color:#333">,</span> <span style="color:#333">-</span>5<span style="color:#333">,</span> 16<span style="color:#333">};</span>
+        BubbleSort<span style="color:#333">.</span><span style="color:#00c">sort</span><span style="color:#333">(</span>array<span style="color:#333">);</span>
+    <span style="color:#333">}</span>
     
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sort</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> array<span style="color:#f92672">){</span>
-        <span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> array<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">;</span> i <span style="color:#f92672">&gt;</span> 0 <span style="color:#f92672">;</span> i <span style="color:#f92672">--,</span> count<span style="color:#f92672">++){</span>
-            <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 0 <span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;</span> array<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">-</span>1 <span style="color:#f92672">;</span> j<span style="color:#f92672">++,</span> count<span style="color:#f92672">++){</span>
-                <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>array<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> array<span style="color:#f92672">[</span>j<span style="color:#f92672">+</span>1<span style="color:#f92672">]){</span>
-                    swapNumbers<span style="color:#f92672">(</span>j<span style="color:#f92672">,</span> j<span style="color:#f92672">+</span>1<span style="color:#f92672">,</span> array<span style="color:#f92672">);</span>
-                <span style="color:#f92672">}</span>
-            <span style="color:#f92672">}</span>
-        <span style="color:#f92672">}</span>
-        printNumbers<span style="color:#f92672">(</span>array<span style="color:#f92672">,</span> count<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
+    <span style="color:#080;font-weight:bold">private</span> <span style="color:#080;font-weight:bold">static</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">sort</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">int</span><span style="color:#333">[]</span> array<span style="color:#333">){</span>
+        <span style="color:#339;font-weight:bold">int</span> count <span style="color:#333">=</span> 0<span style="color:#333">;</span>
+        <span style="color:#080;font-weight:bold">for</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">int</span> i <span style="color:#333">=</span> array<span style="color:#333">.</span><span style="color:#00c">length</span> <span style="color:#333">;</span> i <span style="color:#333">&gt;</span> 0 <span style="color:#333">;</span> i <span style="color:#333">--,</span> count<span style="color:#333">++){</span>
+            <span style="color:#080;font-weight:bold">for</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">int</span> j <span style="color:#333">=</span> 0 <span style="color:#333">;</span> j <span style="color:#333">&lt;</span> array<span style="color:#333">.</span><span style="color:#00c">length</span><span style="color:#333">-</span>1 <span style="color:#333">;</span> j<span style="color:#333">++,</span> count<span style="color:#333">++){</span>
+                <span style="color:#080;font-weight:bold">if</span><span style="color:#333">(</span>array<span style="color:#333">[</span>j<span style="color:#333">]</span> <span style="color:#333">&gt;</span> array<span style="color:#333">[</span>j<span style="color:#333">+</span>1<span style="color:#333">]){</span>
+                    swapNumbers<span style="color:#333">(</span>j<span style="color:#333">,</span> j<span style="color:#333">+</span>1<span style="color:#333">,</span> array<span style="color:#333">);</span>
+                <span style="color:#333">}</span>
+            <span style="color:#333">}</span>
+        <span style="color:#333">}</span>
+        printNumbers<span style="color:#333">(</span>array<span style="color:#333">,</span> count<span style="color:#333">);</span>
+    <span style="color:#333">}</span>
     
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">swapNumbers</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> j<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> array<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">int</span> temp<span style="color:#f92672">;</span>
-        temp <span style="color:#f92672">=</span> array<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
-        array<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> array<span style="color:#f92672">[</span>j<span style="color:#f92672">];</span>
-        array<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> temp<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
+    <span style="color:#080;font-weight:bold">private</span> <span style="color:#080;font-weight:bold">static</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">swapNumbers</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">int</span> i<span style="color:#333">,</span> <span style="color:#339;font-weight:bold">int</span> j<span style="color:#333">,</span> <span style="color:#339;font-weight:bold">int</span><span style="color:#333">[]</span> array<span style="color:#333">)</span> <span style="color:#333">{</span>
+        <span style="color:#339;font-weight:bold">int</span> temp<span style="color:#333">;</span>
+        temp <span style="color:#333">=</span> array<span style="color:#333">[</span>i<span style="color:#333">];</span>
+        array<span style="color:#333">[</span>i<span style="color:#333">]</span> <span style="color:#333">=</span> array<span style="color:#333">[</span>j<span style="color:#333">];</span>
+        array<span style="color:#333">[</span>j<span style="color:#333">]</span> <span style="color:#333">=</span> temp<span style="color:#333">;</span>
+    <span style="color:#333">}</span>
     
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printNumbers</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> array<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> count<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Sorted Array : {&#34;</span><span style="color:#f92672">);</span>
-        <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">:</span> array<span style="color:#f92672">){</span>
-            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span>i <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;}, n : &#34;</span> <span style="color:#f92672">+</span> array<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;, comparisons : &#34;</span> <span style="color:#f92672">+</span> count<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
+    <span style="color:#080;font-weight:bold">private</span> <span style="color:#080;font-weight:bold">static</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">printNumbers</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">int</span><span style="color:#333">[]</span> array<span style="color:#333">,</span> <span style="color:#339;font-weight:bold">int</span> count<span style="color:#333">)</span> <span style="color:#333">{</span>
+        System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">.</span><span style="color:#00c">print</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;Sorted Array : {&#34;</span><span style="color:#333">);</span>
+        <span style="color:#080;font-weight:bold">for</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">int</span> i <span style="color:#333">:</span> array<span style="color:#333">){</span>
+            System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">.</span><span style="color:#00c">print</span><span style="color:#333">(</span>i <span style="color:#333">+</span> <span style="background-color:#fff0f0">&#34; &#34;</span><span style="color:#333">);</span>
+        <span style="color:#333">}</span>
+        System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">.</span><span style="color:#00c">print</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;}, n : &#34;</span> <span style="color:#333">+</span> array<span style="color:#333">.</span><span style="color:#00c">length</span> <span style="color:#333">+</span> <span style="background-color:#fff0f0">&#34;, comparisons : &#34;</span> <span style="color:#333">+</span> count<span style="color:#333">);</span>
+    <span style="color:#333">}</span>
+<span style="color:#333">}</span>
 </code></pre></div><pre><code><div class="code_output">Output</div>
 Sorted Array : {-5 1 5 12 16 }, n : 5, comparisons : 25
 </code></pre><p>Time Complexity for worst case is O(n<sup>2</sup>). Algorithm can be further improved :</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sort</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> array<span style="color:#f92672">){</span>
-    <span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> array<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">;</span> i <span style="color:#f92672">&gt;</span> 0 <span style="color:#f92672">;</span> i <span style="color:#f92672">--,</span> count<span style="color:#f92672">++){</span>
-        <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 0 <span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;</span> i<span style="color:#f92672">-</span>1 <span style="color:#f92672">;</span> j<span style="color:#f92672">++,</span> count<span style="color:#f92672">++){</span>
-            <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>array<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> array<span style="color:#f92672">[</span>j<span style="color:#f92672">+</span>1<span style="color:#f92672">]){</span>
-                swapNumbers<span style="color:#f92672">(</span>j<span style="color:#f92672">,</span> j<span style="color:#f92672">+</span>1<span style="color:#f92672">,</span> array<span style="color:#f92672">);</span>
-            <span style="color:#f92672">}</span>
-        <span style="color:#f92672">}</span>
-    <span style="color:#f92672">}</span>
-    printNumbers<span style="color:#f92672">(</span>array<span style="color:#f92672">,</span> count<span style="color:#f92672">);</span>
-<span style="color:#f92672">}</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-weight:bold">private</span> <span style="color:#080;font-weight:bold">static</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">sort</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">int</span><span style="color:#333">[]</span> array<span style="color:#333">){</span>
+    <span style="color:#339;font-weight:bold">int</span> count <span style="color:#333">=</span> 0<span style="color:#333">;</span>
+    <span style="color:#080;font-weight:bold">for</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">int</span> i <span style="color:#333">=</span> array<span style="color:#333">.</span><span style="color:#00c">length</span> <span style="color:#333">;</span> i <span style="color:#333">&gt;</span> 0 <span style="color:#333">;</span> i <span style="color:#333">--,</span> count<span style="color:#333">++){</span>
+        <span style="color:#080;font-weight:bold">for</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">int</span> j <span style="color:#333">=</span> 0 <span style="color:#333">;</span> j <span style="color:#333">&lt;</span> i<span style="color:#333">-</span>1 <span style="color:#333">;</span> j<span style="color:#333">++,</span> count<span style="color:#333">++){</span>
+            <span style="color:#080;font-weight:bold">if</span><span style="color:#333">(</span>array<span style="color:#333">[</span>j<span style="color:#333">]</span> <span style="color:#333">&gt;</span> array<span style="color:#333">[</span>j<span style="color:#333">+</span>1<span style="color:#333">]){</span>
+                swapNumbers<span style="color:#333">(</span>j<span style="color:#333">,</span> j<span style="color:#333">+</span>1<span style="color:#333">,</span> array<span style="color:#333">);</span>
+            <span style="color:#333">}</span>
+        <span style="color:#333">}</span>
+    <span style="color:#333">}</span>
+    printNumbers<span style="color:#333">(</span>array<span style="color:#333">,</span> count<span style="color:#333">);</span>
+<span style="color:#333">}</span>
 </code></pre></div><pre><code><div class="code_output">Output</div>
 Sorted Array : {-5 1 5 12 16 }, n : 5, comparisons : 15
 </code></pre>

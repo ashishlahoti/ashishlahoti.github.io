@@ -209,19 +209,19 @@ if (!doNotTrack) {
 			<p>This post describes the usage of various Object methods like <code>Object.create()</code>, <code>Object.assign()</code>, <code>Object.freeze()</code>, <code>Object.seal()</code> and many more available in JavaScript with examples.</p>
 <h2 id="objectcreate">Object.create()</h2>
 <p>The <code>Object.create()</code> method is used to create a new object with its prototype set to existing object.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">car</span> <span style="color:#f92672">=</span> {
-    <span style="color:#a6e22e">color</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;black&#34;</span>,
-    <span style="color:#a6e22e">brand</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Toyota&#34;</span>,
-    <span style="color:#a6e22e">drive</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>(){
-      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Driving a </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">isTopModel</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#39;top model&#39;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">color</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> color </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">brand</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> car`</span>);
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">var</span> car <span style="color:#333">=</span> {
+    color<span style="color:#333">:</span> <span style="background-color:#fff0f0">&#34;black&#34;</span>,
+    brand<span style="color:#333">:</span> <span style="background-color:#fff0f0">&#34;Toyota&#34;</span>,
+    drive<span style="color:#333">:</span> <span style="color:#080;font-weight:bold">function</span>(){
+      console.log(<span style="background-color:#fff0f0">`Driving a </span><span style="background-color:#eee">${</span><span style="color:#080;font-weight:bold">this</span>.isTopModel <span style="color:#333">?</span> <span style="background-color:#fff0f0">&#39;top model&#39;</span> <span style="color:#333">:</span> <span style="background-color:#fff0f0">&#39;&#39;</span><span style="background-color:#eee">}</span><span style="background-color:#fff0f0"> </span><span style="background-color:#eee">${</span><span style="color:#080;font-weight:bold">this</span>.color<span style="background-color:#eee">}</span><span style="background-color:#fff0f0"> color </span><span style="background-color:#eee">${</span><span style="color:#080;font-weight:bold">this</span>.brand<span style="background-color:#eee">}</span><span style="background-color:#fff0f0"> car`</span>);
     }
 }
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">newCar</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">create</span>(<span style="color:#a6e22e">car</span>);
-<span style="color:#a6e22e">newCar</span>.<span style="color:#a6e22e">brand</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Honda&#34;</span>;
-<span style="color:#a6e22e">newCar</span>.<span style="color:#a6e22e">isTopModel</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+<span style="color:#080;font-weight:bold">var</span> newCar <span style="color:#333">=</span> <span style="color:#007020">Object</span>.create(car);
+newCar.brand <span style="color:#333">=</span> <span style="background-color:#fff0f0">&#34;Honda&#34;</span>;
+newCar.isTopModel <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">true</span>;
 
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">car</span>.<span style="color:#a6e22e">isPrototypeOf</span>(<span style="color:#a6e22e">newCar</span>)); <span style="color:#75715e">//true
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">newCar</span>.<span style="color:#a6e22e">drive</span>();
+console.log(car.isPrototypeOf(newCar)); <span style="color:#888">//true
+</span><span style="color:#888"></span>newCar.drive();
 </code></pre></div><pre><code><div class="code_output">Output</div>
 true
 Driving a top model black color Honda car
@@ -229,58 +229,58 @@ Driving a top model black color Honda car
 <h2 id="objectassign">Object.assign()</h2>
 <p><code>Object.assign()</code> is used to copy the properties and functions of one object in another object.</p>
 <p>We can merge two objects using <code>Object.assign()</code> as follows:-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// Initialize an object
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">favorites</span> <span style="color:#f92672">=</span> {
-    <span style="color:#a6e22e">color</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Red&#39;</span>,
-    <span style="color:#a6e22e">number</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">5</span>   
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#888">// Initialize an object
+</span><span style="color:#888"></span><span style="color:#080;font-weight:bold">const</span> favorites <span style="color:#333">=</span> {
+    color<span style="color:#333">:</span> <span style="background-color:#fff0f0">&#39;Red&#39;</span>,
+    number<span style="color:#333">:</span> <span style="color:#00d;font-weight:bold">5</span>   
 };
 
-<span style="color:#75715e">// Initialize another object
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">somemore</span> <span style="color:#f92672">=</span> {
-    <span style="color:#a6e22e">fruit</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Mango&#39;</span>,
-    <span style="color:#a6e22e">movies</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;Spider Man&#34;</span>, <span style="color:#e6db74">&#34;Conjuring&#34;</span>],   
+<span style="color:#888">// Initialize another object
+</span><span style="color:#888"></span><span style="color:#080;font-weight:bold">const</span> somemore <span style="color:#333">=</span> {
+    fruit<span style="color:#333">:</span> <span style="background-color:#fff0f0">&#39;Mango&#39;</span>,
+    movies<span style="color:#333">:</span> [<span style="background-color:#fff0f0">&#34;Spider Man&#34;</span>, <span style="background-color:#fff0f0">&#34;Conjuring&#34;</span>],   
 };
 
-<span style="color:#75715e">// Merge the objects
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Object.<span style="color:#a6e22e">assign</span>(<span style="color:#a6e22e">favorites</span>, <span style="color:#a6e22e">somemore</span>));
+<span style="color:#888">// Merge the objects
+</span><span style="color:#888"></span>console.log(<span style="color:#007020">Object</span>.assign(favorites, somemore));
 </code></pre></div><pre><code><div class="code_output">Output</div>
 {color: &quot;Red&quot;, number: 5, fruit: &quot;Mango&quot;, movies: [&quot;Spider Man&quot;, &quot;Conjuring&quot;]}
 </code></pre><p>Also can be used in Class <code>constructor</code> to assign all values to <code>this</code> as follows:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Car</span> {
-    <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">brand</span>, <span style="color:#a6e22e">color</span>, <span style="color:#a6e22e">price</span>){
-        Object.<span style="color:#a6e22e">assign</span>(<span style="color:#66d9ef">this</span>, {<span style="color:#a6e22e">brand</span>, <span style="color:#a6e22e">color</span>, <span style="color:#a6e22e">price</span>});
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">class</span> Car {
+    constructor(brand, color, price){
+        <span style="color:#007020">Object</span>.assign(<span style="color:#080;font-weight:bold">this</span>, {brand, color, price});
     }
 }
 </code></pre></div><h2 id="objectfreeze">Object.freeze()</h2>
 <p><code>Object.freeze()</code> freezes the state of an Object once this method is called. It ignores if any existing property is modified, and if any new property is added.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// Initialize an object
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {
-    <span style="color:#a6e22e">username</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;admin&#39;</span>,
-    <span style="color:#a6e22e">password</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;password@123&#39;</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#888">// Initialize an object
+</span><span style="color:#888"></span><span style="color:#080;font-weight:bold">const</span> user <span style="color:#333">=</span> {
+    username<span style="color:#333">:</span> <span style="background-color:#fff0f0">&#39;admin&#39;</span>,
+    password<span style="color:#333">:</span> <span style="background-color:#fff0f0">&#39;password@123&#39;</span>
 };
-<span style="color:#75715e">// Freeze the object
-</span><span style="color:#75715e"></span>Object.<span style="color:#a6e22e">freeze</span>(<span style="color:#a6e22e">user</span>);
+<span style="color:#888">// Freeze the object
+</span><span style="color:#888"></span><span style="color:#007020">Object</span>.freeze(user);
 
-<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">password</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;*******&#39;</span>;
-<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">active</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+user.password <span style="color:#333">=</span> <span style="background-color:#fff0f0">&#39;*******&#39;</span>;
+user.active <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">true</span>;
 
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">user</span>);
+console.log(user);
 </code></pre></div><pre><code><div class="code_output">Output</div>
 {username: &quot;admin&quot;, password: &quot;password@123&quot;}
 </code></pre><h2 id="objectseal">Object.seal()</h2>
 <p><code>Object.seal()</code> seals the state of an Object once this method is called. It allows the modification of existing properties, but ignores if any new property is added.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// Initialize an object
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {
-    <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;admin&#39;</span>,
-    <span style="color:#a6e22e">password</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;password@123&#39;</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#888">// Initialize an object
+</span><span style="color:#888"></span><span style="color:#080;font-weight:bold">const</span> user <span style="color:#333">=</span> {
+    name<span style="color:#333">:</span> <span style="background-color:#fff0f0">&#39;admin&#39;</span>,
+    password<span style="color:#333">:</span> <span style="background-color:#fff0f0">&#39;password@123&#39;</span>
 };
-<span style="color:#75715e">// Seal the object
-</span><span style="color:#75715e"></span>Object.<span style="color:#a6e22e">seal</span>(<span style="color:#a6e22e">user</span>);
+<span style="color:#888">// Seal the object
+</span><span style="color:#888"></span><span style="color:#007020">Object</span>.seal(user);
 
-<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">password</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;*******&#39;</span>;
-<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">active</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+user.password <span style="color:#333">=</span> <span style="background-color:#fff0f0">&#39;*******&#39;</span>;
+user.active <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">true</span>;
 
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">user</span>);
+console.log(user);
 </code></pre></div><pre><code><div class="code_output">Output</div>
 {name: &quot;admin&quot;, password: &quot;*******&quot;}
 </code></pre><h2 id="objectdefineproperty">Object.defineProperty()</h2>
@@ -292,58 +292,58 @@ Driving a top model black color Honda car
 <li><strong><code>configurable</code>:</strong> defaults to false, if true means property can be deleted</li>
 <li><strong><code>enumerable</code>:</strong> defaults to false, if true means property can be enumerated such as in a for..in loop</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {};
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">var</span> user <span style="color:#333">=</span> {};
 
-Object.<span style="color:#a6e22e">defineProperty</span>(<span style="color:#a6e22e">user</span>, <span style="color:#e6db74">&#34;name&#34;</span>, {
-  <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;admin&#34;</span>
+<span style="color:#007020">Object</span>.defineProperty(user, <span style="background-color:#fff0f0">&#34;name&#34;</span>, {
+  value<span style="color:#333">:</span> <span style="background-color:#fff0f0">&#34;admin&#34;</span>
 });
 
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">user</span>);
+console.log(user);
 </code></pre></div><p>is equivalent to</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {};
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">var</span> user <span style="color:#333">=</span> {};
 
-Object.<span style="color:#a6e22e">defineProperty</span>(<span style="color:#a6e22e">user</span>, <span style="color:#e6db74">&#34;name&#34;</span>, {
-  <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;admin&#34;</span>,
-  <span style="color:#a6e22e">writable</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
-  <span style="color:#a6e22e">configurable</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
-  <span style="color:#a6e22e">enumerable</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>
+<span style="color:#007020">Object</span>.defineProperty(user, <span style="background-color:#fff0f0">&#34;name&#34;</span>, {
+  value<span style="color:#333">:</span> <span style="background-color:#fff0f0">&#34;admin&#34;</span>,
+  writable<span style="color:#333">:</span> <span style="color:#080;font-weight:bold">false</span>,
+  configurable<span style="color:#333">:</span> <span style="color:#080;font-weight:bold">false</span>,
+  enumerable<span style="color:#333">:</span> <span style="color:#080;font-weight:bold">false</span>
 });
 
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">user</span>);
+console.log(user);
 </code></pre></div><pre><code><div class="code_output">Output</div>
 {name: &quot;admin&quot;}
 </code></pre><h2 id="objectdefineproperties">Object.defineProperties()</h2>
 <p><code>Object.defineProperties()</code> can be used to define multiple properites in existing object.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> {};
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">var</span> user <span style="color:#333">=</span> {};
 
-Object.<span style="color:#a6e22e">defineProperties</span>(<span style="color:#a6e22e">user</span>, {
-  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> {
-    <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;admin&#34;</span>,
-    <span style="color:#a6e22e">writable</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
-    <span style="color:#a6e22e">enumerable</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+<span style="color:#007020">Object</span>.defineProperties(user, {
+  name<span style="color:#333">:</span> {
+    value<span style="color:#333">:</span> <span style="background-color:#fff0f0">&#34;admin&#34;</span>,
+    writable<span style="color:#333">:</span> <span style="color:#080;font-weight:bold">true</span>,
+    enumerable<span style="color:#333">:</span> <span style="color:#080;font-weight:bold">true</span>
   },
-  <span style="color:#a6e22e">password</span><span style="color:#f92672">:</span> {
-    <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;password@123&#39;</span>,
-    <span style="color:#a6e22e">writable</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
-    <span style="color:#a6e22e">enumerable</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>
+  password<span style="color:#333">:</span> {
+    value<span style="color:#333">:</span> <span style="background-color:#fff0f0">&#39;password@123&#39;</span>,
+    writable<span style="color:#333">:</span> <span style="color:#080;font-weight:bold">false</span>,
+    enumerable<span style="color:#333">:</span> <span style="color:#080;font-weight:bold">false</span>
   }      
 });
 
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">user</span>);
+console.log(user);
 </code></pre></div><pre><code><div class="code_output">Output</div>
 {name: &quot;admin&quot;, password: &quot;password@123&quot;}
 </code></pre><h2 id="objectkeys-objectvalues--objectentries">Object.keys(), Object.values() &amp; Object.entries()</h2>
 <p><code>Object.keys()</code>, <code>Object.values()</code> and <code>Object.entries()</code> can be used iterator from the object as follows:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">favorites</span> <span style="color:#f92672">=</span> {
-    <span style="color:#a6e22e">color</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Red&#39;</span>,
-    <span style="color:#a6e22e">number</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">5</span>,
-    <span style="color:#a6e22e">vegan</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
-    <span style="color:#a6e22e">movies</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;Spider Man&#34;</span>, <span style="color:#e6db74">&#34;Conjuring&#34;</span>]   
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">let</span> favorites <span style="color:#333">=</span> {
+    color<span style="color:#333">:</span> <span style="background-color:#fff0f0">&#39;Red&#39;</span>,
+    number<span style="color:#333">:</span> <span style="color:#00d;font-weight:bold">5</span>,
+    vegan<span style="color:#333">:</span> <span style="color:#080;font-weight:bold">true</span>,
+    movies<span style="color:#333">:</span> [<span style="background-color:#fff0f0">&#34;Spider Man&#34;</span>, <span style="background-color:#fff0f0">&#34;Conjuring&#34;</span>]   
 };
 
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;keys&#34;</span>, Object.<span style="color:#a6e22e">keys</span>(<span style="color:#a6e22e">favorites</span>));
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;values&#34;</span>, Object.<span style="color:#a6e22e">values</span>(<span style="color:#a6e22e">favorites</span>));
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;entries&#34;</span>, Object.<span style="color:#a6e22e">entries</span>(<span style="color:#a6e22e">favorites</span>));
+console.log(<span style="background-color:#fff0f0">&#34;keys&#34;</span>, <span style="color:#007020">Object</span>.keys(favorites));
+console.log(<span style="background-color:#fff0f0">&#34;values&#34;</span>, <span style="color:#007020">Object</span>.values(favorites));
+console.log(<span style="background-color:#fff0f0">&#34;entries&#34;</span>, <span style="color:#007020">Object</span>.entries(favorites));
 
 </code></pre></div><pre><code><div class="code_output">Output</div>
 keys [&quot;color&quot;, &quot;number&quot;, &quot;vegan&quot;, &quot;movies&quot;]
@@ -357,39 +357,39 @@ entries [
     [&quot;movies&quot;, [&quot;Spider Man&quot;, &quot;Conjuring&quot;]
   ]
 </code></pre><p><code>Object.keys()</code> and <code>Object.entries()</code> can be used to iterate through the keys and values of an object as follows:-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">Object.<span style="color:#a6e22e">keys</span>(<span style="color:#a6e22e">favorites</span>).<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">key</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">key</span><span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">favorites</span>[<span style="color:#a6e22e">key</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>));
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007020">Object</span>.keys(favorites).forEach(key =&gt; console.log(<span style="background-color:#fff0f0">`</span><span style="background-color:#eee">${</span>key<span style="background-color:#eee">}</span><span style="background-color:#fff0f0">: </span><span style="background-color:#eee">${</span>favorites[key]<span style="background-color:#eee">}</span><span style="background-color:#fff0f0">`</span>));
 
-Object.<span style="color:#a6e22e">entries</span>(<span style="color:#a6e22e">favorites</span>).<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">entry</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">entry</span>[<span style="color:#ae81ff">0</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">entry</span>[<span style="color:#ae81ff">1</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>));
+<span style="color:#007020">Object</span>.entries(favorites).forEach(entry =&gt; console.log(<span style="background-color:#fff0f0">`</span><span style="background-color:#eee">${</span>entry[<span style="color:#00d;font-weight:bold">0</span>]<span style="background-color:#eee">}</span><span style="background-color:#fff0f0">: </span><span style="background-color:#eee">${</span>entry[<span style="color:#00d;font-weight:bold">1</span>]<span style="background-color:#eee">}</span><span style="background-color:#fff0f0">`</span>));
 </code></pre></div><h2 id="objectis">Object.is()</h2>
 <p>ES6 has introduced a new method <code>Object.is()</code> to compare two values, it works very much similar to strict comparison operator <code>===</code> and also avoid confusion of NaN comparisons and +0/-0 comparisons. It is recommended to use <code>Object.is()</code> for value comparisons.</p>
 <p>let&rsquo;s check it out,</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Object.<span style="color:#a6e22e">is</span>(<span style="color:#e6db74">&#34;cnc&#34;</span>, <span style="color:#e6db74">&#34;cnc&#34;</span>));     <span style="color:#75715e">// true, same content and type
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Object.<span style="color:#a6e22e">is</span>(<span style="color:#ae81ff">12345</span>, <span style="color:#ae81ff">12345</span>));     <span style="color:#75715e">// true, same content and type
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Object.<span style="color:#a6e22e">is</span>(<span style="color:#66d9ef">false</span>, <span style="color:#66d9ef">false</span>));     <span style="color:#75715e">// true, same content and type
-</span><span style="color:#75715e"></span>
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Object.<span style="color:#a6e22e">is</span>(<span style="color:#ae81ff">12345</span>, <span style="color:#e6db74">&#34;12345&#34;</span>));   <span style="color:#75715e">// false, different type
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Object.<span style="color:#a6e22e">is</span>(<span style="color:#ae81ff">0</span>, <span style="color:#66d9ef">false</span>));         <span style="color:#75715e">// false, different type
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Object.<span style="color:#a6e22e">is</span>(<span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#66d9ef">false</span>));        <span style="color:#75715e">// false, different type
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Object.<span style="color:#a6e22e">is</span>(<span style="color:#66d9ef">null</span>, <span style="color:#66d9ef">undefined</span>));  <span style="color:#75715e">// false, different type
-</span><span style="color:#75715e"></span>
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Object.<span style="color:#a6e22e">is</span>([], []));           <span style="color:#75715e">// false, both refers to different object in memory
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Object.<span style="color:#a6e22e">is</span>([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>], [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>]));   <span style="color:#75715e">// false, both refers to different object in memory
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Object.<span style="color:#a6e22e">is</span>({}, {}));           <span style="color:#75715e">// false, both refers to different object in memory
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">array1</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>];
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">array2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">array1</span>;
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Object.<span style="color:#a6e22e">is</span>(<span style="color:#a6e22e">array1</span>, <span style="color:#a6e22e">array2</span>));   <span style="color:#75715e">// true, both refers to same array
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">obj1</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">app</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;cnc&#34;</span>};
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">obj2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">obj1</span>;
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Object.<span style="color:#a6e22e">is</span>(<span style="color:#a6e22e">obj1</span>, <span style="color:#a6e22e">obj2</span>));       <span style="color:#75715e">// true, both refers to same object
-</span><span style="color:#75715e"></span>
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">NaN</span> <span style="color:#f92672">===</span> <span style="color:#66d9ef">NaN</span>);                 <span style="color:#75715e">// false, confusing, content and type is same
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Object.<span style="color:#a6e22e">is</span>(<span style="color:#66d9ef">NaN</span>, <span style="color:#66d9ef">NaN</span>));         <span style="color:#75715e">// true, es6 is good, same content and type
-</span><span style="color:#75715e"></span>
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#f92672">+</span><span style="color:#ae81ff">0</span> <span style="color:#f92672">===</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0</span>);                   <span style="color:#75715e">// true, confusing, content is different
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Object.<span style="color:#a6e22e">is</span>(<span style="color:#f92672">+</span><span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">0</span>));           <span style="color:#75715e">// false, es6 is good, different content
-</span><span style="color:#75715e"></span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">console.log(<span style="color:#007020">Object</span>.is(<span style="background-color:#fff0f0">&#34;cnc&#34;</span>, <span style="background-color:#fff0f0">&#34;cnc&#34;</span>));     <span style="color:#888">// true, same content and type
+</span><span style="color:#888"></span>console.log(<span style="color:#007020">Object</span>.is(<span style="color:#00d;font-weight:bold">12345</span>, <span style="color:#00d;font-weight:bold">12345</span>));     <span style="color:#888">// true, same content and type
+</span><span style="color:#888"></span>console.log(<span style="color:#007020">Object</span>.is(<span style="color:#080;font-weight:bold">false</span>, <span style="color:#080;font-weight:bold">false</span>));     <span style="color:#888">// true, same content and type
+</span><span style="color:#888"></span>
+console.log(<span style="color:#007020">Object</span>.is(<span style="color:#00d;font-weight:bold">12345</span>, <span style="background-color:#fff0f0">&#34;12345&#34;</span>));   <span style="color:#888">// false, different type
+</span><span style="color:#888"></span>console.log(<span style="color:#007020">Object</span>.is(<span style="color:#00d;font-weight:bold">0</span>, <span style="color:#080;font-weight:bold">false</span>));         <span style="color:#888">// false, different type
+</span><span style="color:#888"></span>console.log(<span style="color:#007020">Object</span>.is(<span style="background-color:#fff0f0">&#34;&#34;</span>, <span style="color:#080;font-weight:bold">false</span>));        <span style="color:#888">// false, different type
+</span><span style="color:#888"></span>console.log(<span style="color:#007020">Object</span>.is(<span style="color:#080;font-weight:bold">null</span>, <span style="color:#080;font-weight:bold">undefined</span>));  <span style="color:#888">// false, different type
+</span><span style="color:#888"></span>
+console.log(<span style="color:#007020">Object</span>.is([], []));           <span style="color:#888">// false, both refers to different object in memory
+</span><span style="color:#888"></span>console.log(<span style="color:#007020">Object</span>.is([<span style="color:#00d;font-weight:bold">1</span>, <span style="color:#00d;font-weight:bold">2</span>], [<span style="color:#00d;font-weight:bold">1</span>, <span style="color:#00d;font-weight:bold">2</span>]));   <span style="color:#888">// false, both refers to different object in memory
+</span><span style="color:#888"></span>console.log(<span style="color:#007020">Object</span>.is({}, {}));           <span style="color:#888">// false, both refers to different object in memory
+</span><span style="color:#888"></span>
+<span style="color:#080;font-weight:bold">var</span> array1 <span style="color:#333">=</span> [<span style="color:#00d;font-weight:bold">1</span>, <span style="color:#00d;font-weight:bold">2</span>, <span style="color:#00d;font-weight:bold">3</span>, <span style="color:#00d;font-weight:bold">4</span>, <span style="color:#00d;font-weight:bold">5</span>];
+<span style="color:#080;font-weight:bold">var</span> array2 <span style="color:#333">=</span> array1;
+console.log(<span style="color:#007020">Object</span>.is(array1, array2));   <span style="color:#888">// true, both refers to same array
+</span><span style="color:#888"></span>
+<span style="color:#080;font-weight:bold">var</span> obj1 <span style="color:#333">=</span> { app <span style="color:#333">:</span> <span style="background-color:#fff0f0">&#34;cnc&#34;</span>};
+<span style="color:#080;font-weight:bold">var</span> obj2 <span style="color:#333">=</span> obj1;
+console.log(<span style="color:#007020">Object</span>.is(obj1, obj2));       <span style="color:#888">// true, both refers to same object
+</span><span style="color:#888"></span>
+console.log(<span style="color:#080;font-weight:bold">NaN</span> <span style="color:#333">===</span> <span style="color:#080;font-weight:bold">NaN</span>);                 <span style="color:#888">// false, confusing, content and type is same
+</span><span style="color:#888"></span>console.log(<span style="color:#007020">Object</span>.is(<span style="color:#080;font-weight:bold">NaN</span>, <span style="color:#080;font-weight:bold">NaN</span>));         <span style="color:#888">// true, es6 is good, same content and type
+</span><span style="color:#888"></span>
+console.log(<span style="color:#333">+</span><span style="color:#00d;font-weight:bold">0</span> <span style="color:#333">===</span> <span style="color:#333">-</span><span style="color:#00d;font-weight:bold">0</span>);                   <span style="color:#888">// true, confusing, content is different
+</span><span style="color:#888"></span>console.log(<span style="color:#007020">Object</span>.is(<span style="color:#333">+</span><span style="color:#00d;font-weight:bold">0</span>, <span style="color:#333">-</span><span style="color:#00d;font-weight:bold">0</span>));           <span style="color:#888">// false, es6 is good, different content
+</span><span style="color:#888"></span>
 </code></pre></div><h2 id="summary">Summary</h2>
 <p>Javascript Object provides very useful methods to</p>
 <ul>

@@ -84,7 +84,7 @@ if (!doNotTrack) {
     },
     "image": "https:\/\/codingnconcepts.com\/favicon-32x32.png",
     "url" : "https:\/\/codingnconcepts.com\/spring-boot\/configure-info-and-health-endpoints\/",
-    "wordCount" : "292",
+    "wordCount" : "261",
     "genre" : [ "Spring Boot" , "Microservice" ],
     "keywords" : [ ]
 }
@@ -191,10 +191,10 @@ if (!doNotTrack) {
 <h3 id="actuator">Actuator</h3>
 <p>Good news is that both endpoints come out of the box with <code>Spring Boot Actuator</code>. To enable this, just add <strong>spring-boot-starter-actuator</strong> dependency in your spring boot application.</p>
 <h6 id="pomxml">pom.xml</h6>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-pom.xml" data-lang="pom.xml"><span style="color:#f92672">&lt;dependency&gt;</span>
-    <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-    <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-actuator<span style="color:#f92672">&lt;/artifactId&gt;</span>
-<span style="color:#f92672">&lt;/dependency&gt;</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-pom.xml" data-lang="pom.xml"><span style="color:#070">&lt;dependency&gt;</span>
+    <span style="color:#070">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#070">&lt;/groupId&gt;</span>
+    <span style="color:#070">&lt;artifactId&gt;</span>spring-boot-starter-actuator<span style="color:#070">&lt;/artifactId&gt;</span>
+<span style="color:#070">&lt;/dependency&gt;</span>
 </code></pre></div><p><br />
 When you start your application after adding actuator dependency, You will see following in the startup logs that actuator exposed two endpoints i.e. <em>/actuator/info</em> and <em>/actuator/health</em></p>
 <pre><code>2020-04-20 18:36:12.881 INFO [main] o.s.b.a.e.web.EndpointLinksResolver: Exposing 2 endpoint(s) beneath base path '/actuator'
@@ -209,20 +209,20 @@ When you start your application after adding actuator dependency, You will see f
 
 <p>We see that initially <em><strong>/actuator/info</strong></em> endpoint gives an empty JSON. We will now add some properties related to app info.</p>
 <h6 id="applicationyml">application.yml</h6>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-application.yml" data-lang="application.yml"><span style="color:#66d9ef">info</span>:
-  <span style="color:#66d9ef">app</span>:
-    <span style="color:#66d9ef">name</span>: spring boot microservice
-    <span style="color:#66d9ef">version</span>: <span style="color:#ae81ff">1.0</span>.0_RELEASE
-    <span style="color:#66d9ef">description</span>: more details about sprint boot microservice
-    <span style="color:#66d9ef">contact-support</span>: apisupportgroup@abc.com
-  <span style="color:#66d9ef">copyright</span>: copyright (c) abc.com
-  <span style="color:#66d9ef">license</span>: MIT
-  <span style="color:#66d9ef">tech-used</span>:
-    - <span style="color:#66d9ef">name</span>: java
-      <span style="color:#66d9ef">version</span>: <span style="color:#ae81ff">11.</span>x
-    - <span style="color:#66d9ef">name</span>: spring-boot
-      <span style="color:#66d9ef">version</span>: <span style="color:#ae81ff">2.</span>x
-</code></pre></div><p><br />
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-application.yml" data-lang="application.yml"><span style="color:#080;font-weight:bold">info</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#080;font-weight:bold">app</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#080;font-weight:bold">name</span>:<span style="color:#bbb"> </span>spring<span style="color:#bbb"> </span>boot<span style="color:#bbb"> </span>microservice<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#080;font-weight:bold">version</span>:<span style="color:#bbb"> </span><span style="color:#60e;font-weight:bold">1.0</span>.0_RELEASE<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#080;font-weight:bold">description</span>:<span style="color:#bbb"> </span>more<span style="color:#bbb"> </span>details<span style="color:#bbb"> </span>about<span style="color:#bbb"> </span>sprint<span style="color:#bbb"> </span>boot<span style="color:#bbb"> </span>microservice<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#080;font-weight:bold">contact-support</span>:<span style="color:#bbb"> </span>apisupportgroup@abc.com<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#080;font-weight:bold">copyright</span>:<span style="color:#bbb"> </span>copyright<span style="color:#bbb"> </span>(c)<span style="color:#bbb"> </span>abc.com<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#080;font-weight:bold">license</span>:<span style="color:#bbb"> </span>MIT<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#080;font-weight:bold">tech-used</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>- <span style="color:#080;font-weight:bold">name</span>:<span style="color:#bbb"> </span>java<span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#080;font-weight:bold">version</span>:<span style="color:#bbb"> </span><span style="color:#60e;font-weight:bold">11.</span>x<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>- <span style="color:#080;font-weight:bold">name</span>:<span style="color:#bbb"> </span>spring-boot<span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#080;font-weight:bold">version</span>:<span style="color:#bbb"> </span><span style="color:#60e;font-weight:bold">2.</span>x<span style="color:#bbb">
+</span></code></pre></div><p><br />
 That&rsquo;s all we need to do to make this data available on the <em><strong>/actuator/info</strong></em> endpoint. Spring will automatically add all the properties prefixed with <strong>info</strong> to the endpoint.</p>
 <figure class="center">
     <img src="/img/spring-boot/actuator-info-endpoint-2.png"

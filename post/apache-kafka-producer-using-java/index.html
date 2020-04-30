@@ -188,70 +188,70 @@ if (!doNotTrack) {
 </div></div>
 		</header><div class="content post__content clearfix">
 			<p>Implementation of Kafka Producer using Java</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.abc.demo<span style="color:#f92672">;</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-weight:bold">package</span> <span style="color:#0e84b5;font-weight:bold">com.abc.demo</span><span style="color:#333">;</span>
 
-<span style="color:#f92672">import</span> java.util.Properties<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.concurrent.ExecutionException<span style="color:#f92672">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">java.util.Properties</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">java.util.concurrent.ExecutionException</span><span style="color:#333">;</span>
 
-<span style="color:#f92672">import</span> org.apache.kafka.clients.producer.KafkaProducer<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.apache.kafka.clients.producer.ProducerConfig<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.apache.kafka.clients.producer.ProducerRecord<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.apache.kafka.common.serialization.StringSerializer<span style="color:#f92672">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">org.apache.kafka.clients.producer.KafkaProducer</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">org.apache.kafka.clients.producer.ProducerConfig</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">org.apache.kafka.clients.producer.ProducerRecord</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">org.apache.kafka.common.serialization.StringSerializer</span><span style="color:#333">;</span>
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">KafkaProducerTest</span> <span style="color:#f92672">{</span>
+<span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">KafkaProducerTest</span> <span style="color:#333">{</span>
 
- <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> InterruptedException<span style="color:#f92672">,</span> ExecutionException<span style="color:#f92672">{</span>
-  <span style="color:#75715e">//Create producer property
-</span><span style="color:#75715e"></span>  String bootstrapServer <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;localhost:9092&#34;</span><span style="color:#f92672">;</span>
-  Properties properties <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Properties<span style="color:#f92672">();</span>
-  properties<span style="color:#f92672">.</span><span style="color:#a6e22e">setProperty</span><span style="color:#f92672">(</span>ProducerConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">BOOTSTRAP_SERVERS_CONFIG</span><span style="color:#f92672">,</span> bootstrapServer<span style="color:#f92672">);</span>
-  properties<span style="color:#f92672">.</span><span style="color:#a6e22e">setProperty</span><span style="color:#f92672">(</span>ProducerConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">KEY_SERIALIZER_CLASS_CONFIG</span><span style="color:#f92672">,</span> StringSerializer<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">());</span>
-  properties<span style="color:#f92672">.</span><span style="color:#a6e22e">setProperty</span><span style="color:#f92672">(</span>ProducerConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">VALUE_SERIALIZER_CLASS_CONFIG</span><span style="color:#f92672">,</span> StringSerializer<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">());</span>
+ <span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">static</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">main</span><span style="color:#333">(</span>String<span style="color:#333">[]</span> args<span style="color:#333">)</span> <span style="color:#080;font-weight:bold">throws</span> InterruptedException<span style="color:#333">,</span> ExecutionException<span style="color:#333">{</span>
+  <span style="color:#888">//Create producer property
+</span><span style="color:#888"></span>  String bootstrapServer <span style="color:#333">=</span> <span style="background-color:#fff0f0">&#34;localhost:9092&#34;</span><span style="color:#333">;</span>
+  Properties properties <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> Properties<span style="color:#333">();</span>
+  properties<span style="color:#333">.</span><span style="color:#00c">setProperty</span><span style="color:#333">(</span>ProducerConfig<span style="color:#333">.</span><span style="color:#00c">BOOTSTRAP_SERVERS_CONFIG</span><span style="color:#333">,</span> bootstrapServer<span style="color:#333">);</span>
+  properties<span style="color:#333">.</span><span style="color:#00c">setProperty</span><span style="color:#333">(</span>ProducerConfig<span style="color:#333">.</span><span style="color:#00c">KEY_SERIALIZER_CLASS_CONFIG</span><span style="color:#333">,</span> StringSerializer<span style="color:#333">.</span><span style="color:#00c">class</span><span style="color:#333">.</span><span style="color:#00c">getName</span><span style="color:#333">());</span>
+  properties<span style="color:#333">.</span><span style="color:#00c">setProperty</span><span style="color:#333">(</span>ProducerConfig<span style="color:#333">.</span><span style="color:#00c">VALUE_SERIALIZER_CLASS_CONFIG</span><span style="color:#333">,</span> StringSerializer<span style="color:#333">.</span><span style="color:#00c">class</span><span style="color:#333">.</span><span style="color:#00c">getName</span><span style="color:#333">());</span>
   
-  <span style="color:#75715e">//Create safe producer
-</span><span style="color:#75715e"></span>  properties<span style="color:#f92672">.</span><span style="color:#a6e22e">setProperty</span><span style="color:#f92672">(</span>ProducerConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">ENABLE_IDEMPOTENCE_CONFIG</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;true&#34;</span><span style="color:#f92672">);</span>
-  properties<span style="color:#f92672">.</span><span style="color:#a6e22e">setProperty</span><span style="color:#f92672">(</span>ProducerConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">ACKS_CONFIG</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;all&#34;</span><span style="color:#f92672">);</span>
-  properties<span style="color:#f92672">.</span><span style="color:#a6e22e">setProperty</span><span style="color:#f92672">(</span>ProducerConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;5&#34;</span><span style="color:#f92672">);</span>
-  properties<span style="color:#f92672">.</span><span style="color:#a6e22e">setProperty</span><span style="color:#f92672">(</span>ProducerConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">RETRIES_CONFIG</span><span style="color:#f92672">,</span> Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">(</span>Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">MAX_VALUE</span><span style="color:#f92672">));</span>
+  <span style="color:#888">//Create safe producer
+</span><span style="color:#888"></span>  properties<span style="color:#333">.</span><span style="color:#00c">setProperty</span><span style="color:#333">(</span>ProducerConfig<span style="color:#333">.</span><span style="color:#00c">ENABLE_IDEMPOTENCE_CONFIG</span><span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;true&#34;</span><span style="color:#333">);</span>
+  properties<span style="color:#333">.</span><span style="color:#00c">setProperty</span><span style="color:#333">(</span>ProducerConfig<span style="color:#333">.</span><span style="color:#00c">ACKS_CONFIG</span><span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;all&#34;</span><span style="color:#333">);</span>
+  properties<span style="color:#333">.</span><span style="color:#00c">setProperty</span><span style="color:#333">(</span>ProducerConfig<span style="color:#333">.</span><span style="color:#00c">MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION</span><span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;5&#34;</span><span style="color:#333">);</span>
+  properties<span style="color:#333">.</span><span style="color:#00c">setProperty</span><span style="color:#333">(</span>ProducerConfig<span style="color:#333">.</span><span style="color:#00c">RETRIES_CONFIG</span><span style="color:#333">,</span> Integer<span style="color:#333">.</span><span style="color:#00c">toString</span><span style="color:#333">(</span>Integer<span style="color:#333">.</span><span style="color:#00c">MAX_VALUE</span><span style="color:#333">));</span>
   
-  <span style="color:#75715e">//High throughput producer (at the expense of a bit of latency and CPU usage)
-</span><span style="color:#75715e"></span>  properties<span style="color:#f92672">.</span><span style="color:#a6e22e">setProperty</span><span style="color:#f92672">(</span>ProducerConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">COMPRESSION_TYPE_CONFIG</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;snappy&#34;</span><span style="color:#f92672">);</span>
-  properties<span style="color:#f92672">.</span><span style="color:#a6e22e">setProperty</span><span style="color:#f92672">(</span>ProducerConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">LINGER_MS_CONFIG</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;20&#34;</span><span style="color:#f92672">);</span> <span style="color:#75715e">//20ms wait time
-</span><span style="color:#75715e"></span>  properties<span style="color:#f92672">.</span><span style="color:#a6e22e">setProperty</span><span style="color:#f92672">(</span>ProducerConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">BATCH_SIZE_CONFIG</span><span style="color:#f92672">,</span> Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">(</span>32<span style="color:#f92672">*</span>1024<span style="color:#f92672">));</span> <span style="color:#75715e">//32KB batch size
-</span><span style="color:#75715e"></span>  
-  <span style="color:#75715e">//Create producer
-</span><span style="color:#75715e"></span>  KafkaProducer<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;</span> producer <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> KafkaProducer<span style="color:#f92672">&lt;&gt;(</span>properties<span style="color:#f92672">);</span>
+  <span style="color:#888">//High throughput producer (at the expense of a bit of latency and CPU usage)
+</span><span style="color:#888"></span>  properties<span style="color:#333">.</span><span style="color:#00c">setProperty</span><span style="color:#333">(</span>ProducerConfig<span style="color:#333">.</span><span style="color:#00c">COMPRESSION_TYPE_CONFIG</span><span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;snappy&#34;</span><span style="color:#333">);</span>
+  properties<span style="color:#333">.</span><span style="color:#00c">setProperty</span><span style="color:#333">(</span>ProducerConfig<span style="color:#333">.</span><span style="color:#00c">LINGER_MS_CONFIG</span><span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;20&#34;</span><span style="color:#333">);</span> <span style="color:#888">//20ms wait time
+</span><span style="color:#888"></span>  properties<span style="color:#333">.</span><span style="color:#00c">setProperty</span><span style="color:#333">(</span>ProducerConfig<span style="color:#333">.</span><span style="color:#00c">BATCH_SIZE_CONFIG</span><span style="color:#333">,</span> Integer<span style="color:#333">.</span><span style="color:#00c">toString</span><span style="color:#333">(</span>32<span style="color:#333">*</span>1024<span style="color:#333">));</span> <span style="color:#888">//32KB batch size
+</span><span style="color:#888"></span>  
+  <span style="color:#888">//Create producer
+</span><span style="color:#888"></span>  KafkaProducer<span style="color:#333">&lt;</span>String<span style="color:#333">,</span> String<span style="color:#333">&gt;</span> producer <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> KafkaProducer<span style="color:#333">&lt;&gt;(</span>properties<span style="color:#333">);</span>
   
-  <span style="color:#75715e">//create a producer record
-</span><span style="color:#75715e"></span>  ProducerRecord<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;</span> record <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ProducerRecord<span style="color:#f92672">&lt;&gt;(</span><span style="color:#e6db74">&#34;topicName&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;firstRecord&#34;</span><span style="color:#f92672">);</span>
-  <span style="color:#75715e">//create producer record with key
-</span><span style="color:#75715e"></span>  <span style="color:#75715e">//new ProducerRecord&lt;&gt;(&#34;topicName&#34;, &#34;MessageKey&#34;, &#34;Message&#34;);
-</span><span style="color:#75715e"></span>  <span style="color:#75715e">//create producer record with key and partition number
-</span><span style="color:#75715e"></span>  <span style="color:#75715e">//new ProducerRecord&lt;&gt;(&#34;topicName&#34;, 1 /*partition number*/, &#34;MessageKey&#34;, &#34;Message&#34;);
-</span><span style="color:#75715e"></span>  
-  <span style="color:#75715e">//send data - asynchronous
-</span><span style="color:#75715e"></span>  <span style="color:#75715e">//without callback
-</span><span style="color:#75715e"></span>  <span style="color:#75715e">//producer.send(record);
-</span><span style="color:#75715e"></span>  <span style="color:#75715e">//with callback
-</span><span style="color:#75715e"></span>  producer<span style="color:#f92672">.</span><span style="color:#a6e22e">send</span><span style="color:#f92672">(</span>record<span style="color:#f92672">,</span> <span style="color:#f92672">(</span>recordMetadata<span style="color:#f92672">,</span> exception<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
-   <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>exception <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">){</span>
-    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>recordMetadata<span style="color:#f92672">.</span><span style="color:#a6e22e">topic</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;+&#34;</span> <span style="color:#f92672">+</span> recordMetadata<span style="color:#f92672">.</span><span style="color:#a6e22e">partition</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;+&#34;</span> <span style="color:#f92672">+</span> recordMetadata<span style="color:#f92672">.</span><span style="color:#a6e22e">offset</span><span style="color:#f92672">());</span>
-   <span style="color:#f92672">}</span><span style="color:#66d9ef">else</span><span style="color:#f92672">{</span>
-    System<span style="color:#f92672">.</span><span style="color:#a6e22e">err</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>exception<span style="color:#f92672">.</span><span style="color:#a6e22e">getMessage</span><span style="color:#f92672">());</span>
-   <span style="color:#f92672">}</span>
-  <span style="color:#f92672">});</span>
+  <span style="color:#888">//create a producer record
+</span><span style="color:#888"></span>  ProducerRecord<span style="color:#333">&lt;</span>String<span style="color:#333">,</span> String<span style="color:#333">&gt;</span> record <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> ProducerRecord<span style="color:#333">&lt;&gt;(</span><span style="background-color:#fff0f0">&#34;topicName&#34;</span><span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;firstRecord&#34;</span><span style="color:#333">);</span>
+  <span style="color:#888">//create producer record with key
+</span><span style="color:#888"></span>  <span style="color:#888">//new ProducerRecord&lt;&gt;(&#34;topicName&#34;, &#34;MessageKey&#34;, &#34;Message&#34;);
+</span><span style="color:#888"></span>  <span style="color:#888">//create producer record with key and partition number
+</span><span style="color:#888"></span>  <span style="color:#888">//new ProducerRecord&lt;&gt;(&#34;topicName&#34;, 1 /*partition number*/, &#34;MessageKey&#34;, &#34;Message&#34;);
+</span><span style="color:#888"></span>  
+  <span style="color:#888">//send data - asynchronous
+</span><span style="color:#888"></span>  <span style="color:#888">//without callback
+</span><span style="color:#888"></span>  <span style="color:#888">//producer.send(record);
+</span><span style="color:#888"></span>  <span style="color:#888">//with callback
+</span><span style="color:#888"></span>  producer<span style="color:#333">.</span><span style="color:#00c">send</span><span style="color:#333">(</span>record<span style="color:#333">,</span> <span style="color:#333">(</span>recordMetadata<span style="color:#333">,</span> exception<span style="color:#333">)</span> <span style="color:#333">-&gt;</span> <span style="color:#333">{</span>
+   <span style="color:#080;font-weight:bold">if</span><span style="color:#333">(</span>exception <span style="color:#333">==</span> <span style="color:#080;font-weight:bold">null</span><span style="color:#333">){</span>
+    System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">.</span><span style="color:#00c">println</span><span style="color:#333">(</span>recordMetadata<span style="color:#333">.</span><span style="color:#00c">topic</span><span style="color:#333">()</span> <span style="color:#333">+</span> <span style="background-color:#fff0f0">&#34;+&#34;</span> <span style="color:#333">+</span> recordMetadata<span style="color:#333">.</span><span style="color:#00c">partition</span><span style="color:#333">()</span> <span style="color:#333">+</span> <span style="background-color:#fff0f0">&#34;+&#34;</span> <span style="color:#333">+</span> recordMetadata<span style="color:#333">.</span><span style="color:#00c">offset</span><span style="color:#333">());</span>
+   <span style="color:#333">}</span><span style="color:#080;font-weight:bold">else</span><span style="color:#333">{</span>
+    System<span style="color:#333">.</span><span style="color:#00c">err</span><span style="color:#333">.</span><span style="color:#00c">println</span><span style="color:#333">(</span>exception<span style="color:#333">.</span><span style="color:#00c">getMessage</span><span style="color:#333">());</span>
+   <span style="color:#333">}</span>
+  <span style="color:#333">});</span>
   
-  <span style="color:#75715e">//send data - synchronous
-</span><span style="color:#75715e"></span>  <span style="color:#75715e">//without callback
-</span><span style="color:#75715e"></span>  <span style="color:#75715e">//producer.send(record).get(); //.get() make it synchronous call
-</span><span style="color:#75715e"></span>  
-  <span style="color:#75715e">//flush data
-</span><span style="color:#75715e"></span>  producer<span style="color:#f92672">.</span><span style="color:#a6e22e">flush</span><span style="color:#f92672">();</span>
+  <span style="color:#888">//send data - synchronous
+</span><span style="color:#888"></span>  <span style="color:#888">//without callback
+</span><span style="color:#888"></span>  <span style="color:#888">//producer.send(record).get(); //.get() make it synchronous call
+</span><span style="color:#888"></span>  
+  <span style="color:#888">//flush data
+</span><span style="color:#888"></span>  producer<span style="color:#333">.</span><span style="color:#00c">flush</span><span style="color:#333">();</span>
   
-  <span style="color:#75715e">//flush and close producer
-</span><span style="color:#75715e"></span>  producer<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
- <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
+  <span style="color:#888">//flush and close producer
+</span><span style="color:#888"></span>  producer<span style="color:#333">.</span><span style="color:#00c">close</span><span style="color:#333">();</span>
+ <span style="color:#333">}</span>
+<span style="color:#333">}</span>
 </code></pre></div>
 		</div>
 		<footer class="post__footer">

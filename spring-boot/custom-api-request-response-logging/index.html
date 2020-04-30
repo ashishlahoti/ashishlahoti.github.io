@@ -84,7 +84,7 @@ if (!doNotTrack) {
     },
     "image": "https:\/\/codingnconcepts.com\/favicon-32x32.png",
     "url" : "https:\/\/codingnconcepts.com\/spring-boot\/custom-api-request-response-logging\/",
-    "wordCount" : "1513",
+    "wordCount" : "1501",
     "genre" : [ "Spring Boot" , "Microservice" ],
     "keywords" : [ ]
 }
@@ -188,417 +188,417 @@ if (!doNotTrack) {
 </div></div>
 		</header><div class="content post__content clearfix">
 			<p>When we create RESTFul APIs in spring boot application in microservices environment. It becomes essential to log incoming API request and response and push it to centralized logging system such as Splunk or ELK for debugging. Also all the logs related to one request should have some common id to relate them. In this post we are going to solve these problems.</p>
-<h3 id="create-restful-api">Create RESTFul API</h3>
+<h3 id="1-create-restful-api">1. Create RESTFul API</h3>
 <p>Let&rsquo;s create a RestController to expose RESTFul API</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RestController</span>
-<span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/posts&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PostController</span> <span style="color:#f92672">{</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#555;font-weight:bold">@RestController</span>
+<span style="color:#555;font-weight:bold">@RequestMapping</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;/posts&#34;</span><span style="color:#333">)</span>
+<span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">PostController</span> <span style="color:#333">{</span>
 
-	<span style="color:#a6e22e">@GetMapping</span>
-	<span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>Post<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">getAllPosts</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">return</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Post<span style="color:#f92672">[]</span> <span style="color:#f92672">{</span>
-		     <span style="color:#66d9ef">new</span> Post<span style="color:#f92672">[]</span> <span style="color:#f92672">{</span> <span style="color:#66d9ef">new</span> Post<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;spring&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Spring Boot&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;All about Spring boot microservice&#34;</span><span style="color:#f92672">),</span>
-				 <span style="color:#66d9ef">new</span> Post<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;java&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Java&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Learn Streams in Java&#34;</span><span style="color:#f92672">),</span>
-				 <span style="color:#66d9ef">new</span> Post<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;javascript&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;JavaScript&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Whats new in ES6&#34;</span><span style="color:#f92672">)</span>	     
-		<span style="color:#f92672">});</span>
-	<span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
+	<span style="color:#555;font-weight:bold">@GetMapping</span>
+	<span style="color:#080;font-weight:bold">public</span> List<span style="color:#333">&lt;</span>Post<span style="color:#333">&gt;</span> <span style="color:#06b;font-weight:bold">getAllPosts</span><span style="color:#333">()</span> <span style="color:#333">{</span>
+		<span style="color:#080;font-weight:bold">return</span> Arrays<span style="color:#333">.</span><span style="color:#00c">asList</span><span style="color:#333">(</span><span style="color:#080;font-weight:bold">new</span> Post<span style="color:#333">[]</span> <span style="color:#333">{</span>
+		     <span style="color:#080;font-weight:bold">new</span> Post<span style="color:#333">[]</span> <span style="color:#333">{</span> <span style="color:#080;font-weight:bold">new</span> Post<span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;spring&#34;</span><span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;Spring Boot&#34;</span><span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;All about Spring boot microservice&#34;</span><span style="color:#333">),</span>
+				 <span style="color:#080;font-weight:bold">new</span> Post<span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;java&#34;</span><span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;Java&#34;</span><span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;Learn Streams in Java&#34;</span><span style="color:#333">),</span>
+				 <span style="color:#080;font-weight:bold">new</span> Post<span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;javascript&#34;</span><span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;JavaScript&#34;</span><span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;Whats new in ES6&#34;</span><span style="color:#333">)</span>	     
+		<span style="color:#333">});</span>
+	<span style="color:#333">}</span>
+<span style="color:#333">}</span>
 </code></pre></div><figure class="center">
     <img src="/img/spring-boot/api-logging-1.png"/> 
 </figure>
 
 <p><br /></p>
-<h3 id="create-api-logger">Create API Logger</h3>
+<h3 id="2-create-api-logger">2. Create API Logger</h3>
 <p>At this point we have exposed API but we haven&rsquo;t logged it yet. Let&rsquo;s create an API logger which is having following configurable properties:-</p>
 <ul>
 <li><strong>app.api.logging.enable</strong> If true then api logger will be enabled and log all api request and response</li>
 <li><strong>app.api.logging.url-patterns</strong> If provided in a comma separated url patterns, only those api request and response will be logged. default value is <strong>'*'</strong> means all api request and response will be printed</li>
 <li><strong>app.api.logging.requestIdParamName</strong> If provided request parameter in incoming api request will be logged across all logs to serve that request. default value is <em><strong>requestId</strong></em>. If not provided, new request id (uuid) will be generated to log across all logs.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> org.springframework.beans.factory.annotation.Value<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.springframework.boot.autoconfigure.condition.ConditionalOnExpression<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.springframework.boot.web.servlet.FilterRegistrationBean<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.springframework.context.annotation.Bean<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.springframework.stereotype.Component<span style="color:#f92672">;</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">org.springframework.beans.factory.annotation.Value</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">org.springframework.boot.autoconfigure.condition.ConditionalOnExpression</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">org.springframework.boot.web.servlet.FilterRegistrationBean</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">org.springframework.context.annotation.Bean</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">org.springframework.stereotype.Component</span><span style="color:#333">;</span>
 
-<span style="color:#a6e22e">@Component</span>
-<span style="display:block;width:100%;background-color:#3c3d38"><span style="color:#a6e22e">@ConditionalOnExpression</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;${app.api.logging.enable:true}&#34;</span><span style="color:#f92672">)</span>
-</span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ApiLoggingFilterConfig</span> <span style="color:#f92672">{</span>
+<span style="color:#555;font-weight:bold">@Component</span>
+<span style="display:block;width:100%;background-color:#e5e5e5"><span style="color:#555;font-weight:bold">@ConditionalOnExpression</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;${app.api.logging.enable:true}&#34;</span><span style="color:#333">)</span>
+</span><span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">ApiLoggingFilterConfig</span> <span style="color:#333">{</span>
 
-<span style="display:block;width:100%;background-color:#3c3d38">	<span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;${app.api.logging.url-patterns:*}&#34;</span><span style="color:#f92672">)</span>
-</span>	<span style="color:#66d9ef">private</span> String<span style="color:#f92672">[]</span> urlPatterns<span style="color:#f92672">;</span>
+<span style="display:block;width:100%;background-color:#e5e5e5">	<span style="color:#555;font-weight:bold">@Value</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;${app.api.logging.url-patterns:*}&#34;</span><span style="color:#333">)</span>
+</span>	<span style="color:#080;font-weight:bold">private</span> String<span style="color:#333">[]</span> urlPatterns<span style="color:#333">;</span>
 	
-<span style="display:block;width:100%;background-color:#3c3d38">	<span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;${app.api.logging.requestIdParamName:requestId}&#34;</span><span style="color:#f92672">)</span>
-</span>	<span style="color:#66d9ef">private</span> String requestIdParamName<span style="color:#f92672">;</span>
+<span style="display:block;width:100%;background-color:#e5e5e5">	<span style="color:#555;font-weight:bold">@Value</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;${app.api.logging.requestIdParamName:requestId}&#34;</span><span style="color:#333">)</span>
+</span>	<span style="color:#080;font-weight:bold">private</span> String requestIdParamName<span style="color:#333">;</span>
 	
-	<span style="color:#a6e22e">@Bean</span>
-	<span style="color:#66d9ef">public</span> FilterRegistrationBean<span style="color:#f92672">&lt;</span>ApiLoggingFilter<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">loggingFilter</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-	   FilterRegistrationBean<span style="color:#f92672">&lt;</span>ApiLoggingFilter<span style="color:#f92672">&gt;</span> registrationBean <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FilterRegistrationBean<span style="color:#f92672">&lt;&gt;();</span>
-	   registrationBean<span style="color:#f92672">.</span><span style="color:#a6e22e">setFilter</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> ApiLoggingFilter<span style="color:#f92672">(</span>requestIdParamName<span style="color:#f92672">));</span>
-	   registrationBean<span style="color:#f92672">.</span><span style="color:#a6e22e">addUrlPatterns</span><span style="color:#f92672">(</span>urlPatterns<span style="color:#f92672">);</span>
-	   <span style="color:#66d9ef">return</span> registrationBean<span style="color:#f92672">;</span>
-	<span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
+	<span style="color:#555;font-weight:bold">@Bean</span>
+	<span style="color:#080;font-weight:bold">public</span> FilterRegistrationBean<span style="color:#333">&lt;</span>ApiLoggingFilter<span style="color:#333">&gt;</span> <span style="color:#06b;font-weight:bold">loggingFilter</span><span style="color:#333">()</span> <span style="color:#333">{</span>
+	   FilterRegistrationBean<span style="color:#333">&lt;</span>ApiLoggingFilter<span style="color:#333">&gt;</span> registrationBean <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> FilterRegistrationBean<span style="color:#333">&lt;&gt;();</span>
+	   registrationBean<span style="color:#333">.</span><span style="color:#00c">setFilter</span><span style="color:#333">(</span><span style="color:#080;font-weight:bold">new</span> ApiLoggingFilter<span style="color:#333">(</span>requestIdParamName<span style="color:#333">));</span>
+	   registrationBean<span style="color:#333">.</span><span style="color:#00c">addUrlPatterns</span><span style="color:#333">(</span>urlPatterns<span style="color:#333">);</span>
+	   <span style="color:#080;font-weight:bold">return</span> registrationBean<span style="color:#333">;</span>
+	<span style="color:#333">}</span>
+<span style="color:#333">}</span>
 </code></pre></div><p>Now we will create <code>ApiLoggingFilter</code> which is nothing but a Servlet Filter. This filter intercepts all api request and response and log them. It also make use of slf4j MDC to print requestId across all the logs serve that request. <code>ApiLoggingFilter</code> class is long. you can expand below to see code.</p>
 <details>
   <summary>Click to expand <code>ApiLoggingFilter</code></summary>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.io.BufferedReader<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.io.ByteArrayInputStream<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.io.ByteArrayOutputStream<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.io.InputStream<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.io.InputStreamReader<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.io.OutputStream<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.io.PrintWriter<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.Collection<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.Enumeration<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.HashMap<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.Locale<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.Map<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.UUID<span style="color:#f92672">;</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">java.io.BufferedReader</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">java.io.ByteArrayInputStream</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">java.io.ByteArrayOutputStream</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">java.io.IOException</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">java.io.InputStream</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">java.io.InputStreamReader</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">java.io.OutputStream</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">java.io.PrintWriter</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">java.util.Collection</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">java.util.Enumeration</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">java.util.HashMap</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">java.util.Locale</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">java.util.Map</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">java.util.UUID</span><span style="color:#333">;</span>
 
-<span style="color:#f92672">import</span> javax.servlet.Filter<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.FilterChain<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.ReadListener<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.ServletException<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.ServletInputStream<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.ServletOutputStream<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.ServletRequest<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.ServletResponse<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.WriteListener<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.http.Cookie<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.http.HttpServletRequest<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.http.HttpServletRequestWrapper<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.http.HttpServletResponse<span style="color:#f92672">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">javax.servlet.Filter</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">javax.servlet.FilterChain</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">javax.servlet.ReadListener</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">javax.servlet.ServletException</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">javax.servlet.ServletInputStream</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">javax.servlet.ServletOutputStream</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">javax.servlet.ServletRequest</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">javax.servlet.ServletResponse</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">javax.servlet.WriteListener</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">javax.servlet.http.Cookie</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">javax.servlet.http.HttpServletRequest</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">javax.servlet.http.HttpServletRequestWrapper</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">javax.servlet.http.HttpServletResponse</span><span style="color:#333">;</span>
 
-<span style="color:#f92672">import</span> org.apache.commons.io.output.TeeOutputStream<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.slf4j.Logger<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.slf4j.LoggerFactory<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.slf4j.MDC<span style="color:#f92672">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">org.apache.commons.io.output.TeeOutputStream</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">org.slf4j.Logger</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">org.slf4j.LoggerFactory</span><span style="color:#333">;</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">org.slf4j.MDC</span><span style="color:#333">;</span>
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ApiLoggingFilter</span> <span style="color:#66d9ef">implements</span> Filter <span style="color:#f92672">{</span>
+<span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">ApiLoggingFilter</span> <span style="color:#080;font-weight:bold">implements</span> Filter <span style="color:#333">{</span>
 
-	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> Logger LOGGER <span style="color:#f92672">=</span> LoggerFactory<span style="color:#f92672">.</span><span style="color:#a6e22e">getLogger</span><span style="color:#f92672">(</span>ApiLoggingFilter<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
-	<span style="color:#66d9ef">private</span> String requestIdParamName<span style="color:#f92672">;</span>
+	<span style="color:#080;font-weight:bold">private</span> <span style="color:#080;font-weight:bold">static</span> <span style="color:#080;font-weight:bold">final</span> Logger LOGGER <span style="color:#333">=</span> LoggerFactory<span style="color:#333">.</span><span style="color:#00c">getLogger</span><span style="color:#333">(</span>ApiLoggingFilter<span style="color:#333">.</span><span style="color:#00c">class</span><span style="color:#333">);</span>
+	<span style="color:#080;font-weight:bold">private</span> String requestIdParamName<span style="color:#333">;</span>
 
-	ApiLoggingFilter<span style="color:#f92672">(</span>String requestIdParamName<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">requestIdParamName</span> <span style="color:#f92672">=</span> requestIdParamName<span style="color:#f92672">;</span>
-	<span style="color:#f92672">}</span>
+	ApiLoggingFilter<span style="color:#333">(</span>String requestIdParamName<span style="color:#333">)</span> <span style="color:#333">{</span>
+		<span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">requestIdParamName</span> <span style="color:#333">=</span> requestIdParamName<span style="color:#333">;</span>
+	<span style="color:#333">}</span>
 
-	<span style="color:#a6e22e">@Override</span>
-	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doFilter</span><span style="color:#f92672">(</span>ServletRequest request<span style="color:#f92672">,</span> ServletResponse response<span style="color:#f92672">,</span> FilterChain chain<span style="color:#f92672">)</span>
-			<span style="color:#66d9ef">throws</span> IOException<span style="color:#f92672">,</span> ServletException <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-			HttpServletRequest httpServletRequest <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>HttpServletRequest<span style="color:#f92672">)</span> request<span style="color:#f92672">;</span>
-			HttpServletResponse httpServletResponse <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>HttpServletResponse<span style="color:#f92672">)</span> response<span style="color:#f92672">;</span>
+	<span style="color:#555;font-weight:bold">@Override</span>
+	<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">doFilter</span><span style="color:#333">(</span>ServletRequest request<span style="color:#333">,</span> ServletResponse response<span style="color:#333">,</span> FilterChain chain<span style="color:#333">)</span>
+			<span style="color:#080;font-weight:bold">throws</span> IOException<span style="color:#333">,</span> ServletException <span style="color:#333">{</span>
+		<span style="color:#080;font-weight:bold">try</span> <span style="color:#333">{</span>
+			HttpServletRequest httpServletRequest <span style="color:#333">=</span> <span style="color:#333">(</span>HttpServletRequest<span style="color:#333">)</span> request<span style="color:#333">;</span>
+			HttpServletResponse httpServletResponse <span style="color:#333">=</span> <span style="color:#333">(</span>HttpServletResponse<span style="color:#333">)</span> response<span style="color:#333">;</span>
 
-			Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;</span> requestMap <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getTypesafeRequestMap</span><span style="color:#f92672">(</span>httpServletRequest<span style="color:#f92672">);</span>
-			BufferedRequestWrapper bufferedRequest <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedRequestWrapper<span style="color:#f92672">(</span>httpServletRequest<span style="color:#f92672">);</span>
-			BufferedResponseWrapper bufferedResponse <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedResponseWrapper<span style="color:#f92672">(</span>httpServletResponse<span style="color:#f92672">);</span>
-			String requestId <span style="color:#f92672">=</span> requestMap<span style="color:#f92672">.</span><span style="color:#a6e22e">containsKey</span><span style="color:#f92672">(</span>requestIdParamName<span style="color:#f92672">)</span> <span style="color:#f92672">?</span> requestMap<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>requestIdParamName<span style="color:#f92672">)</span>
-					<span style="color:#f92672">:</span> UUID<span style="color:#f92672">.</span><span style="color:#a6e22e">randomUUID</span><span style="color:#f92672">().</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">();</span>
-			MDC<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;REQUEST_ID&#34;</span><span style="color:#f92672">,</span> requestId<span style="color:#f92672">);</span>
-			<span style="color:#66d9ef">final</span> StringBuilder logRequest <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> StringBuilder<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;HTTP &#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span>httpServletRequest<span style="color:#f92672">.</span><span style="color:#a6e22e">getMethod</span><span style="color:#f92672">())</span>
-					<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34; \&#34;&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span>httpServletRequest<span style="color:#f92672">.</span><span style="color:#a6e22e">getServletPath</span><span style="color:#f92672">()).</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;\&#34; &#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;, parameters=&#34;</span><span style="color:#f92672">)</span>
-					<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span>requestMap<span style="color:#f92672">).</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;, body=&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span>bufferedRequest<span style="color:#f92672">.</span><span style="color:#a6e22e">getRequestBody</span><span style="color:#f92672">())</span>
-					<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;, remote_address=&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span>httpServletRequest<span style="color:#f92672">.</span><span style="color:#a6e22e">getRemoteAddr</span><span style="color:#f92672">());</span>
-			LOGGER<span style="color:#f92672">.</span><span style="color:#a6e22e">info</span><span style="color:#f92672">(</span>logRequest<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
-			<span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-				chain<span style="color:#f92672">.</span><span style="color:#a6e22e">doFilter</span><span style="color:#f92672">(</span>bufferedRequest<span style="color:#f92672">,</span> bufferedResponse<span style="color:#f92672">);</span>
-			<span style="color:#f92672">}</span> <span style="color:#66d9ef">finally</span> <span style="color:#f92672">{</span>
-				<span style="color:#66d9ef">final</span> StringBuilder logResponse <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> StringBuilder<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;HTTP RESPONSE &#34;</span><span style="color:#f92672">)</span>
-						<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span>bufferedResponse<span style="color:#f92672">.</span><span style="color:#a6e22e">getContent</span><span style="color:#f92672">());</span>
-				LOGGER<span style="color:#f92672">.</span><span style="color:#a6e22e">info</span><span style="color:#f92672">(</span>logResponse<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
-				MDC<span style="color:#f92672">.</span><span style="color:#a6e22e">clear</span><span style="color:#f92672">();</span>
-			<span style="color:#f92672">}</span>
-		<span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>Throwable a<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			LOGGER<span style="color:#f92672">.</span><span style="color:#a6e22e">error</span><span style="color:#f92672">(</span>a<span style="color:#f92672">.</span><span style="color:#a6e22e">getMessage</span><span style="color:#f92672">());</span>
-		<span style="color:#f92672">}</span>
-	<span style="color:#f92672">}</span>
+			Map<span style="color:#333">&lt;</span>String<span style="color:#333">,</span> String<span style="color:#333">&gt;</span> requestMap <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">getTypesafeRequestMap</span><span style="color:#333">(</span>httpServletRequest<span style="color:#333">);</span>
+			BufferedRequestWrapper bufferedRequest <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> BufferedRequestWrapper<span style="color:#333">(</span>httpServletRequest<span style="color:#333">);</span>
+			BufferedResponseWrapper bufferedResponse <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> BufferedResponseWrapper<span style="color:#333">(</span>httpServletResponse<span style="color:#333">);</span>
+			String requestId <span style="color:#333">=</span> requestMap<span style="color:#333">.</span><span style="color:#00c">containsKey</span><span style="color:#333">(</span>requestIdParamName<span style="color:#333">)</span> <span style="color:#333">?</span> requestMap<span style="color:#333">.</span><span style="color:#00c">get</span><span style="color:#333">(</span>requestIdParamName<span style="color:#333">)</span>
+					<span style="color:#333">:</span> UUID<span style="color:#333">.</span><span style="color:#00c">randomUUID</span><span style="color:#333">().</span><span style="color:#00c">toString</span><span style="color:#333">();</span>
+			MDC<span style="color:#333">.</span><span style="color:#00c">put</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;REQUEST_ID&#34;</span><span style="color:#333">,</span> requestId<span style="color:#333">);</span>
+			<span style="color:#080;font-weight:bold">final</span> StringBuilder logRequest <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> StringBuilder<span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;HTTP &#34;</span><span style="color:#333">).</span><span style="color:#00c">append</span><span style="color:#333">(</span>httpServletRequest<span style="color:#333">.</span><span style="color:#00c">getMethod</span><span style="color:#333">())</span>
+					<span style="color:#333">.</span><span style="color:#00c">append</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34; \&#34;&#34;</span><span style="color:#333">).</span><span style="color:#00c">append</span><span style="color:#333">(</span>httpServletRequest<span style="color:#333">.</span><span style="color:#00c">getServletPath</span><span style="color:#333">()).</span><span style="color:#00c">append</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;\&#34; &#34;</span><span style="color:#333">).</span><span style="color:#00c">append</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;, parameters=&#34;</span><span style="color:#333">)</span>
+					<span style="color:#333">.</span><span style="color:#00c">append</span><span style="color:#333">(</span>requestMap<span style="color:#333">).</span><span style="color:#00c">append</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;, body=&#34;</span><span style="color:#333">).</span><span style="color:#00c">append</span><span style="color:#333">(</span>bufferedRequest<span style="color:#333">.</span><span style="color:#00c">getRequestBody</span><span style="color:#333">())</span>
+					<span style="color:#333">.</span><span style="color:#00c">append</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;, remote_address=&#34;</span><span style="color:#333">).</span><span style="color:#00c">append</span><span style="color:#333">(</span>httpServletRequest<span style="color:#333">.</span><span style="color:#00c">getRemoteAddr</span><span style="color:#333">());</span>
+			LOGGER<span style="color:#333">.</span><span style="color:#00c">info</span><span style="color:#333">(</span>logRequest<span style="color:#333">.</span><span style="color:#00c">toString</span><span style="color:#333">());</span>
+			<span style="color:#080;font-weight:bold">try</span> <span style="color:#333">{</span>
+				chain<span style="color:#333">.</span><span style="color:#00c">doFilter</span><span style="color:#333">(</span>bufferedRequest<span style="color:#333">,</span> bufferedResponse<span style="color:#333">);</span>
+			<span style="color:#333">}</span> <span style="color:#080;font-weight:bold">finally</span> <span style="color:#333">{</span>
+				<span style="color:#080;font-weight:bold">final</span> StringBuilder logResponse <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> StringBuilder<span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;HTTP RESPONSE &#34;</span><span style="color:#333">)</span>
+						<span style="color:#333">.</span><span style="color:#00c">append</span><span style="color:#333">(</span>bufferedResponse<span style="color:#333">.</span><span style="color:#00c">getContent</span><span style="color:#333">());</span>
+				LOGGER<span style="color:#333">.</span><span style="color:#00c">info</span><span style="color:#333">(</span>logResponse<span style="color:#333">.</span><span style="color:#00c">toString</span><span style="color:#333">());</span>
+				MDC<span style="color:#333">.</span><span style="color:#00c">clear</span><span style="color:#333">();</span>
+			<span style="color:#333">}</span>
+		<span style="color:#333">}</span> <span style="color:#080;font-weight:bold">catch</span> <span style="color:#333">(</span>Throwable a<span style="color:#333">)</span> <span style="color:#333">{</span>
+			LOGGER<span style="color:#333">.</span><span style="color:#00c">error</span><span style="color:#333">(</span>a<span style="color:#333">.</span><span style="color:#00c">getMessage</span><span style="color:#333">());</span>
+		<span style="color:#333">}</span>
+	<span style="color:#333">}</span>
 
-	<span style="color:#66d9ef">private</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">getTypesafeRequestMap</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-		Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;</span> typesafeRequestMap <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;();</span>
-		Enumeration<span style="color:#f92672">&lt;?&gt;</span> requestParamNames <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span><span style="color:#a6e22e">getParameterNames</span><span style="color:#f92672">();</span>
-		<span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>requestParamNames<span style="color:#f92672">.</span><span style="color:#a6e22e">hasMoreElements</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
-			String requestParamName <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span> requestParamNames<span style="color:#f92672">.</span><span style="color:#a6e22e">nextElement</span><span style="color:#f92672">();</span>
-			String requestParamValue<span style="color:#f92672">;</span>
-			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>requestParamName<span style="color:#f92672">.</span><span style="color:#a6e22e">equalsIgnoreCase</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;password&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-				requestParamValue <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;********&#34;</span><span style="color:#f92672">;</span>
-			<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
-				requestParamValue <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span><span style="color:#a6e22e">getParameter</span><span style="color:#f92672">(</span>requestParamName<span style="color:#f92672">);</span>
-			<span style="color:#f92672">}</span>
-			typesafeRequestMap<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>requestParamName<span style="color:#f92672">,</span> requestParamValue<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#66d9ef">return</span> typesafeRequestMap<span style="color:#f92672">;</span>
-	<span style="color:#f92672">}</span>
+	<span style="color:#080;font-weight:bold">private</span> Map<span style="color:#333">&lt;</span>String<span style="color:#333">,</span> String<span style="color:#333">&gt;</span> <span style="color:#06b;font-weight:bold">getTypesafeRequestMap</span><span style="color:#333">(</span>HttpServletRequest request<span style="color:#333">)</span> <span style="color:#333">{</span>
+		Map<span style="color:#333">&lt;</span>String<span style="color:#333">,</span> String<span style="color:#333">&gt;</span> typesafeRequestMap <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> HashMap<span style="color:#333">&lt;</span>String<span style="color:#333">,</span> String<span style="color:#333">&gt;();</span>
+		Enumeration<span style="color:#333">&lt;?&gt;</span> requestParamNames <span style="color:#333">=</span> request<span style="color:#333">.</span><span style="color:#00c">getParameterNames</span><span style="color:#333">();</span>
+		<span style="color:#080;font-weight:bold">while</span> <span style="color:#333">(</span>requestParamNames<span style="color:#333">.</span><span style="color:#00c">hasMoreElements</span><span style="color:#333">())</span> <span style="color:#333">{</span>
+			String requestParamName <span style="color:#333">=</span> <span style="color:#333">(</span>String<span style="color:#333">)</span> requestParamNames<span style="color:#333">.</span><span style="color:#00c">nextElement</span><span style="color:#333">();</span>
+			String requestParamValue<span style="color:#333">;</span>
+			<span style="color:#080;font-weight:bold">if</span> <span style="color:#333">(</span>requestParamName<span style="color:#333">.</span><span style="color:#00c">equalsIgnoreCase</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;password&#34;</span><span style="color:#333">))</span> <span style="color:#333">{</span>
+				requestParamValue <span style="color:#333">=</span> <span style="background-color:#fff0f0">&#34;********&#34;</span><span style="color:#333">;</span>
+			<span style="color:#333">}</span> <span style="color:#080;font-weight:bold">else</span> <span style="color:#333">{</span>
+				requestParamValue <span style="color:#333">=</span> request<span style="color:#333">.</span><span style="color:#00c">getParameter</span><span style="color:#333">(</span>requestParamName<span style="color:#333">);</span>
+			<span style="color:#333">}</span>
+			typesafeRequestMap<span style="color:#333">.</span><span style="color:#00c">put</span><span style="color:#333">(</span>requestParamName<span style="color:#333">,</span> requestParamValue<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+		<span style="color:#080;font-weight:bold">return</span> typesafeRequestMap<span style="color:#333">;</span>
+	<span style="color:#333">}</span>
 
-	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BufferedRequestWrapper</span> <span style="color:#66d9ef">extends</span> HttpServletRequestWrapper <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">private</span> ByteArrayInputStream bais <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
-		<span style="color:#66d9ef">private</span> ByteArrayOutputStream baos <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
-		<span style="color:#66d9ef">private</span> BufferedServletInputStream bsis <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
-		<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> buffer <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">BufferedRequestWrapper</span><span style="color:#f92672">(</span>HttpServletRequest req<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>req<span style="color:#f92672">);</span>
-			<span style="color:#75715e">// Read InputStream and store its content in a buffer.
-</span><span style="color:#75715e"></span>			InputStream is <span style="color:#f92672">=</span> req<span style="color:#f92672">.</span><span style="color:#a6e22e">getInputStream</span><span style="color:#f92672">();</span>
-			<span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">baos</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ByteArrayOutputStream<span style="color:#f92672">();</span>
-			<span style="color:#66d9ef">byte</span> buf<span style="color:#f92672">[]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span>1024<span style="color:#f92672">];</span>
-			<span style="color:#66d9ef">int</span> read<span style="color:#f92672">;</span>
-			<span style="color:#66d9ef">while</span> <span style="color:#f92672">((</span>read <span style="color:#f92672">=</span> is<span style="color:#f92672">.</span><span style="color:#a6e22e">read</span><span style="color:#f92672">(</span>buf<span style="color:#f92672">))</span> <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-				<span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">baos</span><span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span>buf<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> read<span style="color:#f92672">);</span>
-			<span style="color:#f92672">}</span>
-			<span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">buffer</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">baos</span><span style="color:#f92672">.</span><span style="color:#a6e22e">toByteArray</span><span style="color:#f92672">();</span>
-		<span style="color:#f92672">}</span>
+	<span style="color:#080;font-weight:bold">private</span> <span style="color:#080;font-weight:bold">static</span> <span style="color:#080;font-weight:bold">final</span> <span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">BufferedRequestWrapper</span> <span style="color:#080;font-weight:bold">extends</span> HttpServletRequestWrapper <span style="color:#333">{</span>
+		<span style="color:#080;font-weight:bold">private</span> ByteArrayInputStream bais <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">null</span><span style="color:#333">;</span>
+		<span style="color:#080;font-weight:bold">private</span> ByteArrayOutputStream baos <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">null</span><span style="color:#333">;</span>
+		<span style="color:#080;font-weight:bold">private</span> BufferedServletInputStream bsis <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">null</span><span style="color:#333">;</span>
+		<span style="color:#080;font-weight:bold">private</span> <span style="color:#339;font-weight:bold">byte</span><span style="color:#333">[]</span> buffer <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">null</span><span style="color:#333">;</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#06b;font-weight:bold">BufferedRequestWrapper</span><span style="color:#333">(</span>HttpServletRequest req<span style="color:#333">)</span> <span style="color:#080;font-weight:bold">throws</span> IOException <span style="color:#333">{</span>
+			<span style="color:#080;font-weight:bold">super</span><span style="color:#333">(</span>req<span style="color:#333">);</span>
+			<span style="color:#888">// Read InputStream and store its content in a buffer.
+</span><span style="color:#888"></span>			InputStream is <span style="color:#333">=</span> req<span style="color:#333">.</span><span style="color:#00c">getInputStream</span><span style="color:#333">();</span>
+			<span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">baos</span> <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> ByteArrayOutputStream<span style="color:#333">();</span>
+			<span style="color:#339;font-weight:bold">byte</span> buf<span style="color:#333">[]</span> <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> <span style="color:#339;font-weight:bold">byte</span><span style="color:#333">[</span>1024<span style="color:#333">];</span>
+			<span style="color:#339;font-weight:bold">int</span> read<span style="color:#333">;</span>
+			<span style="color:#080;font-weight:bold">while</span> <span style="color:#333">((</span>read <span style="color:#333">=</span> is<span style="color:#333">.</span><span style="color:#00c">read</span><span style="color:#333">(</span>buf<span style="color:#333">))</span> <span style="color:#333">&gt;</span> 0<span style="color:#333">)</span> <span style="color:#333">{</span>
+				<span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">baos</span><span style="color:#333">.</span><span style="color:#00c">write</span><span style="color:#333">(</span>buf<span style="color:#333">,</span> 0<span style="color:#333">,</span> read<span style="color:#333">);</span>
+			<span style="color:#333">}</span>
+			<span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">buffer</span> <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">baos</span><span style="color:#333">.</span><span style="color:#00c">toByteArray</span><span style="color:#333">();</span>
+		<span style="color:#333">}</span>
 
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> ServletInputStream <span style="color:#a6e22e">getInputStream</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">bais</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ByteArrayInputStream<span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">buffer</span><span style="color:#f92672">);</span>
-			<span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">bsis</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedServletInputStream<span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">bais</span><span style="color:#f92672">);</span>
-			<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">bsis</span><span style="color:#f92672">;</span>
-		<span style="color:#f92672">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> ServletInputStream <span style="color:#06b;font-weight:bold">getInputStream</span><span style="color:#333">()</span> <span style="color:#333">{</span>
+			<span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">bais</span> <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> ByteArrayInputStream<span style="color:#333">(</span><span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">buffer</span><span style="color:#333">);</span>
+			<span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">bsis</span> <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> BufferedServletInputStream<span style="color:#333">(</span><span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">bais</span><span style="color:#333">);</span>
+			<span style="color:#080;font-weight:bold">return</span> <span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">bsis</span><span style="color:#333">;</span>
+		<span style="color:#333">}</span>
 
-		String <span style="color:#a6e22e">getRequestBody</span><span style="color:#f92672">()</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
-			BufferedReader reader <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedReader<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> InputStreamReader<span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getInputStream</span><span style="color:#f92672">()));</span>
-			String line <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
-			StringBuilder inputBuffer <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> StringBuilder<span style="color:#f92672">();</span>
-			<span style="color:#66d9ef">do</span> <span style="color:#f92672">{</span>
-				line <span style="color:#f92672">=</span> reader<span style="color:#f92672">.</span><span style="color:#a6e22e">readLine</span><span style="color:#f92672">();</span>
-				<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">null</span> <span style="color:#f92672">!=</span> line<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-					inputBuffer<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span>line<span style="color:#f92672">.</span><span style="color:#a6e22e">trim</span><span style="color:#f92672">());</span>
-				<span style="color:#f92672">}</span>
-			<span style="color:#f92672">}</span> <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>line <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>
-			reader<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
-			<span style="color:#66d9ef">return</span> inputBuffer<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">().</span><span style="color:#a6e22e">trim</span><span style="color:#f92672">();</span>
-		<span style="color:#f92672">}</span>
-	<span style="color:#f92672">}</span>
+		String <span style="color:#06b;font-weight:bold">getRequestBody</span><span style="color:#333">()</span> <span style="color:#080;font-weight:bold">throws</span> IOException <span style="color:#333">{</span>
+			BufferedReader reader <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> BufferedReader<span style="color:#333">(</span><span style="color:#080;font-weight:bold">new</span> InputStreamReader<span style="color:#333">(</span><span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">getInputStream</span><span style="color:#333">()));</span>
+			String line <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">null</span><span style="color:#333">;</span>
+			StringBuilder inputBuffer <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> StringBuilder<span style="color:#333">();</span>
+			<span style="color:#080;font-weight:bold">do</span> <span style="color:#333">{</span>
+				line <span style="color:#333">=</span> reader<span style="color:#333">.</span><span style="color:#00c">readLine</span><span style="color:#333">();</span>
+				<span style="color:#080;font-weight:bold">if</span> <span style="color:#333">(</span><span style="color:#080;font-weight:bold">null</span> <span style="color:#333">!=</span> line<span style="color:#333">)</span> <span style="color:#333">{</span>
+					inputBuffer<span style="color:#333">.</span><span style="color:#00c">append</span><span style="color:#333">(</span>line<span style="color:#333">.</span><span style="color:#00c">trim</span><span style="color:#333">());</span>
+				<span style="color:#333">}</span>
+			<span style="color:#333">}</span> <span style="color:#080;font-weight:bold">while</span> <span style="color:#333">(</span>line <span style="color:#333">!=</span> <span style="color:#080;font-weight:bold">null</span><span style="color:#333">);</span>
+			reader<span style="color:#333">.</span><span style="color:#00c">close</span><span style="color:#333">();</span>
+			<span style="color:#080;font-weight:bold">return</span> inputBuffer<span style="color:#333">.</span><span style="color:#00c">toString</span><span style="color:#333">().</span><span style="color:#00c">trim</span><span style="color:#333">();</span>
+		<span style="color:#333">}</span>
+	<span style="color:#333">}</span>
 
-	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BufferedServletInputStream</span> <span style="color:#66d9ef">extends</span> ServletInputStream <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">private</span> ByteArrayInputStream bais<span style="color:#f92672">;</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">BufferedServletInputStream</span><span style="color:#f92672">(</span>ByteArrayInputStream bais<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">bais</span> <span style="color:#f92672">=</span> bais<span style="color:#f92672">;</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">available</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">bais</span><span style="color:#f92672">.</span><span style="color:#a6e22e">available</span><span style="color:#f92672">();</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">read</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">bais</span><span style="color:#f92672">.</span><span style="color:#a6e22e">read</span><span style="color:#f92672">();</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">read</span><span style="color:#f92672">(</span><span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> buf<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> off<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> len<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">bais</span><span style="color:#f92672">.</span><span style="color:#a6e22e">read</span><span style="color:#f92672">(</span>buf<span style="color:#f92672">,</span> off<span style="color:#f92672">,</span> len<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isFinished</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isReady</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setReadListener</span><span style="color:#f92672">(</span>ReadListener readListener<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+	<span style="color:#080;font-weight:bold">private</span> <span style="color:#080;font-weight:bold">static</span> <span style="color:#080;font-weight:bold">final</span> <span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">BufferedServletInputStream</span> <span style="color:#080;font-weight:bold">extends</span> ServletInputStream <span style="color:#333">{</span>
+		<span style="color:#080;font-weight:bold">private</span> ByteArrayInputStream bais<span style="color:#333">;</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#06b;font-weight:bold">BufferedServletInputStream</span><span style="color:#333">(</span>ByteArrayInputStream bais<span style="color:#333">)</span> <span style="color:#333">{</span>
+			<span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">bais</span> <span style="color:#333">=</span> bais<span style="color:#333">;</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">int</span> <span style="color:#06b;font-weight:bold">available</span><span style="color:#333">()</span> <span style="color:#333">{</span>
+			<span style="color:#080;font-weight:bold">return</span> <span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">bais</span><span style="color:#333">.</span><span style="color:#00c">available</span><span style="color:#333">();</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">int</span> <span style="color:#06b;font-weight:bold">read</span><span style="color:#333">()</span> <span style="color:#333">{</span>
+			<span style="color:#080;font-weight:bold">return</span> <span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">bais</span><span style="color:#333">.</span><span style="color:#00c">read</span><span style="color:#333">();</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">int</span> <span style="color:#06b;font-weight:bold">read</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">byte</span><span style="color:#333">[]</span> buf<span style="color:#333">,</span> <span style="color:#339;font-weight:bold">int</span> off<span style="color:#333">,</span> <span style="color:#339;font-weight:bold">int</span> len<span style="color:#333">)</span> <span style="color:#333">{</span>
+			<span style="color:#080;font-weight:bold">return</span> <span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">bais</span><span style="color:#333">.</span><span style="color:#00c">read</span><span style="color:#333">(</span>buf<span style="color:#333">,</span> off<span style="color:#333">,</span> len<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">boolean</span> <span style="color:#06b;font-weight:bold">isFinished</span><span style="color:#333">()</span> <span style="color:#333">{</span>
+			<span style="color:#080;font-weight:bold">return</span> <span style="color:#080;font-weight:bold">false</span><span style="color:#333">;</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">boolean</span> <span style="color:#06b;font-weight:bold">isReady</span><span style="color:#333">()</span> <span style="color:#333">{</span>
+			<span style="color:#080;font-weight:bold">return</span> <span style="color:#080;font-weight:bold">true</span><span style="color:#333">;</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">setReadListener</span><span style="color:#333">(</span>ReadListener readListener<span style="color:#333">)</span> <span style="color:#333">{</span>
 
-		<span style="color:#f92672">}</span>
-	<span style="color:#f92672">}</span>
+		<span style="color:#333">}</span>
+	<span style="color:#333">}</span>
 
-	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TeeServletOutputStream</span> <span style="color:#66d9ef">extends</span> ServletOutputStream <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> TeeOutputStream targetStream<span style="color:#f92672">;</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">TeeServletOutputStream</span><span style="color:#f92672">(</span>OutputStream one<span style="color:#f92672">,</span> OutputStream two<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			targetStream <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TeeOutputStream<span style="color:#f92672">(</span>one<span style="color:#f92672">,</span> two<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">write</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> arg0<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">targetStream</span><span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span>arg0<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">flush</span><span style="color:#f92672">()</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">super</span><span style="color:#f92672">.</span><span style="color:#a6e22e">flush</span><span style="color:#f92672">();</span>
-			<span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">targetStream</span><span style="color:#f92672">.</span><span style="color:#a6e22e">flush</span><span style="color:#f92672">();</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">close</span><span style="color:#f92672">()</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">super</span><span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
-			<span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">targetStream</span><span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isReady</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setWriteListener</span><span style="color:#f92672">(</span>WriteListener writeListener<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+	<span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">TeeServletOutputStream</span> <span style="color:#080;font-weight:bold">extends</span> ServletOutputStream <span style="color:#333">{</span>
+		<span style="color:#080;font-weight:bold">private</span> <span style="color:#080;font-weight:bold">final</span> TeeOutputStream targetStream<span style="color:#333">;</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#06b;font-weight:bold">TeeServletOutputStream</span><span style="color:#333">(</span>OutputStream one<span style="color:#333">,</span> OutputStream two<span style="color:#333">)</span> <span style="color:#333">{</span>
+			targetStream <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> TeeOutputStream<span style="color:#333">(</span>one<span style="color:#333">,</span> two<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">write</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">int</span> arg0<span style="color:#333">)</span> <span style="color:#080;font-weight:bold">throws</span> IOException <span style="color:#333">{</span>
+			<span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">targetStream</span><span style="color:#333">.</span><span style="color:#00c">write</span><span style="color:#333">(</span>arg0<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">flush</span><span style="color:#333">()</span> <span style="color:#080;font-weight:bold">throws</span> IOException <span style="color:#333">{</span>
+			<span style="color:#080;font-weight:bold">super</span><span style="color:#333">.</span><span style="color:#00c">flush</span><span style="color:#333">();</span>
+			<span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">targetStream</span><span style="color:#333">.</span><span style="color:#00c">flush</span><span style="color:#333">();</span>
+		<span style="color:#333">}</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">close</span><span style="color:#333">()</span> <span style="color:#080;font-weight:bold">throws</span> IOException <span style="color:#333">{</span>
+			<span style="color:#080;font-weight:bold">super</span><span style="color:#333">.</span><span style="color:#00c">close</span><span style="color:#333">();</span>
+			<span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">targetStream</span><span style="color:#333">.</span><span style="color:#00c">close</span><span style="color:#333">();</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">boolean</span> <span style="color:#06b;font-weight:bold">isReady</span><span style="color:#333">()</span> <span style="color:#333">{</span>
+			<span style="color:#080;font-weight:bold">return</span> <span style="color:#080;font-weight:bold">false</span><span style="color:#333">;</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">setWriteListener</span><span style="color:#333">(</span>WriteListener writeListener<span style="color:#333">)</span> <span style="color:#333">{</span>
 
-		<span style="color:#f92672">}</span>
-	<span style="color:#f92672">}</span>
+		<span style="color:#333">}</span>
+	<span style="color:#333">}</span>
 
-	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BufferedResponseWrapper</span> <span style="color:#66d9ef">implements</span> HttpServletResponse <span style="color:#f92672">{</span>
-		HttpServletResponse original<span style="color:#f92672">;</span>
-		TeeServletOutputStream tee<span style="color:#f92672">;</span>
-		ByteArrayOutputStream bos<span style="color:#f92672">;</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">BufferedResponseWrapper</span><span style="color:#f92672">(</span>HttpServletResponse response<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			original <span style="color:#f92672">=</span> response<span style="color:#f92672">;</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getContent</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">return</span> bos<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">();</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#66d9ef">public</span> PrintWriter <span style="color:#a6e22e">getWriter</span><span style="color:#f92672">()</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">return</span> original<span style="color:#f92672">.</span><span style="color:#a6e22e">getWriter</span><span style="color:#f92672">();</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#66d9ef">public</span> ServletOutputStream <span style="color:#a6e22e">getOutputStream</span><span style="color:#f92672">()</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>tee <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-				bos <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ByteArrayOutputStream<span style="color:#f92672">();</span>
-				tee <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TeeServletOutputStream<span style="color:#f92672">(</span>original<span style="color:#f92672">.</span><span style="color:#a6e22e">getOutputStream</span><span style="color:#f92672">(),</span> bos<span style="color:#f92672">);</span>
-			<span style="color:#f92672">}</span>
-			<span style="color:#66d9ef">return</span> tee<span style="color:#f92672">;</span>
+	<span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">BufferedResponseWrapper</span> <span style="color:#080;font-weight:bold">implements</span> HttpServletResponse <span style="color:#333">{</span>
+		HttpServletResponse original<span style="color:#333">;</span>
+		TeeServletOutputStream tee<span style="color:#333">;</span>
+		ByteArrayOutputStream bos<span style="color:#333">;</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#06b;font-weight:bold">BufferedResponseWrapper</span><span style="color:#333">(</span>HttpServletResponse response<span style="color:#333">)</span> <span style="color:#333">{</span>
+			original <span style="color:#333">=</span> response<span style="color:#333">;</span>
+		<span style="color:#333">}</span>
+		<span style="color:#080;font-weight:bold">public</span> String <span style="color:#06b;font-weight:bold">getContent</span><span style="color:#333">()</span> <span style="color:#333">{</span>
+			<span style="color:#080;font-weight:bold">return</span> bos<span style="color:#333">.</span><span style="color:#00c">toString</span><span style="color:#333">();</span>
+		<span style="color:#333">}</span>
+		<span style="color:#080;font-weight:bold">public</span> PrintWriter <span style="color:#06b;font-weight:bold">getWriter</span><span style="color:#333">()</span> <span style="color:#080;font-weight:bold">throws</span> IOException <span style="color:#333">{</span>
+			<span style="color:#080;font-weight:bold">return</span> original<span style="color:#333">.</span><span style="color:#00c">getWriter</span><span style="color:#333">();</span>
+		<span style="color:#333">}</span>
+		<span style="color:#080;font-weight:bold">public</span> ServletOutputStream <span style="color:#06b;font-weight:bold">getOutputStream</span><span style="color:#333">()</span> <span style="color:#080;font-weight:bold">throws</span> IOException <span style="color:#333">{</span>
+			<span style="color:#080;font-weight:bold">if</span> <span style="color:#333">(</span>tee <span style="color:#333">==</span> <span style="color:#080;font-weight:bold">null</span><span style="color:#333">)</span> <span style="color:#333">{</span>
+				bos <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> ByteArrayOutputStream<span style="color:#333">();</span>
+				tee <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> TeeServletOutputStream<span style="color:#333">(</span>original<span style="color:#333">.</span><span style="color:#00c">getOutputStream</span><span style="color:#333">(),</span> bos<span style="color:#333">);</span>
+			<span style="color:#333">}</span>
+			<span style="color:#080;font-weight:bold">return</span> tee<span style="color:#333">;</span>
 
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getCharacterEncoding</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">return</span> original<span style="color:#f92672">.</span><span style="color:#a6e22e">getCharacterEncoding</span><span style="color:#f92672">();</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getContentType</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">return</span> original<span style="color:#f92672">.</span><span style="color:#a6e22e">getContentType</span><span style="color:#f92672">();</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setCharacterEncoding</span><span style="color:#f92672">(</span>String charset<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			original<span style="color:#f92672">.</span><span style="color:#a6e22e">setCharacterEncoding</span><span style="color:#f92672">(</span>charset<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setContentLength</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> len<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			original<span style="color:#f92672">.</span><span style="color:#a6e22e">setContentLength</span><span style="color:#f92672">(</span>len<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setContentLengthLong</span><span style="color:#f92672">(</span><span style="color:#66d9ef">long</span> l<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			original<span style="color:#f92672">.</span><span style="color:#a6e22e">setContentLengthLong</span><span style="color:#f92672">(</span>l<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setContentType</span><span style="color:#f92672">(</span>String type<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			original<span style="color:#f92672">.</span><span style="color:#a6e22e">setContentType</span><span style="color:#f92672">(</span>type<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setBufferSize</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> size<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			original<span style="color:#f92672">.</span><span style="color:#a6e22e">setBufferSize</span><span style="color:#f92672">(</span>size<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getBufferSize</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">return</span> original<span style="color:#f92672">.</span><span style="color:#a6e22e">getBufferSize</span><span style="color:#f92672">();</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">flushBuffer</span><span style="color:#f92672">()</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
-			tee<span style="color:#f92672">.</span><span style="color:#a6e22e">flush</span><span style="color:#f92672">();</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">resetBuffer</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-			original<span style="color:#f92672">.</span><span style="color:#a6e22e">resetBuffer</span><span style="color:#f92672">();</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isCommitted</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">return</span> original<span style="color:#f92672">.</span><span style="color:#a6e22e">isCommitted</span><span style="color:#f92672">();</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">reset</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-			original<span style="color:#f92672">.</span><span style="color:#a6e22e">reset</span><span style="color:#f92672">();</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setLocale</span><span style="color:#f92672">(</span>Locale loc<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			original<span style="color:#f92672">.</span><span style="color:#a6e22e">setLocale</span><span style="color:#f92672">(</span>loc<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> Locale <span style="color:#a6e22e">getLocale</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">return</span> original<span style="color:#f92672">.</span><span style="color:#a6e22e">getLocale</span><span style="color:#f92672">();</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addCookie</span><span style="color:#f92672">(</span>Cookie cookie<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			original<span style="color:#f92672">.</span><span style="color:#a6e22e">addCookie</span><span style="color:#f92672">(</span>cookie<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">containsHeader</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">return</span> original<span style="color:#f92672">.</span><span style="color:#a6e22e">containsHeader</span><span style="color:#f92672">(</span>name<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">encodeURL</span><span style="color:#f92672">(</span>String url<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">return</span> original<span style="color:#f92672">.</span><span style="color:#a6e22e">encodeURL</span><span style="color:#f92672">(</span>url<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">encodeRedirectURL</span><span style="color:#f92672">(</span>String url<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">return</span> original<span style="color:#f92672">.</span><span style="color:#a6e22e">encodeRedirectURL</span><span style="color:#f92672">(</span>url<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@SuppressWarnings</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;deprecation&#34;</span><span style="color:#f92672">)</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">encodeUrl</span><span style="color:#f92672">(</span>String url<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">return</span> original<span style="color:#f92672">.</span><span style="color:#a6e22e">encodeUrl</span><span style="color:#f92672">(</span>url<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@SuppressWarnings</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;deprecation&#34;</span><span style="color:#f92672">)</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">encodeRedirectUrl</span><span style="color:#f92672">(</span>String url<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">return</span> original<span style="color:#f92672">.</span><span style="color:#a6e22e">encodeRedirectUrl</span><span style="color:#f92672">(</span>url<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sendError</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> sc<span style="color:#f92672">,</span> String msg<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
-			original<span style="color:#f92672">.</span><span style="color:#a6e22e">sendError</span><span style="color:#f92672">(</span>sc<span style="color:#f92672">,</span> msg<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sendError</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> sc<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
-			original<span style="color:#f92672">.</span><span style="color:#a6e22e">sendError</span><span style="color:#f92672">(</span>sc<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sendRedirect</span><span style="color:#f92672">(</span>String location<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
-			original<span style="color:#f92672">.</span><span style="color:#a6e22e">sendRedirect</span><span style="color:#f92672">(</span>location<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setDateHeader</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">,</span> <span style="color:#66d9ef">long</span> date<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			original<span style="color:#f92672">.</span><span style="color:#a6e22e">setDateHeader</span><span style="color:#f92672">(</span>name<span style="color:#f92672">,</span> date<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addDateHeader</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">,</span> <span style="color:#66d9ef">long</span> date<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			original<span style="color:#f92672">.</span><span style="color:#a6e22e">addDateHeader</span><span style="color:#f92672">(</span>name<span style="color:#f92672">,</span> date<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setHeader</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">,</span> String value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			original<span style="color:#f92672">.</span><span style="color:#a6e22e">setHeader</span><span style="color:#f92672">(</span>name<span style="color:#f92672">,</span> value<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addHeader</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">,</span> String value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			original<span style="color:#f92672">.</span><span style="color:#a6e22e">addHeader</span><span style="color:#f92672">(</span>name<span style="color:#f92672">,</span> value<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setIntHeader</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			original<span style="color:#f92672">.</span><span style="color:#a6e22e">setIntHeader</span><span style="color:#f92672">(</span>name<span style="color:#f92672">,</span> value<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addIntHeader</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> value<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			original<span style="color:#f92672">.</span><span style="color:#a6e22e">addIntHeader</span><span style="color:#f92672">(</span>name<span style="color:#f92672">,</span> value<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setStatus</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> sc<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			original<span style="color:#f92672">.</span><span style="color:#a6e22e">setStatus</span><span style="color:#f92672">(</span>sc<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@SuppressWarnings</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;deprecation&#34;</span><span style="color:#f92672">)</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setStatus</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> sc<span style="color:#f92672">,</span> String sm<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			original<span style="color:#f92672">.</span><span style="color:#a6e22e">setStatus</span><span style="color:#f92672">(</span>sc<span style="color:#f92672">,</span> sm<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getHeader</span><span style="color:#f92672">(</span>String arg0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">return</span> original<span style="color:#f92672">.</span><span style="color:#a6e22e">getHeader</span><span style="color:#f92672">(</span>arg0<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> Collection<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">getHeaderNames</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">return</span> original<span style="color:#f92672">.</span><span style="color:#a6e22e">getHeaderNames</span><span style="color:#f92672">();</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> Collection<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">getHeaders</span><span style="color:#f92672">(</span>String arg0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">return</span> original<span style="color:#f92672">.</span><span style="color:#a6e22e">getHeaders</span><span style="color:#f92672">(</span>arg0<span style="color:#f92672">);</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#a6e22e">@Override</span>
-		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getStatus</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">return</span> original<span style="color:#f92672">.</span><span style="color:#a6e22e">getStatus</span><span style="color:#f92672">();</span>
-		<span style="color:#f92672">}</span>
-	<span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> String <span style="color:#06b;font-weight:bold">getCharacterEncoding</span><span style="color:#333">()</span> <span style="color:#333">{</span>
+			<span style="color:#080;font-weight:bold">return</span> original<span style="color:#333">.</span><span style="color:#00c">getCharacterEncoding</span><span style="color:#333">();</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> String <span style="color:#06b;font-weight:bold">getContentType</span><span style="color:#333">()</span> <span style="color:#333">{</span>
+			<span style="color:#080;font-weight:bold">return</span> original<span style="color:#333">.</span><span style="color:#00c">getContentType</span><span style="color:#333">();</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">setCharacterEncoding</span><span style="color:#333">(</span>String charset<span style="color:#333">)</span> <span style="color:#333">{</span>
+			original<span style="color:#333">.</span><span style="color:#00c">setCharacterEncoding</span><span style="color:#333">(</span>charset<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">setContentLength</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">int</span> len<span style="color:#333">)</span> <span style="color:#333">{</span>
+			original<span style="color:#333">.</span><span style="color:#00c">setContentLength</span><span style="color:#333">(</span>len<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">setContentLengthLong</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">long</span> l<span style="color:#333">)</span> <span style="color:#333">{</span>
+			original<span style="color:#333">.</span><span style="color:#00c">setContentLengthLong</span><span style="color:#333">(</span>l<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">setContentType</span><span style="color:#333">(</span>String type<span style="color:#333">)</span> <span style="color:#333">{</span>
+			original<span style="color:#333">.</span><span style="color:#00c">setContentType</span><span style="color:#333">(</span>type<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">setBufferSize</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">int</span> size<span style="color:#333">)</span> <span style="color:#333">{</span>
+			original<span style="color:#333">.</span><span style="color:#00c">setBufferSize</span><span style="color:#333">(</span>size<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">int</span> <span style="color:#06b;font-weight:bold">getBufferSize</span><span style="color:#333">()</span> <span style="color:#333">{</span>
+			<span style="color:#080;font-weight:bold">return</span> original<span style="color:#333">.</span><span style="color:#00c">getBufferSize</span><span style="color:#333">();</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">flushBuffer</span><span style="color:#333">()</span> <span style="color:#080;font-weight:bold">throws</span> IOException <span style="color:#333">{</span>
+			tee<span style="color:#333">.</span><span style="color:#00c">flush</span><span style="color:#333">();</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">resetBuffer</span><span style="color:#333">()</span> <span style="color:#333">{</span>
+			original<span style="color:#333">.</span><span style="color:#00c">resetBuffer</span><span style="color:#333">();</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">boolean</span> <span style="color:#06b;font-weight:bold">isCommitted</span><span style="color:#333">()</span> <span style="color:#333">{</span>
+			<span style="color:#080;font-weight:bold">return</span> original<span style="color:#333">.</span><span style="color:#00c">isCommitted</span><span style="color:#333">();</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">reset</span><span style="color:#333">()</span> <span style="color:#333">{</span>
+			original<span style="color:#333">.</span><span style="color:#00c">reset</span><span style="color:#333">();</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">setLocale</span><span style="color:#333">(</span>Locale loc<span style="color:#333">)</span> <span style="color:#333">{</span>
+			original<span style="color:#333">.</span><span style="color:#00c">setLocale</span><span style="color:#333">(</span>loc<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> Locale <span style="color:#06b;font-weight:bold">getLocale</span><span style="color:#333">()</span> <span style="color:#333">{</span>
+			<span style="color:#080;font-weight:bold">return</span> original<span style="color:#333">.</span><span style="color:#00c">getLocale</span><span style="color:#333">();</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">addCookie</span><span style="color:#333">(</span>Cookie cookie<span style="color:#333">)</span> <span style="color:#333">{</span>
+			original<span style="color:#333">.</span><span style="color:#00c">addCookie</span><span style="color:#333">(</span>cookie<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">boolean</span> <span style="color:#06b;font-weight:bold">containsHeader</span><span style="color:#333">(</span>String name<span style="color:#333">)</span> <span style="color:#333">{</span>
+			<span style="color:#080;font-weight:bold">return</span> original<span style="color:#333">.</span><span style="color:#00c">containsHeader</span><span style="color:#333">(</span>name<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> String <span style="color:#06b;font-weight:bold">encodeURL</span><span style="color:#333">(</span>String url<span style="color:#333">)</span> <span style="color:#333">{</span>
+			<span style="color:#080;font-weight:bold">return</span> original<span style="color:#333">.</span><span style="color:#00c">encodeURL</span><span style="color:#333">(</span>url<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> String <span style="color:#06b;font-weight:bold">encodeRedirectURL</span><span style="color:#333">(</span>String url<span style="color:#333">)</span> <span style="color:#333">{</span>
+			<span style="color:#080;font-weight:bold">return</span> original<span style="color:#333">.</span><span style="color:#00c">encodeRedirectURL</span><span style="color:#333">(</span>url<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@SuppressWarnings</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;deprecation&#34;</span><span style="color:#333">)</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> String <span style="color:#06b;font-weight:bold">encodeUrl</span><span style="color:#333">(</span>String url<span style="color:#333">)</span> <span style="color:#333">{</span>
+			<span style="color:#080;font-weight:bold">return</span> original<span style="color:#333">.</span><span style="color:#00c">encodeUrl</span><span style="color:#333">(</span>url<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@SuppressWarnings</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;deprecation&#34;</span><span style="color:#333">)</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> String <span style="color:#06b;font-weight:bold">encodeRedirectUrl</span><span style="color:#333">(</span>String url<span style="color:#333">)</span> <span style="color:#333">{</span>
+			<span style="color:#080;font-weight:bold">return</span> original<span style="color:#333">.</span><span style="color:#00c">encodeRedirectUrl</span><span style="color:#333">(</span>url<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">sendError</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">int</span> sc<span style="color:#333">,</span> String msg<span style="color:#333">)</span> <span style="color:#080;font-weight:bold">throws</span> IOException <span style="color:#333">{</span>
+			original<span style="color:#333">.</span><span style="color:#00c">sendError</span><span style="color:#333">(</span>sc<span style="color:#333">,</span> msg<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">sendError</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">int</span> sc<span style="color:#333">)</span> <span style="color:#080;font-weight:bold">throws</span> IOException <span style="color:#333">{</span>
+			original<span style="color:#333">.</span><span style="color:#00c">sendError</span><span style="color:#333">(</span>sc<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">sendRedirect</span><span style="color:#333">(</span>String location<span style="color:#333">)</span> <span style="color:#080;font-weight:bold">throws</span> IOException <span style="color:#333">{</span>
+			original<span style="color:#333">.</span><span style="color:#00c">sendRedirect</span><span style="color:#333">(</span>location<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">setDateHeader</span><span style="color:#333">(</span>String name<span style="color:#333">,</span> <span style="color:#339;font-weight:bold">long</span> date<span style="color:#333">)</span> <span style="color:#333">{</span>
+			original<span style="color:#333">.</span><span style="color:#00c">setDateHeader</span><span style="color:#333">(</span>name<span style="color:#333">,</span> date<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">addDateHeader</span><span style="color:#333">(</span>String name<span style="color:#333">,</span> <span style="color:#339;font-weight:bold">long</span> date<span style="color:#333">)</span> <span style="color:#333">{</span>
+			original<span style="color:#333">.</span><span style="color:#00c">addDateHeader</span><span style="color:#333">(</span>name<span style="color:#333">,</span> date<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">setHeader</span><span style="color:#333">(</span>String name<span style="color:#333">,</span> String value<span style="color:#333">)</span> <span style="color:#333">{</span>
+			original<span style="color:#333">.</span><span style="color:#00c">setHeader</span><span style="color:#333">(</span>name<span style="color:#333">,</span> value<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">addHeader</span><span style="color:#333">(</span>String name<span style="color:#333">,</span> String value<span style="color:#333">)</span> <span style="color:#333">{</span>
+			original<span style="color:#333">.</span><span style="color:#00c">addHeader</span><span style="color:#333">(</span>name<span style="color:#333">,</span> value<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">setIntHeader</span><span style="color:#333">(</span>String name<span style="color:#333">,</span> <span style="color:#339;font-weight:bold">int</span> value<span style="color:#333">)</span> <span style="color:#333">{</span>
+			original<span style="color:#333">.</span><span style="color:#00c">setIntHeader</span><span style="color:#333">(</span>name<span style="color:#333">,</span> value<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">addIntHeader</span><span style="color:#333">(</span>String name<span style="color:#333">,</span> <span style="color:#339;font-weight:bold">int</span> value<span style="color:#333">)</span> <span style="color:#333">{</span>
+			original<span style="color:#333">.</span><span style="color:#00c">addIntHeader</span><span style="color:#333">(</span>name<span style="color:#333">,</span> value<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">setStatus</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">int</span> sc<span style="color:#333">)</span> <span style="color:#333">{</span>
+			original<span style="color:#333">.</span><span style="color:#00c">setStatus</span><span style="color:#333">(</span>sc<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@SuppressWarnings</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;deprecation&#34;</span><span style="color:#333">)</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">setStatus</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">int</span> sc<span style="color:#333">,</span> String sm<span style="color:#333">)</span> <span style="color:#333">{</span>
+			original<span style="color:#333">.</span><span style="color:#00c">setStatus</span><span style="color:#333">(</span>sc<span style="color:#333">,</span> sm<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> String <span style="color:#06b;font-weight:bold">getHeader</span><span style="color:#333">(</span>String arg0<span style="color:#333">)</span> <span style="color:#333">{</span>
+			<span style="color:#080;font-weight:bold">return</span> original<span style="color:#333">.</span><span style="color:#00c">getHeader</span><span style="color:#333">(</span>arg0<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> Collection<span style="color:#333">&lt;</span>String<span style="color:#333">&gt;</span> <span style="color:#06b;font-weight:bold">getHeaderNames</span><span style="color:#333">()</span> <span style="color:#333">{</span>
+			<span style="color:#080;font-weight:bold">return</span> original<span style="color:#333">.</span><span style="color:#00c">getHeaderNames</span><span style="color:#333">();</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> Collection<span style="color:#333">&lt;</span>String<span style="color:#333">&gt;</span> <span style="color:#06b;font-weight:bold">getHeaders</span><span style="color:#333">(</span>String arg0<span style="color:#333">)</span> <span style="color:#333">{</span>
+			<span style="color:#080;font-weight:bold">return</span> original<span style="color:#333">.</span><span style="color:#00c">getHeaders</span><span style="color:#333">(</span>arg0<span style="color:#333">);</span>
+		<span style="color:#333">}</span>
+		<span style="color:#555;font-weight:bold">@Override</span>
+		<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">int</span> <span style="color:#06b;font-weight:bold">getStatus</span><span style="color:#333">()</span> <span style="color:#333">{</span>
+			<span style="color:#080;font-weight:bold">return</span> original<span style="color:#333">.</span><span style="color:#00c">getStatus</span><span style="color:#333">();</span>
+		<span style="color:#333">}</span>
+	<span style="color:#333">}</span>
+<span style="color:#333">}</span>
 </code></pre></div></details>
 <p><br /></p>
-<h3 id="applicationyml">application.yml</h3>
+<h3 id="3-applicationyml">3. application.yml</h3>
 <p>Let&rsquo;s setup properties related to <code>ApiLoggingFilterConfig</code> file in <em><strong>.properties</strong></em> or <em><strong>.yml</strong></em> file</p>
 <ul>
 <li>We have enabled api logger <strong>app.api.logging.enabled=true</strong></li>
@@ -609,20 +609,20 @@ Default Spring Boot Logging Pattern is as follows:-
 <pre><code>&quot;%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}&quot;
 </code></pre></li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-application.yml" data-lang="application.yml"><span style="color:#66d9ef">app</span>:
-  <span style="color:#66d9ef">api</span>:
-    <span style="color:#66d9ef">logging</span>:
-      <span style="color:#66d9ef">enable</span>: <span style="color:#66d9ef">true</span>
-      <span style="color:#66d9ef">url-patterns</span>: <span style="color:#e6db74">&#34;/users/*,/posts/*&#34;</span>
-      <span style="color:#66d9ef">requestIdParamName</span>: reqId
-<span style="color:#66d9ef">logging</span>:
-  <span style="color:#66d9ef">level</span>:
-    <span style="color:#66d9ef">root</span>: INFO
-    <span style="color:#66d9ef">com.abc.demo</span>: DEBUG
-  <span style="color:#66d9ef">pattern</span>:
-    <span style="color:#66d9ef">console</span>: <span style="color:#e6db74">&#34;%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%8.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %X{REQUEST_ID} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}&#34;</span>
-</code></pre></div><p><br /></p>
-<h3 id="logs">Logs</h3>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-application.yml" data-lang="application.yml"><span style="color:#080;font-weight:bold">app</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#080;font-weight:bold">api</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#080;font-weight:bold">logging</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#080;font-weight:bold">enable</span>:<span style="color:#bbb"> </span><span style="color:#080;font-weight:bold">true</span><span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#080;font-weight:bold">url-patterns</span>:<span style="color:#bbb"> </span><span style="background-color:#fff0f0">&#34;/users/*,/posts/*&#34;</span><span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#080;font-weight:bold">requestIdParamName</span>:<span style="color:#bbb"> </span>reqId<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#080;font-weight:bold">logging</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#080;font-weight:bold">level</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#080;font-weight:bold">root</span>:<span style="color:#bbb"> </span>INFO<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#080;font-weight:bold">com.abc.demo</span>:<span style="color:#bbb"> </span>DEBUG<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#080;font-weight:bold">pattern</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#080;font-weight:bold">console</span>:<span style="color:#bbb"> </span><span style="background-color:#fff0f0">&#34;%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%8.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %X{REQUEST_ID} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}&#34;</span><span style="color:#bbb">
+</span></code></pre></div><p><br /></p>
+<h3 id="4-logs">4. Logs</h3>
 <p>That&rsquo;s it. Let&rsquo;s execute some RESTFul API and look at the logs:-</p>
 <h5 id="httplocalhost8080postsreqid1234">http://localhost:8080/posts?reqId=1234</h5>
 <pre><code>2020-04-23 21:09:44.107 - INFO 3240 --- ApiLoggingFilter: <mark>1234</mark> HTTP GET &quot;/posts&quot; , parameters={requestId=1234}, body=, remote_address=0:0:0:0:0:0:0:1
@@ -632,7 +632,7 @@ Default Spring Boot Logging Pattern is as follows:-
 <pre><code>2020-04-23 21:09:44.107 - INFO 3240 --- ApiLoggingFilter: <mark>754be6a6-b00a-4c98-b681-2d0041b4f72c</mark> HTTP GET &quot;/posts&quot; , parameters={requestId=1234}, body=, remote_address=0:0:0:0:0:0:0:1
 2020-04-23 21:09:44.110 - INFO 3240 --- ApiLoggingFilter: <mark>754be6a6-b00a-4c98-b681-2d0041b4f72c</mark> HTTP RESPONSE [{&quot;id&quot;:1,&quot;title&quot;:&quot;Spring Boot&quot;,&quot;body&quot;:&quot;All about Spring boot microservice&quot;},{&quot;id&quot;:2,&quot;title&quot;:&quot;Java&quot;,&quot;body&quot;:&quot;Learn Streams in Java&quot;},{&quot;id&quot;:3,&quot;title&quot;:&quot;JavaScript&quot;,&quot;body&quot;:&quot;Whats new in ES6&quot;}]
 </code></pre><p><br /></p>
-<h3 id="summary">Summary</h3>
+<h3 id="5-summary">5. Summary</h3>
 <p>We saw in this post that how we can create custom logger to print API request and response. Also incoming request can have <em><strong>requestId</strong></em> parameter which can be printed across all the logs which serves that request. This parameter can be further passed down in downstream microservices to further print it in the logs. This way a request can be tracked end to end from the logs.</p>
 <p>Please find the complete source code of custom logging API on <a href="https://github.com/ashishlahoti/springboot-microservice" target="_blank">github springboot-microservice</a></p>
 		</div>

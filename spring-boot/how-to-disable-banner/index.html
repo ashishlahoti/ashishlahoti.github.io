@@ -84,7 +84,7 @@ if (!doNotTrack) {
     },
     "image": "https:\/\/codingnconcepts.com\/favicon-32x32.png",
     "url" : "https:\/\/codingnconcepts.com\/spring-boot\/how-to-disable-banner\/",
-    "wordCount" : "177",
+    "wordCount" : "169",
     "genre" : [ "Spring Boot" ],
     "keywords" : [ ]
 }
@@ -196,38 +196,31 @@ if (!doNotTrack) {
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.1.3.RELEASE)
 </code></pre><p>There are multiple ways to disable spring boot banner as follows:</p>
-<h6 id="1-springbootapplication-main-method">1. SpringBootApplication main method</h6>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.abc<span style="color:#f92672">;</span>
+<p><br /></p>
+<h5 id="1-springbootapplication-main-method">1. SpringBootApplication main method</h5>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#555;font-weight:bold">@SpringBootApplication</span>
+<span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">SpringBootDemoApplication</span> <span style="color:#333">{</span>
 
-<span style="color:#f92672">import</span> org.springframework.boot.Banner<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.springframework.boot.SpringApplication<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.springframework.boot.autoconfigure.SpringBootApplication<span style="color:#f92672">;</span>
+    <span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">static</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">main</span><span style="color:#333">(</span>String<span style="color:#333">[]</span> args<span style="color:#333">)</span> <span style="color:#080;font-weight:bold">throws</span> Exception <span style="color:#333">{</span>
 
-<span style="color:#a6e22e">@SpringBootApplication</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringBootDemoApplication</span> <span style="color:#f92672">{</span>
-
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
-
-        SpringApplication app <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SpringApplication<span style="color:#f92672">(</span>SpringBootDemoApplication<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
-        app<span style="color:#f92672">.</span><span style="color:#a6e22e">setBannerMode</span><span style="color:#f92672">(</span>Banner<span style="color:#f92672">.</span><span style="color:#a6e22e">Mode</span><span style="color:#f92672">.</span><span style="color:#a6e22e">OFF</span><span style="color:#f92672">);</span>
-        app<span style="color:#f92672">.</span><span style="color:#a6e22e">run</span><span style="color:#f92672">(</span>args<span style="color:#f92672">);</span>
-
-    <span style="color:#f92672">}</span>
-
-<span style="color:#f92672">}</span>
+        SpringApplication app <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> SpringApplication<span style="color:#333">(</span>SpringBootDemoApplication<span style="color:#333">.</span><span style="color:#00c">class</span><span style="color:#333">);</span>
+        app<span style="color:#333">.</span><span style="color:#00c">setBannerMode</span><span style="color:#333">(</span>Banner<span style="color:#333">.</span><span style="color:#00c">Mode</span><span style="color:#333">.</span><span style="color:#00c">OFF</span><span style="color:#333">);</span>
+        app<span style="color:#333">.</span><span style="color:#00c">run</span><span style="color:#333">(</span>args<span style="color:#333">);</span>
+    <span style="color:#333">}</span>
+<span style="color:#333">}</span>
 </code></pre></div><pre><code>Three possible values of Banner.Mode are as follows:-
 
 OFF     – Disable printing of the banner.
 CONSOLE – Print the banner to System.out.
 LOG     – Print the banner to the log file
 </code></pre>
-<h6 id="2-applicationproperties">2. application.properties</h6>
+<h5 id="2-applicationproperties">2. application.properties</h5>
 <pre><code>spring.main.banner-mode=off
-</code></pre><h6 id="3-applicationyml">3. application.yml</h6>
+</code></pre><h5 id="3-applicationyml">3. application.yml</h5>
 <pre><code>spring:
   main:
     banner-mode:&quot;off&quot;
-</code></pre><h6 id="4-command-line-parameter">4. command-line parameter</h6>
+</code></pre><h5 id="4-command-line-parameter">4. command-line parameter</h5>
 <pre><code>$ java -jar -Dspring.main.banner-mode=off spring-boot-app-1.0.jar
 </code></pre><p>OR</p>
 <pre><code>$ java -jar spring-boot-app-1.0.jar --spring.main.banner-mode=off
