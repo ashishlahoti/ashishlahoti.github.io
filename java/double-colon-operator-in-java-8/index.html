@@ -6,9 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Double Colon (::) Operator in Java 8 - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Explain Method reference using Double Colon (::) operator in Java 8 (Java8) and its usage to initialize a functional interface and replace lambda expression in streams.">
+	<meta name="description" content="This post explains Method reference using Double Colon (::) operator in Java 8 (Java8) and its usage to initialize a functional interface and replace lambda expression in streams. Also explains method reference to a static method, an instance method, constructor method or super method using double colon (::) operator.">
 	<meta property="og:title" content="Double Colon (::) Operator in Java 8" />
-<meta property="og:description" content="Explain Method reference using Double Colon (::) operator in Java 8 (Java8) and its usage to initialize a functional interface and replace lambda expression in streams." />
+<meta property="og:description" content="This post explains Method reference using Double Colon (::) operator in Java 8 (Java8) and its usage to initialize a functional interface and replace lambda expression in streams. Also explains method reference to a static method, an instance method, constructor method or super method using double colon (::) operator." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/java/double-colon-operator-in-java-8/" />
 <meta property="article:published_time" content="2020-04-30T00:00:00+00:00" />
@@ -16,7 +16,7 @@
 
 	<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Double Colon (::) Operator in Java 8"/>
-<meta name="twitter:description" content="Explain Method reference using Double Colon (::) operator in Java 8 (Java8) and its usage to initialize a functional interface and replace lambda expression in streams."/>
+<meta name="twitter:description" content="This post explains Method reference using Double Colon (::) operator in Java 8 (Java8) and its usage to initialize a functional interface and replace lambda expression in streams. Also explains method reference to a static method, an instance method, constructor method or super method using double colon (::) operator."/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -47,7 +47,7 @@ if (!doNotTrack) {
     "name": "Double Colon (::) Operator in Java 8",
     "headline": "Double Colon (::) Operator in Java 8",
     "alternativeHeadline": "Method Reference in Java 8",
-    "description": "Explain Method reference using Double Colon (::) operator in Java 8 (Java8) and its usage to initialize a functional interface and replace lambda expression in streams.",
+    "description": "This post explains Method reference using Double Colon (::) operator in Java 8 (Java8) and its usage to initialize a functional interface and replace lambda expression in streams. Also explains method reference to a static method, an instance method, constructor method or super method using double colon (::) operator.",
     "inLanguage": "en-us",
 	"isFamilyFriendly": "true",
     "mainEntityOfPage": {
@@ -84,7 +84,7 @@ if (!doNotTrack) {
     },
     "image": "https:\/\/codingnconcepts.com\/favicon-32x32.png",
     "url" : "https:\/\/codingnconcepts.com\/java\/double-colon-operator-in-java-8\/",
-    "wordCount" : "1448",
+    "wordCount" : "1636",
     "genre" : [ "Java 8" , "Java" , "Streams" ],
     "keywords" : [ "double colon operator in java 8" , "method reference in java 8" ]
 }
@@ -187,29 +187,74 @@ if (!doNotTrack) {
 	<span class="meta__text"><a class="meta__link" href="/categories/java/" rel="category">Java</a>
 	</span>
 </div></div>
-		</header><div class="content post__content clearfix">
-			<p>The double colon <code>::</code> is a operator is introduced in Java 8 for method reference. We are going to understand its usage with loads of examples.</p>
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-overview">1. Overview</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#2-static-method">2. Static Method</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#3-instance-method">3. Instance Method</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#4-constructor">4. Constructor</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#5-super-method">5. Super Method</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#6-real-world-practical-example">6. Real World Practical example</a>
+      <ul>
+        <li></li>
+        <li><a href="#7-conclusion">7. Conclusion</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div>
+<div class="content post__content clearfix">
+			<p>The double colon <code>::</code> operator is introduced in Java 8 for method reference. We are going to understand its usage with lots of examples.</p>
+<h2 id="1-overview">1. Overview</h2>
+<h5 id="prerequisite">Prerequisite</h5>
 <p>You should have a basic understanding of <em><strong>functional interface</strong></em>, <em><strong>lambda expressions</strong></em> and <em><strong>streams</strong></em> to understand these examples, if not then don&rsquo;t worry, you will learn those concepts as well along the way.<br>
 <br /></p>
 <h5 id="double-colon-refers-to-a-method">Double colon refers to a method</h5>
 <p>Double colon <code>::</code> is basically refers to a single method, and this single method can be a</p>
 <ol>
-<li><strong>A static method</strong> <code>ClassName::staticMethodName</code><br>
+<li><strong>A Static method</strong> <code>ClassName::staticMethodName</code><br>
 e.g. Integer.parseInteger, Double.parseDouble</li>
-<li><strong>An instance method</strong> <code>Object::instanceMethodName</code><br>
+<li><strong>An Instance method</strong> <code>Object::instanceMethodName</code><br>
 e.g. System.out::println, String::toUpperCase</li>
-<li><strong>A constructor</strong> <code>ClassName::new</code><br>
+<li><strong>A Constructor</strong> <code>ClassName::new</code></li>
+<li><strong>A Super method</strong> <code>super::parentMethodName</code><br>
 <br /></li>
 </ol>
-<h5 id="double-colon-returns-functional-interface">Double colon returns functional interface</h5>
-<p>There are two ways in which we use Double colon <code>::</code> method reference which always return a functional interface -</p>
+<h5 id="double-colon-returns-a-functional-interface">Double colon returns a functional interface</h5>
+<p>Double colon <code>::</code> always return a functional interface. There are two ways to use this returned functional interface -</p>
 <ol>
-<li>We <strong>initialize a functional interface</strong> and use that to execute a function. Here we either use java built-in functional interface like <code>Function</code>,  <code>Supplier</code>, <code>Consumer</code>, <code>BiFunction</code> or we create our custom functional interface using <code>@FunctionalInterface</code> annotation.</li>
-<li>We use the returned functional interface to <strong>replace lambda expression</strong> in streams.<br>
+<li>Use this to <strong>initialize a functional interface</strong> and later execute a function.<br>
+Here we either use java built-in functional interface like <code>Function</code>,  <code>Supplier</code>, <code>Consumer</code>, <code>BiFunction</code> or we create our custom functional interface using <code>@FunctionalInterface</code> annotation.</li>
+<li>Use this to <strong>replace lambda expression</strong> in streams.<br>
 <br /></li>
 </ol>
-<h5 id="lets-look-at-them-one-by-one">Let&rsquo;s look at them one by one</h5>
-<h2 id="1-static-method">1. Static Method</h2>
+<p>Don&rsquo;t worry if it&rsquo;s looking too complicated. Let&rsquo;s deep dive into examples to understand them better.</p>
+<h2 id="2-static-method">2. Static Method</h2>
 <h6 id="syntax">Syntax</h6>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Lambda expression 
 </span><span style="color:#75715e"></span>(<span style="color:#a6e22e">args</span>) <span style="color:#f92672">-&gt;</span> <span style="color:#a6e22e">ClassName</span>.<span style="color:#a6e22e">staticMethodName</span>(<span style="color:#a6e22e">args</span>)
@@ -217,33 +262,8 @@ e.g. System.out::println, String::toUpperCase</li>
 <span style="color:#75715e">// Method Reference
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">ClassName</span><span style="color:#f92672">::</span><span style="color:#a6e22e">staticMethodName</span>
 </code></pre></div><p><br /></p>
-<h3 id="11-integerparseint">1.1 Integer::parseInt</h3>
-<h6 id="111-initialize-functional-interface">1.1.1 Initialize Functional Interface</h6>
-<p>Let&rsquo;s initialize java built-in <code>Function</code> functional interface and apply it to parse String to Integer.<br>
-<code>Function</code> interface takes one argument and returns one argument. Here in example, it takes a <strong>String</strong> argument and returns <strong>Integer</strong>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Initialize functional interface
-</span><span style="color:#75715e"></span>Function<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> parseInt <span style="color:#f92672">=</span> Integer<span style="color:#f92672">::</span>parseInt<span style="color:#f92672">;</span>
-
-<span style="color:#75715e">// Execute function
-</span><span style="color:#75715e"></span>parseInt<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;2019&#34;</span><span style="color:#f92672">);</span>
-</code></pre></div><pre><code><div class="code_output">Output</div>
-2019
-</code></pre><h6 id="112-replace-lambda-expression">1.1.2 Replace Lambda Expression</h6>
-<p>Let&rsquo;s parse a list of String to <strong>Integer</strong> using its static <strong>parseInt</strong> method. We see that how we can replace lambda expression with method reference resulting in same output.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> years <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;2019&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;2020&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;2021&#34;</span><span style="color:#f92672">);</span>
-
-<span style="color:#75715e">// Lambda Expression
-</span><span style="color:#75715e"></span>years<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>year <span style="color:#f92672">-&gt;</span> Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">parseInt</span><span style="color:#f92672">(</span>year<span style="color:#f92672">)).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>year <span style="color:#f92672">-&gt;</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>year<span style="color:#f92672">));</span>
-
-<span style="color:#75715e">// Method Reference
-</span><span style="color:#75715e"></span>years<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>Integer<span style="color:#f92672">::</span>parseInt<span style="color:#f92672">).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
-</code></pre></div><pre><code><div class="code_output">Output</div>
-2019
-2020
-2021
-</code></pre><p><br /></p>
-<h3 id="12-calculator">1.2 Calculator</h3>
-<p>Let&rsquo;s create a static method <code>square</code> in <code>Calculator</code>.</p>
+<h4 id="21-calculator">2.1 Calculator</h4>
+<p>Let&rsquo;s create two <strong>static</strong> methods <code>square</code> and <code>multiply</code> in <code>Calculator</code> class.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Calculator</span> <span style="color:#f92672">{</span>
 	
     <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">square</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> num<span style="color:#f92672">){</span>
@@ -253,7 +273,7 @@ e.g. System.out::println, String::toUpperCase</li>
     	<span style="color:#66d9ef">return</span> num1<span style="color:#f92672">*</span>num2<span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><h6 id="121-initialize-functional-interface">1.2.1 Initialize Functional Interface</h6>
+</code></pre></div><h6 id="211-initialize-functional-interface">2.1.1 Initialize Functional Interface</h6>
 <p>Let’s initialize java built-in <code>Function</code>, <code>BiFunction</code> functional interface and apply it to find square and multiply respectively.<br>
 <code>Function</code> interface accepts one argument and returns one argument. Here, it takes one Double arg and return its square.<br>
 <code>BiFunction</code> interface accepts two arguments and returns one argument. Here, it takes two Double args and return its multiplication.</p>
@@ -267,7 +287,7 @@ multiply<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</s
 </code></pre></div><pre><code><div class="code_output">Output</div>
 9.0
 12.5
-</code></pre><h6 id="122-replace-lambda-expression">1.2.2 Replace Lambda Expression</h6>
+</code></pre><h6 id="212-replace-lambda-expression">2.1.2 Replace Lambda Expression</h6>
 <p>We generate square of list of Integer by replacing lambda expression with method reference.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> numbers <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span>2<span style="color:#f92672">,</span>3<span style="color:#f92672">);</span>
 
@@ -281,7 +301,33 @@ multiply<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</s
 4.0
 9.0
 </code></pre><p><br /></p>
-<h2 id="2-instance-method">2. Instance Method</h2>
+<h4 id="22-integerparseint">2.2 Integer::parseInt</h4>
+<p>We know that <code>parseInt</code> is a static method in <code>Integer</code> class.</p>
+<h6 id="221-initialize-functional-interface">2.2.1 Initialize Functional Interface</h6>
+<p>Let&rsquo;s initialize java built-in <code>Function</code> functional interface and apply it to parse String to Integer.<br>
+<code>Function</code> interface takes one argument and returns one argument. Here in example, it takes a <strong>String</strong> argument and returns <strong>Integer</strong>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Initialize functional interface
+</span><span style="color:#75715e"></span>Function<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> parseInt <span style="color:#f92672">=</span> Integer<span style="color:#f92672">::</span>parseInt<span style="color:#f92672">;</span>
+
+<span style="color:#75715e">// Execute function
+</span><span style="color:#75715e"></span>parseInt<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;2019&#34;</span><span style="color:#f92672">);</span>
+</code></pre></div><pre><code><div class="code_output">Output</div>
+2019
+</code></pre><h6 id="222-replace-lambda-expression">2.2.2 Replace Lambda Expression</h6>
+<p>Let&rsquo;s parse a list of String to <strong>Integer</strong> using its static <strong>parseInt</strong> method. We see that how we can replace lambda expression with method reference resulting in same output.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> years <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;2019&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;2020&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;2021&#34;</span><span style="color:#f92672">);</span>
+
+<span style="color:#75715e">// Lambda Expression
+</span><span style="color:#75715e"></span>years<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>year <span style="color:#f92672">-&gt;</span> Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">parseInt</span><span style="color:#f92672">(</span>year<span style="color:#f92672">)).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>year <span style="color:#f92672">-&gt;</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>year<span style="color:#f92672">));</span>
+
+<span style="color:#75715e">// Method Reference
+</span><span style="color:#75715e"></span>years<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>Integer<span style="color:#f92672">::</span>parseInt<span style="color:#f92672">).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
+</code></pre></div><pre><code><div class="code_output">Output</div>
+2019
+2020
+2021
+</code></pre><p><br /></p>
+<h2 id="3-instance-method">3. Instance Method</h2>
 <h6 id="syntax-1">Syntax</h6>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Lambda expression 
 </span><span style="color:#75715e"></span>(<span style="color:#a6e22e">args</span>) <span style="color:#f92672">-&gt;</span> <span style="color:#a6e22e">object</span>.<span style="color:#a6e22e">instanceMethodName</span>(<span style="color:#a6e22e">args</span>)
@@ -289,8 +335,45 @@ multiply<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</s
 <span style="color:#75715e">// Method Reference
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">object</span><span style="color:#f92672">::</span><span style="color:#a6e22e">instanceMethodName</span>
 </code></pre></div><p><br /></p>
-<h3 id="21-systemoutprintln">2.1 System.out::println</h3>
-<h6 id="211-initialize-functional-interface">2.1.1 Initialize Functional Interface</h6>
+<h4 id="31-calculator">3.1 Calculator</h4>
+<p>Let&rsquo;s create two <strong>instance</strong> methods <code>square</code> and <code>multiply</code> in <code>Calculator</code> class.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Calculator</span> <span style="color:#f92672">{</span>
+	
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">square</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> num<span style="color:#f92672">){</span>
+       <span style="color:#66d9ef">return</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">pow</span><span style="color:#f92672">(</span>num<span style="color:#f92672">,</span> 2<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">multiply</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> num1<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> num2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    	<span style="color:#66d9ef">return</span> num1<span style="color:#f92672">*</span>num2<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h6 id="311-initialize-functional-interface">3.1.1 Initialize Functional Interface</h6>
+<p>Let’s initialize java built-in <code>Function</code>, <code>BiFunction</code> functional interface and apply it to find square and multiply respectively.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Initialize functional interface
+</span><span style="color:#75715e"></span>Function<span style="color:#f92672">&lt;</span>Double<span style="color:#f92672">,</span> Double<span style="color:#f92672">&gt;</span> square <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Calculator<span style="color:#f92672">()::</span>square<span style="color:#f92672">;</span>
+BiFunction<span style="color:#f92672">&lt;</span>Double<span style="color:#f92672">,</span> Double<span style="color:#f92672">,</span> Double<span style="color:#f92672">&gt;</span> multiply <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Calculator<span style="color:#f92672">()::</span>multiply<span style="color:#f92672">;</span>
+
+<span style="color:#75715e">// Execute function
+</span><span style="color:#75715e"></span>square<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>3<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span><span style="color:#f92672">);</span>
+multiply<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>2<span style="color:#f92672">.</span><span style="color:#a6e22e">5</span><span style="color:#f92672">,</span> 5<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span><span style="color:#f92672">)</span>
+</code></pre></div><pre><code><div class="code_output">Output</div>
+9.0
+12.5
+</code></pre><h6 id="312-replace-lambda-expression">3.1.2 Replace Lambda Expression</h6>
+<p>We generate square of list of Integer by replacing lambda expression with method reference.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> numbers <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span>2<span style="color:#f92672">,</span>3<span style="color:#f92672">);</span>
+
+<span style="color:#75715e">// Lambda expression 
+</span><span style="color:#75715e"></span>numbers<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>number <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">new</span> Calculator<span style="color:#f92672">().</span><span style="color:#a6e22e">square</span><span style="color:#f92672">(</span>number<span style="color:#f92672">)).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>number <span style="color:#f92672">-&gt;</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>number<span style="color:#f92672">));</span>
+		
+<span style="color:#75715e">// Method Reference
+</span><span style="color:#75715e"></span>numbers<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Calculator<span style="color:#f92672">()::</span>square<span style="color:#f92672">).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
+</code></pre></div><pre><code><div class="code_output">Output</div>
+1.0
+4.0
+9.0
+</code></pre><p><br /></p>
+<h4 id="32-systemoutprintln">3.2 System.out::println</h4>
+<h6 id="321-initialize-functional-interface">3.2.1 Initialize Functional Interface</h6>
 <p>Let&rsquo;s initialize java built-in <code>Supplier</code> functional interface to print a String.<br>
 <code>Supplier</code> interface accepts one argument and returns nothing. Here in example, it accepts a <strong>String</strong> argument and print it.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Initialize functional interface
@@ -300,7 +383,7 @@ multiply<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</s
 </span><span style="color:#75715e"></span>println<span style="color:#f92672">.</span><span style="color:#a6e22e">accept</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Learning Method Reference a.k.a Colon Operator ::&#34;</span><span style="color:#f92672">);</span>
 </code></pre></div><pre><code><div class="code_output">Output</div>
 Learning Method Reference a.k.a Colon Operator ::
-</code></pre><h6 id="212-replace-anonymous-function-and-lambda-expression">2.1.2 Replace Anonymous Function and Lambda Expression</h6>
+</code></pre><h6 id="322-replace-anonymous-function-and-lambda-expression">3.2.2 Replace Anonymous Function and Lambda Expression</h6>
 <p>Let&rsquo;s print a list of String using anonymous function, lambda expression and double <code>::</code> method reference.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> languages <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;java&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;javascript&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;css&#34;</span><span style="color:#f92672">);</span>
 
@@ -322,7 +405,7 @@ Learning Method Reference a.k.a Colon Operator ::
 java
 javascript
 css
-</code></pre><p><br /></p>
+</code></pre><h6 id="323-print-a-list-of-integer">3.2.3 Print a list of Integer</h6>
 <p>Let&rsquo;s print a list of integer using lambda expression and double colon <code>::</code> method reference.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> numbers <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span>2<span style="color:#f92672">,</span>3<span style="color:#f92672">);</span>
 
@@ -336,8 +419,8 @@ css
 2
 3
 </code></pre><p><br /></p>
-<h3 id="22-stringtouppercase">2.2 String::toUpperCase</h3>
-<h6 id="221-initialize-functional-interface">2.2.1 Initialize Functional Interface</h6>
+<h4 id="33-stringtouppercase">3.3 String::toUpperCase</h4>
+<h6 id="331-initialize-functional-interface">3.3.1 Initialize Functional Interface</h6>
 <p>Let&rsquo;s initialize java built-in <code>Function</code> functional interface and execute it to change String to UPPERCASE.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Initialize functional interface
 </span><span style="color:#75715e"></span>Function<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;</span> toUpperCase <span style="color:#f92672">=</span> String<span style="color:#f92672">::</span>toUpperCase<span style="color:#f92672">;</span>
@@ -346,7 +429,7 @@ css
 </span><span style="color:#75715e"></span>toUpperCase<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;java&#34;</span><span style="color:#f92672">);</span>
 </code></pre></div><pre><code><div class="code_output">Output</div>
 JAVA
-</code></pre><h6 id="222-replace-lambda-expression">2.2.2 Replace Lambda Expression</h6>
+</code></pre><h6 id="332-replace-lambda-expression">3.3.2 Replace Lambda Expression</h6>
 <p>Let&rsquo;s look at the example where we use multiple method references to print the String in uppercase.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> languages <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;java&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;javascript&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;css&#34;</span><span style="color:#f92672">);</span>
 
@@ -354,45 +437,63 @@ JAVA
 </span><span style="color:#75715e"></span>languages<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>str <span style="color:#f92672">-&gt;</span> str<span style="color:#f92672">.</span><span style="color:#a6e22e">toUpperCase</span><span style="color:#f92672">()).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>str <span style="color:#f92672">-&gt;</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>str<span style="color:#f92672">));</span>
 
 <span style="color:#75715e">// Method Reference
-</span><span style="color:#75715e"></span>languages<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>String<span style="color:#f92672">::</span>toUpperCase<span style="color:#f92672">).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);;</span>           
+</span><span style="color:#75715e"></span>languages<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>String<span style="color:#f92672">::</span>toUpperCase<span style="color:#f92672">).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>          
 </code></pre></div><pre><code><div class="code_output">Output</div>
 JAVA
 JAVASCRIPT
 CSS
 </code></pre><p><br /></p>
-<h2 id="3-constructor">3. Constructor</h2>
-<p>Method reference can be used to create an instance by calling constructor but i personally do not feel that it is adding any value or advantage. See how constructor can be called using <code>::</code> for the sake of completion of this article.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Lambda expression 
-</span><span style="color:#75715e"></span>(<span style="color:#a6e22e">args</span>) <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">ClassName</span>(<span style="color:#a6e22e">args</span>)
-
-<span style="color:#75715e">// Method Reference
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">ClassName</span><span style="color:#f92672">::</span><span style="color:#66d9ef">new</span>
+<h2 id="4-constructor">4. Constructor</h2>
+<p>Double colon <code>::</code> operator can be used to create an instance by calling constructor.</p>
+<h6 id="syntax-2">Syntax</h6>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">ClassName</span><span style="color:#f92672">::</span><span style="color:#66d9ef">new</span>
 </code></pre></div><p><br /></p>
-<h4 id="31-create-an-int10-array">3.1 Create an int[10] array</h4>
+<h4 id="41-create-an-int10-array">4.1 Create an int[10] array</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Default
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> array1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>10<span style="color:#f92672">];</span>
 
-<span style="color:#75715e">// Lambda expression 
-</span><span style="color:#75715e"></span>Supplier<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]&gt;</span> arrayMaker2 <span style="color:#f92672">=</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>10<span style="color:#f92672">];</span>
-<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> array2 <span style="color:#f92672">=</span> arrayMaker<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">();</span>
-
 <span style="color:#75715e">// Method Reference
-</span><span style="color:#75715e"></span>IntFunction<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]&gt;</span> arrayMaker3 <span style="color:#f92672">=</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]::</span><span style="color:#66d9ef">new</span><span style="color:#f92672">;</span>
-<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> array3 <span style="color:#f92672">=</span> arrayMaker<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>10<span style="color:#f92672">);</span>
+</span><span style="color:#75715e"></span>IntFunction<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]&gt;</span> arrayMaker <span style="color:#f92672">=</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]::</span><span style="color:#66d9ef">new</span><span style="color:#f92672">;</span>
+<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> array2 <span style="color:#f92672">=</span> arrayMaker<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>10<span style="color:#f92672">);</span>
 </code></pre></div><p><br /></p>
-<h4 id="32-create-hashmap">3.2 Create HashMap</h4>
+<h4 id="42-create-hashmap">4.2 Create HashMap</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Default
 </span><span style="color:#75715e"></span>Map map1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">();</span>
 
-<span style="color:#75715e">// Lambda expression 
-</span><span style="color:#75715e"></span>Supplier<span style="color:#f92672">&lt;</span>Map<span style="color:#f92672">&gt;</span> mapSupplier2 <span style="color:#f92672">=</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">();</span>
-Map map2 <span style="color:#f92672">=</span> mapSupplier2<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">();</span>
-
 <span style="color:#75715e">// Method Reference
-</span><span style="color:#75715e"></span>Supplier<span style="color:#f92672">&lt;</span>Map<span style="color:#f92672">&gt;</span> mapSupplier3 <span style="color:#f92672">=</span> HashMap<span style="color:#f92672">::</span><span style="color:#66d9ef">new</span><span style="color:#f92672">;</span>
-Map map3 <span style="color:#f92672">=</span> obj2<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">();</span>
+</span><span style="color:#75715e"></span>Supplier<span style="color:#f92672">&lt;</span>Map<span style="color:#f92672">&gt;</span> mapMaker <span style="color:#f92672">=</span> HashMap<span style="color:#f92672">::</span><span style="color:#66d9ef">new</span><span style="color:#f92672">;</span>
+Map map2 <span style="color:#f92672">=</span> mapMaker<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">();</span>
 </code></pre></div><p><br /></p>
-<h2 id="4-real-world-practical-example">4. Real World Practical example</h2>
+<h2 id="5-super-method">5. Super Method</h2>
+<h6 id="syntax-3">Syntax</h6>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">super</span><span style="color:#f92672">::</span><span style="color:#a6e22e">parentMethodName</span>
+</code></pre></div><p>We create <em><strong>square</strong></em> and <em><strong>multiply</strong></em> instance methods in <code>Calculator</code> class and then call those methods in our inherited <code>AdvanceCalculator</code> class using <code>super::parentMethodName</code> to create advance methods <em><strong>squareAndAdd</strong></em> and <em><strong>squareAndMultiply</strong></em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Calculator</span> <span style="color:#f92672">{</span>
+	
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">square</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> num<span style="color:#f92672">){</span>
+       <span style="color:#66d9ef">return</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">pow</span><span style="color:#f92672">(</span>num<span style="color:#f92672">,</span> 2<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+    
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">multiply</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> num1<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> num2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    	<span style="color:#66d9ef">return</span> num1<span style="color:#f92672">*</span>num2<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AdvanceCalculator</span> <span style="color:#66d9ef">extends</span> Calculator <span style="color:#f92672">{</span>
+	
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">squareAndAdd</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> num1<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> num2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    	Function<span style="color:#f92672">&lt;</span>Double<span style="color:#f92672">,</span> Double<span style="color:#f92672">&gt;</span> square <span style="color:#f92672">=</span> <span style="color:#66d9ef">super</span><span style="color:#f92672">::</span>square<span style="color:#f92672">;</span> 	
+    	<span style="color:#66d9ef">return</span> square<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>num1<span style="color:#f92672">)*</span> square<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>num2<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+	
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">squareAndMultiply</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> num1<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> num2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    	Function<span style="color:#f92672">&lt;</span>Double<span style="color:#f92672">,</span> Double<span style="color:#f92672">&gt;</span> square <span style="color:#f92672">=</span> <span style="color:#66d9ef">super</span><span style="color:#f92672">::</span>square<span style="color:#f92672">;</span> 
+    	BiFunction<span style="color:#f92672">&lt;</span>Double<span style="color:#f92672">,</span> Double<span style="color:#f92672">,</span> Double<span style="color:#f92672">&gt;</span> multiply <span style="color:#f92672">=</span> <span style="color:#66d9ef">super</span><span style="color:#f92672">::</span>multiply<span style="color:#f92672">;</span>
+    	<span style="color:#66d9ef">return</span> multiply<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>square<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>num1<span style="color:#f92672">),</span> square<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>num2<span style="color:#f92672">));</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><br /></p>
+<h2 id="6-real-world-practical-example">6. Real World Practical example</h2>
 <p>Let&rsquo;s create a Class <code>Tutorial</code> with properties name, duration and rating.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Tutorial</span> <span style="color:#f92672">{</span>
 
@@ -457,7 +558,7 @@ Map map3 <span style="color:#f92672">=</span> obj2<span style="color:#f92672">.<
     <span style="color:#66d9ef">new</span> Tutorial<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;What&#39;s new in Java 11&#34;</span><span style="color:#f92672">,</span> 25<span style="color:#f92672">,</span> 4<span style="color:#f92672">.</span><span style="color:#a6e22e">8</span><span style="color:#f92672">),</span>
     <span style="color:#66d9ef">new</span> Tutorial<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Core Java Concepts&#34;</span><span style="color:#f92672">,</span> 45<span style="color:#f92672">,</span> 3<span style="color:#f92672">.</span><span style="color:#a6e22e">5</span><span style="color:#f92672">)});</span>
 </code></pre></div><p><br /></p>
-<h4 id="41-print-the-list-of-tutorials">4.1 Print the list of tutorials</h4>
+<h4 id="61-print-the-list-of-tutorials">6.1 Print the list of tutorials</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Lambda Expression
 </span><span style="color:#75715e"></span>tutorials<span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>tutorial <span style="color:#f92672">-&gt;</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>tutorial<span style="color:#f92672">));</span>
 
@@ -468,7 +569,7 @@ Tutorial[ Streams in Java 8	- 30min, rating=4.2 ]
 Tutorial[ What's new in Java 11	- 25min, rating=4.8 ]
 Tutorial[ Core Java Concepts	- 45min, rating=3.5 ]
 </code></pre><p><br /></p>
-<h4 id="42-get-list-of-tutorial-names-in-uppercase">4.2 Get list of tutorial names in uppercase</h4>
+<h4 id="62-get-list-of-tutorial-names-in-uppercase">6.2 Get list of tutorial names in uppercase</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Lambda Expression
 </span><span style="color:#75715e"></span>tutorials<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>tutorial <span style="color:#f92672">-&gt;</span> tutorial<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">()).</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>name <span style="color:#f92672">-&gt;</span> name<span style="color:#f92672">.</span><span style="color:#a6e22e">toUpperCase</span><span style="color:#f92672">()).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>s <span style="color:#f92672">-&gt;</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>s<span style="color:#f92672">));</span>
 
@@ -479,7 +580,7 @@ STREAMS IN JAVA 8
 WHAT'S NEW IN JAVA 11
 CORE JAVA CONCEPTS
 </code></pre><p><br /></p>
-<h4 id="43-sort-tutorials-by-rating">4.3 Sort Tutorials by Rating</h4>
+<h4 id="63-sort-tutorials-by-rating">6.3 Sort Tutorials by Rating</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Lambda Expression
 </span><span style="color:#75715e"></span>tutorials<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">sorted</span><span style="color:#f92672">((</span>tutorial1<span style="color:#f92672">,</span> tutorial2<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> Tutorial<span style="color:#f92672">.</span><span style="color:#a6e22e">compareByRating</span><span style="color:#f92672">(</span>tutorial1<span style="color:#f92672">,</span> tutorial2<span style="color:#f92672">)).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>tutorial <span style="color:#f92672">-&gt;</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>tutorial<span style="color:#f92672">));</span>
 
@@ -490,7 +591,7 @@ Tutorial[ Core Java Concepts	- 45min, <mark>rating=3.5</mark> ]
 Tutorial[ Streams in Java 8	- 30min, <mark>rating=4.2</mark> ]
 Tutorial[ What's new in Java 11	- 25min, <mark>rating=4.8</mark> ]
 </code></pre><p><br /></p>
-<h4 id="44-sort-tutorials-by-duration">4.4 Sort Tutorials by Duration</h4>
+<h4 id="64-sort-tutorials-by-duration">6.4 Sort Tutorials by Duration</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Lambda Expression
 </span><span style="color:#75715e"></span>tutorials<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">sorted</span><span style="color:#f92672">((</span>tutorial1<span style="color:#f92672">,</span> tutorial2<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> Tutorial<span style="color:#f92672">.</span><span style="color:#a6e22e">compareByDuration</span><span style="color:#f92672">(</span>tutorial1<span style="color:#f92672">,</span> tutorial2<span style="color:#f92672">)).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>tutorial <span style="color:#f92672">-&gt;</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>tutorial<span style="color:#f92672">));</span>
 
@@ -501,7 +602,7 @@ Tutorial[ What's new in Java 11	- <mark>25min</mark>, rating=4.8 ]
 Tutorial[ Streams in Java 8	- <mark>30min</mark>, rating=4.2 ]
 Tutorial[ Core Java Concepts	- <mark>45min</mark>, rating=3.5 ]
 </code></pre><p><br /></p>
-<h4 id="45-create-new-instance-of-tutorial">4.5 Create New Instance of Tutorial</h4>
+<h4 id="65-create-new-instance-of-tutorial">6.5 Create New Instance of Tutorial</h4>
 <p>Each constructor method reference returns a Functional Interface. One-arg constructor returns <code>Function</code> and two-arg constructor returns <code>BiFunction</code> functional interface comes default in Java 8 so we are creating <code>TriFunction</code> functional interface on our own to call three-arg constructor.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@FunctionalInterface</span>
 <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">TriFunction</span><span style="color:#f92672">&lt;</span>A<span style="color:#f92672">,</span> B<span style="color:#f92672">,</span> C<span style="color:#f92672">,</span> R<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span> 
@@ -529,7 +630,7 @@ Tutorial[ Tutorial 1	- 0min, rating=0.0 ]
 Tutorial[ Tutorial 2	- 25min, rating=0.0 ]
 Tutorial[ Tutorial 3	- 30min, rating=4.9 ]
 </code></pre><p><br /></p>
-<h3 id="conclusion">Conclusion</h3>
+<h3 id="7-conclusion">7. Conclusion</h3>
 <p>In this article, we saw how to use double colon operator introduced in Java 8. It is very useful to keep your code concise and readable specially in streams where you can replace lambda expressions with method reference using double colon operator.</p>
 		</div>
 		<footer class="post__footer">
@@ -585,7 +686,7 @@ Tutorial[ Tutorial 3	- 30min, rating=4.9 ]
       
       
       <li>
-        <a href="whatsapp://send?text=Double%20Colon%20%28%3a%3a%29%20Operator%20in%20Java%208%2c%20by%20Coding%20N%20Concepts%0aExplain%20Method%20reference%20using%20Double%20Colon%20%28%3a%3a%29%20operator%20in%20Java%208%20%28Java8%29%20and%20its%20usage%20to%20initialize%20a%20functional%20interface%20and%20replace%20lambda%20expression%20in%20streams.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjava%2fdouble-colon-operator-in-java-8%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=Double%20Colon%20%28%3a%3a%29%20Operator%20in%20Java%208%2c%20by%20Coding%20N%20Concepts%0aThis%20post%20explains%20Method%20reference%20using%20Double%20Colon%20%28%3a%3a%29%20operator%20in%20Java%208%20%28Java8%29%20and%20its%20usage%20to%20initialize%20a%20functional%20interface%20and%20replace%20lambda%20expression%20in%20streams.%20Also%20explains%20method%20reference%20to%20a%20static%20method%2c%20an%20instance%20method%2c%20constructor%20method%20or%20super%20method%20using%20double%20colon%20%28%3a%3a%29%20operator.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjava%2fdouble-colon-operator-in-java-8%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>Email</p>
         </a>
@@ -595,7 +696,7 @@ Tutorial[ Tutorial 3	- 30min, rating=4.9 ]
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - Double%20Colon%20%28%3a%3a%29%20Operator%20in%20Java%208.&amp;body=Double%20Colon%20%28%3a%3a%29%20Operator%20in%20Java%208%2c%20by%20Coding%20N%20Concepts%0aExplain%20Method%20reference%20using%20Double%20Colon%20%28%3a%3a%29%20operator%20in%20Java%208%20%28Java8%29%20and%20its%20usage%20to%20initialize%20a%20functional%20interface%20and%20replace%20lambda%20expression%20in%20streams.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjava%2fdouble-colon-operator-in-java-8%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - Double%20Colon%20%28%3a%3a%29%20Operator%20in%20Java%208.&amp;body=Double%20Colon%20%28%3a%3a%29%20Operator%20in%20Java%208%2c%20by%20Coding%20N%20Concepts%0aThis%20post%20explains%20Method%20reference%20using%20Double%20Colon%20%28%3a%3a%29%20operator%20in%20Java%208%20%28Java8%29%20and%20its%20usage%20to%20initialize%20a%20functional%20interface%20and%20replace%20lambda%20expression%20in%20streams.%20Also%20explains%20method%20reference%20to%20a%20static%20method%2c%20an%20instance%20method%2c%20constructor%20method%20or%20super%20method%20using%20double%20colon%20%28%3a%3a%29%20operator.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjava%2fdouble-colon-operator-in-java-8%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>
