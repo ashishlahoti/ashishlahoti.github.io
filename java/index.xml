@@ -17,7 +17,7 @@
       <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/java/double-colon-operator-in-java-8/</guid>
-      <description>&lt;p&gt;The double colon &lt;code&gt;::&lt;/code&gt; operator is introduced in Java 8 for method reference. We are going to understand its usage with lots of examples.&lt;/p&gt;</description>
+      <description>&lt;p&gt;The double colon &lt;code&gt;::&lt;/code&gt; operator is introduced in Java 8 for method reference. It is a shorthand syntax for lambda expression that executes one method. You can write more compact and readable code using double colon operator as compare to anonymous classes and lambda expression. We are going to understand its usage with lots of examples.&lt;/p&gt;</description>
     </item>
     
     <item>

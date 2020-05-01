@@ -84,7 +84,7 @@ if (!doNotTrack) {
     },
     "image": "https:\/\/codingnconcepts.com\/favicon-32x32.png",
     "url" : "https:\/\/codingnconcepts.com\/java\/double-colon-operator-in-java-8\/",
-    "wordCount" : "1636",
+    "wordCount" : "1681",
     "genre" : [ "Java 8" , "Java" , "Streams" ],
     "keywords" : [ "double colon operator in java 8" , "method reference in java 8" ]
 }
@@ -229,7 +229,7 @@ if (!doNotTrack) {
 	</div>
 </div>
 <div class="content post__content clearfix">
-			<p>The double colon <code>::</code> operator is introduced in Java 8 for method reference. We are going to understand its usage with lots of examples.</p>
+			<p>The double colon <code>::</code> operator is introduced in Java 8 for method reference. It is a shorthand syntax for lambda expression that executes one method. You can write more compact and readable code using double colon operator as compare to anonymous classes and lambda expression. We are going to understand its usage with lots of examples.</p>
 <h2 id="1-overview">1. Overview</h2>
 <h5 id="prerequisite">Prerequisite</h5>
 <p>You should have a basic understanding of <em><strong>functional interface</strong></em>, <em><strong>lambda expressions</strong></em> and <em><strong>streams</strong></em> to understand these examples, if not then don&rsquo;t worry, you will learn those concepts as well along the way.<br>
@@ -256,12 +256,12 @@ Here we either use java built-in functional interface like <code>Function</code>
 <p>Don&rsquo;t worry if it&rsquo;s looking too complicated. Let&rsquo;s deep dive into examples to understand them better.</p>
 <h2 id="2-static-method">2. Static Method</h2>
 <h6 id="syntax">Syntax</h6>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#888">// Lambda expression 
-</span><span style="color:#888"></span>(args) <span style="color:#333">-&gt;</span> ClassName.staticMethodName(args)
+<pre><code>// Lambda expression 
+<mark>(args) -&gt; ClassName.staticMethodName(args)</mark>
 
-<span style="color:#888">// Method Reference
-</span><span style="color:#888"></span>ClassName<span style="color:#333">::</span>staticMethodName
-</code></pre></div><p><br /></p>
+// Method Reference
+<mark>ClassName::staticMethodName</mark>
+</code></pre><p><br /></p>
 <h4 id="21-calculator">2.1 Calculator</h4>
 <p>Let&rsquo;s create two <strong>static</strong> methods <code>square</code> and <code>multiply</code> in <code>Calculator</code> class.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">Calculator</span> <span style="color:#333">{</span>
@@ -329,12 +329,12 @@ multiply<span style="color:#333">.</span><span style="color:#00c">apply</span><s
 </code></pre><p><br /></p>
 <h2 id="3-instance-method">3. Instance Method</h2>
 <h6 id="syntax-1">Syntax</h6>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#888">// Lambda expression 
-</span><span style="color:#888"></span>(args) <span style="color:#333">-&gt;</span> object.instanceMethodName(args)
+<pre><code>// Lambda expression 
+<mark>(args) -&gt; object.instanceMethodName(args)</mark>
 
-<span style="color:#888">// Method Reference
-</span><span style="color:#888"></span>object<span style="color:#333">::</span>instanceMethodName
-</code></pre></div><p><br /></p>
+// Method Reference
+<mark>object::instanceMethodName</mark>
+</code></pre><p><br /></p>
 <h4 id="31-calculator">3.1 Calculator</h4>
 <p>Let&rsquo;s create two <strong>instance</strong> methods <code>square</code> and <code>multiply</code> in <code>Calculator</code> class.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">Calculator</span> <span style="color:#333">{</span>
@@ -383,11 +383,11 @@ multiply<span style="color:#333">.</span><span style="color:#00c">apply</span><s
 </span><span style="color:#888"></span>println<span style="color:#333">.</span><span style="color:#00c">accept</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;Learning Method Reference a.k.a Colon Operator ::&#34;</span><span style="color:#333">);</span>
 </code></pre></div><pre><code><div class="code_output">Output</div>
 Learning Method Reference a.k.a Colon Operator ::
-</code></pre><h6 id="322-replace-anonymous-function-and-lambda-expression">3.2.2 Replace Anonymous Function and Lambda Expression</h6>
-<p>Let&rsquo;s print a list of String using anonymous function, lambda expression and double <code>::</code> method reference.</p>
+</code></pre><h6 id="322-replace-anonymous-class-and-lambda-expression">3.2.2 Replace Anonymous Class and Lambda Expression</h6>
+<p>We will print a list of String and see how double colon <code>::</code> method reference makes the code more concise and readable as compare to anonymous class and lambda expression.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#333">&lt;</span>String<span style="color:#333">&gt;</span> languages <span style="color:#333">=</span> Arrays<span style="color:#333">.</span><span style="color:#00c">asList</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;java&#34;</span><span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;javascript&#34;</span><span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;css&#34;</span><span style="color:#333">);</span>
 
-<span style="color:#888">// Anonymous Function
+<span style="color:#888">// Anonymous Class
 </span><span style="color:#888"></span>languages<span style="color:#333">.</span><span style="color:#00c">forEach</span><span style="color:#333">(</span><span style="color:#080;font-weight:bold">new</span> Consumer<span style="color:#333">&lt;</span>String<span style="color:#333">&gt;()</span> <span style="color:#333">{</span>         
     <span style="color:#555;font-weight:bold">@Override</span>
     <span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">accept</span><span style="color:#333">(</span>String str<span style="color:#333">)</span> <span style="color:#333">{</span>
@@ -400,8 +400,7 @@ Learning Method Reference a.k.a Colon Operator ::
 
 <span style="color:#888">// Method Reference
 </span><span style="color:#888"></span>languages<span style="color:#333">.</span><span style="color:#00c">forEach</span><span style="color:#333">(</span>System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">::</span>println<span style="color:#333">);</span>            
-</code></pre></div><p>We see that all three produce the same output where shorthand double colon syntax makes the code concise and more readable compare to other two.</p>
-<pre><code><div class="code_output">Output</div>
+</code></pre></div><pre><code><div class="code_output">Output</div>
 java
 javascript
 css
@@ -446,8 +445,8 @@ CSS
 <h2 id="4-constructor">4. Constructor</h2>
 <p>Double colon <code>::</code> operator can be used to create an instance by calling constructor.</p>
 <h6 id="syntax-2">Syntax</h6>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">ClassName<span style="color:#333">::</span><span style="color:#080;font-weight:bold">new</span>
-</code></pre></div><p><br /></p>
+<pre><code><mark>ClassName::new</mark>
+</code></pre><p><br /></p>
 <h4 id="41-create-an-int10-array">4.1 Create an int[10] array</h4>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#888">// Default
 </span><span style="color:#888"></span><span style="color:#339;font-weight:bold">int</span><span style="color:#333">[]</span> array1 <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> <span style="color:#339;font-weight:bold">int</span><span style="color:#333">[</span>10<span style="color:#333">];</span>
@@ -466,8 +465,8 @@ Map map2 <span style="color:#333">=</span> mapMaker<span style="color:#333">.</s
 </code></pre></div><p><br /></p>
 <h2 id="5-super-method">5. Super Method</h2>
 <h6 id="syntax-3">Syntax</h6>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#080;font-weight:bold">super</span><span style="color:#333">::</span>parentMethodName
-</code></pre></div><p>We create <em><strong>square</strong></em> and <em><strong>multiply</strong></em> instance methods in <code>Calculator</code> class and then call those methods in our inherited <code>AdvanceCalculator</code> class using <code>super::parentMethodName</code> to create advance methods <em><strong>squareAndAdd</strong></em> and <em><strong>squareAndMultiply</strong></em></p>
+<pre><code><mark>super::parentMethodName</mark>
+</code></pre><p>We create <em><strong>square</strong></em> and <em><strong>multiply</strong></em> instance methods in <code>Calculator</code> class and then call those methods in our inherited <code>AdvanceCalculator</code> class using <code>super::parentMethodName</code> to create advance methods <em><strong>squareAndAdd</strong></em> and <em><strong>squareAndMultiply</strong></em></p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">Calculator</span> <span style="color:#333">{</span>
 	
     <span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">double</span> <span style="color:#06b;font-weight:bold">square</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">double</span> num<span style="color:#333">){</span>
@@ -632,6 +631,7 @@ Tutorial[ Tutorial 3	- 30min, rating=4.9 ]
 </code></pre><p><br /></p>
 <h3 id="7-conclusion">7. Conclusion</h3>
 <p>In this article, we saw how to use double colon operator introduced in Java 8. It is very useful to keep your code concise and readable specially in streams where you can replace lambda expressions with method reference using double colon operator.</p>
+<p>Modern IDEs such as Eclipse (Quick Fix) and IntelliJ IDEA (Intention) provide built in support to convert lambda expression to an equivalent method reference.</p>
 		</div>
 		<footer class="post__footer">
 			
