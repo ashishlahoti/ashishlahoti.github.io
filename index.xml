@@ -416,7 +416,7 @@ Spring uses `HttpMessageConverters` for content conversion for e.g. Java Object 
       <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/top-css-interview-questions/</guid>
-      <description>&lt;p&gt;These CSS interview questions are based on my personal interview experience. Likelihood of question being asked in the interview is from top to bottom.&lt;/p&gt;</description>
+      <description>&lt;p&gt;These CSS interview questions are based on my personal interview experience and feedback from other interviewees. Keep following this post for regular updates.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -694,6 +694,15 @@ I created this blog to narrate my coding and concepts learning experiences. I li
 Primarily I write about Java, Spring, Kafka, Javascript, CSS and the list goes on&amp;hellip;
 Few pointers about me:-
  Full Stack Certified Kafka and SCJP Developer with 9+ years of extensive experience in Java and JavaScript Technologies.</description>
+    </item>
+    
+    <item>
+      <title>Unicode Characters</title>
+      <link>https://codingnconcepts.com/tools/unicode-characters/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tools/unicode-characters/</guid>
+      <description>Tool to copy special and fancy characters, symbols, emoji</description>
     </item>
     
   </channel>
