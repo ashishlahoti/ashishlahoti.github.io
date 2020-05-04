@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://codingnconcepts.com/hugo/structure-data-json-ld/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/categories/</loc>
     <lastmod>2020-05-04T00:00:00+00:00</lastmod>
   </url>
@@ -29,11 +34,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/seo/</loc>
-    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/hugo/structure-data-json-ld/</loc>
     <lastmod>2020-05-04T00:00:00+00:00</lastmod>
   </url>
   

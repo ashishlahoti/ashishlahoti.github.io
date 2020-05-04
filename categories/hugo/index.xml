@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>Structure Data for Hugo Website</title>
+      <title>Add Structure Data in Hugo Website</title>
       <link>https://codingnconcepts.com/hugo/structure-data-json-ld/</link>
       <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/hugo/structure-data-json-ld/</guid>
-      <description>&lt;p&gt;When you add structure data to your website, it helps google, bing or other website indexers to understand the content for your website and pages which leads to better search result of your website and eventually helps in SEO ranking.&lt;/p&gt;</description>
+      <description>&lt;p&gt;When you add structure data to your website, it helps google, bing or other website indexers to understand the content for your website and pages which leads to better search results for your website and eventually helps in SEO ranking.&lt;/p&gt;</description>
     </item>
     
   </channel>
