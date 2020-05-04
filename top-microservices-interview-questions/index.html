@@ -12,7 +12,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/top-microservices-interview-questions/" />
 <meta property="article:published_time" content="2020-04-16T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-04-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-05-04T00:00:00+00:00" />
 
 	<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Top Microservices Interview Questions"/>
@@ -70,7 +70,7 @@ if (!doNotTrack) {
     "copyrightYear" : "2020",
     "dateCreated": "2020-04-16T00:00:00.00Z",
     "datePublished": "2020-04-16T00:00:00.00Z",
-    "dateModified": "2020-04-16T00:00:00.00Z",
+    "dateModified": "2020-05-04T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -84,9 +84,9 @@ if (!doNotTrack) {
     },
     "image": "https://codingnconcepts.com/favicon-32x32.png",
     "url" : "https:\/\/codingnconcepts.com\/top-microservices-interview-questions\/",
-    "wordCount" : "3943",
-    "genre" : [ "Interview" , "Microservices" ],
-    "keywords" : [ ]
+    "wordCount" : "3947",
+    "genre" : [ "Interview" , "Microservices" , "Spring Boot" ],
+    "keywords" : [ "microservices advanced interview questions" , "microservices spring boot interview questions" , "java microservices interview questions" , "interview questions on spring boot microservices" ]
 }
 </script>
 
@@ -186,6 +186,7 @@ if (!doNotTrack) {
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
 	<time class="meta__text" datetime="2020-04-16T00:00:00Z">April 16, 2020</time>
+	<time class="meta__text" datetime="2020-05-04T00:00:00Z"> (Last Modified: May 04, 2020)</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -384,7 +385,10 @@ A saga is a sequence of local transactions where each transaction updates data w
 <p>The distributed transaction ends when the last service executes its local transaction and does not publish any events or the event published is not heard by any of the saga’s participants.</p>
 <p>Let’s see how it would look like in our e-commerce example:</p>
 <figure class="center">
-    <img src="/img/interview/microservice-saga-pattern-event-1.png" width="50%"/> 
+    <img src="/img/interview/microservice-saga-pattern-event-1.png"
+         alt="Event Saga Pattern (Success Use Case)"/> <figcaption>
+            <p>Event Saga Pattern (Success Use Case)</p>
+        </figcaption>
 </figure>
 
 <p><br /></p>
@@ -400,7 +404,10 @@ A saga is a sequence of local transactions where each transaction updates data w
 <p>For Rollback, you have to implement another operation/transaction to compensate for what has been done before.</p>
 <p>Suppose that Stock Service has failed during a transaction. Let’s see what the rollback would look like:</p>
 <figure class="center">
-    <img src="/img/interview/microservice-saga-pattern-event-2.png" width="50%"/> 
+    <img src="/img/interview/microservice-saga-pattern-event-2.png"
+         alt="Event Saga Pattern (Failure Use Case)"/> <figcaption>
+            <p>Event Saga Pattern (Failure Use Case)</p>
+        </figcaption>
 </figure>
 
 <p><br /></p>
@@ -427,25 +434,12 @@ A saga is a sequence of local transactions where each transaction updates data w
 <p>When one service (client) wants to make a request to another service, it can talk to discovery server to locate the service in two ways:-</p>
 <h5 id="1-client-side-service-discovery">1. Client side service discovery</h5>
 <p>Client asks the address of service from discovery server and then once client gets the address, it requests to the service directly.</p>
-<pre><code><div class="mermaid" align="left">
-    graph LR;
-        A(Client) -->|ask service_address| B(Discovery Server)
-        B --> |give service_address| A
-        A --> |make request| C(Service)
-        C --> |return response| A
-    </div>
-</code></pre>
-<p><code>Netflix Eureka</code> is one of the implementation of client side service discovery pattern.</p>
+<p><strong>Client</strong> <small><mark>ask service_address</mark> ⟹</small> <strong>Discovery Server</strong> <small><mark>give service_address</mark> ⟹</small> <strong>Client</strong> <small><mark>make request</mark> ⟹</small> <strong>Service</strong> <small><mark>return response</mark> ⟹</small> <strong>Client</strong></p>
+<p><code>Netflix Eureka</code> is one of the implementation of client side service discovery pattern. <br>
+<br /></p>
 <h5 id="2-server-side-service-discovery">2. Server side service discovery</h5>
 <p>Client request to discovery server which redirect the request to appropriate service and get the response back and redirect to client.</p>
-<pre><code><div class="mermaid" align="left">
-    graph LR;
-        A(Client) -->|make request| B(Discovery Server)
-        B --> |redirect request | C(Service)
-        C --> |return response| B
-        B --> |redirect response| A
-    </div>
-</code></pre>
+<p><strong>Client</strong> <small><mark>make request</mark> ⟹</small> <strong>Discovery Server</strong> <small><mark>redirect request</mark> ⟹</small> <strong>Service</strong> <small><mark>return response</mark> ⟹</small>  <strong>Discovery Server</strong> <small><mark>redirect response</mark> ⟹</small>  Client</p>
 <p><br /></p>
 <h3 id="12-what-is-circuit-breaker-pattern-in-microservices-">12. What is circuit breaker pattern in microservices ?</h3>
 <p><strong>Circuit breaker</strong> is popular pattern for fault tolerance in microservices.</p>
@@ -617,6 +611,7 @@ All admin/management tasks for a microservice like database migration should be 
 	<ul class="tags__list">
 		<li class="tags__item"><a class="tags__link btn" href="/tags/interview/" rel="tag">Interview</a></li>
 		<li class="tags__item"><a class="tags__link btn" href="/tags/microservices/" rel="tag">Microservices</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/spring-boot/" rel="tag">Spring Boot</a></li>
 	</ul>
 </div>
 		</footer>
@@ -687,15 +682,15 @@ All admin/management tasks for a microservice like database migration should be 
     <h2 class = "related_post_title">See Also</h2>
     <ul class = "related_post">
         
+        <li><a href="/top-spring-boot-interview-questions/">Top Spring Boot Interview Questions</a></li>
+        
+        <li><a href="/spring-boot/pretty-print-json-response/">Pretty print JSON response in spring boot</a></li>
+        
+        <li><a href="/spring-boot/configure-kafka-producer-and-consumer/">Configure Kafka Producer and Consumer in spring boot</a></li>
+        
         <li><a href="/javascript/async-await-in-javascript/">Async/Await in JavaScript</a></li>
         
         <li><a href="/javascript/promises-in-javascript/">Promises in JavaScript</a></li>
-        
-        <li><a href="/tricky-javascript-interview-questions/">Tricky Javascript Interview Questions</a></li>
-        
-        <li><a href="/javascript/comparison-operators-in-javascript/">Difference in == and === comparison operators in JavaScript</a></li>
-        
-        <li><a href="/javascript/this-keyword-in-javascript/">Understand all about &#39;this&#39; keyword in JavaScript</a></li>
         
     </ul>
 </div>
