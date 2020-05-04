@@ -6,10 +6,19 @@
     <description>Recent content on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://codingnconcepts.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Structure Data for Hugo Website</title>
+      <link>https://codingnconcepts.com/hugo/structure-data-json-ld/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/hugo/structure-data-json-ld/</guid>
+      <description>&lt;p&gt;When you add structure data to your website, it helps google, bing or other website indexers to understand the content for your website and pages which leads to better search result of your website and eventually helps in SEO ranking.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Double Colon (::) Operator in Java 8</title>
