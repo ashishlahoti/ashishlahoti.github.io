@@ -12,7 +12,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/post/apache-kafka-ccdak-exam-notes/" />
 <meta property="article:published_time" content="2019-06-13T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-04-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-05-07T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -79,7 +79,7 @@ if (!doNotTrack) {
     "copyrightYear" : "2019",
     "dateCreated": "2019-06-13T00:00:00.00Z",
     "datePublished": "2019-06-13T00:00:00.00Z",
-    "dateModified": "2020-04-28T00:00:00.00Z",
+    "dateModified": "2020-05-07T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -93,7 +93,7 @@ if (!doNotTrack) {
     },
     "image": "https://codingnconcepts.com/favicon-32x32.png",
     "url" : "https:\/\/codingnconcepts.com\/post\/apache-kafka-ccdak-exam-notes\/",
-    "wordCount" : "3801",
+    "wordCount" : "4039",
     "genre" : [ "CCDAK" , "Kafka" , "Confluent" ],
     "keywords" : [ "ccdak dumps" , "confluent certified developer for apache kafka dumps" , "kafka certification sample questions" ]
 }
@@ -195,7 +195,7 @@ if (!doNotTrack) {
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
 	<time class="meta__text" datetime="2019-06-13T00:00:00Z">June 13, 2019</time>
-	<time class="meta__text" datetime="2020-04-28T00:00:00Z"> (Last Modified: April 28, 2020)</time>
+	<time class="meta__text" datetime="2020-05-07T00:00:00Z"> (Last Modified: May 07, 2020)</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -319,18 +319,24 @@ Read  <a href="https://docs.confluent.io/current/kafka-rest/index.html#" target=
 </blockquote>
 <h5 id="2-kafka-streams">2. Kafka Streams</h5>
 <ul>
-<li>To transform data from a Kafka topic to another one, You should use ?<br>
+<li>To transform data from a Kafka topic to another one, You should use?<br>
 <em><strong>Kafka Streams</strong></em></li>
-<li>Which of the Kafka Stream operators are stateful ?</li>
-<li>Which of the Kafka Stream operators are stateless ?</li>
-<li>Which window is not having gap ?</li>
+<li>Which of the Kafka Stream operators are stateful?</li>
+<li>Which of the Kafka Stream operators are stateless?</li>
+<li>Which window is not having gap?</li>
+<li>Which Kafka Stream joins doesn&rsquo;t require co-partition of data?<br>
+<em><strong>KStream-to-GlobalKTable</strong></em></li>
+<li>Which Kafka Stream joins is always windowed join?<br>
+<em><strong>KStream-to-KStream</strong></em></li>
+<li>What is the output of KStream-to-KTable join?<br>
+<em><strong>KStream</strong></em></li>
 </ul>
 <blockquote>
 <p>Read <a href="#kafka-streams">Kafka Streams</a> section of this post for answers</p>
 </blockquote>
 <h5 id="3-confluent-schema-registry">3. Confluent Schema Registry</h5>
 <ul>
-<li>Which of the following is not a primitive type of Avro ?</li>
+<li>Which of the following is not a primitive type of Avro?</li>
 <li>Which of the following in not a complex type of Avro?</li>
 <li>Which of the following is not a required field in Avro Schema?</li>
 <li>Delete a field without default value in Avro schema is &hellip;&hellip; compatibility?<br>
@@ -652,7 +658,7 @@ If tickTime=2000, initLimit=5 and syncLimit=2 then a follower can take (tickTime
 <h2 id="kafka-streams">Kafka Streams</h2>
 <hr>
 <p>Kafka Streams is used for building streaming applications which transform data of one Kafka topics and feeds to another Kafka topic.</p>
-<h4 id="1-stateless-operators">1. Stateless operators</h4>
+<h4 id="1-stateless-operators">1. Stateless Operators</h4>
 <pre><code>branch
 filter
 inverseFilter
@@ -664,7 +670,7 @@ groupBy
 map
 mapValues
 </code></pre>
-<h4 id="2-stateful-operators">2. Stateful operators</h4>
+<h4 id="2-stateful-operators">2. Stateful Operators</h4>
 <pre><code>join
 aggregate
 count
@@ -672,33 +678,100 @@ reduce
 windowing
 </code></pre>
 <h4 id="3-window">3. Window</h4>
-<ol>
-<li>Tumbling window
+<h6 id="1-tumbling-window">1) Tumbling window</h6>
 <ul>
 <li>Time based, Fixed Size, Non overlapping, Gap less windows</li>
 <li>For e.g. if window-size=5min and advance-interval =5min then it looks like [0-5min] [5min-10min] [10min-15min]&hellip;..</li>
 </ul>
-</li>
-<li>Hopping window
+<h6 id="2-hopping-window">2) Hopping window</h6>
 <ul>
 <li>Time based, Fixed Size, Overlapping windows</li>
 <li>For e.g. if widow-size=5min and advance-interval=3min then it looks like [0-5min] [3min-8min] [6min-11min]&hellip;&hellip;</li>
 </ul>
-</li>
-<li>Sliding window
+<h6 id="3-sliding-window">3) Sliding window</h6>
 <ul>
 <li>Fixed size overlapping window that works on the difference between record timestamp</li>
 <li>Used only for join operation</li>
 </ul>
-</li>
-<li>Session window
+<h6 id="4-session-window">4) Session window</h6>
 <ul>
 <li>Session based, Dynamically sized, Non overlapping, Data driven window.</li>
 <li>Used to aggregate key based events into session.</li>
 </ul>
-</li>
-</ol>
-<p>For more information on windowing, refer <a href="https://kafka.apache.org/20/documentation/streams/developer-guide/dsl-api.html#windowing" target="_blank">Apache Kafka Documentation on windowing</a></p>
+<p>For more information, refer <a href="https://kafka.apache.org/20/documentation/streams/developer-guide/dsl-api.html#windowing" target="_blank">Apache Kafka Documentation on windowing</a></p>
+<h4 id="4-serdes-data-types">4. SerDes data types</h4>
+<p>Kafka stream operations require SerDes (Serializer/Deserializer) to identify data type.</p>
+<pre><code>byte[]
+ByteBuffer
+Double
+Integer
+Long
+String
+</code></pre>
+<h4 id="5-streams-dsl">5. Streams DSL</h4>
+<h6 id="1-kstream">1) KStream</h6>
+<ul>
+<li>Abstraction of <strong>record stream</strong> from subset of partitions of topic</li>
+<li>In database table analogy, interpreted as <em><strong>INSERT</strong></em> statement</li>
+<li>In an e-commerce application, any type of transactions like purchase, payment should be modeled as KStream</li>
+</ul>
+<h6 id="2-ktable">2) KTable</h6>
+<ul>
+<li>Abstraction of <strong>changelog stream</strong> from subset of partitions of topic</li>
+<li>In database table analogy, interpreted as <em><strong>UPDATE</strong></em> statement</li>
+<li>In an e-commerce application, mostly static data like inventory list, customer list and aggregated data like total sales should be modeled as KTable</li>
+</ul>
+<h6 id="3-globalktable">3) GlobalKTable</h6>
+<ul>
+<li>Abstraction of <strong>changelog stream</strong> from all partitions of topic</li>
+<li>In database table analogy, interpreted as <em><strong>UPDATE</strong></em> statement</li>
+</ul>
+<p>For more information, refer <a href="https://kafka.apache.org/25/documentation/streams/developer-guide/dsl-api.html" target="_blank">Apache Kafka Documentation on stream DSL</a></p>
+<h4 id="6-join-operands">6. Join Operands</h4>
+<table>
+<thead>
+<tr>
+<th align="left">Join Operands</th>
+<th align="left">Output</th>
+<th align="left">Type</th>
+<th align="left">co-partition required</th>
+<th align="left">Join Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">KStream-to-KStream</td>
+<td align="left">KStream</td>
+<td align="left">Windowed</td>
+<td align="left">Yes</td>
+<td align="left">key and window based</td>
+</tr>
+<tr>
+<td align="left">KTable-to-KTable</td>
+<td align="left">KTable</td>
+<td align="left">Non-windowed</td>
+<td align="left">Yes</td>
+<td align="left">key or foreign-key based</td>
+</tr>
+<tr>
+<td align="left">KStream-to-KTable</td>
+<td align="left">KStream</td>
+<td align="left">Non-windowed</td>
+<td align="left">Yes</td>
+<td align="left">key based</td>
+</tr>
+<tr>
+<td align="left">KStream-to-GlobalKTable</td>
+<td align="left">KStream</td>
+<td align="left">Non-windowed</td>
+<td align="left">No</td>
+<td align="left">key or foreign-key based</td>
+</tr>
+</tbody>
+</table>
+<h6 id="co-partition">co-partition</h6>
+<p>co-partition means both the left and right join operand topics must have same number of partitions.</p>
+<p>A join between a topic A ( 5 parition ) and topic B (3 partition) is possible using <em>KStream-to-GlobalKTrade</em> since it does not require co-partition.</p>
 <h2 id="kafka-api">KAFKA API</h2>
 <hr>
 <ul>
