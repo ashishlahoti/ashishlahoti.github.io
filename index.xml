@@ -6,10 +6,21 @@
     <description>Recent content on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://codingnconcepts.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Useful Hugo Shortcodes</title>
+      <link>https://codingnconcepts.com/hugo/custom-shortcode-examples/</link>
+      <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/hugo/custom-shortcode-examples/</guid>
+      <description>If you are using Hugo as a static site generator tool then you might have used hugo built-in shortcodes but here are some amazing hugo shortcodes which can be used in markdown files of your hugo website.
+Shortcodes are simple snippets inside your content files calling built-in or custom templates.
+Create Custom Shortcode To create a shortcode, place an HTML template in the layouts/shortcodes directory of your source organization. Consider the file name carefully since the shortcode name will mirror that of the file but without the .</description>
+    </item>
     
     <item>
       <title>Add Structure Data in Hugo Website</title>
@@ -407,7 +418,7 @@ Spring uses `HttpMessageConverters` for content conversion for e.g. Java Object 
       <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/top-spring-boot-interview-questions/</guid>
-      <description>&lt;p&gt;These Spring Boot interview questions are based on my personal interview experience. Topics are in the order of recent interview trends. Keep following this post for regular updates.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Java developers are now switching from Spring Framework to Spring Boot for enterprise application development in microservice architecture. Spring Boot has become a trending topic to be asked in interviews from Java backend developers in 2020.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -416,7 +427,7 @@ Spring uses `HttpMessageConverters` for content conversion for e.g. Java Object 
       <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/top-spring-interview-questions/</guid>
-      <description>&lt;p&gt;These Spring Framework interview questions provides a very comprehensive list of questions being asked in the interview. Keep following this post for regular updates.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Spring Framework is widely used by Java developers for enterprise application development and most frequent topic to be asked in interviews from Java backend developers in 2020.&lt;/p&gt;</description>
     </item>
     
     <item>

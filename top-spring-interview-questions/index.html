@@ -96,7 +96,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/interview/interview-questions-spring.png"],
     "url" : "https:\/\/codingnconcepts.com\/top-spring-interview-questions\/",
-    "wordCount" : "3421",
+    "wordCount" : "3471",
     "genre" : [ "Interview" , "Java" , "Spring" ],
     "keywords" : [ "spring interview questions for experienced" ]
 }
@@ -237,12 +237,11 @@ if (!doNotTrack) {
         <li><a href="#q21-differentiate-between-controller-and-restcontroller">Q21. Differentiate between @Controller and @RestController?</a></li>
         <li><a href="#q22-what-is-spring-security">Q22. What Is Spring Security?</a></li>
         <li><a href="#q23-what-is-aspect-oriented-programming">Q23. What Is Aspect-Oriented Programming?</a></li>
-        <li><a href="#q21-what-are-aspect-advice-pointcut-and-joinpoint-in-aop">Q21. What Are Aspect, Advice, Pointcut, and Joinpoint in Aop?</a></li>
-        <li><a href="#q24-what-are-the-different-types-of-advices">Q24. What are the different types of Advices?</a></li>
-        <li><a href="#q25-what-is-cross-cutting-concerns-in-spring-aop">Q25. What is cross-cutting concerns in Spring AOP?</a></li>
-        <li><a href="#q26-what-is-weaving">Q26. What Is Weaving?</a></li>
-        <li><a href="#q27-what-is-spring-boot">Q27. What is Spring Boot?</a></li>
-        <li><a href="#source">Source</a></li>
+        <li><a href="#q24-what-are-aspect-advice-pointcut-and-joinpoint-in-aop">Q24. What Are Aspect, Advice, Pointcut, and Joinpoint in Aop?</a></li>
+        <li><a href="#q25-what-are-the-different-types-of-advices">Q25. What are the different types of Advices?</a></li>
+        <li><a href="#q26-what-is-cross-cutting-concerns-in-spring-aop">Q26. What is cross-cutting concerns in Spring AOP?</a></li>
+        <li><a href="#q27-what-is-weaving">Q27. What Is Weaving?</a></li>
+        <li><a href="#q28-what-is-spring-boot">Q28. What is Spring Boot?</a></li>
       </ul>
     </li>
   </ul>
@@ -250,7 +249,9 @@ if (!doNotTrack) {
 	</div>
 </div>
 <div class="content post__content clearfix">
-			<p>These Spring Framework interview questions provides a very comprehensive list of questions being asked in the interview. Keep following this post for regular updates.</p>
+			<p>Spring Framework is widely used by Java developers for enterprise application development and most frequent topic to be asked in interviews from Java backend developers in 2020.</p>
+<p>I have spent quite some time to prepare a very comprehensive list of questions and answers being asked in spring framework interview. I hope, this will benefit both beginners as well as experienced developers in their interview preparation.</p>
+<p><br /></p>
 <h3 id="q1-what-is-spring-framework">Q1. What is Spring Framework?</h3>
 <p>The Spring Framework is a Java platform that provides comprehensive infrastructure support for developing Java applications. Spring handles the infrastructure so you can focus on your application.</p>
 <p>The Spring Framework is most widely used framework across the globe which provides the best practices to use design patterns such as Singleton, Prototype, Factory, Abstract Factory, Builder, Decorator, Service Locator, and many more out of the box.</p>
@@ -317,7 +318,8 @@ if (!doNotTrack) {
 <li><strong>Template Method Pattern:</strong> JdbcTemplate, HibernateTemplate, etc.</li>
 <li><strong>Front Controller:</strong> Spring MVC DispatcherServlet</li>
 <li><strong>Data Access Object:</strong> Spring DAO support</li>
-<li><strong>Model View Controller:</strong> Spring MVC</li>
+<li><strong>Model View Controller:</strong> Spring MVC<br>
+<br /></li>
 </ul>
 <h3 id="q5-what-is-inversion-of-control">Q5. What is Inversion of Control?</h3>
 <blockquote>
@@ -638,7 +640,7 @@ InternalResourceViewResolver</p>
 <h3 id="q23-what-is-aspect-oriented-programming">Q23. What Is Aspect-Oriented Programming?</h3>
 <p>Aspect-oriented programming or AOP is a programming technique which allows programmers to modularize crosscutting concerns or behavior that cuts across the typical divisions of responsibility. Examples of cross-cutting concerns can be logging and transaction management. The core of AOP is an aspect. It encapsulates behaviors that can affect multiple classes into reusable modules. <br>
 <br /></p>
-<h3 id="q21-what-are-aspect-advice-pointcut-and-joinpoint-in-aop">Q21. What Are Aspect, Advice, Pointcut, and Joinpoint in Aop?</h3>
+<h3 id="q24-what-are-aspect-advice-pointcut-and-joinpoint-in-aop">Q24. What Are Aspect, Advice, Pointcut, and Joinpoint in Aop?</h3>
 <ul>
 <li><strong>Aspect:</strong> a class that implements cross-cutting concerns, such as transaction management</li>
 <li><strong>Advice:</strong> the methods that get executed when a specific JoinPoint with matching Pointcut is reached in the application</li>
@@ -646,7 +648,7 @@ InternalResourceViewResolver</p>
 <li><strong>JoinPoint:</strong> a point during the execution of a program, such as the execution of a method or the handling of an exception<br>
 <br /></li>
 </ul>
-<h3 id="q24-what-are-the-different-types-of-advices">Q24. What are the different types of Advices?</h3>
+<h3 id="q25-what-are-the-different-types-of-advices">Q25. What are the different types of Advices?</h3>
 <p>Different types of Advices in Spring AOP are:</p>
 <ul>
 <li><strong>Before:</strong> These types of advices execute before the joinpoint methods and are configured using <code>@Before</code> annotation mark.</li>
@@ -656,7 +658,7 @@ InternalResourceViewResolver</p>
 <li><strong>Around:</strong> These types of advices execute before and after a joinpoint and are configured using <code>@Around</code> annotation mark.<br>
 <br /></li>
 </ul>
-<h3 id="q25-what-is-cross-cutting-concerns-in-spring-aop">Q25. What is cross-cutting concerns in Spring AOP?</h3>
+<h3 id="q26-what-is-cross-cutting-concerns-in-spring-aop">Q26. What is cross-cutting concerns in Spring AOP?</h3>
 <p>The concern is the behavior we want to have in a particular module of an application. It can be defined as a functionality we want to implement.</p>
 <p>The cross-cutting concern is a concern which is applicable throughout the application. This affects the entire application. For example, logging, security and data transfer are the concerns needed in almost every module of an application, thus they are the cross-cutting concerns.<br>
 <figure class="center">
@@ -664,20 +666,20 @@ InternalResourceViewResolver</p>
 </figure>
 
 <br /></p>
-<h3 id="q26-what-is-weaving">Q26. What Is Weaving?</h3>
+<h3 id="q27-what-is-weaving">Q27. What Is Weaving?</h3>
 <p>According to the <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#aop">official docs</a>, weaving is a process that links aspects with other application types or objects to create an advised object. This can be done at compile time, load time, or at runtime. Spring AOP, like other pure Java AOP frameworks, performs weaving at runtime.<br>
 <br /></p>
-<h3 id="q27-what-is-spring-boot">Q27. What is Spring Boot?</h3>
+<h3 id="q28-what-is-spring-boot">Q28. What is Spring Boot?</h3>
 <p>Spring boot solves all this problems that comes with Spring Framework and help to create stand-alone, production-grade Spring based applications that you can just run.</p>
 <blockquote>
 <p>Follow the post for <a href="https://codingnconcepts.com/top-spring-boot-interview-questions/">Top Spring Boot Interview Questions</a></p>
 </blockquote>
 <p><br /></p>
-<h3 id="source">Source</h3>
+<h4 id="source">Source</h4>
 <ul>
-<li><a href="https://docs.spring.io/spring/docs/5.0.0.RC3/spring-framework-reference/overview.html">https://docs.spring.io/spring/docs/5.0.0.RC3/spring-framework-reference/overview.html</a></li>
-<li><a href="https://www.baeldung.com/spring-interview-questions">https://www.baeldung.com/spring-interview-questions</a></li>
-<li><a href="https://www.edureka.co/blog/interview-questions/spring-interview-questions/">https://www.edureka.co/blog/interview-questions/spring-interview-questions/</a></li>
+<li><a href="https://docs.spring.io/spring/docs/5.0.0.RC3/spring-framework-reference/overview.html">Spring 5.0.0.RC3 Official Documentation</a></li>
+<li><a href="https://www.baeldung.com/spring-interview-questions">Baeldung Spring Interview Questions</a></li>
+<li><a href="https://www.edureka.co/blog/interview-questions/spring-interview-questions/">Edureka Spring Interview Questions</a></li>
 </ul>
 		</div>
 		<footer class="post__footer">
