@@ -13,7 +13,7 @@
 <meta property="og:url" content="https://codingnconcepts.com/top-spring-interview-questions/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/interview/interview-questions-spring.png" />
 <meta property="article:published_time" content="2020-03-09T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-03-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-05-09T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -82,7 +82,7 @@ if (!doNotTrack) {
     "copyrightYear" : "2020",
     "dateCreated": "2020-03-09T00:00:00.00Z",
     "datePublished": "2020-03-09T00:00:00.00Z",
-    "dateModified": "2020-03-09T00:00:00.00Z",
+    "dateModified": "2020-05-09T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -96,7 +96,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/interview/interview-questions-spring.png"],
     "url" : "https:\/\/codingnconcepts.com\/top-spring-interview-questions\/",
-    "wordCount" : "425",
+    "wordCount" : "3381",
     "genre" : [ "Interview" , "Java" , "Spring" ],
     "keywords" : [ ]
 }
@@ -198,6 +198,7 @@ if (!doNotTrack) {
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
 	<time class="meta__text" datetime="2020-03-09T00:00:00Z">March 09, 2020</time>
+	<time class="meta__text" datetime="2020-05-09T00:00:00Z"> (Last Modified: May 09, 2020)</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -205,27 +206,326 @@ if (!doNotTrack) {
 	<span class="meta__text"><a class="meta__link" href="/categories/interview-questions/" rel="category">Interview Questions</a>
 	</span>
 </div></div>
-		</header><div class="content post__content clearfix">
-			<p>These Spring interview questions are based on my personal interview experience. Topics are in the order of recent interview trends. Keep following this post for regular updates.</p>
-<h4 id="1-what-is-dependency-injection-di-and-what-are-different-ways-to-inject-dependencies-in-spring-">1. What is Dependency Injection (DI) and what are different ways to inject dependencies in Spring ?</h4>
-<p><strong>Dependency Injection</strong> means injecting (passing) the dependency of one object in another object.</p>
-<p>Spring provide two ways for dependency injection:-</p>
-<ol>
-<li><strong>Setter based</strong>
-<ul>
-<li>spring use setter method to inject dependency.</li>
-<li>should be used for optional dependency though they can be marked mandatory by using <em><strong>@Required</strong></em> annotation on dependency</li>
-</ul>
-</li>
-<li><strong>Constructor based</strong>
-<ul>
-<li>spring use constructor to inject dependency</li>
-<li>should be used for mandatory dependencies</li>
-</ul>
-</li>
-</ol>
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#q1-what-is-spring-framework">Q1. What is Spring Framework?</a></li>
+        <li><a href="#q2-what-are-the-benefits-of-using-spring-framework">Q2. What are the Benefits of using Spring Framework?</a></li>
+        <li><a href="#q3-what-are-the-modules-available-in-spring-framework">Q3. What are the Modules available in Spring Framework?</a></li>
+        <li><a href="#q4-name-some-of-the-design-patterns-used-in-the-spring-framework">Q4. Name Some of the Design Patterns used in the Spring Framework?</a></li>
+        <li><a href="#q5-what-is-inversion-of-control">Q5. What is Inversion of Control?</a></li>
+        <li><a href="#q6-what-is-dependency-injection">Q6. What is Dependency Injection?</a></li>
+        <li><a href="#q7-what-are-different-ways-of-dependency-injection-in-spring-framework">Q7. What are different ways of Dependency Injection in Spring Framework?</a></li>
+        <li><a href="#q8-what-are-different-ways-to-autowire-dependency-in-spring-frameowork">Q8. What are different ways to Autowire Dependency in Spring Frameowork?</a></li>
+        <li><a href="#q9-what-are-different-ways-to-autowire-dependency-by-type">Q9. What are different ways to Autowire Dependency by Type?</a></li>
+        <li><a href="#q10-how-many-types-of-ioc-containers-are-there-in-spring-framework">Q10. How many types of IOC Containers are there in Spring Framework?</a></li>
+        <li><a href="#q11-differentiate-between-beanfactory-and-applicationcontext">Q11. Differentiate between BeanFactory and ApplicationContext?</a></li>
+        <li><a href="#q12-what-is-a-spring-bean">Q12. What is a Spring Bean?</a></li>
+        <li><a href="#q13-what-are-different-ways-to-configure-spring-beans">Q13. What are different ways to configure Spring Beans?</a></li>
+        <li><a href="#q14-can-we-have-multiple-spring-configuration-files-in-one-project">Q14. Can We Have Multiple Spring Configuration Files in One Project?</a></li>
+        <li><a href="#q15-how-to-define-scope-of-a-spring-bean">Q15. How to define Scope of a Spring Bean?</a></li>
+        <li><a href="#q16-explain-the-spring-bean-life-cycle">Q16. Explain the Spring Bean Life Cycle?</a></li>
+        <li><a href="#q17-what-are-spring-stereotype-annotations">Q17. What are Spring stereotype annotations?</a></li>
+        <li><a href="#q18-what-are-some-other-spring-annotations">Q18. What are some other Spring annotations?</a></li>
+        <li><a href="#q19-what-happens-when-you-define-two-beans-with-same-id-">Q19. What happens when you define two beans with same id ?</a></li>
+        <li><a href="#q20-explain-spring-mvc-workflow">Q20. Explain Spring MVC Workflow?</a></li>
+        <li><a href="#q21-differentiate-between-controller-and-restcontroller">Q21. Differentiate between @Controller and @RestController?</a></li>
+        <li><a href="#q22-what-is-spring-security">Q22. What Is Spring Security?</a></li>
+        <li><a href="#q23-what-is-aspect-oriented-programming">Q23. What Is Aspect-Oriented Programming?</a></li>
+        <li><a href="#q21-what-are-aspect-advice-pointcut-and-joinpoint-in-aop">Q21. What Are Aspect, Advice, Pointcut, and Joinpoint in Aop?</a></li>
+        <li><a href="#q24-what-are-the-different-types-of-advices">Q24. What are the different types of Advices?</a></li>
+        <li><a href="#q25-what-is-cross-cutting-concerns-in-spring-aop">Q25. What is cross-cutting concerns in Spring AOP?</a></li>
+        <li><a href="#q26-what-is-weaving">Q26. What Is Weaving?</a></li>
+        <li><a href="#source">Source</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div>
+<div class="content post__content clearfix">
+			<p>These Spring Framework interview questions provides a very comprehensive list of questions being asked in the interview. Keep following this post for regular updates.</p>
+<h3 id="q1-what-is-spring-framework">Q1. What is Spring Framework?</h3>
+<p>The Spring Framework is a Java platform that provides comprehensive infrastructure support for developing Java applications. Spring handles the infrastructure so you can focus on your application.</p>
+<p>The Spring Framework is most widely used framework across the globe which provides the best practices to use design patterns such as Singleton, Prototype, Factory, Abstract Factory, Builder, Decorator, Service Locator, and many more out of the box.</p>
 <p><br /></p>
-<h4 id="2-explain-spring-bean-life-cycle-">2. Explain Spring bean life cycle ?</h4>
+<h3 id="q2-what-are-the-benefits-of-using-spring-framework">Q2. What are the Benefits of using Spring Framework?</h3>
+<p>Spring framework targets to make Java EE development easier. Here are the advantages of using it:</p>
+<ul>
+<li><strong>Lightweight:</strong> there is a slight overhead of using the framework in development</li>
+<li><strong>Inversion of Control (IoC):</strong> Spring container takes care of wiring dependencies of various objects, instead of creating or looking for dependent objects</li>
+<li><strong>Aspect Oriented Programming (AOP):</strong> Spring supports AOP to separate business logic from system services</li>
+<li><strong>IoC container:</strong> it manages Spring Bean life cycle and project specific configurations</li>
+<li><strong>MVC framework:</strong> that is used to create web applications or RESTful web services, capable of returning XML/JSON responses</li>
+<li><strong>Transaction management:</strong> reduces the amount of boiler-plate code in JDBC operations, file uploading, etc., either by using Java annotations or by Spring Bean XML configuration file</li>
+<li><strong>Exception Handling:</strong> Spring provides a convenient API for translating technology-specific exceptions into unchecked exceptions</li>
+</ul>
+<p><br /></p>
+<h3 id="q3-what-are-the-modules-available-in-spring-framework">Q3. What are the Modules available in Spring Framework?</h3>
+<figure class="center">
+    <img src="/img/interview/spring-modules-overview.png"
+         alt="Spring Framework Overview"/> <figcaption>
+            <p>Spring Framework Overview</p>
+        </figcaption>
+</figure>
+
+<h6 id="core-container">Core Container</h6>
+<ul>
+<li><code>spring-bean</code> and <code>spring-core</code> modules provide the fundamental parts of the framework, including the <em><strong>IoC</strong></em> and <em><strong>Dependency Injection</strong></em> features.</li>
+<li><code>spring-context</code> module builds on the solid base provided by the Core and Beans modules. It provides a way to access java object as beans and manage their life-cycle. It also supports internationalization and Java EE features such as EJB, JMX, and basic remoting.</li>
+<li><code>spring-expression</code> module provides a powerful Expression Language for querying and manipulating an object graph at runtime. It is an extension of the unified expression language (unified EL) as specified in the JSP 2.1 specification. The language supports setting and getting property values, property assignment, method invocation, accessing the content of arrays, collections and indexers, logical and arithmetic operators, named variables, and retrieval of objects by name from Spring’s IoC container.</li>
+</ul>
+<h5 id="aop-and-instrumentation">AOP and Instrumentation</h5>
+<ul>
+<li><code>spring-aop</code> module is used to decouple code for <em><strong>cross-cutting concerns</strong></em> such as logging by using method-interceptors and pointcuts.</li>
+<li><code>spring-aspect</code> module provide integration with <em><strong>AspectJ</strong></em></li>
+<li><code>spring-instrument</code> module provides class instrumentation support and classloader implementations to be used in certain application servers.</li>
+<li><code>spring-instrument-tomcat</code> module contains Spring’s instrumentation agent for Tomcat.</li>
+</ul>
+<h5 id="data-accessintegration">Data Access/Integration</h5>
+<ul>
+<li><code>spring-jdbc</code> module provides a JDBC-abstraction layer that removes the need to do tedious JDBC coding and parsing of database-vendor specific error codes.</li>
+<li><code>spring-tx</code> module supports programmatic and declarative transaction management for classes that implement special interfaces and for all your POJOs (Plain Old Java Objects).</li>
+<li><code>spring-orm</code> module provides integration layers for popular object-relational mapping APIs, including JPA and Hibernate. Using the spring-orm module you can use these O/R-mapping frameworks in combination with all of the other features Spring offers, such as the simple declarative transaction management feature mentioned previously.</li>
+<li><code>spring-oxm</code> module provides an abstraction layer that supports Object/XML mapping implementations such as JAXB, Castor, JiBX and XStream.</li>
+<li><code>spring-jms</code> module (Java Messaging Service) contains features for producing and consuming messages.</li>
+</ul>
+<h5 id="web">Web</h5>
+<ul>
+<li><code>spring-web</code> module provides basic web-oriented integration features such as multipart file upload functionality and the initialization of the IoC container using Servlet listeners and a web-oriented application context. It also contains an HTTP client and the web-related parts of Spring’s remoting support.</li>
+<li><code>spring-webmvc</code> module (also known as the Web-Servlet module) contains Spring’s model-view-controller (MVC) and REST Web Services implementation for web applications. Spring’s MVC framework provides a clean separation between domain model code and web forms and integrates with all of the other features of the Spring Framework.</li>
+<li><code>spring-websocket</code> module provides WebSocket and SockJS infrastructure, including STOMP messaging support</li>
+</ul>
+<h5 id="test">Test</h5>
+<ul>
+<li><code>spring-test</code> module supports the unit testing and integration testing of Spring components with JUnit or TestNG. It provides consistent loading of Spring ApplicationContexts and caching of those contexts. It also provides mock objects that you can use to test your code in isolation.</li>
+</ul>
+<p><br /></p>
+<h3 id="q4-name-some-of-the-design-patterns-used-in-the-spring-framework">Q4. Name Some of the Design Patterns used in the Spring Framework?</h3>
+<ul>
+<li><strong>Singleton Pattern:</strong>  Singleton-scoped beans</li>
+<li><strong>Prototype Pattern:</strong> Prototype-scoped beans</li>
+<li><strong>Factory Pattern:</strong> Bean Factory classes</li>
+<li><strong>Adapter Pattern:</strong> Spring Web and Spring MVC</li>
+<li><strong>Proxy Pattern:</strong> Spring Aspect Oriented Programming support</li>
+<li><strong>Template Method Pattern:</strong> JdbcTemplate, HibernateTemplate, etc.</li>
+<li><strong>Front Controller:</strong> Spring MVC DispatcherServlet</li>
+<li><strong>Data Access Object:</strong> Spring DAO support</li>
+<li><strong>Model View Controller:</strong> Spring MVC</li>
+</ul>
+<h3 id="q5-what-is-inversion-of-control">Q5. What is Inversion of Control?</h3>
+<blockquote>
+<p><em><strong>Inversion of Control (IoC) is a programming principle which inverts the flow of control compare to traditional control flow.</strong></em></p>
+</blockquote>
+<p>A Java application consists of objects which are dependent on each other and work together to run the application. In a traditional java application, JRE instantiate classes and dependent objects at compile time hance objects are tightly coupled with each other.</p>
+<p><strong>How we can use IoC in Java application context?</strong><br>
+We can use various patterns such as Factory, Abstract Factory, Builder &hellip; to instantiate classes and dependent objects at runtime instead of compile time. You see that we have inverted the control from compile time to runtime, which is IoC.</p>
+<p><strong>How Spring Framework IoC works?</strong><br>
+The Spring Framework IoC container provides the implementation of Factory, Abstract Factory, Builder, and many more patterns out of the box with best design practices used which you can integrate into your own application(s).<br>
+<br /></p>
+<h3 id="q6-what-is-dependency-injection">Q6. What is Dependency Injection?</h3>
+<blockquote>
+<p><em><strong>Dependency injection is a technique in which an object receives other objects that it depends on.</strong></em></p>
+</blockquote>
+<p>Dependency Injection, is a form of IoC, is a general concept stating that you do not create your objects manually but instead describe how they should be created. An IoC container will instantiate required classes if needed.</p>
+<p><strong>How Spring Framework DI works?</strong><br>
+The Spring Framework DI provides us the way to describe the object and its dependencies in the the form of XML or Java annotations. Spring IoC container takes care of wire them up together.<br>
+<br /></p>
+<h3 id="q7-what-are-different-ways-of-dependency-injection-in-spring-framework">Q7. What are different ways of Dependency Injection in Spring Framework?</h3>
+<p>Spring framework provides three ways for dependency injection:-</p>
+<h6 id="1-constructor-based-dependency-injection">1. Constructor-Based Dependency Injection</h6>
+<p>Spring use constructor to inject dependency. It is recommended to use for mandatory dependencies.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#555;font-weight:bold">@Configuration</span>
+<span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">AppConfig</span> <span style="color:#333">{</span>
+    <span style="color:#555;font-weight:bold">@Bean</span>
+    <span style="color:#080;font-weight:bold">public</span> Item <span style="color:#06b;font-weight:bold">item1</span><span style="color:#333">()</span> <span style="color:#333">{</span>
+        <span style="color:#080;font-weight:bold">return</span> <span style="color:#080;font-weight:bold">new</span> ItemImpl1<span style="color:#333">();</span>
+    <span style="color:#333">}</span>
+    <span style="color:#555;font-weight:bold">@Bean</span>
+    <span style="color:#080;font-weight:bold">public</span> Store <span style="color:#06b;font-weight:bold">store</span><span style="color:#333">()</span> <span style="color:#333">{</span>
+        <span style="color:#080;font-weight:bold">return</span> <span style="color:#080;font-weight:bold">new</span> Store<span style="color:#333">(</span>item1<span style="color:#333">());</span>
+    <span style="color:#333">}</span>
+<span style="color:#333">}</span>
+</code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#070">&lt;bean</span> <span style="color:#00c">id=</span><span style="background-color:#fff0f0">&#34;item1&#34;</span> <span style="color:#00c">class=</span><span style="background-color:#fff0f0">&#34;com.abc.ItemImpl1&#34;</span> <span style="color:#070">/&gt;</span> 
+<span style="color:#070">&lt;bean</span> <span style="color:#00c">id=</span><span style="background-color:#fff0f0">&#34;store&#34;</span> <span style="color:#00c">class=</span><span style="background-color:#fff0f0">&#34;com.abc.Store&#34;</span><span style="color:#070">&gt;</span> 
+    <span style="color:#070">&lt;constructor-arg</span> <span style="color:#00c">type=</span><span style="background-color:#fff0f0">&#34;ItemImpl1&#34;</span> <span style="color:#00c">index=</span><span style="background-color:#fff0f0">&#34;0&#34;</span> <span style="color:#00c">name=</span><span style="background-color:#fff0f0">&#34;item&#34;</span> <span style="color:#00c">ref=</span><span style="background-color:#fff0f0">&#34;item1&#34;</span> <span style="color:#070">/&gt;</span> 
+<span style="color:#070">&lt;/bean&gt;</span>
+</code></pre></div><h6 id="2-setter-based-dependency-injection">2. Setter-Based Dependency Injection</h6>
+<p>Spring use setter method to inject dependency. It is recommended to use for optional dependencies.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#555;font-weight:bold">@Bean</span>
+<span style="color:#080;font-weight:bold">public</span> Store <span style="color:#06b;font-weight:bold">store</span><span style="color:#333">()</span> <span style="color:#333">{</span>
+    Store store <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> Store<span style="color:#333">();</span>
+    store<span style="color:#333">.</span><span style="color:#00c">setItem</span><span style="color:#333">(</span>item1<span style="color:#333">());</span>
+    <span style="color:#080;font-weight:bold">return</span> store<span style="color:#333">;</span>
+<span style="color:#333">}</span>
+</code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#070">&lt;bean</span> <span style="color:#00c">id=</span><span style="background-color:#fff0f0">&#34;store&#34;</span> <span style="color:#00c">class=</span><span style="background-color:#fff0f0">&#34;com.abc.Store&#34;</span><span style="color:#070">&gt;</span>
+    <span style="color:#070">&lt;property</span> <span style="color:#00c">name=</span><span style="background-color:#fff0f0">&#34;item&#34;</span> <span style="color:#00c">ref=</span><span style="background-color:#fff0f0">&#34;item1&#34;</span> <span style="color:#070">/&gt;</span>
+<span style="color:#070">&lt;/bean&gt;</span>
+</code></pre></div><h6 id="3-field-based-dependency-injection">3. Field-Based Dependency Injection</h6>
+<p>Spring looks for fields annotated with <code>@Autowired</code> and inject them using reflection.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">Store</span> <span style="color:#333">{</span>
+    <span style="color:#555;font-weight:bold">@Autowired</span>
+    <span style="color:#080;font-weight:bold">private</span> Item item<span style="color:#333">;</span> 
+<span style="color:#333">}</span>
+</code></pre></div><p><br /></p>
+<h3 id="q8-what-are-different-ways-to-autowire-dependency-in-spring-frameowork">Q8. What are different ways to Autowire Dependency in Spring Frameowork?</h3>
+<p>Wiring allows the Spring container to automatically resolve dependencies between collaborating beans by inspecting the beans that have been defined.</p>
+<p>There are four modes of autowiring a bean using an XML configuration:</p>
+<ul>
+<li><strong>no:</strong> the default value – this means no autowiring is used for the bean and we have to explicitly name the dependencies</li>
+<li><strong>byName:</strong> autowiring is done based on the name of the property, therefore Spring will look for a bean with the same name as the property that needs to be set</li>
+<li><strong>byType:</strong> similar to the byName autowiring, only based on the type of the property. This means Spring will look for a bean with the same type of the property to set. If there&rsquo;s more than one bean of that type, the framework throws an exception.</li>
+<li><strong>constructor:</strong> autowiring is done based on constructor arguments, meaning Spring will look for beans with the same type as the constructor arguments</li>
+</ul>
+<p><br /></p>
+<h3 id="q9-what-are-different-ways-to-autowire-dependency-by-type">Q9. What are different ways to Autowire Dependency by Type?</h3>
+<h6 id="1-using-class-annotated-with-bean">1. Using Class annotated with <code>@Bean</code></h6>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#555;font-weight:bold">@Bean</span><span style="color:#333">(</span>autowire <span style="color:#333">=</span> Autowire<span style="color:#333">.</span><span style="color:#00c">BY_TYPE</span><span style="color:#333">)</span>
+<span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">Store</span> <span style="color:#333">{</span>
+     
+    <span style="color:#080;font-weight:bold">private</span> Item item<span style="color:#333">;</span>
+ 
+    <span style="color:#080;font-weight:bold">public</span> <span style="color:#06b;font-weight:bold">setItem</span><span style="color:#333">(</span>Item item<span style="color:#333">){</span>
+        <span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">item</span> <span style="color:#333">=</span> item<span style="color:#333">;</span>    
+    <span style="color:#333">}</span>
+<span style="color:#333">}</span>
+</code></pre></div><h6 id="2-using-autowired-annotation">2. Using @Autowired annotation</h6>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">Store</span> <span style="color:#333">{</span>
+     
+    <span style="color:#555;font-weight:bold">@Autowired</span>
+    <span style="color:#080;font-weight:bold">private</span> Item item<span style="color:#333">;</span>
+<span style="color:#333">}</span>
+</code></pre></div><h6 id="3-using-qualifier-annotation-if-there-are-more-than-one-bean-of-same-type">3. Using @Qualifier annotation if there are more than one bean of same type</h6>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">Store</span> <span style="color:#333">{</span>
+     
+    <span style="color:#555;font-weight:bold">@Autowired</span>
+    <span style="color:#555;font-weight:bold">@Qualifier</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;item1&#34;</span><span style="color:#333">)</span>
+    <span style="color:#080;font-weight:bold">private</span> Item item<span style="color:#333">;</span>
+<span style="color:#333">}</span>
+</code></pre></div><h6 id="4-using-xml-configuration">4. Using XML configuration</h6>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#070">&lt;bean</span> <span style="color:#00c">id=</span><span style="background-color:#fff0f0">&#34;store&#34;</span> <span style="color:#00c">class=</span><span style="background-color:#fff0f0">&#34;com.abc.Store&#34;</span> <span style="color:#00c">autowire=</span><span style="background-color:#fff0f0">&#34;byType&#34;</span><span style="color:#070">&gt;</span> <span style="color:#070">&lt;/bean&gt;</span>
+</code></pre></div><p><br /></p>
+<h3 id="q10-how-many-types-of-ioc-containers-are-there-in-spring-framework">Q10. How many types of IOC Containers are there in Spring Framework?</h3>
+<ul>
+<li><strong>BeanFactory</strong> is an interface representing a container that provides and manages bean instances. The default implementation instantiates beans lazily when getBean() is called.</li>
+<li><strong>ApplicationContext</strong> is an interface representing a container holding all information, metadata, and beans in the application. It is built on top of BeanFactory interface but the default implementation instantiates beans eagerly when the application starts. This behavior can be overridden for individual beans.<br>
+<br /></li>
+</ul>
+<h3 id="q11-differentiate-between-beanfactory-and-applicationcontext">Q11. Differentiate between BeanFactory and ApplicationContext?</h3>
+<h6 id="beanfactory-vs-applicationcontext">BeanFactory vs ApplicationContext</h6>
+<table>
+<thead>
+<tr>
+<th align="left">BeanFactory</th>
+<th align="left">ApplicationContext</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">It is an interface defined in <em>org.springframework.beans.factory.BeanFactory</em></td>
+<td align="left">It is an interface defined in <em>org.springframework.context.ApplicationContext</em></td>
+</tr>
+<tr>
+<td align="left">It uses Lazy initialization</td>
+<td align="left">It uses Eager initialization by default</td>
+</tr>
+<tr>
+<td align="left">It explicitly provides a resource object using the syntax</td>
+<td align="left">It creates and manages resource objects on its own</td>
+</tr>
+<tr>
+<td align="left">It doesn’t supports internationalization</td>
+<td align="left">It supports internationalization</td>
+</tr>
+<tr>
+<td align="left">It doesn’t supports annotation based dependency</td>
+<td align="left">It supports annotation based dependency</td>
+</tr>
+</tbody>
+</table>
+<p><br /></p>
+<h3 id="q12-what-is-a-spring-bean">Q12. What is a Spring Bean?</h3>
+<p>The Spring Beans are Java Objects that are instantiated, configured, wired, and managed by the Spring IoC container. Spring Bean definition and metadata is provided by XML configuration or Java annotations, which is used by Spring IoC container. <br>
+T<br /></p>
+<h3 id="q13-what-are-different-ways-to-configure-spring-beans">Q13. What are different ways to configure Spring Beans?</h3>
+<p>There are three ways to define Beans configuration in Spring Framework:-</p>
+<h5 id="xml-based-configuration">XML-Based configuration</h5>
+<p>In Spring Framework, the dependencies and the services needed by beans are specified in configuration files which are in XML format. These configuration files usually contain a lot of bean definitions and application specific configuration options. They generally start with a bean tag. For example:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#070">&lt;bean</span> <span style="color:#00c">id=</span><span style="background-color:#fff0f0">&#34;tutorial&#34;</span> <span style="color:#00c">class=</span><span style="background-color:#fff0f0">&#34;com.abc.TutorialBean&#34;</span><span style="color:#070">&gt;</span>
+ <span style="color:#070">&lt;property</span> <span style="color:#00c">name=</span><span style="background-color:#fff0f0">&#34;name&#34;</span> <span style="color:#00c">value=</span><span style="background-color:#fff0f0">&#34;CodingNConcepts&#34;</span><span style="color:#070">&gt;&lt;/property&gt;</span>
+<span style="color:#070">&lt;/bean&gt;</span>
+</code></pre></div><h5 id="annotation-based-configuration">Annotation-Based configuration</h5>
+<p>Annotation-based container configuration is an alternative to XML setups. Rather than using XML for describing a bean wiring, the developer moves the configuration to the component class by using annotations on the appropriate class, field, or method declaration.</p>
+<p>By default, annotation config is turned off. It needs to be turned on explicitly by adding <code>&lt;context:annotation-config/&gt;</code> element in Spring Configuration XML file.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#070">&lt;beans&gt;</span>
+<span style="color:#070">&lt;context:annotation-config/&gt;</span>
+<span style="color:#888">&lt;!-- bean definitions go here --&gt;</span>
+<span style="color:#070">&lt;/beans&gt;</span>
+</code></pre></div><h5 id="java-based-configuration">Java-based configuration</h5>
+<p>The key features in Spring Framework’s new Java-configuration support are @Configuration annotated classes and @Bean annotated methods.</p>
+<ul>
+<li><code>@Bean</code> annotation plays the same role as the <bean/> element.</li>
+<li><code>@Configuration</code> classes allows to define inter-bean dependencies by simply calling other <code>@Bean</code> methods in the same class.</li>
+</ul>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#555;font-weight:bold">@Configuration</span>
+<span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">TutorialConfig</span> <span style="color:#333">{</span> 
+
+  <span style="color:#555;font-weight:bold">@Bean</span>
+  <span style="color:#080;font-weight:bold">public</span> TutorialBean <span style="color:#06b;font-weight:bold">tutorial</span><span style="color:#333">()</span> <span style="color:#333">{</span> 
+    <span style="color:#080;font-weight:bold">return</span> <span style="color:#080;font-weight:bold">new</span> TutorialBean<span style="color:#333">();</span> 
+  <span style="color:#333">}</span>
+<span style="color:#333">}</span>
+</code></pre></div><p><br /></p>
+<h3 id="q14-can-we-have-multiple-spring-configuration-files-in-one-project">Q14. Can We Have Multiple Spring Configuration Files in One Project?</h3>
+<p>Yes, in large projects, having multiple Spring configurations is recommended to increase maintainability and modularity.</p>
+<p>You can load multiple Java-based configuration files:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#555;font-weight:bold">@Configuration</span>
+<span style="color:#555;font-weight:bold">@Import</span><span style="color:#333">({</span>MainConfig<span style="color:#333">.</span><span style="color:#00c">class</span><span style="color:#333">,</span> SchedulerConfig<span style="color:#333">.</span><span style="color:#00c">class</span><span style="color:#333">})</span>
+<span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">AppConfig</span> <span style="color:#333">{</span>
+</code></pre></div><p>Or load one XML file that will contain all other configs:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">ApplicationContext context <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> ClassPathXmlApplicationContext<span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;spring-all.xml&#34;</span><span style="color:#333">);</span>
+</code></pre></div><p>And inside this XML file you&rsquo;ll have:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#070">&lt;import</span> <span style="color:#00c">resource=</span><span style="background-color:#fff0f0">&#34;main.xml&#34;</span><span style="color:#070">/&gt;</span>
+<span style="color:#070">&lt;import</span> <span style="color:#00c">resource=</span><span style="background-color:#fff0f0">&#34;other.xml&#34;</span><span style="color:#070">/&gt;</span>
+</code></pre></div><p><br /></p>
+<h3 id="q15-how-to-define-scope-of-a-spring-bean">Q15. How to define Scope of a Spring Bean?</h3>
+<p>Spring Bean&rsquo;s scope can be defined either using <code>@Scope</code> annotation or <code>scope</code> attribute in XML configuration files. There are five supported scopes:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#070">&lt;bean</span> <span style="color:#00c">id=</span><span style="background-color:#fff0f0">&#34;mySingleton&#34;</span> <span style="color:#00c">class=</span><span style="background-color:#fff0f0">&#34;com.abc.MySingleton&#34;</span> <span style="color:#00c">scope=</span><span style="background-color:#fff0f0">&#34;singleton&#34;</span><span style="color:#070">/&gt;</span>
+</code></pre></div><ul>
+<li>
+<p><strong>singleton:</strong> bean scope provides single instance per Spring IoC container. This means everytime spring application context returns same instance when we ask.</p>
+<p>Points to remember about Singleton bean:-<br>
+<em><strong>Singleton is the default bean scope</strong></em><br>
+<em><strong>Singleton beans are not thread safe</strong></em></p>
+</li>
+<li>
+<p><strong>prototype:</strong> bean scope creates a new instance everytime we ask from spring application context</p>
+</li>
+<li>
+<p><strong>request:</strong> bean scope creates a new instance on every incoming HTTP-request.</p>
+</li>
+<li>
+<p><strong>session:</strong> bean scope creates a new instance per HTTP-session.</p>
+</li>
+<li>
+<p><strong>global-session:</strong> bean scope creates a new instance per Global HTTP-session. It can be used in portlet context only.</p>
+</li>
+</ul>
+<p>The last three are available only if the users use a web-aware ApplicationContext.<br>
+<br /></p>
+<h3 id="q16-explain-the-spring-bean-life-cycle">Q16. Explain the Spring Bean Life Cycle?</h3>
+<figure class="center">
+    <img src="/img/interview/spring-bean-life-cycle.png"
+         alt="Spring Bean Life Cycle"/> <figcaption>
+            <p>Spring Bean Life Cycle</p>
+        </figcaption>
+</figure>
+
 <p>Spring bean follow the following sequence in its life cycle:-</p>
 <ol>
 <li>Default constructor will be called.</li>
@@ -236,27 +536,55 @@ if (!doNotTrack) {
 <li>If class implements BeanPostProcessor then its postProcessBeforeInitialization will be called.</li>
 <li>If class implements InitializingBean then afterPropertiesSet method will be called.</li>
 <li>If class has custom init method defined then it will be called.</li>
-<li>If class implements BeanPostProcessor then its postProcessAfterInitializationwill be called.</li>
+<li>If class implements BeanPostProcessor then its postProcessAfterInitialization will be called.</li>
 <li>If class implements DisposableBean then destroy method will be called.</li>
 <li>If class has custom destroy method defined then it will be called.</li>
 </ol>
 <p><br /></p>
-<h4 id="3-explain-spring-mvc-workflow-">3. Explain Spring MVC workflow ?</h4>
-<p>When you request from spring MVC application then it follow the following sequence:-</p>
-<ol>
-<li>
-<p>Dipatcher Servlet which is also know as <strong>front controller</strong> of Spring application handles all the request mapped to it in <strong>web.xml</strong> and ask for appropriate controller from Handler Mapping</p>
-</li>
-<li>
-<p>Handler Mapping is a configuration for url and controller mapping. It look for controller:</p>
-<p><em><strong>Popular Implentations of HandlerMapping:</strong></em></p>
+<h3 id="q17-what-are-spring-stereotype-annotations">Q17. What are Spring stereotype annotations?</h3>
+<p>All the stereotype annotations are used at annotate classes auto-detection and bean configuration. There are mainly 4 types of stereotypes:-</p>
 <ul>
-<li>
-<p><strong>BeanNameUrlHandlerMapping</strong> This is a default spring handler mapping. Name of bean considered as URL.</p>
+<li><code>@Component</code> is a generic stereotype to annotate classes at any layer</li>
+<li><code>@Controller</code> is used to annotate classes at API layer, mainly used in Spring MVC applications to define API endpoint and used in conjunction with <code>@RequestMapping</code> annotation which is used to annotate method to maps the request URL.</li>
+<li><code>@Service</code> is used to annotate classes at the service layer</li>
+<li><code>@Repository</code> is used to annotate classes at the persistence layer, which will act as a database repository<br>
+<br /></li>
+</ul>
+<h3 id="q18-what-are-some-other-spring-annotations">Q18. What are some other Spring annotations?</h3>
+<ul>
+<li><code>@Required</code> This annotation simply indicates that the affected bean property must be populated at configuration time, through an explicit property value in a bean definition or through autowiring. The container throws BeanInitializationException if the affected bean property has not been populated.</li>
+<li><code>@Autowired</code> This annotation provides more fine-grained control over where and how autowiring should be accomplished. The @Autowired annotation can be used to autowire bean on the setter method just like @Required annotation, constructor, a property or methods with arbitrary names and/or multiple arguments.</li>
+<li><code>@Qualifier</code> There may be a situation when you create more than one bean of the same type and want to wire only one of them with a property, in such case you can use @Qualifier annotation along with @Autowired to remove the confusion by specifying which exact bean will be wired.</li>
+<li><code>@PostConstruct</code> − This annotation can be used as an alternate of initialization callback.</li>
+<li><code>@PreDestroy</code> − This annotation can be used as an alternate of destruction callback.</li>
+<li><code>@Resource</code> − This annotation can be used on fields or setter methods. The @Resource annotation takes a &lsquo;name&rsquo; attribute which will be interpreted as the bean name to be injected. You can say, it follows by-name autowiring semantics.</li>
+</ul>
+<p><br /></p>
+<h3 id="q19-what-happens-when-you-define-two-beans-with-same-id-">Q19. What happens when you define two beans with same id ?</h3>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#070">&lt;bean</span> <span style="color:#00c">id=</span><span style="background-color:#fff0f0">&#34;employeeDAO&#34;</span> <span style="color:#00c">class=</span><span style="background-color:#fff0f0">&#34;com.one.EmployeeDAO&#34;</span> <span style="color:#070">/&gt;</span>
+<span style="color:#070">&lt;bean</span> <span style="color:#00c">id=</span><span style="background-color:#fff0f0">&#34;employeeDAO&#34;</span> <span style="color:#00c">class=</span><span style="background-color:#fff0f0">&#34;com.two.EmployeeDAO&#34;</span> <span style="color:#070">/&gt;</span>
+</code></pre></div><p>The second bean definition overrides the first one. If definitions are in different configuration files and bean definition is taken from whichever loads in the last.<br>
+<br /></p>
+<h3 id="q20-explain-spring-mvc-workflow">Q20. Explain Spring MVC Workflow?</h3>
+<figure class="center">
+    <img src="/img/interview/spring-mvc-workflow.png"
+         alt="Spring MVC Workflow"/> <figcaption>
+            <p>Spring MVC Workflow</p>
+        </figcaption>
+</figure>
+
+<p>When you request from spring MVC application then it follow the following sequence:-</p>
+<h4 id="1-dispatcher-servlet">1. Dispatcher Servlet</h4>
+<p>Dispatcher Servlet which is also know as <strong>front controller</strong> is the core of Spring MVC Workflow and responsible for handling all HTTP request and response. If you are using tomcat as web application server then Dispatcher Servlet need to define in <em><strong>wb.xml</strong></em></p>
+<p>The DispatcherServlet receives the entry of handler mapping from the configuration file and forwards the request to the controller. The controller then returns an object of Model And View. The DispatcherServlet checks the entry of view resolver in the configuration file and calls the specified view component.</p>
+<h4 id="2-handler-mapping">2. Handler Mapping</h4>
+<p>Handler Mapping is a configuration for url and controller mapping.</p>
+<p>Following are the different implementation of HandlerMapping:-</p>
+<h6 id="1-beannameurlhandlermapping">1) BeanNameUrlHandlerMapping</h6>
+<p>This is a default spring handler mapping. Name of bean considered as URL.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#070">&lt;bean</span> <span style="color:#00c">name=</span><span style="background-color:#fff0f0">&#34;/welcome.htm&#34;</span> <span style="color:#00c">class=</span><span style="background-color:#fff0f0">&#34;com.abc.controller.WelcomeController&#34;</span><span style="color:#070">/&gt;</span>
-</code></pre></div></li>
-<li>
-<p><strong>SimpleUrlHandlerMapping</strong> - Map with key value pair of URL and controller bean name.</p>
+</code></pre></div><h6 id="2-simpleurlhandlermapping">2) SimpleUrlHandlerMapping</h6>
+<p>Map with key value pair of URL and controller bean name.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#070">&lt;bean</span> <span style="color:#00c">class=</span><span style="background-color:#fff0f0">&#34;org.springframework.web.servlet.handler.SimpleUrlHandlerMapping&#34;</span><span style="color:#070">&gt;</span>
   <span style="color:#070">&lt;property</span> <span style="color:#00c">name=</span><span style="background-color:#fff0f0">&#34;mappings&#34;</span><span style="color:#070">&gt;</span>
     <span style="color:#070">&lt;props&gt;</span>
@@ -265,9 +593,9 @@ if (!doNotTrack) {
   <span style="color:#070">&lt;/property&gt;</span>
 <span style="color:#070">&lt;/bean&gt;</span>
 <span style="color:#070">&lt;bean</span> <span style="color:#00c">id=</span><span style="background-color:#fff0f0">&#34;welcomeController&#34;</span> <span style="color:#00c">class=</span><span style="background-color:#fff0f0">&#34;com.abc.controller.WelcomeController&#34;</span> <span style="color:#070">/&gt;</span>
-</code></pre></div></li>
-<li>
-<p><strong>DefaultAnnotationHandlerMapping</strong>  Annotation based @RequestMapping at class and method level.</p>
+</code></pre></div><h6 id="3-defaultannotationhandlermapping">3) DefaultAnnotationHandlerMapping</h6>
+<p>This is the most popular implementation of HandlerMapping where each class annotated with <code>@Controller</code> maps one or more request to methods that process and execute the request with provided inputs.</p>
+<p><code>@RequestMapping</code> annotation is used at both class and method level to map the URL. In addition to simple use cases, we can use it for mapping of HTTP headers, binding parts of the URI with <code>@PathVariable</code>, and working with URI parameters and the <code>@RequestParam</code> annotation.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-weight:bold">package</span> <span style="color:#0e84b5;font-weight:bold">com.abc.controller</span><span style="color:#333">;</span>
 <span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">org.springframework.stereotype.Controller</span><span style="color:#333">;</span>
 <span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">org.springframework.web.bind.annotation.RequestMapping</span><span style="color:#333">;</span>
@@ -285,26 +613,64 @@ if (!doNotTrack) {
     <span style="color:#080;font-weight:bold">return</span> model<span style="color:#333">;</span>
   <span style="color:#333">}</span>
 <span style="color:#333">}</span>
-</code></pre></div></li>
-</ul>
-</li>
-<li>
-<p>Controller calls service layer to execute business logic and retrurn ModelAndView, which is wrapper for model object and view name.</p>
-<p><em><strong>Popular Controller Types:</strong></em></p>
+</code></pre></div><h4 id="3-controller">3. Controller</h4>
+<p>Controller calls service layer to execute business logic and return ModelAndView, which is wrapper for model object and view name.</p>
+<p><em><strong>Popular Controller Types:</strong></em><br>
+AbstractController<br>
+AbstractCommandController<br>
+SimpleFormController</p>
+<h4 id="4-view-resolver">4. View Resolver</h4>
+<p>View Resolver look for appropriate view JSP/HTML based on view name.</p>
+<p><em><strong>Popular Implementations of ViewResolver:</strong></em><br>
+InternalResourceViewResolver</p>
+<h4 id="5-view">5. View</h4>
+<p>Dispatcher Servlet return the view JPS/HTML component to user</p>
+<p><br /></p>
+<h3 id="q21-differentiate-between-controller-and-restcontroller">Q21. Differentiate between @Controller and @RestController?</h3>
+<p>Even though both are used to indicate that a Spring bean is a Controller in Spring MVC setup, <code>@RestController</code> is better when you are developing RESTful web services using Spring MVC framework. It&rsquo;s a combination of <code>@Controller + @ResponseBody</code> annotation which allows the controller to directly write the response and bypassing the view resolution process, which is not required for RESTful web service.</p>
+<p>It also instructs DispatcherServlet to use different HttpMessageConverters to represent the response in the format client is expecting e.g. HttpMessageJackson2Convert to represent response in JSON format and JAXB based message converts to generate XML response.</p>
+<h3 id="q22-what-is-spring-security">Q22. What Is Spring Security?</h3>
+<p>Spring Security is a separate module of the Spring framework that focuses on providing authentication and authorization methods in Java applications. It also takes care of most of the common security vulnerabilities such as CSRF attacks.</p>
+<p>To use Spring Security in web applications, you can get started with a simple annotation: <code>@EnableWebSecurity</code>.<br>
+<br /></p>
+<h3 id="q23-what-is-aspect-oriented-programming">Q23. What Is Aspect-Oriented Programming?</h3>
+<p>Aspect-oriented programming or AOP is a programming technique which allows programmers to modularize crosscutting concerns or behavior that cuts across the typical divisions of responsibility. Examples of cross-cutting concerns can be logging and transaction management. The core of AOP is an aspect. It encapsulates behaviors that can affect multiple classes into reusable modules. <br>
+<br /></p>
+<h3 id="q21-what-are-aspect-advice-pointcut-and-joinpoint-in-aop">Q21. What Are Aspect, Advice, Pointcut, and Joinpoint in Aop?</h3>
 <ul>
-<li>AbstractController</li>
-<li>AbstractCommandController</li>
-<li>SimpleFormController</li>
+<li><strong>Aspect:</strong> a class that implements cross-cutting concerns, such as transaction management</li>
+<li><strong>Advice:</strong> the methods that get executed when a specific JoinPoint with matching Pointcut is reached in the application</li>
+<li><strong>Pointcut:</strong> a set of regular expressions that are matched with JoinPoint to determine whether Advice needs to be executed or not</li>
+<li><strong>JoinPoint:</strong> a point during the execution of a program, such as the execution of a method or the handling of an exception<br>
+<br /></li>
 </ul>
-</li>
-<li>
-<p>View Resolver look for appropriate view JSP/HTML based on view name and return to user.</p>
-<p><em><strong>Popular Implentations of ViewResolver:</strong></em></p>
+<h3 id="q24-what-are-the-different-types-of-advices">Q24. What are the different types of Advices?</h3>
+<p>Different types of Advices in Spring AOP are:</p>
 <ul>
-<li>InternalResourceViewResolver</li>
+<li><strong>Before:</strong> These types of advices execute before the joinpoint methods and are configured using <code>@Before</code> annotation mark.</li>
+<li><strong>After returning:</strong> These types of advices execute after the joinpoint methods completes executing normally and are configured using <code>@AfterReturning</code> annotation mark.</li>
+<li><strong>After throwing:</strong>  These types of advices execute only if joinpoint method exits by throwing an exception and are configured using <code>@AfterThrowing</code> annotation mark.</li>
+<li><strong>After (finally):</strong> These types of advices execute after a joinpoint method, regardless of the method’s exit whether normally or exceptional return and are configured using <code>@After</code> annotation mark.</li>
+<li><strong>Around:</strong> These types of advices execute before and after a joinpoint and are configured using <code>@Around</code> annotation mark.<br>
+<br /></li>
 </ul>
-</li>
-</ol>
+<h3 id="q25-what-is-cross-cutting-concerns-in-spring-aop">Q25. What is cross-cutting concerns in Spring AOP?</h3>
+<p>The concern is the behavior we want to have in a particular module of an application. It can be defined as a functionality we want to implement.</p>
+<p>The cross-cutting concern is a concern which is applicable throughout the application. This affects the entire application. For example, logging, security and data transfer are the concerns needed in almost every module of an application, thus they are the cross-cutting concerns.<br>
+<figure class="center">
+    <img src="/img/interview/cross-cutting-concern-in-aop.png"/> 
+</figure>
+
+<br /></p>
+<h3 id="q26-what-is-weaving">Q26. What Is Weaving?</h3>
+<p>According to the <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#aop">official docs</a>, weaving is a process that links aspects with other application types or objects to create an advised object. This can be done at compile time, load time, or at runtime. Spring AOP, like other pure Java AOP frameworks, performs weaving at runtime.</p>
+<p><br /></p>
+<h3 id="source">Source</h3>
+<ul>
+<li><a href="https://docs.spring.io/spring/docs/5.0.0.RC3/spring-framework-reference/overview.html">https://docs.spring.io/spring/docs/5.0.0.RC3/spring-framework-reference/overview.html</a></li>
+<li><a href="https://www.baeldung.com/spring-interview-questions">https://www.baeldung.com/spring-interview-questions</a></li>
+<li><a href="https://www.edureka.co/blog/interview-questions/spring-interview-questions/">https://www.edureka.co/blog/interview-questions/spring-interview-questions/</a></li>
+</ul>
 		</div>
 		<footer class="post__footer">
 			
