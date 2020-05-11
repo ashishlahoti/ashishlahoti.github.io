@@ -507,9 +507,8 @@ You can find the singleton pattern implementation here.&lt;/li&gt;
       <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/post/apache-kafka-ccdak-exam-notes/</guid>
-      <description>Hi Readers,
-If you are planning or preparing for Apache Kafka Certification then this is the right place for you.There are many Apache Kafka Certifications are available in the market but CCDAK (Confluent Certified Developer for Apache Kafka) is the most known certification as Kafka is now maintained by Confluent.
-Confluent has introduced CCOAK certification recently. CCOAK is mainly for devOps engineer focusing on build and manage Kafka cluster. CCDAK is mainly for developers and Solution architects focusing on design, producer and consumer.</description>
+      <description>&lt;p&gt;Hi Readers,&lt;/p&gt;
+&lt;p&gt;If you are planning or preparing for Apache Kafka Certification then this is the right place for you.There are many Apache Kafka Certifications are available in the market but &lt;a href=&#34;https://www.confluent.io/certification/&#34; target=&#34;_blank&#34;&gt;CCDAK (Confluent Certified Developer for Apache Kafka)&lt;/a&gt; is the most known certification as Kafka is now maintained by Confluent.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -600,8 +599,7 @@ Confluent has introduced CCOAK certification recently. CCOAK is mainly for devOp
       <guid>https://codingnconcepts.com/puzzle/12-balls-weight-puzzle/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;You have 12 balls identical in size and appearance but 1 is an odd weight (could be either light or heavy).&lt;/p&gt;
-&lt;p&gt;You have a set scales (balance) which will give 3 possible readings: Left = Right, Left &amp;gt; Right or Left &amp;lt; Right (ie Left and Right have equal weight, Left is Heavier, or Left is Lighter).&lt;/p&gt;
-&lt;p&gt;You have only 3 chances to weigh the balls in any combination using the scales. Determine which ball is the odd one and if it’s heavier or lighter than the rest. How do you do it?&lt;/p&gt;
+&lt;p&gt;You have a weighing scale with no measurements so you can just compare weight of balls against each other. You have only 3 chances to weigh the balls in any combination using the scales. Determine which ball is the odd one and if it’s heavier or lighter than the rest. How do you do it?&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
     
@@ -612,7 +610,7 @@ Confluent has introduced CCOAK certification recently. CCOAK is mainly for devOp
       
       <guid>https://codingnconcepts.com/puzzle/8-balls-weight-puzzle/</guid>
       <description>&lt;blockquote&gt;
-&lt;p&gt;You have 8 balls. One of them is defective and weighs less than others. You have a balance to measure balls against each other. In 2 weightings how do you find the defective one?&lt;/p&gt;
+&lt;p&gt;You have 8 balls identical in size and appearance. One of them is defective and weighs less than the others. You have a weighing scale with no measurements so you can just compare weight of balls against each other. How would you find the defective ball in 2 weightings?&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
     

@@ -19,8 +19,7 @@
       <guid>https://codingnconcepts.com/puzzle/12-balls-weight-puzzle/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;You have 12 balls identical in size and appearance but 1 is an odd weight (could be either light or heavy).&lt;/p&gt;
-&lt;p&gt;You have a set scales (balance) which will give 3 possible readings: Left = Right, Left &amp;gt; Right or Left &amp;lt; Right (ie Left and Right have equal weight, Left is Heavier, or Left is Lighter).&lt;/p&gt;
-&lt;p&gt;You have only 3 chances to weigh the balls in any combination using the scales. Determine which ball is the odd one and if it’s heavier or lighter than the rest. How do you do it?&lt;/p&gt;
+&lt;p&gt;You have a weighing scale with no measurements so you can just compare weight of balls against each other. You have only 3 chances to weigh the balls in any combination using the scales. Determine which ball is the odd one and if it’s heavier or lighter than the rest. How do you do it?&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
     
@@ -31,7 +30,7 @@
       
       <guid>https://codingnconcepts.com/puzzle/8-balls-weight-puzzle/</guid>
       <description>&lt;blockquote&gt;
-&lt;p&gt;You have 8 balls. One of them is defective and weighs less than others. You have a balance to measure balls against each other. In 2 weightings how do you find the defective one?&lt;/p&gt;
+&lt;p&gt;You have 8 balls identical in size and appearance. One of them is defective and weighs less than the others. You have a weighing scale with no measurements so you can just compare weight of balls against each other. How would you find the defective ball in 2 weightings?&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
     
