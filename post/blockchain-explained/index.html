@@ -91,7 +91,7 @@ if (!doNotTrack) {
     },
     "image": "https://codingnconcepts.com/favicon-32x32.png",
     "url" : "https:\/\/codingnconcepts.com\/post\/blockchain-explained\/",
-    "wordCount" : "1537",
+    "wordCount" : "1668",
     "genre" : [ "Blockchain" ],
     "keywords" : [ ]
 }
@@ -197,13 +197,13 @@ if (!doNotTrack) {
 
 <div class="meta__item-categories meta__item">
 	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/blockchain/" rel="category">Blockchain</a>
+	<span class="meta__text"><a class="meta__link" href="/categories/concepts/" rel="category">Concepts</a>
 	</span>
 </div></div>
 		</header><div class="content post__content clearfix">
 			<p>Most of us think Blockchain as the technology behind Bitcoin. While this was its original purpose, blockchain is capable of so much more&hellip;</p>
 <h2 id="what-is-blockchain">What is Blockchain?</h2>
-<p>You are familiar with the ledger, which is nothing but a book to record financial transactions. Similarly Blockchain is a digital ledger which can be programmed to record <em><strong>things</strong></em>, and the <em><strong>things</strong></em> are not limited to financial transactions, but could be anything from government records to land titles, or even purchase orders.</p>
+<p>You are familiar with the ledger, which is nothing but a book to record financial transactions. Similarly, Blockchain is a digital ledger which can be programmed to record <em><strong>things</strong></em>, and the <em><strong>things</strong></em> are not limited to financial transactions, but could be anything from government records to land titles, or even purchase orders.</p>
 <figure class="center">
     <img src="/img/post/ledger-template.png"
          alt="General Ledger"/> <figcaption>
@@ -211,28 +211,28 @@ if (!doNotTrack) {
         </figcaption>
 </figure>
 
-<p>You will say, we already have digital recording systems in place such as databases and data stores, What&rsquo;s so special about blockchain?</p>
+<p>You will say, we already have digital recording systems in places such as databases and data stores, What&rsquo;s so special about blockchain?</p>
 <p>Let&rsquo;s breakdown the reasons what sets blockchain apart from conventional digital recording systems,</p>
 <h4 id="each-record-is-a-block">Each Record is a Block</h4>
-<p>Each line of record in a ledger book can be assumed as a block in blockchain, which are linked together in chronological fashion to form a chain of blocks.</p>
-<p>You write a new record in the financial ledger book for any changes in previous transactions. Similarly, If you want to change record in a particular block, you don&rsquo;t rewrite it. Instead the change is recorded in a new block.</p>
-<h4 id="records-are-distributed">Records are Distributed</h4>
-<p>Let&rsquo;s assume that I am maintaining a shared ledger book with my friends where everyone record their mutual expenses. Let&rsquo;s say, I lend $100 to my friend Ben and recorded in shared ledger. Now my friends Charlie and David know exact amount of money i lend to Ben and they&rsquo;ve essentially endorse the transaction and they made a record of it. Now when next month, Ben ask me how much money had initially lent him, we could easily go to any one of my friends Charlie or David that have a record of that transaction.</p>
-<p>Similar to shared ledger, Blockchains are distributed as all of the nodes that are running in that Blockchain network have record of every transactions that has ever taken place. Since transaction data is shared among all the participants in the blockchain network, it eliminates the need of reconciliation.</p>
-<h4 id="records-are-immutable">Records are Immutable</h4>
+<p>Each line of record in a ledger book can be assumed as a block in blockchain, which are linked together chronologically to form a chain of blocks.</p>
+<p>You write a new record in the financial ledger book for any changes in previous transactions. Similarly, If you want to change record in a particular block, you don&rsquo;t rewrite it. Instead, the change is recorded in a new block.</p>
+<h4 id="blockchain-is-distributed">Blockchain is Distributed</h4>
+<p>Let&rsquo;s assume that I am maintaining a shared ledger book with my friends where everyone records their mutual expenses. Let&rsquo;s say, I lend $100 to my friend Ben and recorded in a shared ledger. Now my friends Charlie and David know the exact amount of money I lend to Ben and they&rsquo;ve essentially endorsed the transaction and they made a record of it. Now when next month, Ben asked me how much money had initially lent him, we could easily go to anyone of my friends Charlie or David that have a record of that transaction.</p>
+<p>Similar to a shared ledger, Blockchains are distributed as all of the nodes that are running in that Blockchain network has record of every transaction that has ever taken place. Since transaction data is shared among all the participants in the blockchain network, it eliminates the need for reconciliation.</p>
+<h4 id="blockchain-is-immutable">Blockchain is Immutable</h4>
 <p>Let&rsquo;s look into the pieces which make up a Blockchain to understand its immutability</p>
 <ol>
 <li>
-<p><strong>transaction:</strong> this is details of transaction that occurred when block was created</p>
+<p><strong>transaction:</strong> this is details of the transaction that occurred when the block was created</p>
 </li>
 <li>
-<p><strong>hash:</strong> this is a digital fingerprint which represents the transaction in the block and is completely unique. If there is any change in transaction details, the hash would also change. Generally it&rsquo;s an alphanumeric sequence generated by applying some crypto algorithm on transaction details</p>
+<p><strong>hash:</strong> this is a digital fingerprint that represents the transaction in the block and is completely unique. If there is any change in transaction details, the hash would also change. Generally, it&rsquo;s an alphanumeric sequence generated by applying some crypto algorithm on transaction details</p>
 </li>
 <li>
-<p><strong>previousHash:</strong> this is the hash of previous block in the chain.</p>
+<p><strong>previousHash:</strong> this is the hash of the previous block in the chain.</p>
 </li>
 </ol>
-<p>Let&rsquo;s look at the below example of block chain. Where transaction is having sender, receiver and amount details. For simplicity we are generating hash by just combining transaction details, i.e. sender+receiver+amount</p>
+<p>Let&rsquo;s look at the below example of blockchain. Where transaction is having sender, receiver, and amount details. For simplicity, we are generating hash by just combining transaction details, i.e. sender+receiver+amount</p>
 <p>Please note that <mark>Block 1</mark> is the first block in our Blockchain, also known as <strong>Genesis Block</strong>, is not having previousHash value.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text"><span style="display:block;width:100%;background-color:#3c3d38"><mark>Block 1</mark>
 </span>transaction     { sender: Ash, receiver: Ben: amount: 100 }
@@ -246,7 +246,7 @@ previousHash    ashben100
 </span>transaction     { sender: Ash, receiver: David: amount: 300 }  
 hash            ashdavid300  
 previousHash    bencharlie200
-</code></pre></div><p>So you can imagine if you want to tamper or change with any of the transactions that have occurred, say we tamper with transaction amount in <mark>Block 2</mark></p>
+</code></pre></div><p>So you can imagine if you want to tamper or change with any of the transactions that have occurred, say we tamper with the transaction amount in <mark>Block 2</mark></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text"><span style="display:block;width:100%;background-color:#3c3d38"><mark>Block 2 (Tampered Amount)</mark>
 </span>transaction     { sender: Ben, receiver: Charlie: amount: <mark>999</mark> }  
 hash            <mark>bencharlie999</mark>
@@ -255,11 +255,15 @@ previousHash    ashben100
 </span>transaction     { sender: Ash, receiver: David: amount: 300 }  
 hash            ashdavid300  
 previousHash    <mark>bencharlie200</mark>
-</code></pre></div><p>We see that hash of <mark>Block 2</mark> also changed after tampering the amount and because of that previousHash of the next block <mark>Block 3</mark> in the chain would now be incorrect. So to fix that you would have to tamper with every single block in the chain and that would immediately become apparent. So, in this sense Blockchains are immutable and tamper resistent.</p>
+</code></pre></div><p>We see that hash of <mark>Block 2</mark> also changed after tampering the amount and because of that previousHash of the next block <mark>Block 3</mark> in the chain would now be incorrect. So to fix that you would have to tamper with every single block in the chain and that would immediately become apparent. So, in this sense Blockchains are immutable and tamper-resistant.</p>
+<h4 id="blockchain-is-trusted">Blockchain is trusted</h4>
+<p>When you transfer money to someone, you do it through a mediator, this is generally a bank. Now all the transaction records are centralized within the bank. There are more chances for hackers to tamper with records.</p>
+<p>Moreover, when you transfer money to someone through a process, which is backed by blockchain technology, there is <strong>no mediator</strong> involved, essentially all of the nodes within the blockchain network are mediators. Each node has its own copy of all transaction records. If there are millions of nodes and hackers want to tamper with record, they need to do it in all those million nodes which is almost impossible, take ages to do so.</p>
+<p>In this way, Blockchain technology is very trusted.</p>
 <h2 id="blockchain-types">Blockchain Types</h2>
 <h3 id="1-public-blockchain">1. Public Blockchain</h3>
 <p><strong>Public blockchains</strong> are open to everyone to view and access, also known as <strong>Permissionless blockchain</strong> as you do not require authorization.</p>
-<p><strong>Crypto currencies</strong> - Bitcoin, Dash, Ethereum, Litecoin, Monero, NEM, NEO, Ripple, Stratic, Zcash comes under public blockchain.</p>
+<p><strong>Crypto currencies</strong> - Bitcoin, Dash, Ethereum, Litecoin, Ripple comes under the public blockchain.</p>
 <figure class="center">
     <img src="/img/post/cryptocurrency.png"
          alt="Crypto Currencies"/> <figcaption>
@@ -268,17 +272,13 @@ previousHash    <mark>bencharlie200</mark>
 </figure>
 
 <h4 id="bitcoin">Bitcoin</h4>
-<p>Bitcoin blockchain is a public blockchain which means anyone can register themselves to be one of the <strong>Bitcoin Miner</strong>. Bitcoin miner can see all the transactions that have ever taken place. Not the exact transaction revealed, it&rsquo;s having the addresses of sender and receiver, but regardless it acts as one of the node in the network essentially having a copy of the all transactions and anytime a new transactions are made they would be notified with new block.</p>
+<p>Why people use bitcoin?</p>
+<p>The bitcoin blockchain is a public blockchain which means anyone can register themselves to be one of the <strong>Bitcoin Miner</strong>. Bitcoin miners can see all the transactions that have ever taken place. Not the exact transaction revealed, it&rsquo;s having the addresses of sender and receiver, but regardless it acts as one of the nodes in the network essentially having a copy of all transactions, and anytime new transactions are made they would be notified with the new block.</p>
 <p>So, you have to imagine it&rsquo;s quite a problem for all of these nodes to have a copy of that blockchain. When new transactions come in, how do they reach a consensus on which node will make up the next block?</p>
 <p>That&rsquo;s done so using a <strong>consensus algorithm</strong>. Let&rsquo;s breakdown how this works for a permissionless public Blockchain.</p>
 <ul>
-<li>A Bitcoin user initiates a transaction. Say, <em>User A</em> transfers 25 bitcoins to <em>User B</em></li>
-<li>This transaction record contains Sender&rsquo;s and Receiver&rsquo;s unique very long alphanumeric addresses and bitcoin amount. It joins with other transactions that have been made on the bitcoin network</li>
-<li>All the Bitcoin miners in the network start picking up those transactions and validate by looking through all of the transactions that happen in the Blockchain so far that those are also valid.</li>
-<li>Each Bitcoin miner try to solve the cryptographic hash puzzle, also known as <strong>proof of work</strong> algorithm. Now this is the consensus algorithm that public and permissionless blockchains use and essentially this is how they&rsquo;re able to reach a consensus on which block should be next.</li>
-<li>This cryptographic hash puzzle is actually quite consuming in processing and electricity. As more and more nodes joins the network, it becomes more complex.</li>
-<li>As soon as one of the node solves the puzzle they have essentially generated the hash of the next block and what they&rsquo;ll do is broadcast that hash of the next block to all of the other nodes in the network as well as adding it into their own Blockchain.</li>
-<li>Bitcoin miner is also rewarded with bitcoins for solving the puzzle.
+<li>A Bitcoin user initiates a transaction. Say, <em>Alice</em> transfers 25 bitcoins to <em>Bob</em></li>
+<li>This transaction record contains Sender&rsquo;s and Receiver&rsquo;s unique very long alphanumeric addresses and bitcoin amount. It joins with other transactions that have been made on the bitcoin network
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text"><span style="display:block;width:100%;background-color:#3c3d38"><mark>Bitcoin Block</mark>
 </span>transaction: { 
                 type: BITCOIN
@@ -286,17 +286,22 @@ previousHash    <mark>bencharlie200</mark>
                 receiver: m1n2h3b4b5v6c7xz89sld8ff9d47d9dft47mkd,
                 amount: 25
             }
-hash:           b4h84nv46sn29n4b5h6j7k8l2l3nx6b3n8l38xn40z54n2bv68c
-previousHash:   -
+hash:           ???????
+previousHash:   b4h84nv46sn29n4b5h6j7k8l2l3nx6b3n8l38xn40z54n2bv68c
 </code></pre></div></li>
+<li>All the Bitcoin miners in the network start picking up those transactions and validate by looking through all of the transactions that happen in the Blockchain so far that those are also valid.</li>
+<li>Each Bitcoin miner try to solve the cryptographic hash puzzle, also known as <strong>proof of work</strong> algorithm. Now, this is the consensus algorithm that public and permissionless blockchains use and essentially this is how they&rsquo;re able to reach a consensus on which block should be next.</li>
+<li>This cryptographic hash puzzle is quite consuming in processing and electricity. As more and more nodes join the network, it becomes more complex.</li>
+<li>As soon as one of the bitcoin miner solves the puzzle, essentially means generated the hash of the next block, what they&rsquo;ll do is broadcast that hash of the next block to all of the other nodes in the network. All the nodes verify the authenticity of the hash and once all approve, it is added as a new block in all the nodes in the network.</li>
+<li>Bitcoin miner is also rewarded with bitcoins for solving the puzzle.</li>
 </ul>
 <p><br /></p>
-<h3 id="2-private--blockchain">2. Private  Blockchain</h3>
-<p>Private blockchains are accessible to a select group of authorized users - such as your company, a group of banks or government agencies. This is also known as <strong>Permissioned</strong> blockchain.</p>
-<p>Private blockchain also uses consensus algorithm but they are not as complex as public blockchain due to limited number of nodes.</p>
-<p>Nodes in the permissioned blockchain are trusted, so they generally know each other. In Addition, they don&rsquo;t always just represent users but entire organizations. So, in this case it&rsquo;s actually very important that our privacy is one of the main tenants of a permissioned Blockchain.</p>
+<h3 id="2-private-blockchain">2. Private Blockchain</h3>
+<p>Private blockchains are accessible to a select group of authorized users - such as your company, a group of banks, or government agencies. This is also known as <strong>Permissioned</strong> blockchain.</p>
+<p>Private blockchain also uses a consensus algorithm but they are not as complex as public blockchain due to the limited number of nodes.</p>
+<p>Nodes in the permissioned blockchain are trusted, so they generally know each other. Besides, they don&rsquo;t always just represent users but entire organizations. So, in this case, it&rsquo;s very important that our privacy is one of the main tenants of a permissioned Blockchain.</p>
 <h4 id="supply-chain">Supply Chain</h4>
-<p>Let&rsquo;s take an example, let&rsquo;s say that there&rsquo;s a retailer that purchases a 25 items in $1000. Now the manufacturer receives the order from the retailer and says, &ldquo;OK, let&rsquo;s approve&rdquo;. Let&rsquo;s make sure we have enough in the warehouse and let&rsquo;s work with the shipping company. So, they go to the shipping company and they say, &ldquo;OK, let&rsquo;s ship this 100 items&rdquo; and it&rsquo;s going to cost them $100 to actually make the shipment.</p>
+<p>Let&rsquo;s take an example, let&rsquo;s say that there&rsquo;s a retailer that purchases 25 items in $1000. Now the manufacturer receives the order from the retailer and says, &ldquo;OK, let&rsquo;s approve&rdquo;. Let&rsquo;s make sure we have enough in the warehouse and let&rsquo;s work with the shipping company. So, they go to the shipping company and they say, &ldquo;OK, let&rsquo;s ship this 100 items&rdquo; and it&rsquo;s going to cost them $100 to make the shipment.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text"><span style="display:block;width:100%;background-color:#3c3d38"><mark>Block 1</mark>
 </span>transaction: { 
                 type: BUY
@@ -322,12 +327,12 @@ previousHash:   buystartcompanyltd25100050
 <ul>
 <li>Manufactured should know all the information about retailer and shipment</li>
 <li>Retailer should not necessarily know about the shipping cost</li>
-<li>Shipment should not necessarily know about how much retailer spent</li>
+<li>Shipment should not necessarily know about how many retailers spent</li>
 <li>Other retailers in the blockchain should not know about this retailer and shipment</li>
 </ul>
-<p>So in this case, All of the organizations are part of the Blockchain, only the retailer which is part of the transaction that took place should be able to see that information. So, it is actually pretty important that privacy is part of the Blockchain for business being able to control who can see particular transaction details.</p>
-<p>One of the most successful business application of Blockchain technology is something called <strong>Smart Contracts</strong>. Essentially this is code that&rsquo;s running on the Blockchain and whenever certain conditions are met, they are automatically executed.</p>
-<p>So, in the above example, whenever retailer made that purchase order to the manufacturer for this amount of goods there&rsquo;s probably a manufacturing agent that double checks that order has all the necessary information in it, they then probably go to the shipping agency to make sure they can cover the shipment and if the warehouse has the correct amount of goods. They&rsquo;ll then make a shipment order. Now imagine if we could automate that whole process.</p>
+<p>So in this case, All of the organizations are part of the Blockchain, only the retailer which is part of the transaction that took place should be able to see that information. So, privacy must be part of the Blockchain for the business being able to control who can see particular transaction details.</p>
+<p>One of the most successful business applications of Blockchain technology is something called <strong>Smart Contracts</strong>. Essentially this is code that&rsquo;s running on the Blockchain and whenever certain conditions are met, they are automatically executed.</p>
+<p>So, in the above example, whenever retailer made that purchase order to the manufacturer for this amount of goods there&rsquo;s probably a manufacturing agent that double-checks that order has all the necessary information in it, they then probably go to the shipping agency to make sure they can cover the shipment and if the warehouse has the correct amount of goods. They&rsquo;ll then make a shipment order. Now imagine if we could automate that whole process.</p>
 <p>That&rsquo;s what you can do with <strong>Smart Contracts</strong>, essentially code that will make sure that all the necessary information is met, and it&rsquo;ll automatically create the shipment record. If any of those conditions is not met it could automatically release a refund to the retailer. This speeds up the whole process.</p>
 		</div>
 		<footer class="post__footer">
