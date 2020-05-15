@@ -204,77 +204,77 @@ if (!doNotTrack) {
 		</header><div class="content post__content clearfix">
 			<p>Decorator design pattern is used to add a new feature on the existing object by wrapping it with a decorator class.</p>
 <p>In this example, we will first create an interface <code>Window</code> interface and its implementation <code>BasicWindow</code></p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-weight:bold">interface</span> <span style="color:#b06;font-weight:bold">Window</span> <span style="color:#333">{</span>
-    <span style="color:#080;font-weight:bold">public</span> String <span style="color:#06b;font-weight:bold">draw</span><span style="color:#333">();</span>
-<span style="color:#333">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Window</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">draw</span><span style="color:#f92672">();</span>
+<span style="color:#f92672">}</span>
 
-<span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">BasicWindow</span> <span style="color:#080;font-weight:bold">implements</span> Window <span style="color:#333">{</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BasicWindow</span> <span style="color:#66d9ef">implements</span> Window <span style="color:#f92672">{</span>
 
-    <span style="color:#555;font-weight:bold">@Override</span>
-    <span style="color:#080;font-weight:bold">public</span> String <span style="color:#06b;font-weight:bold">draw</span><span style="color:#333">()</span> <span style="color:#333">{</span>
-        <span style="color:#080;font-weight:bold">return</span> <span style="background-color:#fff0f0">&#34;Basic Window&#34;</span><span style="color:#333">;</span>
-    <span style="color:#333">}</span>
-<span style="color:#333">}</span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">draw</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Basic Window&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 
 </code></pre></div><p>Next, we want to decorate this <code>Window</code> with some border and scroll bar. We need a wrapper class for this which can wrap <code>Window</code> to add new features. For this, we create a class <code>WindowDecorator</code> which takes <code>Window</code> as constructor argument and also override <code>draw()</code> method to add new feature.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">WindowDecorator</span> <span style="color:#080;font-weight:bold">implements</span> Window <span style="color:#333">{</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WindowDecorator</span> <span style="color:#66d9ef">implements</span> Window <span style="color:#f92672">{</span>
 
-    <span style="color:#080;font-weight:bold">protected</span> Window window<span style="color:#333">;</span>
+    <span style="color:#66d9ef">protected</span> Window window<span style="color:#f92672">;</span>
 
-    <span style="color:#080;font-weight:bold">public</span> <span style="color:#06b;font-weight:bold">WindowDecorator</span><span style="color:#333">(</span>Window window<span style="color:#333">)</span> <span style="color:#333">{</span>
-        <span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">window</span> <span style="color:#333">=</span> window<span style="color:#333">;</span>
-    <span style="color:#333">}</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">WindowDecorator</span><span style="color:#f92672">(</span>Window window<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">window</span> <span style="color:#f92672">=</span> window<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-    <span style="color:#555;font-weight:bold">@Override</span>
-    <span style="color:#080;font-weight:bold">public</span> String <span style="color:#06b;font-weight:bold">draw</span><span style="color:#333">()</span> <span style="color:#333">{</span>
-        <span style="color:#080;font-weight:bold">return</span> window<span style="color:#333">.</span><span style="color:#00c">draw</span><span style="color:#333">();</span>
-    <span style="color:#333">}</span>
-<span style="color:#333">}</span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">draw</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> window<span style="color:#f92672">.</span><span style="color:#a6e22e">draw</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 </code></pre></div><p>We&rsquo;ll now implement our wrapper class <code>WindowDecorator</code> and create two decorator classes <code>BorderDecorator</code> and <code>ScrollDecorator</code>. These decorators override <code>draw()</code> method to add new features like border and scroll bar.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">BorderDecorator</span> <span style="color:#080;font-weight:bold">extends</span> WindowDecorator <span style="color:#333">{</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BorderDecorator</span> <span style="color:#66d9ef">extends</span> WindowDecorator <span style="color:#f92672">{</span>
 
-	<span style="color:#080;font-weight:bold">public</span> <span style="color:#06b;font-weight:bold">BorderDecorator</span><span style="color:#333">(</span>Window window<span style="color:#333">)</span> <span style="color:#333">{</span>
-		<span style="color:#080;font-weight:bold">super</span><span style="color:#333">(</span>window<span style="color:#333">);</span>
-	<span style="color:#333">}</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">BorderDecorator</span><span style="color:#f92672">(</span>Window window<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>window<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
 
-	<span style="color:#555;font-weight:bold">@Override</span>
-	<span style="color:#080;font-weight:bold">public</span> String <span style="color:#06b;font-weight:bold">draw</span><span style="color:#333">()</span> <span style="color:#333">{</span>
-		<span style="color:#080;font-weight:bold">return</span> window<span style="color:#333">.</span><span style="color:#00c">draw</span><span style="color:#333">()</span> <span style="color:#333">+</span> addBorder<span style="color:#333">();</span>
-	<span style="color:#333">}</span>
+	<span style="color:#a6e22e">@Override</span>
+	<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">draw</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">return</span> window<span style="color:#f92672">.</span><span style="color:#a6e22e">draw</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> addBorder<span style="color:#f92672">();</span>
+	<span style="color:#f92672">}</span>
 
-	<span style="color:#080;font-weight:bold">public</span> String <span style="color:#06b;font-weight:bold">addBorder</span><span style="color:#333">()</span> <span style="color:#333">{</span>
-		<span style="color:#080;font-weight:bold">return</span> <span style="background-color:#fff0f0">&#34; with Border&#34;</span><span style="color:#333">;</span>
-	<span style="color:#333">}</span>
-<span style="color:#333">}</span>
+	<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">addBorder</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34; with Border&#34;</span><span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 
-<span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">ScrollDecorator</span> <span style="color:#080;font-weight:bold">extends</span> WindowDecorator <span style="color:#333">{</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ScrollDecorator</span> <span style="color:#66d9ef">extends</span> WindowDecorator <span style="color:#f92672">{</span>
 
-	<span style="color:#080;font-weight:bold">public</span> <span style="color:#06b;font-weight:bold">ScrollDecorator</span><span style="color:#333">(</span>Window window<span style="color:#333">)</span> <span style="color:#333">{</span>
-		<span style="color:#080;font-weight:bold">super</span><span style="color:#333">(</span>window<span style="color:#333">);</span>
-	<span style="color:#333">}</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">ScrollDecorator</span><span style="color:#f92672">(</span>Window window<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>window<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
 
-	<span style="color:#555;font-weight:bold">@Override</span>
-	<span style="color:#080;font-weight:bold">public</span> String <span style="color:#06b;font-weight:bold">draw</span><span style="color:#333">()</span> <span style="color:#333">{</span>
-		<span style="color:#080;font-weight:bold">return</span> window<span style="color:#333">.</span><span style="color:#00c">draw</span><span style="color:#333">()</span> <span style="color:#333">+</span> addScroll<span style="color:#333">();</span>
-	<span style="color:#333">}</span>
+	<span style="color:#a6e22e">@Override</span>
+	<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">draw</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">return</span> window<span style="color:#f92672">.</span><span style="color:#a6e22e">draw</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> addScroll<span style="color:#f92672">();</span>
+	<span style="color:#f92672">}</span>
 
-	<span style="color:#080;font-weight:bold">public</span> String <span style="color:#06b;font-weight:bold">addScroll</span><span style="color:#333">()</span> <span style="color:#333">{</span>
-		<span style="color:#080;font-weight:bold">return</span> <span style="background-color:#fff0f0">&#34; and Scroll Bar&#34;</span><span style="color:#333">;</span>
-	<span style="color:#333">}</span>
-<span style="color:#333">}</span>
+	<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">addScroll</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34; and Scroll Bar&#34;</span><span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 </code></pre></div><p>Let&rsquo;s test our decorator classes</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#555;font-weight:bold">@Test</span>
-<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">testDecorators</span><span style="color:#333">()</span> <span style="color:#333">{</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Test</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testDecorators</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
   
-  Window basicWindow <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> BasicWindow<span style="color:#333">();</span>
-  assertEquals<span style="color:#333">(</span>basicWindow<span style="color:#333">.</span><span style="color:#00c">draw</span><span style="color:#333">(),</span> <span style="background-color:#fff0f0">&#34;Basic Window&#34;</span><span style="color:#333">);</span>
+  Window basicWindow <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BasicWindow<span style="color:#f92672">();</span>
+  assertEquals<span style="color:#f92672">(</span>basicWindow<span style="color:#f92672">.</span><span style="color:#a6e22e">draw</span><span style="color:#f92672">(),</span> <span style="color:#e6db74">&#34;Basic Window&#34;</span><span style="color:#f92672">);</span>
   
-  Window borderWindow <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> BorderDecorator<span style="color:#333">(</span>basicWindow<span style="color:#333">);</span>
-  assertEquals<span style="color:#333">(</span>borderWindow<span style="color:#333">.</span><span style="color:#00c">draw</span><span style="color:#333">(),</span> <span style="background-color:#fff0f0">&#34;Basic Window with Border&#34;</span><span style="color:#333">);</span>
+  Window borderWindow <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BorderDecorator<span style="color:#f92672">(</span>basicWindow<span style="color:#f92672">);</span>
+  assertEquals<span style="color:#f92672">(</span>borderWindow<span style="color:#f92672">.</span><span style="color:#a6e22e">draw</span><span style="color:#f92672">(),</span> <span style="color:#e6db74">&#34;Basic Window with Border&#34;</span><span style="color:#f92672">);</span>
 
-  Window borderWindowScrollable <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> ScrollDecorator<span style="color:#333">(</span>borderWindow<span style="color:#333">);</span>
-  assertEquals<span style="color:#333">(</span>borderWindowScrollable<span style="color:#333">.</span><span style="color:#00c">draw</span><span style="color:#333">(),</span> <span style="background-color:#fff0f0">&#34;Basic Window with Border and Scroll Bar&#34;</span><span style="color:#333">);</span>
-<span style="color:#333">}</span>
+  Window borderWindowScrollable <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ScrollDecorator<span style="color:#f92672">(</span>borderWindow<span style="color:#f92672">);</span>
+  assertEquals<span style="color:#f92672">(</span>borderWindowScrollable<span style="color:#f92672">.</span><span style="color:#a6e22e">draw</span><span style="color:#f92672">(),</span> <span style="color:#e6db74">&#34;Basic Window with Border and Scroll Bar&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
 </code></pre></div><p>Few points from test:</p>
 <ol>
 <li>We have created a <code>basicWindow</code> object and decorated it using <code>BorderDecorator</code></li>

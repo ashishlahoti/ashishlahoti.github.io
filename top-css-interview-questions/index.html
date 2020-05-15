@@ -245,40 +245,40 @@ What makes it <em><strong>Cascading</strong></em> is that styles defined lower d
 <h3 id="2-what-are-different-ways-to-apply-css-styles">2. What are different ways to apply CSS styles?</h3>
 <p>You will, of course, need to know how to add CSS to a page, and there are three main ways:</p>
 <h5 id="using-the-inline-style-attribute-on-an-element">Using the inline <code>style</code> attribute on an element</h5>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#070">div</span> <span style="color:#00c">style</span><span style="color:#333">=</span><span style="background-color:#fff0f0">&#34;width:100%; padding:10px; font-size:1.2em; text-align:center;&#34;</span>&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width:100%; padding:10px; font-size:1.2em; text-align:center;&#34;</span>&gt;
     CSS Tutorial
-&lt;/<span style="color:#070">div</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
 </code></pre></div><h5 id="using-a-style-block-in-the-head-section-of-your-html">Using a <code>&lt;style&gt;</code> block in the <head> section of your HTML</h5>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#070">head</span>&gt;
-    &lt;<span style="color:#070">style</span>&gt;
-        <span style="color:#070">div</span> {
-          <span style="color:#080;font-weight:bold">width</span>: <span style="color:#00d;font-weight:bold">100</span><span style="color:#339;font-weight:bold">%</span>;
-          <span style="color:#080;font-weight:bold">padding</span>: <span style="color:#00d;font-weight:bold">10</span><span style="color:#339;font-weight:bold">px</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">style</span>&gt;
+        <span style="color:#f92672">div</span> {
+          <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
+          <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
         }
-        .<span style="color:#b06;font-weight:bold">heading</span> {
-          <span style="color:#080;font-weight:bold">font-size</span>: <span style="color:#60e;font-weight:bold">1.2</span><span style="color:#339;font-weight:bold">em</span>;
-          <span style="color:#080;font-weight:bold">text-align</span>: <span style="color:#080;font-weight:bold">center</span>;
+        .<span style="color:#a6e22e">heading</span> {
+          <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">1.2</span><span style="color:#66d9ef">em</span>;
+          <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">center</span>;
         }
-    &lt;/<span style="color:#070">style</span>&gt;
-&lt;/<span style="color:#070">head</span>&gt;
-&lt;<span style="color:#070">body</span>&gt;
-    &lt;<span style="color:#070">div</span> <span style="color:#00c">class</span><span style="color:#333">=</span><span style="background-color:#fff0f0">&#34;heading&#34;</span>&gt;CSS Tutorial&lt;/<span style="color:#070">div</span>&gt;
-&lt;/<span style="color:#070">body</span>&gt;
+    &lt;/<span style="color:#f92672">style</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;heading&#34;</span>&gt;CSS Tutorial&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
 </code></pre></div><h5 id="loading-an-external-css-file-using-the-link-tag">Loading an external CSS file using the <link> tag</h5>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#070">head</span>&gt;
-    &lt;<span style="color:#070">link</span> <span style="color:#00c">rel</span><span style="color:#333">=</span><span style="background-color:#fff0f0">&#34;stylesheet&#34;</span> <span style="color:#00c">href</span><span style="color:#333">=</span><span style="background-color:#fff0f0">&#34;/css/styles.css&#34;</span> /&gt;
-&lt;/<span style="color:#070">head</span>&gt;
-&lt;<span style="color:#070">body</span>&gt;
-    &lt;<span style="color:#070">div</span> <span style="color:#00c">class</span><span style="color:#333">=</span><span style="background-color:#fff0f0">&#34;heading&#34;</span>&gt;CSS Tutorial&lt;/<span style="color:#070">div</span>&gt;
-&lt;/<span style="color:#070">body</span>&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/css/styles.css&#34;</span> /&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;heading&#34;</span>&gt;CSS Tutorial&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
 </code></pre></div><p><em><strong>/css/styles.css</strong></em></p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#070">div</span> {
-    <span style="color:#080;font-weight:bold">width</span>: <span style="color:#00d;font-weight:bold">100</span><span style="color:#339;font-weight:bold">%</span>;
-    <span style="color:#080;font-weight:bold">padding</span>: <span style="color:#00d;font-weight:bold">10</span><span style="color:#339;font-weight:bold">px</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">div</span> {
+    <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
+    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
 }
-.<span style="color:#b06;font-weight:bold">heading</span> {
-    <span style="color:#080;font-weight:bold">font-size</span>: <span style="color:#60e;font-weight:bold">1.2</span><span style="color:#339;font-weight:bold">em</span>;
-    <span style="color:#080;font-weight:bold">text-align</span>: <span style="color:#080;font-weight:bold">center</span>;
+.<span style="color:#a6e22e">heading</span> {
+    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">1.2</span><span style="color:#66d9ef">em</span>;
+    <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">center</span>;
 }
 </code></pre></div><p>The first two are useful but you’ll almost always be loading external CSS files. It’s more maintainable to keep your styles in separate files, not to mention it’s a nice separation of concerns.<br>
 <br /></p>
@@ -291,37 +291,37 @@ What makes it <em><strong>Cascading</strong></em> is that styles defined lower d
 <li><strong>Universal Selector</strong> used as a wildcard character <code>*</code> applied to all the elements on the page.</li>
 <li><strong>Group Selector</strong> multiple selectors using comma separated Elements, Classes, Ids.</li>
 </ul>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#070">head</span>&gt;
-    &lt;<span style="color:#070">style</span>&gt;
-        <span style="color:#888">/* Element Selector */</span>
-        <span style="color:#070">div</span> {
-          <span style="color:#080;font-weight:bold">width</span>: <span style="color:#00d;font-weight:bold">100</span><span style="color:#339;font-weight:bold">%</span>;
-          <span style="color:#080;font-weight:bold">padding</span>: <span style="color:#00d;font-weight:bold">10</span><span style="color:#339;font-weight:bold">px</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">style</span>&gt;
+        <span style="color:#75715e">/* Element Selector */</span>
+        <span style="color:#f92672">div</span> {
+          <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
+          <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
         }
-        <span style="color:#888">/* Class Selector */</span>
-        .<span style="color:#b06;font-weight:bold">heading</span> {
-          <span style="color:#080;font-weight:bold">font-size</span>: <span style="color:#60e;font-weight:bold">1.2</span><span style="color:#339;font-weight:bold">em</span>;
-          <span style="color:#080;font-weight:bold">text-align</span>: <span style="color:#080;font-weight:bold">center</span>;
+        <span style="color:#75715e">/* Class Selector */</span>
+        .<span style="color:#a6e22e">heading</span> {
+          <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">1.2</span><span style="color:#66d9ef">em</span>;
+          <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">center</span>;
         }
-        <span style="color:#888">/* Id Selector */</span>
-        #<span style="color:#0e84b5;font-weight:bold">title</span> {
-          <span style="color:#080;font-weight:bold">color</span>: <span style="color:#080;font-weight:bold">red</span>; 
+        <span style="color:#75715e">/* Id Selector */</span>
+        #title {
+          <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">red</span>; 
         }
-        <span style="color:#888">/* Universal Selector */</span>
-        <span style="color:#333">*</span> {
-          <span style="color:#080;font-weight:bold">color</span>: <span style="color:#080;font-weight:bold">black</span>;
-          <span style="color:#080;font-weight:bold">font-family</span>: Arial, <span style="color:#080;font-weight:bold">sans-serif</span>;
+        <span style="color:#75715e">/* Universal Selector */</span>
+        <span style="color:#f92672">*</span> {
+          <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">black</span>;
+          <span style="color:#66d9ef">font-family</span>: Arial, <span style="color:#66d9ef">sans-serif</span>;
         }
-        <span style="color:#888">/* Group Selector */</span>
-        <span style="color:#070">h1</span><span style="color:#333">,</span> <span style="color:#070">h2</span><span style="color:#333">,</span> .<span style="color:#b06;font-weight:bold">heading</span><span style="color:#333">,</span> #<span style="color:#0e84b5;font-weight:bold">title</span> {
-          <span style="color:#080;font-weight:bold">text-align</span>: <span style="color:#080;font-weight:bold">center</span>;
-          <span style="color:#080;font-weight:bold">color</span>: <span style="color:#080;font-weight:bold">blue</span>;
+        <span style="color:#75715e">/* Group Selector */</span>
+        <span style="color:#f92672">h1</span><span style="color:#f92672">,</span> <span style="color:#f92672">h2</span><span style="color:#f92672">,</span> .<span style="color:#a6e22e">heading</span><span style="color:#f92672">,</span> #title {
+          <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">center</span>;
+          <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">blue</span>;
         }
-    &lt;/<span style="color:#070">style</span>&gt;
-&lt;/<span style="color:#070">head</span>&gt;
-&lt;<span style="color:#070">body</span>&gt;
-    &lt;<span style="color:#070">div</span> <span style="color:#00c">id</span><span style="color:#333">=</span><span style="background-color:#fff0f0">&#34;title&#34;</span> <span style="color:#00c">class</span><span style="color:#333">=</span><span style="background-color:#fff0f0">&#34;heading&#34;</span>&gt;CSS Tutorial&lt;/<span style="color:#070">div</span>&gt;
-&lt;/<span style="color:#070">body</span>&gt;
+    &lt;/<span style="color:#f92672">style</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;heading&#34;</span>&gt;CSS Tutorial&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
 </code></pre></div><p><br /></p>
 <h3 id="4-what-are-different-ways-to-specify-element-position-using-css-selector">4. What are different ways to specify element position using CSS selector?</h3>
 <ul>
@@ -335,21 +335,21 @@ What makes it <em><strong>Cascading</strong></em> is that styles defined lower d
 <h3 id="5-what-are-pseudo-elements-and-what-are-they-used-for">5. What are <code>pseudo elements</code> and what are they used for?</h3>
 <p>Pseudo elements are used to style particular parts of an element, rather than the whole thing. For example, you can use it to style the first line or first letter of a paragraph, text you’ve selected, or you can use it to insert text or shapes before or after an element.</p>
 <p>They always start with a double colon - although a single colon is still allowed for backwards compatibility - and they look like this:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#070">p</span>::<span style="color:#555;font-weight:bold">first-line</span> { <span style="color:#f00;background-color:#faa">...</span> }
-<span style="color:#070">span</span>::<span style="color:#555;font-weight:bold">first-letter</span> { <span style="color:#f00;background-color:#faa">...</span> }
-::<span style="color:#555;font-weight:bold">selection</span> { <span style="color:#f00;background-color:#faa">...</span> }
-.<span style="color:#b06;font-weight:bold">header</span>::<span style="color:#555;font-weight:bold">after</span> { <span style="color:#f00;background-color:#faa">...</span> }
-.<span style="color:#b06;font-weight:bold">tooltip</span>::<span style="color:#555;font-weight:bold">before</span> { <span style="color:#f00;background-color:#faa">...</span> }
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">p</span>::<span style="color:#a6e22e">first-line</span> { <span style="color:#960050;background-color:#1e0010">...</span> }
+<span style="color:#f92672">span</span>::<span style="color:#a6e22e">first-letter</span> { <span style="color:#960050;background-color:#1e0010">...</span> }
+::<span style="color:#a6e22e">selection</span> { <span style="color:#960050;background-color:#1e0010">...</span> }
+.<span style="color:#a6e22e">header</span>::<span style="color:#a6e22e">after</span> { <span style="color:#960050;background-color:#1e0010">...</span> }
+.<span style="color:#a6e22e">tooltip</span>::<span style="color:#a6e22e">before</span> { <span style="color:#960050;background-color:#1e0010">...</span> }
 </code></pre></div><p><br /></p>
 <h3 id="6-what-are-pseudo-classes-and-what-are-they-used-for">6. What are <code>pseudo classes</code> and what are they used for?</h3>
 <p>Pseudo classes are similar to pseudo elements, but instead of styling a part of an element, they apply styles when an element is in a certain state. For example, you could style a button differently based on whether the user has their mouse pointer over it, or when they click the button.</p>
 <p>Another common use case is to style only certain occurrences of elements in a row. For example, styling the first tab in a series of tabs, or every second tab.</p>
 <p>They all start with a single colon and look like this:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#070">link</span>:<span style="color:#555;font-weight:bold">hover</span> { <span style="color:#f00;background-color:#faa">...</span> }
-.<span style="color:#b06;font-weight:bold">link</span>:<span style="color:#555;font-weight:bold">active</span> { <span style="color:#f00;background-color:#faa">...</span> }
-.<span style="color:#b06;font-weight:bold">tab</span>:<span style="color:#555;font-weight:bold">first-child</span> { <span style="color:#f00;background-color:#faa">...</span> }
-.<span style="color:#b06;font-weight:bold">tab</span>:<span style="color:#555;font-weight:bold">last-child</span> { <span style="color:#f00;background-color:#faa">...</span> }
-.<span style="color:#b06;font-weight:bold">avatar</span>:<span style="color:#555;font-weight:bold">nth-child</span><span style="color:#333">(</span><span style="color:#070">2n</span><span style="color:#333">)</span> { <span style="color:#f00;background-color:#faa">...</span> }
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">link</span>:<span style="color:#a6e22e">hover</span> { <span style="color:#960050;background-color:#1e0010">...</span> }
+.<span style="color:#a6e22e">link</span>:<span style="color:#a6e22e">active</span> { <span style="color:#960050;background-color:#1e0010">...</span> }
+.<span style="color:#a6e22e">tab</span>:<span style="color:#a6e22e">first-child</span> { <span style="color:#960050;background-color:#1e0010">...</span> }
+.<span style="color:#a6e22e">tab</span>:<span style="color:#a6e22e">last-child</span> { <span style="color:#960050;background-color:#1e0010">...</span> }
+.<span style="color:#a6e22e">avatar</span>:<span style="color:#a6e22e">nth-child</span><span style="color:#f92672">(</span><span style="color:#f92672">2n</span><span style="color:#f92672">)</span> { <span style="color:#960050;background-color:#1e0010">...</span> }
 </code></pre></div><p><br /></p>
 <h3 id="7-do-you-know-about-css-box-model-how-do-box-sizing-css-works">7. Do you know about <code>CSS Box Model</code>? How do <code>box-sizing</code> CSS works?</h3>
 <p>The CSS box model is essentially a box that wraps around every HTML element such as <code>div</code>. It consists of following:-</p>
@@ -373,42 +373,42 @@ Margin
 </div>
 <h5 id="css-box-model-example">CSS box model example</h5>
 <p>A typical css to create a box model</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#070">div</span> {
-    <span style="color:#080;font-weight:bold">width</span>: <span style="color:#00d;font-weight:bold">100</span><span style="color:#339;font-weight:bold">px</span>;
-    <span style="color:#080;font-weight:bold">height</span>: <span style="color:#00d;font-weight:bold">100</span><span style="color:#339;font-weight:bold">px</span>;
-    <span style="color:#080;font-weight:bold">margin</span>: <span style="color:#00d;font-weight:bold">20</span><span style="color:#339;font-weight:bold">px</span>;
-    <span style="color:#080;font-weight:bold">border</span>: <span style="color:#00d;font-weight:bold">5</span><span style="color:#339;font-weight:bold">px</span> <span style="color:#080;font-weight:bold">solid</span> <span style="color:#080;font-weight:bold">red</span>;
-    <span style="color:#080;font-weight:bold">padding</span>: <span style="color:#00d;font-weight:bold">10</span><span style="color:#339;font-weight:bold">px</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">div</span> {
+    <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#66d9ef">red</span>;
+    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
 }
 </code></pre></div><h5 id="css-tricks-to-apply-margin-and-padding">CSS Tricks to apply margin and padding</h5>
 <p>Single value margin and padding applies to all sides top, right, bottom and left. Following are different ways to apply margin or padding to individual side or in pairs or in groups.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#888">/* same padding on all 4 sides */</span>
-<span style="color:#070">div</span> {
-    <span style="color:#080;font-weight:bold">padding</span>: <span style="color:#00d;font-weight:bold">10</span><span style="color:#339;font-weight:bold">px</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#75715e">/* same padding on all 4 sides */</span>
+<span style="color:#f92672">div</span> {
+    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
 }
 
-<span style="color:#888">/* padding in pair, top/bottom (10px), left/right (20px) */</span>
-<span style="color:#070">div</span> {
-    <span style="color:#080;font-weight:bold">padding</span>: <span style="color:#00d;font-weight:bold">10</span><span style="color:#339;font-weight:bold">px</span> <span style="color:#00d;font-weight:bold">20</span><span style="color:#339;font-weight:bold">px</span>;
+<span style="color:#75715e">/* padding in pair, top/bottom (10px), left/right (20px) */</span>
+<span style="color:#f92672">div</span> {
+    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
 }
 
-<span style="color:#888">/* three values padding, top (10px), bottom (20px) and left/right (30px) */</span>
-<span style="color:#070">div</span> {
-    <span style="color:#080;font-weight:bold">padding</span>: <span style="color:#00d;font-weight:bold">10</span><span style="color:#339;font-weight:bold">px</span> <span style="color:#00d;font-weight:bold">20</span><span style="color:#339;font-weight:bold">px</span> <span style="color:#00d;font-weight:bold">30</span><span style="color:#339;font-weight:bold">px</span>;
+<span style="color:#75715e">/* three values padding, top (10px), bottom (20px) and left/right (30px) */</span>
+<span style="color:#f92672">div</span> {
+    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">30</span><span style="color:#66d9ef">px</span>;
 }
 
-<span style="color:#888">/* individual padding , in TRBL (top-right-bottom-left) order */</span>
-<span style="color:#070">div</span> {
-           <span style="color:#888">/* top right bottom left */</span>
-    <span style="color:#080;font-weight:bold">padding</span>: <span style="color:#00d;font-weight:bold">10</span><span style="color:#339;font-weight:bold">px</span>  <span style="color:#00d;font-weight:bold">20</span><span style="color:#339;font-weight:bold">px</span>  <span style="color:#00d;font-weight:bold">30</span><span style="color:#339;font-weight:bold">px</span>  <span style="color:#00d;font-weight:bold">40</span><span style="color:#339;font-weight:bold">px</span>;
+<span style="color:#75715e">/* individual padding , in TRBL (top-right-bottom-left) order */</span>
+<span style="color:#f92672">div</span> {
+           <span style="color:#75715e">/* top right bottom left */</span>
+    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>  <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>  <span style="color:#ae81ff">30</span><span style="color:#66d9ef">px</span>  <span style="color:#ae81ff">40</span><span style="color:#66d9ef">px</span>;
 }
 
-<span style="color:#888">/* individual padding css */</span>
-<span style="color:#070">div</span> {
-    <span style="color:#080;font-weight:bold">padding-top</span>: <span style="color:#00d;font-weight:bold">10</span><span style="color:#339;font-weight:bold">px</span>;
-    <span style="color:#080;font-weight:bold">padding-right</span>: <span style="color:#00d;font-weight:bold">20</span><span style="color:#339;font-weight:bold">px</span>;
-    <span style="color:#080;font-weight:bold">padding-bottom</span>: <span style="color:#00d;font-weight:bold">30</span><span style="color:#339;font-weight:bold">px</span>;
-    <span style="color:#080;font-weight:bold">padding-left</span>: <span style="color:#00d;font-weight:bold">40</span><span style="color:#339;font-weight:bold">px</span>;
+<span style="color:#75715e">/* individual padding css */</span>
+<span style="color:#f92672">div</span> {
+    <span style="color:#66d9ef">padding-top</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">padding-right</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">padding-bottom</span>: <span style="color:#ae81ff">30</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">padding-left</span>: <span style="color:#ae81ff">40</span><span style="color:#66d9ef">px</span>;
 }
 </code></pre></div><h5 id="css-box-sizing">CSS box-sizing</h5>
 <p>By default width and height property of a box only includes content and do not consider border and padding. This is default css <code>box-sizing:content-box</code>. In this case actual width of box would become 100px (width) + 10px (padding) + 5px (border) = 115px;</p>
@@ -457,26 +457,26 @@ Order of css specificity from highest to lowest is as follows:-</p>
 <p>We can not avoid media queries in responsive web applications. We can provide different styling for different devices such as Mobile, Tablet, Laptop and Desktop using media queries.</p>
 <p>The most common approach is mobile first where all styles targeted for mobile devices and we progressively change styles for other devices using media queries.</p>
 <h6 id="css-media-query-example">CSS media query example</h6>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#888">/* Mobile */</span>
-<span style="color:#070">body</span> { 
-    <span style="color:#080;font-weight:bold">font-size</span>: <span style="color:#00d;font-weight:bold">1</span><span style="color:#339;font-weight:bold">em</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#75715e">/* Mobile */</span>
+<span style="color:#f92672">body</span> { 
+    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span>;
 }
-<span style="color:#888">/* Tablet */</span>
-@<span style="color:#080;font-weight:bold">media</span> <span style="color:#070">only</span> <span style="color:#070">screen</span> <span style="color:#070">and</span> <span style="color:#333">(</span><span style="color:#070">min-width</span><span style="color:#333">:</span> <span style="color:#070">768px</span><span style="color:#333">)</span> {
-    <span style="color:#070">body</span> {
-        <span style="color:#080;font-weight:bold">font-size</span>: <span style="color:#60e;font-weight:bold">1.25</span><span style="color:#339;font-weight:bold">em</span>;
+<span style="color:#75715e">/* Tablet */</span>
+@<span style="color:#66d9ef">media</span> <span style="color:#f92672">only</span> <span style="color:#f92672">screen</span> <span style="color:#f92672">and</span> <span style="color:#f92672">(</span><span style="color:#f92672">min-width</span><span style="color:#f92672">:</span> <span style="color:#f92672">768px</span><span style="color:#f92672">)</span> {
+    <span style="color:#f92672">body</span> {
+        <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">1.25</span><span style="color:#66d9ef">em</span>;
     }
 }
-<span style="color:#888">/* Desktop and Laptop */</span>
-@<span style="color:#080;font-weight:bold">media</span> <span style="color:#070">only</span> <span style="color:#070">screen</span> <span style="color:#070">and</span> <span style="color:#333">(</span><span style="color:#070">min-width</span> <span style="color:#333">:</span> <span style="color:#070">1224px</span><span style="color:#333">)</span> {
-    <span style="color:#070">body</span> {
-        <span style="color:#080;font-weight:bold">font-size</span>: <span style="color:#60e;font-weight:bold">1.5</span><span style="color:#339;font-weight:bold">em</span>;
+<span style="color:#75715e">/* Desktop and Laptop */</span>
+@<span style="color:#66d9ef">media</span> <span style="color:#f92672">only</span> <span style="color:#f92672">screen</span> <span style="color:#f92672">and</span> <span style="color:#f92672">(</span><span style="color:#f92672">min-width</span> <span style="color:#f92672">:</span> <span style="color:#f92672">1224px</span><span style="color:#f92672">)</span> {
+    <span style="color:#f92672">body</span> {
+        <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">1.5</span><span style="color:#66d9ef">em</span>;
     }
 }
-<span style="color:#888">/* Large Screen */</span>
-@<span style="color:#080;font-weight:bold">media</span> <span style="color:#070">only</span> <span style="color:#070">screen</span> <span style="color:#070">and</span> <span style="color:#333">(</span><span style="color:#070">min-width</span> <span style="color:#333">:</span> <span style="color:#070">1824px</span><span style="color:#333">)</span> {
-  <span style="color:#070">body</span> {
-        <span style="color:#080;font-weight:bold">font-size</span>: <span style="color:#60e;font-weight:bold">1.75</span><span style="color:#339;font-weight:bold">em</span>;
+<span style="color:#75715e">/* Large Screen */</span>
+@<span style="color:#66d9ef">media</span> <span style="color:#f92672">only</span> <span style="color:#f92672">screen</span> <span style="color:#f92672">and</span> <span style="color:#f92672">(</span><span style="color:#f92672">min-width</span> <span style="color:#f92672">:</span> <span style="color:#f92672">1824px</span><span style="color:#f92672">)</span> {
+  <span style="color:#f92672">body</span> {
+        <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">1.75</span><span style="color:#66d9ef">em</span>;
     }
 }
 </code></pre></div><p><br /></p>
@@ -580,112 +580,112 @@ Order of css specificity from highest to lowest is as follows:-</p>
 <h3 id="13-which-unit-of-measurement-you-use-for-font-size">13. Which unit of measurement you use for <code>font-size</code>?</h3>
 <p>Something that has almost always come up for me is the way you size your text, mainly focused on the units you use. You can of course use pixels (px), but there’s also em, rem, %, vs and vh, along with a few others. Some people still don’t like using pixels, but browsers have improved and they’re generally handled pretty well.</p>
 <p>Defining your font sizes in em allows you to change the size of your text based on the size defined at a higher level. For example, if a container has specified a font-size of 2em, and you specify a font-size of 2em on an element inside that container, that element has an effective font-size of 4em! However, this can be a little confusing as you might not always see the size you expect!</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#b06;font-weight:bold">container</span> {
-    <span style="color:#080;font-weight:bold">font-size</span>: <span style="color:#00d;font-weight:bold">2</span><span style="color:#339;font-weight:bold">em</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">container</span> {
+    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">em</span>;
 }
 
-.<span style="color:#b06;font-weight:bold">container</span> <span style="color:#333">&gt;</span> <span style="color:#070">p</span> {
-    <span style="color:#080;font-weight:bold">font-size</span>: <span style="color:#00d;font-weight:bold">2</span><span style="color:#339;font-weight:bold">em</span>; <span style="color:#888">/* this is 2em x 2em = 4em! */</span>
+.<span style="color:#a6e22e">container</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">p</span> {
+    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">em</span>; <span style="color:#75715e">/* this is 2em x 2em = 4em! */</span>
 }
 </code></pre></div><p>The rem unit was created to remedy that confusion. It scales well in the browser, just like em and px, but it uses a base size. From that, all further rem values are calculated. For example, if your base rem value is equal to 16px, then 1rem will always be equal to 16px, 2rem will always be equal to 32px, and so on.</p>
 <p>Note: While I’ve explained these units using font-sizes, the same rules apply to any dimensions where you use px, em or rem.
 <br /></p>
 <h3 id="14-do-you-know-about-normalize-css-and-reset-css-and-their-differences">14. Do you know about <code>Normalize CSS</code> and <code>Reset CSS</code> and their differences?</h3>
 <p>Each browser like Chrome, Firefox, IE has their own default styling for HTML elements also known as browser&rsquo;s user agent styles.If you render a pure HTML page like below without any styling, page will look different in different browser as their user agent styling is applied.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#070">h1</span>&gt;H1 Title&lt;/<span style="color:#070">h1</span>&gt;
-&lt;<span style="color:#070">h2</span>&gt;H2 Title&lt;/<span style="color:#070">h2</span>&gt;
-&lt;<span style="color:#070">h3</span>&gt;H3 Title&lt;/<span style="color:#070">h3</span>&gt;
-&lt;<span style="color:#070">h4</span>&gt;H4 Title&lt;/<span style="color:#070">h4</span>&gt;
-&lt;<span style="color:#070">h5</span>&gt;H5 Title&lt;/<span style="color:#070">h5</span>&gt;
-&lt;<span style="color:#070">h6</span>&gt;H6 Title&lt;/<span style="color:#070">h6</span>&gt;
-&lt;<span style="color:#070">a</span> <span style="color:#00c">href</span><span style="color:#333">=</span><span style="background-color:#fff0f0">&#34;https://codingnconcepts.com/&#34;</span>&gt;Coding N Concepts&lt;/<span style="color:#070">a</span>&gt;
-&lt;<span style="color:#070">code</span>&gt;CSS&lt;/<span style="color:#070">code</span>&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">h1</span>&gt;H1 Title&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;<span style="color:#f92672">h2</span>&gt;H2 Title&lt;/<span style="color:#f92672">h2</span>&gt;
+&lt;<span style="color:#f92672">h3</span>&gt;H3 Title&lt;/<span style="color:#f92672">h3</span>&gt;
+&lt;<span style="color:#f92672">h4</span>&gt;H4 Title&lt;/<span style="color:#f92672">h4</span>&gt;
+&lt;<span style="color:#f92672">h5</span>&gt;H5 Title&lt;/<span style="color:#f92672">h5</span>&gt;
+&lt;<span style="color:#f92672">h6</span>&gt;H6 Title&lt;/<span style="color:#f92672">h6</span>&gt;
+&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://codingnconcepts.com/&#34;</span>&gt;Coding N Concepts&lt;/<span style="color:#f92672">a</span>&gt;
+&lt;<span style="color:#f92672">code</span>&gt;CSS&lt;/<span style="color:#f92672">code</span>&gt;
 </code></pre></div><h5 id="reset-css">Reset CSS</h5>
 <p>Reset CSS resets all the default styles of browser. It says we don&rsquo;t need browser&rsquo;s default at all, we will define as per our need. One of the example is <a href="https://meyerweb.com/eric/tools/css/reset/">Eric Meyer’s reset.css</a></p>
 <h6 id="resetcss">reset.css</h6>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#888">/* http://meyerweb.com/eric/tools/css/reset/ 
-</span><span style="color:#888">   v2.0 | 20110126
-</span><span style="color:#888">   License: none (public domain)
-</span><span style="color:#888">*/</span>
-<span style="color:#070">html</span><span style="color:#333">,</span> <span style="color:#070">body</span><span style="color:#333">,</span> <span style="color:#070">div</span><span style="color:#333">,</span> <span style="color:#070">span</span><span style="color:#333">,</span> <span style="color:#070">applet</span><span style="color:#333">,</span> <span style="color:#070">object</span><span style="color:#333">,</span> <span style="color:#070">iframe</span><span style="color:#333">,</span>
-<span style="color:#070">h1</span><span style="color:#333">,</span> <span style="color:#070">h2</span><span style="color:#333">,</span> <span style="color:#070">h3</span><span style="color:#333">,</span> <span style="color:#070">h4</span><span style="color:#333">,</span> <span style="color:#070">h5</span><span style="color:#333">,</span> <span style="color:#070">h6</span><span style="color:#333">,</span> <span style="color:#070">p</span><span style="color:#333">,</span> <span style="color:#070">blockquote</span><span style="color:#333">,</span> <span style="color:#070">pre</span><span style="color:#333">,</span>
-<span style="color:#070">a</span><span style="color:#333">,</span> <span style="color:#070">abbr</span><span style="color:#333">,</span> <span style="color:#070">acronym</span><span style="color:#333">,</span> <span style="color:#070">address</span><span style="color:#333">,</span> <span style="color:#070">big</span><span style="color:#333">,</span> <span style="color:#070">cite</span><span style="color:#333">,</span> <span style="color:#070">code</span><span style="color:#333">,</span>
-<span style="color:#070">del</span><span style="color:#333">,</span> <span style="color:#070">dfn</span><span style="color:#333">,</span> <span style="color:#070">em</span><span style="color:#333">,</span> <span style="color:#070">img</span><span style="color:#333">,</span> <span style="color:#070">ins</span><span style="color:#333">,</span> <span style="color:#070">kbd</span><span style="color:#333">,</span> <span style="color:#070">q</span><span style="color:#333">,</span> <span style="color:#070">s</span><span style="color:#333">,</span> <span style="color:#070">samp</span><span style="color:#333">,</span>
-<span style="color:#070">small</span><span style="color:#333">,</span> <span style="color:#070">strike</span><span style="color:#333">,</span> <span style="color:#070">strong</span><span style="color:#333">,</span> <span style="color:#070">sub</span><span style="color:#333">,</span> <span style="color:#070">sup</span><span style="color:#333">,</span> <span style="color:#070">tt</span><span style="color:#333">,</span> <span style="color:#070">var</span><span style="color:#333">,</span>
-<span style="color:#070">b</span><span style="color:#333">,</span> <span style="color:#070">u</span><span style="color:#333">,</span> <span style="color:#070">i</span><span style="color:#333">,</span> <span style="color:#070">center</span><span style="color:#333">,</span>
-<span style="color:#070">dl</span><span style="color:#333">,</span> <span style="color:#070">dt</span><span style="color:#333">,</span> <span style="color:#070">dd</span><span style="color:#333">,</span> <span style="color:#070">ol</span><span style="color:#333">,</span> <span style="color:#070">ul</span><span style="color:#333">,</span> <span style="color:#070">li</span><span style="color:#333">,</span>
-<span style="color:#070">fieldset</span><span style="color:#333">,</span> <span style="color:#070">form</span><span style="color:#333">,</span> <span style="color:#070">label</span><span style="color:#333">,</span> <span style="color:#070">legend</span><span style="color:#333">,</span>
-<span style="color:#070">table</span><span style="color:#333">,</span> <span style="color:#070">caption</span><span style="color:#333">,</span> <span style="color:#070">tbody</span><span style="color:#333">,</span> <span style="color:#070">tfoot</span><span style="color:#333">,</span> <span style="color:#070">thead</span><span style="color:#333">,</span> <span style="color:#070">tr</span><span style="color:#333">,</span> <span style="color:#070">th</span><span style="color:#333">,</span> <span style="color:#070">td</span><span style="color:#333">,</span>
-<span style="color:#070">article</span><span style="color:#333">,</span> <span style="color:#070">aside</span><span style="color:#333">,</span> <span style="color:#070">canvas</span><span style="color:#333">,</span> <span style="color:#070">details</span><span style="color:#333">,</span> <span style="color:#070">embed</span><span style="color:#333">,</span> 
-<span style="color:#070">figure</span><span style="color:#333">,</span> <span style="color:#070">figcaption</span><span style="color:#333">,</span> <span style="color:#070">footer</span><span style="color:#333">,</span> <span style="color:#070">header</span><span style="color:#333">,</span> <span style="color:#070">hgroup</span><span style="color:#333">,</span> 
-<span style="color:#070">menu</span><span style="color:#333">,</span> <span style="color:#070">nav</span><span style="color:#333">,</span> <span style="color:#070">output</span><span style="color:#333">,</span> <span style="color:#070">ruby</span><span style="color:#333">,</span> <span style="color:#070">section</span><span style="color:#333">,</span> <span style="color:#070">summary</span><span style="color:#333">,</span>
-<span style="color:#070">time</span><span style="color:#333">,</span> <span style="color:#070">mark</span><span style="color:#333">,</span> <span style="color:#070">audio</span><span style="color:#333">,</span> <span style="color:#070">video</span> {
-	<span style="color:#080;font-weight:bold">margin</span>: <span style="color:#00d;font-weight:bold">0</span>;
-	<span style="color:#080;font-weight:bold">padding</span>: <span style="color:#00d;font-weight:bold">0</span>;
-	<span style="color:#080;font-weight:bold">border</span>: <span style="color:#00d;font-weight:bold">0</span>;
-	<span style="color:#080;font-weight:bold">font-size</span>: <span style="color:#00d;font-weight:bold">100</span><span style="color:#339;font-weight:bold">%</span>;
-	<span style="color:#080;font-weight:bold">font</span>: <span style="color:#080;font-weight:bold">inherit</span>;
-	<span style="color:#080;font-weight:bold">vertical-align</span>: <span style="color:#080;font-weight:bold">baseline</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#75715e">/* http://meyerweb.com/eric/tools/css/reset/ 
+</span><span style="color:#75715e">   v2.0 | 20110126
+</span><span style="color:#75715e">   License: none (public domain)
+</span><span style="color:#75715e">*/</span>
+<span style="color:#f92672">html</span><span style="color:#f92672">,</span> <span style="color:#f92672">body</span><span style="color:#f92672">,</span> <span style="color:#f92672">div</span><span style="color:#f92672">,</span> <span style="color:#f92672">span</span><span style="color:#f92672">,</span> <span style="color:#f92672">applet</span><span style="color:#f92672">,</span> <span style="color:#f92672">object</span><span style="color:#f92672">,</span> <span style="color:#f92672">iframe</span><span style="color:#f92672">,</span>
+<span style="color:#f92672">h1</span><span style="color:#f92672">,</span> <span style="color:#f92672">h2</span><span style="color:#f92672">,</span> <span style="color:#f92672">h3</span><span style="color:#f92672">,</span> <span style="color:#f92672">h4</span><span style="color:#f92672">,</span> <span style="color:#f92672">h5</span><span style="color:#f92672">,</span> <span style="color:#f92672">h6</span><span style="color:#f92672">,</span> <span style="color:#f92672">p</span><span style="color:#f92672">,</span> <span style="color:#f92672">blockquote</span><span style="color:#f92672">,</span> <span style="color:#f92672">pre</span><span style="color:#f92672">,</span>
+<span style="color:#f92672">a</span><span style="color:#f92672">,</span> <span style="color:#f92672">abbr</span><span style="color:#f92672">,</span> <span style="color:#f92672">acronym</span><span style="color:#f92672">,</span> <span style="color:#f92672">address</span><span style="color:#f92672">,</span> <span style="color:#f92672">big</span><span style="color:#f92672">,</span> <span style="color:#f92672">cite</span><span style="color:#f92672">,</span> <span style="color:#f92672">code</span><span style="color:#f92672">,</span>
+<span style="color:#f92672">del</span><span style="color:#f92672">,</span> <span style="color:#f92672">dfn</span><span style="color:#f92672">,</span> <span style="color:#f92672">em</span><span style="color:#f92672">,</span> <span style="color:#f92672">img</span><span style="color:#f92672">,</span> <span style="color:#f92672">ins</span><span style="color:#f92672">,</span> <span style="color:#f92672">kbd</span><span style="color:#f92672">,</span> <span style="color:#f92672">q</span><span style="color:#f92672">,</span> <span style="color:#f92672">s</span><span style="color:#f92672">,</span> <span style="color:#f92672">samp</span><span style="color:#f92672">,</span>
+<span style="color:#f92672">small</span><span style="color:#f92672">,</span> <span style="color:#f92672">strike</span><span style="color:#f92672">,</span> <span style="color:#f92672">strong</span><span style="color:#f92672">,</span> <span style="color:#f92672">sub</span><span style="color:#f92672">,</span> <span style="color:#f92672">sup</span><span style="color:#f92672">,</span> <span style="color:#f92672">tt</span><span style="color:#f92672">,</span> <span style="color:#f92672">var</span><span style="color:#f92672">,</span>
+<span style="color:#f92672">b</span><span style="color:#f92672">,</span> <span style="color:#f92672">u</span><span style="color:#f92672">,</span> <span style="color:#f92672">i</span><span style="color:#f92672">,</span> <span style="color:#f92672">center</span><span style="color:#f92672">,</span>
+<span style="color:#f92672">dl</span><span style="color:#f92672">,</span> <span style="color:#f92672">dt</span><span style="color:#f92672">,</span> <span style="color:#f92672">dd</span><span style="color:#f92672">,</span> <span style="color:#f92672">ol</span><span style="color:#f92672">,</span> <span style="color:#f92672">ul</span><span style="color:#f92672">,</span> <span style="color:#f92672">li</span><span style="color:#f92672">,</span>
+<span style="color:#f92672">fieldset</span><span style="color:#f92672">,</span> <span style="color:#f92672">form</span><span style="color:#f92672">,</span> <span style="color:#f92672">label</span><span style="color:#f92672">,</span> <span style="color:#f92672">legend</span><span style="color:#f92672">,</span>
+<span style="color:#f92672">table</span><span style="color:#f92672">,</span> <span style="color:#f92672">caption</span><span style="color:#f92672">,</span> <span style="color:#f92672">tbody</span><span style="color:#f92672">,</span> <span style="color:#f92672">tfoot</span><span style="color:#f92672">,</span> <span style="color:#f92672">thead</span><span style="color:#f92672">,</span> <span style="color:#f92672">tr</span><span style="color:#f92672">,</span> <span style="color:#f92672">th</span><span style="color:#f92672">,</span> <span style="color:#f92672">td</span><span style="color:#f92672">,</span>
+<span style="color:#f92672">article</span><span style="color:#f92672">,</span> <span style="color:#f92672">aside</span><span style="color:#f92672">,</span> <span style="color:#f92672">canvas</span><span style="color:#f92672">,</span> <span style="color:#f92672">details</span><span style="color:#f92672">,</span> <span style="color:#f92672">embed</span><span style="color:#f92672">,</span> 
+<span style="color:#f92672">figure</span><span style="color:#f92672">,</span> <span style="color:#f92672">figcaption</span><span style="color:#f92672">,</span> <span style="color:#f92672">footer</span><span style="color:#f92672">,</span> <span style="color:#f92672">header</span><span style="color:#f92672">,</span> <span style="color:#f92672">hgroup</span><span style="color:#f92672">,</span> 
+<span style="color:#f92672">menu</span><span style="color:#f92672">,</span> <span style="color:#f92672">nav</span><span style="color:#f92672">,</span> <span style="color:#f92672">output</span><span style="color:#f92672">,</span> <span style="color:#f92672">ruby</span><span style="color:#f92672">,</span> <span style="color:#f92672">section</span><span style="color:#f92672">,</span> <span style="color:#f92672">summary</span><span style="color:#f92672">,</span>
+<span style="color:#f92672">time</span><span style="color:#f92672">,</span> <span style="color:#f92672">mark</span><span style="color:#f92672">,</span> <span style="color:#f92672">audio</span><span style="color:#f92672">,</span> <span style="color:#f92672">video</span> {
+	<span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
+	<span style="color:#66d9ef">font</span>: <span style="color:#66d9ef">inherit</span>;
+	<span style="color:#66d9ef">vertical-align</span>: <span style="color:#66d9ef">baseline</span>;
 }
-<span style="color:#888">/* HTML5 display-role reset for older browsers */</span>
-<span style="color:#070">article</span><span style="color:#333">,</span> <span style="color:#070">aside</span><span style="color:#333">,</span> <span style="color:#070">details</span><span style="color:#333">,</span> <span style="color:#070">figcaption</span><span style="color:#333">,</span> <span style="color:#070">figure</span><span style="color:#333">,</span> 
-<span style="color:#070">footer</span><span style="color:#333">,</span> <span style="color:#070">header</span><span style="color:#333">,</span> <span style="color:#070">hgroup</span><span style="color:#333">,</span> <span style="color:#070">menu</span><span style="color:#333">,</span> <span style="color:#070">nav</span><span style="color:#333">,</span> <span style="color:#070">section</span> {
-	<span style="color:#080;font-weight:bold">display</span>: <span style="color:#080;font-weight:bold">block</span>;
+<span style="color:#75715e">/* HTML5 display-role reset for older browsers */</span>
+<span style="color:#f92672">article</span><span style="color:#f92672">,</span> <span style="color:#f92672">aside</span><span style="color:#f92672">,</span> <span style="color:#f92672">details</span><span style="color:#f92672">,</span> <span style="color:#f92672">figcaption</span><span style="color:#f92672">,</span> <span style="color:#f92672">figure</span><span style="color:#f92672">,</span> 
+<span style="color:#f92672">footer</span><span style="color:#f92672">,</span> <span style="color:#f92672">header</span><span style="color:#f92672">,</span> <span style="color:#f92672">hgroup</span><span style="color:#f92672">,</span> <span style="color:#f92672">menu</span><span style="color:#f92672">,</span> <span style="color:#f92672">nav</span><span style="color:#f92672">,</span> <span style="color:#f92672">section</span> {
+	<span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>;
 }
-<span style="color:#070">body</span> {
-	<span style="color:#080;font-weight:bold">line-height</span>: <span style="color:#00d;font-weight:bold">1</span>;
+<span style="color:#f92672">body</span> {
+	<span style="color:#66d9ef">line-height</span>: <span style="color:#ae81ff">1</span>;
 }
-<span style="color:#070">ol</span><span style="color:#333">,</span> <span style="color:#070">ul</span> {
-	<span style="color:#080;font-weight:bold">list-style</span>: <span style="color:#080;font-weight:bold">none</span>;
+<span style="color:#f92672">ol</span><span style="color:#f92672">,</span> <span style="color:#f92672">ul</span> {
+	<span style="color:#66d9ef">list-style</span>: <span style="color:#66d9ef">none</span>;
 }
-<span style="color:#070">blockquote</span><span style="color:#333">,</span> <span style="color:#070">q</span> {
-	<span style="color:#080;font-weight:bold">quotes</span>: <span style="color:#080;font-weight:bold">none</span>;
+<span style="color:#f92672">blockquote</span><span style="color:#f92672">,</span> <span style="color:#f92672">q</span> {
+	<span style="color:#66d9ef">quotes</span>: <span style="color:#66d9ef">none</span>;
 }
-<span style="color:#070">blockquote</span>:<span style="color:#555;font-weight:bold">before</span><span style="color:#333">,</span> <span style="color:#070">blockquote</span>:<span style="color:#555;font-weight:bold">after</span><span style="color:#333">,</span>
-<span style="color:#070">q</span>:<span style="color:#555;font-weight:bold">before</span><span style="color:#333">,</span> <span style="color:#070">q</span>:<span style="color:#555;font-weight:bold">after</span> {
-	<span style="color:#080;font-weight:bold">content</span>: <span style="background-color:#fff0f0">&#39;&#39;</span>;
-	<span style="color:#080;font-weight:bold">content</span>: <span style="color:#080;font-weight:bold">none</span>;
+<span style="color:#f92672">blockquote</span>:<span style="color:#a6e22e">before</span><span style="color:#f92672">,</span> <span style="color:#f92672">blockquote</span>:<span style="color:#a6e22e">after</span><span style="color:#f92672">,</span>
+<span style="color:#f92672">q</span>:<span style="color:#a6e22e">before</span><span style="color:#f92672">,</span> <span style="color:#f92672">q</span>:<span style="color:#a6e22e">after</span> {
+	<span style="color:#66d9ef">content</span>: <span style="color:#e6db74">&#39;&#39;</span>;
+	<span style="color:#66d9ef">content</span>: <span style="color:#66d9ef">none</span>;
 }
-<span style="color:#070">table</span> {
-	<span style="color:#080;font-weight:bold">border-collapse</span>: <span style="color:#080;font-weight:bold">collapse</span>;
-	<span style="color:#080;font-weight:bold">border-spacing</span>: <span style="color:#00d;font-weight:bold">0</span>;
+<span style="color:#f92672">table</span> {
+	<span style="color:#66d9ef">border-collapse</span>: <span style="color:#66d9ef">collapse</span>;
+	<span style="color:#66d9ef">border-spacing</span>: <span style="color:#ae81ff">0</span>;
 }
 </code></pre></div><h5 id="normalize-css">Normalize CSS</h5>
 <p>Normalize CSS is an alternate for CSS reset. Instead of wiping out all styles, provides cross-browser consistency in the default styling of HTML elements.</p>
 <p>That means, that if we look at the W3C standards of the styles applied by the browsers, and there is an in inconsistency in one of the browsers, the <code>normalize.css</code> styles will fix the browser style that has the difference. Some part of <a href="https://necolas.github.io/normalize.css/">Necolas normalize.css</a></p>
 <h6 id="normalizecss">normalize.css</h6>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#888">/* Add the correct font weight in Chrome, Edge, and Safari. */</span>
-<span style="color:#070">b</span><span style="color:#333">,</span> <span style="color:#070">strong</span> {
-  <span style="color:#080;font-weight:bold">font-weight</span>: <span style="color:#080;font-weight:bold">bolder</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#75715e">/* Add the correct font weight in Chrome, Edge, and Safari. */</span>
+<span style="color:#f92672">b</span><span style="color:#f92672">,</span> <span style="color:#f92672">strong</span> {
+  <span style="color:#66d9ef">font-weight</span>: <span style="color:#66d9ef">bolder</span>;
 }
-<span style="color:#888">/* Remove the border on images inside links in IE 10. */</span>
-<span style="color:#070">img</span> {
-  <span style="color:#080;font-weight:bold">border-style</span>: <span style="color:#080;font-weight:bold">none</span>;
+<span style="color:#75715e">/* Remove the border on images inside links in IE 10. */</span>
+<span style="color:#f92672">img</span> {
+  <span style="color:#66d9ef">border-style</span>: <span style="color:#66d9ef">none</span>;
 }
-<span style="color:#888">/* Correct the padding in Firefox. */</span>
-<span style="color:#070">fieldset</span> {
-  <span style="color:#080;font-weight:bold">padding</span>: <span style="color:#60e;font-weight:bold">0.35</span><span style="color:#339;font-weight:bold">em</span> <span style="color:#60e;font-weight:bold">0.75</span><span style="color:#339;font-weight:bold">em</span> <span style="color:#60e;font-weight:bold">0.625</span><span style="color:#339;font-weight:bold">em</span>;
+<span style="color:#75715e">/* Correct the padding in Firefox. */</span>
+<span style="color:#f92672">fieldset</span> {
+  <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0.35</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">0.75</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">0.625</span><span style="color:#66d9ef">em</span>;
 }
 </code></pre></div><p><br /></p>
 <h3 id="15-what-are-css-sprites-and-why-would-use-them">15. What are <code>CSS sprites</code> and why would use them?</h3>
 <p>If a web page has a large number of images that take a longer time to load because each image separately sends out an HTTP request. The concept of CSS sprites is used to reduce the loading time for a web page because it combines the various small images into one image. It reduces the number of HTTP requests and hence the loading time.</p>
 <p>Say you have to show flags of 100 countries on web page, instead of making 100 HTTP requests from browser, combine all the flags in one image known as sprite <em><strong>flags.png</strong></em> and load them in single HTTP request. Each flag will be shown on the HTML page by displaying a part of sprite image using <code>background-position</code> CSS property.</p>
 <h6 id="css-sprite-example">CSS Sprite Example</h6>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#b06;font-weight:bold">flags-canada</span><span style="color:#333">,</span> .<span style="color:#b06;font-weight:bold">flags-london</span><span style="color:#333">,</span> .<span style="color:#b06;font-weight:bold">flags-usa</span> {
-  <span style="color:#080;font-weight:bold">background-image</span>: <span style="color:#007020">url</span>(<span style="background-color:#fff0f0">&#39;../images/flags.png&#39;</span>);
-  <span style="color:#080;font-weight:bold">background-repeat</span>: <span style="color:#080;font-weight:bold">no-repeat</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">flags-canada</span><span style="color:#f92672">,</span> .<span style="color:#a6e22e">flags-london</span><span style="color:#f92672">,</span> .<span style="color:#a6e22e">flags-usa</span> {
+  <span style="color:#66d9ef">background-image</span>: url(<span style="color:#e6db74">&#39;../images/flags.png&#39;</span>);
+  <span style="color:#66d9ef">background-repeat</span>: <span style="color:#66d9ef">no-repeat</span>;
 }
-.<span style="color:#b06;font-weight:bold">flags-canada</span> {
-  <span style="color:#080;font-weight:bold">height</span>: <span style="color:#00d;font-weight:bold">128</span><span style="color:#339;font-weight:bold">px</span>;
-  <span style="color:#080;font-weight:bold">background-position</span>: <span style="color:#00d;font-weight:bold">-5</span><span style="color:#339;font-weight:bold">px</span> <span style="color:#00d;font-weight:bold">-5</span><span style="color:#339;font-weight:bold">px</span>;
+.<span style="color:#a6e22e">flags-canada</span> {
+  <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">128</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">background-position</span>: <span style="color:#ae81ff">-5</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">-5</span><span style="color:#66d9ef">px</span>;
 }
-.<span style="color:#b06;font-weight:bold">flags-usa</span> {
-  <span style="color:#080;font-weight:bold">height</span>: <span style="color:#00d;font-weight:bold">135</span><span style="color:#339;font-weight:bold">px</span>;
-  <span style="color:#080;font-weight:bold">background-position</span>: <span style="color:#00d;font-weight:bold">-5</span><span style="color:#339;font-weight:bold">px</span> <span style="color:#00d;font-weight:bold">-143</span><span style="color:#339;font-weight:bold">px</span>;
+.<span style="color:#a6e22e">flags-usa</span> {
+  <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">135</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">background-position</span>: <span style="color:#ae81ff">-5</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">-143</span><span style="color:#66d9ef">px</span>;
 }
-.<span style="color:#b06;font-weight:bold">flags-london</span> {
-  <span style="color:#080;font-weight:bold">height</span>: <span style="color:#00d;font-weight:bold">147</span><span style="color:#339;font-weight:bold">px</span>;
-  <span style="color:#080;font-weight:bold">background-position</span>: <span style="color:#00d;font-weight:bold">-5</span><span style="color:#339;font-weight:bold">px</span> <span style="color:#00d;font-weight:bold">-288</span><span style="color:#339;font-weight:bold">px</span>;
+.<span style="color:#a6e22e">flags-london</span> {
+  <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">147</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">background-position</span>: <span style="color:#ae81ff">-5</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">-288</span><span style="color:#66d9ef">px</span>;
 }
 </code></pre></div><p><br /></p>
 <h3 id="16-what-is-the-z-index-in-css">16. What is the <code>z-index</code> in CSS?</h3>

@@ -214,34 +214,34 @@ if (!doNotTrack) {
 <p>Now we will try to implement these characteristics&hellip;</p>
 <h2 id="use-let">Use let</h2>
 <p>Let&rsquo;s define the variable using <code>let</code> and see,</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">let</span> APP_NAME <span style="color:#333">=</span> <span style="background-color:#fff0f0">&#34;Coding N Concepts&#34;</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">APP_NAME</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Coding N Concepts&#34;</span>;
 
-<span style="color:#080;font-weight:bold">function</span> getApplicationName() {
-  APP_NAME <span style="color:#333">=</span> <span style="background-color:#fff0f0">&#34;Unkown App&#34;</span>;
-  <span style="color:#080;font-weight:bold">return</span> APP_NAME;
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getApplicationName</span>() {
+  <span style="color:#a6e22e">APP_NAME</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Unkown App&#34;</span>;
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">APP_NAME</span>;
 }
 
-getApplicationName(); <span style="color:#888">// Unkown App
+<span style="color:#a6e22e">getApplicationName</span>(); <span style="color:#75715e">// Unkown App
 </span></code></pre></div><p>In the above example, function <code>getApplicationName()</code> has changed the value of <code>APP_NAME</code>. How do we prevent changing value of a global variable?</p>
 <h2 id="use-const">Use const</h2>
 <p>We can use <code>const</code> to define a constant variable instead of <code>let</code> to prevent it from changing value.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">const</span> APP_NAME <span style="color:#333">=</span> <span style="background-color:#fff0f0">&#34;Coding N Concepts&#34;</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">APP_NAME</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Coding N Concepts&#34;</span>;
 
-<span style="color:#080;font-weight:bold">function</span> getApplicationName() {
-  APP_NAME <span style="color:#333">=</span> <span style="background-color:#fff0f0">&#34;Unkown App&#34;</span>; <span style="color:#888">// This will throw TypeError
-</span><span style="color:#888"></span>  <span style="color:#080;font-weight:bold">return</span> APP_NAME;
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getApplicationName</span>() {
+  <span style="color:#a6e22e">APP_NAME</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Unkown App&#34;</span>; <span style="color:#75715e">// This will throw TypeError
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">APP_NAME</span>;
 }
 </code></pre></div><p>Trying to change value of a variable defined using <code>const</code> resulting into this error:</p>
 <pre><code>“TypeError: Assignment to constant variable.”
 </code></pre><p>So this is it? Let&rsquo;s find out</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">const</span> fruits <span style="color:#333">=</span> [<span style="background-color:#fff0f0">&#39;mango&#39;</span>, <span style="background-color:#fff0f0">&#39;apple&#39;</span>];
-fruits.push(<span style="background-color:#fff0f0">&#39;banana&#39;</span>);
-console.log(fruits); <span style="color:#888">// [&#39;mango&#39;, &#39;apple&#39;, &#39;banana&#39;]
-</span></code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">const</span> constants <span style="color:#333">=</span> {
-  APP_NAME <span style="color:#333">:</span> <span style="background-color:#fff0f0">&#34;Coding N Concepts&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fruits</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;mango&#39;</span>, <span style="color:#e6db74">&#39;apple&#39;</span>];
+<span style="color:#a6e22e">fruits</span>.<span style="color:#a6e22e">push</span>(<span style="color:#e6db74">&#39;banana&#39;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">fruits</span>); <span style="color:#75715e">// [&#39;mango&#39;, &#39;apple&#39;, &#39;banana&#39;]
+</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">constants</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">APP_NAME</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Coding N Concepts&#34;</span>
 };
-constants.APP_NAME <span style="color:#333">=</span> <span style="background-color:#fff0f0">&#34;Unknown App&#34;</span>;
-console.log(constants.APP_NAME); <span style="color:#888">// &#34;Unknown App&#34;
+<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">APP_NAME</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Unknown App&#34;</span>;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">APP_NAME</span>); <span style="color:#75715e">// &#34;Unknown App&#34;
 </span></code></pre></div><p>You can see in the above two examples that you can change the value of an <code>array</code> or an <code>object</code> even if you are using <code>const</code> because:</p>
 <blockquote>
 <p><code>const</code> does not make the <em>value</em> of the variable <em>immutable</em> but instead makes the <em>binding</em> of the variable <em>immutable</em>.</p>
@@ -253,24 +253,24 @@ console.log(constants.APP_NAME); <span style="color:#888">// &#34;Unknown App&#3
 <p>So how do we prevent changing value of <code>array</code> and <code>object</code>?</p>
 <h2 id="use-objectfreeze">Use Object.freeze()</h2>
 <p>Here is where <code>Object.freeze()</code> comes into play. <code>Object.freeze</code> ignore the change in value of <code>object</code> and <code>array</code>.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">let</span> constants <span style="color:#333">=</span> <span style="color:#007020">Object</span>.freeze({
-  APP_NAME <span style="color:#333">:</span> <span style="background-color:#fff0f0">&#34;Coding N Concepts&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">constants</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">freeze</span>({
+  <span style="color:#a6e22e">APP_NAME</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Coding N Concepts&#34;</span>
 });
 
-constants.APP_NAME <span style="color:#333">=</span> <span style="background-color:#fff0f0">&#34;Unknown App&#34;</span>;
+<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">APP_NAME</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Unknown App&#34;</span>;
 
-console.log(constants.APP_NAME); <span style="color:#888">// &#34;Coding N Concepts&#34;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">APP_NAME</span>); <span style="color:#75715e">// &#34;Coding N Concepts&#34;
 </span></code></pre></div><p>You can see in example that it doesn&rsquo;t throw any error if you try to change the value but it won&rsquo;t affect the object state.</p>
 <p><code>Object.freeze()</code> prevents from changing value of an  <code>object</code> but we can still change the reference as below:-</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">let</span> constants <span style="color:#333">=</span> <span style="color:#007020">Object</span>.freeze({
-  APP_NAME <span style="color:#333">:</span> <span style="background-color:#fff0f0">&#34;Coding N Concepts&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">constants</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">freeze</span>({
+  <span style="color:#a6e22e">APP_NAME</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Coding N Concepts&#34;</span>
 });
 
-constants <span style="color:#333">=</span> { 
-  APP_NAME <span style="color:#333">:</span> <span style="background-color:#fff0f0">&#34;Unknown App&#34;</span>
+<span style="color:#a6e22e">constants</span> <span style="color:#f92672">=</span> { 
+  <span style="color:#a6e22e">APP_NAME</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Unknown App&#34;</span>
 };
 
-console.log(constants.APP_NAME); <span style="color:#888">// &#34;Unknown App&#34;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">APP_NAME</span>); <span style="color:#75715e">// &#34;Unknown App&#34;
 </span></code></pre></div><p>If we summarize:-</p>
 <blockquote>
 <p><code>const</code> doesn&rsquo;t allow to change reference of <code>object</code> or <code>array</code> though you can change the value.</p>
@@ -280,15 +280,15 @@ console.log(constants.APP_NAME); <span style="color:#888">// &#34;Unknown App&#3
 </blockquote>
 <p>Combining them together will prevent change in both <code>reference</code> and <code>value</code> of an <code>object</code> or <code>array</code></p>
 <h2 id="use-const-and-objectfreeze-together">Use const and Object.freeze() together</h2>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">const</span> constants <span style="color:#333">=</span> <span style="color:#007020">Object</span>.freeze({
-  APP_NAME <span style="color:#333">:</span> <span style="background-color:#fff0f0">&#34;Coding N Concepts&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">constants</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">freeze</span>({
+  <span style="color:#a6e22e">APP_NAME</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Coding N Concepts&#34;</span>
 });
 
-constants.APP_NAME <span style="color:#333">=</span> <span style="background-color:#fff0f0">&#34;Unknown App&#34;</span>; <span style="color:#888">// This is ignored
-</span><span style="color:#888"></span>
-constants <span style="color:#333">=</span> { 
-  APP_NAME <span style="color:#333">:</span> <span style="background-color:#fff0f0">&#34;Unknown App&#34;</span> 
-}; <span style="color:#888">// This will throw TypeError
+<span style="color:#a6e22e">constants</span>.<span style="color:#a6e22e">APP_NAME</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Unknown App&#34;</span>; <span style="color:#75715e">// This is ignored
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">constants</span> <span style="color:#f92672">=</span> { 
+  <span style="color:#a6e22e">APP_NAME</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Unknown App&#34;</span> 
+}; <span style="color:#75715e">// This will throw TypeError
 </span></code></pre></div><p>The above example shows that combining both <code>const</code> and <code>Object.freeze()</code> is very useful to define constants and configuration in JavaScript.</p>
 		</div>
 		<footer class="post__footer">

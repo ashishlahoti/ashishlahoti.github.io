@@ -251,11 +251,11 @@ if (!doNotTrack) {
 <br /></p>
 <h3 id="5-what-is-spring-boot-starter-parent">5. What is spring-boot-starter-parent?</h3>
 <p>The <code>spring-boot-starter-parent</code> is spring boot starter project. It can be used as a parent in our project&rsquo;s pom.xml:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-pom.xml" data-lang="pom.xml"><span style="color:#070">&lt;parent&gt;</span>
-    <span style="color:#070">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#070">&lt;/groupId&gt;</span>
-    <span style="color:#070">&lt;artifactId&gt;</span>spring-boot-starter-parent<span style="color:#070">&lt;/artifactId&gt;</span>
-    <span style="color:#070">&lt;version&gt;</span>2.2.6.RELEASE<span style="color:#070">&lt;/version&gt;</span>
-<span style="color:#070">&lt;/parent&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-pom.xml" data-lang="pom.xml"><span style="color:#f92672">&lt;parent&gt;</span>
+    <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+    <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-parent<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#f92672">&lt;version&gt;</span>2.2.6.RELEASE<span style="color:#f92672">&lt;/version&gt;</span>
+<span style="color:#f92672">&lt;/parent&gt;</span>
 </code></pre></div><p>parent project provide following things:-</p>
 <ol>
 <li>Default Java compiler version</li>
@@ -272,63 +272,63 @@ if (!doNotTrack) {
 <p>Also read <a href="https://codingnconcepts.com/spring-boot/how-to-change-server-port/">different ways to change server port in spring boot</a></p>
 </blockquote>
 <p>You can always change the default server tomcat to another embedded server such as jetty or Undertow by excluding the dependency of tomcat <code>spring-boot-starter-tomcat</code> from <code>spring-boot-starter-web</code> and adding the dependency of other server like jetty <code>spring-boot-starter-jetty</code>.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-pom.xml" data-lang="pom.xml"><span style="color:#888">&lt;!-- Exclude Spring Boot&#39;s Default Tomcat Server --&gt;</span>
-<span style="color:#070">&lt;dependency&gt;</span>
-    <span style="color:#070">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#070">&lt;/groupId&gt;</span>
-    <span style="color:#070">&lt;artifactId&gt;</span>spring-boot-starter-web<span style="color:#070">&lt;/artifactId&gt;</span>
-    <span style="color:#070">&lt;exclusions&gt;</span>
-        <span style="color:#070">&lt;exclusion&gt;</span>
-            <span style="color:#070">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#070">&lt;/groupId&gt;</span>
-            <span style="color:#070">&lt;artifactId&gt;</span>spring-boot-starter-tomcat<span style="color:#070">&lt;/artifactId&gt;</span>
-        <span style="color:#070">&lt;/exclusion&gt;</span>
-    <span style="color:#070">&lt;/exclusions&gt;</span>
-<span style="color:#070">&lt;/dependency&gt;</span>
-<span style="color:#888">&lt;!-- Add Jetty Server Dependency --&gt;</span>
-<span style="color:#070">&lt;dependency&gt;</span>
-    <span style="color:#070">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#070">&lt;/groupId&gt;</span>
-    <span style="color:#070">&lt;artifactId&gt;</span>spring-boot-starter-jetty<span style="color:#070">&lt;/artifactId&gt;</span>
-<span style="color:#070">&lt;/dependency&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-pom.xml" data-lang="pom.xml"><span style="color:#75715e">&lt;!-- Exclude Spring Boot&#39;s Default Tomcat Server --&gt;</span>
+<span style="color:#f92672">&lt;dependency&gt;</span>
+    <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+    <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-web<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#f92672">&lt;exclusions&gt;</span>
+        <span style="color:#f92672">&lt;exclusion&gt;</span>
+            <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+            <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-tomcat<span style="color:#f92672">&lt;/artifactId&gt;</span>
+        <span style="color:#f92672">&lt;/exclusion&gt;</span>
+    <span style="color:#f92672">&lt;/exclusions&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
+<span style="color:#75715e">&lt;!-- Add Jetty Server Dependency --&gt;</span>
+<span style="color:#f92672">&lt;dependency&gt;</span>
+    <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+    <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-jetty<span style="color:#f92672">&lt;/artifactId&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
 </code></pre></div><p><br /></p>
 <h3 id="7-what-is-default-logging-in-sprint-boot-how-to-change-default-logging">7. What is default logging in Sprint Boot? How to change default logging?</h3>
 <p>Spring boot provides <strong>logback</strong> as default logging. If you want to change default logging to <strong>log4j2</strong> then exclude <code>spring-boot-starter-logging</code> from <code>spring-boot-starter</code> and add <code>spring-boot-starter-log4j2</code> dependency like below:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-pom.xml" data-lang="pom.xml"><span style="color:#888">&lt;!-- Exclude Spring Boot&#39;s Default Logback Logging --&gt;</span>
-<span style="color:#070">&lt;dependency&gt;</span>
-	<span style="color:#070">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#070">&lt;/groupId&gt;</span>
-	<span style="color:#070">&lt;artifactId&gt;</span>spring-boot-starter<span style="color:#070">&lt;/artifactId&gt;</span>
-	<span style="color:#070">&lt;exclusions&gt;</span>
-		<span style="color:#070">&lt;exclusion&gt;</span>
-			<span style="color:#070">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#070">&lt;/groupId&gt;</span>
-			<span style="color:#070">&lt;artifactId&gt;</span>spring-boot-starter-logging<span style="color:#070">&lt;/artifactId&gt;</span>
-		<span style="color:#070">&lt;/exclusion&gt;</span>
-	<span style="color:#070">&lt;/exclusions&gt;</span>
-<span style="color:#070">&lt;/dependency&gt;</span>
-<span style="color:#888">&lt;!-- Add Log4j2 Dependency --&gt;</span>
-<span style="color:#070">&lt;dependency&gt;</span>
-	<span style="color:#070">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#070">&lt;/groupId&gt;</span>
-	<span style="color:#070">&lt;artifactId&gt;</span>spring-boot-starter-log4j2<span style="color:#070">&lt;/artifactId&gt;</span>
-<span style="color:#070">&lt;/dependency&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-pom.xml" data-lang="pom.xml"><span style="color:#75715e">&lt;!-- Exclude Spring Boot&#39;s Default Logback Logging --&gt;</span>
+<span style="color:#f92672">&lt;dependency&gt;</span>
+	<span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+	<span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter<span style="color:#f92672">&lt;/artifactId&gt;</span>
+	<span style="color:#f92672">&lt;exclusions&gt;</span>
+		<span style="color:#f92672">&lt;exclusion&gt;</span>
+			<span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+			<span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-logging<span style="color:#f92672">&lt;/artifactId&gt;</span>
+		<span style="color:#f92672">&lt;/exclusion&gt;</span>
+	<span style="color:#f92672">&lt;/exclusions&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
+<span style="color:#75715e">&lt;!-- Add Log4j2 Dependency --&gt;</span>
+<span style="color:#f92672">&lt;dependency&gt;</span>
+	<span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+	<span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-log4j2<span style="color:#f92672">&lt;/artifactId&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
 </code></pre></div><p><br /></p>
 <h3 id="8-how-to-generate-deployable-jar-and-war-file-in-spring-boot">8. How to generate deployable JAR and WAR file in Spring Boot?</h3>
 <p>Spring boot provides a maven plugin <code>spring-boot-maven-plugin</code> to generate JAR and WAR files which we can add in pom.xml as follows:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-pom.xml" data-lang="pom.xml"><span style="color:#070">&lt;plugin&gt;</span>
-    <span style="color:#070">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#070">&lt;/groupId&gt;</span>
-    <span style="color:#070">&lt;artifactId&gt;</span>spring-boot-maven-plugin<span style="color:#070">&lt;/artifactId&gt;</span>
-<span style="color:#070">&lt;/plugin&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-pom.xml" data-lang="pom.xml"><span style="color:#f92672">&lt;plugin&gt;</span>
+    <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+    <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-maven-plugin<span style="color:#f92672">&lt;/artifactId&gt;</span>
+<span style="color:#f92672">&lt;/plugin&gt;</span>
 </code></pre></div><h6 id="jar">JAR</h6>
 <p>When this plugin is in place, we get a fat executable JAR after executing maven package phase. This JAR contains all the necessary dependencies, including an embedded server. Thus, we do not need to worry about configuring an external server.</p>
 <h6 id="war">WAR</h6>
 <p>When we want to generate a WAR file, we change packaging to <strong>war</strong> and change scope of embedded server as <strong>provided</strong> in pom.xml</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-pom.xml" data-lang="pom.xml"><span style="color:#888">&lt;!-- Set packaging to war, 
-</span><span style="color:#888">     default value is jar if not provided --&gt;</span>
-<span style="color:#070">&lt;packaging&gt;</span>war<span style="color:#070">&lt;/packaging&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-pom.xml" data-lang="pom.xml"><span style="color:#75715e">&lt;!-- Set packaging to war, 
+</span><span style="color:#75715e">     default value is jar if not provided --&gt;</span>
+<span style="color:#f92672">&lt;packaging&gt;</span>war<span style="color:#f92672">&lt;/packaging&gt;</span>
 
-<span style="color:#888">&lt;!-- Change the scope of embedded server as provided,
-</span><span style="color:#888">     so that WAR doesn&#39;t contain embedded server in its package --&gt;</span>
-<span style="color:#070">&lt;dependency&gt;</span>
-    <span style="color:#070">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#070">&lt;/groupId&gt;</span>
-    <span style="color:#070">&lt;artifactId&gt;</span>spring-boot-starter-tomcat<span style="color:#070">&lt;/artifactId&gt;</span>
-    <span style="color:#070">&lt;scope&gt;</span>provided<span style="color:#070">&lt;/scope&gt;</span>
-<span style="color:#070">&lt;/dependency&gt;</span>
+<span style="color:#75715e">&lt;!-- Change the scope of embedded server as provided,
+</span><span style="color:#75715e">     so that WAR doesn&#39;t contain embedded server in its package --&gt;</span>
+<span style="color:#f92672">&lt;dependency&gt;</span>
+    <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+    <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-tomcat<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#f92672">&lt;scope&gt;</span>provided<span style="color:#f92672">&lt;/scope&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
 </code></pre></div><p><br /></p>
 <h3 id="9-how-to-configure-properties-in-spring-boot">9. How to configure properties in Spring Boot?</h3>
 <p>Spring Boot provides support for external configuration, allowing us to run the same application in various environments. We can use properties files, YAML files, environment variables, system properties, and command-line option arguments to specify configuration properties.</p>
@@ -343,10 +343,10 @@ if (!doNotTrack) {
 <h3 id="10-what-is-spring-boot-actuator">10. What is Spring Boot Actuator?</h3>
 <p>Spring Boot Actuator provides production-ready features for monitoring and managing spring boot application by exposing many useful HTTP endpoints related to application health, info etc.</p>
 <p>To Enable Actuator in spring boot application, we just need to include <code>spring-boot-starter-actuator</code> dependency in the pom.xml file:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-pom.xml" data-lang="pom.xml"><span style="color:#070">&lt;dependency&gt;</span>
-    <span style="color:#070">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#070">&lt;/groupId&gt;</span>
-    <span style="color:#070">&lt;artifactId&gt;</span>spring-boot-starter-actuator<span style="color:#070">&lt;/artifactId&gt;</span>
-<span style="color:#070">&lt;/dependency&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-pom.xml" data-lang="pom.xml"><span style="color:#f92672">&lt;dependency&gt;</span>
+    <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+    <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-actuator<span style="color:#f92672">&lt;/artifactId&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
 </code></pre></div><p>Some of the most common built-in endpoints Actuator provides:</p>
 <ul>
 <li><strong>info:</strong> Displays arbitrary application information</li>
@@ -363,10 +363,10 @@ if (!doNotTrack) {
 </ul>
 <h3 id="11-what-is-spring-boot-devtools">11. What is Spring Boot Devtools?</h3>
 <p>Spring Boot DevTools, is a set of tools making the development process easier. To Enable DevTools in spring boot application, we just need to add a dependency to the pom.xml file:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-pom.xml" data-lang="pom.xml"><span style="color:#070">&lt;dependency&gt;</span>
-    <span style="color:#070">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#070">&lt;/groupId&gt;</span>
-    <span style="color:#070">&lt;artifactId&gt;</span>spring-boot-devtools<span style="color:#070">&lt;/artifactId&gt;</span>
-<span style="color:#070">&lt;/dependency&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-pom.xml" data-lang="pom.xml"><span style="color:#f92672">&lt;dependency&gt;</span>
+    <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+    <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-devtools<span style="color:#f92672">&lt;/artifactId&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
 </code></pre></div><p>The spring-boot-devtools module is automatically disabled if the application runs in production. The repackaging of archives also excludes this module by default. Hence, it won&rsquo;t bring any overhead to our final product.</p>
 <p>By default, DevTools applies properties suitable to a development environment. These properties disable template caching, enable debug logging for the web group, and so on. As a result, we have this sensible development-time configuration without setting any properties.</p>
 <p>Applications using DevTools restart whenever a file on the classpath changes. This is a very helpful feature in development, as it gives quick feedback for modifications.</p>

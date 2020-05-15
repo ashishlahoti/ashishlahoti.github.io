@@ -208,20 +208,20 @@ if (!doNotTrack) {
 <li>Exclude default dependency <code>spring-boot-starter-tomcat</code> added in <code>spring-boot-start-web</code></li>
 <li>Add <code>spring-boot-starter-jetty</code> dependency.</li>
 </ol>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-pom.xml" data-lang="pom.xml"><span style="color:#070">&lt;dependency&gt;</span>
-    <span style="color:#070">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#070">&lt;/groupId&gt;</span>
-    <span style="color:#070">&lt;artifactId&gt;</span>spring-boot-starter-web<span style="color:#070">&lt;/artifactId&gt;</span>
-    <span style="color:#070">&lt;exclusions&gt;</span>
-        <span style="color:#070">&lt;exclusion&gt;</span>
-            <span style="color:#070">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#070">&lt;/groupId&gt;</span>
-            <span style="color:#070">&lt;artifactId&gt;</span>spring-boot-starter-tomcat<span style="color:#070">&lt;/artifactId&gt;</span>
-        <span style="color:#070">&lt;/exclusion&gt;</span>
-    <span style="color:#070">&lt;/exclusions&gt;</span>
-<span style="color:#070">&lt;/dependency&gt;</span>
-<span style="color:#070">&lt;dependency&gt;</span>
-    <span style="color:#070">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#070">&lt;/groupId&gt;</span>
-    <span style="color:#070">&lt;artifactId&gt;</span>spring-boot-starter-jetty<span style="color:#070">&lt;/artifactId&gt;</span>
-<span style="color:#070">&lt;/dependency&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-pom.xml" data-lang="pom.xml"><span style="color:#f92672">&lt;dependency&gt;</span>
+    <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+    <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-web<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#f92672">&lt;exclusions&gt;</span>
+        <span style="color:#f92672">&lt;exclusion&gt;</span>
+            <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+            <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-tomcat<span style="color:#f92672">&lt;/artifactId&gt;</span>
+        <span style="color:#f92672">&lt;/exclusion&gt;</span>
+    <span style="color:#f92672">&lt;/exclusions&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
+<span style="color:#f92672">&lt;dependency&gt;</span>
+    <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+    <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-jetty<span style="color:#f92672">&lt;/artifactId&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
 </code></pre></div><p>That&rsquo;s it. You have replaced tomcat with jetty server.</p>
 <p><br /></p>
 <h4 id="observations">Observations</h4>

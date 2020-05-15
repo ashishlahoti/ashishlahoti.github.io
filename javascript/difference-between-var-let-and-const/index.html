@@ -212,39 +212,39 @@ if (!doNotTrack) {
 <p>When variables is defined outside a function and accessible everywhere. All <code>var</code>, <code>let</code> and <code>const</code> are global scope.</p>
 <h4 id="2-function-scope">2. Function Scope</h4>
 <p>Variables defined using <code>var</code> are function-scoped because if it is defined inside function, their visibility is limited to the function, or nested function. When you try to use it outside of the function, you’ll get an error.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">function</span> myFn() {
-   <span style="color:#080;font-weight:bold">var</span> foo <span style="color:#333">=</span> <span style="background-color:#fff0f0">&#39;peekaboo!&#39;</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">myFn</span>() {
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;peekaboo!&#39;</span>;
 
-   console.log(foo); <span style="color:#888">// &#39;peekaboo!&#39;
-</span><span style="color:#888"></span>}
+   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foo</span>); <span style="color:#75715e">// &#39;peekaboo!&#39;
+</span><span style="color:#75715e"></span>}
 
-console.log(foo); <span style="color:#888">// ReferenceError: foo is not defined
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foo</span>); <span style="color:#75715e">// ReferenceError: foo is not defined
 </span></code></pre></div><h4 id="3-block-scope">3. Block Scope</h4>
 <p>Variables defined using <code>let</code> or <code>const</code> are block-scoped because if it is defined inside block of code (code between curly braces {}), their visibility is limited to the block of code, any nested block. When you try to use it outside of the block, you’ll get an error.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">if</span> (<span style="color:#080;font-weight:bold">true</span>) {
-    <span style="color:#080;font-weight:bold">var</span> foo <span style="color:#333">=</span> <span style="background-color:#fff0f0">&#39;peekaboo!&#39;</span>;
-    <span style="color:#080;font-weight:bold">let</span> bar <span style="color:#333">=</span> <span style="background-color:#fff0f0">&#39;i see u&#39;</span>;
-    <span style="color:#080;font-weight:bold">const</span> baz <span style="color:#333">=</span> <span style="background-color:#fff0f0">&#39;baby blue!&#39;</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">true</span>) {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;peekaboo!&#39;</span>;
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">bar</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;i see u&#39;</span>;
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">baz</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;baby blue!&#39;</span>;
 
-    console.log(foo); <span style="color:#888">// &#39;peekaboo!&#39;;
-</span><span style="color:#888"></span>    console.log(bar); <span style="color:#888">// &#39;i see u&#39;;
-</span><span style="color:#888"></span>    console.log(baz); <span style="color:#888">// &#39;baby blue!&#39;;
-</span><span style="color:#888"></span>}
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foo</span>); <span style="color:#75715e">// &#39;peekaboo!&#39;;
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">bar</span>); <span style="color:#75715e">// &#39;i see u&#39;;
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">baz</span>); <span style="color:#75715e">// &#39;baby blue!&#39;;
+</span><span style="color:#75715e"></span>}
 
-console.log(foo); <span style="color:#888">// &#39;peekaboo!&#39;;
-</span><span style="color:#888"></span>console.log(bar); <span style="color:#888">// ReferenceError: bar is not defined
-</span><span style="color:#888"></span>console.log(baz); <span style="color:#888">// ReferenceError: baz is not defined
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foo</span>); <span style="color:#75715e">// &#39;peekaboo!&#39;;
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">bar</span>); <span style="color:#75715e">// ReferenceError: bar is not defined
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">baz</span>); <span style="color:#75715e">// ReferenceError: baz is not defined
 </span></code></pre></div><h2 id="usage">Usage</h2>
 <hr>
 <h3 id="1-var">1. &ldquo;var&rdquo;</h3>
 <p><code>var</code> was the only keyword for variable declaration before ES6.</p>
 <h5 id="var-outside-of-a-for-loop">var outside of a for-loop</h5>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#888">// for-loop
-</span><span style="color:#888"></span><span style="color:#080;font-weight:bold">for</span> (<span style="color:#080;font-weight:bold">var</span> i <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">0</span>; i <span style="color:#333">&lt;</span> <span style="color:#00d;font-weight:bold">3</span>; i<span style="color:#333">++</span>) {
-  console.log(i);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// for-loop
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">i</span>);
 }
 
-console.log(i);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">i</span>);
 </code></pre></div><pre><code><div class="code_output">Output</div>
 0
 1
@@ -253,26 +253,26 @@ console.log(i);
 </code></pre><p>Since <code>var</code> is function-scoped. The variable <code>i</code> can be accessed outside for-loop (block of code)</p>
 <h5 id="var-reassigning">var reassigning</h5>
 <p>Variable using <code>var</code> can be reassigned with new value and also can be redefined.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">function</span> myFn() {
-    <span style="color:#080;font-weight:bold">var</span> foo <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">1</span>;
-    foo <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">30</span>;
-    <span style="color:#080;font-weight:bold">var</span> foo <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">101</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">myFn</span>() {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+    <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">30</span>;
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">101</span>;
 
-    console.log(foo);  
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foo</span>);  
 }
 
-myFn();
+<span style="color:#a6e22e">myFn</span>();
 </code></pre></div><pre><code><div class="code_output">Output</div>
 101
 </code></pre><p><br /></p>
 <h3 id="2-let">2. &ldquo;let&rdquo;</h3>
 <h5 id="let-outside-of-a-for-loop">let outside of a for-loop</h5>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#888">// for-loop
-</span><span style="color:#888"></span><span style="color:#080;font-weight:bold">for</span> (<span style="color:#080;font-weight:bold">let</span> i <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">0</span>; i <span style="color:#333">&lt;</span> <span style="color:#00d;font-weight:bold">3</span>; i<span style="color:#333">++</span>) {
-  console.log(i);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// for-loop
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">i</span>);
 }
 
-console.log(i);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">i</span>);
 </code></pre></div><pre><code><div class="code_output">Output</div>
 0
 1
@@ -281,34 +281,34 @@ ReferenceError: i is not defined
 </code></pre><p>Since <code>let</code> is block-scoped. The variable <code>i</code> is not accessible outside for-loop (block of code)</p>
 <h5 id="let-reassigning-and-redefining">let reassigning and redefining</h5>
 <p>Variable using <code>let</code> can be reassigned with new value but can not be redefined.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">function</span> myFn() {
-    <span style="color:#080;font-weight:bold">let</span> foo <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">1</span>;
-    foo <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">30</span>;
-    <span style="color:#080;font-weight:bold">let</span> foo <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">101</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">myFn</span>() {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+    <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">30</span>;
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">101</span>;
 
-    console.log(foo);  
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foo</span>);  
 }
 
-myFn();
+<span style="color:#a6e22e">myFn</span>();
 </code></pre></div><pre><code><div class="code_output">Output</div>
 error: Identifier 'foo' has already been declared
 </code></pre><p>However, if the <code>let</code> variable is defined in different scopes, there will be no error.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">let</span> foo <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">1</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
 
-<span style="color:#080;font-weight:bold">function</span> myFn() {
-  <span style="color:#080;font-weight:bold">let</span> foo <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">2</span>;
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">myFn</span>() {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
 
-  console.log(foo);
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foo</span>);
   
-  <span style="color:#080;font-weight:bold">if</span>(<span style="color:#080;font-weight:bold">true</span>){
-   <span style="color:#080;font-weight:bold">let</span> foo <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">3</span>;
+  <span style="color:#66d9ef">if</span>(<span style="color:#66d9ef">true</span>){
+   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
    
-   console.log(foo);
+   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foo</span>);
   }
 }
 
-console.log(foo);
-myFn();
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foo</span>);
+<span style="color:#a6e22e">myFn</span>();
 </code></pre></div><pre><code><div class="code_output">Output</div>
 1
 2
@@ -317,100 +317,100 @@ myFn();
 <p><br /></p>
 <h3 id="3-const">3. &ldquo;const&rdquo;</h3>
 <p>The keyword <code>const</code> is similar to <code>let</code>, it’s block-scoped, however, you can’t reassign the value to it.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">const</span> PI <span style="color:#333">=</span> <span style="color:#60e;font-weight:bold">3.1415</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">PI</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.1415</span>;
 
-PI <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">5</span>; <span style="color:#888">// &#34;TypeError: Assignment to constant variable.
+<span style="color:#a6e22e">PI</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>; <span style="color:#75715e">// &#34;TypeError: Assignment to constant variable.
 </span></code></pre></div><p>However, new items can still be pushed into an array constant or added to an object. The following 2 snippets work without complaining because we are not trying to reassign to the variables:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">const</span> someArr <span style="color:#333">=</span> [<span style="color:#00d;font-weight:bold">3</span>, <span style="color:#00d;font-weight:bold">4</span>, <span style="color:#00d;font-weight:bold">5</span>];
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">someArr</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>];
 
-someArr.push(<span style="color:#00d;font-weight:bold">6</span>);
-</code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">const</span> someObj <span style="color:#333">=</span> {
-  dog<span style="color:#333">:</span> <span style="background-color:#fff0f0">&#39;Skip&#39;</span>,
-  cat<span style="color:#333">:</span> <span style="background-color:#fff0f0">&#39;Caramel&#39;</span>,
-  bird<span style="color:#333">:</span> <span style="background-color:#fff0f0">&#39;Jack&#39;</span>
+<span style="color:#a6e22e">someArr</span>.<span style="color:#a6e22e">push</span>(<span style="color:#ae81ff">6</span>);
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">someObj</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">dog</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Skip&#39;</span>,
+  <span style="color:#a6e22e">cat</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Caramel&#39;</span>,
+  <span style="color:#a6e22e">bird</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Jack&#39;</span>
 };
 
-someObj.camel <span style="color:#333">=</span> <span style="background-color:#fff0f0">&#39;Bob&#39;</span>;
+<span style="color:#a6e22e">someObj</span>.<span style="color:#a6e22e">camel</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Bob&#39;</span>;
 </code></pre></div><h2 id="hoisting">Hoisting</h2>
 <hr>
 <blockquote>
 <p>Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution</p>
 </blockquote>
 <p>In case of <code>var</code> variables, their values are initialized with <code>undefined</code> in hoisting process.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">console.log(foo); 
-<span style="color:#080;font-weight:bold">var</span> foo <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">1</span>;
-console.log(foo);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foo</span>); 
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foo</span>);
 
-console.log(bar); 
-bar <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">2</span>;
-console.log(bar); 
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">bar</span>); 
+<span style="color:#a6e22e">bar</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">bar</span>); 
 
-<span style="color:#080;font-weight:bold">var</span> bar;
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">bar</span>;
 </code></pre></div><p>is interpreted as this</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">var</span> foo;
-<span style="color:#080;font-weight:bold">var</span> bar;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">foo</span>;
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">bar</span>;
 
-console.log(foo); <span style="color:#888">// undefined
-</span><span style="color:#888"></span>foo <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">1</span>;
-console.log(foo); <span style="color:#888">// 1
-</span><span style="color:#888"></span>
-console.log(bar); <span style="color:#888">// undefined
-</span><span style="color:#888"></span>bar <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">2</span>;
-console.log(bar); <span style="color:#888">// 2
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foo</span>); <span style="color:#75715e">// undefined
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foo</span>); <span style="color:#75715e">// 1
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">bar</span>); <span style="color:#75715e">// undefined
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">bar</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">bar</span>); <span style="color:#75715e">// 2
 </span></code></pre></div><h5 id="can-you-guess-what-is-output-of-below-code-snippet">Can you guess what is output of below code snippet?</h5>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">var</span> foo <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">1</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
 
-<span style="color:#080;font-weight:bold">function</span> myFun(){
-  console.log(foo);
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">myFun</span>(){
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foo</span>);
   
-  <span style="color:#080;font-weight:bold">var</span> foo <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">2</span>;
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
 }
 
-myFun();
+<span style="color:#a6e22e">myFun</span>();
 </code></pre></div><p>Have you guessed <code>foo = 1</code> or <code>foo = 2</code>?</p>
 <p>It&rsquo;s neither one of them. It will print <code>undefined</code>. Let&rsquo;s see how it is interpreted by the compiler in hoisting process,</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">var</span> foo;
-foo <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">1</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">foo</span>;
+<span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
 
-<span style="color:#080;font-weight:bold">function</span> myFun(){
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">myFun</span>(){
   
-  <span style="color:#080;font-weight:bold">var</span> foo; <span style="color:#888">// var hoisted and initialized with undefined
-</span><span style="color:#888"></span>  console.log(foo); <span style="color:#888">// undefined
-</span><span style="color:#888"></span>  
-  foo <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">2</span>;
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">foo</span>; <span style="color:#75715e">// var hoisted and initialized with undefined
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foo</span>); <span style="color:#75715e">// undefined
+</span><span style="color:#75715e"></span>  
+  <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
 }
 
-myFun();
+<span style="color:#a6e22e">myFun</span>();
 </code></pre></div><p>Just like <code>var</code>, <code>let</code> declarations also hoisted to the top but unlike <code>var</code> which is initialized as undefined, the <code>let</code> variable is not initialized. So if you try to use a <code>let</code> variable before declaration, you&rsquo;ll get a Reference Error. <code>const</code> variables are similar to <code>let</code> variables in terms of hoisting.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">console.log(foo);
-<span style="color:#080;font-weight:bold">let</span> foo <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">1</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foo</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
 </code></pre></div><pre><code><div class="code_output">Output</div>
 ReferenceError: foo is not defined
 </code></pre><h5 id="can-you-guess-what-is-output-of-below-code-snippet-1">Can you guess what is output of below code snippet?</h5>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">let</span> foo <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">1</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
 
-<span style="color:#080;font-weight:bold">function</span> myFun(){
-  console.log(foo);
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">myFun</span>(){
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foo</span>);
   
-  <span style="color:#080;font-weight:bold">let</span> foo <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">2</span>;
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
 }
 
-myFun();
+<span style="color:#a6e22e">myFun</span>();
 </code></pre></div><p>Have you guessed <code>foo = undefined</code>?</p>
 <p>No its not. Let&rsquo;s see how it is interpreted by the compiler in hoisting process,</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#080;font-weight:bold">let</span> foo;
-foo <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">1</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">foo</span>;
+<span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
 
-<span style="color:#080;font-weight:bold">function</span> myFun(){
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">myFun</span>(){
   
-  <span style="color:#080;font-weight:bold">let</span> foo; <span style="color:#888">// let hoisted without initialization unlike var
-</span><span style="color:#888"></span>  console.log(foo); <span style="color:#888">// ReferenceError: Cannot access &#39;foo&#39; before initialization
-</span><span style="color:#888"></span>
-  foo <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">2</span>;
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">foo</span>; <span style="color:#75715e">// let hoisted without initialization unlike var
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foo</span>); <span style="color:#75715e">// ReferenceError: Cannot access &#39;foo&#39; before initialization
+</span><span style="color:#75715e"></span>
+  <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
 
 }
 
-myFun();
+<span style="color:#a6e22e">myFun</span>();
 </code></pre></div><h2 id="summary">Summary</h2>
 <hr>
 <p>So just in case, you missed the differences, here they are :</p>

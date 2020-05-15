@@ -208,50 +208,50 @@ if (!doNotTrack) {
 <li>Print alternate number using two threads.</li>
 <li>Print even numbers by one thread and odd numbers by another thread.</li>
 </ul>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-weight:bold">package</span> <span style="color:#0e84b5;font-weight:bold">com.abc</span><span style="color:#333">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.abc<span style="color:#f92672">;</span>
 
-<span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">PingPong</span> <span style="color:#333">{</span>
-  <span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">static</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">main</span><span style="color:#333">(</span>String<span style="color:#333">[]</span> args<span style="color:#333">)</span> <span style="color:#333">{</span>
-    Object LOCK_OBJECT <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> Object<span style="color:#333">();</span>
-    Thread ping <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> Thread<span style="color:#333">(</span><span style="color:#080;font-weight:bold">new</span> PingPongThread<span style="color:#333">(</span>LOCK_OBJECT<span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;Ping&#34;</span><span style="color:#333">));</span>
-    Thread pong <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> Thread<span style="color:#333">(</span><span style="color:#080;font-weight:bold">new</span> PingPongThread<span style="color:#333">(</span>LOCK_OBJECT<span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;Pong&#34;</span><span style="color:#333">));</span>
-    ping<span style="color:#333">.</span><span style="color:#00c">start</span><span style="color:#333">();</span>
-    pong<span style="color:#333">.</span><span style="color:#00c">start</span><span style="color:#333">();</span>
-  <span style="color:#333">}</span>
-<span style="color:#333">}</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PingPong</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    Object LOCK_OBJECT <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Object<span style="color:#f92672">();</span>
+    Thread ping <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Thread<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> PingPongThread<span style="color:#f92672">(</span>LOCK_OBJECT<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Ping&#34;</span><span style="color:#f92672">));</span>
+    Thread pong <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Thread<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> PingPongThread<span style="color:#f92672">(</span>LOCK_OBJECT<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Pong&#34;</span><span style="color:#f92672">));</span>
+    ping<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">();</span>
+    pong<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">();</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 
-<span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">PingPongThread</span> <span style="color:#080;font-weight:bold">implements</span> Runnable<span style="color:#333">{</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PingPongThread</span> <span style="color:#66d9ef">implements</span> Runnable<span style="color:#f92672">{</span>
 
-  <span style="color:#080;font-weight:bold">private</span> Object LOCK_OBJECT<span style="color:#333">;</span>
-  <span style="color:#080;font-weight:bold">private</span> String name<span style="color:#333">;</span>
+  <span style="color:#66d9ef">private</span> Object LOCK_OBJECT<span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">private</span> String name<span style="color:#f92672">;</span>
 
-  <span style="color:#080;font-weight:bold">public</span> <span style="color:#06b;font-weight:bold">PingPongThread</span><span style="color:#333">(</span>Object LOCK_OBJECT<span style="color:#333">,</span> String name<span style="color:#333">)</span> <span style="color:#333">{</span>
-    <span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">LOCK_OBJECT</span> <span style="color:#333">=</span> LOCK_OBJECT<span style="color:#333">;</span>
-    <span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">name</span> <span style="color:#333">=</span> name<span style="color:#333">;</span>
-  <span style="color:#333">}</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">PingPongThread</span><span style="color:#f92672">(</span>Object LOCK_OBJECT<span style="color:#f92672">,</span> String name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">LOCK_OBJECT</span> <span style="color:#f92672">=</span> LOCK_OBJECT<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
 
-  <span style="color:#555;font-weight:bold">@Override</span>
-  <span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">run</span><span style="color:#333">()</span> <span style="color:#333">{</span>
-    <span style="color:#080;font-weight:bold">synchronized</span> <span style="color:#333">(</span>LOCK_OBJECT<span style="color:#333">)</span> <span style="color:#333">{</span>
-      <span style="color:#080;font-weight:bold">while</span><span style="color:#333">(</span><span style="color:#080;font-weight:bold">true</span><span style="color:#333">)</span> <span style="color:#333">{</span>
-        System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">.</span><span style="color:#00c">println</span><span style="color:#333">(</span>name<span style="color:#333">);</span>
+  <span style="color:#a6e22e">@Override</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">run</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">synchronized</span> <span style="color:#f92672">(</span>LOCK_OBJECT<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">while</span><span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>name<span style="color:#f92672">);</span>
 
-        <span style="color:#080;font-weight:bold">try</span> <span style="color:#333">{</span>
-          Thread<span style="color:#333">.</span><span style="color:#00c">sleep</span><span style="color:#333">(</span>1000<span style="color:#333">);</span>
-        <span style="color:#333">}</span> <span style="color:#080;font-weight:bold">catch</span> <span style="color:#333">(</span>InterruptedException e1<span style="color:#333">)</span> <span style="color:#333">{</span>
-          e1<span style="color:#333">.</span><span style="color:#00c">printStackTrace</span><span style="color:#333">();</span>
-        <span style="color:#333">}</span>
-        LOCK_OBJECT<span style="color:#333">.</span><span style="color:#00c">notify</span><span style="color:#333">();</span>
+        <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+          Thread<span style="color:#f92672">.</span><span style="color:#a6e22e">sleep</span><span style="color:#f92672">(</span>1000<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>InterruptedException e1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+          e1<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+        <span style="color:#f92672">}</span>
+        LOCK_OBJECT<span style="color:#f92672">.</span><span style="color:#a6e22e">notify</span><span style="color:#f92672">();</span>
 
-        <span style="color:#080;font-weight:bold">try</span> <span style="color:#333">{</span>
-          LOCK_OBJECT<span style="color:#333">.</span><span style="color:#00c">wait</span><span style="color:#333">(</span>1000<span style="color:#333">);</span>
-        <span style="color:#333">}</span> <span style="color:#080;font-weight:bold">catch</span> <span style="color:#333">(</span>InterruptedException e<span style="color:#333">)</span> <span style="color:#333">{</span>
-          e<span style="color:#333">.</span><span style="color:#00c">printStackTrace</span><span style="color:#333">();</span>
-        <span style="color:#333">}</span>
-      <span style="color:#333">}</span>
-    <span style="color:#333">}</span>
-  <span style="color:#333">}</span>
-<span style="color:#333">}</span>
+        <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+          LOCK_OBJECT<span style="color:#f92672">.</span><span style="color:#a6e22e">wait</span><span style="color:#f92672">(</span>1000<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>InterruptedException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+          e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+        <span style="color:#f92672">}</span>
+      <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 </code></pre></div>
 		</div>
 		<footer class="post__footer">

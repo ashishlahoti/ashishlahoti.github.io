@@ -208,7 +208,7 @@ if (!doNotTrack) {
 <hr>
 <p>First of all we need to understand that all these three functions call, apply and bind are prototype of <code>Function</code>. What does that mean?</p>
 <p>Let&rsquo;s print Function&rsquo;s structure to understand it.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">console.dir(<span style="color:#007020">Function</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">dir</span>(Function);
 </code></pre></div><pre><code>▼ ƒ Function()
       arguments: (...)
       caller: (...)
@@ -233,17 +233,17 @@ if (!doNotTrack) {
 <h1 id="when-to-use-these-functions">When to use these functions</h1>
 <hr>
 <p>When you define a new function and call it from somewhere in your code, it is executed in a context. This context is called <code>this</code> and it refers to an object. This object can vary depending upon how you called a function.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#080;font-weight:bold">var</span> a <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">1</span>;
-<span style="color:#080;font-weight:bold">var</span> increment <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">function</span>(){
-    <span style="color:#080;font-weight:bold">return</span> console.log(<span style="color:#080;font-weight:bold">this</span>.a <span style="color:#333">+</span> <span style="color:#00d;font-weight:bold">1</span>);  
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">increment</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(){
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);  
 }
 
-<span style="color:#080;font-weight:bold">var</span> obj1 <span style="color:#333">=</span> { a<span style="color:#333">:</span> <span style="color:#00d;font-weight:bold">2</span>, increment<span style="color:#333">:</span> increment };
-<span style="color:#080;font-weight:bold">var</span> obj2 <span style="color:#333">=</span> { a<span style="color:#333">:</span> <span style="color:#00d;font-weight:bold">3</span>, increment<span style="color:#333">:</span> increment };
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">obj1</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">a</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>, <span style="color:#a6e22e">increment</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">increment</span> };
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">obj2</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">a</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span>, <span style="color:#a6e22e">increment</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">increment</span> };
 
-increment();       <span style="color:#888">//this = window
-</span><span style="color:#888"></span>obj1.increment();  <span style="color:#888">//this = obj1
-</span><span style="color:#888"></span>obj2.increment();  <span style="color:#888">//this = obj2
+<span style="color:#a6e22e">increment</span>();       <span style="color:#75715e">//this = window
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">obj1</span>.<span style="color:#a6e22e">increment</span>();  <span style="color:#75715e">//this = obj1
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">obj2</span>.<span style="color:#a6e22e">increment</span>();  <span style="color:#75715e">//this = obj2
 </span></code></pre></div><pre><code><div class="code_output">Output</div>
 2
 3
@@ -255,23 +255,23 @@ increment();       <span style="color:#888">//this = window
 <li>next two <code>increment()</code> functions are called in implicit context where <code>this</code> binds to the object on which function is called. This is called implicit context because function is tightly coupled with object (defined inside object) and <code>this</code> reference binds to object at compile time when you call a function from object like <code>obj.ƒn()</code></li>
 </ul>
 <p>Sometime we may want to call a function in explicit context where we can control on <code>this</code> reference at runtime when calling a function. This is where call(), apply() and bind() comes into play. Let&rsquo;s call the same <code>increment()</code> function using call(), apply() and bind() methods.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#080;font-weight:bold">var</span> increment <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">function</span>(){
-    <span style="color:#080;font-weight:bold">return</span> console.log(<span style="color:#080;font-weight:bold">this</span>.a <span style="color:#333">+</span> <span style="color:#00d;font-weight:bold">1</span>);  
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">increment</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(){
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);  
 }
 
-<span style="color:#080;font-weight:bold">var</span> obj1 <span style="color:#333">=</span> { a<span style="color:#333">:</span> <span style="color:#00d;font-weight:bold">4</span> };
-<span style="color:#080;font-weight:bold">var</span> obj2 <span style="color:#333">=</span> { a<span style="color:#333">:</span> <span style="color:#00d;font-weight:bold">5</span> };
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">obj1</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">a</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">4</span> };
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">obj2</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">a</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">5</span> };
 
-increment.call(obj1);               <span style="color:#888">//this = obj1
-</span><span style="color:#888"></span>increment.call(obj2);               <span style="color:#888">//this = obj2
-</span><span style="color:#888"></span>
-increment.apply(obj1);              <span style="color:#888">//this = obj1
-</span><span style="color:#888"></span>increment.apply(obj2);              <span style="color:#888">//this = obj2
-</span><span style="color:#888"></span>
-<span style="color:#080;font-weight:bold">var</span> bindFn1 <span style="color:#333">=</span> increment.bind(obj1);
-<span style="color:#080;font-weight:bold">var</span> bindFn2 <span style="color:#333">=</span> increment.bind(obj2);
-bindFn1();                           <span style="color:#888">//this = obj1
-</span><span style="color:#888"></span>bindFn2();                           <span style="color:#888">//this = obj2
+<span style="color:#a6e22e">increment</span>.<span style="color:#a6e22e">call</span>(<span style="color:#a6e22e">obj1</span>);               <span style="color:#75715e">//this = obj1
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">increment</span>.<span style="color:#a6e22e">call</span>(<span style="color:#a6e22e">obj2</span>);               <span style="color:#75715e">//this = obj2
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">increment</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#a6e22e">obj1</span>);              <span style="color:#75715e">//this = obj1
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">increment</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#a6e22e">obj2</span>);              <span style="color:#75715e">//this = obj2
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">bindFn1</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">increment</span>.<span style="color:#a6e22e">bind</span>(<span style="color:#a6e22e">obj1</span>);
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">bindFn2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">increment</span>.<span style="color:#a6e22e">bind</span>(<span style="color:#a6e22e">obj2</span>);
+<span style="color:#a6e22e">bindFn1</span>();                           <span style="color:#75715e">//this = obj1
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">bindFn2</span>();                           <span style="color:#75715e">//this = obj2
 </span></code></pre></div><pre><code><div class="code_output">Output</div>
 5
 6
@@ -303,7 +303,7 @@ bindFn1();                           <span style="color:#888">//this = obj1
 <h6 id="1-borrow-functionality-of-other-objects">1. Borrow functionality of other objects</h6>
 <p>In Javascript, every object can have prototype functions which are actually meant to be executed only on that object. Using call() methods, you can borrow the functionality of these objects and execute it on different object.</p>
 <p>Let&rsquo;s look at the Array prototype functions</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">console.dir(<span style="color:#007020">Array</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">dir</span>(Array);
 </code></pre></div><pre><code>▼ ƒ Array()
       arguments: (...)
       caller: (...)
@@ -344,52 +344,52 @@ bindFn1();                           <span style="color:#888">//this = obj1
         ➤ toLocaleString: ƒ toLocaleString()
         ➤ toString: ƒ toString()
 </code></pre><p>Let&rsquo;s borrow the functionality of Array prototype methods using call() function:-</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#007020">Array</span>.prototype.concat.call([<span style="color:#00d;font-weight:bold">1</span>,<span style="color:#00d;font-weight:bold">2</span>,<span style="color:#00d;font-weight:bold">3</span>], [<span style="color:#00d;font-weight:bold">4</span>,<span style="color:#00d;font-weight:bold">5</span>]);
-<span style="color:#007020">Array</span>.prototype.join.call([<span style="color:#00d;font-weight:bold">1</span>,<span style="color:#00d;font-weight:bold">2</span>,<span style="color:#00d;font-weight:bold">3</span>,<span style="color:#00d;font-weight:bold">4</span>,<span style="color:#00d;font-weight:bold">5</span>], <span style="background-color:#fff0f0">&#34;:&#34;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">Array.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">concat</span>.<span style="color:#a6e22e">call</span>([<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>], [<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>]);
+Array.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">join</span>.<span style="color:#a6e22e">call</span>([<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>], <span style="color:#e6db74">&#34;:&#34;</span>)
 </code></pre></div><pre><code><div class="code_output">Output</div>
 [1, 2, 3, 4, 5]
 1:2:3:4:5
 </code></pre><p>Similarly borrow the <code>start</code> functionality of <code>car</code> object to use it for <code>aircraft</code></p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#080;font-weight:bold">var</span> car <span style="color:#333">=</span> {
-    name<span style="color:#333">:</span> <span style="background-color:#fff0f0">&#39;car&#39;</span>,
-    start<span style="color:#333">:</span> <span style="color:#080;font-weight:bold">function</span>() { 
-        console.log(<span style="background-color:#fff0f0">&#39;Start the &#39;</span> <span style="color:#333">+</span> <span style="color:#080;font-weight:bold">this</span>.name);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">car</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;car&#39;</span>,
+    <span style="color:#a6e22e">start</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() { 
+        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Start the &#39;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span>);
     },
-    speedup<span style="color:#333">:</span> <span style="color:#080;font-weight:bold">function</span>() {
-        console.log(<span style="background-color:#fff0f0">&#39;Speed up the &#39;</span> <span style="color:#333">+</span> <span style="color:#080;font-weight:bold">this</span>.name)
+    <span style="color:#a6e22e">speedup</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
+        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Speed up the &#39;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span>)
     },
-    stop<span style="color:#333">:</span> <span style="color:#080;font-weight:bold">function</span>() {
-        console.log(<span style="background-color:#fff0f0">&#39;Stop the &#39;</span> <span style="color:#333">+</span> <span style="color:#080;font-weight:bold">this</span>.name);
+    <span style="color:#a6e22e">stop</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
+        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Stop the &#39;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span>);
     }
 };
 
-<span style="color:#080;font-weight:bold">var</span> aircraft <span style="color:#333">=</span> {
-    name<span style="color:#333">:</span> <span style="background-color:#fff0f0">&#39;aircraft&#39;</span>,
-    fly<span style="color:#333">:</span> <span style="color:#080;font-weight:bold">function</span>(){
-        console.log(<span style="background-color:#fff0f0">&#39;Fly&#39;</span>);
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">aircraft</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;aircraft&#39;</span>,
+    <span style="color:#a6e22e">fly</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>(){
+        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Fly&#39;</span>);
     }
 };
 
-car.start.call(aircraft);
+<span style="color:#a6e22e">car</span>.<span style="color:#a6e22e">start</span>.<span style="color:#a6e22e">call</span>(<span style="color:#a6e22e">aircraft</span>);
 </code></pre></div><pre><code><div class="code_output">Output</div>
 Start the aircraft
 </code></pre><h6 id="2-chaining-constructors">2. Chaining constructors</h6>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#080;font-weight:bold">function</span> Box(height, width) {
-    <span style="color:#080;font-weight:bold">this</span>.height <span style="color:#333">=</span> height;
-    <span style="color:#080;font-weight:bold">this</span>.width  <span style="color:#333">=</span> width;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Box</span>(<span style="color:#a6e22e">height</span>, <span style="color:#a6e22e">width</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">height</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">height</span>;
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span>  <span style="color:#f92672">=</span> <span style="color:#a6e22e">width</span>;
 }
 
-<span style="color:#080;font-weight:bold">function</span> Widget(height, width, color) {
-    Box.call(<span style="color:#080;font-weight:bold">this</span>, height, width);
-    <span style="color:#080;font-weight:bold">this</span>.color <span style="color:#333">=</span> color;
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Widget</span>(<span style="color:#a6e22e">height</span>, <span style="color:#a6e22e">width</span>, <span style="color:#a6e22e">color</span>) {
+    <span style="color:#a6e22e">Box</span>.<span style="color:#a6e22e">call</span>(<span style="color:#66d9ef">this</span>, <span style="color:#a6e22e">height</span>, <span style="color:#a6e22e">width</span>);
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">color</span>;
 }
 
-<span style="color:#080;font-weight:bold">function</span> Dialog(height, width, color, title) {
-    Widget.call(<span style="color:#080;font-weight:bold">this</span>, height, width, color);
-    <span style="color:#080;font-weight:bold">this</span>.title <span style="color:#333">=</span> title;
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Dialog</span>(<span style="color:#a6e22e">height</span>, <span style="color:#a6e22e">width</span>, <span style="color:#a6e22e">color</span>, <span style="color:#a6e22e">title</span>) {
+    <span style="color:#a6e22e">Widget</span>.<span style="color:#a6e22e">call</span>(<span style="color:#66d9ef">this</span>, <span style="color:#a6e22e">height</span>, <span style="color:#a6e22e">width</span>, <span style="color:#a6e22e">color</span>);
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">title</span>;
 }
 
-<span style="color:#080;font-weight:bold">var</span> dialog <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> Dialog(<span style="background-color:#fff0f0">&#39;red&#39;</span>, <span style="color:#00d;font-weight:bold">100</span>, <span style="color:#00d;font-weight:bold">200</span>, <span style="background-color:#fff0f0">&#39;Title&#39;</span>);
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dialog</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Dialog</span>(<span style="color:#e6db74">&#39;red&#39;</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">200</span>, <span style="color:#e6db74">&#39;Title&#39;</span>);
 </code></pre></div><p>We can see in above code snippet how we can chain the constructors by calling parent constructor function in current <code>this</code> context</p>
 <h1 id="apply">apply()</h1>
 <hr>
@@ -407,8 +407,8 @@ Start the aircraft
 <h3 id="practical-usage-1">Practical Usage</h3>
 <p>Practical usage of apply() function is same as call() function. The only difference between them, apply() accepts args as an array whereas call() accepts args as comma separated values.</p>
 <p>We can pass arguments as an array using apply() function to call any function which accepts args as comma separated values.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#007020">Math</span>.min(<span style="color:#00d;font-weight:bold">1</span>, <span style="color:#00d;font-weight:bold">2</span>, <span style="color:#00d;font-weight:bold">3</span>, <span style="color:#00d;font-weight:bold">4</span>, <span style="color:#00d;font-weight:bold">5</span>);           <span style="color:#888">//args as comma separated
-</span><span style="color:#888"></span><span style="color:#007020">Math</span>.min.apply([<span style="color:#00d;font-weight:bold">1</span>, <span style="color:#00d;font-weight:bold">2</span>, <span style="color:#00d;font-weight:bold">3</span>, <span style="color:#00d;font-weight:bold">4</span>, <span style="color:#00d;font-weight:bold">5</span>]);   <span style="color:#888">//args as an array
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">Math.<span style="color:#a6e22e">min</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>);           <span style="color:#75715e">//args as comma separated
+</span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">min</span>.<span style="color:#a6e22e">apply</span>([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>]);   <span style="color:#75715e">//args as an array
 </span></code></pre></div><h1 id="bind">bind()</h1>
 <hr>
 <h3 id="syntax-2">Syntax</h3>
@@ -424,79 +424,79 @@ Start the aircraft
 </blockquote>
 <h3 id="practical-usage-2">Practical Usage</h3>
 <h6 id="1-bounded-context">1. Bounded context</h6>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#080;font-weight:bold">var</span> Button <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">function</span>(content) { 
-  <span style="color:#080;font-weight:bold">this</span>.content <span style="color:#333">=</span> content;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">Button</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">content</span>) { 
+  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">content</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">content</span>;
 };
-Button.prototype.click <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">function</span>() {
-  console.log(<span style="color:#080;font-weight:bold">this</span>.content <span style="color:#333">+</span> <span style="background-color:#fff0f0">&#39; clicked&#39;</span>);
+<span style="color:#a6e22e">Button</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">click</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">content</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; clicked&#39;</span>);
 };
 
-<span style="color:#080;font-weight:bold">var</span> myButton <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> Button(<span style="background-color:#fff0f0">&#39;OK&#39;</span>);
-myButton.click();
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">myButton</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Button</span>(<span style="color:#e6db74">&#39;OK&#39;</span>);
+<span style="color:#a6e22e">myButton</span>.<span style="color:#a6e22e">click</span>();
 
-<span style="color:#080;font-weight:bold">var</span> looseClick <span style="color:#333">=</span> myButton.click;
-looseClick(); <span style="color:#888">// not bound, &#39;this&#39; is not myButton - it is the global object
-</span><span style="color:#888"></span>
-<span style="color:#080;font-weight:bold">var</span> boundClick <span style="color:#333">=</span> myButton.click.bind(myButton);
-boundClick(); <span style="color:#888">// bound, &#39;this&#39; is myButton
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">looseClick</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">myButton</span>.<span style="color:#a6e22e">click</span>;
+<span style="color:#a6e22e">looseClick</span>(); <span style="color:#75715e">// not bound, &#39;this&#39; is not myButton - it is the global object
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">boundClick</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">myButton</span>.<span style="color:#a6e22e">click</span>.<span style="color:#a6e22e">bind</span>(<span style="color:#a6e22e">myButton</span>);
+<span style="color:#a6e22e">boundClick</span>(); <span style="color:#75715e">// bound, &#39;this&#39; is myButton
 </span></code></pre></div><pre><code><div class="code_output">Output</div>
 OK clicked
 undefined clicked
 OK clicked
 </code></pre><h6 id="2-binding-functions-with-parameters">2. Binding functions with parameters</h6>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#080;font-weight:bold">var</span> logProp <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">function</span>(prop) {
-    console.log(<span style="color:#080;font-weight:bold">this</span>[prop]);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">logProp</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">prop</span>) {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>[<span style="color:#a6e22e">prop</span>]);
 };
 
-<span style="color:#080;font-weight:bold">var</span> Obj <span style="color:#333">=</span> {
-    x <span style="color:#333">:</span> <span style="color:#00d;font-weight:bold">5</span>,
-    y <span style="color:#333">:</span> <span style="color:#00d;font-weight:bold">10</span>
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">Obj</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">x</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">5</span>,
+    <span style="color:#a6e22e">y</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>
 };
 
-Obj.log <span style="color:#333">=</span> logProp.bind(Obj);
-Obj.logX <span style="color:#333">=</span> logProp.bind(Obj, <span style="background-color:#fff0f0">&#39;x&#39;</span>); <span style="color:#888">//binding with prop x
-</span><span style="color:#888"></span>Obj.logY <span style="color:#333">=</span> logProp.bind(Obj, <span style="background-color:#fff0f0">&#39;y&#39;</span>); <span style="color:#888">//binding with prop y
-</span><span style="color:#888"></span>
-Obj.log(<span style="background-color:#fff0f0">&#39;x&#39;</span>);
-Obj.logX();
+<span style="color:#a6e22e">Obj</span>.<span style="color:#a6e22e">log</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">logProp</span>.<span style="color:#a6e22e">bind</span>(<span style="color:#a6e22e">Obj</span>);
+<span style="color:#a6e22e">Obj</span>.<span style="color:#a6e22e">logX</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">logProp</span>.<span style="color:#a6e22e">bind</span>(<span style="color:#a6e22e">Obj</span>, <span style="color:#e6db74">&#39;x&#39;</span>); <span style="color:#75715e">//binding with prop x
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">Obj</span>.<span style="color:#a6e22e">logY</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">logProp</span>.<span style="color:#a6e22e">bind</span>(<span style="color:#a6e22e">Obj</span>, <span style="color:#e6db74">&#39;y&#39;</span>); <span style="color:#75715e">//binding with prop y
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">Obj</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;x&#39;</span>);
+<span style="color:#a6e22e">Obj</span>.<span style="color:#a6e22e">logX</span>();
 
-Obj.log(<span style="background-color:#fff0f0">&#39;y&#39;</span>);
-Obj.logY();
+<span style="color:#a6e22e">Obj</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;y&#39;</span>);
+<span style="color:#a6e22e">Obj</span>.<span style="color:#a6e22e">logY</span>();
 </code></pre></div><pre><code><div class="code_output">Output</div>
 5
 5
 10
 10
 </code></pre><p>Another example,</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#080;font-weight:bold">var</span> sum <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">function</span>(a, b) {
-  <span style="color:#080;font-weight:bold">return</span> a <span style="color:#333">+</span> b;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) {
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>;
 };
 
-<span style="color:#080;font-weight:bold">var</span> add5 <span style="color:#333">=</span> sum.bind(<span style="color:#080;font-weight:bold">null</span>, <span style="color:#00d;font-weight:bold">5</span>);
-<span style="color:#888">//add5 is binding function with a = 5
-</span><span style="color:#888"></span>console.log(add5(<span style="color:#00d;font-weight:bold">10</span>)); <span style="color:#888">//b =10
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">add5</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">sum</span>.<span style="color:#a6e22e">bind</span>(<span style="color:#66d9ef">null</span>, <span style="color:#ae81ff">5</span>);
+<span style="color:#75715e">//add5 is binding function with a = 5
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">add5</span>(<span style="color:#ae81ff">10</span>)); <span style="color:#75715e">//b =10
 </span></code></pre></div><pre><code><div class="code_output">Output</div>
 15
 </code></pre><h1 id="summary">Summary</h1>
 <hr>
 <p>Let&rsquo;s look at last example of this post and use call(), apply() and bind() methods all together</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#080;font-weight:bold">let</span> numObj1 <span style="color:#333">=</span> {num<span style="color:#333">:</span> <span style="color:#00d;font-weight:bold">1</span>};
-<span style="color:#080;font-weight:bold">let</span> numObj2 <span style="color:#333">=</span> {num<span style="color:#333">:</span> <span style="color:#00d;font-weight:bold">2</span>};
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">numObj1</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">num</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>};
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">numObj2</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">num</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>};
 
-<span style="color:#080;font-weight:bold">let</span> sumFn <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">function</span>(...args){
-      console.log(<span style="color:#080;font-weight:bold">this</span>.num <span style="color:#333">+</span> args.reduce((a,b)=&gt; a<span style="color:#333">+</span>b, <span style="color:#00d;font-weight:bold">0</span>));
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sumFn</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(...<span style="color:#a6e22e">args</span>){
+      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">num</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">args</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">a</span>,<span style="color:#a6e22e">b</span>)=&gt; <span style="color:#a6e22e">a</span><span style="color:#f92672">+</span><span style="color:#a6e22e">b</span>, <span style="color:#ae81ff">0</span>));
 }
 
-sumFn.call(numObj1, <span style="color:#00d;font-weight:bold">1</span>, <span style="color:#00d;font-weight:bold">2</span>, <span style="color:#00d;font-weight:bold">3</span>, <span style="color:#00d;font-weight:bold">4</span>); <span style="color:#888">//this = numObj1
-</span><span style="color:#888"></span>sumFn.call(numObj2, <span style="color:#00d;font-weight:bold">1</span>, <span style="color:#00d;font-weight:bold">2</span>, <span style="color:#00d;font-weight:bold">3</span>, <span style="color:#00d;font-weight:bold">4</span>); <span style="color:#888">//this = numObj2
-</span><span style="color:#888"></span>
-sumFn.apply(numObj1, [<span style="color:#00d;font-weight:bold">1</span>,<span style="color:#00d;font-weight:bold">2</span>,<span style="color:#00d;font-weight:bold">3</span>,<span style="color:#00d;font-weight:bold">4</span>]); <span style="color:#888">//this = numObj1
-</span><span style="color:#888"></span>sumFn.apply(numObj2, [<span style="color:#00d;font-weight:bold">1</span>,<span style="color:#00d;font-weight:bold">2</span>,<span style="color:#00d;font-weight:bold">3</span>,<span style="color:#00d;font-weight:bold">4</span>]); <span style="color:#888">//this = numObj2
-</span><span style="color:#888"></span>
-<span style="color:#080;font-weight:bold">let</span> sumBindFn1 <span style="color:#333">=</span> sumFn.bind(numObj1); <span style="color:#888">// return Fn
-</span><span style="color:#888"></span><span style="color:#080;font-weight:bold">let</span> sumBindFn2 <span style="color:#333">=</span> sumFn.bind(numObj2); <span style="color:#888">// return Fn
-</span><span style="color:#888"></span>sumBindFn1(<span style="color:#00d;font-weight:bold">1</span>, <span style="color:#00d;font-weight:bold">2</span>, <span style="color:#00d;font-weight:bold">3</span>, <span style="color:#00d;font-weight:bold">4</span>);          <span style="color:#888">//this = numObj1
-</span><span style="color:#888"></span>sumBindFn2(<span style="color:#00d;font-weight:bold">1</span>, <span style="color:#00d;font-weight:bold">2</span>, <span style="color:#00d;font-weight:bold">3</span>, <span style="color:#00d;font-weight:bold">4</span>);          <span style="color:#888">//this = numObj2
+<span style="color:#a6e22e">sumFn</span>.<span style="color:#a6e22e">call</span>(<span style="color:#a6e22e">numObj1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>); <span style="color:#75715e">//this = numObj1
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">sumFn</span>.<span style="color:#a6e22e">call</span>(<span style="color:#a6e22e">numObj2</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>); <span style="color:#75715e">//this = numObj2
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">sumFn</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#a6e22e">numObj1</span>, [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>]); <span style="color:#75715e">//this = numObj1
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">sumFn</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#a6e22e">numObj2</span>, [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>]); <span style="color:#75715e">//this = numObj2
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sumBindFn1</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">sumFn</span>.<span style="color:#a6e22e">bind</span>(<span style="color:#a6e22e">numObj1</span>); <span style="color:#75715e">// return Fn
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sumBindFn2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">sumFn</span>.<span style="color:#a6e22e">bind</span>(<span style="color:#a6e22e">numObj2</span>); <span style="color:#75715e">// return Fn
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">sumBindFn1</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>);          <span style="color:#75715e">//this = numObj1
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">sumBindFn2</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>);          <span style="color:#75715e">//this = numObj2
 </span></code></pre></div><pre><code>output:
 11
 12

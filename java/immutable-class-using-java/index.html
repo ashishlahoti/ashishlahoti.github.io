@@ -208,69 +208,69 @@ if (!doNotTrack) {
 <li>No Setter Methods</li>
 <li>Returns new instance of mutable properties from Getter Methods</li>
 </ul>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-weight:bold">package</span> <span style="color:#0e84b5;font-weight:bold">com.abc</span><span style="color:#333">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.abc<span style="color:#f92672">;</span>
 
-<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">java.util.Date</span><span style="color:#333">;</span>
+<span style="color:#f92672">import</span> java.util.Date<span style="color:#f92672">;</span>
 
-<span style="color:#888">/**
-</span><span style="color:#888"> * Immutable class should mark as final so that it can not be extended by another class. 
-</span><span style="color:#888"> * Fields should mark as private so direct access is not allowed
-</span><span style="color:#888"> * Fields should mark as final so that value can not be modified once initialized
-</span><span style="color:#888"> **/</span>
-<span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">final</span> <span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">MyImmutable</span> <span style="color:#333">{</span>
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Immutable class should mark as final so that it can not be extended by another class. 
+</span><span style="color:#75715e"> * Fields should mark as private so direct access is not allowed
+</span><span style="color:#75715e"> * Fields should mark as final so that value can not be modified once initialized
+</span><span style="color:#75715e"> **/</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyImmutable</span> <span style="color:#f92672">{</span>
 
-    <span style="color:#888">/**
-</span><span style="color:#888">     * String class is immutable
-</span><span style="color:#888">     **/</span>
-    <span style="color:#080;font-weight:bold">private</span> <span style="color:#080;font-weight:bold">final</span> String name<span style="color:#333">;</span>
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * String class is immutable
+</span><span style="color:#75715e">     **/</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> String name<span style="color:#f92672">;</span>
     
-    <span style="color:#888">/**
-</span><span style="color:#888">     * Integer class is immutable
-</span><span style="color:#888">     **/</span>
-    <span style="color:#080;font-weight:bold">private</span> <span style="color:#080;font-weight:bold">final</span> Integer weight<span style="color:#333">;</span>
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * Integer class is immutable
+</span><span style="color:#75715e">     **/</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> Integer weight<span style="color:#f92672">;</span>
     
-    <span style="color:#888">/**
-</span><span style="color:#888">     * Date class is mutable
-</span><span style="color:#888">     **/</span>
-    <span style="color:#080;font-weight:bold">private</span> <span style="color:#080;font-weight:bold">final</span> Date dateOfBirth<span style="color:#333">;</span>
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * Date class is mutable
+</span><span style="color:#75715e">     **/</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> Date dateOfBirth<span style="color:#f92672">;</span>
     
-    <span style="color:#888">/**
-</span><span style="color:#888">     * Default private constructor will ensure no unplanned construction of class
-</span><span style="color:#888">     * All the final fields are initialized through constructor
-</span><span style="color:#888">     */</span>
-    <span style="color:#080;font-weight:bold">private</span> <span style="color:#06b;font-weight:bold">MyImmutable</span><span style="color:#333">(</span>String name<span style="color:#333">,</span> Integer weight<span style="color:#333">,</span> Date dateOfBirth<span style="color:#333">){</span>
-        <span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">name</span> <span style="color:#333">=</span> name<span style="color:#333">;</span>
-        <span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">weight</span> <span style="color:#333">=</span> weight<span style="color:#333">;</span>
-        <span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">dateOfBirth</span> <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> Date<span style="color:#333">(</span>dateOfBirth<span style="color:#333">.</span><span style="color:#00c">getTime</span><span style="color:#333">());</span>
-    <span style="color:#333">}</span>
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * Default private constructor will ensure no unplanned construction of class
+</span><span style="color:#75715e">     * All the final fields are initialized through constructor
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">MyImmutable</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">,</span> Integer weight<span style="color:#f92672">,</span> Date dateOfBirth<span style="color:#f92672">){</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">weight</span> <span style="color:#f92672">=</span> weight<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">dateOfBirth</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date<span style="color:#f92672">(</span>dateOfBirth<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">());</span>
+    <span style="color:#f92672">}</span>
     
-    <span style="color:#888">/**********************************************
-</span><span style="color:#888">     ***********PROVIDE NO SETTER METHODS *********
-</span><span style="color:#888">     **********************************************/</span>
+    <span style="color:#75715e">/**********************************************
+</span><span style="color:#75715e">     ***********PROVIDE NO SETTER METHODS *********
+</span><span style="color:#75715e">     **********************************************/</span>
     
-    <span style="color:#888">/**
-</span><span style="color:#888">     * String class is immutable so we can return the instance variable as it is
-</span><span style="color:#888">     **/</span>
-    <span style="color:#080;font-weight:bold">public</span> String <span style="color:#06b;font-weight:bold">getName</span><span style="color:#333">()</span> <span style="color:#333">{</span>
-        <span style="color:#080;font-weight:bold">return</span> name<span style="color:#333">;</span>
-    <span style="color:#333">}</span>
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * String class is immutable so we can return the instance variable as it is
+</span><span style="color:#75715e">     **/</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getName</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> name<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
     
-    <span style="color:#888">/**
-</span><span style="color:#888">     * Integer class is immutable so we can return the instance variable as it is
-</span><span style="color:#888">     **/</span>
-    <span style="color:#080;font-weight:bold">public</span> Integer <span style="color:#06b;font-weight:bold">getWeight</span><span style="color:#333">()</span> <span style="color:#333">{</span>
-        <span style="color:#080;font-weight:bold">return</span> weight<span style="color:#333">;</span>
-    <span style="color:#333">}</span>
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * Integer class is immutable so we can return the instance variable as it is
+</span><span style="color:#75715e">     **/</span>
+    <span style="color:#66d9ef">public</span> Integer <span style="color:#a6e22e">getWeight</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> weight<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
     
-    <span style="color:#888">/**
-</span><span style="color:#888">     * Date class is mutable so we need a little care here.
-</span><span style="color:#888">     * We should not return the reference of original instance variable.
-</span><span style="color:#888">     * Instead a new Date object, with content copied to it, should be returned.
-</span><span style="color:#888">     **/</span>
-    <span style="color:#080;font-weight:bold">public</span> Date <span style="color:#06b;font-weight:bold">getDateOfBirth</span><span style="color:#333">()</span> <span style="color:#333">{</span>
-        <span style="color:#080;font-weight:bold">return</span> <span style="color:#080;font-weight:bold">new</span> Date<span style="color:#333">(</span>dateOfBirth<span style="color:#333">.</span><span style="color:#00c">getTime</span><span style="color:#333">());</span>
-    <span style="color:#333">}</span>
-<span style="color:#333">}</span>
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * Date class is mutable so we need a little care here.
+</span><span style="color:#75715e">     * We should not return the reference of original instance variable.
+</span><span style="color:#75715e">     * Instead a new Date object, with content copied to it, should be returned.
+</span><span style="color:#75715e">     **/</span>
+    <span style="color:#66d9ef">public</span> Date <span style="color:#a6e22e">getDateOfBirth</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Date<span style="color:#f92672">(</span>dateOfBirth<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">());</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 
 </code></pre></div>
 		</div>

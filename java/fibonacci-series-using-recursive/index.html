@@ -204,33 +204,33 @@ if (!doNotTrack) {
 </div></div>
 		</header><div class="content post__content clearfix">
 			<p>Fibonacci series implementation in java is frequently asked question in interview at fresher level. Moreover, it is a very famous example to show how to use recursive function in java.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">Fibonacci</span> <span style="color:#333">{</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Fibonacci</span> <span style="color:#f92672">{</span>
 
-    <span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">static</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">main</span><span style="color:#333">(</span>String<span style="color:#333">[]</span> args<span style="color:#333">){</span>
-        fibonacci<span style="color:#333">(</span>15<span style="color:#333">);</span>
-    <span style="color:#333">}</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">){</span>
+        fibonacci<span style="color:#f92672">(</span>15<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
     
-    <span style="color:#888">/**
-</span><span style="color:#888">     * This method is used to print fibonacci series
-</span><span style="color:#888">     * @param n is total number of elements
-</span><span style="color:#888">     */</span>
-    <span style="color:#080;font-weight:bold">private</span> <span style="color:#080;font-weight:bold">static</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">fibonacci</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">int</span> n<span style="color:#333">){</span>
-        <span style="color:#080;font-weight:bold">for</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">int</span> i <span style="color:#333">=</span> 0 <span style="color:#333">;</span> i <span style="color:#333">&lt;</span> n<span style="color:#333">;</span> i <span style="color:#333">++){</span>
-            System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">.</span><span style="color:#00c">print</span><span style="color:#333">(</span>fib<span style="color:#333">(</span>i<span style="color:#333">)+</span><span style="background-color:#fff0f0">&#34;, &#34;</span><span style="color:#333">);</span>
-        <span style="color:#333">}</span>
-    <span style="color:#333">}</span>
-    <span style="color:#888">/**
-</span><span style="color:#888">     * This method is used recursively to find fibonacci
-</span><span style="color:#888">     * element at nth index. 
-</span><span style="color:#888">     * @param n is index
-</span><span style="color:#888">     * @return element
-</span><span style="color:#888">     */</span>
-    <span style="color:#080;font-weight:bold">private</span> <span style="color:#080;font-weight:bold">static</span> <span style="color:#339;font-weight:bold">int</span> <span style="color:#06b;font-weight:bold">fib</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">int</span> n<span style="color:#333">){</span>
-        <span style="color:#080;font-weight:bold">if</span><span style="color:#333">(</span>n <span style="color:#333">&lt;</span> 2<span style="color:#333">)</span>
-            <span style="color:#080;font-weight:bold">return</span> n<span style="color:#333">;</span>
-        <span style="color:#080;font-weight:bold">return</span> fib<span style="color:#333">(</span>n<span style="color:#333">-</span>1<span style="color:#333">)</span> <span style="color:#333">+</span> fib<span style="color:#333">(</span>n<span style="color:#333">-</span>2<span style="color:#333">);</span>
-    <span style="color:#333">}</span>
-<span style="color:#333">}</span>
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * This method is used to print fibonacci series
+</span><span style="color:#75715e">     * @param n is total number of elements
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">fibonacci</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> n<span style="color:#f92672">){</span>
+        <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0 <span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> n<span style="color:#f92672">;</span> i <span style="color:#f92672">++){</span>
+            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span>fib<span style="color:#f92672">(</span>i<span style="color:#f92672">)+</span><span style="color:#e6db74">&#34;, &#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * This method is used recursively to find fibonacci
+</span><span style="color:#75715e">     * element at nth index. 
+</span><span style="color:#75715e">     * @param n is index
+</span><span style="color:#75715e">     * @return element
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">fib</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> n<span style="color:#f92672">){</span>
+        <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>n <span style="color:#f92672">&lt;</span> 2<span style="color:#f92672">)</span>
+            <span style="color:#66d9ef">return</span> n<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">return</span> fib<span style="color:#f92672">(</span>n<span style="color:#f92672">-</span>1<span style="color:#f92672">)</span> <span style="color:#f92672">+</span> fib<span style="color:#f92672">(</span>n<span style="color:#f92672">-</span>2<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 </code></pre></div><pre><code><div class="code_output">Output</div>
 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377 
 </code></pre>

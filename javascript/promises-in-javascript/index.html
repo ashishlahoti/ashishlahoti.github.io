@@ -210,9 +210,9 @@ if (!doNotTrack) {
 <p>Promises were introduced to improve code readability and better handling of async calls and errors.</p>
 <h2 id="promise-syntax">Promise Syntax</h2>
 <p>Let&rsquo;s look at the syntax of simple promise object.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#080;font-weight:bold">let</span> promise <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> <span style="color:#007020">Promise</span>(<span style="color:#080;font-weight:bold">function</span> (resolve, reject) {
-  <span style="color:#888">// asynchronous call
-</span><span style="color:#888"></span>});
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">promise</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) {
+  <span style="color:#75715e">// asynchronous call
+</span><span style="color:#75715e"></span>});
 </code></pre></div><p>Promise takes a callback function as an argument and that callback function takes two arguments — the first is a <strong>resolve</strong> function, and the second one is a <strong>reject</strong> function. A promise can either be <em>fulfilled</em> with a value or <em>rejected</em> with a reason (error).</p>
 <h2 id="promise-states">Promise States</h2>
 <p>A promise object has one of three states:</p>
@@ -227,58 +227,58 @@ if (!doNotTrack) {
 
 <h2 id="usage">Usage</h2>
 <p>We generally use async calls using fetch API to get data from the <em>HTTP</em> endpoints. Let&rsquo;s look at the example, how promises can be used in such case.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#888">//create a promise object
-</span><span style="color:#888"></span><span style="color:#080;font-weight:bold">let</span> getUsers <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> <span style="color:#007020">Promise</span>(<span style="color:#080;font-weight:bold">function</span> (resolve, reject ){
-    fetch(<span style="background-color:#fff0f0">&#39;https://jsonplaceholder.typicode.com/users&#39;</span>)
-    .then(response =&gt; {
-        <span style="color:#080;font-weight:bold">return</span> response.json();
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//create a promise object
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getUsers</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span> ){
+    <span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#39;https://jsonplaceholder.typicode.com/users&#39;</span>)
+    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">response</span> =&gt; {
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>();
     })
-    .then(data =&gt; {
-        resolve(data);
+    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">data</span> =&gt; {
+        <span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">data</span>);
     })
-    .<span style="color:#080;font-weight:bold">catch</span>(error =&gt; {
-        reject(error);
+    .<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">error</span> =&gt; {
+        <span style="color:#a6e22e">reject</span>(<span style="color:#a6e22e">error</span>);
     });
 });
 
-<span style="color:#888">//call promise object
-</span><span style="color:#888"></span>getUsers
-.then((data) =&gt; {
-  console.log(data);
+<span style="color:#75715e">//call promise object
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">getUsers</span>
+.<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">data</span>) =&gt; {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>);
 })
-.<span style="color:#080;font-weight:bold">catch</span>(error =&gt; {
-  console.log(error);
+.<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">error</span> =&gt; {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">error</span>);
 });
 </code></pre></div><h2 id="chained-promises">Chained Promises</h2>
 <p>Promise chaining comes into play when you have to use output of one async call as input of another async call. You can chain multiple promises in this case.</p>
 <p>Let’s look at the below example where we first fetch users list using <code>getUser</code> async call then chain it with <code>getPosts</code> by passing userId.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#888">//create a common getData function
-</span><span style="color:#888"></span><span style="color:#080;font-weight:bold">let</span> getData <span style="color:#333">=</span> (url) =&gt; <span style="color:#080;font-weight:bold">new</span> <span style="color:#007020">Promise</span>(<span style="color:#080;font-weight:bold">function</span> (resolve, reject ){
-  fetch(url)
-    .then(response =&gt; {
-        <span style="color:#080;font-weight:bold">return</span> response.json();
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//create a common getData function
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getData</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">url</span>) =&gt; <span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span> ){
+  <span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">url</span>)
+    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">response</span> =&gt; {
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>();
     })
-    .then(data =&gt; {
-        resolve(data);
+    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">data</span> =&gt; {
+        <span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">data</span>);
     })
-    .<span style="color:#080;font-weight:bold">catch</span>(error =&gt; {
-        reject(error);
+    .<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">error</span> =&gt; {
+        <span style="color:#a6e22e">reject</span>(<span style="color:#a6e22e">error</span>);
     });
 });
 
-<span style="color:#080;font-weight:bold">let</span> getUsers <span style="color:#333">=</span> getData(<span style="background-color:#fff0f0">&#39;https://jsonplaceholder.typicode.com/users&#39;</span>);
-<span style="color:#080;font-weight:bold">let</span> getPosts <span style="color:#333">=</span> (userId) =&gt; getData(<span style="background-color:#fff0f0">`https://jsonplaceholder.typicode.com/posts?userId=</span><span style="background-color:#eee">${</span>userId<span style="background-color:#eee">}</span><span style="background-color:#fff0f0">`</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getUsers</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getData</span>(<span style="color:#e6db74">&#39;https://jsonplaceholder.typicode.com/users&#39;</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getPosts</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">userId</span>) =&gt; <span style="color:#a6e22e">getData</span>(<span style="color:#e6db74">`https://jsonplaceholder.typicode.com/posts?userId=</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">userId</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
 
-<span style="color:#888">//chained promises to fetch all posts by first user (userId = 1)
-</span><span style="color:#888"></span>getUsers.then((data) =&gt; {
-  <span style="color:#080;font-weight:bold">const</span> user <span style="color:#333">=</span> data[<span style="color:#00d;font-weight:bold">0</span>];
-  <span style="color:#080;font-weight:bold">return</span> getPosts(user.id);
+<span style="color:#75715e">//chained promises to fetch all posts by first user (userId = 1)
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">getUsers</span>.<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">data</span>) =&gt; {
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">data</span>[<span style="color:#ae81ff">0</span>];
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">getPosts</span>(<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">id</span>);
 })
-.then((data) =&gt; {
-  console.log(data);
+.<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">data</span>) =&gt; {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>);
 })
-.<span style="color:#080;font-weight:bold">catch</span>(error =&gt; {
-  console.log(error);
+.<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">error</span> =&gt; {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">error</span>);
 });
 </code></pre></div><pre><code><div class="code_output">Output</div>
 ▼ (10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
@@ -299,28 +299,28 @@ if (!doNotTrack) {
 <p>Promise.all() is useful when you want to execute multiple async calls and wait for all of them to finish and get collective output.</p>
 <p>Promise.all() takes an array of promises and return an array of the results in the same sequence of promises. It throws an exception if any one of the async call fails.</p>
 <p>Let’s look at the below example, where we fetch the result of three async calls <code>getUsers</code>, <code>getPosts</code> and <code>getComments</code> all together.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#888">//create a common getData function
-</span><span style="color:#888"></span><span style="color:#080;font-weight:bold">let</span> getData <span style="color:#333">=</span> (url) =&gt; <span style="color:#080;font-weight:bold">new</span> <span style="color:#007020">Promise</span>(<span style="color:#080;font-weight:bold">function</span> (resolve, reject ){
-  fetch(url)
-    .then(response =&gt; {
-        <span style="color:#080;font-weight:bold">return</span> response.json();
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//create a common getData function
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getData</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">url</span>) =&gt; <span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span> ){
+  <span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">url</span>)
+    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">response</span> =&gt; {
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>();
     })
-    .then(data =&gt; {
-        resolve(data);
+    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">data</span> =&gt; {
+        <span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">data</span>);
     })
-    .<span style="color:#080;font-weight:bold">catch</span>(error =&gt; {
-        reject(error);
+    .<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">error</span> =&gt; {
+        <span style="color:#a6e22e">reject</span>(<span style="color:#a6e22e">error</span>);
     });
 });
 
-<span style="color:#888">//create multiple promises from common getData function
-</span><span style="color:#888"></span><span style="color:#080;font-weight:bold">let</span> getUsers <span style="color:#333">=</span> getData(<span style="background-color:#fff0f0">&#39;https://jsonplaceholder.typicode.com/users&#39;</span>);
-<span style="color:#080;font-weight:bold">let</span> getPosts <span style="color:#333">=</span> getData(<span style="background-color:#fff0f0">&#39;https://jsonplaceholder.typicode.com/posts&#39;</span>);
-<span style="color:#080;font-weight:bold">let</span> getComments <span style="color:#333">=</span> getData(<span style="background-color:#fff0f0">&#39;https://jsonplaceholder.typicode.com/comments&#39;</span>);
+<span style="color:#75715e">//create multiple promises from common getData function
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getUsers</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getData</span>(<span style="color:#e6db74">&#39;https://jsonplaceholder.typicode.com/users&#39;</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getPosts</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getData</span>(<span style="color:#e6db74">&#39;https://jsonplaceholder.typicode.com/posts&#39;</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getComments</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getData</span>(<span style="color:#e6db74">&#39;https://jsonplaceholder.typicode.com/comments&#39;</span>);
 
-<span style="color:#888">//fetch data to get users, posts and comments collectively
-</span><span style="color:#888"></span><span style="color:#007020">Promise</span>.all([getUsers, getPosts, getComments]).then(result =&gt; {
-  console.log(result);
+<span style="color:#75715e">//fetch data to get users, posts and comments collectively
+</span><span style="color:#75715e"></span>Promise.<span style="color:#a6e22e">all</span>([<span style="color:#a6e22e">getUsers</span>, <span style="color:#a6e22e">getPosts</span>, <span style="color:#a6e22e">getComments</span>]).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">result</span> =&gt; {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">result</span>);
 });
 </code></pre></div><pre><code><div class="code_output">Output</div>
 ▼ (3) [Array(10), Array(100), Array(500)]
@@ -336,32 +336,32 @@ if (!doNotTrack) {
 <li>Promise.allSettled() is all settle, means it doesn&rsquo;t return error if any async call fails. It gives the collective output of all successful and failed async calls.</li>
 </ul>
 <p>Let&rsquo;s look at the below example, where <code>getPostsFails</code> aync call returns 404 error since url endpoint doesn&rsquo;t exist but you still able to fetch data for <code>getUsers</code> and <code>getComments</code> async calls.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#888">//create a common getData function
-</span><span style="color:#888"></span><span style="color:#080;font-weight:bold">let</span> getData <span style="color:#333">=</span> (url) =&gt; <span style="color:#080;font-weight:bold">new</span> <span style="color:#007020">Promise</span>(<span style="color:#080;font-weight:bold">function</span> (resolve, reject ){
-  fetch(url)
-    .then(response =&gt; {
-        <span style="color:#080;font-weight:bold">if</span>(response.ok){
-          <span style="color:#080;font-weight:bold">return</span> response.json();
-        }<span style="color:#080;font-weight:bold">else</span>{
-          <span style="color:#080;font-weight:bold">throw</span> <span style="background-color:#fff0f0">`Error </span><span style="background-color:#eee">${</span>response.status<span style="background-color:#eee">}</span><span style="background-color:#fff0f0">`</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//create a common getData function
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getData</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">url</span>) =&gt; <span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span> ){
+  <span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">url</span>)
+    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">response</span> =&gt; {
+        <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">ok</span>){
+          <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>();
+        }<span style="color:#66d9ef">else</span>{
+          <span style="color:#66d9ef">throw</span> <span style="color:#e6db74">`Error </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">status</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
         }     
     })
-    .then(data =&gt; {
-        resolve(data);
+    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">data</span> =&gt; {
+        <span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">data</span>);
     })
-    .<span style="color:#080;font-weight:bold">catch</span>(error =&gt; {
-        reject(error);
+    .<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">error</span> =&gt; {
+        <span style="color:#a6e22e">reject</span>(<span style="color:#a6e22e">error</span>);
     });
 });
 
-<span style="color:#888">//create multiple promises from common getData function
-</span><span style="color:#888"></span><span style="color:#080;font-weight:bold">let</span> getUsers <span style="color:#333">=</span> getData(<span style="background-color:#fff0f0">&#39;https://jsonplaceholder.typicode.com/users&#39;</span>);
-<span style="display:block;width:100%;background-color:#e5e5e5"><span style="color:#080;font-weight:bold">let</span> getPostsFails <span style="color:#333">=</span> getData(<span style="background-color:#fff0f0">&#39;https://jsonplaceholder.typicode.com/postsfailes&#39;</span>);
-</span><span style="color:#080;font-weight:bold">let</span> getComments <span style="color:#333">=</span> getData(<span style="background-color:#fff0f0">&#39;https://jsonplaceholder.typicode.com/comments&#39;</span>);
+<span style="color:#75715e">//create multiple promises from common getData function
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getUsers</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getData</span>(<span style="color:#e6db74">&#39;https://jsonplaceholder.typicode.com/users&#39;</span>);
+<span style="display:block;width:100%;background-color:#3c3d38"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getPostsFails</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getData</span>(<span style="color:#e6db74">&#39;https://jsonplaceholder.typicode.com/postsfailes&#39;</span>);
+</span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getComments</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getData</span>(<span style="color:#e6db74">&#39;https://jsonplaceholder.typicode.com/comments&#39;</span>);
 
-<span style="color:#888">//fetch data to get users, posts and comments collectively regardless of any error
-</span><span style="color:#888"></span><span style="color:#007020">Promise</span>.allSettled([getUsers, getPostsFails, getComments]).then(result =&gt; {
-  console.log(result);
+<span style="color:#75715e">//fetch data to get users, posts and comments collectively regardless of any error
+</span><span style="color:#75715e"></span>Promise.<span style="color:#a6e22e">allSettled</span>([<span style="color:#a6e22e">getUsers</span>, <span style="color:#a6e22e">getPostsFails</span>, <span style="color:#a6e22e">getComments</span>]).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">result</span> =&gt; {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">result</span>);
 });
 </code></pre></div><pre><code><div class="code_output">Output</div>
 ▼ (3) [{…}, {…}, {…}]
@@ -374,29 +374,29 @@ if (!doNotTrack) {
 <p>Promise.race() is useful when you are interested in fetching data from any one of the async call out of multiple async calls, whichever resolve first.</p>
 <p>Look at the below example where we are interested in any data out of <code>getTodos</code>, <code>getUsers</code> and <code>getComments</code>, whichever resolves first. In our case <code>getUsers</code> resolved first and returned user list.</p>
 <p>Please note that if you execute the same code snippet again and again, result might differ based on network connectivity and which one resolve first.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#888">//create a common getData function
-</span><span style="color:#888"></span><span style="color:#080;font-weight:bold">let</span> getData <span style="color:#333">=</span> (url) =&gt; <span style="color:#080;font-weight:bold">new</span> <span style="color:#007020">Promise</span>(<span style="color:#080;font-weight:bold">function</span> (resolve, reject ){
-  fetch(url)
-    .then(response =&gt; {
-        <span style="color:#080;font-weight:bold">return</span> response.json();
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//create a common getData function
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getData</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">url</span>) =&gt; <span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span> ){
+  <span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">url</span>)
+    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">response</span> =&gt; {
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>();
     })
-    .then(data =&gt; {
-        resolve(data);
+    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">data</span> =&gt; {
+        <span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">data</span>);
     })
-    .<span style="color:#080;font-weight:bold">catch</span>(error =&gt; {
-        reject(error);
+    .<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">error</span> =&gt; {
+        <span style="color:#a6e22e">reject</span>(<span style="color:#a6e22e">error</span>);
     });
 });
 
-<span style="color:#888">//create multiple promises from common getData function
-</span><span style="color:#888"></span><span style="color:#080;font-weight:bold">let</span> getTodos <span style="color:#333">=</span> getData(<span style="background-color:#fff0f0">&#39;https://jsonplaceholder.typicode.com/todos&#39;</span>);
-<span style="color:#080;font-weight:bold">let</span> getUsers <span style="color:#333">=</span> getData(<span style="background-color:#fff0f0">&#39;https://jsonplaceholder.typicode.com/users&#39;</span>);
-<span style="color:#080;font-weight:bold">let</span> getComments <span style="color:#333">=</span> getData(<span style="background-color:#fff0f0">&#39;https://jsonplaceholder.typicode.com/comments&#39;</span>);
+<span style="color:#75715e">//create multiple promises from common getData function
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getTodos</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getData</span>(<span style="color:#e6db74">&#39;https://jsonplaceholder.typicode.com/todos&#39;</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getUsers</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getData</span>(<span style="color:#e6db74">&#39;https://jsonplaceholder.typicode.com/users&#39;</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">getComments</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getData</span>(<span style="color:#e6db74">&#39;https://jsonplaceholder.typicode.com/comments&#39;</span>);
 
 
-<span style="color:#888">//fetch either todos or users or comments whichever resolves first
-</span><span style="color:#888"></span><span style="color:#007020">Promise</span>.race([getTodos, getUsers, getComments]).then(result =&gt; {
-  console.log(result);
+<span style="color:#75715e">//fetch either todos or users or comments whichever resolves first
+</span><span style="color:#75715e"></span>Promise.<span style="color:#a6e22e">race</span>([<span style="color:#a6e22e">getTodos</span>, <span style="color:#a6e22e">getUsers</span>, <span style="color:#a6e22e">getComments</span>]).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">result</span> =&gt; {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">result</span>);
 });
 </code></pre></div><pre><code><div class="code_output">Output</div>
 ▼ (10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]

@@ -280,38 +280,38 @@ Here we either use java built-in functional interface like <code>Function</code>
 </code></pre><p><br /></p>
 <h4 id="21-calculator">2.1 Calculator</h4>
 <p>Let&rsquo;s create two <strong>static</strong> methods <code>square</code> and <code>multiply</code> in <code>Calculator</code> class.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">Calculator</span> <span style="color:#333">{</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Calculator</span> <span style="color:#f92672">{</span>
 	
-    <span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">static</span> <span style="color:#339;font-weight:bold">double</span> <span style="color:#06b;font-weight:bold">square</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">double</span> num<span style="color:#333">){</span>
-       <span style="color:#080;font-weight:bold">return</span> Math<span style="color:#333">.</span><span style="color:#00c">pow</span><span style="color:#333">(</span>num<span style="color:#333">,</span> 2<span style="color:#333">);</span>
-    <span style="color:#333">}</span>
-    <span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">static</span> <span style="color:#339;font-weight:bold">double</span> <span style="color:#06b;font-weight:bold">multiply</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">double</span> num1<span style="color:#333">,</span> <span style="color:#339;font-weight:bold">double</span> num2<span style="color:#333">)</span> <span style="color:#333">{</span>
-    	<span style="color:#080;font-weight:bold">return</span> num1<span style="color:#333">*</span>num2<span style="color:#333">;</span>
-    <span style="color:#333">}</span>
-<span style="color:#333">}</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">square</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> num<span style="color:#f92672">){</span>
+       <span style="color:#66d9ef">return</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">pow</span><span style="color:#f92672">(</span>num<span style="color:#f92672">,</span> 2<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">multiply</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> num1<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> num2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    	<span style="color:#66d9ef">return</span> num1<span style="color:#f92672">*</span>num2<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 </code></pre></div><h6 id="211-initialize-functional-interface">2.1.1 Initialize Functional Interface</h6>
 <p>Let’s initialize java built-in <code>Function</code>, <code>BiFunction</code> functional interface and apply it to find square and multiply respectively.<br>
 <code>Function</code> interface accepts one argument and returns one argument. Here, it takes one Double arg and return its square.<br>
 <code>BiFunction</code> interface accepts two arguments and returns one argument. Here, it takes two Double args and return its multiplication.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#888">// Initialize functional interface
-</span><span style="color:#888"></span>Function<span style="color:#333">&lt;</span>Double<span style="color:#333">,</span> Double<span style="color:#333">&gt;</span> square <span style="color:#333">=</span> Calculator<span style="color:#333">::</span>square<span style="color:#333">;</span>
-BiFunction<span style="color:#333">&lt;</span>Double<span style="color:#333">,</span> Double<span style="color:#333">,</span> Double<span style="color:#333">&gt;</span> multiply <span style="color:#333">=</span> Calculator<span style="color:#333">::</span>multiply<span style="color:#333">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Initialize functional interface
+</span><span style="color:#75715e"></span>Function<span style="color:#f92672">&lt;</span>Double<span style="color:#f92672">,</span> Double<span style="color:#f92672">&gt;</span> square <span style="color:#f92672">=</span> Calculator<span style="color:#f92672">::</span>square<span style="color:#f92672">;</span>
+BiFunction<span style="color:#f92672">&lt;</span>Double<span style="color:#f92672">,</span> Double<span style="color:#f92672">,</span> Double<span style="color:#f92672">&gt;</span> multiply <span style="color:#f92672">=</span> Calculator<span style="color:#f92672">::</span>multiply<span style="color:#f92672">;</span>
 
-<span style="color:#888">// Execute function
-</span><span style="color:#888"></span>square<span style="color:#333">.</span><span style="color:#00c">apply</span><span style="color:#333">(</span>3<span style="color:#333">.</span><span style="color:#00c">0</span><span style="color:#333">);</span>
-multiply<span style="color:#333">.</span><span style="color:#00c">apply</span><span style="color:#333">(</span>2<span style="color:#333">.</span><span style="color:#00c">5</span><span style="color:#333">,</span> 5<span style="color:#333">.</span><span style="color:#00c">0</span><span style="color:#333">)</span>
+<span style="color:#75715e">// Execute function
+</span><span style="color:#75715e"></span>square<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>3<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span><span style="color:#f92672">);</span>
+multiply<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>2<span style="color:#f92672">.</span><span style="color:#a6e22e">5</span><span style="color:#f92672">,</span> 5<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span><span style="color:#f92672">)</span>
 </code></pre></div><pre><code><div class="code_output">Output</div>
 9.0
 12.5
 </code></pre><h6 id="212-replace-lambda-expression">2.1.2 Replace Lambda Expression</h6>
 <p>We generate square of list of Integer by replacing lambda expression with method reference.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#333">&lt;</span>Integer<span style="color:#333">&gt;</span> numbers <span style="color:#333">=</span> Arrays<span style="color:#333">.</span><span style="color:#00c">asList</span><span style="color:#333">(</span>1<span style="color:#333">,</span>2<span style="color:#333">,</span>3<span style="color:#333">);</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> numbers <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span>2<span style="color:#f92672">,</span>3<span style="color:#f92672">);</span>
 
-<span style="color:#888">// Lambda expression 
-</span><span style="color:#888"></span>numbers<span style="color:#333">.</span><span style="color:#00c">stream</span><span style="color:#333">().</span><span style="color:#00c">map</span><span style="color:#333">(</span>number <span style="color:#333">-&gt;</span> Calculator<span style="color:#333">.</span><span style="color:#00c">square</span><span style="color:#333">(</span>number<span style="color:#333">)).</span><span style="color:#00c">forEach</span><span style="color:#333">(</span>number <span style="color:#333">-&gt;</span> System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">.</span><span style="color:#00c">println</span><span style="color:#333">(</span>number<span style="color:#333">));</span>
+<span style="color:#75715e">// Lambda expression 
+</span><span style="color:#75715e"></span>numbers<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>number <span style="color:#f92672">-&gt;</span> Calculator<span style="color:#f92672">.</span><span style="color:#a6e22e">square</span><span style="color:#f92672">(</span>number<span style="color:#f92672">)).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>number <span style="color:#f92672">-&gt;</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>number<span style="color:#f92672">));</span>
 		
-<span style="color:#888">// Method Reference
-</span><span style="color:#888"></span>numbers<span style="color:#333">.</span><span style="color:#00c">stream</span><span style="color:#333">().</span><span style="color:#00c">map</span><span style="color:#333">(</span>Calculator<span style="color:#333">::</span>square<span style="color:#333">).</span><span style="color:#00c">forEach</span><span style="color:#333">(</span>System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">::</span>println<span style="color:#333">);</span>
+<span style="color:#75715e">// Method Reference
+</span><span style="color:#75715e"></span>numbers<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>Calculator<span style="color:#f92672">::</span>square<span style="color:#f92672">).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
 </code></pre></div><pre><code><div class="code_output">Output</div>
 1.0
 4.0
@@ -322,22 +322,22 @@ multiply<span style="color:#333">.</span><span style="color:#00c">apply</span><s
 <h6 id="221-initialize-functional-interface">2.2.1 Initialize Functional Interface</h6>
 <p>Let&rsquo;s initialize java built-in <code>Function</code> functional interface and apply it to parse String to Integer.<br>
 <code>Function</code> interface takes one argument and returns one argument. Here in example, it takes a <strong>String</strong> argument and returns <strong>Integer</strong>.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#888">// Initialize functional interface
-</span><span style="color:#888"></span>Function<span style="color:#333">&lt;</span>String<span style="color:#333">,</span> Integer<span style="color:#333">&gt;</span> parseInt <span style="color:#333">=</span> Integer<span style="color:#333">::</span>parseInt<span style="color:#333">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Initialize functional interface
+</span><span style="color:#75715e"></span>Function<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> parseInt <span style="color:#f92672">=</span> Integer<span style="color:#f92672">::</span>parseInt<span style="color:#f92672">;</span>
 
-<span style="color:#888">// Execute function
-</span><span style="color:#888"></span>parseInt<span style="color:#333">.</span><span style="color:#00c">apply</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;2019&#34;</span><span style="color:#333">);</span>
+<span style="color:#75715e">// Execute function
+</span><span style="color:#75715e"></span>parseInt<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;2019&#34;</span><span style="color:#f92672">);</span>
 </code></pre></div><pre><code><div class="code_output">Output</div>
 2019
 </code></pre><h6 id="222-replace-lambda-expression">2.2.2 Replace Lambda Expression</h6>
 <p>Let&rsquo;s parse a list of String to <strong>Integer</strong> using its static <strong>parseInt</strong> method. We see that how we can replace lambda expression with method reference resulting in same output.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#333">&lt;</span>String<span style="color:#333">&gt;</span> years <span style="color:#333">=</span> Arrays<span style="color:#333">.</span><span style="color:#00c">asList</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;2019&#34;</span><span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;2020&#34;</span><span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;2021&#34;</span><span style="color:#333">);</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> years <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;2019&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;2020&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;2021&#34;</span><span style="color:#f92672">);</span>
 
-<span style="color:#888">// Lambda Expression
-</span><span style="color:#888"></span>years<span style="color:#333">.</span><span style="color:#00c">stream</span><span style="color:#333">().</span><span style="color:#00c">map</span><span style="color:#333">(</span>year <span style="color:#333">-&gt;</span> Integer<span style="color:#333">.</span><span style="color:#00c">parseInt</span><span style="color:#333">(</span>year<span style="color:#333">)).</span><span style="color:#00c">forEach</span><span style="color:#333">(</span>year <span style="color:#333">-&gt;</span> System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">.</span><span style="color:#00c">println</span><span style="color:#333">(</span>year<span style="color:#333">));</span>
+<span style="color:#75715e">// Lambda Expression
+</span><span style="color:#75715e"></span>years<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>year <span style="color:#f92672">-&gt;</span> Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">parseInt</span><span style="color:#f92672">(</span>year<span style="color:#f92672">)).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>year <span style="color:#f92672">-&gt;</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>year<span style="color:#f92672">));</span>
 
-<span style="color:#888">// Method Reference
-</span><span style="color:#888"></span>years<span style="color:#333">.</span><span style="color:#00c">stream</span><span style="color:#333">().</span><span style="color:#00c">map</span><span style="color:#333">(</span>Integer<span style="color:#333">::</span>parseInt<span style="color:#333">).</span><span style="color:#00c">forEach</span><span style="color:#333">(</span>System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">::</span>println<span style="color:#333">);</span>
+<span style="color:#75715e">// Method Reference
+</span><span style="color:#75715e"></span>years<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>Integer<span style="color:#f92672">::</span>parseInt<span style="color:#f92672">).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
 </code></pre></div><pre><code><div class="code_output">Output</div>
 2019
 2020
@@ -353,36 +353,36 @@ multiply<span style="color:#333">.</span><span style="color:#00c">apply</span><s
 </code></pre><p><br /></p>
 <h4 id="31-calculator">3.1 Calculator</h4>
 <p>Let&rsquo;s create two <strong>instance</strong> methods <code>square</code> and <code>multiply</code> in <code>Calculator</code> class.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">Calculator</span> <span style="color:#333">{</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Calculator</span> <span style="color:#f92672">{</span>
 	
-    <span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">double</span> <span style="color:#06b;font-weight:bold">square</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">double</span> num<span style="color:#333">){</span>
-       <span style="color:#080;font-weight:bold">return</span> Math<span style="color:#333">.</span><span style="color:#00c">pow</span><span style="color:#333">(</span>num<span style="color:#333">,</span> 2<span style="color:#333">);</span>
-    <span style="color:#333">}</span>
-    <span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">double</span> <span style="color:#06b;font-weight:bold">multiply</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">double</span> num1<span style="color:#333">,</span> <span style="color:#339;font-weight:bold">double</span> num2<span style="color:#333">)</span> <span style="color:#333">{</span>
-    	<span style="color:#080;font-weight:bold">return</span> num1<span style="color:#333">*</span>num2<span style="color:#333">;</span>
-    <span style="color:#333">}</span>
-<span style="color:#333">}</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">square</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> num<span style="color:#f92672">){</span>
+       <span style="color:#66d9ef">return</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">pow</span><span style="color:#f92672">(</span>num<span style="color:#f92672">,</span> 2<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">multiply</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> num1<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> num2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    	<span style="color:#66d9ef">return</span> num1<span style="color:#f92672">*</span>num2<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 </code></pre></div><h6 id="311-initialize-functional-interface">3.1.1 Initialize Functional Interface</h6>
 <p>Let’s initialize java built-in <code>Function</code>, <code>BiFunction</code> functional interface and apply it to find square and multiply respectively.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#888">// Initialize functional interface
-</span><span style="color:#888"></span>Function<span style="color:#333">&lt;</span>Double<span style="color:#333">,</span> Double<span style="color:#333">&gt;</span> square <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> Calculator<span style="color:#333">()::</span>square<span style="color:#333">;</span>
-BiFunction<span style="color:#333">&lt;</span>Double<span style="color:#333">,</span> Double<span style="color:#333">,</span> Double<span style="color:#333">&gt;</span> multiply <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> Calculator<span style="color:#333">()::</span>multiply<span style="color:#333">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Initialize functional interface
+</span><span style="color:#75715e"></span>Function<span style="color:#f92672">&lt;</span>Double<span style="color:#f92672">,</span> Double<span style="color:#f92672">&gt;</span> square <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Calculator<span style="color:#f92672">()::</span>square<span style="color:#f92672">;</span>
+BiFunction<span style="color:#f92672">&lt;</span>Double<span style="color:#f92672">,</span> Double<span style="color:#f92672">,</span> Double<span style="color:#f92672">&gt;</span> multiply <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Calculator<span style="color:#f92672">()::</span>multiply<span style="color:#f92672">;</span>
 
-<span style="color:#888">// Execute function
-</span><span style="color:#888"></span>square<span style="color:#333">.</span><span style="color:#00c">apply</span><span style="color:#333">(</span>3<span style="color:#333">.</span><span style="color:#00c">0</span><span style="color:#333">);</span>
-multiply<span style="color:#333">.</span><span style="color:#00c">apply</span><span style="color:#333">(</span>2<span style="color:#333">.</span><span style="color:#00c">5</span><span style="color:#333">,</span> 5<span style="color:#333">.</span><span style="color:#00c">0</span><span style="color:#333">)</span>
+<span style="color:#75715e">// Execute function
+</span><span style="color:#75715e"></span>square<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>3<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span><span style="color:#f92672">);</span>
+multiply<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>2<span style="color:#f92672">.</span><span style="color:#a6e22e">5</span><span style="color:#f92672">,</span> 5<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span><span style="color:#f92672">)</span>
 </code></pre></div><pre><code><div class="code_output">Output</div>
 9.0
 12.5
 </code></pre><h6 id="312-replace-lambda-expression">3.1.2 Replace Lambda Expression</h6>
 <p>We generate square of list of Integer by replacing lambda expression with method reference.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#333">&lt;</span>Integer<span style="color:#333">&gt;</span> numbers <span style="color:#333">=</span> Arrays<span style="color:#333">.</span><span style="color:#00c">asList</span><span style="color:#333">(</span>1<span style="color:#333">,</span>2<span style="color:#333">,</span>3<span style="color:#333">);</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> numbers <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span>2<span style="color:#f92672">,</span>3<span style="color:#f92672">);</span>
 
-<span style="color:#888">// Lambda expression 
-</span><span style="color:#888"></span>numbers<span style="color:#333">.</span><span style="color:#00c">stream</span><span style="color:#333">().</span><span style="color:#00c">map</span><span style="color:#333">(</span>number <span style="color:#333">-&gt;</span> <span style="color:#080;font-weight:bold">new</span> Calculator<span style="color:#333">().</span><span style="color:#00c">square</span><span style="color:#333">(</span>number<span style="color:#333">)).</span><span style="color:#00c">forEach</span><span style="color:#333">(</span>number <span style="color:#333">-&gt;</span> System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">.</span><span style="color:#00c">println</span><span style="color:#333">(</span>number<span style="color:#333">));</span>
+<span style="color:#75715e">// Lambda expression 
+</span><span style="color:#75715e"></span>numbers<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>number <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">new</span> Calculator<span style="color:#f92672">().</span><span style="color:#a6e22e">square</span><span style="color:#f92672">(</span>number<span style="color:#f92672">)).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>number <span style="color:#f92672">-&gt;</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>number<span style="color:#f92672">));</span>
 		
-<span style="color:#888">// Method Reference
-</span><span style="color:#888"></span>numbers<span style="color:#333">.</span><span style="color:#00c">stream</span><span style="color:#333">().</span><span style="color:#00c">map</span><span style="color:#333">(</span><span style="color:#080;font-weight:bold">new</span> Calculator<span style="color:#333">()::</span>square<span style="color:#333">).</span><span style="color:#00c">forEach</span><span style="color:#333">(</span>System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">::</span>println<span style="color:#333">);</span>
+<span style="color:#75715e">// Method Reference
+</span><span style="color:#75715e"></span>numbers<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Calculator<span style="color:#f92672">()::</span>square<span style="color:#f92672">).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
 </code></pre></div><pre><code><div class="code_output">Output</div>
 1.0
 4.0
@@ -392,43 +392,43 @@ multiply<span style="color:#333">.</span><span style="color:#00c">apply</span><s
 <h6 id="321-initialize-functional-interface">3.2.1 Initialize Functional Interface</h6>
 <p>Let&rsquo;s initialize java built-in <code>Supplier</code> functional interface to print a String.<br>
 <code>Supplier</code> interface accepts one argument and returns nothing. Here in example, it accepts a <strong>String</strong> argument and print it.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#888">// Initialize functional interface
-</span><span style="color:#888"></span>Consumer<span style="color:#333">&lt;</span>String<span style="color:#333">&gt;</span> println <span style="color:#333">=</span> System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">::</span>println<span style="color:#333">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Initialize functional interface
+</span><span style="color:#75715e"></span>Consumer<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> println <span style="color:#f92672">=</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">;</span>
 
-<span style="color:#888">// Execute function
-</span><span style="color:#888"></span>println<span style="color:#333">.</span><span style="color:#00c">accept</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;Learning Method Reference a.k.a Colon Operator ::&#34;</span><span style="color:#333">);</span>
+<span style="color:#75715e">// Execute function
+</span><span style="color:#75715e"></span>println<span style="color:#f92672">.</span><span style="color:#a6e22e">accept</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Learning Method Reference a.k.a Colon Operator ::&#34;</span><span style="color:#f92672">);</span>
 </code></pre></div><pre><code><div class="code_output">Output</div>
 Learning Method Reference a.k.a Colon Operator ::
 </code></pre><h6 id="322-replace-anonymous-class-and-lambda-expression">3.2.2 Replace Anonymous Class and Lambda Expression</h6>
 <p>We will print a list of String and see how double colon <code>::</code> method reference makes the code more concise and readable as compare to anonymous class and lambda expression.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#333">&lt;</span>String<span style="color:#333">&gt;</span> languages <span style="color:#333">=</span> Arrays<span style="color:#333">.</span><span style="color:#00c">asList</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;java&#34;</span><span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;javascript&#34;</span><span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;css&#34;</span><span style="color:#333">);</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> languages <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;java&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;javascript&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;css&#34;</span><span style="color:#f92672">);</span>
 
-<span style="color:#888">// Anonymous Class
-</span><span style="color:#888"></span>languages<span style="color:#333">.</span><span style="color:#00c">forEach</span><span style="color:#333">(</span><span style="color:#080;font-weight:bold">new</span> Consumer<span style="color:#333">&lt;</span>String<span style="color:#333">&gt;()</span> <span style="color:#333">{</span>         
-    <span style="color:#555;font-weight:bold">@Override</span>
-    <span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">accept</span><span style="color:#333">(</span>String str<span style="color:#333">)</span> <span style="color:#333">{</span>
-        System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">.</span><span style="color:#00c">println</span><span style="color:#333">(</span>str<span style="color:#333">);</span>
-    <span style="color:#333">}</span>
-<span style="color:#333">});</span>
+<span style="color:#75715e">// Anonymous Class
+</span><span style="color:#75715e"></span>languages<span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Consumer<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;()</span> <span style="color:#f92672">{</span>         
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">accept</span><span style="color:#f92672">(</span>String str<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>str<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">});</span>
 
-<span style="color:#888">// Lambda expression 
-</span><span style="color:#888"></span>languages<span style="color:#333">.</span><span style="color:#00c">forEach</span><span style="color:#333">(</span>str <span style="color:#333">-&gt;</span> System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">.</span><span style="color:#00c">println</span><span style="color:#333">(</span>str<span style="color:#333">));</span> 
+<span style="color:#75715e">// Lambda expression 
+</span><span style="color:#75715e"></span>languages<span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>str <span style="color:#f92672">-&gt;</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>str<span style="color:#f92672">));</span> 
 
-<span style="color:#888">// Method Reference
-</span><span style="color:#888"></span>languages<span style="color:#333">.</span><span style="color:#00c">forEach</span><span style="color:#333">(</span>System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">::</span>println<span style="color:#333">);</span>            
+<span style="color:#75715e">// Method Reference
+</span><span style="color:#75715e"></span>languages<span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>            
 </code></pre></div><pre><code><div class="code_output">Output</div>
 java
 javascript
 css
 </code></pre><h6 id="323-print-a-list-of-integer">3.2.3 Print a list of Integer</h6>
 <p>Let&rsquo;s print a list of integer using lambda expression and double colon <code>::</code> method reference.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#333">&lt;</span>Integer<span style="color:#333">&gt;</span> numbers <span style="color:#333">=</span> Arrays<span style="color:#333">.</span><span style="color:#00c">asList</span><span style="color:#333">(</span>1<span style="color:#333">,</span>2<span style="color:#333">,</span>3<span style="color:#333">);</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> numbers <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span>2<span style="color:#f92672">,</span>3<span style="color:#f92672">);</span>
 
-<span style="color:#888">// Lambda expression 
-</span><span style="color:#888"></span>numbers<span style="color:#333">.</span><span style="color:#00c">forEach</span><span style="color:#333">(</span>number<span style="color:#333">-&gt;</span>System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">.</span><span style="color:#00c">println</span><span style="color:#333">(</span>number<span style="color:#333">));</span>
+<span style="color:#75715e">// Lambda expression 
+</span><span style="color:#75715e"></span>numbers<span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>number<span style="color:#f92672">-&gt;</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>number<span style="color:#f92672">));</span>
 
-<span style="color:#888">// Method Reference
-</span><span style="color:#888"></span>numbers<span style="color:#333">.</span><span style="color:#00c">forEach</span><span style="color:#333">(</span>System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">::</span>println<span style="color:#333">);</span>
+<span style="color:#75715e">// Method Reference
+</span><span style="color:#75715e"></span>numbers<span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
 </code></pre></div><pre><code><div class="code_output">Output</div>
 1
 2
@@ -437,22 +437,22 @@ css
 <h4 id="33-stringtouppercase">3.3 String::toUpperCase</h4>
 <h6 id="331-initialize-functional-interface">3.3.1 Initialize Functional Interface</h6>
 <p>Let&rsquo;s initialize java built-in <code>Function</code> functional interface and execute it to change String to UPPERCASE.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#888">// Initialize functional interface
-</span><span style="color:#888"></span>Function<span style="color:#333">&lt;</span>String<span style="color:#333">,</span> String<span style="color:#333">&gt;</span> toUpperCase <span style="color:#333">=</span> String<span style="color:#333">::</span>toUpperCase<span style="color:#333">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Initialize functional interface
+</span><span style="color:#75715e"></span>Function<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;</span> toUpperCase <span style="color:#f92672">=</span> String<span style="color:#f92672">::</span>toUpperCase<span style="color:#f92672">;</span>
 
-<span style="color:#888">// Execute function
-</span><span style="color:#888"></span>toUpperCase<span style="color:#333">.</span><span style="color:#00c">apply</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;java&#34;</span><span style="color:#333">);</span>
+<span style="color:#75715e">// Execute function
+</span><span style="color:#75715e"></span>toUpperCase<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;java&#34;</span><span style="color:#f92672">);</span>
 </code></pre></div><pre><code><div class="code_output">Output</div>
 JAVA
 </code></pre><h6 id="332-replace-lambda-expression">3.3.2 Replace Lambda Expression</h6>
 <p>Let&rsquo;s look at the example where we use multiple method references to print the String in uppercase.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#333">&lt;</span>String<span style="color:#333">&gt;</span> languages <span style="color:#333">=</span> Arrays<span style="color:#333">.</span><span style="color:#00c">asList</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;java&#34;</span><span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;javascript&#34;</span><span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;css&#34;</span><span style="color:#333">);</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> languages <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;java&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;javascript&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;css&#34;</span><span style="color:#f92672">);</span>
 
-<span style="color:#888">// Lambda expression
-</span><span style="color:#888"></span>languages<span style="color:#333">.</span><span style="color:#00c">stream</span><span style="color:#333">().</span><span style="color:#00c">map</span><span style="color:#333">(</span>str <span style="color:#333">-&gt;</span> str<span style="color:#333">.</span><span style="color:#00c">toUpperCase</span><span style="color:#333">()).</span><span style="color:#00c">forEach</span><span style="color:#333">(</span>str <span style="color:#333">-&gt;</span> System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">.</span><span style="color:#00c">println</span><span style="color:#333">(</span>str<span style="color:#333">));</span>
+<span style="color:#75715e">// Lambda expression
+</span><span style="color:#75715e"></span>languages<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>str <span style="color:#f92672">-&gt;</span> str<span style="color:#f92672">.</span><span style="color:#a6e22e">toUpperCase</span><span style="color:#f92672">()).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>str <span style="color:#f92672">-&gt;</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>str<span style="color:#f92672">));</span>
 
-<span style="color:#888">// Method Reference
-</span><span style="color:#888"></span>languages<span style="color:#333">.</span><span style="color:#00c">stream</span><span style="color:#333">().</span><span style="color:#00c">map</span><span style="color:#333">(</span>String<span style="color:#333">::</span>toUpperCase<span style="color:#333">).</span><span style="color:#00c">forEach</span><span style="color:#333">(</span>System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">::</span>println<span style="color:#333">);</span>          
+<span style="color:#75715e">// Method Reference
+</span><span style="color:#75715e"></span>languages<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>String<span style="color:#f92672">::</span>toUpperCase<span style="color:#f92672">).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>          
 </code></pre></div><pre><code><div class="code_output">Output</div>
 JAVA
 JAVASCRIPT
@@ -464,154 +464,154 @@ CSS
 <pre><code><mark>ClassName::new</mark>
 </code></pre><p><br /></p>
 <h4 id="41-create-an-int10-array">4.1 Create an int[10] array</h4>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#888">// Default
-</span><span style="color:#888"></span><span style="color:#339;font-weight:bold">int</span><span style="color:#333">[]</span> array1 <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> <span style="color:#339;font-weight:bold">int</span><span style="color:#333">[</span>10<span style="color:#333">];</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Default
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> array1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>10<span style="color:#f92672">];</span>
 
-<span style="color:#888">// Method Reference
-</span><span style="color:#888"></span>IntFunction<span style="color:#333">&lt;</span><span style="color:#339;font-weight:bold">int</span><span style="color:#333">[]&gt;</span> arrayMaker <span style="color:#333">=</span> <span style="color:#339;font-weight:bold">int</span><span style="color:#333">[]::</span><span style="color:#080;font-weight:bold">new</span><span style="color:#333">;</span>
-<span style="color:#339;font-weight:bold">int</span><span style="color:#333">[]</span> array2 <span style="color:#333">=</span> arrayMaker<span style="color:#333">.</span><span style="color:#00c">apply</span><span style="color:#333">(</span>10<span style="color:#333">);</span>
+<span style="color:#75715e">// Method Reference
+</span><span style="color:#75715e"></span>IntFunction<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]&gt;</span> arrayMaker <span style="color:#f92672">=</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]::</span><span style="color:#66d9ef">new</span><span style="color:#f92672">;</span>
+<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> array2 <span style="color:#f92672">=</span> arrayMaker<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>10<span style="color:#f92672">);</span>
 </code></pre></div><p><br /></p>
 <h4 id="42-create-hashmap">4.2 Create HashMap</h4>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#888">// Default
-</span><span style="color:#888"></span>Map map1 <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> HashMap<span style="color:#333">();</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Default
+</span><span style="color:#75715e"></span>Map map1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">();</span>
 
-<span style="color:#888">// Method Reference
-</span><span style="color:#888"></span>Supplier<span style="color:#333">&lt;</span>Map<span style="color:#333">&gt;</span> mapMaker <span style="color:#333">=</span> HashMap<span style="color:#333">::</span><span style="color:#080;font-weight:bold">new</span><span style="color:#333">;</span>
-Map map2 <span style="color:#333">=</span> mapMaker<span style="color:#333">.</span><span style="color:#00c">get</span><span style="color:#333">();</span>
+<span style="color:#75715e">// Method Reference
+</span><span style="color:#75715e"></span>Supplier<span style="color:#f92672">&lt;</span>Map<span style="color:#f92672">&gt;</span> mapMaker <span style="color:#f92672">=</span> HashMap<span style="color:#f92672">::</span><span style="color:#66d9ef">new</span><span style="color:#f92672">;</span>
+Map map2 <span style="color:#f92672">=</span> mapMaker<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">();</span>
 </code></pre></div><p><br /></p>
 <h2 id="5-super-method">5. Super Method</h2>
 <h6 id="syntax-3">Syntax</h6>
 <pre><code><mark>super::parentMethodName</mark>
 </code></pre><p>We create <em><strong>square</strong></em> and <em><strong>multiply</strong></em> instance methods in <code>Calculator</code> class and then call those methods in our inherited <code>AdvanceCalculator</code> class using <code>super::parentMethodName</code> to create advance methods <em><strong>squareAndAdd</strong></em> and <em><strong>squareAndMultiply</strong></em></p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">Calculator</span> <span style="color:#333">{</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Calculator</span> <span style="color:#f92672">{</span>
 	
-    <span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">double</span> <span style="color:#06b;font-weight:bold">square</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">double</span> num<span style="color:#333">){</span>
-       <span style="color:#080;font-weight:bold">return</span> Math<span style="color:#333">.</span><span style="color:#00c">pow</span><span style="color:#333">(</span>num<span style="color:#333">,</span> 2<span style="color:#333">);</span>
-    <span style="color:#333">}</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">square</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> num<span style="color:#f92672">){</span>
+       <span style="color:#66d9ef">return</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">pow</span><span style="color:#f92672">(</span>num<span style="color:#f92672">,</span> 2<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
     
-    <span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">double</span> <span style="color:#06b;font-weight:bold">multiply</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">double</span> num1<span style="color:#333">,</span> <span style="color:#339;font-weight:bold">double</span> num2<span style="color:#333">)</span> <span style="color:#333">{</span>
-    	<span style="color:#080;font-weight:bold">return</span> num1<span style="color:#333">*</span>num2<span style="color:#333">;</span>
-    <span style="color:#333">}</span>
-<span style="color:#333">}</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">multiply</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> num1<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> num2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    	<span style="color:#66d9ef">return</span> num1<span style="color:#f92672">*</span>num2<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 
-<span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">AdvanceCalculator</span> <span style="color:#080;font-weight:bold">extends</span> Calculator <span style="color:#333">{</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AdvanceCalculator</span> <span style="color:#66d9ef">extends</span> Calculator <span style="color:#f92672">{</span>
 	
-	<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">double</span> <span style="color:#06b;font-weight:bold">squareAndAdd</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">double</span> num1<span style="color:#333">,</span> <span style="color:#339;font-weight:bold">double</span> num2<span style="color:#333">)</span> <span style="color:#333">{</span>
-    	Function<span style="color:#333">&lt;</span>Double<span style="color:#333">,</span> Double<span style="color:#333">&gt;</span> square <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">super</span><span style="color:#333">::</span>square<span style="color:#333">;</span> 	
-    	<span style="color:#080;font-weight:bold">return</span> square<span style="color:#333">.</span><span style="color:#00c">apply</span><span style="color:#333">(</span>num1<span style="color:#333">)*</span> square<span style="color:#333">.</span><span style="color:#00c">apply</span><span style="color:#333">(</span>num2<span style="color:#333">);</span>
-    <span style="color:#333">}</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">squareAndAdd</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> num1<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> num2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    	Function<span style="color:#f92672">&lt;</span>Double<span style="color:#f92672">,</span> Double<span style="color:#f92672">&gt;</span> square <span style="color:#f92672">=</span> <span style="color:#66d9ef">super</span><span style="color:#f92672">::</span>square<span style="color:#f92672">;</span> 	
+    	<span style="color:#66d9ef">return</span> square<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>num1<span style="color:#f92672">)*</span> square<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>num2<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
 	
-	<span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">double</span> <span style="color:#06b;font-weight:bold">squareAndMultiply</span><span style="color:#333">(</span><span style="color:#339;font-weight:bold">double</span> num1<span style="color:#333">,</span> <span style="color:#339;font-weight:bold">double</span> num2<span style="color:#333">)</span> <span style="color:#333">{</span>
-    	Function<span style="color:#333">&lt;</span>Double<span style="color:#333">,</span> Double<span style="color:#333">&gt;</span> square <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">super</span><span style="color:#333">::</span>square<span style="color:#333">;</span> 
-    	BiFunction<span style="color:#333">&lt;</span>Double<span style="color:#333">,</span> Double<span style="color:#333">,</span> Double<span style="color:#333">&gt;</span> multiply <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">super</span><span style="color:#333">::</span>multiply<span style="color:#333">;</span>
-    	<span style="color:#080;font-weight:bold">return</span> multiply<span style="color:#333">.</span><span style="color:#00c">apply</span><span style="color:#333">(</span>square<span style="color:#333">.</span><span style="color:#00c">apply</span><span style="color:#333">(</span>num1<span style="color:#333">),</span> square<span style="color:#333">.</span><span style="color:#00c">apply</span><span style="color:#333">(</span>num2<span style="color:#333">));</span>
-    <span style="color:#333">}</span>
-<span style="color:#333">}</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">squareAndMultiply</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> num1<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> num2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    	Function<span style="color:#f92672">&lt;</span>Double<span style="color:#f92672">,</span> Double<span style="color:#f92672">&gt;</span> square <span style="color:#f92672">=</span> <span style="color:#66d9ef">super</span><span style="color:#f92672">::</span>square<span style="color:#f92672">;</span> 
+    	BiFunction<span style="color:#f92672">&lt;</span>Double<span style="color:#f92672">,</span> Double<span style="color:#f92672">,</span> Double<span style="color:#f92672">&gt;</span> multiply <span style="color:#f92672">=</span> <span style="color:#66d9ef">super</span><span style="color:#f92672">::</span>multiply<span style="color:#f92672">;</span>
+    	<span style="color:#66d9ef">return</span> multiply<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>square<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>num1<span style="color:#f92672">),</span> square<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>num2<span style="color:#f92672">));</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 </code></pre></div><p><br /></p>
 <h2 id="6-real-world-practical-example">6. Real World Practical example</h2>
 <p>Let&rsquo;s create a Class <code>Tutorial</code> with properties name, duration and rating.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">Tutorial</span> <span style="color:#333">{</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Tutorial</span> <span style="color:#f92672">{</span>
 
-  <span style="color:#080;font-weight:bold">private</span> String name<span style="color:#333">;</span>
-  <span style="color:#080;font-weight:bold">private</span> Integer duration<span style="color:#333">;</span>
-  <span style="color:#080;font-weight:bold">private</span> Double rating<span style="color:#333">;</span>
+  <span style="color:#66d9ef">private</span> String name<span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">private</span> Integer duration<span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">private</span> Double rating<span style="color:#f92672">;</span>
 
-  <span style="color:#080;font-weight:bold">public</span> <span style="color:#06b;font-weight:bold">Tutorial</span><span style="color:#333">(</span>String name<span style="color:#333">)</span> <span style="color:#333">{</span>
-    <span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">name</span> <span style="color:#333">=</span> name<span style="color:#333">;</span>
-    <span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">duration</span> <span style="color:#333">=</span> 0<span style="color:#333">;</span>
-    <span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">rating</span> <span style="color:#333">=</span> 0<span style="color:#333">.</span><span style="color:#00c">0</span><span style="color:#333">;</span>
-  <span style="color:#333">}</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Tutorial</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">duration</span> <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">rating</span> <span style="color:#f92672">=</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
   
-  <span style="color:#080;font-weight:bold">public</span> <span style="color:#06b;font-weight:bold">Tutorial</span><span style="color:#333">(</span>String name<span style="color:#333">,</span> Integer duration<span style="color:#333">)</span> <span style="color:#333">{</span>
-    <span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">name</span> <span style="color:#333">=</span> name<span style="color:#333">;</span>
-    <span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">duration</span> <span style="color:#333">=</span> duration<span style="color:#333">;</span>
-    <span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">rating</span> <span style="color:#333">=</span> 0<span style="color:#333">.</span><span style="color:#00c">0</span><span style="color:#333">;</span>
-  <span style="color:#333">}</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Tutorial</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">,</span> Integer duration<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">duration</span> <span style="color:#f92672">=</span> duration<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">rating</span> <span style="color:#f92672">=</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
   
-  <span style="color:#080;font-weight:bold">public</span> <span style="color:#06b;font-weight:bold">Tutorial</span><span style="color:#333">(</span>String name<span style="color:#333">,</span> Integer duration<span style="color:#333">,</span> Double rating<span style="color:#333">)</span> <span style="color:#333">{</span>
-    <span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">name</span> <span style="color:#333">=</span> name<span style="color:#333">;</span>
-    <span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">duration</span> <span style="color:#333">=</span> duration<span style="color:#333">;</span>
-    <span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">rating</span> <span style="color:#333">=</span> rating<span style="color:#333">;</span>
-  <span style="color:#333">}</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Tutorial</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">,</span> Integer duration<span style="color:#f92672">,</span> Double rating<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">duration</span> <span style="color:#f92672">=</span> duration<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">rating</span> <span style="color:#f92672">=</span> rating<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
   
-  <span style="color:#080;font-weight:bold">public</span> String <span style="color:#06b;font-weight:bold">getName</span><span style="color:#333">()</span> <span style="color:#333">{</span>
-    <span style="color:#080;font-weight:bold">return</span> name<span style="color:#333">;</span>
-  <span style="color:#333">}</span>	
-  <span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">setName</span><span style="color:#333">(</span>String name<span style="color:#333">)</span> <span style="color:#333">{</span>
-    <span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">name</span> <span style="color:#333">=</span> name<span style="color:#333">;</span>
-  <span style="color:#333">}</span>
-  <span style="color:#080;font-weight:bold">public</span> Integer <span style="color:#06b;font-weight:bold">getDuration</span><span style="color:#333">()</span> <span style="color:#333">{</span>
-    <span style="color:#080;font-weight:bold">return</span> duration<span style="color:#333">;</span>
-  <span style="color:#333">}</span>
-  <span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">setDuration</span><span style="color:#333">(</span>Integer duration<span style="color:#333">)</span> <span style="color:#333">{</span>
-    <span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">duration</span> <span style="color:#333">=</span> duration<span style="color:#333">;</span>
-  <span style="color:#333">}</span>
-  <span style="color:#080;font-weight:bold">public</span> Double <span style="color:#06b;font-weight:bold">getRating</span><span style="color:#333">()</span> <span style="color:#333">{</span>
-    <span style="color:#080;font-weight:bold">return</span> rating<span style="color:#333">;</span>
-  <span style="color:#333">}</span>
-  <span style="color:#080;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">setRating</span><span style="color:#333">(</span>Double rating<span style="color:#333">)</span> <span style="color:#333">{</span>
-    <span style="color:#080;font-weight:bold">this</span><span style="color:#333">.</span><span style="color:#00c">rating</span> <span style="color:#333">=</span> rating<span style="color:#333">;</span>
-  <span style="color:#333">}</span>
+  <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getName</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> name<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>	
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setName</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+  <span style="color:#66d9ef">public</span> Integer <span style="color:#a6e22e">getDuration</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> duration<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setDuration</span><span style="color:#f92672">(</span>Integer duration<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">duration</span> <span style="color:#f92672">=</span> duration<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+  <span style="color:#66d9ef">public</span> Double <span style="color:#a6e22e">getRating</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> rating<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setRating</span><span style="color:#f92672">(</span>Double rating<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">rating</span> <span style="color:#f92672">=</span> rating<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
   
-  <span style="color:#555;font-weight:bold">@Override</span>
-  <span style="color:#080;font-weight:bold">public</span> String <span style="color:#06b;font-weight:bold">toString</span><span style="color:#333">()</span> <span style="color:#333">{</span>
-    <span style="color:#080;font-weight:bold">return</span> <span style="background-color:#fff0f0">&#34;Tutorial[ &#34;</span> <span style="color:#333">+</span> name <span style="color:#333">+</span> <span style="background-color:#fff0f0">&#34;\t- &#34;</span> <span style="color:#333">+</span> duration <span style="color:#333">+</span> <span style="background-color:#fff0f0">&#34;min, rating=&#34;</span> <span style="color:#333">+</span> rating <span style="color:#333">+</span> <span style="background-color:#fff0f0">&#34; ]&#34;</span><span style="color:#333">;</span>
-  <span style="color:#333">}</span>
+  <span style="color:#a6e22e">@Override</span>
+  <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Tutorial[ &#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;\t- &#34;</span> <span style="color:#f92672">+</span> duration <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;min, rating=&#34;</span> <span style="color:#f92672">+</span> rating <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; ]&#34;</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
 
-  <span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">static</span> <span style="color:#339;font-weight:bold">int</span> <span style="color:#06b;font-weight:bold">compareByRating</span><span style="color:#333">(</span>Tutorial t1<span style="color:#333">,</span> Tutorial t2<span style="color:#333">)</span> <span style="color:#333">{</span>
-    <span style="color:#080;font-weight:bold">return</span> t1<span style="color:#333">.</span><span style="color:#00c">getRating</span><span style="color:#333">().</span><span style="color:#00c">compareTo</span><span style="color:#333">(</span>t2<span style="color:#333">.</span><span style="color:#00c">getRating</span><span style="color:#333">());</span>
-  <span style="color:#333">}</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">compareByRating</span><span style="color:#f92672">(</span>Tutorial t1<span style="color:#f92672">,</span> Tutorial t2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> t1<span style="color:#f92672">.</span><span style="color:#a6e22e">getRating</span><span style="color:#f92672">().</span><span style="color:#a6e22e">compareTo</span><span style="color:#f92672">(</span>t2<span style="color:#f92672">.</span><span style="color:#a6e22e">getRating</span><span style="color:#f92672">());</span>
+  <span style="color:#f92672">}</span>
 
-  <span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">static</span> <span style="color:#339;font-weight:bold">int</span> <span style="color:#06b;font-weight:bold">compareByDuration</span><span style="color:#333">(</span>Tutorial t1<span style="color:#333">,</span> Tutorial t2<span style="color:#333">)</span> <span style="color:#333">{</span>
-    <span style="color:#080;font-weight:bold">return</span> t1<span style="color:#333">.</span><span style="color:#00c">getDuration</span><span style="color:#333">().</span><span style="color:#00c">compareTo</span><span style="color:#333">(</span>t2<span style="color:#333">.</span><span style="color:#00c">getDuration</span><span style="color:#333">());</span>
-  <span style="color:#333">}</span>
-<span style="color:#333">}</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">compareByDuration</span><span style="color:#f92672">(</span>Tutorial t1<span style="color:#f92672">,</span> Tutorial t2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> t1<span style="color:#f92672">.</span><span style="color:#a6e22e">getDuration</span><span style="color:#f92672">().</span><span style="color:#a6e22e">compareTo</span><span style="color:#f92672">(</span>t2<span style="color:#f92672">.</span><span style="color:#a6e22e">getDuration</span><span style="color:#f92672">());</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 </code></pre></div><p>Let&rsquo;s create a few tutorials</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#888">// List of tutorials
-</span><span style="color:#888"></span>List<span style="color:#333">&lt;</span>Tutorial<span style="color:#333">&gt;</span> tutorials <span style="color:#333">=</span> Arrays<span style="color:#333">.</span><span style="color:#00c">asList</span><span style="color:#333">(</span><span style="color:#080;font-weight:bold">new</span> Tutorial<span style="color:#333">[]</span> <span style="color:#333">{</span>
-    <span style="color:#080;font-weight:bold">new</span> Tutorial<span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;Streams in Java 8&#34;</span><span style="color:#333">,</span> 30<span style="color:#333">,</span> 4<span style="color:#333">.</span><span style="color:#00c">2</span><span style="color:#333">),</span>
-    <span style="color:#080;font-weight:bold">new</span> Tutorial<span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;What&#39;s new in Java 11&#34;</span><span style="color:#333">,</span> 25<span style="color:#333">,</span> 4<span style="color:#333">.</span><span style="color:#00c">8</span><span style="color:#333">),</span>
-    <span style="color:#080;font-weight:bold">new</span> Tutorial<span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;Core Java Concepts&#34;</span><span style="color:#333">,</span> 45<span style="color:#333">,</span> 3<span style="color:#333">.</span><span style="color:#00c">5</span><span style="color:#333">)});</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// List of tutorials
+</span><span style="color:#75715e"></span>List<span style="color:#f92672">&lt;</span>Tutorial<span style="color:#f92672">&gt;</span> tutorials <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Tutorial<span style="color:#f92672">[]</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">new</span> Tutorial<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Streams in Java 8&#34;</span><span style="color:#f92672">,</span> 30<span style="color:#f92672">,</span> 4<span style="color:#f92672">.</span><span style="color:#a6e22e">2</span><span style="color:#f92672">),</span>
+    <span style="color:#66d9ef">new</span> Tutorial<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;What&#39;s new in Java 11&#34;</span><span style="color:#f92672">,</span> 25<span style="color:#f92672">,</span> 4<span style="color:#f92672">.</span><span style="color:#a6e22e">8</span><span style="color:#f92672">),</span>
+    <span style="color:#66d9ef">new</span> Tutorial<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Core Java Concepts&#34;</span><span style="color:#f92672">,</span> 45<span style="color:#f92672">,</span> 3<span style="color:#f92672">.</span><span style="color:#a6e22e">5</span><span style="color:#f92672">)});</span>
 </code></pre></div><p><br /></p>
 <h4 id="61-print-the-list-of-tutorials">6.1 Print the list of tutorials</h4>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#888">// Lambda Expression
-</span><span style="color:#888"></span>tutorials<span style="color:#333">.</span><span style="color:#00c">forEach</span><span style="color:#333">(</span>tutorial <span style="color:#333">-&gt;</span> System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">.</span><span style="color:#00c">println</span><span style="color:#333">(</span>tutorial<span style="color:#333">));</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Lambda Expression
+</span><span style="color:#75715e"></span>tutorials<span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>tutorial <span style="color:#f92672">-&gt;</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>tutorial<span style="color:#f92672">));</span>
 
-<span style="color:#888">// Method Reference
-</span><span style="color:#888"></span>tutorials<span style="color:#333">.</span><span style="color:#00c">forEach</span><span style="color:#333">(</span>System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">::</span>println<span style="color:#333">);</span>
+<span style="color:#75715e">// Method Reference
+</span><span style="color:#75715e"></span>tutorials<span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
 </code></pre></div><pre><code><div class="code_output">Output</div>
 Tutorial[ Streams in Java 8	- 30min, rating=4.2 ]
 Tutorial[ What's new in Java 11	- 25min, rating=4.8 ]
 Tutorial[ Core Java Concepts	- 45min, rating=3.5 ]
 </code></pre><p><br /></p>
 <h4 id="62-get-list-of-tutorial-names-in-uppercase">6.2 Get list of tutorial names in uppercase</h4>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#888">// Lambda Expression
-</span><span style="color:#888"></span>tutorials<span style="color:#333">.</span><span style="color:#00c">stream</span><span style="color:#333">().</span><span style="color:#00c">map</span><span style="color:#333">(</span>tutorial <span style="color:#333">-&gt;</span> tutorial<span style="color:#333">.</span><span style="color:#00c">getName</span><span style="color:#333">()).</span><span style="color:#00c">map</span><span style="color:#333">(</span>name <span style="color:#333">-&gt;</span> name<span style="color:#333">.</span><span style="color:#00c">toUpperCase</span><span style="color:#333">()).</span><span style="color:#00c">forEach</span><span style="color:#333">(</span>s <span style="color:#333">-&gt;</span> System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">.</span><span style="color:#00c">println</span><span style="color:#333">(</span>s<span style="color:#333">));</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Lambda Expression
+</span><span style="color:#75715e"></span>tutorials<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>tutorial <span style="color:#f92672">-&gt;</span> tutorial<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">()).</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>name <span style="color:#f92672">-&gt;</span> name<span style="color:#f92672">.</span><span style="color:#a6e22e">toUpperCase</span><span style="color:#f92672">()).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>s <span style="color:#f92672">-&gt;</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>s<span style="color:#f92672">));</span>
 
-<span style="color:#888">// Method Reference
-</span><span style="color:#888"></span>tutorials<span style="color:#333">.</span><span style="color:#00c">stream</span><span style="color:#333">().</span><span style="color:#00c">map</span><span style="color:#333">(</span>Tutorial<span style="color:#333">::</span>getName<span style="color:#333">).</span><span style="color:#00c">map</span><span style="color:#333">(</span>String<span style="color:#333">::</span>toUpperCase<span style="color:#333">).</span><span style="color:#00c">forEach</span><span style="color:#333">(</span>System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">::</span>println<span style="color:#333">);</span>
+<span style="color:#75715e">// Method Reference
+</span><span style="color:#75715e"></span>tutorials<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>Tutorial<span style="color:#f92672">::</span>getName<span style="color:#f92672">).</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>String<span style="color:#f92672">::</span>toUpperCase<span style="color:#f92672">).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
 </code></pre></div><pre><code><div class="code_output">Output</div>
 STREAMS IN JAVA 8
 WHAT'S NEW IN JAVA 11
 CORE JAVA CONCEPTS
 </code></pre><p><br /></p>
 <h4 id="63-sort-tutorials-by-rating">6.3 Sort Tutorials by Rating</h4>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#888">// Lambda Expression
-</span><span style="color:#888"></span>tutorials<span style="color:#333">.</span><span style="color:#00c">stream</span><span style="color:#333">().</span><span style="color:#00c">sorted</span><span style="color:#333">((</span>tutorial1<span style="color:#333">,</span> tutorial2<span style="color:#333">)</span> <span style="color:#333">-&gt;</span> Tutorial<span style="color:#333">.</span><span style="color:#00c">compareByRating</span><span style="color:#333">(</span>tutorial1<span style="color:#333">,</span> tutorial2<span style="color:#333">)).</span><span style="color:#00c">forEach</span><span style="color:#333">(</span>tutorial <span style="color:#333">-&gt;</span> System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">.</span><span style="color:#00c">println</span><span style="color:#333">(</span>tutorial<span style="color:#333">));</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Lambda Expression
+</span><span style="color:#75715e"></span>tutorials<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">sorted</span><span style="color:#f92672">((</span>tutorial1<span style="color:#f92672">,</span> tutorial2<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> Tutorial<span style="color:#f92672">.</span><span style="color:#a6e22e">compareByRating</span><span style="color:#f92672">(</span>tutorial1<span style="color:#f92672">,</span> tutorial2<span style="color:#f92672">)).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>tutorial <span style="color:#f92672">-&gt;</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>tutorial<span style="color:#f92672">));</span>
 
-<span style="color:#888">// Method Reference
-</span><span style="color:#888"></span>tutorials<span style="color:#333">.</span><span style="color:#00c">stream</span><span style="color:#333">().</span><span style="color:#00c">sorted</span><span style="color:#333">(</span>Tutorial<span style="color:#333">::</span>compareByRating<span style="color:#333">).</span><span style="color:#00c">forEach</span><span style="color:#333">(</span>System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">::</span>println<span style="color:#333">);</span>	
+<span style="color:#75715e">// Method Reference
+</span><span style="color:#75715e"></span>tutorials<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">sorted</span><span style="color:#f92672">(</span>Tutorial<span style="color:#f92672">::</span>compareByRating<span style="color:#f92672">).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>	
 </code></pre></div><pre><code><div class="code_output">Output</div>
 Tutorial[ Core Java Concepts	- 45min, <mark>rating=3.5</mark> ]
 Tutorial[ Streams in Java 8	- 30min, <mark>rating=4.2</mark> ]
 Tutorial[ What's new in Java 11	- 25min, <mark>rating=4.8</mark> ]
 </code></pre><p><br /></p>
 <h4 id="64-sort-tutorials-by-duration">6.4 Sort Tutorials by Duration</h4>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#888">// Lambda Expression
-</span><span style="color:#888"></span>tutorials<span style="color:#333">.</span><span style="color:#00c">stream</span><span style="color:#333">().</span><span style="color:#00c">sorted</span><span style="color:#333">((</span>tutorial1<span style="color:#333">,</span> tutorial2<span style="color:#333">)</span> <span style="color:#333">-&gt;</span> Tutorial<span style="color:#333">.</span><span style="color:#00c">compareByDuration</span><span style="color:#333">(</span>tutorial1<span style="color:#333">,</span> tutorial2<span style="color:#333">)).</span><span style="color:#00c">forEach</span><span style="color:#333">(</span>tutorial <span style="color:#333">-&gt;</span> System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">.</span><span style="color:#00c">println</span><span style="color:#333">(</span>tutorial<span style="color:#333">));</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Lambda Expression
+</span><span style="color:#75715e"></span>tutorials<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">sorted</span><span style="color:#f92672">((</span>tutorial1<span style="color:#f92672">,</span> tutorial2<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> Tutorial<span style="color:#f92672">.</span><span style="color:#a6e22e">compareByDuration</span><span style="color:#f92672">(</span>tutorial1<span style="color:#f92672">,</span> tutorial2<span style="color:#f92672">)).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>tutorial <span style="color:#f92672">-&gt;</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>tutorial<span style="color:#f92672">));</span>
 
-<span style="color:#888">// Method Reference
-</span><span style="color:#888"></span>tutorials<span style="color:#333">.</span><span style="color:#00c">stream</span><span style="color:#333">().</span><span style="color:#00c">sorted</span><span style="color:#333">(</span>Tutorial<span style="color:#333">::</span>compareByDuration<span style="color:#333">).</span><span style="color:#00c">forEach</span><span style="color:#333">(</span>System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">::</span>println<span style="color:#333">);</span>	
+<span style="color:#75715e">// Method Reference
+</span><span style="color:#75715e"></span>tutorials<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">sorted</span><span style="color:#f92672">(</span>Tutorial<span style="color:#f92672">::</span>compareByDuration<span style="color:#f92672">).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>	
 </code></pre></div><pre><code><div class="code_output">Output</div>
 Tutorial[ What's new in Java 11	- <mark>25min</mark>, rating=4.8 ]
 Tutorial[ Streams in Java 8	- <mark>30min</mark>, rating=4.2 ]
@@ -619,27 +619,27 @@ Tutorial[ Core Java Concepts	- <mark>45min</mark>, rating=3.5 ]
 </code></pre><p><br /></p>
 <h4 id="65-create-new-instance-of-tutorial">6.5 Create New Instance of Tutorial</h4>
 <p>Each constructor method reference returns a Functional Interface. One-arg constructor returns <code>Function</code> and two-arg constructor returns <code>BiFunction</code> functional interface comes default in Java 8 so we are creating <code>TriFunction</code> functional interface on our own to call three-arg constructor.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#555;font-weight:bold">@FunctionalInterface</span>
-<span style="color:#080;font-weight:bold">interface</span> <span style="color:#b06;font-weight:bold">TriFunction</span><span style="color:#333">&lt;</span>A<span style="color:#333">,</span> B<span style="color:#333">,</span> C<span style="color:#333">,</span> R<span style="color:#333">&gt;</span> <span style="color:#333">{</span> 
-    R <span style="color:#06b;font-weight:bold">apply</span><span style="color:#333">(</span>A a<span style="color:#333">,</span> B b<span style="color:#333">,</span> C c<span style="color:#333">);</span> 
-    <span style="color:#080;font-weight:bold">default</span> <span style="color:#333">&lt;</span>V<span style="color:#333">&gt;</span> TriFunction<span style="color:#333">&lt;</span>A<span style="color:#333">,</span> B<span style="color:#333">,</span> C<span style="color:#333">,</span> V<span style="color:#333">&gt;</span> <span style="color:#06b;font-weight:bold">andThen</span><span style="color:#333">(</span> Function<span style="color:#333">&lt;?</span> <span style="color:#080;font-weight:bold">super</span> R<span style="color:#333">,</span> <span style="color:#333">?</span> <span style="color:#080;font-weight:bold">extends</span> V<span style="color:#333">&gt;</span> after<span style="color:#333">)</span> <span style="color:#333">{</span> 
-        Objects<span style="color:#333">.</span><span style="color:#00c">requireNonNull</span><span style="color:#333">(</span>after<span style="color:#333">);</span> 
-        <span style="color:#080;font-weight:bold">return</span> <span style="color:#333">(</span>A a<span style="color:#333">,</span> B b<span style="color:#333">,</span> C c<span style="color:#333">)</span> <span style="color:#333">-&gt;</span> after<span style="color:#333">.</span><span style="color:#00c">apply</span><span style="color:#333">(</span>apply<span style="color:#333">(</span>a<span style="color:#333">,</span> b<span style="color:#333">,</span> c<span style="color:#333">));</span> 
-    <span style="color:#333">}</span> 
-<span style="color:#333">}</span>
-</code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#888">// Create an instance from one arg constructor
-</span><span style="color:#888"></span>Function<span style="color:#333">&lt;</span>String<span style="color:#333">,</span> Tutorial<span style="color:#333">&gt;</span> tutorial1 <span style="color:#333">=</span> Tutorial<span style="color:#333">::</span><span style="color:#080;font-weight:bold">new</span><span style="color:#333">;</span>
-Tutorial t1 <span style="color:#333">=</span> tutorial1<span style="color:#333">.</span><span style="color:#00c">apply</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;Tutorial 1&#34;</span><span style="color:#333">);</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@FunctionalInterface</span>
+<span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">TriFunction</span><span style="color:#f92672">&lt;</span>A<span style="color:#f92672">,</span> B<span style="color:#f92672">,</span> C<span style="color:#f92672">,</span> R<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span> 
+    R <span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>A a<span style="color:#f92672">,</span> B b<span style="color:#f92672">,</span> C c<span style="color:#f92672">);</span> 
+    <span style="color:#66d9ef">default</span> <span style="color:#f92672">&lt;</span>V<span style="color:#f92672">&gt;</span> TriFunction<span style="color:#f92672">&lt;</span>A<span style="color:#f92672">,</span> B<span style="color:#f92672">,</span> C<span style="color:#f92672">,</span> V<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">andThen</span><span style="color:#f92672">(</span> Function<span style="color:#f92672">&lt;?</span> <span style="color:#66d9ef">super</span> R<span style="color:#f92672">,</span> <span style="color:#f92672">?</span> <span style="color:#66d9ef">extends</span> V<span style="color:#f92672">&gt;</span> after<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> 
+        Objects<span style="color:#f92672">.</span><span style="color:#a6e22e">requireNonNull</span><span style="color:#f92672">(</span>after<span style="color:#f92672">);</span> 
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">(</span>A a<span style="color:#f92672">,</span> B b<span style="color:#f92672">,</span> C c<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> after<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>apply<span style="color:#f92672">(</span>a<span style="color:#f92672">,</span> b<span style="color:#f92672">,</span> c<span style="color:#f92672">));</span> 
+    <span style="color:#f92672">}</span> 
+<span style="color:#f92672">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Create an instance from one arg constructor
+</span><span style="color:#75715e"></span>Function<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Tutorial<span style="color:#f92672">&gt;</span> tutorial1 <span style="color:#f92672">=</span> Tutorial<span style="color:#f92672">::</span><span style="color:#66d9ef">new</span><span style="color:#f92672">;</span>
+Tutorial t1 <span style="color:#f92672">=</span> tutorial1<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Tutorial 1&#34;</span><span style="color:#f92672">);</span>
 
-<span style="color:#888">// Create an instance from two arg constructor
-</span><span style="color:#888"></span>BiFunction<span style="color:#333">&lt;</span>String<span style="color:#333">,</span> Integer<span style="color:#333">,</span> Tutorial<span style="color:#333">&gt;</span> tutorial2 <span style="color:#333">=</span> Tutorial<span style="color:#333">::</span><span style="color:#080;font-weight:bold">new</span><span style="color:#333">;</span> 
-Tutorial t2 <span style="color:#333">=</span> tutorial2<span style="color:#333">.</span><span style="color:#00c">apply</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;Tutorial 2&#34;</span><span style="color:#333">,</span> 25<span style="color:#333">);</span>
+<span style="color:#75715e">// Create an instance from two arg constructor
+</span><span style="color:#75715e"></span>BiFunction<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Integer<span style="color:#f92672">,</span> Tutorial<span style="color:#f92672">&gt;</span> tutorial2 <span style="color:#f92672">=</span> Tutorial<span style="color:#f92672">::</span><span style="color:#66d9ef">new</span><span style="color:#f92672">;</span> 
+Tutorial t2 <span style="color:#f92672">=</span> tutorial2<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Tutorial 2&#34;</span><span style="color:#f92672">,</span> 25<span style="color:#f92672">);</span>
 
-<span style="color:#888">// Create an instance from three arg constructor
-</span><span style="color:#888"></span>TriFunction<span style="color:#333">&lt;</span>String<span style="color:#333">,</span> Integer<span style="color:#333">,</span> Double<span style="color:#333">,</span> Tutorial<span style="color:#333">&gt;</span> tutorial3 <span style="color:#333">=</span> Tutorial<span style="color:#333">::</span><span style="color:#080;font-weight:bold">new</span><span style="color:#333">;</span>
-Tutorial t3 <span style="color:#333">=</span> tutorial3<span style="color:#333">.</span><span style="color:#00c">apply</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;Tutorial 3&#34;</span><span style="color:#333">,</span> 30<span style="color:#333">,</span> 4<span style="color:#333">.</span><span style="color:#00c">9</span><span style="color:#333">);</span>
+<span style="color:#75715e">// Create an instance from three arg constructor
+</span><span style="color:#75715e"></span>TriFunction<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Integer<span style="color:#f92672">,</span> Double<span style="color:#f92672">,</span> Tutorial<span style="color:#f92672">&gt;</span> tutorial3 <span style="color:#f92672">=</span> Tutorial<span style="color:#f92672">::</span><span style="color:#66d9ef">new</span><span style="color:#f92672">;</span>
+Tutorial t3 <span style="color:#f92672">=</span> tutorial3<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Tutorial 3&#34;</span><span style="color:#f92672">,</span> 30<span style="color:#f92672">,</span> 4<span style="color:#f92672">.</span><span style="color:#a6e22e">9</span><span style="color:#f92672">);</span>
 
-Arrays<span style="color:#333">.</span><span style="color:#00c">asList</span><span style="color:#333">(</span>t1<span style="color:#333">,</span> t2<span style="color:#333">,</span> t3<span style="color:#333">).</span><span style="color:#00c">forEach</span><span style="color:#333">(</span>System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">::</span>println<span style="color:#333">);</span>
+Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span>t1<span style="color:#f92672">,</span> t2<span style="color:#f92672">,</span> t3<span style="color:#f92672">).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
 </code></pre></div><pre><code><div class="code_output">Output</div>
 Tutorial[ Tutorial 1	- 0min, rating=0.0 ]
 Tutorial[ Tutorial 2	- 25min, rating=0.0 ]

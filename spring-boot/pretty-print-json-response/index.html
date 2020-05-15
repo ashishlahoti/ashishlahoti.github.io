@@ -207,18 +207,18 @@ Spring uses `HttpMessageConverters` for content conversion for e.g. Java Object 
 -->
 <p>JSON responses are not pretty print by default but you can enable it with just one property change.</p>
 <p>Let&rsquo;s create a <code>@RestController</code> class.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#555;font-weight:bold">@RequestMapping</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;/posts&#34;</span><span style="color:#333">)</span>
-<span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">PostController</span> <span style="color:#333">{</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/posts&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PostController</span> <span style="color:#f92672">{</span>
 
-	<span style="color:#555;font-weight:bold">@GetMapping</span>
-	<span style="color:#080;font-weight:bold">public</span> List<span style="color:#333">&lt;</span>Post<span style="color:#333">&gt;</span> <span style="color:#06b;font-weight:bold">getAllPosts</span><span style="color:#333">()</span> <span style="color:#333">{</span>
-		<span style="color:#080;font-weight:bold">return</span> Arrays<span style="color:#333">.</span><span style="color:#00c">asList</span><span style="color:#333">(</span><span style="color:#080;font-weight:bold">new</span> Post<span style="color:#333">[]</span> <span style="color:#333">{</span>
-		     <span style="color:#080;font-weight:bold">new</span> Post<span style="color:#333">(</span>1<span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;post title 1&#34;</span><span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;post body 1&#34;</span><span style="color:#333">),</span>
-		     <span style="color:#080;font-weight:bold">new</span> Post<span style="color:#333">(</span>2<span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;post title 2&#34;</span><span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;post body 2&#34;</span><span style="color:#333">),</span>
-		     <span style="color:#080;font-weight:bold">new</span> Post<span style="color:#333">(</span>3<span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;post title 3&#34;</span><span style="color:#333">,</span> <span style="background-color:#fff0f0">&#34;post body 3&#34;</span><span style="color:#333">)</span>		     
-		<span style="color:#333">});</span>
-	<span style="color:#333">}</span>
-<span style="color:#333">}</span>
+	<span style="color:#a6e22e">@GetMapping</span>
+	<span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>Post<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">getAllPosts</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">return</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Post<span style="color:#f92672">[]</span> <span style="color:#f92672">{</span>
+		     <span style="color:#66d9ef">new</span> Post<span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;post title 1&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;post body 1&#34;</span><span style="color:#f92672">),</span>
+		     <span style="color:#66d9ef">new</span> Post<span style="color:#f92672">(</span>2<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;post title 2&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;post body 2&#34;</span><span style="color:#f92672">),</span>
+		     <span style="color:#66d9ef">new</span> Post<span style="color:#f92672">(</span>3<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;post title 3&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;post body 3&#34;</span><span style="color:#f92672">)</span>		     
+		<span style="color:#f92672">});</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 </code></pre></div><p>Look at default JSON Response,</p>
 <p><img src="/img/spring-boot/pretty-print-json-response-1.png" alt="JSON response"></p>
 <p>We see that by default JSON response is not pretty print. Just add following property depending upon you are using <em>.properties</em> or <em>.yml</em> file</p>

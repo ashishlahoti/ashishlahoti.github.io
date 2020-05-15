@@ -243,20 +243,20 @@ if (!doNotTrack) {
 </li>
 <li>
 <p>When you define an inner function inside outer function, a closure is created at runtime for inner function bundled with outer function&rsquo;s scope. Let&rsquo;s look at the example to understand Closures</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#080;font-weight:bold">var</span> outerFunc  <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">function</span>(c){ 
-  <span style="color:#080;font-weight:bold">var</span> a <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">1</span>;
-  <span style="color:#080;font-weight:bold">var</span> innerFunc <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">function</span>(d) {
-    <span style="color:#080;font-weight:bold">var</span> b <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">2</span>;
-      <span style="color:#080;font-weight:bold">var</span> innerMostFunc <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">function</span>(e) {
-    <span style="color:#080;font-weight:bold">return</span> a <span style="color:#333">+</span> b <span style="color:#333">+</span> c <span style="color:#333">+</span> d <span style="color:#333">+</span> e;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">outerFunc</span>  <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">c</span>){ 
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">innerFunc</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">d</span>) {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">innerMostFunc</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">e</span>) {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">c</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">d</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">e</span>;
     }
-    <span style="color:#080;font-weight:bold">return</span> innerMostFunc;
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">innerMostFunc</span>;
   }
-  <span style="color:#080;font-weight:bold">return</span> innerFunc;
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">innerFunc</span>;
 }
-console.dir(outerFunc(<span style="color:#00d;font-weight:bold">3</span>));        <span style="color:#888">//1. innerFunc
-</span><span style="color:#888"></span>console.dir(outerFunc(<span style="color:#00d;font-weight:bold">3</span>)(<span style="color:#00d;font-weight:bold">4</span>));     <span style="color:#888">//2. innerMostFunc
-</span><span style="color:#888"></span>console.log(outerFunc(<span style="color:#00d;font-weight:bold">3</span>)(<span style="color:#00d;font-weight:bold">4</span>)(<span style="color:#00d;font-weight:bold">5</span>));  <span style="color:#888">//3. 15
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">dir</span>(<span style="color:#a6e22e">outerFunc</span>(<span style="color:#ae81ff">3</span>));        <span style="color:#75715e">//1. innerFunc
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">dir</span>(<span style="color:#a6e22e">outerFunc</span>(<span style="color:#ae81ff">3</span>)(<span style="color:#ae81ff">4</span>));     <span style="color:#75715e">//2. innerMostFunc
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">outerFunc</span>(<span style="color:#ae81ff">3</span>)(<span style="color:#ae81ff">4</span>)(<span style="color:#ae81ff">5</span>));  <span style="color:#75715e">//3. 15
 </span></code></pre></div><pre><code><div class="code_output">Output</div>
 <mark>▼ ƒ innerFunc(c)</mark>
     length: 1
@@ -319,9 +319,9 @@ console.dir(outerFunc(<span style="color:#00d;font-weight:bold">3</span>));     
 </li>
 <li>
 <p>Syntax of simple promise object.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#080;font-weight:bold">let</span> promise <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> <span style="color:#007020">Promise</span>(<span style="color:#080;font-weight:bold">function</span> (resolve, reject) {
-  <span style="color:#888">// asynchronous call
-</span><span style="color:#888"></span>});
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">promise</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) {
+  <span style="color:#75715e">// asynchronous call
+</span><span style="color:#75715e"></span>});
 </code></pre></div></li>
 </ul>
 <blockquote>
@@ -341,17 +341,17 @@ console.dir(outerFunc(<span style="color:#00d;font-weight:bold">3</span>));     
 </li>
 <li>
 <p>Usage of async/await:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span>async <span style="color:#080;font-weight:bold">function</span> hello() {
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>  <span style="color:#080;font-weight:bold">let</span> promise <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> <span style="color:#007020">Promise</span>((resolve, reject) =&gt; {
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span>    setTimeout(() =&gt; resolve(<span style="background-color:#fff0f0">&#34;Hello&#34;</span>), <span style="color:#00d;font-weight:bold">5000</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#a6e22e">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">hello</span>() {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">promise</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; {
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span>    <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;Hello&#34;</span>), <span style="color:#ae81ff">5000</span>)
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span>  });
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>  <span style="color:#080;font-weight:bold">let</span> value <span style="color:#333">=</span> await promise; <span style="color:#888">// wait until the promise resolves
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span style="color:#888"></span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>  <span style="color:#080;font-weight:bold">return</span> value;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">promise</span>; <span style="color:#75715e">// wait until the promise resolves
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span style="color:#75715e"></span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">value</span>;
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>}
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>hello().then(data =&gt; console.log(data));
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span style="color:#a6e22e">hello</span>().<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">data</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>));
 </code></pre></div><p>Please note that in above code snippet when we execute async function <code>hello()</code>, function execution literally waits for 5s at line 6 before returning resolved promise object. <em>CPU</em> resources are not utilized in this wait period and can be used for other work.</p>
 </li>
 </ul>
@@ -381,11 +381,11 @@ console.dir(outerFunc(<span style="color:#00d;font-weight:bold">3</span>));     
 <h3 id="5-what-is-arrow-function-and-how-it-is-different-from-normal-functions">5. What is <code>Arrow function</code> and how it is different from normal functions?</h3>
 <ul>
 <li>Arrow functions are introduced in ES6 and allow us to write shorter function syntax.
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#080;font-weight:bold">var</span> helloES5 <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">function</span>() {
-    <span style="color:#080;font-weight:bold">return</span> <span style="background-color:#fff0f0">&#34;Hello World&#34;</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">helloES5</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Hello World&#34;</span>;
 }
 
-<span style="color:#080;font-weight:bold">var</span> helloES6 <span style="color:#333">=</span> () =&gt; <span style="background-color:#fff0f0">&#34;Hello World&#34;</span>;
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">helloES6</span> <span style="color:#f92672">=</span> () =&gt; <span style="color:#e6db74">&#34;Hello World&#34;</span>;
 </code></pre></div></li>
 <li>In normal function <code>this</code> keyword represents the object that called the function but in arrow function <code>this</code> keyword always represents the object that defined the arrow function.</li>
 </ul>
@@ -417,9 +417,9 @@ null === undefined     false
 <li><code>undefined</code> means a variable has been declared but not assigned a value yet.</li>
 <li><code>null</code> is an assignment value. It can be assigned to a variable that represents null, empty or non-existent value.</li>
 <li><code>undefined</code> is type of <code>undefined</code> whereas <code>null</code> is an object.
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#080;font-weight:bold">var</span> a;
-console.log(<span style="color:#080;font-weight:bold">typeof</span>(a));     <span style="color:#888">// undefined
-</span><span style="color:#888"></span>console.log(<span style="color:#080;font-weight:bold">typeof</span>(<span style="color:#080;font-weight:bold">null</span>));  <span style="color:#888">// object
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span>;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">typeof</span>(<span style="color:#a6e22e">a</span>));     <span style="color:#75715e">// undefined
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">typeof</span>(<span style="color:#66d9ef">null</span>));  <span style="color:#75715e">// object
 </span></code></pre></div></li>
 </ul>
 <p><br /></p>
@@ -447,13 +447,13 @@ console.log(<span style="color:#080;font-weight:bold">typeof</span>(a));     <sp
 </li>
 <li>
 <p>In hoisting process, <code>let</code> and <code>const</code> variables are not initialized. If you try to access them before declaration then you will get <strong>ReferenceError</strong>.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">console.log(x);  <span style="color:#888">// undefined
-</span><span style="color:#888"></span>console.log(y);  <span style="color:#888">// ReferenceError
-</span><span style="color:#888"></span>console.log(z);  <span style="color:#888">// ReferenceError
-</span><span style="color:#888"></span>
-<span style="color:#080;font-weight:bold">var</span> x <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">1</span>;
-<span style="color:#080;font-weight:bold">let</span> y <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">2</span>;
-<span style="color:#080;font-weight:bold">const</span> z <span style="color:#333">=</span> <span style="color:#00d;font-weight:bold">3</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">x</span>);  <span style="color:#75715e">// undefined
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">y</span>);  <span style="color:#75715e">// ReferenceError
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">z</span>);  <span style="color:#75715e">// ReferenceError
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">z</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
 
 </code></pre></div></li>
 </ul>

@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://codingnconcepts.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Blockchain Simplified</title>
+      <link>https://codingnconcepts.com/post/blockchain-simplified/</link>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/post/blockchain-simplified/</guid>
+      <description>&lt;p&gt;Most of us think Blockchain as the technology behind Bitcoin. While this was its original purpose, blockchain is capable of so much more&amp;hellip;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Apache Kafka CCDAK Exam Notes</title>

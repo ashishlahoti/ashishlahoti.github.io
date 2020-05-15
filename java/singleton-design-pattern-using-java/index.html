@@ -226,63 +226,63 @@ You can find the singleton pattern implementation here.</li>
 </ul>
 </li>
 </ol>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#080;font-weight:bold">package</span> <span style="color:#0e84b5;font-weight:bold">com.abc</span><span style="color:#333">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.abc<span style="color:#f92672">;</span>
 
-<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">java.io.FileInputStream</span><span style="color:#333">;</span>
-<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">java.io.FileNotFoundException</span><span style="color:#333">;</span>
-<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">java.io.FileOutputStream</span><span style="color:#333">;</span>
-<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">java.io.IOException</span><span style="color:#333">;</span>
-<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">java.io.ObjectInputStream</span><span style="color:#333">;</span>
-<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">java.io.ObjectOutputStream</span><span style="color:#333">;</span>
-<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">java.io.ObjectStreamException</span><span style="color:#333">;</span>
-<span style="color:#080;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">java.io.Serializable</span><span style="color:#333">;</span>
+<span style="color:#f92672">import</span> java.io.FileInputStream<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.io.FileNotFoundException<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.io.FileOutputStream<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.io.ObjectInputStream<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.io.ObjectOutputStream<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.io.ObjectStreamException<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.io.Serializable<span style="color:#f92672">;</span>
 
-<span style="color:#888">/**
-</span><span style="color:#888"> * @author aklahoti
-</span><span style="color:#888"> *
-</span><span style="color:#888"> */</span>
-<span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">class</span> <span style="color:#b06;font-weight:bold">Singleton</span> <span style="color:#080;font-weight:bold">implements</span> Serializable<span style="color:#333">,</span> Cloneable<span style="color:#333">{</span>
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * @author aklahoti
+</span><span style="color:#75715e"> *
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Singleton</span> <span style="color:#66d9ef">implements</span> Serializable<span style="color:#f92672">,</span> Cloneable<span style="color:#f92672">{</span>
 
- <span style="color:#080;font-weight:bold">private</span> <span style="color:#080;font-weight:bold">static</span> <span style="color:#080;font-weight:bold">final</span> <span style="color:#339;font-weight:bold">long</span> serialVersionUID <span style="color:#333">=</span> 1L<span style="color:#333">;</span>
+ <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">long</span> serialVersionUID <span style="color:#f92672">=</span> 1L<span style="color:#f92672">;</span>
 
- <span style="color:#080;font-weight:bold">private</span> <span style="color:#080;font-weight:bold">static</span> Singleton instance <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">null</span><span style="color:#333">;</span>
+ <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> Singleton instance <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
  
- <span style="color:#080;font-weight:bold">private</span> <span style="color:#080;font-weight:bold">static</span> Object DUMMY_OBJECT <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> Object<span style="color:#333">();</span>
+ <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> Object DUMMY_OBJECT <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Object<span style="color:#f92672">();</span>
  
- <span style="color:#080;font-weight:bold">private</span> <span style="color:#06b;font-weight:bold">Singleton</span><span style="color:#333">(){</span>
-  <span style="color:#888">/*To prevent object creation using reflection*/</span>
-  <span style="color:#080;font-weight:bold">if</span><span style="color:#333">(</span>instance<span style="color:#333">!=</span><span style="color:#080;font-weight:bold">null</span><span style="color:#333">){</span>
-   <span style="color:#080;font-weight:bold">throw</span> <span style="color:#080;font-weight:bold">new</span> InstantiationError<span style="color:#333">(</span> <span style="background-color:#fff0f0">&#34;Singleton Object is already created.&#34;</span> <span style="color:#333">);</span>
-  <span style="color:#333">}</span>
- <span style="color:#333">}</span>
+ <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">Singleton</span><span style="color:#f92672">(){</span>
+  <span style="color:#75715e">/*To prevent object creation using reflection*/</span>
+  <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>instance<span style="color:#f92672">!=</span><span style="color:#66d9ef">null</span><span style="color:#f92672">){</span>
+   <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> InstantiationError<span style="color:#f92672">(</span> <span style="color:#e6db74">&#34;Singleton Object is already created.&#34;</span> <span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+ <span style="color:#f92672">}</span>
  
- <span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">static</span> Singleton <span style="color:#06b;font-weight:bold">getInstance</span><span style="color:#333">(){</span>
-  <span style="color:#888">/*Double checked locking*/</span>
-  <span style="color:#080;font-weight:bold">if</span><span style="color:#333">(</span>instance <span style="color:#333">==</span> <span style="color:#080;font-weight:bold">null</span><span style="color:#333">){</span>
-   <span style="color:#080;font-weight:bold">synchronized</span> <span style="color:#333">(</span>DUMMY_OBJECT<span style="color:#333">)</span> <span style="color:#333">{</span>
-    <span style="color:#080;font-weight:bold">if</span><span style="color:#333">(</span>instance <span style="color:#333">==</span> <span style="color:#080;font-weight:bold">null</span><span style="color:#333">){</span>
-     instance <span style="color:#333">=</span> <span style="color:#080;font-weight:bold">new</span> Singleton<span style="color:#333">();</span>
-    <span style="color:#333">}</span>
-   <span style="color:#333">}</span>
-  <span style="color:#333">}</span>
-  <span style="color:#080;font-weight:bold">return</span> instance<span style="color:#333">;</span>
- <span style="color:#333">}</span>
+ <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> Singleton <span style="color:#a6e22e">getInstance</span><span style="color:#f92672">(){</span>
+  <span style="color:#75715e">/*Double checked locking*/</span>
+  <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>instance <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">){</span>
+   <span style="color:#66d9ef">synchronized</span> <span style="color:#f92672">(</span>DUMMY_OBJECT<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>instance <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">){</span>
+     instance <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Singleton<span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+   <span style="color:#f92672">}</span>
+  <span style="color:#f92672">}</span>
+  <span style="color:#66d9ef">return</span> instance<span style="color:#f92672">;</span>
+ <span style="color:#f92672">}</span>
  
- <span style="color:#080;font-weight:bold">public</span> <span style="color:#080;font-weight:bold">static</span> <span style="color:#339;font-weight:bold">void</span> <span style="color:#06b;font-weight:bold">print</span><span style="color:#333">(){</span>
-  System<span style="color:#333">.</span><span style="color:#00c">out</span><span style="color:#333">.</span><span style="color:#00c">println</span><span style="color:#333">(</span><span style="background-color:#fff0f0">&#34;I am a singleton class.&#34;</span><span style="color:#333">);</span>
- <span style="color:#333">}</span>
+ <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">print</span><span style="color:#f92672">(){</span>
+  System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;I am a singleton class.&#34;</span><span style="color:#f92672">);</span>
+ <span style="color:#f92672">}</span>
  
- <span style="color:#888">/*To prevent object creation using deserialization*/</span>
- <span style="color:#080;font-weight:bold">private</span> Object <span style="color:#06b;font-weight:bold">readResolve</span><span style="color:#333">()</span> <span style="color:#080;font-weight:bold">throws</span> ObjectStreamException<span style="color:#333">{</span>
-  <span style="color:#080;font-weight:bold">return</span> instance<span style="color:#333">;</span>
- <span style="color:#333">}</span>
+ <span style="color:#75715e">/*To prevent object creation using deserialization*/</span>
+ <span style="color:#66d9ef">private</span> Object <span style="color:#a6e22e">readResolve</span><span style="color:#f92672">()</span> <span style="color:#66d9ef">throws</span> ObjectStreamException<span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">return</span> instance<span style="color:#f92672">;</span>
+ <span style="color:#f92672">}</span>
  
- <span style="color:#888">/*To prevent object creation using cloning*/</span>
- <span style="color:#555;font-weight:bold">@Override</span>
- <span style="color:#080;font-weight:bold">protected</span> Object <span style="color:#06b;font-weight:bold">clone</span><span style="color:#333">()</span> <span style="color:#080;font-weight:bold">throws</span> CloneNotSupportedException <span style="color:#333">{</span>
-  <span style="color:#080;font-weight:bold">return</span> instance<span style="color:#333">;</span>
- <span style="color:#333">}</span>
-<span style="color:#333">}</span>
+ <span style="color:#75715e">/*To prevent object creation using cloning*/</span>
+ <span style="color:#a6e22e">@Override</span>
+ <span style="color:#66d9ef">protected</span> Object <span style="color:#a6e22e">clone</span><span style="color:#f92672">()</span> <span style="color:#66d9ef">throws</span> CloneNotSupportedException <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">return</span> instance<span style="color:#f92672">;</span>
+ <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 </code></pre></div>
 		</div>
 		<footer class="post__footer">
