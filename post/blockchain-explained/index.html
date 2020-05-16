@@ -91,7 +91,7 @@ if (!doNotTrack) {
     },
     "image": "https://codingnconcepts.com/favicon-32x32.png",
     "url" : "https:\/\/codingnconcepts.com\/post\/blockchain-explained\/",
-    "wordCount" : "2017",
+    "wordCount" : "2195",
     "genre" : [ "Blockchain" ],
     "keywords" : [ ]
 }
@@ -222,6 +222,11 @@ if (!doNotTrack) {
 <p>Let&rsquo;s assume that I am maintaining a shared ledger book with my friends where everyone records their mutual expenses. Let&rsquo;s say, I lend $100 to my friend Ben and recorded in a shared ledger. Now my friends Charlie and David know the exact amount of money I lend to Ben and they&rsquo;ve essentially endorsed the transaction and they made a record of it. Now when next month, Ben asked me how much money had initially lent him, we could easily go to anyone of my friends Charlie or David that have a record of that transaction. When you make new friends, they can also join you in shared ledger.</p>
 <p>Similar to a shared ledger, Anyone can opt to connect their computer to the blockchain network as <strong>node</strong>. In doing so, their computer receives a copy of the blockchain that is updated automatically whenever a new block is added, sort of like a Facebook News Feed that gives a live update whenever a new status is posted.</p>
 <p>In this sense, blockchain is distributed and data is shared.</p>
+<h6 id="advantage">Advantage</h6>
+<ol>
+<li>Reconciliation is not required as data is shared and each node is having copy of transaction.</li>
+<li>High availability as thousands of distributed nodes working in the network, doesn&rsquo;t matter if few goes down.</li>
+</ol>
 <h4 id="blockchain-is-immutable-ledger">Blockchain is Immutable Ledger</h4>
 <p>Let&rsquo;s look into the pieces which make up a Blockchain to understand its immutability</p>
 <ol>
@@ -305,7 +310,12 @@ previousHash:   b4h84nv46sn29n4b5h6j7k8l2l3nx6b3n8l38xn40z54n2bv68c
 </ul>
 <h6 id="what-if-one-of-the-bitcoin-miner-is-hacker">What if one of the bitcoin miner is hacker?</h6>
 <p>Bitcoin miner is one of the node in bitcoin network, if bitcoin miner is a hacker and they manipulated their own copy of record then bitcoin protocol discourage the existence of such manipulated blockchain through a process called <strong>consensus</strong>. In the presence of multiple, differing copies of the blockchain, the consensus protocol will adopt the longest chain available.</p>
-<p><br /></p>
+<h6 id="why-cryptographic-hash-puzzle-is-time-consuming">Why cryptographic hash puzzle is time consuming?</h6>
+<p>Each node try to solve hash puzzle to generate a unique hash from transaction details using <strong>SHA-256 algorithm</strong>, this might take less time. But some protocols like bitcoin protocol restrict hash to be generated with 32 leading zeros. Generating a hash with leading or trailing zeros is more complex. Similarly Generating a hash with 10 leading zeros is more computation intensive then 5 leading zeros.</p>
+<p>Now you will say that transaction details are fixed, it will generate hash based on these details. How we generate a hash with leading zeros?
+For this block is having a special field called <strong>nonce</strong> which is also included to generate hash. Each node do trial and error with keep changing the nonce value until they found the hash with specified leading zeros.</p>
+<pre><code>SHA-256 ( nonce + transaction details ) = 00000h3bdju7vb3n9s73nf92n1b38d 
+</code></pre><p><br /></p>
 <h3 id="2-business">2. Business</h3>
 <p>Blockchain can also be used for business like supply chain, banking and government sectors. They are mostly <strong>private blockchains</strong>, which are accessible to a select group of authorized users - such as your company, a group of banks, or government agencies. This is also known as <strong>Permissioned</strong> blockchain.</p>
 <p>Private blockchain also uses a consensus algorithm but they are not as complex as public blockchain due to the limited number of nodes.</p>
