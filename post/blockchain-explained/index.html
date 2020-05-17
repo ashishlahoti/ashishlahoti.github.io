@@ -91,7 +91,7 @@ if (!doNotTrack) {
     },
     "image": "https://codingnconcepts.com/favicon-32x32.png",
     "url" : "https:\/\/codingnconcepts.com\/post\/blockchain-explained\/",
-    "wordCount" : "2195",
+    "wordCount" : "2374",
     "genre" : [ "Blockchain" ],
     "keywords" : [ ]
 }
@@ -210,7 +210,7 @@ if (!doNotTrack) {
 <h4 id="blockchain-is-digital-ledger">Blockchain is Digital Ledger</h4>
 <p>You are familiar with the ledger, which is nothing but a book to record financial transactions. Similarly, Blockchain is a digital ledger which can be programmed to record <em><strong>things</strong></em>, and the <em><strong>things</strong></em> are not limited to financial transactions, but could be anything from government records to land titles, or even purchase orders.</p>
 <figure class="center">
-    <img src="/img/post/ledger-template.png"
+    <img src="/img/blockchain/ledger.png"
          alt="General Ledger"/> <figcaption>
             <p>General Ledger</p>
         </figcaption>
@@ -240,8 +240,9 @@ if (!doNotTrack) {
 <p><strong>previousHash:</strong> this is the hash of the previous block in the chain.</p>
 </li>
 </ol>
-<p>Let&rsquo;s look at the below example of blockchain. Where transaction is having sender, receiver, and amount details. For simplicity, we are generating hash by just combining transaction details, i.e. sender+receiver+amount</p>
-<p>Please note that <mark>Block 1</mark> is the first block in our Blockchain, also known as <strong>Genesis Block</strong>, is not having previousHash value.</p>
+<p>Let&rsquo;s look at the below example of blockchain. Where transaction is having sender, receiver, and amount details. For simplicity, we are generating hash by just combining transaction details, i.e.</p>
+<pre><code>hash = sender + receiver + amount
+</code></pre><p>Please note that <mark>Block 1</mark> is the first block in our Blockchain, also known as <strong>Genesis Block</strong>, is not having previousHash value.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text"><span style="display:block;width:100%;background-color:#3c3d38"><mark>Block 1</mark>
 </span>transaction     { sender: Ash, receiver: Ben: amount: $100 }
 hash            ashben100  
@@ -276,7 +277,7 @@ previousHash    <mark>bencharlie200</mark>
 <p>Most of the <strong>crypto currencies</strong> - <em>Bitcoin</em>, <em>Dash</em>, <em>Ethereum</em>, <em>Litecoin</em>, <em>Ripple</em> follows <strong>public blockchain</strong>.
 Public blockchains are open to everyone to view and access, also known as <strong>permissionless blockchain</strong> as you do not require authorization.</p>
 <figure class="center">
-    <img src="/img/post/cryptocurrency.png"
+    <img src="/img/blockchain/cryptocurrency.png"
          alt="Crypto Currencies"/> <figcaption>
             <p>Crypto Currencies</p>
         </figcaption>
@@ -316,11 +317,11 @@ previousHash:   b4h84nv46sn29n4b5h6j7k8l2l3nx6b3n8l38xn40z54n2bv68c
 For this block is having a special field called <strong>nonce</strong> which is also included to generate hash. Each node do trial and error with keep changing the nonce value until they found the hash with specified leading zeros.</p>
 <pre><code>SHA-256 ( nonce + transaction details ) = 00000h3bdju7vb3n9s73nf92n1b38d 
 </code></pre><p><br /></p>
-<h3 id="2-business">2. Business</h3>
+<h3 id="2-private-blockchain">2. Private Blockchain</h3>
 <p>Blockchain can also be used for business like supply chain, banking and government sectors. They are mostly <strong>private blockchains</strong>, which are accessible to a select group of authorized users - such as your company, a group of banks, or government agencies. This is also known as <strong>Permissioned</strong> blockchain.</p>
 <p>Private blockchain also uses a consensus algorithm but they are not as complex as public blockchain due to the limited number of nodes.</p>
 <p>Nodes in the permissioned blockchain are trusted, so they generally know each other. Besides, they don&rsquo;t always just represent users but entire organizations. So, in this case, it&rsquo;s very important that our privacy is one of the main tenants of a permissioned Blockchain.</p>
-<h6 id="supply-chain">Supply Chain</h6>
+<h3 id="3-supply-chain">3. Supply Chain</h3>
 <p>Let&rsquo;s take an example, let&rsquo;s say that there&rsquo;s a retailer that purchases 25 items in $1000. Now the manufacturer receives the order from the retailer and says, &ldquo;OK, let&rsquo;s approve&rdquo;. Let&rsquo;s make sure we have enough in the warehouse and let&rsquo;s work with the shipping company. So, they go to the shipping company and they say, &ldquo;OK, let&rsquo;s ship this 100 items&rdquo; and it&rsquo;s going to cost them $100 to make the shipment.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text"><span style="display:block;width:100%;background-color:#3c3d38"><mark>Block 1</mark>
 </span>transaction: { 
@@ -350,20 +351,31 @@ previousHash:   buystartcompanyltd25100050
 <li>Shipment should not necessarily know about how many retailers spent</li>
 <li>Other retailers in the blockchain should not know about this retailer and shipment</li>
 </ul>
-<p>So in this case, All of the organizations are part of the Blockchain, only the retailer which is part of the transaction that took place should be able to see that information. So, privacy must be part of the Blockchain for the business being able to control who can see particular transaction details.</p>
-<h6 id="smart-contracts">Smart Contracts</h6>
+<p>So in this case, All of the organizations are part of the Blockchain, only the retailer which is part of the transaction that took place should be able to see that information. So, privacy must be part of the Blockchain for the business being able to control who can see particular transaction details.<br>
+<br /></p>
+<h3 id="4-smart-contracts">4. Smart Contracts</h3>
 <p>One of the most successful business applications of Blockchain technology is something called <strong>Smart Contracts</strong>. Essentially this is code that&rsquo;s running on the Blockchain and whenever certain conditions are met, they are automatically executed.</p>
-<p>So, in the above example, whenever retailer made that purchase order to the manufacturer for this amount of goods there&rsquo;s probably a manufacturing agent that double-checks that order has all the necessary information in it, they then probably go to the shipping agency to make sure they can cover the shipment and if the warehouse has the correct amount of goods. They&rsquo;ll then make a shipment order. Now imagine if we could automate that whole process.</p>
-<p>That&rsquo;s what you can do with <strong>Smart Contracts</strong>, essentially code that will make sure that all the necessary information is met, and it&rsquo;ll automatically create the shipment record. If any of those conditions is not met it could automatically release a refund to the retailer. This speeds up the whole process.</p>
-<h6 id="cross-border-payments">Cross Border Payments</h6>
+<p>So, in the previous example of supply chain, whenever retailer made that purchase order to the manufacturer for this amount of goods there&rsquo;s probably a manufacturing agent that double-checks that order has all the necessary information in it, they then probably go to the shipping agency to make sure they can cover the shipment and if the warehouse has the correct amount of goods. They&rsquo;ll then make a shipment order. Now imagine if we could automate that whole process.</p>
+<p>That&rsquo;s what you can do with <strong>Smart Contracts</strong>, essentially code that will make sure that all the necessary information is met, and it&rsquo;ll automatically create the shipment record. If any of those conditions is not met it could automatically release a refund to the retailer. This speeds up the whole process.<br>
+<br /></p>
+<h3 id="5-cross-border-payments">5. Cross Border Payments</h3>
 <p>People working in other countries generally send money back home from remittance agencies which takes hours, sometime few days and also they pay a good amount as fee. Blockchain technology would eliminate those Intermediaries and cut short the transfer time as well as transfer fee.</p>
-<figure class="center">
-    <img src="/img/post/blockchain-remittance.png"
+<p><figure class="center">
+    <img src="/img/blockchain/remittance.png"
          alt="Blockchain innovators for Cross Border Payments"/> <figcaption>
             <p>Blockchain innovators for Cross Border Payments</p>
         </figcaption>
 </figure>
 
+<br /></p>
+<h3 id="6-voting">6. Voting</h3>
+<figure class="center">
+    <img src="/img/blockchain/voting.png"/> 
+</figure>
+
+<p>In many countries, voter has to be present at the polling booth to cast their vote. There were always concerns about the authenticity of manual voting and voting machines. Voting is carried out online also in many countries but they also have concerns about security and fraud. Blockchain can successfully eliminate these concerns as it will present a clear record of the votes that have been cast. The tamper-proof feature of a blockchain makes it difficult to hack a blockchain-enabled voting system. With blockchain, voters can cast their vote from the comfort of their home. Citizens residing outside country can also cast their vote. This may result in a significant rise in voter turnout.</p>
+<p>West Virginia has implemented a secure mobile voting application using blockchain technology that allows voters to receive, vote, and return their ballots electronically, first kind of project in United States history in 2018.</p>
+<p>Companies working on online blockchain voting solution - <a href="https://followmyvote.com/">FollowMyVote</a>, <a href="https://voatz.com/">Voatz</a>, <a href="https://www.scytl.com/en/">Scytl</a>, <a href="https://clearballot.com/">Clear Ballot</a>, <a href="https://www.polyas.com/">Polyas</a>, <a href="http://www.intelivote.com/">Intelivote</a>, <a href="https://www.smartmatic.com/">SMARTMATIC</a>, <a href="https://electionrunner.com/">electionrunner</a></p>
 <h2 id="summary">Summary</h2>
 <p>I believe after reading this post, you should be having basic understanding of blockchain technology and its practical usage. I will keep updating this post based on my findings. Thanks for reading.</p>
 		</div>
