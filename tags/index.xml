@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://codingnconcepts.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,36 @@
     <item>
       <title>Blockchain</title>
       <link>https://codingnconcepts.com/tags/blockchain/</link>
-      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/blockchain/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>https://codingnconcepts.com/tags/java/</link>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>https://codingnconcepts.com/tags/javascript/</link>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JS</title>
+      <link>https://codingnconcepts.com/tags/js/</link>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/js/</guid>
       <description></description>
     </item>
     
@@ -35,15 +62,6 @@
       <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/seo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Java</title>
-      <link>https://codingnconcepts.com/tags/java/</link>
-      <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/java/</guid>
       <description></description>
     </item>
     
@@ -125,24 +143,6 @@
       <pubDate>Sun, 05 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/es6/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Javascript</title>
-      <link>https://codingnconcepts.com/tags/javascript/</link>
-      <pubDate>Sun, 05 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>JS</title>
-      <link>https://codingnconcepts.com/tags/js/</link>
-      <pubDate>Sun, 05 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/js/</guid>
       <description></description>
     </item>
     

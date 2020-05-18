@@ -3,22 +3,63 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://codingnconcepts.com/tags/blockchain/</loc>
-    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
+    <loc>https://codingnconcepts.com/javascript/</loc>
+    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/post/blockchain-explained/</loc>
-    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
+    <loc>https://codingnconcepts.com/tags/blockchain/</loc>
+    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/javascript/blockchain-explained-using-javascript/</loc>
+    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/categories/</loc>
-    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/</loc>
+    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/java/</loc>
+    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/java/</loc>
+    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/javascript/</loc>
+    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/javascript/</loc>
+    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/js/</loc>
+    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/</loc>
+    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/post/blockchain-explained/</loc>
     <lastmod>2020-05-15T00:00:00+00:00</lastmod>
   </url>
   
@@ -29,11 +70,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/post/</loc>
-    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/</loc>
     <lastmod>2020-05-15T00:00:00+00:00</lastmod>
   </url>
   
@@ -75,16 +111,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/java/double-colon-operator-in-java-8/</loc>
-    <lastmod>2020-04-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/java/</loc>
-    <lastmod>2020-05-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/java/</loc>
     <lastmod>2020-04-30T00:00:00+00:00</lastmod>
   </url>
   
@@ -181,33 +207,12 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/javascript/</loc>
-    <lastmod>2020-04-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/javascript/async-await-in-javascript/</loc>
     <lastmod>2020-04-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/es6/</loc>
-    <lastmod>2020-04-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/javascript/</loc>
-    <lastmod>2020-04-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/javascript/</loc>
-    <lastmod>2020-04-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/js/</loc>
     <lastmod>2020-04-05T00:00:00+00:00</lastmod>
   </url>
   
