@@ -91,7 +91,7 @@ if (!doNotTrack) {
     },
     "image": "https://codingnconcepts.com/favicon-32x32.png",
     "url" : "https:\/\/codingnconcepts.com\/java\/string-format-in-java\/",
-    "wordCount" : "623",
+    "wordCount" : "614",
     "genre" : [ "Java String" ],
     "keywords" : [ "" ]
 }
@@ -209,7 +209,7 @@ if (!doNotTrack) {
 
 <span style="color:#75715e">//Returns a formatted string using the specified locale, format string, and arguments.
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">static</span> String format<span style="color:#960050;background-color:#1e0010">​</span><span style="color:#f92672">(</span>Locale l<span style="color:#f92672">,</span> String format<span style="color:#f92672">,</span> Object<span style="color:#f92672">...</span> args<span style="color:#f92672">)</span>	
-</code></pre></div><p>Remember few things before we look into examples</p>
+</code></pre></div><p>Let&rsquo;s look into format specifier before we look into examples</p>
 <h6 id="syntax-of-format-specifier">Syntax of format specifier</h6>
 <pre><code>%[argument_index$][flags][width][.precision]conversion
 </code></pre><p>Where,</p>
@@ -241,22 +241,20 @@ If not specified - The result will include a leading space for positive values<b
 
 <span style="color:#75715e">//Reverse String Concat
 </span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>String<span style="color:#f92672">.</span><span style="color:#a6e22e">format</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;My favourite fruits are %4$s, %3$s, %2$s and %1$s&#34;</span><span style="color:#f92672">,</span> fruits<span style="color:#f92672">));</span>
-
-<span style="color:#75715e">// Line break
-</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>String<span style="color:#f92672">.</span><span style="color:#a6e22e">format</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;My favourite fruits are:- %n %1$s %n %2$s %n %3$s %n %4$s&#34;</span><span style="color:#f92672">,</span> fruits<span style="color:#f92672">));</span>
 </code></pre></div><p>We have used formatter <code>%1$s</code>, <code>%2$s</code>, <code>%3$s</code>, <code>%4$s</code> to specify the position of string arguments and <code>%n</code> for line break.</p>
 <pre><code><div class="code_output">Output</div>
 My favourite fruits are Mango, Grapes, Banana and Kiwi
 
 My favourite fruits are Kiwi, Banana, Grapes and Mango
-
-My favourite fruits are:- 
- Mango 
- Grapes 
- Banana 
- Kiwi
 </code></pre><p><br /></p>
-<h4 id="22-string-padding">2.2 String Padding</h4>
+<h4 id="22-string-line-break">2.2 String Line Break</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>String<span style="color:#f92672">.</span><span style="color:#a6e22e">format</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Address:-%nUnit 505,%n32 Cross Street&#34;</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">));</span>
+</code></pre></div><pre><code><div class="code_output">Output</div>
+Address:-
+Unit 505,
+32 Cross Street
+</code></pre><p><br /></p>
+<h4 id="23-string-padding">2.3 String Padding</h4>
 <p>Following String format will add left padding of 10 characters to <em><strong>foo</strong></em><br>
 <code>%13s</code> says that output will have min width of 13 including <em><strong>foo</strong></em> length, which is 3 hence (13 - 3 =) 10 left padding space.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>String<span style="color:#f92672">.</span><span style="color:#a6e22e">format</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;%13s&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;foo&#34;</span><span style="color:#f92672">));</span>
@@ -277,10 +275,6 @@ System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span>
 3.1
 3.14159
 3.1415926536
-
-  3.141593
-            3.141593
-                      3.141593
 </code></pre><p><br /></p>
 <h4 id="32-float-padding">3.2 Float Padding</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Min Width with leading spaces
@@ -295,8 +289,8 @@ System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span>
 </code></pre><p><br /></p>
 <h4 id="33-negative-floating-point-numbers">3.3 Negative Floating Point Numbers</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// +ve Floating Numbers
-</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>String<span style="color:#f92672">.</span><span style="color:#a6e22e">format</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;%+20.5f&#34;</span><span style="color:#f92672">,</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">E</span><span style="color:#f92672">));</span>     <span style="color:#75715e">// + Flag show sign
-</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>String<span style="color:#f92672">.</span><span style="color:#a6e22e">format</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;%020.5f&#34;</span><span style="color:#f92672">,</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">E</span><span style="color:#f92672">));</span>     <span style="color:#75715e">// 0 Flag for leading zeros
+</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>String<span style="color:#f92672">.</span><span style="color:#a6e22e">format</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;%+20.5f&#34;</span><span style="color:#f92672">,</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">PI</span><span style="color:#f92672">));</span>     <span style="color:#75715e">// + Flag show sign
+</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>String<span style="color:#f92672">.</span><span style="color:#a6e22e">format</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;%020.5f&#34;</span><span style="color:#f92672">,</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">PI</span><span style="color:#f92672">));</span>     <span style="color:#75715e">// 0 Flag for leading zeros
 </span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>String<span style="color:#f92672">.</span><span style="color:#a6e22e">format</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;%(20.5f&#34;</span><span style="color:#f92672">,</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">PI</span><span style="color:#f92672">));</span>    <span style="color:#75715e">// ( Flag to show -ve numbers in parentheses
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// -ve Floating Numbers
