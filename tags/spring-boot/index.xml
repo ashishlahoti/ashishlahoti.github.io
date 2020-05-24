@@ -6,10 +6,28 @@
     <description>Recent content in Spring Boot on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 24 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://codingnconcepts.com/tags/spring-boot/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Build RESTFul API with Spring Boot</title>
+      <link>https://codingnconcepts.com/spring-boot/build-restful-api-with-spring-boot/</link>
+      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/build-restful-api-with-spring-boot/</guid>
+      <description>&lt;p&gt;This article is step by step guide for - &lt;strong&gt;How to build RESTFul API with Spring Boot&lt;/strong&gt; – We will learn the RestController, HTTP response codes and Best Practices along the way.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Setup a Spring Boot Project using Spring Initializr</title>
+      <link>https://codingnconcepts.com/spring-boot/setup-project-using-spring-initalizr/</link>
+      <pubDate>Sat, 23 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/setup-project-using-spring-initalizr/</guid>
+      <description>&lt;p&gt;This article shows -  &lt;strong&gt;How to setup a Spring Boot project using Spring Initalizr&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Configure embedded Jetty server in spring boot</title>

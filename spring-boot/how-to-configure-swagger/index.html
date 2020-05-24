@@ -12,7 +12,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/spring-boot/how-to-configure-swagger/" />
 <meta property="article:published_time" content="2020-03-10T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-03-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-05-23T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -78,7 +78,7 @@ if (!doNotTrack) {
     "copyrightYear" : "2020",
     "dateCreated": "2020-03-10T00:00:00.00Z",
     "datePublished": "2020-03-10T00:00:00.00Z",
-    "dateModified": "2020-03-10T00:00:00.00Z",
+    "dateModified": "2020-05-23T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -92,7 +92,7 @@ if (!doNotTrack) {
     },
     "image": "https://codingnconcepts.com/favicon-32x32.png",
     "url" : "https:\/\/codingnconcepts.com\/spring-boot\/how-to-configure-swagger\/",
-    "wordCount" : "417",
+    "wordCount" : "372",
     "genre" : [ "Spring Boot" , "Microservice" ],
     "keywords" : [ ]
 }
@@ -194,6 +194,7 @@ if (!doNotTrack) {
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
 	<time class="meta__text" datetime="2020-03-10T00:00:00Z">March 10, 2020</time>
+	<time class="meta__text" datetime="2020-05-23T00:00:00Z"> (Last Modified: May 23, 2020)</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -242,113 +243,60 @@ if (!doNotTrack) {
     contact-email: apisupportgroup@abc.com
 </code></pre><p>Once properties are defined in application.yml or application.properties file. Define a SwaggerConfig.java file as following:-</p>
 <h3 id="3-define-swaggerconfigjava-to-configure-swagger-in-spring-boot-application">3. Define SwaggerConfig.java to configure swagger in spring boot application</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.abc.config<span style="color:#f92672">;</span>
-
-<span style="color:#f92672">import</span> java.sql.Timestamp<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.time.LocalDate<span style="color:#f92672">;</span>
-
-<span style="color:#f92672">import</span> org.springframework.boot.context.properties.ConfigurationProperties<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.springframework.context.annotation.Bean<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.springframework.context.annotation.Configuration<span style="color:#f92672">;</span>
-
-<span style="color:#f92672">import</span> springfox.documentation.builders.ApiInfoBuilder<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> springfox.documentation.builders.PathSelectors<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> springfox.documentation.builders.RequestHandlerSelectors<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> springfox.documentation.service.ApiInfo<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> springfox.documentation.service.Contact<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> springfox.documentation.spi.DocumentationType<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> springfox.documentation.spring.web.plugins.Docket<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> springfox.documentation.swagger2.annotations.EnableSwagger2<span style="color:#f92672">;</span>
-
-<span style="color:#a6e22e">@Configuration</span>
-<span style="color:#a6e22e">@EnableSwagger2</span>
-<span style="color:#a6e22e">@ConfigurationProperties</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;app.api&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SwaggerConfig</span> <span style="color:#f92672">{</span>
-
-	<span style="color:#66d9ef">private</span> String version<span style="color:#f92672">;</span>
-	
-	<span style="color:#66d9ef">private</span> String title<span style="color:#f92672">;</span>
-	
-	<span style="color:#66d9ef">private</span> String description<span style="color:#f92672">;</span>
-	
-	<span style="color:#66d9ef">private</span> String basePackage<span style="color:#f92672">;</span>
-	
-	<span style="color:#66d9ef">private</span> String contactName<span style="color:#f92672">;</span>
-	
-	<span style="color:#66d9ef">private</span> String contactEmail<span style="color:#f92672">;</span>
-	
-	<span style="color:#a6e22e">@Bean</span>
-	<span style="color:#66d9ef">public</span> Docket <span style="color:#a6e22e">api</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Docket<span style="color:#f92672">(</span>DocumentationType<span style="color:#f92672">.</span><span style="color:#a6e22e">SWAGGER_2</span><span style="color:#f92672">)</span>
-			<span style="color:#f92672">.</span><span style="color:#a6e22e">select</span><span style="color:#f92672">()</span>
-			<span style="color:#f92672">.</span><span style="color:#a6e22e">apis</span><span style="color:#f92672">(</span>RequestHandlerSelectors<span style="color:#f92672">.</span><span style="color:#a6e22e">basePackage</span><span style="color:#f92672">(</span>basePackage<span style="color:#f92672">))</span>
-			<span style="color:#f92672">.</span><span style="color:#a6e22e">paths</span><span style="color:#f92672">(</span>PathSelectors<span style="color:#f92672">.</span><span style="color:#a6e22e">any</span><span style="color:#f92672">())</span>
-			<span style="color:#f92672">.</span><span style="color:#a6e22e">build</span><span style="color:#f92672">()</span>
-			<span style="color:#f92672">.</span><span style="color:#a6e22e">directModelSubstitute</span><span style="color:#f92672">(</span>LocalDate<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">,</span> String<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
-			<span style="color:#f92672">.</span><span style="color:#a6e22e">directModelSubstitute</span><span style="color:#f92672">(</span>Timestamp<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">,</span> String<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
-			<span style="color:#f92672">.</span><span style="color:#a6e22e">apiInfo</span><span style="color:#f92672">(</span>apiInfo<span style="color:#f92672">());</span>
-	<span style="color:#f92672">}</span>
-	
-	<span style="color:#66d9ef">private</span> ApiInfo <span style="color:#a6e22e">apiInfo</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ApiInfoBuilder<span style="color:#f92672">()</span>
-			<span style="color:#f92672">.</span><span style="color:#a6e22e">title</span><span style="color:#f92672">(</span>title<span style="color:#f92672">)</span>
-			<span style="color:#f92672">.</span><span style="color:#a6e22e">description</span><span style="color:#f92672">(</span>description<span style="color:#f92672">)</span>
-			<span style="color:#f92672">.</span><span style="color:#a6e22e">version</span><span style="color:#f92672">(</span>version<span style="color:#f92672">)</span>
-			<span style="color:#f92672">.</span><span style="color:#a6e22e">contact</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Contact<span style="color:#f92672">(</span>contactName<span style="color:#f92672">,</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">,</span> contactEmail<span style="color:#f92672">))</span>
-			<span style="color:#f92672">.</span><span style="color:#a6e22e">build</span><span style="color:#f92672">();</span>
-	<span style="color:#f92672">}</span>
-
-	<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getVersion</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">return</span> version<span style="color:#f92672">;</span>
-	<span style="color:#f92672">}</span>
-
-	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setVersion</span><span style="color:#f92672">(</span>String version<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">version</span> <span style="color:#f92672">=</span> version<span style="color:#f92672">;</span>
-	<span style="color:#f92672">}</span>
-
-	<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getTitle</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">return</span> title<span style="color:#f92672">;</span>
-	<span style="color:#f92672">}</span>
-
-	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setTitle</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span>
-	<span style="color:#f92672">}</span>
-
-	<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getDescription</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">return</span> description<span style="color:#f92672">;</span>
-	<span style="color:#f92672">}</span>
-
-	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setDescription</span><span style="color:#f92672">(</span>String description<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">description</span> <span style="color:#f92672">=</span> description<span style="color:#f92672">;</span>
-	<span style="color:#f92672">}</span>
-
-	<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getBasePackage</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">return</span> basePackage<span style="color:#f92672">;</span>
-	<span style="color:#f92672">}</span>
-
-	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setBasePackage</span><span style="color:#f92672">(</span>String basePackage<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">basePackage</span> <span style="color:#f92672">=</span> basePackage<span style="color:#f92672">;</span>
-	<span style="color:#f92672">}</span>
-
-	<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getContactName</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">return</span> contactName<span style="color:#f92672">;</span>
-	<span style="color:#f92672">}</span>
-
-	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setContactName</span><span style="color:#f92672">(</span>String contactName<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">contactName</span> <span style="color:#f92672">=</span> contactName<span style="color:#f92672">;</span>
-	<span style="color:#f92672">}</span>
-
-	<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getContactEmail</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">return</span> contactEmail<span style="color:#f92672">;</span>
-	<span style="color:#f92672">}</span>
-
-	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setContactEmail</span><span style="color:#f92672">(</span>String contactEmail<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">contactEmail</span> <span style="color:#f92672">=</span> contactEmail<span style="color:#f92672">;</span>
-	<span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
+<ul>
+<li><strong>Line 20, 21</strong> is correct way in swagger to map &ldquo;Date&rdquo; and &ldquo;DateTime&rdquo; to their corresponding swagger types:
+<ul>
+<li>Substitute &ldquo;Date&rdquo; types (java.util.LocalDate, org.joda.time.LocalDate) by java.sql.Date.</li>
+<li>Substitute &ldquo;DateTime&rdquo; types (java.util.ZonedDateTime, org.joda.time.LocalDateTime, …​) by java.util.Date.</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span style="color:#a6e22e">@Configuration</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span style="color:#a6e22e">@EnableSwagger2</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span style="color:#a6e22e">@ConfigurationProperties</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;app.api&#34;</span><span style="color:#f92672">)</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SwaggerConfig</span> <span style="color:#f92672">{</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>	<span style="color:#66d9ef">private</span> String version<span style="color:#f92672">;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>	<span style="color:#66d9ef">private</span> String title<span style="color:#f92672">;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>	<span style="color:#66d9ef">private</span> String description<span style="color:#f92672">;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>	<span style="color:#66d9ef">private</span> String basePackage<span style="color:#f92672">;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>	<span style="color:#66d9ef">private</span> String contactName<span style="color:#f92672">;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>	<span style="color:#66d9ef">private</span> String contactEmail<span style="color:#f92672">;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>	
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span>	<span style="color:#a6e22e">@Bean</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span>	<span style="color:#66d9ef">public</span> Docket <span style="color:#a6e22e">api</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span>		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Docket<span style="color:#f92672">(</span>DocumentationType<span style="color:#f92672">.</span><span style="color:#a6e22e">SWAGGER_2</span><span style="color:#f92672">)</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">select</span><span style="color:#f92672">()</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">apis</span><span style="color:#f92672">(</span>RequestHandlerSelectors<span style="color:#f92672">.</span><span style="color:#a6e22e">basePackage</span><span style="color:#f92672">(</span>basePackage<span style="color:#f92672">))</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">paths</span><span style="color:#f92672">(</span>PathSelectors<span style="color:#f92672">.</span><span style="color:#a6e22e">any</span><span style="color:#f92672">())</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">build</span><span style="color:#f92672">()</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">directModelSubstitute</span><span style="color:#f92672">(</span>LocalDate<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">,</span> java<span style="color:#f92672">.</span><span style="color:#a6e22e">sql</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Date</span><span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">directModelSubstitute</span><span style="color:#f92672">(</span>LocalDateTime<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">,</span> java<span style="color:#f92672">.</span><span style="color:#a6e22e">util</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Date</span><span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">apiInfo</span><span style="color:#f92672">(</span>apiInfo<span style="color:#f92672">());</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span>	<span style="color:#f92672">}</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span>	
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span>	<span style="color:#66d9ef">private</span> ApiInfo <span style="color:#a6e22e">apiInfo</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span>		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ApiInfoBuilder<span style="color:#f92672">()</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">title</span><span style="color:#f92672">(</span>title<span style="color:#f92672">)</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">description</span><span style="color:#f92672">(</span>description<span style="color:#f92672">)</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">version</span><span style="color:#f92672">(</span>version<span style="color:#f92672">)</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">contact</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Contact<span style="color:#f92672">(</span>contactName<span style="color:#f92672">,</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">,</span> contactEmail<span style="color:#f92672">))</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span>			<span style="color:#f92672">.</span><span style="color:#a6e22e">build</span><span style="color:#f92672">();</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span>	<span style="color:#f92672">}</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span>	<span style="color:#75715e">/**
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span><span style="color:#75715e">		...
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36</span><span style="color:#75715e">		...
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37</span><span style="color:#75715e">		Getters
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38</span><span style="color:#75715e">		Setters
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39</span><span style="color:#75715e">		...
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40</span><span style="color:#75715e">		...
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41</span><span style="color:#75715e">	**/</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42</span><span style="color:#f92672">}</span>
 </code></pre></div><h3 id="4-final-step">4. Final step</h3>
 <p>That&rsquo;s it. Now define some controllers to expose REST api endpoints and start your spring boot application. You will be able to see swagger UI something like this:-</p>
 <p><img src="/img/spring-boot/how-to-configure-swagger-1.png" alt="Swagger Config"></p>
+<p>URL for Swagger API Docs Json -  http://localhost:8080/v2/api-docs</p>
 <blockquote>
 <p>Download the complete source code from <a href="https://github.com/ashishlahoti/springboot-demo">github</a></p>
 </blockquote>
