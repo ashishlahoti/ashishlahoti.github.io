@@ -3,6 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://codingnconcepts.com/java/</loc>
+    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/</loc>
+    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/</loc>
+    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/java/</loc>
+    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/java/</loc>
+    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/java-string/</loc>
+    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/java/string-format-in-java/</loc>
+    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/</loc>
+    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/spring-boot/</loc>
     <lastmod>2020-05-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -10,16 +51,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/spring-boot/build-restful-api-with-spring-boot/</loc>
-    <lastmod>2020-05-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/</loc>
-    <lastmod>2020-05-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/</loc>
     <lastmod>2020-05-24T00:00:00+00:00</lastmod>
   </url>
   
@@ -35,11 +66,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/categories/spring-boot/</loc>
-    <lastmod>2020-05-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/</loc>
     <lastmod>2020-05-24T00:00:00+00:00</lastmod>
   </url>
   
@@ -61,16 +87,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/javascript/blockchain-explained-using-javascript/</loc>
-    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/java/</loc>
-    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/java/</loc>
     <lastmod>2020-05-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -101,7 +117,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/post/</loc>
-    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -132,12 +148,6 @@
   <url>
     <loc>https://codingnconcepts.com/tags/seo/</loc>
     <lastmod>2020-05-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/java/</loc>
-    <lastmod>2020-04-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -213,7 +223,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/kafka/</loc>
-    <lastmod>2020-05-11T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -469,22 +479,22 @@
   
   <url>
     <loc>https://codingnconcepts.com/post/apache-kafka-ccdak-exam-notes/</loc>
-    <lastmod>2020-05-11T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/ccdak/</loc>
-    <lastmod>2020-05-11T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/confluent/</loc>
-    <lastmod>2020-05-11T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/categories/kafka/</loc>
-    <lastmod>2020-05-11T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
