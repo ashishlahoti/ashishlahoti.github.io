@@ -3,19 +3,55 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://codingnconcepts.com/java/</loc>
-    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
+    <loc>https://codingnconcepts.com/spring-boot/</loc>
+    <lastmod>2020-05-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/categories/</loc>
-    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/</loc>
+    <lastmod>2020-05-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/spring-boot/configure-feign-rest-client/</loc>
+    <lastmod>2020-05-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/spring/</loc>
+    <lastmod>2020-05-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/spring-boot/</loc>
+    <lastmod>2020-05-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/spring-boot/</loc>
+    <lastmod>2020-05-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/spring-boot-rest/</loc>
+    <lastmod>2020-05-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/</loc>
+    <lastmod>2020-05-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/java/</loc>
     <lastmod>2020-05-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -39,38 +75,17 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/</loc>
-    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/spring-boot/</loc>
-    <lastmod>2020-05-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/spring-boot/build-restful-api-with-spring-boot/</loc>
     <lastmod>2020-05-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/spring/</loc>
-    <lastmod>2020-05-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/spring-boot/</loc>
-    <lastmod>2020-05-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/spring-boot/</loc>
-    <lastmod>2020-05-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/spring-boot/setup-project-using-spring-initalizr/</loc>
+    <lastmod>2020-05-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/spring-boot-basics/</loc>
     <lastmod>2020-05-23T00:00:00+00:00</lastmod>
   </url>
   
@@ -176,11 +191,6 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/microservice/</loc>
-    <lastmod>2020-05-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/spring-boot/configure-info-and-health-endpoints/</loc>
     <lastmod>2020-04-20T00:00:00+00:00</lastmod>
   </url>
@@ -222,8 +232,8 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/kafka/</loc>
-    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
+    <loc>https://codingnconcepts.com/tags/spring-boot-kafka/</loc>
+    <lastmod>2020-04-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -489,6 +499,11 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/confluent/</loc>
+    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/kafka/</loc>
     <lastmod>2020-05-25T00:00:00+00:00</lastmod>
   </url>
   

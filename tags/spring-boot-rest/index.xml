@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spring Boot REST on Coding N Concepts</title>
+    <link>https://codingnconcepts.com/tags/spring-boot-rest/</link>
+    <description>Recent content in Spring Boot REST on Coding N Concepts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 May 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://codingnconcepts.com/tags/spring-boot-rest/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Configure Feign Rest Client in Spring Boot</title>
+      <link>https://codingnconcepts.com/spring-boot/configure-feign-rest-client/</link>
+      <pubDate>Tue, 26 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/configure-feign-rest-client/</guid>
+      <description>&lt;p&gt;Feign Client is a Declarative REST Client in Spring Boot Web Application. It is very useful in microservice architecture to create feign client to consume RESTFul API endpoints exposed by other microservices.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Build RESTFul API with Spring Boot</title>
+      <link>https://codingnconcepts.com/spring-boot/build-restful-api-with-spring-boot/</link>
+      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/build-restful-api-with-spring-boot/</guid>
+      <description>&lt;p&gt;This article is step by step guide for - &lt;strong&gt;How to build RESTFul API with Spring Boot&lt;/strong&gt; – We will learn the RestController, HTTP response codes and Best Practices along the way.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Custom API Request &amp; Response Logging in spring boot.</title>
+      <link>https://codingnconcepts.com/spring-boot/custom-api-request-response-logging/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/custom-api-request-response-logging/</guid>
+      <description>&lt;p&gt;When we create RESTFul APIs in spring boot application in microservices environment. It becomes essential to log incoming API request and response and push it to centralized logging system such as Splunk or ELK for debugging. Also all the logs related to one request should have some common id to relate them. In this post we are going to solve these problems.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>info and health endpoints in spring boot</title>
+      <link>https://codingnconcepts.com/spring-boot/configure-info-and-health-endpoints/</link>
+      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/configure-info-and-health-endpoints/</guid>
+      <description>&lt;p&gt;In spring boot microservices based application, where microservices talks to each other using RESTFul APIs. We can expose some important information about microservice such as name, version, description over some endpoints say &lt;em&gt;/info&lt;/em&gt; and also realtime status or health over some endpoint say &lt;em&gt;/health&lt;/em&gt; to create application dashboards, realtime alerts, track microservice updates and so on&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to configure swagger in spring boot</title>
+      <link>https://codingnconcepts.com/spring-boot/how-to-configure-swagger/</link>
+      <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/how-to-configure-swagger/</guid>
+      <description>&lt;p&gt;Swagger library is very useful if you are creating spring boot web application and exposing REST endpoints. Swagger generates web page for you to execute and test GET, POST, PUT, DELETE HTTP endpoints. This is helpful since you do not need to use Postman or some other tool to test REST Apis. Once you configure swagger then web page can be accessible using following URL:-&lt;/p&gt;
+&lt;p&gt;http://localhost:8080/swagger-ui.html&lt;/p&gt;
+&lt;p&gt;Follow the steps to configure swagger in your spring boot application:-&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
