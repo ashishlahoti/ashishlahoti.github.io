@@ -40,6 +40,15 @@
     </item>
     
     <item>
+      <title>Tricky Javascript Interview Questions</title>
+      <link>https://codingnconcepts.com/tricky-javascript-interview-questions/</link>
+      <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tricky-javascript-interview-questions/</guid>
+      <description>&lt;p&gt;This post is a collection of tricky interview questions based on different concepts in JavaScript. The difficulty level of question will increase as you read forward down the line in this post.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Difference in == and === comparison operators in JavaScript</title>
       <link>https://codingnconcepts.com/javascript/comparison-operators-in-javascript/</link>
       <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
@@ -100,6 +109,15 @@
       
       <guid>https://codingnconcepts.com/javascript/difference-between-var-let-and-const/</guid>
       <description>&lt;p&gt;A nice feature addition in ES2015 (ES6) was the introduction of &lt;code&gt;let&lt;/code&gt; and &lt;code&gt;const&lt;/code&gt; keywords for variable declaration. You can use &lt;code&gt;var&lt;/code&gt;, &lt;code&gt;let&lt;/code&gt; and &lt;code&gt;const&lt;/code&gt; keyword interchangeably for variable declaration though it makes a difference in terms of their scope, usage and hoisting. If you are not aware of these differences then please continue to read&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Top Javascript Interview Questions</title>
+      <link>https://codingnconcepts.com/top-javascript-interview-questions/</link>
+      <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/top-javascript-interview-questions/</guid>
+      <description>&lt;p&gt;These Javascript interview questions are based on my personal interview experience. Likelihood of question being asked in the interview is from top to bottom.&lt;/p&gt;</description>
     </item>
     
     <item>

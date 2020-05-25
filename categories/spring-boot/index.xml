@@ -152,5 +152,14 @@ Spring uses `HttpMessageConverters` for content conversion for e.g. Java Object 
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;There are multiple ways to disable spring boot banner as follows:&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>Top Spring Boot Interview Questions</title>
+      <link>https://codingnconcepts.com/top-spring-boot-interview-questions/</link>
+      <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/top-spring-boot-interview-questions/</guid>
+      <description>&lt;p&gt;Java developers are now switching from Spring Framework to Spring Boot for enterprise application development in microservice architecture. Spring Boot has become a trending topic to be asked in interviews from Java backend developers in 2020.&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>

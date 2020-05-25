@@ -12,38 +12,11 @@
     
     
     <item>
-      <title>Spring</title>
-      <link>https://codingnconcepts.com/tags/spring/</link>
-      <pubDate>Tue, 26 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/spring/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Spring Boot</title>
-      <link>https://codingnconcepts.com/tags/spring-boot/</link>
-      <pubDate>Tue, 26 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/spring-boot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Spring Boot REST</title>
       <link>https://codingnconcepts.com/tags/spring-boot-rest/</link>
       <pubDate>Tue, 26 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/spring-boot-rest/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Java</title>
-      <link>https://codingnconcepts.com/tags/java/</link>
-      <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/java/</guid>
       <description></description>
     </item>
     
@@ -66,83 +39,65 @@
     </item>
     
     <item>
+      <title>Javascript Coding</title>
+      <link>https://codingnconcepts.com/tags/javascript-coding/</link>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/javascript-coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Blockchain</title>
       <link>https://codingnconcepts.com/tags/blockchain/</link>
-      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/blockchain/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Javascript</title>
-      <link>https://codingnconcepts.com/tags/javascript/</link>
-      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>JS</title>
-      <link>https://codingnconcepts.com/tags/js/</link>
-      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/js/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://codingnconcepts.com/tags/hugo/</link>
+      <title>Hugo Shortcode</title>
+      <link>https://codingnconcepts.com/tags/hugo-shortcode/</link>
       <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://codingnconcepts.com/tags/hugo/</guid>
+      <guid>https://codingnconcepts.com/tags/hugo-shortcode/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>SEO</title>
-      <link>https://codingnconcepts.com/tags/seo/</link>
+      <title>Hugo SEO</title>
+      <link>https://codingnconcepts.com/tags/hugo-seo/</link>
       <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://codingnconcepts.com/tags/seo/</guid>
+      <guid>https://codingnconcepts.com/tags/hugo-seo/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Java 8</title>
-      <link>https://codingnconcepts.com/tags/java-8/</link>
+      <title>Java Streams</title>
+      <link>https://codingnconcepts.com/tags/java-streams/</link>
       <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://codingnconcepts.com/tags/java-8/</guid>
+      <guid>https://codingnconcepts.com/tags/java-streams/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Streams</title>
-      <link>https://codingnconcepts.com/tags/streams/</link>
-      <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/streams/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Interview</title>
-      <link>https://codingnconcepts.com/tags/interview/</link>
+      <title>Interview Q&amp;A</title>
+      <link>https://codingnconcepts.com/tags/interview-qa/</link>
       <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://codingnconcepts.com/tags/interview/</guid>
+      <guid>https://codingnconcepts.com/tags/interview-qa/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Microservices</title>
-      <link>https://codingnconcepts.com/tags/microservices/</link>
+      <title>Microservice</title>
+      <link>https://codingnconcepts.com/tags/microservice/</link>
       <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://codingnconcepts.com/tags/microservices/</guid>
+      <guid>https://codingnconcepts.com/tags/microservice/</guid>
       <description></description>
     </item>
     
@@ -156,47 +111,47 @@
     </item>
     
     <item>
-      <title>ES6</title>
-      <link>https://codingnconcepts.com/tags/es6/</link>
+      <title>Javascript ES6</title>
+      <link>https://codingnconcepts.com/tags/javascript-es6/</link>
       <pubDate>Sun, 05 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://codingnconcepts.com/tags/es6/</guid>
+      <guid>https://codingnconcepts.com/tags/javascript-es6/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Algorithm</title>
-      <link>https://codingnconcepts.com/tags/algorithm/</link>
+      <title>Javascript Interview</title>
+      <link>https://codingnconcepts.com/tags/javascript-interview/</link>
+      <pubDate>Sun, 05 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/javascript-interview/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascript Core</title>
+      <link>https://codingnconcepts.com/tags/javascript-core/</link>
+      <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/javascript-core/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java Recursive</title>
+      <link>https://codingnconcepts.com/tags/java-recursive/</link>
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://codingnconcepts.com/tags/algorithm/</guid>
+      <guid>https://codingnconcepts.com/tags/java-recursive/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Recursive</title>
-      <link>https://codingnconcepts.com/tags/recursive/</link>
-      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/recursive/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Design Pattern</title>
-      <link>https://codingnconcepts.com/tags/design-pattern/</link>
+      <title>Java Design Pattern</title>
+      <link>https://codingnconcepts.com/tags/java-design-pattern/</link>
       <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://codingnconcepts.com/tags/design-pattern/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Analytics</title>
-      <link>https://codingnconcepts.com/tags/analytics/</link>
-      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/analytics/</guid>
+      <guid>https://codingnconcepts.com/tags/java-design-pattern/</guid>
       <description></description>
     </item>
     
@@ -228,24 +183,6 @@
     </item>
     
     <item>
-      <title>Puzzle</title>
-      <link>https://codingnconcepts.com/tags/puzzle/</link>
-      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/puzzle/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Riddle</title>
-      <link>https://codingnconcepts.com/tags/riddle/</link>
-      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/riddle/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Einstein Riddle</title>
       <link>https://codingnconcepts.com/tags/einstein-riddle/</link>
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
@@ -255,11 +192,20 @@
     </item>
     
     <item>
-      <title>Google</title>
-      <link>https://codingnconcepts.com/tags/google/</link>
+      <title>Google Interview Puzzle</title>
+      <link>https://codingnconcepts.com/tags/google-interview-puzzle/</link>
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://codingnconcepts.com/tags/google/</guid>
+      <guid>https://codingnconcepts.com/tags/google-interview-puzzle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spring Framework</title>
+      <link>https://codingnconcepts.com/tags/spring-framework/</link>
+      <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/spring-framework/</guid>
       <description></description>
     </item>
     
@@ -273,56 +219,47 @@
     </item>
     
     <item>
-      <title>Threads</title>
-      <link>https://codingnconcepts.com/tags/threads/</link>
+      <title>Java Threads</title>
+      <link>https://codingnconcepts.com/tags/java-threads/</link>
       <pubDate>Thu, 04 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://codingnconcepts.com/tags/threads/</guid>
+      <guid>https://codingnconcepts.com/tags/java-threads/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>CCDAK</title>
-      <link>https://codingnconcepts.com/tags/ccdak/</link>
+      <title>Confluent Kafka CCDAK</title>
+      <link>https://codingnconcepts.com/tags/confluent-kafka-ccdak/</link>
       <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://codingnconcepts.com/tags/ccdak/</guid>
+      <guid>https://codingnconcepts.com/tags/confluent-kafka-ccdak/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Confluent</title>
-      <link>https://codingnconcepts.com/tags/confluent/</link>
-      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      <title>Java Kafka</title>
+      <link>https://codingnconcepts.com/tags/java-kafka/</link>
+      <pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://codingnconcepts.com/tags/confluent/</guid>
+      <guid>https://codingnconcepts.com/tags/java-kafka/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Kafka</title>
-      <link>https://codingnconcepts.com/tags/kafka/</link>
-      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      <title>Java Program</title>
+      <link>https://codingnconcepts.com/tags/java-program/</link>
+      <pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://codingnconcepts.com/tags/kafka/</guid>
+      <guid>https://codingnconcepts.com/tags/java-program/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Pattern</title>
-      <link>https://codingnconcepts.com/tags/pattern/</link>
-      <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/pattern/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sorting</title>
-      <link>https://codingnconcepts.com/tags/sorting/</link>
+      <title>Java Sort</title>
+      <link>https://codingnconcepts.com/tags/java-sort/</link>
       <pubDate>Tue, 09 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://codingnconcepts.com/tags/sorting/</guid>
+      <guid>https://codingnconcepts.com/tags/java-sort/</guid>
       <description></description>
     </item>
     
