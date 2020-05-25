@@ -24,26 +24,6 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/spring/</loc>
-    <lastmod>2020-05-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/spring-boot/</loc>
-    <lastmod>2020-05-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/spring-boot/</loc>
-    <lastmod>2020-05-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/spring-boot-rest/</loc>
-    <lastmod>2020-05-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/tags/</loc>
     <lastmod>2020-05-26T00:00:00+00:00</lastmod>
   </url>
@@ -52,21 +32,6 @@
     <loc>https://codingnconcepts.com/java/</loc>
     <lastmod>2020-05-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/java/</loc>
-    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/java/</loc>
-    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/java-string/</loc>
-    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -85,38 +50,13 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/spring-boot-basics/</loc>
-    <lastmod>2020-05-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/javascript/</loc>
     <lastmod>2020-05-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/blockchain/</loc>
-    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/javascript/blockchain-explained-using-javascript/</loc>
-    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/javascript/</loc>
-    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/javascript/</loc>
-    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/js/</loc>
     <lastmod>2020-05-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -126,23 +66,8 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/categories/concepts/</loc>
-    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/post/</loc>
     <lastmod>2020-05-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/hugo/</loc>
-    <lastmod>2020-05-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/hugo/</loc>
-    <lastmod>2020-05-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -161,22 +86,7 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/seo/</loc>
-    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/java/double-colon-operator-in-java-8/</loc>
-    <lastmod>2020-04-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/java-8/</loc>
-    <lastmod>2020-04-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/streams/</loc>
     <lastmod>2020-04-30T00:00:00+00:00</lastmod>
   </url>
   
@@ -202,21 +112,6 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/interview/</loc>
-    <lastmod>2020-05-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/interview-questions/</loc>
-    <lastmod>2020-05-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/microservices/</loc>
-    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/top-microservices-interview-questions/</loc>
     <lastmod>2020-05-04T00:00:00+00:00</lastmod>
   </url>
@@ -232,17 +127,7 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/spring-boot-kafka/</loc>
-    <lastmod>2020-04-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/javascript/async-await-in-javascript/</loc>
-    <lastmod>2020-04-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/es6/</loc>
     <lastmod>2020-04-05T00:00:00+00:00</lastmod>
   </url>
   
@@ -277,11 +162,6 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/algorithm/</loc>
-    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/java/m-power-n-using-recursive/</loc>
     <lastmod>2020-03-22T00:00:00+00:00</lastmod>
   </url>
@@ -292,22 +172,12 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/recursive/</loc>
-    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/java/streams-in-java-8/</loc>
     <lastmod>2020-03-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/java/decorator-design-pattern-using-java/</loc>
-    <lastmod>2020-03-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/design-pattern/</loc>
     <lastmod>2020-03-21T00:00:00+00:00</lastmod>
   </url>
   
@@ -333,47 +203,12 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/analytics/</loc>
-    <lastmod>2020-05-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/die-hard-puzzle/</loc>
-    <lastmod>2020-03-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/puzzle/fruit-basket-puzzle/</loc>
     <lastmod>2020-03-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/interview-puzzle/</loc>
-    <lastmod>2020-05-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/maths-puzzle/</loc>
-    <lastmod>2020-03-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/puzzle/1-light-bulb-and-3-switches/</loc>
-    <lastmod>2020-03-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/puzzle/</loc>
-    <lastmod>2020-05-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/puzzles/</loc>
-    <lastmod>2020-05-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/riddle/</loc>
     <lastmod>2020-03-15T00:00:00+00:00</lastmod>
   </url>
   
@@ -398,18 +233,8 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/einstein-riddle/</loc>
-    <lastmod>2020-03-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/puzzle/einsteins-riddle/</loc>
     <lastmod>2020-03-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/google/</loc>
-    <lastmod>2020-05-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -453,11 +278,6 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/css/</loc>
-    <lastmod>2020-05-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/top-css-interview-questions/</loc>
     <lastmod>2020-05-03T00:00:00+00:00</lastmod>
   </url>
@@ -483,32 +303,7 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/threads/</loc>
-    <lastmod>2019-07-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/post/apache-kafka-ccdak-exam-notes/</loc>
-    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/ccdak/</loc>
-    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/confluent/</loc>
-    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/kafka/</loc>
-    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/kafka/</loc>
     <lastmod>2020-05-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -533,22 +328,12 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/pattern/</loc>
-    <lastmod>2018-05-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/java/fibonacci-series-using-recursive/</loc>
     <lastmod>2015-07-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/java/bubble-sort-using-java/</loc>
-    <lastmod>2015-06-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/sorting/</loc>
     <lastmod>2015-06-09T00:00:00+00:00</lastmod>
   </url>
   
@@ -570,11 +355,6 @@
   <url>
     <loc>https://codingnconcepts.com/puzzle/minimum-set-of-weights/</loc>
     <lastmod>2012-04-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/weight-puzzle/</loc>
-    <lastmod>2020-05-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
