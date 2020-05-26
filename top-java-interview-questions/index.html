@@ -13,7 +13,7 @@
 <meta property="og:url" content="https://codingnconcepts.com/top-java-interview-questions/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/interview/interview-questions-java.png" />
 <meta property="article:published_time" content="2020-03-07T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-03-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-05-26T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -80,7 +80,7 @@ if (!doNotTrack) {
     "copyrightYear" : "2020",
     "dateCreated": "2020-03-07T00:00:00.00Z",
     "datePublished": "2020-03-07T00:00:00.00Z",
-    "dateModified": "2020-03-07T00:00:00.00Z",
+    "dateModified": "2020-05-26T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -94,7 +94,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/interview/interview-questions-java.png"],
     "url" : "https:\/\/codingnconcepts.com\/top-java-interview-questions\/",
-    "wordCount" : "1268",
+    "wordCount" : "2066",
     "genre" : [ "Interview Q\x26A" ],
     "keywords" : [ ]
 }
@@ -196,6 +196,7 @@ if (!doNotTrack) {
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
 	<time class="meta__text" datetime="2020-03-07T00:00:00Z">March 07, 2020</time>
+	<time class="meta__text" datetime="2020-05-26T00:00:00Z"> (Last Modified: May 26, 2020)</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -203,169 +204,317 @@ if (!doNotTrack) {
 	<span class="meta__text"><a class="meta__link" href="/categories/interview-questions/" rel="category">Interview Questions</a>, <a class="meta__link" href="/categories/java/" rel="category">Java</a>
 	</span>
 </div></div>
-		</header><div class="content post__content clearfix">
-			<p>These Java interview questions are based on my personal interview experience. Topics are in the order of recent interview trends. Keep following this post link for regular updates.</p>
-<h2 id="singleton-pattern">Singleton Pattern</h2>
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-java-design-patterns">1. Java Design Patterns</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#2-java-collections">2. Java Collections</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#3-java-threads">3. Java Threads</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#4-java-string">4. Java String</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#5-java-core">5. Java Core</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#6-java-advance">6. Java Advance</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#7-java-basics">7. Java Basics</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div>
+<div class="content post__content clearfix">
+			<p>Comprehensive List of Java Interview Questions based on my personal interview experience over the last few years. Sequence of Questions in each section are in the order of recent interview trends. Keep following this post link for regular updates.</p>
+<h2 id="1-java-design-patterns">1. Java Design Patterns</h2>
+<h4 id="q1-what-is-singleton-pattern-and-how-do-you-implement-it">Q1. What is Singleton Pattern and how do you implement it?</h4>
 <p>This is one of the most commonly asked question in interviews. Interviewer starts this question asking about design patterns. Candidate generally answers singleton and factory patterns. Then interviewer asks to write a singleton class. You should learn how to create a singleton class with private constructor, static getInstance method, double checked locking. You should also learn enum based singleton class. Follow up questions in singleton pattern are as follows:</p>
 <ul>
-<li>How to make <a href="https://codingnconcepts.com/java/singleton-design-pattern-using-java/">singleton class</a> thread safe?</li>
-<li>How to prevent deserialization to create new object of <a href="https://codingnconcepts.com/java/singleton-design-pattern-using-java/">singleton class</a>?</li>
-<li>How to prevent cloning and reflexion to create new object of <a href="https://codingnconcepts.com/java/singleton-design-pattern-using-java/">singleton class</a>?</li>
+<li>How to make singleton class thread safe?</li>
+<li>How to prevent deserialization to create new object of singleton class?</li>
+<li>How to prevent cloning and reflection to create new object of singleton class?</li>
 </ul>
 <blockquote>
-<p>Also read <a href="https://codingnconcepts.com/java/singleton-design-pattern-using-java/">Singleton Design Pattern Using Java</a></p>
+<p>Read <a href="https://codingnconcepts.com/java/singleton-design-pattern-using-java/">Singleton Design Pattern Using Java</a> for singleton class implementation and answers of above questions.</p>
 </blockquote>
-<h2 id="hashmap">HashMap</h2>
-<p>This is also most commonly asked question in collections. Interviewer start this question asking about collections and what are the data structure/collection you have used in development. Candidate generally answers HashMap, LinkedList, ArrayList, HashSet.  Then interviewer check your knowledge of equals, hashcode and hashing algorithm. You should be aware of HashMap class internal implementation. Follow up questions in HashMap are as follows:</p>
-<ul>
-<li>How to use HashMap in multi threading environment ? You should know that HashTable is thread safe. You can make HashMap thread safe by using Collections.synchronizedMap(Map)</li>
-<li>What is concurrent hashmap ? How concurrent hashmap is better then thread safe hashmap in multi threading environment ?</li>
-</ul>
-<h2 id="linkedlist">LinkedList</h2>
-<p>LinkedList is something where interviewer can judge your knowledge of collections and algorithm at the same time.</p>
-<ol>
-<li>Collections
-<ul>
-<li>What is the difference in ArrayList and LinkedList ?</li>
-</ul>
-</li>
-<li>Algorithm
-<ul>
-<li>How to find middle element of Linked List? How to find a loop in LinkedList ? If you answer it then follow up question may asked:</li>
-<li>How to find the starting point of loop in LinkedList ?</li>
-<li>How to find the length of the loop in LinkedList ?</li>
-</ul>
-</li>
-</ol>
-<h2 id="multithreading">MultiThreading</h2>
-<p>Interviewer can ask you any of following questions:</p>
-<ol>
-<li>How to run 5 threads sequentially.</li>
-<li>Print number 1 to 10 using two threads where thread 1 prints even number and thread 2 prints odd number.</li>
-<li>Producer consumer implementation using wait notify.</li>
-<li>What is deadlock ? How to identify deadlock in java application ? How to prevent deadlock situations in application development ?</li>
-<li>CountDownLatch vs CyclicBarrier ?</li>
-<li>Future Object, ThreadLocal etc.</li>
-<li>How to name a thread in executor service ?</li>
-<li>How to interrupt a thread explicitly ?</li>
-</ol>
-<h2 id="string">String</h2>
-<ol>
-<li>What is immutable object? How can you write <a href="https://codingnconcepts.com/java/immutable-class-using-java/">Immutable Class</a>? If you know the internal implementation of String class and know how String is immutable, you can answer it easily. Here are few points to remember:-
+<p><br /></p>
+<h4 id="q2-what-is-immutable-object-how-do-you-write-an-immutable-class">Q2. What is Immutable Object? How do you write an Immutable Class?</h4>
+<p>If you know the internal implementation of String class and know how String is immutable, you can answer it easily. Here are few points to remember:-</p>
 <ul>
 <li>Declare the class as final so it can’t be extended.</li>
 <li>Initialize all the fields via a constructor. Make all fields private so that direct access is not allowed. Make all fields final so that they’re initialized only once inside the constructor and never modified afterward.</li>
 <li>Don’t provide setter methods.</li>
-<li>When exposing methods which return mutable object then you must always return a new object with copied content of mutable object. Immutable variables can be returned safely without extra effort.</li>
+<li>When exposing methods which return mutable object then you must always return a new object with copied content of mutable object whereas, Immutable variables can be returned safely without extra effort.</li>
 </ul>
-</li>
-<li>Difference between String object created using new and literal.</li>
-<li>Difference between StringBuilder and StringBuffer.</li>
-<li>Why character array is used over String to store password ?</li>
-</ol>
 <blockquote>
-<p>Also read <a href="https://codingnconcepts.com/java/immutable-class-using-java/">Immutable Class in Java</a></p>
+<p>Read <a href="https://codingnconcepts.com/java/immutable-class-using-java/">Immutable Class in Java</a> for Immutable Class implementation and answers of above questions.</p>
 </blockquote>
-<h2 id="java-theory">Java Theory</h2>
-<h6 id="1-solid-5-class-design-principle-in-java-">1. S.O.L.I.D. (5 class design principle) in Java ?</h6>
-<p>These 5 design principle are know as SOLID principles:-</p>
+<p><br /></p>
+<h4 id="q3-give-example-of-5-6-design-patterns-being-used-in-java-classes">Q3. Give example of 5-6 design patterns being used in Java classes.</h4>
 <ul>
-<li><strong>Single Responsibility Principle</strong> - One class should have one and only one responsibility</li>
-<li><strong>Open Close Principle</strong> - Software components should be open for extension, but closed for modification</li>
-<li><strong>Liskov Substitution</strong> - Derived types must be completely substitutable for their base types</li>
-<li><strong>Interface Segregation</strong> - Clients should not be forced to implement unnecessary methods which they will not use</li>
-<li><strong>Dependency Inversion</strong> - Depend on abstractions, not on concretions</li>
+<li><strong>Factory</strong><br>
+java.util.Calendar#getInstance()</li>
+<li><strong>Abstract Factory</strong><br>
+javax.xml.parsers.DocumentBuilderFactory#newInstance()<br>
+javax.xml.transform.TransformerFactory#newInstance()<br>
+javax.xml.xpath.XPathFactory#newInstance()</li>
+<li><strong>Builder</strong><br>
+java.lang.StringBuilder#append()<br>
+java.lang.StringBuffer#append()</li>
+<li><strong>Decorator</strong><br>
+All subclasses of java.io.InputStream, OutputStream, Reader and Writer.</li>
+<li><strong>Chain of responsibility</strong><br>
+javax.servlet.Filter#doFilter()</li>
+<li><strong>Iterator</strong><br>
+java.util.Iterator</li>
+<li><strong>Observer</strong><br>
+JMS message listener</li>
+<li><strong>Singleton</strong><br>
+java.lang.Runtime#getRuntime()</li>
+<li><strong>Adapter</strong>       <br>
+java.util.Arrays#asList()<br>
+java.io.InputStreamReader(InputStream) (returns a Reader)<br>
+java.io.OutputStreamWriter(OutputStream) (returns a Writer)</li>
 </ul>
-<h6 id="2-anti-patterns-in-java-what-is-god-class-">2. Anti patterns in Java. What is god class ?</h6>
-<p>Anti patterns in java is:-</p>
+<h2 id="2-java-collections">2. Java Collections</h2>
+<h4 id="q1-how-hashmap-works">Q1. How HashMap Works?</h4>
+<p>This is also most commonly asked question in collections. Interviewer start this question asking about collections and what are the data structure/collection you have used in development. Candidate generally answers HashMap, LinkedList, ArrayList, HashSet.  Then interviewer check your knowledge of equals, hashcode and hashing algorithm. You should be aware of HashMap class internal implementation. Follow up questions in HashMap are as follows:</p>
 <ul>
-<li>Any pattern or coding habit which is considered as bad practice</li>
-<li>Which are against SOLID design principles</li>
+<li><em><strong>How to use HashMap in multi threading environment?</strong></em><br>
+You should know that HashTable is thread safe. You can make HashMap thread safe by using Collections.synchronizedMap(Map)</li>
+<li><em><strong>What is Concurrent HashMap? How it is better then thread safe HashMap in multi threading environment?</strong></em><br>
+<br /></li>
 </ul>
-<p><strong>God class</strong> is one of the Anti pattern example. A god class is a class which is having too many properties or methods or dependencies and hence lots of responsibilities which violates single-responsibility SOLID design principle. Writing thousands lines of code in single class becomes a nightmare to debug, unit-test and document.</p>
-<h6 id="3-how-classes-are-related-to-each-other-through-association-aggregation-and-composition">3. How classes are related to each other through association, aggregation and composition.</h6>
+<h4 id="q2-what-is-the-difference-in-arraylist-and-linkedlist">Q2. What is the difference in ArrayList and LinkedList?</h4>
+<h4 id="q3-how-to-find-middle-element-of-linked-list-how-to-find-a-loop-in-linkedlist">Q3. How to find middle element of Linked List? How to find a loop in LinkedList?</h4>
+<p>If you answer it then follow up question might be asked:</p>
 <ul>
-<li><strong>Association</strong> (bidirectional one to one, one to many, many to one or many to many association, represented by line with arrow in UML) for e.g. Teacher and Student. Multiple students can associate with a single teacher and a single student can associate with multiple teachers but there is no ownership between the objects and both have their own lifecycle.</li>
-<li><strong>Aggregation</strong> (Has-a relationship, unidirectional association, parent and child can survive individually, represented by line with diamond in UML) for e.g. Car and Wheel. Car can have multiple wheels but wheel can not belong to multiple cars and if we delete the car, wheel need not to be destroyed and used in another car.</li>
-<li><strong>Composition</strong> (Part-of relationship, unidirectional association, child can not survive without parent, represented by line with filled diamond in UML) for e.g. House and Rooms. House can contain multiple rooms there is no independent life of room and any room can not belongs to two different house if we delete the house room will automatically delete.</li>
+<li>How to find the starting point of loop in LinkedList?</li>
+<li>How to find the length of the loop in LinkedList?<br>
+<br /></li>
 </ul>
-<h6 id="4-give-example-of-5-6-design-patterns-being-used-in-java-classes">4. Give example of 5-6 design patterns being used in Java classes.</h6>
-<ul>
-<li>
-<p><strong>Factory</strong></p>
-<pre><code>java.util.Calendar#getInstance()
-</code></pre>
-</li>
-<li>
-<p><strong>Abstract Factory</strong></p>
-<pre><code>javax.xml.parsers.DocumentBuilderFactory#newInstance()
-javax.xml.transform.TransformerFactory#newInstance()
-javax.xml.xpath.XPathFactory#newInstance()
-</code></pre>
-</li>
-<li>
-<p><strong>Builder</strong></p>
-<pre><code>java.lang.StringBuilder#append()
-java.lang.StringBuffer#append()
-</code></pre>
-</li>
-<li>
-<p><strong>Decorator</strong></p>
-<pre><code>All subclasses of java.io.InputStream, OutputStream, Reader and Writer.
-</code></pre>
-</li>
-<li>
-<p><strong>Chain of responsibility</strong></p>
-<pre><code>javax.servlet.Filter#doFilter()
-</code></pre>
-</li>
-<li>
-<p><strong>Iterator</strong></p>
-<pre><code>java.util.Iterator
-</code></pre>
-</li>
-<li>
-<p><strong>Observer</strong></p>
-<pre><code>JMS message listener
-</code></pre>
-</li>
-<li>
-<p><strong>Singleton</strong></p>
-<pre><code>java.lang.Runtime#getRuntime()
-</code></pre>
-</li>
-<li>
-<p><strong>Adapter</strong></p>
-<pre><code>java.util.Arrays#asList()
-java.io.InputStreamReader(InputStream) (returns a Reader)
-java.io.OutputStreamWriter(OutputStream) (returns a Writer)
-</code></pre>
-</li>
-</ul>
-<h2 id="java-basics">Java Basics</h2>
-<h6 id="1-explain-each-keyword-in-main-method-ie-public-static-void-mainstring-args">1. Explain each keyword in main method i.e. public static void main(String[] args).</h6>
-<ul>
+<h4 id="q4-difference-between-arraylist-and-vector">Q4. Difference between ArrayList and Vector.</h4>
+<p>These is legacy interview questions which is not asked frequently now a days but good to know.</p>
+<table>
+<thead>
+<tr>
+<th align="left">ArrayList</th>
+<th align="left">Vector</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Array List is not synchronized.</td>
+<td align="left">Vector is synchronized.</td>
+</tr>
+<tr>
+<td align="left">Array List is fast as it’s non-synchronized.</td>
+<td align="left">Vector is slow as it is thread safe.</td>
+</tr>
+<tr>
+<td align="left">If an element is inserted into the Array List, it increases its Array size by 50%.</td>
+<td align="left">Vector defaults to doubling size of its array.</td>
+</tr>
+<tr>
+<td align="left">Array List does not define the increment size.</td>
+<td align="left">Vector defines the increment size.</td>
+</tr>
+<tr>
+<td align="left">Array List can only use Iterator for traversing an Array List.</td>
+<td align="left">Vector can use both Enumeration and Iterator for traversing.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-java-threads">3. Java Threads</h2>
+<p>Interviewer can ask you any of following questions related to multi threading:</p>
+<h4 id="q1-how-to-run-5-threads-sequentially">Q1. How to run 5 threads sequentially?</h4>
+<h4 id="q2-print-number-1-to-10-using-two-threads-where-thread-1-prints-even-number-and-thread-2-prints-odd-number">Q2. Print number 1 to 10 using two threads where thread 1 prints even number and thread 2 prints odd number.</h4>
+<h4 id="q3-producer-consumer-implementation-using-wait-notify">Q3. Producer consumer implementation using wait notify.</h4>
+<h4 id="q4-what-is-deadlock-and-how-to-identify-it-in-java-application-how-to-prevent-deadlock-situations-in-application-development">Q4. What is DeadLock and How to identify it in Java Application? How to prevent DeadLock situations in Application Development?</h4>
+<h4 id="q5-countdownlatch-vs-cyclicbarrier">Q5. CountDownLatch vs CyclicBarrier?</h4>
+<h4 id="q6-future-object-threadlocal-etc">Q6. Future Object, ThreadLocal etc.</h4>
+<h4 id="q7-how-to-name-a-thread-in-executor-service">Q7. How to name a thread in executor service?</h4>
+<h4 id="q8-how-to-interrupt-a-thread-explicitly">Q8. How to interrupt a thread explicitly?</h4>
+<h2 id="4-java-string">4. Java String</h2>
+<h4 id="q1-difference-between-string-object-created-using-new-and-literal">Q1. Difference between String object created using new and literal.</h4>
+<h4 id="q2-difference-between-stringbuilder-and-stringbuffer">Q2. Difference between StringBuilder and StringBuffer.</h4>
+<h4 id="q3-why-character-array-is-used-over-string-to-store-password-">Q3. Why character array is used over String to store password ?</h4>
+<h2 id="5-java-core">5. Java Core</h2>
+<p>Java Core interview questions are very important for freshers.</p>
+<h4 id="q1-explain-each-keyword-in-main-method-ie-public-static-void-mainstring-args">Q1. Explain each keyword in main method i.e. public static void main(String[] args).</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyClass</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><ul>
 <li><strong>public</strong> method have public access and can be executed from outside the class. It has to be public so that java runtime can execute this method.</li>
 <li><strong>static</strong> associates the method with class rather than object. This helps JVM to call main method without class instantiation.</li>
 <li><strong>void</strong> is a return type of main method which returns nothing</li>
 <li><strong>main</strong> is name of java main method and it is fixed. When you execute a class fine, it looks for main method.</li>
-<li><strong>String[] args</strong> It stores Java command line arguments and is an array of type String</li>
+<li><strong>String[] args</strong> It stores Java command line arguments and is an array of type String<br>
+<br /></li>
 </ul>
-<h6 id="2-can-you-override-a-static-method-and-private-method-">2. Can you override a static method and private method ?</h6>
+<h4 id="q2-what-is-final-keyword-in-java">Q2. What is final keyword in Java?</h4>
+<p>The <strong>final</strong> keyword is used as non-access modifier in Java. A final keyword can be used in different contexts such as:</p>
 <ul>
-<li>No, you cannot override static method since static method is associated with a class.</li>
-<li>No, you cannot override private method since private method is not visible outside of a class.</li>
+<li>Value of <strong>final variable</strong> cannot be changes once assigned.</li>
+<li>A <strong>final method</strong> cannot be overridden by inheriting child classes in Java.</li>
+<li>A <strong>final class</strong> cannot be extended by other classes in Java.<br>
+<br /></li>
 </ul>
-<h2 id="java-advance">Java Advance</h2>
-<h6 id="1-how-many-ways-you-can-create-an-object-in-java-">1. How many ways you can create an object in java ?</h6>
+<h4 id="q3-explain-jdk-jre-and-jvm">Q3. Explain JDK, JRE and JVM</h4>
+<table>
+<thead>
+<tr>
+<th align="left">JDK</th>
+<th align="left">JRE</th>
+<th align="left">JVM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">It stands for Java Development Kit.</td>
+<td align="left">It stands for Java Runtime Environment.</td>
+<td align="left">It stands for Java Virtual Machine.</td>
+</tr>
+<tr>
+<td align="left">It is the tool necessary to compile, document and package Java programs.</td>
+<td align="left">JRE refers to a runtime environment in which Java bytecode can be executed.</td>
+<td align="left">It is an abstract machine. It is a specification that provides a run-time environment in which Java bytecode can be executed.</td>
+</tr>
+<tr>
+<td align="left">It contains JRE + development tools.</td>
+<td align="left">It’s an implementation of the JVM which physically exists.</td>
+<td align="left">JVM follows three notations: Specification, Implementation, and Runtime Instance.</td>
+</tr>
+</tbody>
+</table>
+<p><br /></p>
+<h4 id="q4-why-java-is-platform-independent">Q4. Why Java is platform independent?</h4>
+<p>Java is platform independent. Let&rsquo;s understand this</p>
+<ul>
+<li>When you write a program in Java <em>(.java file)</em> and compile it using <code>javac</code>. It is converted to <strong>ByteCode</strong> <em>(.class file)</em>.</li>
+<li>This ByteCode is not something which any machine or OS can understand. You need an interpreter to execute this ByteCode and that interpreter is JVM (Java Virtual Machine) in case of Java.</li>
+<li>JVM is platform dependent. You need to install platform specific JVM based on Operating System you are using Mac OS X, Windows or Linux.</li>
+<li>You can execute the same ByteCode <em>(.class file)</em> on any platform&rsquo;s JVM regardless of its Operating System.</li>
+</ul>
+<p>So we can say, JVM is platform dependent but Java is platform independent from its magic ByteCode.<br>
+<br /></p>
+<h4 id="q5-how-many-ways-to-create-an-object-instance-in-java-">Q5. How many ways to create an Object Instance in Java ?</h4>
 <ul>
 <li>New Keyword</li>
-<li>Cloning</li>
-<li>Deserialization</li>
-<li>Reflection.</li>
+<li>Cloning using <code>Object.clone()</code> method</li>
+<li>Reflection using <code>Class.newInstance()</code> method</li>
+<li>Reflection using <code>Class.getConstructor().newInstance()</code> method</li>
+<li>Object Serialization and Deserialization</li>
 </ul>
-<h6 id="2-explain-java-memory-model-with-heap-structure-explain-here-three-parts-of-heap-ie-young-old-and-permanent-generation-also-explain-minor-and-major-gc">2. Explain Java Memory Model with Heap structure. Explain here three parts of heap i.e. Young, Old and Permanent Generation. Also Explain Minor and Major GC</h6>
-<h6 id="3-how-to-do-jvm-performance-tuning--explain-here-parameters">3. How to do JVM performance tuning ? Explain here parameters</h6>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ObjectInstance</span> <span style="color:#f92672">{</span>
+
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>
+			<span style="color:#66d9ef">throws</span> CloneNotSupportedException<span style="color:#f92672">,</span> InstantiationException<span style="color:#f92672">,</span> IllegalAccessException<span style="color:#f92672">,</span> IllegalArgumentException<span style="color:#f92672">,</span>
+			InvocationTargetException<span style="color:#f92672">,</span> NoSuchMethodException<span style="color:#f92672">,</span> SecurityException<span style="color:#f92672">,</span> IOException<span style="color:#f92672">,</span> ClassNotFoundException <span style="color:#f92672">{</span>
+        
+        <span style="color:#75715e">// New Keyword
+</span><span style="color:#75715e"></span>		ObjectInstance instance1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ObjectInstance<span style="color:#f92672">();</span>
+
+		<span style="color:#75715e">// Cloning
+</span><span style="color:#75715e"></span>		ObjectInstance instance2 <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>ObjectInstance<span style="color:#f92672">)</span> instance1<span style="color:#f92672">.</span><span style="color:#a6e22e">clone</span><span style="color:#f92672">();</span>
+
+		<span style="color:#75715e">// Reflection
+</span><span style="color:#75715e"></span>		ObjectInstance instance3 <span style="color:#f92672">=</span> ObjectInstance<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">.</span><span style="color:#a6e22e">newInstance</span><span style="color:#f92672">();</span>
+		ObjectInstance instance4 <span style="color:#f92672">=</span> ObjectInstance<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getConstructor</span><span style="color:#f92672">().</span><span style="color:#a6e22e">newInstance</span><span style="color:#f92672">();</span>
+
+		<span style="color:#75715e">// Object Serialization and Deserialization
+</span><span style="color:#75715e"></span>		serialize<span style="color:#f92672">(</span>instance1<span style="color:#f92672">);</span>
+		ObjectInstance instance5 <span style="color:#f92672">=</span> deserialize<span style="color:#f92672">();</span>
+
+	<span style="color:#f92672">}</span>
+
+	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">serialize</span><span style="color:#f92672">(</span>ObjectInstance objInstance<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
+		FileOutputStream f <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileOutputStream<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;resources/objectinstance.ser&#34;</span><span style="color:#f92672">);</span>
+		<span style="color:#66d9ef">try</span> <span style="color:#f92672">(</span>ObjectOutputStream outputStream <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ObjectOutputStream<span style="color:#f92672">(</span>f<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+			outputStream<span style="color:#f92672">.</span><span style="color:#a6e22e">writeObject</span><span style="color:#f92672">(</span>objInstance<span style="color:#f92672">);</span>
+			outputStream<span style="color:#f92672">.</span><span style="color:#a6e22e">flush</span><span style="color:#f92672">();</span>
+		<span style="color:#f92672">}</span>
+	<span style="color:#f92672">}</span>
+
+	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> ObjectInstance <span style="color:#a6e22e">deserialize</span><span style="color:#f92672">()</span> <span style="color:#66d9ef">throws</span> IOException<span style="color:#f92672">,</span> ClassNotFoundException <span style="color:#f92672">{</span>
+		FileInputStream f <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileInputStream<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;resources/objectinstance.ser&#34;</span><span style="color:#f92672">);</span>
+		<span style="color:#66d9ef">try</span> <span style="color:#f92672">(</span>ObjectInputStream inputStream <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ObjectInputStream<span style="color:#f92672">(</span>f<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+			<span style="color:#66d9ef">return</span> <span style="color:#f92672">(</span>ObjectInstance<span style="color:#f92672">)</span> inputStream<span style="color:#f92672">.</span><span style="color:#a6e22e">readObject</span><span style="color:#f92672">();</span>
+		<span style="color:#f92672">}</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><br /></p>
+<h4 id="q6-can-you-override-a-static-method-and-private-method-">Q6. Can you override a static method and private method ?</h4>
+<ul>
+<li>No, you cannot override static method since static method is associated with a class whereas overriding is an object instance feature.</li>
+<li>No, you cannot override private method since private method is not visible outside of a class.</li>
+</ul>
+<h2 id="6-java-advance">6. Java Advance</h2>
+<h4 id="q1-what-is-the-difference-between-heap-and-stack-memory-in-java">Q1. What is the difference between Heap and Stack Memory in Java?</h4>
+<table>
+<thead>
+<tr>
+<th align="left">Features</th>
+<th align="left">Stack</th>
+<th align="left">Heap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><em><strong>Memory</strong></em></td>
+<td align="left">Stack memory is used only by one thread of execution.</td>
+<td align="left">Heap memory is used by all the parts of the application.</td>
+</tr>
+<tr>
+<td align="left"><em><strong>Access</strong></em></td>
+<td align="left">Stack memory can’t be accessed by other threads.</td>
+<td align="left">Objects stored in the heap are globally accessible.</td>
+</tr>
+<tr>
+<td align="left"><em><strong>Memory Management</strong></em></td>
+<td align="left">Follows LIFO manner to free memory.</td>
+<td align="left">Memory management is based on the generation associated with each object.</td>
+</tr>
+<tr>
+<td align="left"><em><strong>Lifetime</strong></em></td>
+<td align="left">Exists until the end of execution of the thread.</td>
+<td align="left">Heap memory lives from the start till the end of application execution.</td>
+</tr>
+<tr>
+<td align="left"><em><strong>Usage</strong></em></td>
+<td align="left">Stack memory only contains local primitive and reference variables to objects in heap space.</td>
+<td align="left">Whenever an object is created, it’s always stored in the Heap space.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="q2-explain-java-memory-model-with-heap-structure-explain-here-three-parts-of-heap-ie-young-old-and-permanent-generation-also-explain-minor-and-major-gc">Q2. Explain Java Memory Model with Heap structure. Explain here three parts of heap i.e. Young, Old and Permanent Generation. Also Explain Minor and Major GC</h4>
+<h4 id="q3-how-to-do-jvm-performance-tuning--explain-here-parameters">Q3. How to do JVM performance tuning ? Explain here parameters</h4>
 <pre><code>a) Heap Memory: -Xms, -Xmx, -Xmn,
 b) Permanent Generation Memory: -XX:PermSize, -XX:MaxPermSize
 c) Garbage Collection i.e. 
@@ -375,20 +524,40 @@ c) Garbage Collection i.e.
     -XX:+UseConcMarkSweepGC (-XX:ParellelCMSThreads=&lt;N&gt;), 
     -XX:+UseG1GC
 </code></pre>
-<h6 id="4-what-is-classloader-in-java-how-to-write-custom-class-loader-what-is-linkage-error">4. What is classloader in java? How to write custom class Loader? What is linkage error?</h6>
-<h6 id="5-do-you-know-about-serialization-when-should-we-use-that-what-is-the-role-of-serialization-id-serializable-vs-externalizable">5. Do you know about serialization? When should we use that? What is the role of Serialization id? serializable vs externalizable?</h6>
-<h6 id="6-deep-vs-shallow-copy-in-cloning">6. Deep vs Shallow copy in Cloning?</h6>
-<h2 id="collection">Collection</h2>
-<p>These are legacy interview questions which are not asked frequently now a days but they are good to know.</p>
-<ol>
-<li>Difference between ArrayList and LinkedList.</li>
-<li>Difference between ArrayList and Vector.</li>
-</ol>
-<h2 id="application">Application</h2>
-<ol>
-<li>Http vs https</li>
-<li>Rest vs soap</li>
-</ol>
+<h4 id="q4-what-is-classloader-in-java-how-to-write-custom-class-loader-what-is-linkage-error">Q4. What is classloader in java? How to write custom class Loader? What is linkage error?</h4>
+<h4 id="q5-do-you-know-about-serialization-when-should-we-use-that-what-is-the-role-of-serialization-id-serializable-vs-externalizable">Q5. Do you know about serialization? When should we use that? What is the role of Serialization id? serializable vs externalizable?</h4>
+<h4 id="q6-deep-vs-shallow-copy-in-cloning">Q6. Deep vs Shallow copy in Cloning?</h4>
+<h2 id="7-java-basics">7. Java Basics</h2>
+<h4 id="q1-solid-5-class-design-principle-in-java-">Q1. S.O.L.I.D. (5 class design principle) in Java ?</h4>
+<p>These 5 design principle are know as SOLID principles:-</p>
+<ul>
+<li><strong>Single Responsibility Principle</strong> - One class should have one and only one responsibility</li>
+<li><strong>Open Close Principle</strong> - Software components should be open for extension, but closed for modification</li>
+<li><strong>Liskov Substitution</strong> - Derived types must be completely substitutable for their base types</li>
+<li><strong>Interface Segregation</strong> - Clients should not be forced to implement unnecessary methods which they will not use</li>
+<li><strong>Dependency Inversion</strong> - Depend on abstractions, not on concretions</li>
+</ul>
+<h4 id="q2-anti-patterns-in-java-what-is-god-class-">Q2. Anti patterns in Java. What is god class ?</h4>
+<p>Anti patterns in java is:-</p>
+<ul>
+<li>Any pattern or coding habit which is considered as bad practice</li>
+<li>Which are against SOLID design principles</li>
+</ul>
+<p><strong>God class</strong> is one of the Anti pattern example. A god class is a class which is having too many properties or methods or dependencies and hence lots of responsibilities which violates single-responsibility SOLID design principle. Writing thousands lines of code in single class becomes a nightmare to debug, unit-test and document.</p>
+<h4 id="q3-how-classes-are-related-to-each-other-through-association-aggregation-and-composition">Q3. How classes are related to each other through association, aggregation and composition.</h4>
+<ul>
+<li><strong>Association</strong> (bidirectional one to one, one to many, many to one or many to many association, represented by line with arrow in UML) for e.g. Teacher and Student. Multiple students can associate with a single teacher and a single student can associate with multiple teachers but there is no ownership between the objects and both have their own lifecycle.</li>
+<li><strong>Aggregation</strong> (Has-a relationship, unidirectional association, parent and child can survive individually, represented by line with diamond in UML) for e.g. Car and Wheel. Car can have multiple wheels but wheel can not belong to multiple cars and if we delete the car, wheel need not to be destroyed and used in another car.</li>
+<li><strong>Composition</strong> (Part-of relationship, unidirectional association, child can not survive without parent, represented by line with filled diamond in UML) for e.g. House and Rooms. House can contain multiple rooms there is no independent life of room and any room can not belongs to two different house if we delete the house room will automatically delete.</li>
+</ul>
+<h4 id="q4-what-is-marker-interface">Q4. What is Marker Interface?</h4>
+<p>A Marker interface can be defined as the interface having no data member and member functions. In simpler terms, an empty interface is called the Marker interface. The most common examples of Marker interface in Java are <code>Serializable</code>, <code>Cloneable</code> etc. The marker interface can be declared as follows.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Serializable</span><span style="color:#f92672">{</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="q5-what-is-multiple-inheritance-is-it-supported-by-java">Q5. What is multiple inheritance? Is it supported by Java?</h4>
+<p>If a child class inherits the property from multiple classes is known as multiple inheritance. Java does not allow to extend multiple classes.</p>
+<p>The problem with multiple inheritance is that if multiple parent classes have the same method name, then at runtime it becomes difficult for the compiler to decide which method to execute from the child class.</p>
+<p>Therefore, Java doesn’t support multiple inheritance. The problem is commonly referred to as <strong>Diamond Problem</strong>.</p>
 		</div>
 		<footer class="post__footer">
 			
