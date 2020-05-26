@@ -4,27 +4,32 @@
   
   <url>
     <loc>https://codingnconcepts.com/spring-boot/</loc>
-    <lastmod>2020-05-26T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/categories/</loc>
-    <lastmod>2020-05-26T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/</loc>
-    <lastmod>2020-05-26T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/spring-boot/configure-feign-rest-client/</loc>
-    <lastmod>2020-05-26T00:00:00+00:00</lastmod>
+    <loc>https://codingnconcepts.com/spring-boot/spring-value-annotation/</loc>
+    <lastmod>2020-05-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/</loc>
+    <lastmod>2020-05-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/spring-boot/configure-feign-rest-client/</loc>
     <lastmod>2020-05-26T00:00:00+00:00</lastmod>
   </url>
   
