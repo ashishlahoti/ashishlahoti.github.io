@@ -6,9 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Java Regex for Phone Number - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Java Regex Pattern to Validate Phone number formats with Whitespace, Hyphen, No Space, Parenthesis and Country Code followed by building a regex pattern to match any country phone number format. We will also see how to make more strict regex pattern to match specific country like Singapore or India&#39;s phone number formats.">
+	<meta name="description" content="Java Regex Pattern to Validate Phone number formats with Whitespace, Hyphen, No Space, Parenthesis, and Country Code followed by building a regex pattern to match any country phone number format. We will also see how to make a more strict regex pattern to match a specific country like Singapore or India&#39;s phone number formats.">
 	<meta property="og:title" content="Java Regex for Phone Number" />
-<meta property="og:description" content="Java Regex Pattern to Validate Phone number formats with Whitespace, Hyphen, No Space, Parenthesis and Country Code followed by building a regex pattern to match any country phone number format. We will also see how to make more strict regex pattern to match specific country like Singapore or India&#39;s phone number formats." />
+<meta property="og:description" content="Java Regex Pattern to Validate Phone number formats with Whitespace, Hyphen, No Space, Parenthesis, and Country Code followed by building a regex pattern to match any country phone number format. We will also see how to make a more strict regex pattern to match a specific country like Singapore or India&#39;s phone number formats." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/java/java-regex-for-phone-number/" />
 <meta property="article:published_time" content="2020-05-27T00:00:00+00:00" />
@@ -22,7 +22,7 @@
 <meta property="fb:admins" content="177784346770196" />
 	<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Java Regex for Phone Number"/>
-<meta name="twitter:description" content="Java Regex Pattern to Validate Phone number formats with Whitespace, Hyphen, No Space, Parenthesis and Country Code followed by building a regex pattern to match any country phone number format. We will also see how to make more strict regex pattern to match specific country like Singapore or India&#39;s phone number formats."/>
+<meta name="twitter:description" content="Java Regex Pattern to Validate Phone number formats with Whitespace, Hyphen, No Space, Parenthesis, and Country Code followed by building a regex pattern to match any country phone number format. We will also see how to make a more strict regex pattern to match a specific country like Singapore or India&#39;s phone number formats."/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -54,7 +54,7 @@ if (!doNotTrack) {
     "name": "Java Regex for Phone Number",
     "headline": "Java Regex for Phone Number",
     "alternativeHeadline": "",
-    "description": "Java Regex Pattern to Validate Phone number formats with Whitespace, Hyphen, No Space, Parenthesis and Country Code followed by building a regex pattern to match any country phone number format. We will also see how to make more strict regex pattern to match specific country like Singapore or India\x27s phone number formats.",
+    "description": "Java Regex Pattern to Validate Phone number formats with Whitespace, Hyphen, No Space, Parenthesis, and Country Code followed by building a regex pattern to match any country phone number format. We will also see how to make a more strict regex pattern to match a specific country like Singapore or India\x27s phone number formats.",
     "inLanguage": "en-us",
 	"isFamilyFriendly": "true",
     "mainEntityOfPage": {
@@ -91,7 +91,7 @@ if (!doNotTrack) {
     },
     "image": "https://codingnconcepts.com/favicon-32x32.png",
     "url" : "https:\/\/codingnconcepts.com\/java\/java-regex-for-phone-number\/",
-    "wordCount" : "861",
+    "wordCount" : "862",
     "genre" : [ "Java Regex" ],
     "keywords" : [ ]
 }
@@ -261,7 +261,7 @@ matcher<span style="color:#f92672">.</span><span style="color:#a6e22e">matches</
 <li><code>d{4}</code> is mandatory match of last 4 digits</li>
 <li><code>$</code> end of expression</li>
 </ul>
-<p>This Pattern will match mobile phone numbers like <em>9876543210, 987 654 3210, 987-654-3210, 987 654-3210, 987 6543210</em> etc.<br>
+<p>This Pattern will match mobile phone numbers like <em>9876543210, 987 654 3210, 987-654-3210, 987 654-3210, 987 6543210</em>, etc.<br>
 <br /></p>
 <h3 id="3-regex-to-match-10-digit-phone-number-with-parentheses">3. Regex to match 10 digit Phone Number with Parentheses</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String parenthesesRegex <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;^((\\(\\d{3}\\))|\\d{3})[- ]?\\d{3}[- ]?\\d{4}$&#34;</span><span style="color:#f92672">;</span>
@@ -293,23 +293,23 @@ matcher<span style="color:#f92672">.</span><span style="color:#a6e22e">matches</
 <pre><code>Abkhazia    +995 442 123456
 Afghanistan +93 30 539-0605
 Australia   +61 2 1255-3456
-China       +86 20 1255-3456
+China       +86 (20) 1255-3456
 Germany     +49 351 125-3456
 Indonesia   +62 21 6539-0605
-Iran        +98 515 539-0605
+Iran        +98 (515) 539-0605
 Italy       +39 06 5398-0605
 New Zealand +64 3 539-0605
 Philippines +63 35 539-0605
 Singapore   +65 6396 0605
 Thailand    +66 2 123 4567
 UK          +44 141 222-3344
-USA         +1 212 555-3456
+USA         +1 (212) 555-3456
 Vietnam     +84 35 539-0605
 </code></pre><p>Let&rsquo;s extract some information from these numbers:-</p>
 <ol>
-<li><em>Country Code prefix</em> start with &lsquo;+&rsquo; and have 1 to 3 digits</li>
+<li><em>Country Code prefix</em> starts with &lsquo;+&rsquo; and has 1 to 3 digits</li>
 <li>Last part of the number, also known as <em>subscriber number</em> is 4 digits in all of the numbers</li>
-<li>Most of the countries have 10 digits phone number after excluding country code. A General observation is that all countries phone number falls somewhere between 8 to 11 digits after excluding country code.</li>
+<li>Most of the countries have 10 digits phone number after excluding country code. A general observation is that all countries phone number falls somewhere between 8 to 11 digits after excluding country code.</li>
 </ol>
 <p>Let&rsquo;s see again on regex from previous example to validate country code:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String countryCodeRegex <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;^(\\+\\d{1,3}( )?)?((\\(\\d{3}\\))|\\d{3})[- .]?\\d{3}[- .]?\\d{4}$&#34;</span>l
@@ -327,7 +327,7 @@ Vietnam     +84 35 539-0605
 <br /></li>
 </ul>
 <h3 id="6-regex-to-match-phone-number-of-specific-country-format">6. Regex to match Phone Number of Specific Country Format</h3>
-<p>As you saw in previous example that we have to add some flexibility in our regex to match all countries format. If you want more strict validation of specific country format then here are examples of <em>India</em> and <em>Singapore</em> Phone number regex pattern:</p>
+<p>As you saw in the previous example that we have to add some flexibility in our regex to match all countries&rsquo; formats. If you want more strict validation of specific country format then here are examples of <em>India</em> and <em>Singapore</em> Phone number regex pattern:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String indiaRegex <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;^(\\+\\d{2}( )?)?((\\(\\d{3}\\))|\\d{3})[- .]?\\d{3}[- .]?\\d{4}$&#34;</span><span style="color:#f92672">;</span>
 String singaporeRegex <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;^(\\+\\d{2}( )?)?\\d{4}[- .]?\\d{4}$&#34;</span><span style="color:#f92672">;</span>
 </code></pre></div>
@@ -383,7 +383,7 @@ String singaporeRegex <span style="color:#f92672">=</span> <span style="color:#e
       
       
       <li>
-        <a href="whatsapp://send?text=Java%20Regex%20for%20Phone%20Number%2c%20by%20Coding%20N%20Concepts%0aJava%20Regex%20Pattern%20to%20Validate%20Phone%20number%20formats%20with%20Whitespace%2c%20Hyphen%2c%20No%20Space%2c%20Parenthesis%20and%20Country%20Code%20followed%20by%20building%20a%20regex%20pattern%20to%20match%20any%20country%20phone%20number%20format.%20We%20will%20also%20see%20how%20to%20make%20more%20strict%20regex%20pattern%20to%20match%20specific%20country%20like%20Singapore%20or%20India%27s%20phone%20number%20formats.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjava%2fjava-regex-for-phone-number%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=Java%20Regex%20for%20Phone%20Number%2c%20by%20Coding%20N%20Concepts%0aJava%20Regex%20Pattern%20to%20Validate%20Phone%20number%20formats%20with%20Whitespace%2c%20Hyphen%2c%20No%20Space%2c%20Parenthesis%2c%20and%20Country%20Code%20followed%20by%20building%20a%20regex%20pattern%20to%20match%20any%20country%20phone%20number%20format.%20We%20will%20also%20see%20how%20to%20make%20a%20more%20strict%20regex%20pattern%20to%20match%20a%20specific%20country%20like%20Singapore%20or%20India%27s%20phone%20number%20formats.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjava%2fjava-regex-for-phone-number%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>Email</p>
         </a>
@@ -393,7 +393,7 @@ String singaporeRegex <span style="color:#f92672">=</span> <span style="color:#e
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - Java%20Regex%20for%20Phone%20Number.&amp;body=Java%20Regex%20for%20Phone%20Number%2c%20by%20Coding%20N%20Concepts%0aJava%20Regex%20Pattern%20to%20Validate%20Phone%20number%20formats%20with%20Whitespace%2c%20Hyphen%2c%20No%20Space%2c%20Parenthesis%20and%20Country%20Code%20followed%20by%20building%20a%20regex%20pattern%20to%20match%20any%20country%20phone%20number%20format.%20We%20will%20also%20see%20how%20to%20make%20more%20strict%20regex%20pattern%20to%20match%20specific%20country%20like%20Singapore%20or%20India%27s%20phone%20number%20formats.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjava%2fjava-regex-for-phone-number%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - Java%20Regex%20for%20Phone%20Number.&amp;body=Java%20Regex%20for%20Phone%20Number%2c%20by%20Coding%20N%20Concepts%0aJava%20Regex%20Pattern%20to%20Validate%20Phone%20number%20formats%20with%20Whitespace%2c%20Hyphen%2c%20No%20Space%2c%20Parenthesis%2c%20and%20Country%20Code%20followed%20by%20building%20a%20regex%20pattern%20to%20match%20any%20country%20phone%20number%20format.%20We%20will%20also%20see%20how%20to%20make%20a%20more%20strict%20regex%20pattern%20to%20match%20a%20specific%20country%20like%20Singapore%20or%20India%27s%20phone%20number%20formats.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjava%2fjava-regex-for-phone-number%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>
@@ -420,6 +420,9 @@ String singaporeRegex <span style="color:#f92672">=</span> <span style="color:#e
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--prev">
 		<a class="post-nav__link" href="/java/string-format-in-java/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Java String.format() with Examples</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next">
+		<a class="post-nav__link" href="/java/math-pow-in-java/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Java Math.pow()</p></a>
 	</div>
 </nav>
 

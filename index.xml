@@ -6,10 +6,28 @@
     <description>Recent content on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://codingnconcepts.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Spring @Controller vs @RestController</title>
+      <link>https://codingnconcepts.com/spring-boot/spring-controller-vs-restcontroller/</link>
+      <pubDate>Thu, 28 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/spring-controller-vs-restcontroller/</guid>
+      <description>&lt;p&gt;In this quick article, we&amp;rsquo;ll see the two annotations &lt;em&gt;@Controller&lt;/em&gt; and &lt;em&gt;@RestController&lt;/em&gt; and their difference in Spring MVC.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Java Math.pow()</title>
+      <link>https://codingnconcepts.com/java/math-pow-in-java/</link>
+      <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/java/math-pow-in-java/</guid>
+      <description>&lt;p&gt;The Java Math.pow() method takes two arguments, say a and b, and &lt;strong&gt;returns a to the power of b&lt;/strong&gt; i.e. &lt;strong&gt;a&lt;sup&gt;b&lt;/sup&gt;&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Java Regex for Phone Number</title>

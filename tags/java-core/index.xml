@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java Core on Coding N Concepts</title>
+    <link>https://codingnconcepts.com/tags/java-core/</link>
+    <description>Recent content in Java Core on Coding N Concepts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 27 May 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://codingnconcepts.com/tags/java-core/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Java Math.pow()</title>
+      <link>https://codingnconcepts.com/java/math-pow-in-java/</link>
+      <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/java/math-pow-in-java/</guid>
+      <description>&lt;p&gt;The Java Math.pow() method takes two arguments, say a and b, and &lt;strong&gt;returns a to the power of b&lt;/strong&gt; i.e. &lt;strong&gt;a&lt;sup&gt;b&lt;/sup&gt;&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

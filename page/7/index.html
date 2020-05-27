@@ -15,7 +15,7 @@
 <meta property="og:image" content="https://codingnconcepts.com/img/website/website-cover-1.png" />
 <meta property="og:image" content="https://codingnconcepts.com/android-chrome-512x512.png" />
 <meta property="og:image" content="https://codingnconcepts.com/android-chrome-192x192.png" />
-<meta property="og:updated_time" content="2020-05-27T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-05-28T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 <meta property="fb:admins" content="177784346770196" />
 	<meta name="twitter:card" content="summary_large_image"/>
@@ -152,6 +152,76 @@ if (!doNotTrack) {
 	</div>
 	<article class="list__item post">
 	<figure class="list__thumbnail">
+		<a href="https://codingnconcepts.com/java/elevator-implementation-using-java/">
+			<img src="/img/logo/java.png" alt="Design Elevator (Lift) in Java" />
+		</a>
+	</figure>
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/java/elevator-implementation-using-java/" rel="bookmark">
+			Design Elevator (Lift) in Java
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2015-04-06T00:00:00Z">April 06, 2015</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/java/" rel="category">Java</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>Implementation of Elevator or Lift has been asked in many interviews. I have tried to implement it using muti-threading and TreeSet. TreeSet is used to store incoming request. It is a good choice here as it removes the duplicate requests and implements NavigableSet which provide you methods such as floor and ceiling.</p>
+<p>Elevator in this program implements following features -</p>
+<ul>
+<li>If elevator is going up or down, it checks for nearest floor request to process first in that direction.</li>
+<li>If there is no request to process, it waits at last processed floor.</li>
+<li>If a new request comes while elevator is processing a request. It process the new request first if it is nearest than the processing floor in same direction.</li>
+</ul>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/java/elevator-implementation-using-java/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	<figure class="list__thumbnail">
+		<a href="https://codingnconcepts.com/puzzle/12-balls-weight-puzzle/">
+			<img src="/img/logo/weight-puzzle.png" alt="12 Balls Weight Puzzle" />
+		</a>
+	</figure>
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/puzzle/12-balls-weight-puzzle/" rel="bookmark">
+			12 Balls Weight Puzzle
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2012-04-22T00:00:00Z">April 22, 2012</time>
+	<time class="meta__text" datetime="2020-05-11T00:00:00Z"> (Last Modified: May 11, 2020)</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/puzzles/" rel="category">Puzzles</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<blockquote>
+<p>You have 12 balls identical in size and appearance but 1 is an odd weight (could be either light or heavy).</p>
+<p>You have a weighing scale with no measurements so you can just compare weight of balls against each other. You have only 3 chances to weigh the balls in any combination using the scales. Determine which ball is the odd one and if it’s heavier or lighter than the rest. How do you do it?</p>
+</blockquote>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/puzzle/12-balls-weight-puzzle/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	<figure class="list__thumbnail">
 		<a href="https://codingnconcepts.com/puzzle/8-balls-weight-puzzle/">
 			<img src="/img/logo/weight-puzzle.png" alt="8 Balls Weight Puzzle" />
 		</a>
@@ -270,11 +340,11 @@ if (!doNotTrack) {
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/spring-boot/spring-controller-vs-restcontroller/">Spring @Controller vs @RestController</a></li>
+			<li class="widget__item"><a class="widget__link" href="/java/math-pow-in-java/">Java Math.pow()</a></li>
 			<li class="widget__item"><a class="widget__link" href="/java/java-regex-for-phone-number/">Java Regex for Phone Number</a></li>
 			<li class="widget__item"><a class="widget__link" href="/spring-boot/spring-value-annotation/">Spring @Value Annotation</a></li>
 			<li class="widget__item"><a class="widget__link" href="/spring-boot/configure-feign-rest-client/">Feign Client in Spring Boot</a></li>
-			<li class="widget__item"><a class="widget__link" href="/java/string-format-in-java/">Java String.format() with Examples</a></li>
-			<li class="widget__item"><a class="widget__link" href="/spring-boot/build-restful-api-with-spring-boot/">Build RESTFul API with Spring Boot</a></li>
 		</ul>
 	</div>
 </div>
@@ -322,6 +392,7 @@ if (!doNotTrack) {
 		<a class="widget-taglist__link widget__link btn" href="/tags/hugo-shortcode/" title="Hugo Shortcode">Hugo Shortcode</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/interview-puzzle/" title="Interview Puzzle">Interview Puzzle</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/interview-qa/" title="Interview Q&amp;A">Interview Q&amp;A</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/java-core/" title="Java Core">Java Core</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/java-design-pattern/" title="Java Design Pattern">Java Design Pattern</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/java-kafka/" title="Java Kafka">Java Kafka</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/java-program/" title="Java Program">Java Program</a>
