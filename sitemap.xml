@@ -3,6 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://codingnconcepts.com/java/</loc>
+    <lastmod>2020-05-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/spring-boot/</loc>
     <lastmod>2020-05-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -19,6 +25,11 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/java/java-regex-for-phone-number/</loc>
+    <lastmod>2020-05-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/spring-boot/spring-value-annotation/</loc>
     <lastmod>2020-05-27T00:00:00+00:00</lastmod>
   </url>
@@ -31,12 +42,6 @@
   <url>
     <loc>https://codingnconcepts.com/spring-boot/configure-feign-rest-client/</loc>
     <lastmod>2020-05-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/java/</loc>
-    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -410,10 +415,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/about/</loc>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/java/java-regex-for-phone-number/</loc>
   </url>
   
   <url>

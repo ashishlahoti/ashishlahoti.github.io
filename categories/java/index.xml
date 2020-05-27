@@ -6,10 +6,19 @@
     <description>Recent content in Java on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://codingnconcepts.com/categories/java/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Java Regex for Phone Number</title>
+      <link>https://codingnconcepts.com/java/java-regex-for-phone-number/</link>
+      <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/java/java-regex-for-phone-number/</guid>
+      <description>&lt;p&gt;In this article, we will learn how to validate different formats of mobile phone numbers using Java Regular Expressions&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Java String.format() with Examples</title>
@@ -189,15 +198,6 @@ You can find the singleton pattern implementation here.&lt;/li&gt;
 &lt;li&gt;If there is no request to process, it waits at last processed floor.&lt;/li&gt;
 &lt;li&gt;If a new request comes while elevator is processing a request. It process the new request first if it is nearest than the processing floor in same direction.&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Java Regex for Phone Number</title>
-      <link>https://codingnconcepts.com/java/java-regex-for-phone-number/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/java/java-regex-for-phone-number/</guid>
-      <description>&lt;p&gt;In this article, we will learn how to validate different formats of mobile phone numbers using Java Regular Expressions&lt;/p&gt;</description>
     </item>
     
   </channel>
