@@ -4,11 +4,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Spring @Controller vs @RestController - Coding N Concepts</title>
+	<title>Spring @Controller and @RestController - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Spring @Controller vs @RestController">
-	<meta property="og:title" content="Spring @Controller vs @RestController" />
-<meta property="og:description" content="Spring @Controller vs @RestController" />
+	<meta name="description" content="Spring @Controller and @RestController annotations usage and their differences">
+	<meta property="og:title" content="Spring @Controller and @RestController" />
+<meta property="og:description" content="Spring @Controller and @RestController annotations usage and their differences" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/spring-boot/spring-controller-vs-restcontroller/" />
 <meta property="article:published_time" content="2020-05-28T00:00:00+00:00" />
@@ -21,8 +21,8 @@
 <meta property="article:tag" content="Spring Boot REST" />
 <meta property="fb:admins" content="177784346770196" />
 	<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Spring @Controller vs @RestController"/>
-<meta name="twitter:description" content="Spring @Controller vs @RestController"/>
+<meta name="twitter:title" content="Spring @Controller and @RestController"/>
+<meta name="twitter:description" content="Spring @Controller and @RestController annotations usage and their differences"/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -51,10 +51,10 @@ if (!doNotTrack) {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
     "articleSection": "spring-boot",
-    "name": "Spring @Controller vs @RestController",
-    "headline": "Spring @Controller vs @RestController",
+    "name": "Spring @Controller and @RestController",
+    "headline": "Spring @Controller and @RestController",
     "alternativeHeadline": "",
-    "description": "Spring @Controller vs @RestController",
+    "description": "Spring @Controller and @RestController annotations usage and their differences",
     "inLanguage": "en-us",
 	"isFamilyFriendly": "true",
     "mainEntityOfPage": {
@@ -91,9 +91,9 @@ if (!doNotTrack) {
     },
     "image": "https://codingnconcepts.com/favicon-32x32.png",
     "url" : "https:\/\/codingnconcepts.com\/spring-boot\/spring-controller-vs-restcontroller\/",
-    "wordCount" : "307",
-    "genre" : [ "Spring Boot REST" ],
-    "keywords" : [ ]
+    "wordCount" : "305",
+    "genre" : ["Spring Boot REST"],
+    "keywords" :  null 
 }
 </script>
 
@@ -104,7 +104,7 @@ if (!doNotTrack) {
 	<div class="container">
 		<div class="logo">
 			<a class="logo__link" href="/" title="Coding N Concepts" rel="home">
-				<div class="logo__title"><img src="/favicon-32x32.png" alt="Spring @Controller vs @RestController"> Coding N Concepts</div>
+				<div class="logo__title"><img src="/favicon-32x32.png" alt="Spring @Controller and @RestController"> Coding N Concepts</div>
 				<div class="logo__tagline">Ashish Lahoti&#39;s Technical Blog</div>
 			</a>
 		</div>
@@ -188,7 +188,7 @@ if (!doNotTrack) {
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title"><img class="post__thumbnail" src="/img/logo/springboot.png" alt="Spring @Controller vs @RestController"> Spring @Controller vs @RestController</h1>
+			<h1 class="post__title"><img class="post__thumbnail" src="/img/logo/springboot.png" alt="Spring @Controller and @RestController"> Spring @Controller and @RestController</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
@@ -218,7 +218,7 @@ if (!doNotTrack) {
 	</div>
 </div>
 <div class="content post__content clearfix">
-			<p>In this quick article, we&rsquo;ll see the two annotations <em>@Controller</em> and <em>@RestController</em> and their difference in Spring MVC.</p>
+			<p>In this quick article, we&rsquo;ll see the two annotations <code>@Controller</code> and <code>@RestController</code> and their difference in Spring MVC.</p>
 <h3 id="controller">@Controller</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Component</span>
 <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">@interface</span> Controller <span style="color:#f92672">{</span>
@@ -227,8 +227,8 @@ if (!doNotTrack) {
 	String <span style="color:#a6e22e">value</span><span style="color:#f92672">()</span> <span style="color:#66d9ef">default</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">;</span>
 
 <span style="color:#f92672">}</span>
-</code></pre></div><p>If you look at the above <code>@Controller</code> annotation definition, you will find out that it just a stereotype version of <code>@Component</code> annotation which is used to annotate class as a <em>Spring Controller</em>. It is mainly a controller part of Spring MVC (model-view-controller) Web application. It&rsquo;s been there since the evolution of Spring Framework.</p>
-<p><code>@Controller</code> annotation typically used at class level in combination with a <code>@RequestMapping</code> annotation at method level to handle web requests.</p>
+</code></pre></div><p>If you look at the above <em>@Controller</em> annotation definition, you will find out that it just a stereotype version of <em>@Component</em> annotation which is used to annotate class as a <em>Spring Controller</em>. It is mainly a controller part of Spring MVC (model-view-controller) Web application. It&rsquo;s been there since the evolution of Spring Framework.</p>
+<p><em>@Controller</em> annotation typically used at class level in combination with a <em>@RequestMapping</em> annotation at method level to handle web requests.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Controller</span>
 <span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/users&#34;</span><span style="color:#f92672">)</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserController</span> <span style="color:#f92672">{</span>
@@ -242,7 +242,7 @@ if (!doNotTrack) {
 		<span style="color:#75715e">// ...
 </span><span style="color:#75715e"></span>	<span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><p>The request handling method is annotated with <code>@ResponseBody</code>. This annotation enables automatic serialization of the return object into the <em>HttpResponse</em>.<br>
+</code></pre></div><p>The request handling method is annotated with <em>@ResponseBody</em>. This annotation enables automatic serialization of the return object into the <em>HttpResponse</em>.<br>
 <br /></p>
 <h3 id="restcontroller">@RestController</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Controller</span>
@@ -253,7 +253,7 @@ if (!doNotTrack) {
 	String <span style="color:#a6e22e">value</span><span style="color:#f92672">()</span> <span style="color:#66d9ef">default</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">;</span>
 
 <span style="color:#f92672">}</span>
-</code></pre></div><p>If you look at the above <code>@RestController</code> annotation definition, you will find out that it is an advance version of <code>@Controller</code> which includes both the <code>@Controller</code> and <code>@ResponseBody</code> annotations and as a result, simplifies the controller implementation such that now <code>@ResponseBody</code> isn&rsquo;t required.</p>
+</code></pre></div><p>If you look at the above <em>@RestController</em> annotation definition, you will find out that it is an advance version of <em>@Controller</em> which includes both the <em>@Controller</em> and <em>@ResponseBody</em> annotations and as a result, simplifies the controller implementation such that now <em>@ResponseBody</em> isn&rsquo;t required.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RestController</span>
 <span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/users&#34;</span><span style="color:#f92672">)</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserController</span> <span style="color:#f92672">{</span>
@@ -273,8 +273,8 @@ if (!doNotTrack) {
 <table>
 <thead>
 <tr>
-<th align="left">@Controller</th>
-<th align="left">@RestController</th>
+<th align="left"><code>@Controller</code></th>
+<th align="left"><code>@RestController</code></th>
 </tr>
 </thead>
 <tbody>
@@ -291,7 +291,7 @@ if (!doNotTrack) {
 <td align="left"><em>@ResponseBody</em> is not required as it is <em>@Controller + @ResponseBody</em></td>
 </tr>
 <tr>
-<td align="left">Traditional way to mark classes as Spring MVC Controller</td>
+<td align="left">Traditional way to create Spring MVC Controller</td>
 <td align="left">Preferred way to use in RESTFul Web Services</td>
 </tr>
 </tbody>
@@ -318,7 +318,7 @@ if (!doNotTrack) {
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?hashtags=codingnconcepts&amp;url=https%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fspring-controller-vs-restcontroller%2f&amp;text=Spring%20%40Controller%20vs%20%40RestController" target="_blank" rel="noopener" aria-label="Share on Twitter" class="share-btn twitter">
+        <a href="https://twitter.com/intent/tweet?hashtags=codingnconcepts&amp;url=https%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fspring-controller-vs-restcontroller%2f&amp;text=Spring%20%40Controller%20and%20%40RestController" target="_blank" rel="noopener" aria-label="Share on Twitter" class="share-btn twitter">
           <svg class="widget-social__link-icon icon icon-twitter" width="24" height="24" viewBox="0 0 384 312"><path d="m384 36.9c-14.1 6.3-29.3 10.5-45.2 12.4 16.3-9.7 28.8-25.2 34.6-43.6-15.2 9-32.1 15.6-50 19.1-14.4-15.2-34.9-24.8-57.5-24.8-43.5 0-78.8 35.3-78.8 78.8 0 6.2.7 12.2 2 17.9-65.5-3.3-123.5-34.6-162.4-82.3-6.7 11.6-10.6 25.2-10.6 39.6 0 27.3 13.9 51.4 35 65.6-12.9-.4-25.1-4-35.7-9.9v1c0 38.2 27.2 70 63.2 77.2-6.6 1.8-13.6 2.8-20.8 2.8-5.1 0-10-.5-14.8-1.4 10 31.3 39.1 54.1 73.6 54.7-27 21.1-60.9 33.7-97.8 33.7-6.4 0-12.6-.4-18.8-1.1 34.9 22.4 76.3 35.4 120.8 35.4 144.9 0 224.1-120 224.1-224.1 0-3.4-.1-6.8-.2-10.2 15.4-11.1 28.7-25 39.3-40.8z"/></svg>
           <p>Twitter</p>
           </a>
@@ -338,7 +338,7 @@ if (!doNotTrack) {
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fspring-controller-vs-restcontroller%2f&amp;source=https%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fspring-controller-vs-restcontroller%2f&amp;title=Spring%20%40Controller%20vs%20%40RestController&amp;summary=Spring%20%40Controller%20vs%20%40RestController" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="share-btn linkedin">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fspring-controller-vs-restcontroller%2f&amp;source=https%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fspring-controller-vs-restcontroller%2f&amp;title=Spring%20%40Controller%20and%20%40RestController&amp;summary=Spring%20%40Controller%20and%20%40RestController" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="share-btn linkedin">
           <svg class="widget-social__link-icon icon icon-linkedin" width="24" height="24" viewBox="0 0 352 352"><path d="M0,40v272c0,21.9,18.1,40,40,40h272c21.9,0,40-18.1,40-40V40c0-21.9-18.1-40-40-40H40C18.1,0,0,18.1,0,40z M312,32 c4.6,0,8,3.4,8,8v272c0,4.6-3.4,8-8,8H40c-4.6,0-8-3.4-8-8V40c0-4.6,3.4-8,8-8H312z M59.5,87c0,15.2,12.3,27.5,27.5,27.5 c15.2,0,27.5-12.3,27.5-27.5c0-15.2-12.3-27.5-27.5-27.5C71.8,59.5,59.5,71.8,59.5,87z M187,157h-1v-21h-45v152h47v-75 c0-19.8,3.9-39,28.5-39c24.2,0,24.5,22.4,24.5,40v74h47v-83.5c0-40.9-8.7-72-56.5-72C208.5,132.5,193.3,145.1,187,157z M64,288h47.5 V136H64V288z"/></svg>
             <p>LinkedIn</p>
           </a>
@@ -348,7 +348,7 @@ if (!doNotTrack) {
       
       
       <li>
-        <a href="whatsapp://send?text=Spring%20%40Controller%20vs%20%40RestController%2c%20by%20Coding%20N%20Concepts%0aSpring%20%40Controller%20vs%20%40RestController%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fspring-controller-vs-restcontroller%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=Spring%20%40Controller%20and%20%40RestController%2c%20by%20Coding%20N%20Concepts%0aSpring%20%40Controller%20and%20%40RestController%20annotations%20usage%20and%20their%20differences%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fspring-controller-vs-restcontroller%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>Email</p>
         </a>
@@ -358,7 +358,7 @@ if (!doNotTrack) {
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - Spring%20%40Controller%20vs%20%40RestController.&amp;body=Spring%20%40Controller%20vs%20%40RestController%2c%20by%20Coding%20N%20Concepts%0aSpring%20%40Controller%20vs%20%40RestController%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fspring-controller-vs-restcontroller%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - Spring%20%40Controller%20and%20%40RestController.&amp;body=Spring%20%40Controller%20and%20%40RestController%2c%20by%20Coding%20N%20Concepts%0aSpring%20%40Controller%20and%20%40RestController%20annotations%20usage%20and%20their%20differences%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fspring-controller-vs-restcontroller%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>

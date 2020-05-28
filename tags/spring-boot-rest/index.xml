@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>Spring @Controller vs @RestController</title>
+      <title>Spring @Controller and @RestController</title>
       <link>https://codingnconcepts.com/spring-boot/spring-controller-vs-restcontroller/</link>
       <pubDate>Thu, 28 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/spring-boot/spring-controller-vs-restcontroller/</guid>
-      <description>&lt;p&gt;In this quick article, we&amp;rsquo;ll see the two annotations &lt;em&gt;@Controller&lt;/em&gt; and &lt;em&gt;@RestController&lt;/em&gt; and their difference in Spring MVC.&lt;/p&gt;</description>
+      <description>&lt;p&gt;In this quick article, we&amp;rsquo;ll see the two annotations &lt;code&gt;@Controller&lt;/code&gt; and &lt;code&gt;@RestController&lt;/code&gt; and their difference in Spring MVC.&lt;/p&gt;</description>
     </item>
     
     <item>

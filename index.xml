@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>Spring @Controller vs @RestController</title>
+      <title>Spring @Controller and @RestController</title>
       <link>https://codingnconcepts.com/spring-boot/spring-controller-vs-restcontroller/</link>
       <pubDate>Thu, 28 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/spring-boot/spring-controller-vs-restcontroller/</guid>
-      <description>&lt;p&gt;In this quick article, we&amp;rsquo;ll see the two annotations &lt;em&gt;@Controller&lt;/em&gt; and &lt;em&gt;@RestController&lt;/em&gt; and their difference in Spring MVC.&lt;/p&gt;</description>
+      <description>&lt;p&gt;In this quick article, we&amp;rsquo;ll see the two annotations &lt;code&gt;@Controller&lt;/code&gt; and &lt;code&gt;@RestController&lt;/code&gt; and their difference in Spring MVC.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/java/math-pow-in-java/</guid>
-      <description>&lt;p&gt;The Java Math.pow() method takes two arguments, say a and b, and &lt;strong&gt;returns a to the power of b&lt;/strong&gt; i.e. &lt;strong&gt;a&lt;sup&gt;b&lt;/sup&gt;&lt;/strong&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;The Java &lt;code&gt;Math.pow()&lt;/code&gt; method takes two arguments, say a and b, and &lt;strong&gt;returns a to the power of b&lt;/strong&gt; i.e. &lt;strong&gt;a&lt;sup&gt;b&lt;/sup&gt;&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -57,7 +57,7 @@
     </item>
     
     <item>
-      <title>Java String.format() with Examples</title>
+      <title>Java String.format()</title>
       <link>https://codingnconcepts.com/java/string-format-in-java/</link>
       <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
       

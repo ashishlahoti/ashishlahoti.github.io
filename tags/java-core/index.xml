@@ -17,7 +17,7 @@
       <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/java/math-pow-in-java/</guid>
-      <description>&lt;p&gt;The Java Math.pow() method takes two arguments, say a and b, and &lt;strong&gt;returns a to the power of b&lt;/strong&gt; i.e. &lt;strong&gt;a&lt;sup&gt;b&lt;/sup&gt;&lt;/strong&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;The Java &lt;code&gt;Math.pow()&lt;/code&gt; method takes two arguments, say a and b, and &lt;strong&gt;returns a to the power of b&lt;/strong&gt; i.e. &lt;strong&gt;a&lt;sup&gt;b&lt;/sup&gt;&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
