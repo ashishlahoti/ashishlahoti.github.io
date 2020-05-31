@@ -94,7 +94,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/logo/springboot.png"],
     "url" : "https:\/\/codingnconcepts.com\/spring-boot\/spring-controller-vs-restcontroller\/",
-    "wordCount" : "305",
+    "wordCount" : "303",
     "genre" : ["Spring Boot REST"],
     "keywords" :  null 
 }
@@ -209,20 +209,16 @@ if (!doNotTrack) {
 	<div class="toc__menu">
 		<nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li><a href="#controller">@Controller</a></li>
-        <li><a href="#restcontroller">@RestController</a></li>
-        <li><a href="#controller-vs-restcontroller">@Controller vs @RestController</a></li>
-      </ul>
-    </li>
+    <li><a href="#controller">@Controller</a></li>
+    <li><a href="#restcontroller">@RestController</a></li>
+    <li><a href="#controller-vs-restcontroller">@Controller vs @RestController</a></li>
   </ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
-			<p>In this quick article, we&rsquo;ll see the two annotations <code>@Controller</code> and <code>@RestController</code> and their difference in Spring MVC.</p>
-<h3 id="controller">@Controller</h3>
+			<p>In this quick article, we&rsquo;ll see <em>@Controller</em> and <em>@RestController</em> annotations and their difference in Spring MVC.</p>
+<h2 id="controller">@Controller</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Component</span>
 <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">@interface</span> Controller <span style="color:#f92672">{</span>
 
@@ -245,9 +241,8 @@ if (!doNotTrack) {
 		<span style="color:#75715e">// ...
 </span><span style="color:#75715e"></span>	<span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><p>The request handling method is annotated with <em>@ResponseBody</em>. This annotation enables automatic serialization of the return object into the <em>HttpResponse</em>.<br>
-<br /></p>
-<h3 id="restcontroller">@RestController</h3>
+</code></pre></div><p>The request handling method is annotated with <em>@ResponseBody</em>. This annotation enables automatic serialization of the return object into the <em>HttpResponse</em>.</p>
+<h2 id="restcontroller">@RestController</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Controller</span>
 <span style="color:#a6e22e">@ResponseBody</span>
 <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">@interface</span> RestController <span style="color:#f92672">{</span>
@@ -270,9 +265,8 @@ if (!doNotTrack) {
 		<span style="color:#75715e">// ...
 </span><span style="color:#75715e"></span>	<span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><p>Every request handling method of the controller class automatically serializes return objects into HttpResponse.<br>
-<br /></p>
-<h3 id="controller-vs-restcontroller">@Controller vs @RestController</h3>
+</code></pre></div><p>Every request handling method of the controller class automatically serializes return objects into HttpResponse.</p>
+<h2 id="controller-vs-restcontroller">@Controller vs @RestController</h2>
 <table>
 <thead>
 <tr>
@@ -376,7 +370,7 @@ if (!doNotTrack) {
     <h2 class = "related_post_title">See Also</h2>
     <ul class = "related_post">
         
-        <li><a href="/spring-boot/configure-feign-rest-client/">Feign Client in Spring Boot</a></li>
+        <li><a href="/spring-boot/configure-feign-rest-client/">Configure Feign Client in Spring Boot</a></li>
         
         <li><a href="/spring-boot/build-restful-api-with-spring-boot/">Build RESTFul API with Spring Boot</a></li>
         
@@ -404,10 +398,10 @@ if (!doNotTrack) {
 
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="/spring-boot/spring-value-annotation/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Spring @Value Annotation</p></a>
+		<a class="post-nav__link" href="/spring-boot/spring-value-annotation/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Spring @Value Annotation Guide</p></a>
 	</div>
 	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="/spring-boot/spring-initializr-for-eclipse-ide/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Spring Initializr for Eclipse IDE</p></a>
+		<a class="post-nav__link" href="/spring-boot/spring-initializr-for-eclipse-ide/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Spring Initializr Plugin for Eclipse IDE</p></a>
 	</div>
 </nav>
 

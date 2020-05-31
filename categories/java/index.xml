@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>Java Math.pow()</title>
+      <title>Java Math.pow() method Usage</title>
       <link>https://codingnconcepts.com/java/math-pow-in-java/</link>
       <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/java/math-pow-in-java/</guid>
-      <description>&lt;p&gt;The Java &lt;code&gt;Math.pow()&lt;/code&gt; method takes two arguments, say a and b, and &lt;strong&gt;returns a to the power of b&lt;/strong&gt; i.e. &lt;strong&gt;a&lt;sup&gt;b&lt;/sup&gt;&lt;/strong&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;In this quick article, We&amp;rsquo;ll see usage of Java &lt;em&gt;Math.pow()&lt;/em&gt; method which takes two arguments, a and b, and &lt;em&gt;returns a to the power of b i.e. a&lt;sup&gt;b&lt;/sup&gt;&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -26,11 +26,11 @@
       <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/java/java-regex-to-validate-phone-number/</guid>
-      <description>&lt;p&gt;In this article, we will learn how to validate different formats of mobile phone numbers using Java Regular Expressions&lt;/p&gt;</description>
+      <description>&lt;p&gt;In this article, we&amp;rsquo;ll learn how to validate mobile phone number of different country&amp;rsquo;s format using Java Regex (Regular Expressions)&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Java String.format()</title>
+      <title>Java String.format() method Usage</title>
       <link>https://codingnconcepts.com/java/string-format-in-java/</link>
       <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
       

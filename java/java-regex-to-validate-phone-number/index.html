@@ -94,7 +94,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/logo/java.png"],
     "url" : "https:\/\/codingnconcepts.com\/java\/java-regex-to-validate-phone-number\/",
-    "wordCount" : "862",
+    "wordCount" : "866",
     "genre" : ["Java Regex"],
     "keywords" :  null 
 }
@@ -211,6 +211,7 @@ if (!doNotTrack) {
   <ul>
     <li>
       <ul>
+        <li><a href="#phone-number-format">Phone Number Format</a></li>
         <li><a href="#1-regex-to-match-10-digit-phone-number-with-no-space">1. Regex to match 10 digit Phone Number with No space</a></li>
         <li><a href="#2-regex-to-match-10-digit-phone-number-with-whitespaces-hyphens-or-no-space">2. Regex to match 10 digit Phone Number with WhiteSpaces, Hyphens or No space</a></li>
         <li><a href="#3-regex-to-match-10-digit-phone-number-with-parentheses">3. Regex to match 10 digit Phone Number with Parentheses</a></li>
@@ -224,7 +225,8 @@ if (!doNotTrack) {
 	</div>
 </div>
 <div class="content post__content clearfix">
-			<p>In this article, we will learn how to validate different formats of mobile phone numbers using Java Regular Expressions</p>
+			<p>In this article, we&rsquo;ll learn how to validate mobile phone number of different country&rsquo;s format using Java Regex (Regular Expressions)</p>
+<h3 id="phone-number-format">Phone Number Format</h3>
 <p>A typical mobile phone number has following component:</p>
 <pre><code>+&lt;country_code&gt; &lt;area_code&gt; &lt;subscriber_number&gt;
 </code></pre><p>Where depending on the country,</p>
@@ -233,7 +235,7 @@ if (!doNotTrack) {
 <li><em><strong>area_code</strong></em> and <em><strong>subscriber_number</strong></em> combined is somewhere between 8 to 11 digits<br>
 <br /></li>
 </ul>
-<p>If you simply require a regex to match all country format then here it is,</p>
+<p>If you simply require a <strong>regex to match all country format</strong> then here it is,</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#e6db74">&#34;^(\\+\\d{1,3}( )?)?((\\(\\d{1,3}\\))|\\d{1,3})[- .]?\\d{3,4}[- .]?\\d{4}$&#34;</span>
 </code></pre></div><p><br />
 If you want to know <strong>how we came up with this regex?</strong> then please read this full article.<br>
@@ -422,10 +424,10 @@ String singaporeRegex <span style="color:#f92672">=</span> <span style="color:#e
 
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="/java/string-format-in-java/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Java String.format()</p></a>
+		<a class="post-nav__link" href="/java/string-format-in-java/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Java String.format() method Usage</p></a>
 	</div>
 	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="/java/math-pow-in-java/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Java Math.pow()</p></a>
+		<a class="post-nav__link" href="/java/math-pow-in-java/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Java Math.pow() method Usage</p></a>
 	</div>
 </nav>
 

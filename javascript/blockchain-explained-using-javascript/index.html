@@ -94,7 +94,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/logo/blockchain.jpg"],
     "url" : "https:\/\/codingnconcepts.com\/javascript\/blockchain-explained-using-javascript\/",
-    "wordCount" : "1347",
+    "wordCount" : "1340",
     "genre" : ["Javascript Coding"],
     "keywords" :  null 
 }
@@ -203,19 +203,43 @@ if (!doNotTrack) {
 	<span class="meta__text"><a class="meta__link" href="/categories/javascript/" rel="category">Javascript</a>
 	</span>
 </div></div>
-		</header><div class="content post__content clearfix">
-			<p>In <a href="https://codingnconcepts.com/post/blockchain-explained/">Previous Post</a>, we learned about the basics of blockchain and its practical use cases.</p>
-<p>In this post, we will learn how to implement blockchain using JavaScript.</p>
-<h6 id="prerequisite">Prerequisite</h6>
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#prerequisite">Prerequisite</a></li>
+    <li><a href="#blockchain">Blockchain</a></li>
+    <li><a href="#block">Block</a></li>
+    <li><a href="#step-1-create-block-blockjs">Step 1: Create Block (block.js)</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#step-2-create-blockchain-blockchainjs">Step 2: Create Blockchain (blockchain.js)</a></li>
+    <li><a href="#step-3-test-blockchain-serverjs">Step 3: Test Blockchain (server.js)</a></li>
+    <li><a href="#observations-from-output">Observations from Output</a></li>
+    <li><a href="#summary">Summary</a></li>
+  </ul>
+</nav>
+	</div>
+</div>
+<div class="content post__content clearfix">
+			<p>In this article, we&rsquo;ll learn how to implement Blockchain using Javascript.</p>
+<h2 id="prerequisite">Prerequisite</h2>
 <ul>
 <li>Download and install <a href="https://nodejs.org/en/">NodeJs</a> to run our blockchain code</li>
 <li>Download and install <a href="https://code.visualstudio.com/">Visual Studio Code</a> IDE for code development</li>
 </ul>
 <p>Don&rsquo;t worry if you don&rsquo;t have prior experience with <em>JavaScript</em>, <em>NodeJS</em>, and <em>VSCode</em>. Just follow with me and you will learn basics of Blockchain which you can later implement in any other language.</p>
-<h3 id="blockchain">Blockchain</h3>
+<h2 id="blockchain">Blockchain</h2>
 <p>Blockchain is nothing but a digital, distributed, immutable, and trusted ledger which can be used to record anything from financial transactions, government records to land titles, or even purchase orders.</p>
 <p>Each transaction record is a block, which are linked together chronologically to form a chain of blocks. If you want to change record in a particular block, you don&rsquo;t rewrite it. Instead, the change is recorded in a new block.</p>
-<h3 id="block">Block</h3>
+<blockquote>
+<p>Also read <a href="https://codingnconcepts.com/post/blockchain-explained/">Blockchain Basics and its Practical Use Cases</a></p>
+</blockquote>
+<h2 id="block">Block</h2>
 <p>Let&rsquo;s see what a typical block in blockchain consist of:-</p>
 <ol>
 <li><code>Timestamp</code> is date and time when the transaction took place.</li>
@@ -224,7 +248,7 @@ if (!doNotTrack) {
 <li><code>Previous Hash</code> is the <strong>Hash</strong> of the previous block in blockchain. This is also used to generate Hash of the block.</li>
 <li><code>Nonce</code> is an abbreviation for &ldquo;number only used once,&rdquo; which is a number added to a block in a blockchain that, when rehashed, meets the difficulty level restrictions. We will discuss more on this later</li>
 </ol>
-<h3 id="step-1-create-block-blockjs">Step 1: Create Block (block.js)</h3>
+<h2 id="step-1-create-block-blockjs">Step 1: Create Block (block.js)</h2>
 <p>Now we know the what block consist of, let&rsquo;s create it</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">SHA256</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;crypto-js/sha256&#39;</span>);
 
@@ -292,12 +316,12 @@ if (!doNotTrack) {
 <li><code>Block Mining</code> is a process of adding a new block to the blockchain. Who adds new block is called  <code>Block Miner</code>, also known as <strong>bitcoin miner</strong> in case of bitcoin. Anyone can register their computer to become one of the <strong>bitcoin miner</strong> in case of a public blockchain like bitcoin. All the bitcoin miners in bitcoin network get a copy of whole blockchain and each receives a notification when a new block is added to the blockchain.</li>
 <li><code>Proof of Work</code> is a cryptographic hash puzzle which each <em>Block Miner</em> in the blockchain tries to solve. As soon as one of the <em>Block Miner</em> solves the puzzle, essentially means generated the <strong>hash</strong> of the block with said difficulty level, they broadcast this to the blockchain network and hash is validated by all the other <em>Block Miners</em> in the network.</li>
 </ol>
-<h6 id="what-is-proof-of-work-for-us">What is Proof of Work for us?</h6>
+<h5 id="what-is-proof-of-work-for-us">What is Proof of Work for us?</h5>
 <p>Out <em>Proof of Work</em> is to generate a hash with leading zeros based on difficulty level.<br>
 Difficulty level of 5 means, generate a hash with 5 leading zeros, e.g. <em><strong>00000b4d7m3h1s0k2s8bw0hn382</strong></em></p>
-<h6 id="how-we-are-going-to-achieve">How we are going to achieve?</h6>
+<h5 id="how-we-are-going-to-achieve">How we are going to achieve?</h5>
 <p>We are going to calculate the hash by applying <em>SHA-256</em> algorithm on the transaction details and nonce value. We will start with <em>nonce</em> value of 0 and keep incrementing it until we find the hash with leading zeros of difficulty level.</p>
-<h3 id="step-2-create-blockchain-blockchainjs">Step 2: Create Blockchain (blockchain.js)</h3>
+<h2 id="step-2-create-blockchain-blockchainjs">Step 2: Create Blockchain (blockchain.js)</h2>
 <p>Now we have learned a lot of terms, let&rsquo;s quickly create a blockchain</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Block</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;./block&#39;</span>);
 
@@ -315,7 +339,7 @@ Difficulty level of 5 means, generate a hash with 5 leading zeros, e.g. <em><str
 }
 
 <span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Blockchain</span>;
-</code></pre></div><h3 id="step-3-test-blockchain-serverjs">Step 3: Test Blockchain (server.js)</h3>
+</code></pre></div><h2 id="step-3-test-blockchain-serverjs">Step 3: Test Blockchain (server.js)</h2>
 <p>Let&rsquo;s create few blocks of transaction with random sender, receiver and amount details. Also, let&rsquo;s increase the difficulty level after every 2 transactions.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Blockchain</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;./blockchain&#39;</span>)
 <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">performance</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;perf_hooks&#39;</span>);
@@ -403,7 +427,7 @@ node server
     previousHash: '000005b737aaa4faa3b87b56474dec9537eee843c2881cb5f6432ca9708bd7b5',
     hash: '<mark>00000</mark>57a7a4c7caea164b4e5672a3c38fcf12c6c8bfb4b1c503ca876664f2660',
     nonce: <mark>150796</mark> } ]
-</code></pre><h5 id="observations-from-output">Observations from Output</h5>
+</code></pre><h2 id="observations-from-output">Observations from Output</h2>
 <ol>
 <li>As we increased difficulty level from 1, 3, to 5, it took <strong>more time</strong> to generate the hash and add new blocks. Blockchain technologies like bitcoin require to solve hash puzzle with the difficulty level of somewhere starting from 18 to 30. You can imagine the time requires to solve those puzzles.</li>
 <li>The first block of blockchain is <strong>GENESIS</strong> block with no transaction info and no previous hash value</li>

@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>Spring Initializr for Eclipse IDE</title>
+      <title>Spring Initializr Plugin for Eclipse IDE</title>
       <link>https://codingnconcepts.com/spring-boot/spring-initializr-for-eclipse-ide/</link>
       <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/spring-boot/spring-initializr-for-eclipse-ide/</guid>
-      <description>&lt;p&gt;This quick article demonstrate - How to setup Spring Tool for Eclipse IDE to create a Spring Boot Project from Scratch.&lt;/p&gt;</description>
+      <description>&lt;p&gt;In this article, we&amp;rsquo;ll learn how to install &lt;em&gt;Spring Tool Plugin&lt;/em&gt; for Eclipse IDE to create a Spring Boot Project from Scratch using Spring Initializr.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -26,11 +26,11 @@
       <pubDate>Thu, 28 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/spring-boot/spring-controller-vs-restcontroller/</guid>
-      <description>&lt;p&gt;In this quick article, we&amp;rsquo;ll see the two annotations &lt;code&gt;@Controller&lt;/code&gt; and &lt;code&gt;@RestController&lt;/code&gt; and their difference in Spring MVC.&lt;/p&gt;</description>
+      <description>&lt;p&gt;In this quick article, we&amp;rsquo;ll see &lt;em&gt;@Controller&lt;/em&gt; and &lt;em&gt;@RestController&lt;/em&gt; annotations and their difference in Spring MVC.&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Spring @Value Annotation</title>
+      <title>Spring @Value Annotation Guide</title>
       <link>https://codingnconcepts.com/spring-boot/spring-value-annotation/</link>
       <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
       
@@ -39,12 +39,12 @@
     </item>
     
     <item>
-      <title>Feign Client in Spring Boot</title>
+      <title>Configure Feign Client in Spring Boot</title>
       <link>https://codingnconcepts.com/spring-boot/configure-feign-rest-client/</link>
       <pubDate>Tue, 26 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/spring-boot/configure-feign-rest-client/</guid>
-      <description>&lt;p&gt;Feign Client is a Declarative REST Client in Spring Boot Web Application. It is very useful in microservice architecture to create feign client to consume RESTFul API endpoints exposed by other microservices.&lt;/p&gt;</description>
+      <description>&lt;p&gt;In this article, we&amp;rsquo;ll learn how to configure a &lt;em&gt;Feign Client&lt;/em&gt; in your Spring Boot project to consume RESTFul APIs from other services.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -53,7 +53,7 @@
       <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/spring-boot/build-restful-api-with-spring-boot/</guid>
-      <description>&lt;p&gt;This article is step by step guide for - &lt;strong&gt;How to build RESTFul API with Spring Boot&lt;/strong&gt; – We will learn the RestController, HTTP response codes and Best Practices along the way.&lt;/p&gt;</description>
+      <description>&lt;p&gt;In this article, we&amp;rsquo;ll learn step by step, how to build RESTFul API with Spring Boot. We&amp;rsquo;ll also learn the RestController, HTTP response codes and best practices along the way.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -62,7 +62,7 @@
       <pubDate>Sat, 23 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/spring-boot/setup-project-using-spring-initalizr/</guid>
-      <description>&lt;p&gt;This article demonstrate -  How to use Spring Initializer to setup a Spring Boot project from Scratch.&lt;/p&gt;</description>
+      <description>&lt;p&gt;In this article, we&amp;rsquo;ll learn how to create a Spring Boot project quickly from scratch use &lt;em&gt;Spring Initializer&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>

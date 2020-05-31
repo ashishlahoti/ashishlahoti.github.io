@@ -12,16 +12,16 @@
     
     
     <item>
-      <title>Spring Initializr for Eclipse IDE</title>
+      <title>Spring Initializr Plugin for Eclipse IDE</title>
       <link>https://codingnconcepts.com/spring-boot/spring-initializr-for-eclipse-ide/</link>
       <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/spring-boot/spring-initializr-for-eclipse-ide/</guid>
-      <description>&lt;p&gt;This quick article demonstrate - How to setup Spring Tool for Eclipse IDE to create a Spring Boot Project from Scratch.&lt;/p&gt;</description>
+      <description>&lt;p&gt;In this article, we&amp;rsquo;ll learn how to install &lt;em&gt;Spring Tool Plugin&lt;/em&gt; for Eclipse IDE to create a Spring Boot Project from Scratch using Spring Initializr.&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Spring @Value Annotation</title>
+      <title>Spring @Value Annotation Guide</title>
       <link>https://codingnconcepts.com/spring-boot/spring-value-annotation/</link>
       <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
       
@@ -35,7 +35,7 @@
       <pubDate>Sat, 23 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/spring-boot/setup-project-using-spring-initalizr/</guid>
-      <description>&lt;p&gt;This article demonstrate -  How to use Spring Initializer to setup a Spring Boot project from Scratch.&lt;/p&gt;</description>
+      <description>&lt;p&gt;In this article, we&amp;rsquo;ll learn how to create a Spring Boot project quickly from scratch use &lt;em&gt;Spring Initializer&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>

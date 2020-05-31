@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>Spring Initializr for Eclipse IDE</title>
+      <title>Spring Initializr Plugin for Eclipse IDE</title>
       <link>https://codingnconcepts.com/spring-boot/spring-initializr-for-eclipse-ide/</link>
       <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/spring-boot/spring-initializr-for-eclipse-ide/</guid>
-      <description>&lt;p&gt;This quick article demonstrate - How to setup Spring Tool for Eclipse IDE to create a Spring Boot Project from Scratch.&lt;/p&gt;</description>
+      <description>&lt;p&gt;In this article, we&amp;rsquo;ll learn how to install &lt;em&gt;Spring Tool Plugin&lt;/em&gt; for Eclipse IDE to create a Spring Boot Project from Scratch using Spring Initializr.&lt;/p&gt;</description>
     </item>
     
   </channel>
