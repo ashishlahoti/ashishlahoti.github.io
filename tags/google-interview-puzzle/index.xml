@@ -12,32 +12,21 @@
     
     
     <item>
-      <title>2 Eggs and 100 Floors Problem</title>
+      <title>2 Eggs and 100 Floors Problem (Solved)</title>
       <link>https://codingnconcepts.com/puzzle/2-eggs-and-100-floors/</link>
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/puzzle/2-eggs-and-100-floors/</guid>
-      <description>&lt;p&gt;This problem is frequently asked in interview to evaluate candidate&amp;rsquo;s understanding on linear search and binary search. I have tried to explain this problem as easy as possible.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;There is a building of 100 floors. One of the floors is the highest floor (say Nth floor) an egg can be dropped from without breaking.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;If an egg is dropped from that floor (N) or above (N+1, N+2, &amp;hellip;), it will break.&lt;/li&gt;
-&lt;li&gt;If it is dropped from any floor below (N-1, N-2, &amp;hellip;), it will not break and you can drop the egg again.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Given two eggs, find the floor (N) an egg can be dropped from without breaking in &lt;strong&gt;minimum number of drops&lt;/strong&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;p&gt;The &lt;em&gt;2 Eggs and 100 Floors&lt;/em&gt; problem is frequently asked in interview to evaluate candidate&amp;rsquo;s understanding on linear search and binary search. I have tried to explain this problem as easy as possible.&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>25 Horses Puzzle</title>
+      <title>25 Horses 5 Tracks Problem (Solved)</title>
       <link>https://codingnconcepts.com/puzzle/25-horses-puzzle/</link>
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/puzzle/25-horses-puzzle/</guid>
-      <description>&lt;p&gt;The 25 Horses Puzzle is a famous Google interview question that has been asked in many companies to evaluate candidate&amp;rsquo;s analytical ability and problem solving approach.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;You have 25 horses and you need to identify the fastest 3 horses out of those 25. Only 5 horses can run in each race at the same time as there are only 5 tracks. What is the minimum number of races required to identify the fastest 3 horses without using a stopwatch or timer?&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;p&gt;The &lt;em&gt;25 Horses 5 Tracks&lt;/em&gt; Problem is a famous Google interview question that has been asked in many companies to evaluate candidate&amp;rsquo;s analytical ability and problem solving approach.&lt;/p&gt;</description>
     </item>
     
   </channel>

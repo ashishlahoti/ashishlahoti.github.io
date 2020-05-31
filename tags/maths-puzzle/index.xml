@@ -12,15 +12,12 @@
     
     
     <item>
-      <title>The Water Jug Riddle from Die Hard Movie</title>
+      <title>The Die Hard Water Jug Riddle (Solved)</title>
       <link>https://codingnconcepts.com/puzzle/the-water-jug-riddle/</link>
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/puzzle/the-water-jug-riddle/</guid>
-      <description>&lt;p&gt;You might have seen this riddle in Die Hard movie where Bruce Willis and Jackson have to diffuse a bomb by placing exactly 4-gallon water on a scale&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;You have a 3-gallon and a 5-gallon jug that you can fill multiple times from a pond of water. The problem is to measure exactly 4 gallons of water. How do you do it?&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;p&gt;This riddle is from famous Die Hard movie where &lt;em&gt;Bruce Willis&lt;/em&gt; and &lt;em&gt;Jackson&lt;/em&gt; have to diffuse a bomb by placing exactly 4 gallon water on a scale using 3 gallon and 5 gallon water jug.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -29,22 +26,7 @@
       <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/puzzle/the-6s-math-puzzle/</guid>
-      <description>&lt;p&gt;This is a pure mathematical puzzle which evaluate your ability to solve maths equation. This is a great problem for building number sense.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The challenge is to make each below equation true using common mathematical operations. You cannot introduce any new digits (so the cube root ∛ is not allowed since it has a 3).&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Hint:&lt;/strong&gt; common mathematical operations are &lt;code&gt;+&lt;/code&gt; &lt;code&gt;-&lt;/code&gt; &lt;code&gt;x&lt;/code&gt; &lt;code&gt;/&lt;/code&gt; &lt;code&gt;!&lt;/code&gt; &lt;code&gt;√&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;pre&gt;&lt;code&gt;0 0 0 = 6    
-1 1 1 = 6
-2 2 2 = 6
-3 3 3 = 6
-4 4 4 = 6
-5 5 5 = 6
-6 6 6 = 6
-7 7 7 = 6
-8 8 8 = 6
-9 9 9 = 6
-&lt;/code&gt;&lt;/pre&gt;</description>
+      <description>&lt;p&gt;This is a pure mathematical puzzle which evaluate your ability to solve maths equation. This is a great problem for building number sense.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -53,9 +35,7 @@
       <pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/puzzle/minimum-set-of-weights/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;What is the minimum number of weights needed for a scale that will be able to weigh objects from the weight of one pound to 100 pounds?&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>&lt;p&gt;This puzzle is a mix of weight and math puzzle.&lt;/p&gt;</description>
     </item>
     
   </channel>
