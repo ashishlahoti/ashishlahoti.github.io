@@ -3,8 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://codingnconcepts.com/spring-boot/</loc>
-    <lastmod>2020-05-31T00:00:00+00:00</lastmod>
+    <loc>https://codingnconcepts.com/java/</loc>
+    <lastmod>2020-06-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -19,8 +19,8 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/spring-boot/spring-initializr-for-eclipse-ide/</loc>
-    <lastmod>2020-05-30T00:00:00+00:00</lastmod>
+    <loc>https://codingnconcepts.com/java/middle-element-of-linked-list-java/</loc>
+    <lastmod>2020-06-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -29,14 +29,19 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/spring-boot/spring-controller-vs-restcontroller/</loc>
-    <lastmod>2020-05-28T00:00:00+00:00</lastmod>
+    <loc>https://codingnconcepts.com/spring-boot/</loc>
+    <lastmod>2020-05-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/java/</loc>
-    <lastmod>2020-05-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://codingnconcepts.com/spring-boot/spring-initializr-for-eclipse-ide/</loc>
+    <lastmod>2020-05-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/spring-boot/spring-controller-vs-restcontroller/</loc>
+    <lastmod>2020-05-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>

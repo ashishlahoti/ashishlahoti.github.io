@@ -94,7 +94,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/interview/interview-questions-java.png"],
     "url" : "https:\/\/codingnconcepts.com\/top-java-interview-questions\/",
-    "wordCount" : "2726",
+    "wordCount" : "2846",
     "genre" : ["Interview Q\u0026A"],
     "keywords" :  null 
 }
@@ -353,7 +353,6 @@ You should know that <em>HashTable</em> is thread safe. You can make HashMap thr
 </tr>
 </tbody>
 </table>
-<h6 id="arraylist-vs-linkedlists-methods-time-complexity">ArrayList vs LinkedList&rsquo;s methods time complexity</h6>
 <table>
 <thead>
 <tr>
@@ -410,14 +409,25 @@ You should know that <em>HashTable</em> is thread safe. You can make HashMap thr
 <li><strong>LinkedList:</strong> Many of the operations need n/4 steps on average, constant number of steps in the best case (e.g. index = 0), and n/2 steps in worst case (middle of list)<br>
 <br /></li>
 </ul>
-<h4 id="q3-how-to-find-middle-element-of-linked-list-how-to-find-a-loop-in-linkedlist">Q3. How to find middle element of Linked List? How to find a loop in LinkedList?</h4>
+<h4 id="q3-how-to-find-middle-element-of-linked-list">Q3. How to find middle element of Linked List?</h4>
+<ul>
+<li>It is always better to keep track of Linked list size by increasing or decreasing the counter by 1, on addition or deletion of nodes from linked list respectively. In this way, middle element&rsquo;s index will be (size -1)/2</li>
+<li>When size of the linked list is unknown and only head node is given then you should use Fast and Slow pointer approach.<br>
+In this approach, we iterate through the linked list using two pointers. Fast pointer jumps 2 nodes in each iteration, and the slow pointer jumps only one node per iteration.<br>
+When the fast pointer reaches the end of the list, the slow pointer will be at the middle element.</li>
+</ul>
+<blockquote>
+<p>Also read <a href="https://codingnconcepts.com/java/middle-element-of-linked-list-java/">How to find middle element of LinkedList in Java</a> for more details</p>
+</blockquote>
+<p><br ></p>
+<h4 id="q4-how-to-find-a-loop-in-linkedlist">Q4. How to find a loop in LinkedList?</h4>
 <p>If you answer it then follow up question might be asked:</p>
 <ul>
 <li>How to find the starting point of loop in LinkedList?</li>
 <li>How to find the length of the loop in LinkedList?<br>
 <br /></li>
 </ul>
-<h4 id="q4-difference-between-arraylist-and-vector">Q4. Difference between ArrayList and Vector.</h4>
+<h4 id="q5-difference-between-arraylist-and-vector">Q5. Difference between ArrayList and Vector.</h4>
 <p>These is legacy interview questions which is not asked frequently now a days but good to know.</p>
 <h6 id="arraylist-vs-vector">ArrayList vs Vector</h6>
 <table>
