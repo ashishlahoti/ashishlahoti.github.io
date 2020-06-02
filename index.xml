@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>Spring Boot YAML Example</title>
+      <link>https://codingnconcepts.com/spring-boot/spring-boot-yml-example/</link>
+      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/spring-boot-yml-example/</guid>
+      <description>&lt;p&gt;In this article, we&amp;rsquo;ll learn how to use &lt;em&gt;.yml&lt;/em&gt; file instead of &lt;em&gt;.properties&lt;/em&gt; file for configuration in Spring Boot Project.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Spring Initializr Plugin for Eclipse IDE</title>
       <link>https://codingnconcepts.com/spring-boot/spring-initializr-for-eclipse-ide/</link>
       <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
