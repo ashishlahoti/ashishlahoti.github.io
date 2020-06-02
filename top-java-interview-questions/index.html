@@ -6,14 +6,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Top Java Interview Questions - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Comprehensive list of frequently asked Java Interview Questions covering topics - Java Core, Java Algorithms, Java Design Patterns, Java Threads, Java String, Java Collections, Java Streams, Java Coding for freshers, and experienced Java Developers with any years of experience, and even tech lead. These are mixed category of easy, tough, tricky, practical and coding based interview questions.">
+	<meta name="description" content="Comprehensive list of frequently asked Java Interview Questions covering topics - Java Core, Java Algorithms, Java Design Patterns, Java Threads, Java String, Java Collections, Java Streams, Java Coding for freshers, and experienced Java Developers with any years of experience, and even tech lead.">
 	<meta property="og:title" content="Top Java Interview Questions" />
-<meta property="og:description" content="Comprehensive list of frequently asked Java Interview Questions covering topics - Java Core, Java Algorithms, Java Design Patterns, Java Threads, Java String, Java Collections, Java Streams, Java Coding for freshers, and experienced Java Developers with any years of experience, and even tech lead. These are mixed category of easy, tough, tricky, practical and coding based interview questions." />
+<meta property="og:description" content="Comprehensive list of frequently asked Java Interview Questions covering topics - Java Core, Java Algorithms, Java Design Patterns, Java Threads, Java String, Java Collections, Java Streams, Java Coding for freshers, and experienced Java Developers with any years of experience, and even tech lead." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/top-java-interview-questions/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/interview/interview-questions-java.png" />
 <meta property="article:published_time" content="2020-03-07T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-05-26T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-02T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -25,7 +25,7 @@
 <meta name="twitter:image" content="https://codingnconcepts.com/img/interview/interview-questions-java.png"/>
 
 <meta name="twitter:title" content="Top Java Interview Questions"/>
-<meta name="twitter:description" content="Comprehensive list of frequently asked Java Interview Questions covering topics - Java Core, Java Algorithms, Java Design Patterns, Java Threads, Java String, Java Collections, Java Streams, Java Coding for freshers, and experienced Java Developers with any years of experience, and even tech lead. These are mixed category of easy, tough, tricky, practical and coding based interview questions."/>
+<meta name="twitter:description" content="Comprehensive list of frequently asked Java Interview Questions covering topics - Java Core, Java Algorithms, Java Design Patterns, Java Threads, Java String, Java Collections, Java Streams, Java Coding for freshers, and experienced Java Developers with any years of experience, and even tech lead."/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -57,7 +57,7 @@ if (!doNotTrack) {
     "name": "Top Java Interview Questions",
     "headline": "Top Java Interview Questions",
     "alternativeHeadline": "",
-    "description": "Comprehensive list of frequently asked Java Interview Questions covering topics - Java Core, Java Algorithms, Java Design Patterns, Java Threads, Java String, Java Collections, Java Streams, Java Coding for freshers, and experienced Java Developers with any years of experience, and even tech lead. These are mixed category of easy, tough, tricky, practical and coding based interview questions.",
+    "description": "Comprehensive list of frequently asked Java Interview Questions covering topics - Java Core, Java Algorithms, Java Design Patterns, Java Threads, Java String, Java Collections, Java Streams, Java Coding for freshers, and experienced Java Developers with any years of experience, and even tech lead.",
     "inLanguage": "en-us",
 	"isFamilyFriendly": "true",
     "mainEntityOfPage": {
@@ -80,7 +80,7 @@ if (!doNotTrack) {
     "copyrightYear" : "2020",
     "dateCreated": "2020-03-07T00:00:00.00Z",
     "datePublished": "2020-03-07T00:00:00.00Z",
-    "dateModified": "2020-05-26T00:00:00.00Z",
+    "dateModified": "2020-06-02T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -94,7 +94,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/interview/interview-questions-java.png"],
     "url" : "https:\/\/codingnconcepts.com\/top-java-interview-questions\/",
-    "wordCount" : "2066",
+    "wordCount" : "2726",
     "genre" : ["Interview Q\u0026A"],
     "keywords" :  null 
 }
@@ -196,7 +196,7 @@ if (!doNotTrack) {
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
 	<time class="meta__text" datetime="2020-03-07T00:00:00Z">March 07, 2020</time>
-	<time class="meta__text" datetime="2020-05-26T00:00:00Z"> (Last Modified: May 26, 2020)</time>
+	<time class="meta__text" datetime="2020-06-02T00:00:00Z"> (Last Modified: June 02, 2020)</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -306,11 +306,110 @@ java.io.OutputStreamWriter(OutputStream) (returns a Writer)</li>
 <p>This is also most commonly asked question in collections. Interviewer start this question asking about collections and what are the data structure/collection you have used in development. Candidate generally answers HashMap, LinkedList, ArrayList, HashSet.  Then interviewer check your knowledge of equals, hashcode and hashing algorithm. You should be aware of HashMap class internal implementation. Follow up questions in HashMap are as follows:</p>
 <ul>
 <li><em><strong>How to use HashMap in multi threading environment?</strong></em><br>
-You should know that HashTable is thread safe. You can make HashMap thread safe by using Collections.synchronizedMap(Map)</li>
+You should know that <em>HashTable</em> is thread safe. You can make HashMap thread safe by using <em>Collections.synchronizedMap(Map)</em></li>
 <li><em><strong>What is Concurrent HashMap? How it is better then thread safe HashMap in multi threading environment?</strong></em><br>
 <br /></li>
 </ul>
 <h4 id="q2-what-is-the-difference-in-arraylist-and-linkedlist">Q2. What is the difference in ArrayList and LinkedList?</h4>
+<h6 id="arraylist-vs-linkedlist">ArrayList vs LinkedList</h6>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left"><code>ArrayList</code></th>
+<th align="left"><code>LinkedList</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1.</td>
+<td align="left">ArrayList implements <em>List</em> and <em>RandomAccess</em> interfaces</td>
+<td align="left">LinkedList implements <em>List</em> and <em>Deque</em> interface</td>
+</tr>
+<tr>
+<td align="left">2.</td>
+<td align="left">ArrayList internally uses a <strong>dynamic array</strong> to store the elements.</td>
+<td align="left">LinkedList internally uses a <strong>doubly linked list</strong> to store the elements.</td>
+</tr>
+<tr>
+<td align="left">3.</td>
+<td align="left">ArrayList elements are stored in <strong>contiguous memory location</strong> where each memory location represents an index</td>
+<td align="left">Each LinkedList element can be stored at <strong>different memory location</strong> where each element has address of it previous and next element.</td>
+</tr>
+<tr>
+<td align="left">4.</td>
+<td align="left"><strong>Insertion and Deletion of elements is slow</strong> in ArrayList as these operations require all the elements to shift by one index to either make the space or fill the empty space</td>
+<td align="left"><strong>Insertion and Deletion of elements is faster</strong> in LinkedList as these operations just require to change the addresses in previous and next block</td>
+</tr>
+<tr>
+<td align="left">5.</td>
+<td align="left"><strong>Read operation of random element is much faster</strong> in ArrayList due to indices and support of fast random access</td>
+<td align="left"><strong>Read operation of random element in slower</strong> in LinkedList as need to traverse the list of find element</td>
+</tr>
+<tr>
+<td align="left">6.</td>
+<td align="left"><strong>Recommended when read operation is more</strong> than the number of insertions and deletions</td>
+<td align="left"><strong>Recommended when insertion and deletion rate is higher</strong> then the read operation</td>
+</tr>
+</tbody>
+</table>
+<h6 id="arraylist-vs-linkedlists-methods-time-complexity">ArrayList vs LinkedList&rsquo;s methods time complexity</h6>
+<table>
+<thead>
+<tr>
+<th align="left"><code>methods</code></th>
+<th align="left"><code>ArrayList</code></th>
+<th align="left"><code>LinkedList</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><em>get(int index)</em></td>
+<td align="left"><em><strong>O(1)</strong></em></td>
+<td align="left"><em><strong>O(n)</strong></em> with n/4 steps on average</td>
+</tr>
+<tr>
+<td align="left"><em>getFirst(), getLast()</em></td>
+<td align="left"><em>NA</em></td>
+<td align="left"><em><strong>O(1)</strong></em></td>
+</tr>
+<tr>
+<td align="left"><em>add(int index, E element)</em></td>
+<td align="left"><em><strong>O(n)</strong></em> with n/2 steps on average</td>
+<td align="left"><em><strong>O(n)</strong></em> with n/4 steps on average</td>
+</tr>
+<tr>
+<td align="left"><em>addFirst(), addLast()</em></td>
+<td align="left"><em>NA</em></td>
+<td align="left"><em><strong>O(1)</strong></em></td>
+</tr>
+<tr>
+<td align="left"><em>remove(int index)</em></td>
+<td align="left"><em><strong>O(n)</strong></em> with n/2 steps on average</td>
+<td align="left"><em><strong>O(n)</strong></em> with n/4 steps on average</td>
+</tr>
+<tr>
+<td align="left"><em>removeFirst(), removeLast()</em></td>
+<td align="left"><em>NA</em></td>
+<td align="left"><em><strong>O(1)</strong></em></td>
+</tr>
+<tr>
+<td align="left"><em>Iterator.remove()</em></td>
+<td align="left"><em><strong>O(n)</strong></em> with n/2 steps on average</td>
+<td align="left"><em><strong>O(1)</strong></em></td>
+</tr>
+<tr>
+<td align="left"><em>ListIterator.add(E element)</em></td>
+<td align="left"><em><strong>O(n)</strong></em> with n/2 steps on average</td>
+<td align="left"><em><strong>O(1)</strong></em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>ArrayList:</strong> Many of the operations need n/2 steps on average, constant number of steps in the best case (end of list), n steps in the worst case (start of list)</li>
+<li><strong>LinkedList:</strong> Many of the operations need n/4 steps on average, constant number of steps in the best case (e.g. index = 0), and n/2 steps in worst case (middle of list)<br>
+<br /></li>
+</ul>
 <h4 id="q3-how-to-find-middle-element-of-linked-list-how-to-find-a-loop-in-linkedlist">Q3. How to find middle element of Linked List? How to find a loop in LinkedList?</h4>
 <p>If you answer it then follow up question might be asked:</p>
 <ul>
@@ -320,33 +419,35 @@ You should know that HashTable is thread safe. You can make HashMap thread safe 
 </ul>
 <h4 id="q4-difference-between-arraylist-and-vector">Q4. Difference between ArrayList and Vector.</h4>
 <p>These is legacy interview questions which is not asked frequently now a days but good to know.</p>
+<h6 id="arraylist-vs-vector">ArrayList vs Vector</h6>
 <table>
 <thead>
 <tr>
-<th align="left">ArrayList</th>
-<th align="left">Vector</th>
+<th align="left"></th>
+<th align="left"><code>ArrayList</code></th>
+<th align="left"><code>Vector</code></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Array List is not synchronized.</td>
-<td align="left">Vector is synchronized.</td>
+<td align="left">1.</td>
+<td align="left">ArrayList&rsquo;s methods are <strong>not synchronized</strong></td>
+<td align="left">Vector&rsquo;s methods are <strong>synchronized</strong></td>
 </tr>
 <tr>
-<td align="left">Array List is fast as it’s non-synchronized.</td>
-<td align="left">Vector is slow as it is thread safe.</td>
+<td align="left">2.</td>
+<td align="left">ArrayList is <strong>fast</strong> as it’s non-synchronized.</td>
+<td align="left">Vector is <strong>slow</strong> because it is synchronized</td>
 </tr>
 <tr>
-<td align="left">If an element is inserted into the Array List, it increases its Array size by 50%.</td>
-<td align="left">Vector defaults to doubling size of its array.</td>
+<td align="left">3.</td>
+<td align="left">If internal array runs out of room, ArrayList <strong>increases its size by 50%</strong></td>
+<td align="left">Vector defaults to <strong>doubling size of its array</strong></td>
 </tr>
 <tr>
-<td align="left">Array List does not define the increment size.</td>
-<td align="left">Vector defines the increment size.</td>
-</tr>
-<tr>
-<td align="left">Array List can only use Iterator for traversing an Array List.</td>
-<td align="left">Vector can use both Enumeration and Iterator for traversing.</td>
+<td align="left">4.</td>
+<td align="left">ArrayList can only use <strong>Iterator</strong> for traversing</td>
+<td align="left">Vector can use both <strong>Enumeration</strong> and <strong>Iterator</strong> for traversing over elements</td>
 </tr>
 </tbody>
 </table>
@@ -361,9 +462,57 @@ You should know that HashTable is thread safe. You can make HashMap thread safe 
 <h4 id="q7-how-to-name-a-thread-in-executor-service">Q7. How to name a thread in executor service?</h4>
 <h4 id="q8-how-to-interrupt-a-thread-explicitly">Q8. How to interrupt a thread explicitly?</h4>
 <h2 id="4-java-string">4. Java String</h2>
-<h4 id="q1-difference-between-string-object-created-using-new-and-literal">Q1. Difference between String object created using new and literal.</h4>
-<h4 id="q2-difference-between-stringbuilder-and-stringbuffer">Q2. Difference between StringBuilder and StringBuffer.</h4>
-<h4 id="q3-why-character-array-is-used-over-string-to-store-password-">Q3. Why character array is used over String to store password ?</h4>
+<h4 id="q1-what-is-string-constant-pool">Q1. What is String Constant Pool?</h4>
+<p>String Constant Pool is a pool of Strings (String literals) stored in Java Heap Memory. A dedicated space is provided for pool in Heap Memory.</p>
+<p>When you ask for a string from this pool, it provides the same string if already exist, otherwise it creates a new string in the pool and returns that string. This process is also called as <strong>string intern</strong> which makes the string literals reusable.<br>
+<br /></p>
+<h4 id="q2-difference-between-string-literal-and-new-string-object">Q2. Difference between String Literal and New String Object.</h4>
+<h6 id="string-literal-vs-new-string-object">String literal vs New String Object</h6>
+<table>
+<thead>
+<tr>
+<th align="left"><code>String Literals</code></th>
+<th align="left"><code>New String Object</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">String literals are maintained in <strong>String Constant Pool</strong></td>
+<td align="left">New String objects are created in <strong>Heap Memory</strong></td>
+</tr>
+<tr>
+<td align="left">String literals are <strong>interned by default</strong></td>
+<td align="left">New String objects <strong>can be interned explicitly</strong> using <em>intern()</em> method</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#75715e">// String Literal
+</span><span style="color:#75715e"></span>  String a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abc&#34;</span><span style="color:#f92672">;</span> 
+  String b <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abc&#34;</span><span style="color:#f92672">;</span>
+  System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>a <span style="color:#f92672">==</span> b<span style="color:#f92672">);</span>  <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span>
+  <span style="color:#75715e">// String Object
+</span><span style="color:#75715e"></span>  String c <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> String<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;abc&#34;</span><span style="color:#f92672">);</span>
+  String d <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> String<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;abc&#34;</span><span style="color:#f92672">);</span>
+  System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>c <span style="color:#f92672">==</span> d<span style="color:#f92672">);</span>  <span style="color:#75715e">// false
+</span></code></pre></div><p><br /></p>
+<h4 id="q3-difference-between-string-stringbuilder-and-stringbuffer">Q3. Difference between String, StringBuilder and StringBuffer.</h4>
+<h6 id="string-vs-stringbuilder-vs-stringbuffer">String vs StringBuilder vs StringBuffer</h6>
+<ul>
+<li>String object is immutable whereas StringBuffer and StringBuilder objects are mutable.</li>
+<li>String concat &ldquo;+&rdquo; operator internally uses StringBuffer or StringBuilder class.</li>
+</ul>
+<h6 id="stringbuilder-vs-stringbuffer">StringBuilder vs StringBuffer</h6>
+<ul>
+<li>StringBuilder and StringBuffer provides similar methods such as substring(), insert(), append(), delete()</li>
+<li>StringBuffer is thread safe and synchronized whereas StringBuilder is not, thats why StringBuilder is more faster than StringBuffer.</li>
+<li>Most of the time you will be using StringBuilder.</li>
+<li>Use StringBuffer if you really are trying to share a buffer between threads.<br>
+<br /></li>
+</ul>
+<h4 id="q4-why-char-array-is-used-over-string-to-store-password-in-java">Q4. Why char[] array is used over String to store password in Java?</h4>
+<p>Strings are immutable in Java and any change in a String object produces a new String. When you store passwords in a String object, they stays in memory until Garbage collector clear it, which is a security threat as anyone with access to the memory dump retrieve the password from memory. Moreover, String use String  Pool memory for reusability, which even stays in memory for long duration as compare to other objects.</p>
+<p>Whereas if password is stored in char[] array, we can explicitly wipe the password after completing the work. They array can be overwritten and password will no longer be there in memory.</p>
 <h2 id="5-java-core">5. Java Core</h2>
 <p>Java Core interview questions are very important for freshers.</p>
 <h4 id="q1-explain-each-keyword-in-main-method-ie-public-static-void-mainstring-args">Q1. Explain each keyword in main method i.e. public static void main(String[] args).</h4>
@@ -610,7 +759,7 @@ c) Garbage Collection i.e.
       
       
       <li>
-        <a href="whatsapp://send?text=Top%20Java%20Interview%20Questions%2c%20by%20Coding%20N%20Concepts%0aComprehensive%20list%20of%20frequently%20asked%20Java%20Interview%20Questions%20covering%20topics%20-%20Java%20Core%2c%20Java%20Algorithms%2c%20Java%20Design%20Patterns%2c%20Java%20Threads%2c%20Java%20String%2c%20Java%20Collections%2c%20Java%20Streams%2c%20Java%20Coding%20for%20freshers%2c%20and%20experienced%20Java%20Developers%20with%20any%20years%20of%20experience%2c%20and%20even%20tech%20lead.%20These%20are%20mixed%20category%20of%20easy%2c%20tough%2c%20tricky%2c%20practical%20and%20coding%20based%20interview%20questions.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2ftop-java-interview-questions%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=Top%20Java%20Interview%20Questions%2c%20by%20Coding%20N%20Concepts%0aComprehensive%20list%20of%20frequently%20asked%20Java%20Interview%20Questions%20covering%20topics%20-%20Java%20Core%2c%20Java%20Algorithms%2c%20Java%20Design%20Patterns%2c%20Java%20Threads%2c%20Java%20String%2c%20Java%20Collections%2c%20Java%20Streams%2c%20Java%20Coding%20for%20freshers%2c%20and%20experienced%20Java%20Developers%20with%20any%20years%20of%20experience%2c%20and%20even%20tech%20lead.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2ftop-java-interview-questions%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>Email</p>
         </a>
@@ -620,7 +769,7 @@ c) Garbage Collection i.e.
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - Top%20Java%20Interview%20Questions.&amp;body=Top%20Java%20Interview%20Questions%2c%20by%20Coding%20N%20Concepts%0aComprehensive%20list%20of%20frequently%20asked%20Java%20Interview%20Questions%20covering%20topics%20-%20Java%20Core%2c%20Java%20Algorithms%2c%20Java%20Design%20Patterns%2c%20Java%20Threads%2c%20Java%20String%2c%20Java%20Collections%2c%20Java%20Streams%2c%20Java%20Coding%20for%20freshers%2c%20and%20experienced%20Java%20Developers%20with%20any%20years%20of%20experience%2c%20and%20even%20tech%20lead.%20These%20are%20mixed%20category%20of%20easy%2c%20tough%2c%20tricky%2c%20practical%20and%20coding%20based%20interview%20questions.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2ftop-java-interview-questions%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - Top%20Java%20Interview%20Questions.&amp;body=Top%20Java%20Interview%20Questions%2c%20by%20Coding%20N%20Concepts%0aComprehensive%20list%20of%20frequently%20asked%20Java%20Interview%20Questions%20covering%20topics%20-%20Java%20Core%2c%20Java%20Algorithms%2c%20Java%20Design%20Patterns%2c%20Java%20Threads%2c%20Java%20String%2c%20Java%20Collections%2c%20Java%20Streams%2c%20Java%20Coding%20for%20freshers%2c%20and%20experienced%20Java%20Developers%20with%20any%20years%20of%20experience%2c%20and%20even%20tech%20lead.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2ftop-java-interview-questions%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>
