@@ -13,7 +13,7 @@
 <meta property="og:url" content="https://codingnconcepts.com/spring-boot/configure-feign-rest-client/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/springboot.png" />
 <meta property="article:published_time" content="2020-05-26T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-05-26T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-02T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -80,7 +80,7 @@ if (!doNotTrack) {
     "copyrightYear" : "2020",
     "dateCreated": "2020-05-26T00:00:00.00Z",
     "datePublished": "2020-05-26T00:00:00.00Z",
-    "dateModified": "2020-05-26T00:00:00.00Z",
+    "dateModified": "2020-06-02T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -94,7 +94,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/logo/springboot.png"],
     "url" : "https:\/\/codingnconcepts.com\/spring-boot\/configure-feign-rest-client\/",
-    "wordCount" : "563",
+    "wordCount" : "744",
     "genre" : ["Spring Boot REST"],
     "keywords" :  null 
 }
@@ -196,6 +196,7 @@ if (!doNotTrack) {
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
 	<time class="meta__text" datetime="2020-05-26T00:00:00Z">May 26, 2020</time>
+	<time class="meta__text" datetime="2020-06-02T00:00:00Z"> (Last Modified: June 02, 2020)</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -203,7 +204,31 @@ if (!doNotTrack) {
 	<span class="meta__text"><a class="meta__link" href="/categories/spring-boot/" rel="category">Spring Boot</a>
 	</span>
 </div></div>
-		</header><div class="content post__content clearfix">
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-project-setup">1. Project Setup</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#2-enable-feign-client">2. Enable Feign Client</a></li>
+    <li><a href="#3-create-feign-client">3. Create Feign Client</a></li>
+    <li><a href="#4-feign-client-configuration">4. Feign Client Configuration</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#5-consume-feign-client">5. Consume Feign Client</a></li>
+    <li><a href="#6-test-feign-client">6. Test Feign Client</a></li>
+  </ul>
+</nav>
+	</div>
+</div>
+<div class="content post__content clearfix">
 			<p>In this article, we&rsquo;ll learn how to configure a <em>Feign Client</em> in your Spring Boot project to consume RESTFul APIs from other services.</p>
 <p>Feign Client is a Declarative REST Client in Spring Boot Web Application. It is very useful in microservice architecture to create feign client to consume RESTFul API endpoints exposed by other microservices.</p>
 <h2 id="1-project-setup">1. Project Setup</h2>
@@ -304,7 +329,7 @@ if (!doNotTrack) {
 <li>Annotated with <code>@FeignClient</code> which auto scan by spring boot application to generate feign client from this</li>
 <li>This feign client consumes the APIs from this URL: <a href="https://jsonplaceholder.typicode.com/">https://jsonplaceholder.typicode.com/</a></li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="display:block;width:100%;background-color:#3c3d38"><span style="color:#a6e22e">@FeignClient</span><span style="color:#f92672">(</span>value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;commentFeignClient&#34;</span><span style="color:#f92672">,</span> url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://jsonplaceholder.typicode.com/&#34;</span><span style="color:#f92672">)</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="display:block;width:100%;background-color:#3c3d38"><span style="color:#a6e22e">@FeignClient</span><span style="color:#f92672">(</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;commentFeignClient&#34;</span><span style="color:#f92672">,</span> url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://jsonplaceholder.typicode.com/&#34;</span><span style="color:#f92672">)</span>
 </span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">CommentFeignClient</span> <span style="color:#f92672">{</span>
 
 	<span style="color:#a6e22e">@GetMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/comments&#34;</span><span style="color:#f92672">)</span>
@@ -316,7 +341,40 @@ if (!doNotTrack) {
     <span style="color:#a6e22e">@GetMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/comments&#34;</span><span style="color:#f92672">)</span>
     List<span style="color:#f92672">&lt;</span>Comment<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">getCommentsByPostId</span><span style="color:#f92672">(</span><span style="color:#a6e22e">@RequestParam</span> Long postId<span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><h2 id="4-consume-feign-client">4. Consume Feign Client</h2>
+</code></pre></div><h2 id="4-feign-client-configuration">4. Feign Client Configuration</h2>
+<p>Spring boot comes with default global configuration which is applied on each feign client you create such as connection timeout, read timeout and logger level. Good things is you can change these global configurations from property file.</p>
+<h6 id="applicationyml">application.yml</h6>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#66d9ef">feign</span>:
+  <span style="color:#66d9ef">client</span>:
+    <span style="color:#66d9ef">config</span>:
+      <span style="color:#66d9ef">default</span>:
+        <span style="color:#66d9ef">connectTimeout</span>: <span style="color:#ae81ff">5000</span>
+        <span style="color:#66d9ef">readTimeout</span>: <span style="color:#ae81ff">5000</span>
+        <span style="color:#66d9ef">loggerLevel</span>: basic
+</code></pre></div><p>By default these configurations are applied on each feign clients. If you want to override these configuration for a specific feign client. It can be done using feign client name. Remember, we created our feign client using <code>@FeignClient</code> with name <em>commentFeignClient</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@FeignClient</span><span style="color:#f92672">(</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;commentFeignClient&#34;</span><span style="color:#f92672">,</span> url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://jsonplaceholder.typicode.com/&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">CommentFeignClient</span> <span style="color:#f92672">{</span>
+	<span style="color:#75715e">//...
+</span></code></pre></div><p>Let&rsquo;s override configuration for <em>commentFeignClient</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#66d9ef">feign</span>:
+  <span style="color:#66d9ef">client</span>:
+    <span style="color:#66d9ef">config</span>:
+      <span style="color:#66d9ef">default</span>:
+        <span style="color:#66d9ef">connectTimeout</span>: <span style="color:#ae81ff">5000</span>
+        <span style="color:#66d9ef">readTimeout</span>: <span style="color:#ae81ff">5000</span>
+		<span style="color:#66d9ef">loggerLevel</span>: basic
+	  <span style="color:#66d9ef">commentFeignClient</span>:
+        <span style="color:#66d9ef">connectTimeout</span>: <span style="color:#ae81ff">10000</span>
+        <span style="color:#66d9ef">readTimeout</span>: <span style="color:#ae81ff">12000</span>
+        <span style="color:#66d9ef">loggerLevel</span>: full
+</code></pre></div><p>The loggerLevel that you may configure per client, tells Feign how much to log. Choices are:</p>
+<ul>
+<li><strong>NONE</strong>, No logging (DEFAULT).</li>
+<li><strong>BASIC</strong>, Log only the request method and URL and the response status code and execution time.</li>
+<li><strong>HEADERS</strong>, Log the basic information along with request and response headers.</li>
+<li><strong>FULL</strong>, Log the headers, body, and metadata for both requests and responses.</li>
+</ul>
+<h2 id="5-consume-feign-client">5. Consume Feign Client</h2>
 <p>Now since we have created feign client, let&rsquo;s create a service layer class <code>CommentService</code> and its implementation <code>CommentServiceImpl</code> to consume these APIs using the feign client</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">CommentService</span> <span style="color:#f92672">{</span>
 
@@ -370,12 +428,9 @@ if (!doNotTrack) {
 	<span style="color:#f92672">}</span>
 	
 <span style="color:#f92672">}</span>
-</code></pre></div><h2 id="5-test-feign-client">5. Test Feign Client</h2>
+</code></pre></div><h2 id="6-test-feign-client">6. Test Feign Client</h2>
 <figure class="center">
-    <img src="/img/spring-boot/comment-by-id-endpoint.png"
-         alt="Get Comment By Id"/> <figcaption>
-            <p>Get Comment By Id</p>
-        </figcaption>
+    <img src="/img/spring-boot/comment-by-id-endpoint.png"/> 
 </figure>
 
 <p>That&rsquo;s it. You have successfully created and tested feign client to consume APIs from given endpoint.</p>
