@@ -13,7 +13,7 @@
 <meta property="og:url" content="https://codingnconcepts.com/spring-boot/configure-feign-rest-client/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/springboot.png" />
 <meta property="article:published_time" content="2020-05-26T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-06-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-03T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -80,7 +80,7 @@ if (!doNotTrack) {
     "copyrightYear" : "2020",
     "dateCreated": "2020-05-26T00:00:00.00Z",
     "datePublished": "2020-05-26T00:00:00.00Z",
-    "dateModified": "2020-06-02T00:00:00.00Z",
+    "dateModified": "2020-06-03T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -94,7 +94,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/logo/springboot.png"],
     "url" : "https:\/\/codingnconcepts.com\/spring-boot\/configure-feign-rest-client\/",
-    "wordCount" : "744",
+    "wordCount" : "786",
     "genre" : ["Spring Boot REST"],
     "keywords" :  null 
 }
@@ -192,11 +192,13 @@ if (!doNotTrack) {
 	<article class="post">
 		<header class="post__header">
 			<h1 class="post__title"><img class="post__thumbnail" src="/img/logo/springboot.png" alt="Configure Feign Client in Spring Boot"> Configure Feign Client in Spring Boot</h1>
-			<div class="post__meta meta">
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg> <span class="meta__text">Ashish Lahoti</span>
+</div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
 	<time class="meta__text" datetime="2020-05-26T00:00:00Z">May 26, 2020</time>
-	<time class="meta__text" datetime="2020-06-02T00:00:00Z"> (Last Modified: June 02, 2020)</time>
+	<time class="meta__text" datetime="2020-06-03T00:00:00Z"> (Last Modified: June 03, 2020)</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -315,7 +317,9 @@ if (!doNotTrack) {
 <li>You are using <code>@SpringBootApplication</code> and <code>@EnableFeignClients</code> annotations at your application starter class file <code>ApiApplication</code>.</li>
 </ol>
 <p>Spring Boot is opinionated, when it sees the <strong>web</strong> and <strong>openfeign</strong> dependencies in the classpath, it sets up all the necessary default configuration required for Feign Client and automatically scans for the classes annotated with <code>@FeignClient</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="display:block;width:100%;background-color:#3c3d38"><span style="color:#a6e22e">@SpringBootApplication</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.example.api<span style="color:#f92672">;</span>
+
+<span style="display:block;width:100%;background-color:#3c3d38"><span style="color:#a6e22e">@SpringBootApplication</span>
 </span><span style="display:block;width:100%;background-color:#3c3d38"><span style="color:#a6e22e">@EnableFeignClients</span>
 </span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ApiApplication</span> <span style="color:#f92672">{</span>
 
@@ -329,7 +333,9 @@ if (!doNotTrack) {
 <li>Annotated with <code>@FeignClient</code> which auto scan by spring boot application to generate feign client from this</li>
 <li>This feign client consumes the APIs from this URL: <a href="https://jsonplaceholder.typicode.com/">https://jsonplaceholder.typicode.com/</a></li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="display:block;width:100%;background-color:#3c3d38"><span style="color:#a6e22e">@FeignClient</span><span style="color:#f92672">(</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;commentFeignClient&#34;</span><span style="color:#f92672">,</span> url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://jsonplaceholder.typicode.com/&#34;</span><span style="color:#f92672">)</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.example.api.client<span style="color:#f92672">;</span>
+
+<span style="display:block;width:100%;background-color:#3c3d38"><span style="color:#a6e22e">@FeignClient</span><span style="color:#f92672">(</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;commentFeignClient&#34;</span><span style="color:#f92672">,</span> url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://jsonplaceholder.typicode.com/&#34;</span><span style="color:#f92672">)</span>
 </span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">CommentFeignClient</span> <span style="color:#f92672">{</span>
 
 	<span style="color:#a6e22e">@GetMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/comments&#34;</span><span style="color:#f92672">)</span>
@@ -352,7 +358,9 @@ if (!doNotTrack) {
         <span style="color:#66d9ef">readTimeout</span>: <span style="color:#ae81ff">5000</span>
         <span style="color:#66d9ef">loggerLevel</span>: basic
 </code></pre></div><p>By default these configurations are applied on each feign clients. If you want to override these configuration for a specific feign client. It can be done using feign client name. Remember, we created our feign client using <code>@FeignClient</code> with name <em>commentFeignClient</em></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@FeignClient</span><span style="color:#f92672">(</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;commentFeignClient&#34;</span><span style="color:#f92672">,</span> url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://jsonplaceholder.typicode.com/&#34;</span><span style="color:#f92672">)</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.example.api.client<span style="color:#f92672">;</span>
+
+<span style="color:#a6e22e">@FeignClient</span><span style="color:#f92672">(</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;commentFeignClient&#34;</span><span style="color:#f92672">,</span> url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://jsonplaceholder.typicode.com/&#34;</span><span style="color:#f92672">)</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">CommentFeignClient</span> <span style="color:#f92672">{</span>
 	<span style="color:#75715e">//...
 </span></code></pre></div><p>Let&rsquo;s override configuration for <em>commentFeignClient</em></p>
@@ -366,8 +374,12 @@ if (!doNotTrack) {
 	  <span style="color:#66d9ef">commentFeignClient</span>:
         <span style="color:#66d9ef">connectTimeout</span>: <span style="color:#ae81ff">10000</span>
         <span style="color:#66d9ef">readTimeout</span>: <span style="color:#ae81ff">12000</span>
-        <span style="color:#66d9ef">loggerLevel</span>: full
-</code></pre></div><p>The loggerLevel that you may configure per client, tells Feign how much to log. Choices are:</p>
+		<span style="color:#66d9ef">loggerLevel</span>: full
+<span style="color:#66d9ef">logging</span>:
+  <span style="color:#66d9ef">level</span>:
+    <span style="color:#66d9ef">com.example.api.client</span>: DEBUG
+</code></pre></div><p>Feign logging only responds to the <strong>DEBUG</strong> level so the logging level of package of feign client must be set to <strong>DEBUG</strong> level i.e. <em>com.example.api.client</em>, if you want to enable feign logging.</p>
+<p>The loggerLevel that you may configure per client, tells Feign how much to log. Choices are:</p>
 <ul>
 <li><strong>NONE</strong>, No logging (DEFAULT).</li>
 <li><strong>BASIC</strong>, Log only the request method and URL and the response status code and execution time.</li>

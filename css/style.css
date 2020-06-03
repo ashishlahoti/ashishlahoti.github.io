@@ -1374,11 +1374,6 @@ ul.share-icons li > * .label {
 		width: 88%;
 	}
 
-	.meta__item {
-		display: block;
-		margin-left: 0;
-	}
-
 	.authorbox {
 		text-align: center;
 	}
@@ -1415,12 +1410,16 @@ ul.share-icons li > * .label {
 	}
 
 	.list__thumbnail {
-		max-width: 80px;
+		max-width: 40px;
+	}
+
+	.list__thumbnail img {
+		max-width: 40px;
 	}
 
 	.list__title {
-		font-size: 16px;
-		font-size: 1rem;
+		font-size: 18px;
+		font-size: 1.125rem;
 	}
 
 	.list__lead {
