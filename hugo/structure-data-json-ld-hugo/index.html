@@ -4,27 +4,27 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Add Structure Data in Hugo Website - Coding N Concepts</title>
+	<title>Add Structure Data JSON-LD in Hugo Website Pages - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="Mark Up Hugo website main page and blog post pages using JSON-LD in order to structure data for hugo generated website for better google search result and SEO ranking.">
-	<meta property="og:title" content="Add Structure Data in Hugo Website" />
+	<meta property="og:title" content="Add Structure Data JSON-LD in Hugo Website Pages" />
 <meta property="og:description" content="Mark Up Hugo website main page and blog post pages using JSON-LD in order to structure data for hugo generated website for better google search result and SEO ranking." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://codingnconcepts.com/hugo/structure-data-json-ld/" />
+<meta property="og:url" content="https://codingnconcepts.com/hugo/structure-data-json-ld-hugo/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/gohugo.png" />
 <meta property="article:published_time" content="2020-05-04T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-05-04T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-04T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
 <meta property="article:publisher" content="https://www.facebook.com/codingnconcepts" />
 <meta property="article:section" content="hugo" />
-<meta property="article:tag" content="Hugo SEO" />
+<meta property="article:tag" content="Hugo Partial" />
 <meta property="fb:admins" content="177784346770196" />
 	<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://codingnconcepts.com/img/logo/gohugo.png"/>
 
-<meta name="twitter:title" content="Add Structure Data in Hugo Website"/>
+<meta name="twitter:title" content="Add Structure Data JSON-LD in Hugo Website Pages"/>
 <meta name="twitter:description" content="Mark Up Hugo website main page and blog post pages using JSON-LD in order to structure data for hugo generated website for better google search result and SEO ranking."/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -33,7 +33,7 @@
 	<link rel="stylesheet" href="/css/style.css">
 	
 	<link rel="shortcut icon" href="/favicon.ico">
-	<link rel="canonical" href="https://codingnconcepts.com/hugo/structure-data-json-ld/">
+	<link rel="canonical" href="https://codingnconcepts.com/hugo/structure-data-json-ld-hugo/">
 		
 <script type="application/javascript">
 var doNotTrack = false;
@@ -54,15 +54,15 @@ if (!doNotTrack) {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
     "articleSection": "hugo",
-    "name": "Add Structure Data in Hugo Website",
-    "headline": "Add Structure Data in Hugo Website",
-    "alternativeHeadline": "Mark Up Hugo website main page and blog post pages using JSON-LD",
+    "name": "Add Structure Data JSON-LD in Hugo Website Pages",
+    "headline": "Add Structure Data JSON-LD in Hugo Website Pages",
+    "alternativeHeadline": "Guide to create a Site Schema partial in Hugo",
     "description": "Mark Up Hugo website main page and blog post pages using JSON-LD in order to structure data for hugo generated website for better google search result and SEO ranking.",
     "inLanguage": "en-us",
 	"isFamilyFriendly": "true",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https:\/\/codingnconcepts.com\/hugo\/structure-data-json-ld\/"
+        "@id": "https:\/\/codingnconcepts.com\/hugo\/structure-data-json-ld-hugo\/"
     },
     "author" : {
         "@type": "Person",
@@ -80,7 +80,7 @@ if (!doNotTrack) {
     "copyrightYear" : "2020",
     "dateCreated": "2020-05-04T00:00:00.00Z",
     "datePublished": "2020-05-04T00:00:00.00Z",
-    "dateModified": "2020-05-04T00:00:00.00Z",
+    "dateModified": "2020-06-04T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -93,9 +93,9 @@ if (!doNotTrack) {
         }
     },
     "image": ["https://codingnconcepts.com/img/logo/gohugo.png"],
-    "url" : "https:\/\/codingnconcepts.com\/hugo\/structure-data-json-ld\/",
-    "wordCount" : "1178",
-    "genre" : ["Hugo SEO"],
+    "url" : "https:\/\/codingnconcepts.com\/hugo\/structure-data-json-ld-hugo\/",
+    "wordCount" : "1221",
+    "genre" : ["Hugo Partial"],
     "keywords" :  null 
 }
 </script>
@@ -107,7 +107,7 @@ if (!doNotTrack) {
 	<div class="container">
 		<div class="logo">
 			<a class="logo__link" href="/" title="Coding N Concepts" rel="home">
-				<div class="logo__title"><img src="/favicon-32x32.png" alt="Add Structure Data in Hugo Website"> Coding N Concepts</div>
+				<div class="logo__title"><img src="/favicon-32x32.png" alt="Add Structure Data JSON-LD in Hugo Website Pages"> Coding N Concepts</div>
 				<div class="logo__tagline">Ashish Lahoti&#39;s Technical Blog</div>
 			</a>
 		</div>
@@ -191,14 +191,15 @@ if (!doNotTrack) {
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title"><img class="post__thumbnail" src="/img/logo/gohugo.png" alt="Add Structure Data in Hugo Website"> Add Structure Data in Hugo Website</h1>
-			<p class="post__lead">Mark Up Hugo website main page and blog post pages using JSON-LD</p>
+			<h1 class="post__title"><img class="post__thumbnail" src="/img/logo/gohugo.png" alt="Add Structure Data JSON-LD in Hugo Website Pages"> Add Structure Data JSON-LD in Hugo Website Pages</h1>
+			<p class="post__lead">Guide to create a Site Schema partial in Hugo</p>
 			<div class="post__meta meta"><div class="meta__item-author meta__item">
 	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg> <span class="meta__text">Ashish Lahoti</span>
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
 	<time class="meta__text" datetime="2020-05-04T00:00:00Z">May 04, 2020</time>
+	<time class="meta__text" datetime="2020-06-04T00:00:00Z"> (Last Modified: June 04, 2020)</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -206,14 +207,45 @@ if (!doNotTrack) {
 	<span class="meta__text"><a class="meta__link" href="/categories/hugo/" rel="category">Hugo</a>
 	</span>
 </div></div>
-		</header><div class="content post__content clearfix">
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-create-site_schemahtml-partial">1. Create <em>site_schema.html</em> Partial</a></li>
+    <li><a href="#2-relevant-front-matter">2. Relevant <em>front-matter</em></a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#3-relevant-configtoml">3. Relevant <em>config.toml</em></a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#4-add-partial-to-the-head-tag-of-baseofhtml">4. Add partial to the <em>&lt;head&gt;</em> tag of <em>baseof.html</em></a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#5-generated-structure-data-json-ld">5. Generated Structure Data JSON-LD</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#7-verify-structure-data-json-ld">7. Verify Structure Data JSON-LD</a></li>
+  </ul>
+</nav>
+	</div>
+</div>
+<div class="content post__content clearfix">
 			<p>When you add structure data to your website, it helps google, bing or other website indexers to understand the content for your website and pages which leads to better search results for your website and eventually helps in SEO ranking.</p>
 <p>Mark up schema is based on website type and its content. Suppose you have a blog website, then schema of your web pages will be of type &ldquo;Article&rdquo; or &ldquo;BlogPosting&rdquo;. You can go through the <a href="https://developers.google.com/search/docs/data-types/article">google&rsquo;s example</a> of adding structure data using JSON-LD for &ldquo;Article&rdquo; type of website pages.</p>
 <p>Schema of structure data for all type of websites and web pages can be found in <a href="https://schema.org/docs/full.html">documentation</a> of <a href="https://schema.org">schema.org</a></p>
 <p><strong>Microdata</strong> and <strong>JSON-LD</strong> are two ways to add mark up in order to structure your data. Google recommends using <strong>JSON-LD</strong> as it is more cleaner approach to express the structure of the data in JSON format embedded as a <code>&lt;script&gt;</code> in the <code>&lt;head&gt;</code> tag of your HTML. Its a clear separation of structure from HTML elements as compare to <strong>Microdata</strong> where you add special properties like <code>itemprop</code>, <code>itemtype</code> in HTML element tags everywhere.</p>
-<p>Now we know that JSON-LD is way to go. There are the steps to add structure data using JSON-LD in hugo website:<br>
-<br /></p>
-<h3 id="1-create-a-site_schemahtml">1. Create a <code>site_schema.html</code></h3>
+<p>Now we know that JSON-LD is way to go. There are the steps to add structure data using JSON-LD in hugo website:</p>
+<h2 id="1-create-site_schemahtml-partial">1. Create <em>site_schema.html</em> Partial</h2>
 <p>First of all we are going to create a partial called <code>site_schema.html</code> which is responsible to generate structure data JSON-LD for hugo website and hugo blog pages. All you need to do is copy the below code snippet and save it under <code>$hugo/layouts/partials/site_schema.html</code>.</p>
 <pre><code>{{ if .IsHome -}}
 &lt;script type=&quot;application/ld+json&quot;&gt;
@@ -283,7 +315,9 @@ if (!doNotTrack) {
 {{ end }}
 </code></pre><p><strong>Note:</strong> I am using hugo as a static site generator for this blog website and after spending so much time here and there, i came up with this partial. You can do the changes in this partial as per your need.</p>
 <p>The data to generate structure data json using this partial comes from the front-matter of the blog post and config.toml file. I have tried to feed in most of the data from front-matter and fallback as config.toml so that most of the blog post pages have their specific data.</p>
-<h5 id="relevant-front-matter-example">Relevant front-matter example</h5>
+<h2 id="2-relevant-front-matter">2. Relevant <em>front-matter</em></h2>
+<p>These are the relevant front-matter properties which are being used in generating JSON-LD schema for your blog page:-</p>
+<h6 id="blog-pagemd">blog-page.md</h6>
 <pre><code>---
 title: I am the name and headline of blog post structure data
 lead: I am alternativeHeadline of blog post structure data
@@ -301,7 +335,9 @@ keywords:
   - &quot;keyword 1 of blog post structure data&quot;
   - &quot;keyword 2 of blog post structure data &quot;
 ---
-</code></pre><h5 id="relevant-configtoml-example">Relevant config.toml example</h5>
+</code></pre><h2 id="3-relevant-configtoml">3. Relevant <em>config.toml</em></h2>
+<p>These are the relevant config.toml configuration properties which are being used in generating JSON-LD schema for your website:-</p>
+<h6 id="configtoml">config.toml</h6>
 <pre><code>baseURL = &quot;I am url of website structure data&quot;
 languageCode = &quot;en-us&quot;
 title = &quot;I am name of website structure data&quot;
@@ -311,10 +347,10 @@ title = &quot;I am name of website structure data&quot;
   description = &quot;I am description of website structure data&quot;
   logo = &quot;favicon-32x32.png&quot;
   copyright = &quot;I am license of website structure data&quot;
-</code></pre><p><br /></p>
-<h3 id="2-add-partial-to-the-head-tag">2. Add partial to the <code>&lt;head&gt;</code> tag</h3>
+</code></pre><h2 id="4-add-partial-to-the-head-tag-of-baseofhtml">4. Add partial to the <em>&lt;head&gt;</em> tag of <em>baseof.html</em></h2>
 <p>Once you created a partial, you need to add this partial in the <code>&lt;head&gt;</code> tag of html page under <code>_default</code> folder which generates your hugo website and blog HTML pages.</p>
 <p>If you are using any theme in hugo website then this HTML page could be <code>$hugo/themes/layouts/_default/baseof.html</code>. If you have designed hugo website on your own then this HTML page could be <code>$hugo/layouts/_default/baseof.html</code> depending upon your naming convention. Just add the partial in HTML head tag like below:</p>
+<h6 id="baseofhtml">baseof.html</h6>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#f92672">html</span>&gt;
   &lt;<span style="color:#f92672">head</span>&gt;
@@ -327,8 +363,7 @@ title = &quot;I am name of website structure data&quot;
   &lt;<span style="color:#f92672">body</span>&gt;
   &lt;/<span style="color:#f92672">body</span>&gt;
 &lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div><p><br /></p>
-<h3 id="3-generated-structure-data">3. Generated Structure Data</h3>
+</code></pre></div><h2 id="5-generated-structure-data-json-ld">5. Generated Structure Data JSON-LD</h2>
 <p>The following structure data are generated in JSON-LD format.</p>
 <h5 id="website-main-page">Website Main Page</h5>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
@@ -417,8 +452,7 @@ title = &quot;I am name of website structure data&quot;
   &lt;<span style="color:#f92672">body</span>&gt;
   &lt;/<span style="color:#f92672">body</span>&gt;
 &lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div><p><br /></p>
-<h3 id="4-verify-structure-data">4. Verify Structure Data</h3>
+</code></pre></div><h2 id="7-verify-structure-data-json-ld">7. Verify Structure Data JSON-LD</h2>
 <p>You can verify the structure data using <a href="https://search.google.com/structured-data/testing-tool">Structured Data Testing Tool</a> provided by Google where either you give a URL of your page or just copy paste whole HTML to verify. Look for the errors and correct them.</p>
 		</div>
 		<footer class="post__footer">
@@ -426,7 +460,7 @@ title = &quot;I am name of website structure data&quot;
 <div class="post__tags tags clearfix">
 	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link btn" href="/tags/hugo-seo/" rel="tag">Hugo SEO</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/hugo-partial/" rel="tag">Hugo Partial</a></li>
 	</ul>
 </div>
 		</footer>
@@ -442,7 +476,7 @@ title = &quot;I am name of website structure data&quot;
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?hashtags=codingnconcepts&amp;url=https%3a%2f%2fcodingnconcepts.com%2fhugo%2fstructure-data-json-ld%2f&amp;text=Add%20Structure%20Data%20in%20Hugo%20Website" target="_blank" rel="noopener" aria-label="Share on Twitter" class="share-btn twitter">
+        <a href="https://twitter.com/intent/tweet?hashtags=codingnconcepts&amp;url=https%3a%2f%2fcodingnconcepts.com%2fhugo%2fstructure-data-json-ld-hugo%2f&amp;text=Add%20Structure%20Data%20JSON-LD%20in%20Hugo%20Website%20Pages" target="_blank" rel="noopener" aria-label="Share on Twitter" class="share-btn twitter">
           <svg class="widget-social__link-icon icon icon-twitter" width="24" height="24" viewBox="0 0 384 312"><path d="m384 36.9c-14.1 6.3-29.3 10.5-45.2 12.4 16.3-9.7 28.8-25.2 34.6-43.6-15.2 9-32.1 15.6-50 19.1-14.4-15.2-34.9-24.8-57.5-24.8-43.5 0-78.8 35.3-78.8 78.8 0 6.2.7 12.2 2 17.9-65.5-3.3-123.5-34.6-162.4-82.3-6.7 11.6-10.6 25.2-10.6 39.6 0 27.3 13.9 51.4 35 65.6-12.9-.4-25.1-4-35.7-9.9v1c0 38.2 27.2 70 63.2 77.2-6.6 1.8-13.6 2.8-20.8 2.8-5.1 0-10-.5-14.8-1.4 10 31.3 39.1 54.1 73.6 54.7-27 21.1-60.9 33.7-97.8 33.7-6.4 0-12.6-.4-18.8-1.1 34.9 22.4 76.3 35.4 120.8 35.4 144.9 0 224.1-120 224.1-224.1 0-3.4-.1-6.8-.2-10.2 15.4-11.1 28.7-25 39.3-40.8z"/></svg>
           <p>Twitter</p>
           </a>
@@ -452,7 +486,7 @@ title = &quot;I am name of website structure data&quot;
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcodingnconcepts.com%2fhugo%2fstructure-data-json-ld%2f" target="_blank" rel="noopener" aria-label="Share on Facebook" class="share-btn facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcodingnconcepts.com%2fhugo%2fstructure-data-json-ld-hugo%2f" target="_blank" rel="noopener" aria-label="Share on Facebook" class="share-btn facebook">
           <svg class="widget-social__link-icon icon icon-facebook" width="24" height="24" viewBox="0 0 352 352"><path d="m0 32v288c0 17.5 14.5 32 32 32h288c17.5 0 32-14.5 32-32v-288c0-17.5-14.5-32-32-32h-288c-17.5 0-32 14.5-32 32zm320 0v288h-83v-108h41.5l6-48h-47.5v-31c0-14 3.5-23.5 23.5-23.5h26v-43.5c-4.4-.6-19.8-1.5-37.5-1.5-36.9 0-62 22.2-62 63.5v36h-42v48h42v108h-155v-288z"/></svg>
           <p>Facebook</p>
           </a>
@@ -462,7 +496,7 @@ title = &quot;I am name of website structure data&quot;
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fcodingnconcepts.com%2fhugo%2fstructure-data-json-ld%2f&amp;source=https%3a%2f%2fcodingnconcepts.com%2fhugo%2fstructure-data-json-ld%2f&amp;title=Add%20Structure%20Data%20in%20Hugo%20Website&amp;summary=Add%20Structure%20Data%20in%20Hugo%20Website" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="share-btn linkedin">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fcodingnconcepts.com%2fhugo%2fstructure-data-json-ld-hugo%2f&amp;source=https%3a%2f%2fcodingnconcepts.com%2fhugo%2fstructure-data-json-ld-hugo%2f&amp;title=Add%20Structure%20Data%20JSON-LD%20in%20Hugo%20Website%20Pages&amp;summary=Add%20Structure%20Data%20JSON-LD%20in%20Hugo%20Website%20Pages" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="share-btn linkedin">
           <svg class="widget-social__link-icon icon icon-linkedin" width="24" height="24" viewBox="0 0 352 352"><path d="M0,40v272c0,21.9,18.1,40,40,40h272c21.9,0,40-18.1,40-40V40c0-21.9-18.1-40-40-40H40C18.1,0,0,18.1,0,40z M312,32 c4.6,0,8,3.4,8,8v272c0,4.6-3.4,8-8,8H40c-4.6,0-8-3.4-8-8V40c0-4.6,3.4-8,8-8H312z M59.5,87c0,15.2,12.3,27.5,27.5,27.5 c15.2,0,27.5-12.3,27.5-27.5c0-15.2-12.3-27.5-27.5-27.5C71.8,59.5,59.5,71.8,59.5,87z M187,157h-1v-21h-45v152h47v-75 c0-19.8,3.9-39,28.5-39c24.2,0,24.5,22.4,24.5,40v74h47v-83.5c0-40.9-8.7-72-56.5-72C208.5,132.5,193.3,145.1,187,157z M64,288h47.5 V136H64V288z"/></svg>
             <p>LinkedIn</p>
           </a>
@@ -472,7 +506,7 @@ title = &quot;I am name of website structure data&quot;
       
       
       <li>
-        <a href="whatsapp://send?text=Add%20Structure%20Data%20in%20Hugo%20Website%2c%20by%20Coding%20N%20Concepts%0aMark%20Up%20Hugo%20website%20main%20page%20and%20blog%20post%20pages%20using%20JSON-LD%20in%20order%20to%20structure%20data%20for%20hugo%20generated%20website%20for%20better%20google%20search%20result%20and%20SEO%20ranking.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fhugo%2fstructure-data-json-ld%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=Add%20Structure%20Data%20JSON-LD%20in%20Hugo%20Website%20Pages%2c%20by%20Coding%20N%20Concepts%0aMark%20Up%20Hugo%20website%20main%20page%20and%20blog%20post%20pages%20using%20JSON-LD%20in%20order%20to%20structure%20data%20for%20hugo%20generated%20website%20for%20better%20google%20search%20result%20and%20SEO%20ranking.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fhugo%2fstructure-data-json-ld-hugo%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>Email</p>
         </a>
@@ -482,7 +516,7 @@ title = &quot;I am name of website structure data&quot;
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - Add%20Structure%20Data%20in%20Hugo%20Website.&amp;body=Add%20Structure%20Data%20in%20Hugo%20Website%2c%20by%20Coding%20N%20Concepts%0aMark%20Up%20Hugo%20website%20main%20page%20and%20blog%20post%20pages%20using%20JSON-LD%20in%20order%20to%20structure%20data%20for%20hugo%20generated%20website%20for%20better%20google%20search%20result%20and%20SEO%20ranking.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fhugo%2fstructure-data-json-ld%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - Add%20Structure%20Data%20JSON-LD%20in%20Hugo%20Website%20Pages.&amp;body=Add%20Structure%20Data%20JSON-LD%20in%20Hugo%20Website%20Pages%2c%20by%20Coding%20N%20Concepts%0aMark%20Up%20Hugo%20website%20main%20page%20and%20blog%20post%20pages%20using%20JSON-LD%20in%20order%20to%20structure%20data%20for%20hugo%20generated%20website%20for%20better%20google%20search%20result%20and%20SEO%20ranking.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fhugo%2fstructure-data-json-ld-hugo%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>
@@ -508,7 +542,7 @@ title = &quot;I am name of website structure data&quot;
 
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="/hugo/custom-shortcode-examples/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Useful Hugo Shortcodes</p></a>
+		<a class="post-nav__link" href="/hugo/custom-shortcode-hugo/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Useful Hugo Shortcodes</p></a>
 	</div>
 </nav>
 

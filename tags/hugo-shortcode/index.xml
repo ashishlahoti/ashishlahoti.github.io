@@ -13,10 +13,10 @@
     
     <item>
       <title>Useful Hugo Shortcodes</title>
-      <link>https://codingnconcepts.com/hugo/custom-shortcode-examples/</link>
+      <link>https://codingnconcepts.com/hugo/custom-shortcode-hugo/</link>
       <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://codingnconcepts.com/hugo/custom-shortcode-examples/</guid>
+      <guid>https://codingnconcepts.com/hugo/custom-shortcode-hugo/</guid>
       <description>&lt;p&gt;If you are using Hugo as a static site generator tool then you might have used hugo &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/&#34;&gt;built-in shortcodes&lt;/a&gt; but here are some amazing hugo shortcodes which can be used in markdown files of your hugo website.&lt;/p&gt;</description>
     </item>
     

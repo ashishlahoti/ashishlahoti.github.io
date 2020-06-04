@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://codingnconcepts.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo Partial</title>
+      <link>https://codingnconcepts.com/tags/hugo-partial/</link>
+      <pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/hugo-partial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java String</title>
+      <link>https://codingnconcepts.com/tags/java-string/</link>
+      <pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/java-string/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Java Collection</title>
@@ -66,15 +84,6 @@
     </item>
     
     <item>
-      <title>Java String</title>
-      <link>https://codingnconcepts.com/tags/java-string/</link>
-      <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/java-string/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Javascript Coding</title>
       <link>https://codingnconcepts.com/tags/javascript-coding/</link>
       <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
@@ -98,15 +107,6 @@
       <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/hugo-shortcode/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo SEO</title>
-      <link>https://codingnconcepts.com/tags/hugo-seo/</link>
-      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/hugo-seo/</guid>
       <description></description>
     </item>
     
