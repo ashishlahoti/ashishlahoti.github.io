@@ -94,7 +94,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/logo/gohugo.png"],
     "url" : "https:\/\/codingnconcepts.com\/hugo\/social-icons-hugo\/",
-    "wordCount" : "415",
+    "wordCount" : "976",
     "genre" : ["Hugo Partial"],
     "keywords" :  null 
 }
@@ -217,15 +217,16 @@ if (!doNotTrack) {
         <li></li>
       </ul>
     </li>
-    <li><a href="#2-socialshare-front-matter">2. SocialShare <em>front-matter</em></a>
+    <li><a href="#2-css-for-socialsharehtml">2. CSS for <em>socialshare.html</em></a></li>
+    <li><a href="#3-socialshare-front-matter">3. SocialShare <em>front-matter</em></a>
       <ul>
         <li></li>
       </ul>
     </li>
-    <li><a href="#3-socialshare-configtoml">3. SocialShare <em>config.toml</em></a>
+    <li><a href="#4-socialshare-configtoml">4. SocialShare <em>config.toml</em></a>
       <ul>
         <li></li>
-        <li><a href="#4-add-socialsharehtml-partial-to-singlehtml">4. Add <em>socialshare.html</em> partial to <em>single.html</em></a></li>
+        <li><a href="#5-add-socialsharehtml-partial-to-singlehtml">5. Add <em>socialshare.html</em> partial to <em>single.html</em></a></li>
       </ul>
     </li>
   </ul>
@@ -297,7 +298,126 @@ if (!doNotTrack) {
   &lt;/<span style="color:#f92672">section</span>&gt;
   {{ end }}
 {{- end }}
-</code></pre></div><h2 id="2-socialshare-front-matter">2. SocialShare <em>front-matter</em></h2>
+</code></pre></div><p>You see that in socialshare.html partial, we have used some svg partials for social share icons. Here are some social share svg partial, which you should save under <code>$hugo/layouts/partials/svg</code> folder</p>
+<h6 id="twittersvg">twitter.svg</h6>
+<pre><code>&lt;svg class=&quot;{{ with .class }}{{ . }} {{ end }}icon icon-twitter&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 384 312&quot;&gt;&lt;path d=&quot;m384 36.9c-14.1 6.3-29.3 10.5-45.2 12.4 16.3-9.7 28.8-25.2 34.6-43.6-15.2 9-32.1 15.6-50 19.1-14.4-15.2-34.9-24.8-57.5-24.8-43.5 0-78.8 35.3-78.8 78.8 0 6.2.7 12.2 2 17.9-65.5-3.3-123.5-34.6-162.4-82.3-6.7 11.6-10.6 25.2-10.6 39.6 0 27.3 13.9 51.4 35 65.6-12.9-.4-25.1-4-35.7-9.9v1c0 38.2 27.2 70 63.2 77.2-6.6 1.8-13.6 2.8-20.8 2.8-5.1 0-10-.5-14.8-1.4 10 31.3 39.1 54.1 73.6 54.7-27 21.1-60.9 33.7-97.8 33.7-6.4 0-12.6-.4-18.8-1.1 34.9 22.4 76.3 35.4 120.8 35.4 144.9 0 224.1-120 224.1-224.1 0-3.4-.1-6.8-.2-10.2 15.4-11.1 28.7-25 39.3-40.8z&quot;/&gt;&lt;/svg&gt;
+</code></pre><h6 id="facebooksvg">facebook.svg</h6>
+<pre><code>&lt;svg class=&quot;{{ with .class }}{{ . }} {{ end }}icon icon-facebook&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 352 352&quot;&gt;&lt;path d=&quot;m0 32v288c0 17.5 14.5 32 32 32h288c17.5 0 32-14.5 32-32v-288c0-17.5-14.5-32-32-32h-288c-17.5 0-32 14.5-32 32zm320 0v288h-83v-108h41.5l6-48h-47.5v-31c0-14 3.5-23.5 23.5-23.5h26v-43.5c-4.4-.6-19.8-1.5-37.5-1.5-36.9 0-62 22.2-62 63.5v36h-42v48h42v108h-155v-288z&quot;/&gt;&lt;/svg&gt;
+</code></pre><h6 id="linkedinsvg">linkedin.svg</h6>
+<pre><code>&lt;svg class=&quot;{{ with .class }}{{ . }} {{ end }}icon icon-linkedin&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 352 352&quot;&gt;&lt;path d=&quot;M0,40v272c0,21.9,18.1,40,40,40h272c21.9,0,40-18.1,40-40V40c0-21.9-18.1-40-40-40H40C18.1,0,0,18.1,0,40z M312,32 c4.6,0,8,3.4,8,8v272c0,4.6-3.4,8-8,8H40c-4.6,0-8-3.4-8-8V40c0-4.6,3.4-8,8-8H312z M59.5,87c0,15.2,12.3,27.5,27.5,27.5 c15.2,0,27.5-12.3,27.5-27.5c0-15.2-12.3-27.5-27.5-27.5C71.8,59.5,59.5,71.8,59.5,87z M187,157h-1v-21h-45v152h47v-75 c0-19.8,3.9-39,28.5-39c24.2,0,24.5,22.4,24.5,40v74h47v-83.5c0-40.9-8.7-72-56.5-72C208.5,132.5,193.3,145.1,187,157z M64,288h47.5 V136H64V288z&quot;/&gt;&lt;/svg&gt;
+</code></pre><h6 id="whatsappsvg">whatsapp.svg</h6>
+<pre><code>&lt;svg class=&quot;{{ with .class }}{{ . }} {{ end }}icon icon-whatsapp&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z&quot;/&gt;&lt;/svg&gt;
+</code></pre><h6 id="emailsvg">email.svg</h6>
+<pre><code>&lt;svg class=&quot;{{ with .class }}{{ . }} {{ end }}icon icon-mail&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 416 288&quot;&gt;&lt;path d=&quot;m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z&quot;/&gt;&lt;/svg&gt;
+</code></pre><h2 id="2-css-for-socialsharehtml">2. CSS for <em>socialshare.html</em></h2>
+<p>You can use the CSS as it is or modify some CSS classes to match with your hugo theme:-</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">social-share</span> {
+	<span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">relative</span>;
+	<span style="color:#66d9ef">top</span>: <span style="color:#ae81ff">-0.5</span><span style="color:#66d9ef">em</span>;
+}
+ 
+.<span style="color:#a6e22e">social-share</span> <span style="color:#f92672">ul</span> {
+	<span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>;
+}
+ 
+.<span style="color:#a6e22e">social-share</span> <span style="color:#f92672">ul</span> <span style="color:#f92672">li</span> <span style="color:#f92672">p</span> {
+	<span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">none</span>;
+}
+ 
+.<span style="color:#a6e22e">social-share</span> .<span style="color:#a6e22e">share-icons</span> <span style="color:#f92672">li</span> {
+	<span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span> <span style="color:#75715e">!important</span>;
+	<span style="color:#66d9ef">padding-bottom</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span> <span style="color:#75715e">!important</span>;
+}
+ 
+.<span style="color:#a6e22e">social-share</span> .<span style="color:#a6e22e">share-btn</span> {
+	<span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0.25</span><span style="color:#66d9ef">em</span>;
+	<span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">3</span><span style="color:#66d9ef">em</span>;
+}
+ 
+.<span style="color:#a6e22e">social-share-nav</span> .<span style="color:#a6e22e">share-btn</span> <span style="color:#f92672">h3</span>{
+	<span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#ffffff</span>;
+}
+
+<span style="color:#f92672">ul</span>.<span style="color:#a6e22e">share-icons</span> {
+	<span style="color:#66d9ef">cursor</span>: <span style="color:#66d9ef">default</span>;
+	<span style="color:#66d9ef">list-style</span>: <span style="color:#66d9ef">none</span>;
+	<span style="color:#66d9ef">padding-left</span>: <span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">margin-top</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span>;
+}
+
+<span style="color:#f92672">ul</span>.<span style="color:#a6e22e">share-icons</span> <span style="color:#f92672">li</span> {
+	<span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">inline</span><span style="color:#f92672">-</span><span style="color:#66d9ef">block</span>;
+	<span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span>;
+}
+
+<span style="color:#f92672">ul</span>.<span style="color:#a6e22e">share-icons</span> <span style="color:#f92672">li</span>:<span style="color:#a6e22e">last-child</span> {
+	<span style="color:#66d9ef">padding-right</span>: <span style="color:#ae81ff">0</span>;
+}
+
+<span style="color:#f92672">ul</span>.<span style="color:#a6e22e">share-icons</span> <span style="color:#f92672">li</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">*</span> {
+	<span style="color:#66d9ef">text-decoration</span>: <span style="color:#66d9ef">none</span>;
+	<span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">0</span>;
+}
+
+<span style="color:#f92672">ul</span>.<span style="color:#a6e22e">share-icons</span> <span style="color:#f92672">li</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">*</span>:<span style="color:#a6e22e">before</span> {
+	<span style="color:#66d9ef">-moz-</span>osx-font-smoothing: grayscale;
+	<span style="color:#66d9ef">-webkit-</span>font-smoothing: antialiased;
+	<span style="color:#66d9ef">font-family</span>: FontAwesome;
+	<span style="color:#66d9ef">font-style</span>: <span style="color:#66d9ef">normal</span>;
+	<span style="color:#66d9ef">font-weight</span>: <span style="color:#66d9ef">normal</span>;
+	<span style="color:#66d9ef">text-transform</span>: <span style="color:#66d9ef">none</span> <span style="color:#75715e">!important</span>;
+}
+
+<span style="color:#f92672">ul</span>.<span style="color:#a6e22e">share-icons</span> <span style="color:#f92672">li</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">*</span> .<span style="color:#a6e22e">label</span> {
+	<span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">none</span>;
+}
+ 
+.<span style="color:#a6e22e">share-btn</span> {
+	<span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">inline</span><span style="color:#f92672">-</span><span style="color:#66d9ef">block</span>;
+	<span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#ffffff</span>;
+	<span style="color:#66d9ef">border</span>: <span style="color:#66d9ef">none</span>;
+	<span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">4</span><span style="color:#66d9ef">px</span>;
+	<span style="color:#66d9ef">box-shadow</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> rgba(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0.2</span>);
+	<span style="color:#66d9ef">outline</span>: <span style="color:#66d9ef">none</span>;
+	<span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">center</span>;
+	<span style="color:#66d9ef">text-decoration</span>: <span style="color:#66d9ef">none</span>;
+}
+ 
+.<span style="color:#a6e22e">share-btn</span>:<span style="color:#a6e22e">hover</span> {
+	<span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#ffffff</span> <span style="color:#75715e">!important</span>;
+}
+
+.<span style="color:#a6e22e">share-btn</span>:<span style="color:#a6e22e">active</span> {
+	<span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">relative</span>;
+	<span style="color:#66d9ef">top</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span>;
+	<span style="color:#66d9ef">box-shadow</span>: <span style="color:#66d9ef">none</span>;
+	<span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#e2e2e2</span>;
+	<span style="color:#66d9ef">outline</span>: <span style="color:#66d9ef">none</span>;
+}
+.<span style="color:#a6e22e">share-btn</span> .<span style="color:#a6e22e">widget-social__link-icon</span> {
+	<span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>;
+}
+ 
+.<span style="color:#a6e22e">share-btn</span>.<span style="color:#a6e22e">twitter</span>     { <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#55acee</span>; }
+.<span style="color:#a6e22e">share-btn</span>.<span style="color:#a6e22e">google-plus</span> { <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#dd4b39</span>; }
+.<span style="color:#a6e22e">share-btn</span>.<span style="color:#a6e22e">facebook</span>    { <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#3B5998</span>; }
+.<span style="color:#a6e22e">share-btn</span>.<span style="color:#a6e22e">linkedin</span>    { <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#4875B4</span>; }
+.<span style="color:#a6e22e">share-btn</span>.<span style="color:#a6e22e">stumbleupon</span> { <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#EB4823</span>; }
+.<span style="color:#a6e22e">share-btn</span>.<span style="color:#a6e22e">pinterest</span>   { <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#BD081C</span>; }
+.<span style="color:#a6e22e">share-btn</span>.<span style="color:#a6e22e">reddit</span>      { <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#ff5700</span>; }
+.<span style="color:#a6e22e">share-btn</span>.<span style="color:#a6e22e">email</span>       { <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#444444</span>; }
+.<span style="color:#a6e22e">share-btn</span>.<span style="color:#a6e22e">whatsapp</span>    { <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#25d366</span>; }
+
+
+.<span style="color:#a6e22e">share-btn</span>.<span style="color:#a6e22e">twitter</span>:<span style="color:#a6e22e">hover</span>     { <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#4c9ad6</span>; }
+.<span style="color:#a6e22e">share-btn</span>.<span style="color:#a6e22e">google-plus</span>:<span style="color:#a6e22e">hover</span> { <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#c64333</span>; }
+.<span style="color:#a6e22e">share-btn</span>.<span style="color:#a6e22e">facebook</span>:<span style="color:#a6e22e">hover</span>    { <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#2f4779</span>; }
+.<span style="color:#a6e22e">share-btn</span>.<span style="color:#a6e22e">linkedin</span>:<span style="color:#a6e22e">hover</span>    { <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#4069a2</span>; }
+.<span style="color:#a6e22e">share-btn</span>.<span style="color:#a6e22e">stumbleupon</span>:<span style="color:#a6e22e">hover</span> { <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#d3401f</span>; }
+.<span style="color:#a6e22e">share-btn</span>.<span style="color:#a6e22e">pinterest</span>:<span style="color:#a6e22e">hover</span>   { <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#AD0000</span>; }
+.<span style="color:#a6e22e">share-btn</span>.<span style="color:#a6e22e">reddit</span>:<span style="color:#a6e22e">hover</span>      { <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#e54e00</span>; }
+.<span style="color:#a6e22e">share-btn</span>.<span style="color:#a6e22e">email</span>:<span style="color:#a6e22e">hover</span>       { <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#363636</span>; }
+</code></pre></div><h2 id="3-socialshare-front-matter">3. SocialShare <em>front-matter</em></h2>
 <p>You can control whether you want to display social share icons on specific page. If socialshare is true, social icons will be displayed on that page otherwise not be displayed.</p>
 <h6 id="blog-pagemd">blog-page.md</h6>
 <pre><code>---
@@ -306,7 +426,7 @@ if (!doNotTrack) {
 
 socialshare: true
 ---
-</code></pre><h2 id="3-socialshare-configtoml">3. SocialShare <em>config.toml</em></h2>
+</code></pre><h2 id="4-socialshare-configtoml">4. SocialShare <em>config.toml</em></h2>
 <p>You need to add following configuration in <em>config.toml</em> file. You can enable and disable social share icons site-wide using this configuration.</p>
 <h6 id="configtoml">config.toml</h6>
 <pre><code>[Params.social.share]
@@ -316,7 +436,7 @@ socialshare: true
   whatsapp = true
   email = true
 </code></pre><p><br /></p>
-<h3 id="4-add-socialsharehtml-partial-to-singlehtml">4. Add <em>socialshare.html</em> partial to <em>single.html</em></h3>
+<h3 id="5-add-socialsharehtml-partial-to-singlehtml">5. Add <em>socialshare.html</em> partial to <em>single.html</em></h3>
 <p>You need to add socialshare partial to single.html file as below:-</p>
 <h6 id="singlehtml">single.html</h6>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ define &#34;main&#34; }}
