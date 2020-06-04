@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>Customize sitemap in Hugo Website</title>
+      <link>https://codingnconcepts.com/hugo/sitemap-hugo/</link>
+      <pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/hugo/sitemap-hugo/</guid>
+      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn how to disable or customize sitemap.xml for Hugo website.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>How to Compare two Strings in Java</title>
       <link>https://codingnconcepts.com/java/compare-two-strings-in-java/</link>
       <pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate>

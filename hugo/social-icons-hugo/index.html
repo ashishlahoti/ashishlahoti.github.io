@@ -6,9 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Add Social Icons in Hugo Website Pages - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Learn how to create hugo partial for social share icons">
+	<meta name="description" content="Learn how to create hugo partial for social share icons in hugo website">
 	<meta property="og:title" content="Add Social Icons in Hugo Website Pages" />
-<meta property="og:description" content="Learn how to create hugo partial for social share icons" />
+<meta property="og:description" content="Learn how to create hugo partial for social share icons in hugo website" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/hugo/social-icons-hugo/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/gohugo.png" />
@@ -25,7 +25,7 @@
 <meta name="twitter:image" content="https://codingnconcepts.com/img/logo/gohugo.png"/>
 
 <meta name="twitter:title" content="Add Social Icons in Hugo Website Pages"/>
-<meta name="twitter:description" content="Learn how to create hugo partial for social share icons"/>
+<meta name="twitter:description" content="Learn how to create hugo partial for social share icons in hugo website"/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -57,7 +57,7 @@ if (!doNotTrack) {
     "name": "Add Social Icons in Hugo Website Pages",
     "headline": "Add Social Icons in Hugo Website Pages",
     "alternativeHeadline": "Guide to create a Social Share partial in Hugo",
-    "description": "Learn how to create hugo partial for social share icons",
+    "description": "Learn how to create hugo partial for social share icons in hugo website",
     "inLanguage": "en-us",
 	"isFamilyFriendly": "true",
     "mainEntityOfPage": {
@@ -94,7 +94,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/logo/gohugo.png"],
     "url" : "https:\/\/codingnconcepts.com\/hugo\/social-icons-hugo\/",
-    "wordCount" : "976",
+    "wordCount" : "977",
     "genre" : ["Hugo Partial"],
     "keywords" :  null 
 }
@@ -217,7 +217,11 @@ if (!doNotTrack) {
         <li></li>
       </ul>
     </li>
-    <li><a href="#2-css-for-socialsharehtml">2. CSS for <em>socialshare.html</em></a></li>
+    <li><a href="#2-css-for-socialsharehtml">2. CSS for <em>socialshare.html</em></a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
     <li><a href="#3-socialshare-front-matter">3. SocialShare <em>front-matter</em></a>
       <ul>
         <li></li>
@@ -311,6 +315,7 @@ if (!doNotTrack) {
 <pre><code>&lt;svg class=&quot;{{ with .class }}{{ . }} {{ end }}icon icon-mail&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 416 288&quot;&gt;&lt;path d=&quot;m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z&quot;/&gt;&lt;/svg&gt;
 </code></pre><h2 id="2-css-for-socialsharehtml">2. CSS for <em>socialshare.html</em></h2>
 <p>You can use the CSS as it is or modify some CSS classes to match with your hugo theme:-</p>
+<h6 id="stylecss">style.css</h6>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">social-share</span> {
 	<span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">relative</span>;
 	<span style="color:#66d9ef">top</span>: <span style="color:#ae81ff">-0.5</span><span style="color:#66d9ef">em</span>;
@@ -509,7 +514,7 @@ socialshare: true
       
       
       <li>
-        <a href="whatsapp://send?text=Add%20Social%20Icons%20in%20Hugo%20Website%20Pages%2c%20by%20Coding%20N%20Concepts%0aLearn%20how%20to%20create%20hugo%20partial%20for%20social%20share%20icons%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fhugo%2fsocial-icons-hugo%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=Add%20Social%20Icons%20in%20Hugo%20Website%20Pages%2c%20by%20Coding%20N%20Concepts%0aLearn%20how%20to%20create%20hugo%20partial%20for%20social%20share%20icons%20in%20hugo%20website%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fhugo%2fsocial-icons-hugo%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>Email</p>
         </a>
@@ -519,7 +524,7 @@ socialshare: true
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - Add%20Social%20Icons%20in%20Hugo%20Website%20Pages.&amp;body=Add%20Social%20Icons%20in%20Hugo%20Website%20Pages%2c%20by%20Coding%20N%20Concepts%0aLearn%20how%20to%20create%20hugo%20partial%20for%20social%20share%20icons%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fhugo%2fsocial-icons-hugo%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - Add%20Social%20Icons%20in%20Hugo%20Website%20Pages.&amp;body=Add%20Social%20Icons%20in%20Hugo%20Website%20Pages%2c%20by%20Coding%20N%20Concepts%0aLearn%20how%20to%20create%20hugo%20partial%20for%20social%20share%20icons%20in%20hugo%20website%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fhugo%2fsocial-icons-hugo%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>
@@ -554,7 +559,7 @@ socialshare: true
 
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="/hugo/custom-shortcode-hugo/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Useful Hugo Shortcodes</p></a>
+		<a class="post-nav__link" href="/hugo/sitemap-hugo/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Customize sitemap in Hugo Website</p></a>
 	</div>
 </nav>
 
