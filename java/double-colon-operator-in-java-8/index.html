@@ -94,7 +94,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/logo/java.png"],
     "url" : "https:\/\/codingnconcepts.com\/java\/double-colon-operator-in-java-8\/",
-    "wordCount" : "1681",
+    "wordCount" : "1684",
     "genre" : ["Java Streams"],
     "keywords" : ["double colon operator in java 8","method reference in java 8"]
 }
@@ -501,7 +501,7 @@ Map map2 <span style="color:#f92672">=</span> mapMaker<span style="color:#f92672
 	
 	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">squareAndAdd</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> num1<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> num2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     	Function<span style="color:#f92672">&lt;</span>Double<span style="color:#f92672">,</span> Double<span style="color:#f92672">&gt;</span> square <span style="color:#f92672">=</span> <span style="color:#66d9ef">super</span><span style="color:#f92672">::</span>square<span style="color:#f92672">;</span> 	
-    	<span style="color:#66d9ef">return</span> square<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>num1<span style="color:#f92672">)*</span> square<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>num2<span style="color:#f92672">);</span>
+    	<span style="color:#66d9ef">return</span> square<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>num1<span style="color:#f92672">)</span> <span style="color:#f92672">+</span> square<span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>num2<span style="color:#f92672">);</span>
     <span style="color:#f92672">}</span>
 	
 	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">squareAndMultiply</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> num1<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> num2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
@@ -650,7 +650,7 @@ Tutorial[ Tutorial 3	- 30min, rating=4.9 ]
 </code></pre><p><br /></p>
 <h3 id="7-conclusion">7. Conclusion</h3>
 <p>In this article, we saw how to use double colon operator introduced in Java 8. It is very useful to keep your code concise and readable specially in streams where you can replace lambda expressions with method reference using double colon operator.</p>
-<p>Modern IDEs such as Eclipse (Quick Fix) and IntelliJ IDEA (Intention) provide built in support to convert lambda expression to an equivalent method reference.</p>
+<p>Modern IDEs such as Eclipse <em>(Quick Fix Feature)</em> and IntelliJ IDEA <em>(Intention Feature)</em> provide built in support to convert lambda expression to an equivalent method reference.</p>
 		</div>
 		<footer class="post__footer">
 			

@@ -661,17 +661,12 @@ You can find the singleton pattern implementation here.&lt;/li&gt;
     </item>
     
     <item>
-      <title>Immutable Class</title>
+      <title>Immutable Class in Java</title>
       <link>https://codingnconcepts.com/java/immutable-class-using-java/</link>
       <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/java/immutable-class-using-java/</guid>
-      <description>&lt;p&gt;This problem is frequently asked in the interview to check your understanding on immutable class. This program answers following artefacts of immutable class:-&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Private Constructor&lt;/li&gt;
-&lt;li&gt;No Setter Methods&lt;/li&gt;
-&lt;li&gt;Returns new instance of mutable properties from Getter Methods&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn about &lt;em&gt;Immutable Class&lt;/em&gt; and its benefits in thread-safety, caching and collections. We will also look at rules to create such classes and eventually we&amp;rsquo;ll write an &lt;em&gt;Immutable Class&lt;/em&gt; from scratch in Java.&lt;/p&gt;</description>
     </item>
     
     <item>

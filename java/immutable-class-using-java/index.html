@@ -4,16 +4,16 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Immutable Class - Coding N Concepts</title>
+	<title>Immutable Class in Java - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="How to create immutable class in Java - explained.">
-	<meta property="og:title" content="Immutable Class" />
-<meta property="og:description" content="How to create immutable class in Java - explained." />
+	<meta name="description" content="Learn immutable class in Java and its benefits in thread-safety, caching and collections. Also learn how to create an immutable class in Java from scratch using rules such as final class, private final fields, no setters, field initialization using only constructor, etc.">
+	<meta property="og:title" content="Immutable Class in Java" />
+<meta property="og:description" content="Learn immutable class in Java and its benefits in thread-safety, caching and collections. Also learn how to create an immutable class in Java from scratch using rules such as final class, private final fields, no setters, field initialization using only constructor, etc." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/java/immutable-class-using-java/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/java.png" />
 <meta property="article:published_time" content="2018-05-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2018-05-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-07T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -24,8 +24,8 @@
 	<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://codingnconcepts.com/img/logo/java.png"/>
 
-<meta name="twitter:title" content="Immutable Class"/>
-<meta name="twitter:description" content="How to create immutable class in Java - explained."/>
+<meta name="twitter:title" content="Immutable Class in Java"/>
+<meta name="twitter:description" content="Learn immutable class in Java and its benefits in thread-safety, caching and collections. Also learn how to create an immutable class in Java from scratch using rules such as final class, private final fields, no setters, field initialization using only constructor, etc."/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -54,10 +54,10 @@ if (!doNotTrack) {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
     "articleSection": "java",
-    "name": "Immutable Class",
-    "headline": "Immutable Class",
+    "name": "Immutable Class in Java",
+    "headline": "Immutable Class in Java",
     "alternativeHeadline": "",
-    "description": "How to create immutable class in Java - explained.",
+    "description": "Learn immutable class in Java and its benefits in thread-safety, caching and collections. Also learn how to create an immutable class in Java from scratch using rules such as final class, private final fields, no setters, field initialization using only constructor, etc.",
     "inLanguage": "en-us",
 	"isFamilyFriendly": "true",
     "mainEntityOfPage": {
@@ -80,7 +80,7 @@ if (!doNotTrack) {
     "copyrightYear" : "2018",
     "dateCreated": "2018-05-01T00:00:00.00Z",
     "datePublished": "2018-05-01T00:00:00.00Z",
-    "dateModified": "2018-05-01T00:00:00.00Z",
+    "dateModified": "2020-06-07T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -94,7 +94,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/logo/java.png"],
     "url" : "https:\/\/codingnconcepts.com\/java\/immutable-class-using-java\/",
-    "wordCount" : "268",
+    "wordCount" : "1435",
     "genre" : ["Java Design Pattern"],
     "keywords" :  null 
 }
@@ -107,7 +107,7 @@ if (!doNotTrack) {
 	<div class="container">
 		<div class="logo">
 			<a class="logo__link" href="/" title="Coding N Concepts" rel="home">
-				<div class="logo__title"><img src="/favicon-32x32.png" alt="Immutable Class"> Coding N Concepts</div>
+				<div class="logo__title"><img src="/favicon-32x32.png" alt="Immutable Class in Java"> Coding N Concepts</div>
 				<div class="logo__tagline">Ashish Lahoti&#39;s Technical Blog</div>
 			</a>
 		</div>
@@ -191,13 +191,14 @@ if (!doNotTrack) {
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title"><img class="post__thumbnail" src="/img/logo/java.png" alt="Immutable Class"> Immutable Class</h1>
+			<h1 class="post__title"><img class="post__thumbnail" src="/img/logo/java.png" alt="Immutable Class in Java"> Immutable Class in Java</h1>
 			<div class="post__meta meta"><div class="meta__item-author meta__item">
 	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg> <span class="meta__text">Ashish Lahoti</span>
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
 	<time class="meta__text" datetime="2018-05-01T00:00:00Z">May 01, 2018</time>
+	<time class="meta__text" datetime="2020-06-07T00:00:00Z"> (Last Modified: June 07, 2020)</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -205,44 +206,154 @@ if (!doNotTrack) {
 	<span class="meta__text"><a class="meta__link" href="/categories/java/" rel="category">Java</a>
 	</span>
 </div></div>
-		</header><div class="content post__content clearfix">
-			<p>This problem is frequently asked in the interview to check your understanding on immutable class. This program answers following artefacts of immutable class:-</p>
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-immutable-class">What is Immutable Class?</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#benefits-of-immutable-class">Benefits of Immutable Class</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#how-to-create-immutable-class">How to create Immutable Class?</a></li>
+    <li><a href="#summary">Summary</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div>
+<div class="content post__content clearfix">
+			<p>In this tutorial, we&rsquo;ll learn about <em>Immutable Class</em> and its benefits in thread-safety, caching and collections. We will also look at rules to create such classes and eventually we&rsquo;ll write an <em>Immutable Class</em> from scratch in Java.</p>
+<h2 id="what-is-immutable-class">What is Immutable Class?</h2>
+<p><strong>Immutable Class</strong> means that once an <strong>object</strong> is initialized from this <em>Class</em>, we cannot change the state and content of that object.</p>
+<p>In other words, An immutable object can’t be modified after it has been created. When a new value is needed, the accepted practice is to make a copy of the object that has the new value.</p>
+<h6 id="examples">Examples</h6>
+<p>In Java, All primitive wrapper classes <em>(Integer, Byte, Long, Float, Double, Character, Boolean and Short)</em> and <em>String</em> are immutable in nature.</p>
+<p>String is the most popular Immutable Class known among developers. String object cannot be modified once initialized. Operations like <em>trim()</em>, <em>substring()</em>, <em>replace()</em>, <em>toUpperCase()</em>, <em>toLowerCase()</em> always return a new instance and don’t affect the current instance.</p>
+<p>In the below example, s1.toUpperCase() returns new instance which need to assign back to s1, if you want s1 to refer to new uppercase instance.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String s1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> String<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;CodingNConcepts&#34;</span><span style="color:#f92672">);</span>
+String s2 <span style="color:#f92672">=</span> s1<span style="color:#f92672">.</span><span style="color:#a6e22e">toUpperCase</span><span style="color:#f92672">();</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>s1 <span style="color:#f92672">==</span> s2<span style="color:#f92672">);</span>  <span style="color:#75715e">//false
+</span><span style="color:#75715e"></span>s1 <span style="color:#f92672">=</span> s2<span style="color:#f92672">;</span>                       <span style="color:#75715e">//assign back to s1
+</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>s1 <span style="color:#f92672">==</span> s2<span style="color:#f92672">);</span>  <span style="color:#75715e">//true
+</span></code></pre></div><h2 id="benefits-of-immutable-class">Benefits of Immutable Class</h2>
+<p>Some of the key benefits of Immutable Class are:-</p>
+<h4 id="1-mutable-vs-immutable-object">1. Mutable vs Immutable Object</h4>
+<p>A <strong>mutable object</strong> starts with one state (initial values of the instance variables). Each mutation of the instance variable takes the object to another state. This brings in the need to document all possible states a mutable object can be in. It is also difficult to avoid inconsistent or invalid states. Hence, all these makes a mutable object difficult to work with.</p>
+<p>Whereas, <strong>immutable object</strong> have just one state, which is first and foremost benefit of Immutable Class.<br>
+<br /></p>
+<h4 id="2-thread-safety">2. Thread safety</h4>
+<p>Immutable objects are inherently thread-safe. They do not require synchronization. Since there is no way the state of an immutable object can change, there is no possibility of one thread observing the effect of another thread. We do not have to deal with the intricacies of sharing an object among threads (like locking, synchronization, making variables volatile etc.). Thus, we can freely share immutable objects. This is the easiest way to achieve thread safety.<br>
+<br /></p>
+<h4 id="3-reusablecacheable">3. Reusable/Cacheable</h4>
+<p>Immutable objects encourage to cache or store the frequently used instances rather than creating one each time. This is because two immutable instances with the same properties/values are equal.<br>
+Some examples of this being applied are as follows:-</p>
+<p><strong>Primitive wrapper classes</strong><br>
+Creating primitive wrapper objects (Integer, Float, Double etc) using static factory method valueOf does not always return new wrapper instances. In case of Integer, they cache Integer values from -128 to 127 by default.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Integer oneV1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Integer<span style="color:#f92672">(</span>1<span style="color:#f92672">);</span>
+Integer oneV2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Integer<span style="color:#f92672">(</span>1<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>oneV1 <span style="color:#f92672">==</span> oneV2<span style="color:#f92672">);</span>       <span style="color:#75715e">//false
+</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>oneV1<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>oneV2<span style="color:#f92672">));</span>  <span style="color:#75715e">//true
+</span><span style="color:#75715e"></span>
+oneV1 <span style="color:#f92672">=</span> Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">valueOf</span><span style="color:#f92672">(</span>1<span style="color:#f92672">);</span>               <span style="color:#75715e">//returns cached instance
+</span><span style="color:#75715e"></span>oneV2 <span style="color:#f92672">=</span> Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">valueOf</span><span style="color:#f92672">(</span>1<span style="color:#f92672">);</span>               <span style="color:#75715e">//returns cached instance
+</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>oneV1 <span style="color:#f92672">==</span> oneV2<span style="color:#f92672">);</span>       <span style="color:#75715e">//true
+</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>oneV1<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>oneV2<span style="color:#f92672">));</span>  <span style="color:#75715e">//true
+</span></code></pre></div><p><strong>BigInteger</strong><br>
+BigInteger stores some common BigInteger values as instance variables.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"> <span style="color:#75715e">/**
+</span><span style="color:#75715e"> * The BigInteger constant zero.
+</span><span style="color:#75715e"> *
+</span><span style="color:#75715e"> * @since   1.2
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> BigInteger ZERO <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BigInteger<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>0<span style="color:#f92672">],</span> 0<span style="color:#f92672">);</span>
+</code></pre></div><p>This reduces the memory footprint and the garbage collection costs.</p>
+<p><em>Tip:</em> When designing an immutable class try to use a static factory method and a private constructor rather than providing a public constructor. This will enable us to add caching of some immutable instances later.<br>
+<br /></p>
+<h4 id="4-building-blocks-for-collections">4. Building blocks for Collections</h4>
+<p>The immutable objects make a great building block for Collections as compare to immutable objects. Let&rsquo;s understand the problem we face with immutable objects in Collections.</p>
+<p>First of all, we create a mutable <em>Person</em> class</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> <span style="color:#f92672">{</span>
+	
+	String name<span style="color:#f92672">;</span>
+	
+	<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getName</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">return</span> name<span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+	
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setName</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+	
+	<span style="color:#a6e22e">@Override</span>
+	<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Person { name: &#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; }&#34;</span><span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Now let&rsquo;s create some person objects to create <strong>Set</strong> of persons:-</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Person person1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Person<span style="color:#f92672">();</span>
+person1<span style="color:#f92672">.</span><span style="color:#a6e22e">setName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Adam&#34;</span><span style="color:#f92672">);</span>
+
+Person person2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Person<span style="color:#f92672">();</span>
+person2<span style="color:#f92672">.</span><span style="color:#a6e22e">setName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Ben&#34;</span><span style="color:#f92672">);</span>
+
+Set<span style="color:#f92672">&lt;</span>Person<span style="color:#f92672">&gt;</span> setOfPerson <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashSet<span style="color:#f92672">&lt;&gt;(</span>Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span>person1<span style="color:#f92672">,</span> person2<span style="color:#f92672">));</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>setOfPerson<span style="color:#f92672">);</span>
+
+person1<span style="color:#f92672">.</span><span style="color:#a6e22e">setName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Charlie&#34;</span><span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>setOfPerson<span style="color:#f92672">);</span>
+</code></pre></div><pre><code><div class="code_output">Output</div>
+[Person { name: Adam }, Person { name: Ben }]
+[Person { name: Charlie }, Person { name: Ben }]
+</code></pre><p>We wanted to create a Set of persons <em>Adam</em> and <em>Ben</em> but next part of the code has mutated the <em>Adam</em> to <em>Charlie</em> which is not intended.We will solve this problem by making an immutable class <em>ImmutablePerson</em> in subsequent part of article.</p>
+<p>As we saw that mutable objects can be mutated even if not intended, immutable objects make a great fit to be used as <strong>Keys of a Map</strong>, in <strong>Set, List</strong>, and other collections.</p>
+<h2 id="how-to-create-immutable-class">How to create Immutable Class?</h2>
+<p>In order to create an <em>Immutable Class</em>, you should keep following points in mind:-</p>
+<ol>
+<li>Declare the <strong>class as final</strong> so that it cannot be extended and subclasses will not be able to override methods.</li>
+<li>Make all the <strong>fields as private</strong> so direct access in not allowed</li>
+<li>Make all the <strong>fields as final</strong> so that value cannot be modified once initialized</li>
+<li>Provide <strong>no setter methods</strong> — setter methods are those methods which modify fields or objects referred to by fields.</li>
+<li>Initialize all the final fields through a <strong>constructor</strong> and perform a deep copy for mutable objects.</li>
+<li>If the class holds a mutable object:
 <ul>
-<li>Private Constructor</li>
-<li>No Setter Methods</li>
-<li>Returns new instance of mutable properties from Getter Methods</li>
+<li>Don&rsquo;t provide any methods that modify the mutable objects.</li>
+<li>Always return a copy of mutable object from <strong>getter method</strong> and never return the actual object reference.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.abc<span style="color:#f92672">;</span>
-
-<span style="color:#f92672">import</span> java.util.Date<span style="color:#f92672">;</span>
-
-<span style="color:#75715e">/**
-</span><span style="color:#75715e"> * Immutable class should mark as final so that it can not be extended by another class. 
-</span><span style="color:#75715e"> * Fields should mark as private so direct access is not allowed
-</span><span style="color:#75715e"> * Fields should mark as final so that value can not be modified once initialized
+</li>
+</ol>
+<p>Let&rsquo;s apply all the above points and create our immutable class <em>ImmutablePerson</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Immutable class should mark as final so it can not be extended. 
+</span><span style="color:#75715e"> * Fields should mark as private so direct access is not allowed.
+</span><span style="color:#75715e"> * Fields should mark as final so value can not be modified once initialized.
 </span><span style="color:#75715e"> **/</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyImmutable</span> <span style="color:#f92672">{</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ImmutablePerson</span> <span style="color:#f92672">{</span>
 
-    <span style="color:#75715e">/**
-</span><span style="color:#75715e">     * String class is immutable
-</span><span style="color:#75715e">     **/</span>
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> String name<span style="color:#f92672">;</span>
+    <span style="color:#75715e">// String - immutable
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> String name<span style="color:#f92672">;</span>
+    
+    <span style="color:#75715e">// Integer - immutable
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> Integer weight<span style="color:#f92672">;</span>
+    
+    <span style="color:#75715e">// Date - mutable
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> Date dateOfBirth<span style="color:#f92672">;</span>
     
     <span style="color:#75715e">/**
-</span><span style="color:#75715e">     * Integer class is immutable
-</span><span style="color:#75715e">     **/</span>
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> Integer weight<span style="color:#f92672">;</span>
-    
-    <span style="color:#75715e">/**
-</span><span style="color:#75715e">     * Date class is mutable
-</span><span style="color:#75715e">     **/</span>
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> Date dateOfBirth<span style="color:#f92672">;</span>
-    
-    <span style="color:#75715e">/**
-</span><span style="color:#75715e">     * Default private constructor will ensure no unplanned construction of class
 </span><span style="color:#75715e">     * All the final fields are initialized through constructor
+</span><span style="color:#75715e">     * Perform a deep copy of immutable objects
 </span><span style="color:#75715e">     */</span>
-    <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">MyImmutable</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">,</span> Integer weight<span style="color:#f92672">,</span> Date dateOfBirth<span style="color:#f92672">){</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">ImmutablePerson</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">,</span> Integer weight<span style="color:#f92672">,</span> Date dateOfBirth<span style="color:#f92672">){</span>
         <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span>
         <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">weight</span> <span style="color:#f92672">=</span> weight<span style="color:#f92672">;</span>
         <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">dateOfBirth</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date<span style="color:#f92672">(</span>dateOfBirth<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">());</span>
@@ -274,9 +385,51 @@ if (!doNotTrack) {
     <span style="color:#66d9ef">public</span> Date <span style="color:#a6e22e">getDateOfBirth</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Date<span style="color:#f92672">(</span>dateOfBirth<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">());</span>
     <span style="color:#f92672">}</span>
+    
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    	<span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Person { name: &#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;, weight: &#34;</span> <span style="color:#f92672">+</span> weight <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;, dateOfBirth: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">new</span> SimpleDateFormat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;dd-MM-yyyy&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">format</span><span style="color:#f92672">(</span>dateOfBirth<span style="color:#f92672">)</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;}&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
+</code></pre></div><p>Now, Let&rsquo;s create immutable person objects to create <strong>Set</strong> of persons:-</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">ImmutablePerson person1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ImmutablePerson<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Adam&#34;</span><span style="color:#f92672">,</span> 68<span style="color:#f92672">,</span> <span style="color:#66d9ef">new</span> SimpleDateFormat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;dd-MM-yyyy&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">parse</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;22-08-1986&#34;</span><span style="color:#f92672">));</span>
 
-</code></pre></div>
+ImmutablePerson person2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ImmutablePerson<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Ben&#34;</span><span style="color:#f92672">,</span> 52<span style="color:#f92672">,</span> <span style="color:#66d9ef">new</span> SimpleDateFormat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;dd-MM-yyyy&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">parse</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;01-12-1990&#34;</span><span style="color:#f92672">));</span>
+
+Set<span style="color:#f92672">&lt;</span>ImmutablePerson<span style="color:#f92672">&gt;</span> setOfPerson <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashSet<span style="color:#f92672">&lt;&gt;(</span>Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span>person1<span style="color:#f92672">,</span> person2<span style="color:#f92672">));</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>setOfPerson<span style="color:#f92672">);</span>
+<span style="color:#75715e">/**
+</span><span style="color:#75715e">* ImmutablePerson do not provide setter methods, 
+</span><span style="color:#75715e">* no way to mutate name, weight, or date property fields.
+</span><span style="color:#75715e">*/</span>
+<span style="color:#75715e">//person1.setName(&#34;Charlie&#34;);
+</span><span style="color:#75715e">//person1.setWeight(90);
+</span><span style="color:#75715e">//person1.setDate(new SimpleDateFormat(&#34;dd-MM-yyyy&#34;).parse(&#34;01-01-2001&#34;));
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">/**
+</span><span style="color:#75715e">* getDateOfBirth() method returns new instance of date, 
+</span><span style="color:#75715e">* setYear() will not change value of person1&#39;s date field.
+</span><span style="color:#75715e">*/</span>
+Date person1Date <span style="color:#f92672">=</span> person1<span style="color:#f92672">.</span><span style="color:#a6e22e">getDateOfBirth</span><span style="color:#f92672">();</span>
+person1Date<span style="color:#f92672">.</span><span style="color:#a6e22e">setYear</span><span style="color:#f92672">(</span>2020<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>setOfPerson<span style="color:#f92672">);</span>
+</code></pre></div><pre><code><div class="code_output">Output</div>
+[Person { name: Adam, weight: 68, dateOfBirth: 22-08-1986}, Person { name: Ben, weight: 52, dateOfBirth: 01-01-1990}]
+[Person { name: Adam, weight: 68, dateOfBirth: 22-08-1986}, Person { name: Ben, weight: 52, dateOfBirth: 01-01-1990}]
+</code></pre><p>We see that we can not mutate the collection of <em>ImmutablePerson</em> once created.</p>
+<h2 id="summary">Summary</h2>
+<p>In this tutorial, we learned about <em>Immutable Class</em> in Java and its benefits. Moreover, <em>Immutable Class</em> is frequently asked interview question to check your understanding on design pattern, immutable &amp; mutable objects and final keyword.</p>
+<h4 id="what-do-you-think">What do you think?</h4>
+<blockquote>
+<p>As per <a href="https://docs.oracle.com/javase/tutorial/essential/concurrency/imstrat.html">Oracle Docs</a> for <em>Immutable Classes</em>, Don&rsquo;t allow subclasses to override methods. The simplest way to do this is to declare the class as final. A more sophisticated approach is to make the constructor private and construct instances in factory methods.</p>
+</blockquote>
+<p>Please note that we have marked the class as <strong>final</strong> and constructor as <strong>public</strong> in our <em>ImmutablePerson</em> class.</p>
+<p>It is debatable whether we should use private constructor with static factory method to create instances since private constructor. My view is we are restricting the instance creation by using private constructor, which is not a desired scenario for immutability.</p>
+<p>What&rsquo;s your thoughts on this? Please comment.</p>
+<h4 id="references">References:</h4>
+<ul>
+<li><a href="https://javadevcentral.com/benefits-of-immutable-class-in-java">Java Developer Central</a></li>
+</ul>
 		</div>
 		<footer class="post__footer">
 			
@@ -299,7 +452,7 @@ if (!doNotTrack) {
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?hashtags=codingnconcepts&amp;url=https%3a%2f%2fcodingnconcepts.com%2fjava%2fimmutable-class-using-java%2f&amp;text=Immutable%20Class" target="_blank" rel="noopener" aria-label="Share on Twitter" class="share-btn twitter">
+        <a href="https://twitter.com/intent/tweet?hashtags=codingnconcepts&amp;url=https%3a%2f%2fcodingnconcepts.com%2fjava%2fimmutable-class-using-java%2f&amp;text=Immutable%20Class%20in%20Java" target="_blank" rel="noopener" aria-label="Share on Twitter" class="share-btn twitter">
           <svg class="widget-social__link-icon icon icon-twitter" width="24" height="24" viewBox="0 0 384 312"><path d="m384 36.9c-14.1 6.3-29.3 10.5-45.2 12.4 16.3-9.7 28.8-25.2 34.6-43.6-15.2 9-32.1 15.6-50 19.1-14.4-15.2-34.9-24.8-57.5-24.8-43.5 0-78.8 35.3-78.8 78.8 0 6.2.7 12.2 2 17.9-65.5-3.3-123.5-34.6-162.4-82.3-6.7 11.6-10.6 25.2-10.6 39.6 0 27.3 13.9 51.4 35 65.6-12.9-.4-25.1-4-35.7-9.9v1c0 38.2 27.2 70 63.2 77.2-6.6 1.8-13.6 2.8-20.8 2.8-5.1 0-10-.5-14.8-1.4 10 31.3 39.1 54.1 73.6 54.7-27 21.1-60.9 33.7-97.8 33.7-6.4 0-12.6-.4-18.8-1.1 34.9 22.4 76.3 35.4 120.8 35.4 144.9 0 224.1-120 224.1-224.1 0-3.4-.1-6.8-.2-10.2 15.4-11.1 28.7-25 39.3-40.8z"/></svg>
           <p>Twitter</p>
           </a>
@@ -319,7 +472,7 @@ if (!doNotTrack) {
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fcodingnconcepts.com%2fjava%2fimmutable-class-using-java%2f&amp;source=https%3a%2f%2fcodingnconcepts.com%2fjava%2fimmutable-class-using-java%2f&amp;title=Immutable%20Class&amp;summary=Immutable%20Class" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="share-btn linkedin">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fcodingnconcepts.com%2fjava%2fimmutable-class-using-java%2f&amp;source=https%3a%2f%2fcodingnconcepts.com%2fjava%2fimmutable-class-using-java%2f&amp;title=Immutable%20Class%20in%20Java&amp;summary=Immutable%20Class%20in%20Java" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="share-btn linkedin">
           <svg class="widget-social__link-icon icon icon-linkedin" width="24" height="24" viewBox="0 0 352 352"><path d="M0,40v272c0,21.9,18.1,40,40,40h272c21.9,0,40-18.1,40-40V40c0-21.9-18.1-40-40-40H40C18.1,0,0,18.1,0,40z M312,32 c4.6,0,8,3.4,8,8v272c0,4.6-3.4,8-8,8H40c-4.6,0-8-3.4-8-8V40c0-4.6,3.4-8,8-8H312z M59.5,87c0,15.2,12.3,27.5,27.5,27.5 c15.2,0,27.5-12.3,27.5-27.5c0-15.2-12.3-27.5-27.5-27.5C71.8,59.5,59.5,71.8,59.5,87z M187,157h-1v-21h-45v152h47v-75 c0-19.8,3.9-39,28.5-39c24.2,0,24.5,22.4,24.5,40v74h47v-83.5c0-40.9-8.7-72-56.5-72C208.5,132.5,193.3,145.1,187,157z M64,288h47.5 V136H64V288z"/></svg>
             <p>LinkedIn</p>
           </a>
@@ -329,7 +482,7 @@ if (!doNotTrack) {
       
       
       <li>
-        <a href="whatsapp://send?text=Immutable%20Class%2c%20by%20Coding%20N%20Concepts%0aHow%20to%20create%20immutable%20class%20in%20Java%20-%20explained.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjava%2fimmutable-class-using-java%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=Immutable%20Class%20in%20Java%2c%20by%20Coding%20N%20Concepts%0aLearn%20immutable%20class%20in%20Java%20and%20its%20benefits%20in%20thread-safety%2c%20caching%20and%20collections.%20Also%20learn%20how%20to%20create%20an%20immutable%20class%20in%20Java%20from%20scratch%20using%20rules%20such%20as%20final%20class%2c%20private%20final%20fields%2c%20no%20setters%2c%20field%20initialization%20using%20only%20constructor%2c%20etc.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjava%2fimmutable-class-using-java%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>Email</p>
         </a>
@@ -339,7 +492,7 @@ if (!doNotTrack) {
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - Immutable%20Class.&amp;body=Immutable%20Class%2c%20by%20Coding%20N%20Concepts%0aHow%20to%20create%20immutable%20class%20in%20Java%20-%20explained.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjava%2fimmutable-class-using-java%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - Immutable%20Class%20in%20Java.&amp;body=Immutable%20Class%20in%20Java%2c%20by%20Coding%20N%20Concepts%0aLearn%20immutable%20class%20in%20Java%20and%20its%20benefits%20in%20thread-safety%2c%20caching%20and%20collections.%20Also%20learn%20how%20to%20create%20an%20immutable%20class%20in%20Java%20from%20scratch%20using%20rules%20such%20as%20final%20class%2c%20private%20final%20fields%2c%20no%20setters%2c%20field%20initialization%20using%20only%20constructor%2c%20etc.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjava%2fimmutable-class-using-java%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>
