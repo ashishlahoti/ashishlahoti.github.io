@@ -94,7 +94,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/logo/java.png"],
     "url" : "https:\/\/codingnconcepts.com\/java\/immutable-class-using-java\/",
-    "wordCount" : "1435",
+    "wordCount" : "1397",
     "genre" : ["Java Design Pattern"],
     "keywords" :  null 
 }
@@ -222,7 +222,11 @@ if (!doNotTrack) {
         <li></li>
       </ul>
     </li>
-    <li><a href="#how-to-create-immutable-class">How to create Immutable Class?</a></li>
+    <li><a href="#how-to-create-immutable-class">How to create Immutable Class?</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
     <li><a href="#summary">Summary</a>
       <ul>
         <li></li>
@@ -233,9 +237,9 @@ if (!doNotTrack) {
 	</div>
 </div>
 <div class="content post__content clearfix">
-			<p>In this tutorial, we&rsquo;ll learn about <em>Immutable Class</em> and its benefits in thread-safety, caching and collections. We will also look at rules to create such classes and eventually we&rsquo;ll write an <em>Immutable Class</em> from scratch in Java.</p>
+			<p>In this tutorial, we&rsquo;ll learn about <em>Immutable Class</em> and its benefits in thread-safety, caching and collections. We will also look at rules to create immutable classes and eventually we&rsquo;ll write an <em>Immutable Class</em> from scratch in Java.</p>
 <h2 id="what-is-immutable-class">What is Immutable Class?</h2>
-<p><strong>Immutable Class</strong> means that once an <strong>object</strong> is initialized from this <em>Class</em>, we cannot change the state and content of that object.</p>
+<p><strong>Immutable Class</strong> means that once an <strong>object</strong> is initialized from this <em>Class</em>, we cannot change the state of that object.</p>
 <p>In other words, An immutable object can’t be modified after it has been created. When a new value is needed, the accepted practice is to make a copy of the object that has the new value.</p>
 <h6 id="examples">Examples</h6>
 <p>In Java, All primitive wrapper classes <em>(Integer, Byte, Long, Float, Double, Character, Boolean and Short)</em> and <em>String</em> are immutable in nature.</p>
@@ -256,10 +260,10 @@ System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span>
 <p>Immutable objects are inherently thread-safe. They do not require synchronization. Since there is no way the state of an immutable object can change, there is no possibility of one thread observing the effect of another thread. We do not have to deal with the intricacies of sharing an object among threads (like locking, synchronization, making variables volatile etc.). Thus, we can freely share immutable objects. This is the easiest way to achieve thread safety.<br>
 <br /></p>
 <h4 id="3-reusablecacheable">3. Reusable/Cacheable</h4>
-<p>Immutable objects encourage to cache or store the frequently used instances rather than creating one each time. This is because two immutable instances with the same properties/values are equal.<br>
-Some examples of this being applied are as follows:-</p>
+<p>Immutable objects encourage to cache or store the frequently used instances rather than creating one each time. This is because two immutable instances with the same properties/values are equal.</p>
+<p>Some examples of this being applied are as follows:-</p>
 <p><strong>Primitive wrapper classes</strong><br>
-Creating primitive wrapper objects (Integer, Float, Double etc) using static factory method valueOf does not always return new wrapper instances. In case of Integer, they cache Integer values from -128 to 127 by default.</p>
+Creating primitive wrapper objects (Integer, Float, Double etc) using static factory method valueOf does not always return new wrapper instances. In case of Integer, they cache Integer values from <em>-128 to 127</em> by default.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Integer oneV1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Integer<span style="color:#f92672">(</span>1<span style="color:#f92672">);</span>
 Integer oneV2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Integer<span style="color:#f92672">(</span>1<span style="color:#f92672">);</span>
 System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>oneV1 <span style="color:#f92672">==</span> oneV2<span style="color:#f92672">);</span>       <span style="color:#75715e">//false
@@ -273,15 +277,12 @@ oneV1 <span style="color:#f92672">=</span> Integer<span style="color:#f92672">.<
 BigInteger stores some common BigInteger values as instance variables.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"> <span style="color:#75715e">/**
 </span><span style="color:#75715e"> * The BigInteger constant zero.
-</span><span style="color:#75715e"> *
-</span><span style="color:#75715e"> * @since   1.2
 </span><span style="color:#75715e"> */</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> BigInteger ZERO <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BigInteger<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>0<span style="color:#f92672">],</span> 0<span style="color:#f92672">);</span>
-</code></pre></div><p>This reduces the memory footprint and the garbage collection costs.</p>
-<p><em>Tip:</em> When designing an immutable class try to use a static factory method and a private constructor rather than providing a public constructor. This will enable us to add caching of some immutable instances later.<br>
+</code></pre></div><p>This reduces the memory footprint and the garbage collection costs.<br>
 <br /></p>
 <h4 id="4-building-blocks-for-collections">4. Building blocks for Collections</h4>
-<p>The immutable objects make a great building block for Collections as compare to immutable objects. Let&rsquo;s understand the problem we face with immutable objects in Collections.</p>
+<p>The immutable objects make a great building block for Collections as compare to mutable objects. Let&rsquo;s understand the problem we face with mutable objects in Collections.</p>
 <p>First of all, we create a mutable <em>Person</em> class</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> <span style="color:#f92672">{</span>
 	
@@ -315,7 +316,7 @@ System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span>
 </code></pre></div><pre><code><div class="code_output">Output</div>
 [Person { name: Adam }, Person { name: Ben }]
 [Person { name: Charlie }, Person { name: Ben }]
-</code></pre><p>We wanted to create a Set of persons <em>Adam</em> and <em>Ben</em> but next part of the code has mutated the <em>Adam</em> to <em>Charlie</em> which is not intended.We will solve this problem by making an immutable class <em>ImmutablePerson</em> in subsequent part of article.</p>
+</code></pre><p>We wanted to create a Set of persons <em>Adam</em> and <em>Ben</em> but next part of the code has mutated the <em>Adam</em> to <em>Charlie</em> which is not intended. We will solve this problem by making an immutable class <em>ImmutablePerson</em> in subsequent part of the article.</p>
 <p>As we saw that mutable objects can be mutated even if not intended, immutable objects make a great fit to be used as <strong>Keys of a Map</strong>, in <strong>Set, List</strong>, and other collections.</p>
 <h2 id="how-to-create-immutable-class">How to create Immutable Class?</h2>
 <p>In order to create an <em>Immutable Class</em>, you should keep following points in mind:-</p>
@@ -333,6 +334,7 @@ System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span>
 </li>
 </ol>
 <p>Let&rsquo;s apply all the above points and create our immutable class <em>ImmutablePerson</em></p>
+<h6 id="immutablepersonjava">ImmutablePerson.java</h6>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
 </span><span style="color:#75715e"> * Immutable class should mark as final so it can not be extended. 
 </span><span style="color:#75715e"> * Fields should mark as private so direct access is not allowed.
@@ -392,9 +394,9 @@ System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p>Now, Let&rsquo;s create immutable person objects to create <strong>Set</strong> of persons:-</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">ImmutablePerson person1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ImmutablePerson<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Adam&#34;</span><span style="color:#f92672">,</span> 68<span style="color:#f92672">,</span> <span style="color:#66d9ef">new</span> SimpleDateFormat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;dd-MM-yyyy&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">parse</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;22-08-1986&#34;</span><span style="color:#f92672">));</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">ImmutablePerson person1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ImmutablePerson<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Adam&#34;</span><span style="color:#f92672">,</span> 55<span style="color:#f92672">,</span> <span style="color:#66d9ef">new</span> SimpleDateFormat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;dd-MM-yyyy&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">parse</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;01-01-2001&#34;</span><span style="color:#f92672">));</span>
 
-ImmutablePerson person2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ImmutablePerson<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Ben&#34;</span><span style="color:#f92672">,</span> 52<span style="color:#f92672">,</span> <span style="color:#66d9ef">new</span> SimpleDateFormat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;dd-MM-yyyy&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">parse</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;01-12-1990&#34;</span><span style="color:#f92672">));</span>
+ImmutablePerson person2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ImmutablePerson<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Ben&#34;</span><span style="color:#f92672">,</span> 50<span style="color:#f92672">,</span> <span style="color:#66d9ef">new</span> SimpleDateFormat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;dd-MM-yyyy&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">parse</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;02-02-2002&#34;</span><span style="color:#f92672">));</span>
 
 Set<span style="color:#f92672">&lt;</span>ImmutablePerson<span style="color:#f92672">&gt;</span> setOfPerson <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashSet<span style="color:#f92672">&lt;&gt;(</span>Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span>person1<span style="color:#f92672">,</span> person2<span style="color:#f92672">));</span>
 System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>setOfPerson<span style="color:#f92672">);</span>
@@ -404,7 +406,7 @@ System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span>
 </span><span style="color:#75715e">*/</span>
 <span style="color:#75715e">//person1.setName(&#34;Charlie&#34;);
 </span><span style="color:#75715e">//person1.setWeight(90);
-</span><span style="color:#75715e">//person1.setDate(new SimpleDateFormat(&#34;dd-MM-yyyy&#34;).parse(&#34;01-01-2001&#34;));
+</span><span style="color:#75715e">//person1.setDate(new SimpleDateFormat(&#34;dd-MM-yyyy&#34;).parse(&#34;03-03-2003&#34;));
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">/**
 </span><span style="color:#75715e">* getDateOfBirth() method returns new instance of date, 
@@ -414,8 +416,8 @@ Date person1Date <span style="color:#f92672">=</span> person1<span style="color:
 person1Date<span style="color:#f92672">.</span><span style="color:#a6e22e">setYear</span><span style="color:#f92672">(</span>2020<span style="color:#f92672">);</span>
 System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>setOfPerson<span style="color:#f92672">);</span>
 </code></pre></div><pre><code><div class="code_output">Output</div>
-[Person { name: Adam, weight: 68, dateOfBirth: 22-08-1986}, Person { name: Ben, weight: 52, dateOfBirth: 01-01-1990}]
-[Person { name: Adam, weight: 68, dateOfBirth: 22-08-1986}, Person { name: Ben, weight: 52, dateOfBirth: 01-01-1990}]
+[Person { name: Adam, weight: 55, dateOfBirth: 01-01-2001}, Person { name: Ben, weight: 50, dateOfBirth: 02-02-2002}]
+[Person { name: Adam, weight: 55, dateOfBirth: 01-01-2001}, Person { name: Ben, weight: 50, dateOfBirth: 02-02-2002}]
 </code></pre><p>We see that we can not mutate the collection of <em>ImmutablePerson</em> once created.</p>
 <h2 id="summary">Summary</h2>
 <p>In this tutorial, we learned about <em>Immutable Class</em> in Java and its benefits. Moreover, <em>Immutable Class</em> is frequently asked interview question to check your understanding on design pattern, immutable &amp; mutable objects and final keyword.</p>
