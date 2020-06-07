@@ -3,8 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://codingnconcepts.com/javascript/</loc>
-    <lastmod>2020-06-06T00:00:00+00:00</lastmod>
+    <loc>https://codingnconcepts.com/java/</loc>
+    <lastmod>2020-06-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -19,8 +19,8 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/javascript/console-table-javascript/</loc>
-    <lastmod>2020-06-06T00:00:00+00:00</lastmod>
+    <loc>https://codingnconcepts.com/java/factory-design-pattern-java/</loc>
+    <lastmod>2020-06-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -29,14 +29,19 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/hugo/</loc>
-    <lastmod>2020-06-04T00:00:00+00:00</lastmod>
+    <loc>https://codingnconcepts.com/javascript/</loc>
+    <lastmod>2020-06-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/java/</loc>
-    <lastmod>2020-06-07T00:00:00+00:00</lastmod>
+    <loc>https://codingnconcepts.com/javascript/console-table-javascript/</loc>
+    <lastmod>2020-06-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/hugo/</loc>
+    <lastmod>2020-06-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
