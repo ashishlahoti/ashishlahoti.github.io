@@ -6,10 +6,19 @@
     <description>Recent content in Hugo on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://codingnconcepts.com/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Client Side Search Engine for Hugo Website</title>
+      <link>https://codingnconcepts.com/hugo/client-side-search-engine-hugo/</link>
+      <pubDate>Mon, 08 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/hugo/client-side-search-engine-hugo/</guid>
+      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn how to setup client side search engine for Hugo Website without any backend server or additional build steps required.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Add Social Icons in Hugo Website Pages</title>
