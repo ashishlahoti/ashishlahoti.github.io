@@ -13,7 +13,7 @@
 <meta property="og:url" content="https://codingnconcepts.com/hugo/sitemap-hugo/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/gohugo.png" />
 <meta property="article:published_time" content="2020-06-04T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-06-04T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-11T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -77,7 +77,7 @@ if (!doNotTrack) {
     "copyrightYear" : "2020",
     "dateCreated": "2020-06-04T00:00:00.00Z",
     "datePublished": "2020-06-04T00:00:00.00Z",
-    "dateModified": "2020-06-04T00:00:00.00Z",
+    "dateModified": "2020-06-11T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -91,7 +91,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/logo/gohugo.png"],
     "url" : "https:\/\/codingnconcepts.com\/hugo\/sitemap-hugo\/",
-    "wordCount" : "804",
+    "wordCount" : "986",
     "genre" : ["Hugo Defaults"],
     "keywords" :  null 
 }
@@ -196,6 +196,7 @@ if (!doNotTrack) {
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
 	<time class="meta__text" datetime="2020-06-04T00:00:00Z">June 04, 2020</time>
+	<time class="meta__text" datetime="2020-06-11T00:00:00Z"> (Last Modified: June 11, 2020)</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -225,14 +226,16 @@ if (!doNotTrack) {
         <li></li>
         <li><a href="#31-exclude-taxonomy-pages-from-sitemapxml">3.1 Exclude taxonomy pages from sitemap.xml</a></li>
         <li><a href="#32-exclude-specific-pages-from-sitemapxml">3.2 Exclude specific pages from sitemap.xml</a></li>
+        <li><a href="#33-exclude-taxonomy-and-specific-pages-from-sitemapxml">3.3 Exclude taxonomy and specific pages from sitemap.xml</a></li>
       </ul>
     </li>
+    <li><a href="#4-summary">4. Summary</a></li>
   </ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
-			<p>In this tutorial, we&rsquo;ll learn how to disable or customize sitemap.xml for Hugo website.</p>
+			<p>In this tutorial, we&rsquo;ll learn how to disable or customize <em>sitemap.xml</em> for Hugo website.</p>
 <h2 id="1-overview">1. Overview</h2>
 <p>When you generate a website using Hugo static site generator. There are few points to understand about <em>sitemap.xml</em>:-</p>
 <ul>
@@ -353,7 +356,7 @@ baseurl = &quot;https://www.example.com&quot;
 </code></pre></div><p>Now let&rsquo;s do changes in above template to meet our requirement:-<br>
 <br /></p>
 <h3 id="31-exclude-taxonomy-pages-from-sitemapxml">3.1 Exclude taxonomy pages from sitemap.xml</h3>
-<p>This is most common use case where you want to skip taxonomy pages like category (/category/<em>.</em>) and tags (/tags/<em>.</em>) pages from sitemap.xml. I am using the below <em>sitemap.xml</em> in my own website to exclude categories and tags pages.</p>
+<p>This is most common use case where you want to skip taxonomy pages like category (/category/<em>.</em>) and tags (/tags/<em>.</em>) pages from sitemap.xml.</p>
 <p>Notice that we have added a condition <code>{{ if ne .Kind &quot;taxonomy&quot; }}</code> in default sitemap template to exclude taxonomy pages</p>
 <h6 id="layouts_defaultsitemapxml-1">/layouts/_default/sitemap.xml</h6>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">{{ printf &#34;<span style="color:#75715e">&lt;?xml version=\&#34;1.0\&#34; encoding=\&#34;utf-8\&#34; standalone=\&#34;yes\&#34;?&gt;</span>&#34; | safeHTML }}
@@ -413,7 +416,35 @@ baseurl = &quot;https://www.example.com&quot;
 
 sitemap_ignore: true
 ---
-</code></pre>
+</code></pre><p><br /></p>
+<h3 id="33-exclude-taxonomy-and-specific-pages-from-sitemapxml">3.3 Exclude taxonomy and specific pages from sitemap.xml</h3>
+<p>Let&rsquo;s combine the last two examples where you want to skip taxonomy pages and specific pages based <code>sitemap_ignore</code> flag. I am using the below <em>sitemap.xml</em> in my own website.</p>
+<p>Notice that we have combined the conditions of last two examples <code>{{ if and (ne .Kind &quot;taxonomy&quot;) (ne .Params.sitemap_ignore true) }}</code></p>
+<h6 id="layouts_defaultsitemapxml-3">/layouts/_default/sitemap.xml</h6>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">{{ printf &#34;<span style="color:#75715e">&lt;?xml version=\&#34;1.0\&#34; encoding=\&#34;utf-8\&#34; standalone=\&#34;yes\&#34;?&gt;</span>&#34; | safeHTML }}
+<span style="color:#f92672">&lt;urlset</span> <span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://www.sitemaps.org/schemas/sitemap/0.9&#34;</span>
+  <span style="color:#a6e22e">xmlns:xhtml=</span><span style="color:#e6db74">&#34;http://www.w3.org/1999/xhtml&#34;</span><span style="color:#f92672">&gt;</span>
+  {{ range .Data.Pages }}{{ if and (ne .Kind &#34;taxonomy&#34;) (ne .Params.sitemap_ignore true) }}
+  <span style="color:#f92672">&lt;url&gt;</span>
+    <span style="color:#f92672">&lt;loc&gt;</span>{{ .Permalink }}<span style="color:#f92672">&lt;/loc&gt;</span>{{ if not .Lastmod.IsZero }}
+    <span style="color:#f92672">&lt;lastmod&gt;</span>{{ safeHTML ( .Lastmod.Format &#34;2006-01-02T15:04:05-07:00&#34; ) }}<span style="color:#f92672">&lt;/lastmod&gt;</span>{{ end }}{{ with .Sitemap.ChangeFreq }}
+    <span style="color:#f92672">&lt;changefreq&gt;</span>{{ . }}<span style="color:#f92672">&lt;/changefreq&gt;</span>{{ end }}{{ if ge .Sitemap.Priority 0.0 }}
+    <span style="color:#f92672">&lt;priority&gt;</span>{{ .Sitemap.Priority }}<span style="color:#f92672">&lt;/priority&gt;</span>{{ end }}{{ if .IsTranslated }}{{ range .Translations }}
+    <span style="color:#f92672">&lt;xhtml:link</span>
+                <span style="color:#a6e22e">rel=</span><span style="color:#e6db74">&#34;alternate&#34;</span>
+                <span style="color:#a6e22e">hreflang=</span><span style="color:#e6db74">&#34;{{ .Language.Lang }}&#34;</span>
+                <span style="color:#a6e22e">href=</span><span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span>
+                <span style="color:#f92672">/&gt;</span>{{ end }}
+    <span style="color:#f92672">&lt;xhtml:link</span>
+                <span style="color:#a6e22e">rel=</span><span style="color:#e6db74">&#34;alternate&#34;</span>
+                <span style="color:#a6e22e">hreflang=</span><span style="color:#e6db74">&#34;{{ .Language.Lang }}&#34;</span>
+                <span style="color:#a6e22e">href=</span><span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span>
+                <span style="color:#f92672">/&gt;</span>{{ end }}
+  <span style="color:#f92672">&lt;/url&gt;</span>
+  {{ end }}{{ end }}
+<span style="color:#f92672">&lt;/urlset&gt;</span>
+</code></pre></div><h2 id="4-summary">4. Summary</h2>
+<p>In this tutorial, we&rsquo;ve learned how to customize <em>sitemap.xml</em> for your hugo website. If you have any other requirements of <em>sitemap.xml</em> customization, or you are facing issue following the tutorial. Please comment, I&rsquo;ll try to solve your problem as soon as possible.</p>
 		</div>
 		<footer class="post__footer">
 			
