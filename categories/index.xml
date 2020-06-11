@@ -6,24 +6,15 @@
     <description>Recent content in Categories on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://codingnconcepts.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Hugo</title>
-      <link>https://codingnconcepts.com/categories/hugo/</link>
-      <pubDate>Mon, 08 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/categories/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Java</title>
       <link>https://codingnconcepts.com/categories/java/</link>
-      <pubDate>Sun, 07 Jun 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 11 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/categories/java/</guid>
       <description></description>
@@ -32,9 +23,18 @@
     <item>
       <title>Javascript</title>
       <link>https://codingnconcepts.com/categories/javascript/</link>
-      <pubDate>Sat, 06 Jun 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 11 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/categories/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://codingnconcepts.com/categories/hugo/</link>
+      <pubDate>Mon, 08 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/categories/hugo/</guid>
       <description></description>
     </item>
     
