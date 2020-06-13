@@ -91,7 +91,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/logo/gohugo.png"],
     "url" : "https:\/\/codingnconcepts.com\/hugo\/custom-shortcode-hugo\/",
-    "wordCount" : "498",
+    "wordCount" : "493",
     "genre" : ["Hugo Shortcode"],
     "keywords" : ["escape hugo shortcode","create custom shortcode","hugo shortcode example"]
 }
@@ -186,7 +186,7 @@ if (!doNotTrack) {
 			<div class="primary">
 			
 <main class="main" role="main">
-	<article class="post">
+	<article class="post" autonumbering>
 		<header class="post__header">
 			<h1 class="post__title"><img class="post__thumbnail" src="/img/logo/gohugo.png" alt="Useful Hugo Shortcodes"> Useful Hugo Shortcodes</h1>
 			<p class="post__lead">Custom Hugo Shortcodes with examples</p>
@@ -212,7 +212,11 @@ if (!doNotTrack) {
     <li><a href="#create-custom-shortcode">Create Custom Shortcode</a></li>
     <li><a href="#hugo-shortcode-examples">Hugo Shortcode Examples</a>
       <ul>
-        <li></li>
+        <li><a href="#current-year">Current Year</a></li>
+        <li><a href="#link-to-open-in-browser-window">Link to open in browser window</a></li>
+        <li><a href="#highlighter">Highlighter</a></li>
+        <li><a href="#strike">Strike</a></li>
+        <li><a href="#code-block-output">Code Block Output</a></li>
       </ul>
     </li>
     <li><a href="#escape-hugo-shortcode">Escape Hugo Shortcode</a></li>
@@ -226,7 +230,7 @@ if (!doNotTrack) {
 <h2 id="create-custom-shortcode">Create Custom Shortcode</h2>
 <p>To create a shortcode, place an HTML template in the <code>layouts/shortcodes</code> directory of your source organization. Consider the file name carefully since the shortcode name will mirror that of the file but without the .html extension. For example, <code>layouts/shortcodes/myshortcode.html</code> will be called with <code>{{&lt; myshortcode &gt;}}</code></p>
 <h2 id="hugo-shortcode-examples">Hugo Shortcode Examples</h2>
-<h4 id="1-current-year">1. Current Year</h4>
+<h3 id="current-year">Current Year</h3>
 <p>This is useful when you want to show current year in markdown.</p>
 <h6 id="shortcode">shortcode</h6>
 <p><code>layouts/shortcodes/year.html</code></p>
@@ -242,7 +246,7 @@ Top 10 things you should know in {{&lt; year &gt;}}
 <p><code>post/myblogpost.html</code></p>
 <pre><code>Top 10 things you should know in 2020
 </code></pre><p><br /></p>
-<h4 id="2-link-to-open-in-browser-window">2. Link to open in browser window</h4>
+<h3 id="link-to-open-in-browser-window">Link to open in browser window</h3>
 <p>By default when you create a link in hugo pages, it opens in same browser window. You can use this shortcode to open links in new browser window or tab.</p>
 <h6 id="shortcode-1">shortcode</h6>
 <p><code>layouts/shortcodes/a_blank.html</code></p>
@@ -260,7 +264,7 @@ Top 10 things you should know in {{&lt; year &gt;}}
 <p><a href="https://codingnconcepts.com/">Coding N Concepts</a> opens in same browser window</p>
 <p><a href="https://codingnconcepts.com/" target="_blank">Coding N Concepts</a> opens in new browser window.</p>
 <p><br /></p>
-<h4 id="3-highlighter">3. Highlighter</h4>
+<h3 id="highlighter">Highlighter</h3>
 <p>This is useful when you want to highlight some of the content in markdown.</p>
 <h6 id="shortcode-2">shortcode</h6>
 <p><code>layouts/shortcodes/highlight.html</code></p>
@@ -276,7 +280,7 @@ This is the {{&lt; highlight &quot;most trending&quot; &gt;}} post of the decade
 <p><code>post/myblogpost.html</code></p>
 <pre><code>This is the <mark>most trending</mark> post of the decade.
 </code></pre><p><br /></p>
-<h4 id="4-strike">4. Strike</h4>
+<h3 id="strike">Strike</h3>
 <p>This is useful when you want to strike through some of the content in markdown.</p>
 <h6 id="shortcode-3">shortcode</h6>
 <p><code>layouts/shortcodes/strike.html</code></p>
@@ -292,7 +296,7 @@ This is {{&lt; strike &quot;not trending&quot; &gt;}} trending post of the decad
 <p><code>post/myblogpost.html</code></p>
 <pre><code>This is the <strike>not trending</strike> trending post of the decade.
 </code></pre><p><br /></p>
-<h4 id="5-code-block-output">5. Code Block Output</h4>
+<h3 id="code-block-output">Code Block Output</h3>
 <p>This is useful when you want to show the output of certain code. It gives a beautiful title &ldquo;Output&rdquo;.</p>
 <h6 id="shortcode-4">shortcode</h6>
 <p><code>layouts/shortcodes/code_output.html</code></p>

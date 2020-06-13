@@ -91,7 +91,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/logo/gohugo.png"],
     "url" : "https:\/\/codingnconcepts.com\/hugo\/client-side-search-engine-hugo\/",
-    "wordCount" : "1206",
+    "wordCount" : "1201",
     "genre" : ["Hugo Defaults"],
     "keywords" :  null 
 }
@@ -186,7 +186,7 @@ if (!doNotTrack) {
 			<div class="primary">
 			
 <main class="main" role="main">
-	<article class="post">
+	<article class="post" autonumbering>
 		<header class="post__header">
 			<h1 class="post__title"><img class="post__thumbnail" src="/img/logo/gohugo.png" alt="Client Side Search Engine for Hugo Website"> Client Side Search Engine for Hugo Website</h1>
 			<p class="post__lead">Search engine for Hugo without any server or additional build steps</p>
@@ -212,11 +212,11 @@ if (!doNotTrack) {
     <li><a href="#overview">Overview</a></li>
     <li><a href="#follow-the-steps-">Follow the steps:-</a>
       <ul>
-        <li><a href="#1-update-configtoml">1. Update <code>config.toml</code></a></li>
-        <li><a href="#2-create-layouts_defaultindexjson">2. Create <code>layouts/_default/index.json</code></a></li>
-        <li><a href="#3-create-searchjs">3. Create <code>search.js</code></a></li>
-        <li><a href="#4-create-contentsearchmd">4. Create <code>content/search.md</code></a></li>
-        <li><a href="#5-create-layouts_defaultsearchhtml">5. Create <code>layouts/_default/search.html</code></a></li>
+        <li><a href="#update-configtoml">Update <code>config.toml</code></a></li>
+        <li><a href="#create-layouts_defaultindexjson">Create <code>layouts/_default/index.json</code></a></li>
+        <li><a href="#create-searchjs">Create <code>search.js</code></a></li>
+        <li><a href="#create-contentsearchmd">Create <code>content/search.md</code></a></li>
+        <li><a href="#create-layouts_defaultsearchhtml">Create <code>layouts/_default/search.html</code></a></li>
         <li><a href="#customization-for-hugo-mainroad-theme">Customization for Hugo Mainroad Theme</a></li>
       </ul>
     </li>
@@ -238,7 +238,7 @@ if (!doNotTrack) {
 <li>Create <strong>layouts/_default/search.html</strong> to provide a template to render your search page results</li>
 </ol>
 <h2 id="follow-the-steps-">Follow the steps:-</h2>
-<h3 id="1-update-configtoml">1. Update <code>config.toml</code></h3>
+<h3 id="update-configtoml">Update <code>config.toml</code></h3>
 <p>Hugo provide out of the box support to generate content in multiple formats including <em>JSON</em>. All we need to do is to tell Hugo that we want to generate <em>index.json</em> file for entire website content.</p>
 <p>Add the following snippet in <em>config.toml</em> file to instruct Hugo to generate <em>JSON</em> output along with <em>HTML</em> and <em>RSS</em> default outputs:</p>
 <h6 id="configtoml">config.toml</h6>
@@ -246,7 +246,7 @@ if (!doNotTrack) {
 [outputs]
   home = [&quot;HTML&quot;, &quot;RSS&quot;, &quot;JSON&quot;]
 </code></pre><p><br /></p>
-<h3 id="2-create-layouts_defaultindexjson">2. Create <code>layouts/_default/index.json</code></h3>
+<h3 id="create-layouts_defaultindexjson">Create <code>layouts/_default/index.json</code></h3>
 <p>Once we instruct Hugo to generate <em>index.json</em> file, Hugo looks for the template to generate file. Add the following <em>index.json</em> template to specified folder:</p>
 <h6 id="layouts_defaultindexjson">layouts/_default/index.json</h6>
 <pre><code>{{- $.Scratch.Add &quot;index&quot; slice -}}
@@ -255,7 +255,7 @@ if (!doNotTrack) {
 {{- end -}}
 {{- $.Scratch.Get &quot;index&quot; | jsonify -}}
 </code></pre><p><br /></p>
-<h3 id="3-create-searchjs">3. Create <code>search.js</code></h3>
+<h3 id="create-searchjs">Create <code>search.js</code></h3>
 <p>Now create a <em>search.js</em> file which uses <em>jquery, fuse.js, and mark.js</em> to parse generated <em>index.json</em> file, and return matching content, with highlighting.</p>
 <p>Please note that initial part of the code in <em>search.js</em> provide config:-</p>
 <ul>
@@ -369,7 +369,7 @@ if (!doNotTrack) {
   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">templateString</span>;
 }
 </code></pre></div><p><br /></p>
-<h3 id="4-create-contentsearchmd">4. Create <code>content/search.md</code></h3>
+<h3 id="create-contentsearchmd">Create <code>content/search.md</code></h3>
 <p>Create <em>search.md</em> to create a page solely to respond to <em><strong>/search</strong></em> URL. No content from this page is rendered. As we have defined the front-matter layout as &ldquo;search&rdquo;, content is rendered on this page is from template <em>layouts/_default/search.html</em></p>
 <h6 id="contentsearchmd">content/search.md</h6>
 <pre><code>---
@@ -383,7 +383,7 @@ Nothing on this page will be visible. This file exists solely to respond to /sea
 
 Setting a very low sitemap priority will tell search engines this is not important content.
 </code></pre><p><br /></p>
-<h3 id="5-create-layouts_defaultsearchhtml">5. Create <code>layouts/_default/search.html</code></h3>
+<h3 id="create-layouts_defaultsearchhtml">Create <code>layouts/_default/search.html</code></h3>
 <p>This is the page rendered when viewing <em><strong>/search</strong></em> in your browser. This example uses the template functionality to load content and all required JS files in the &ldquo;main&rdquo; block.</p>
 <h6 id="layouts_defaultsearchhtml">layouts/_default/search.html</h6>
 <pre><code>{{ define &quot;main&quot; }}

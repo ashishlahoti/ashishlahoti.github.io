@@ -186,7 +186,7 @@ if (!doNotTrack) {
 			<div class="primary">
 			
 <main class="main" role="main">
-	<article class="post">
+	<article class="post" autonumbering>
 		<header class="post__header">
 			<h1 class="post__title"><img class="post__thumbnail" src="/img/logo/js.png" alt="Cool Tricks for Debugging in JavaScript"> Cool Tricks for Debugging in JavaScript</h1>
 			<div class="post__meta meta"><div class="meta__item-author meta__item">
@@ -212,12 +212,15 @@ if (!doNotTrack) {
     <li><a href="#debugger">debugger</a></li>
     <li><a href="#consolelog">console.log</a>
       <ul>
-        <li></li>
+        <li><a href="#log-multiple-values">Log Multiple Values</a></li>
+        <li><a href="#logging-objects">Logging Objects</a></li>
       </ul>
     </li>
     <li><a href="#consoledir">console.dir</a>
       <ul>
-        <li></li>
+        <li><a href="#consoledirdom">console.dir(DOM)</a></li>
+        <li><a href="#consoledirfunctions">console.dir(functions)</a></li>
+        <li><a href="#consoledirobjects">console.dir(Objects)</a></li>
       </ul>
     </li>
     <li><a href="#consoletable">console.table</a></li>
@@ -243,7 +246,7 @@ if (!doNotTrack) {
 }
 </code></pre></div><h2 id="consolelog">console.log</h2>
 <p>Most of the developers use <em>console.log()</em> for debugging values in browser. It is a king of debugging.</p>
-<h4 id="log-multiple-values">Log Multiple Values</h4>
+<h3 id="log-multiple-values">Log Multiple Values</h3>
 <p>The thing you might not know is, <em>console.log()</em> can print multiple values by providing comma separated values so you don&rsquo;t need to concat values yourself.</p>
 <p>Each comma <em>&quot;,&quot;</em> add a space between values.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
@@ -254,7 +257,7 @@ if (!doNotTrack) {
 x = 1
 x = 1 y = hello
 </code></pre><p><br /></p>
-<h4 id="logging-objects">Logging Objects</h4>
+<h3 id="logging-objects">Logging Objects</h3>
 <p>Don&rsquo;t use <code>console.log(obj)</code>, use <code>console.log(JSON.parse(JSON.stringify(obj)))</code>.</p>
 <p>When you log an array/object using <em>console.log()</em> and update that array/object afterwards. Many browsers show you the latest state of the array/object which might be misleading.</p>
 <p>Logging using <code>console.log(JSON.parse(JSON.stringify(obj)))</code> make sure, you are printing a copy of array/object which it will log the exact state at the time of printing.</p>
@@ -305,7 +308,7 @@ x = 1 y = hello
 </code></pre><p>We see that <em>console.log()</em> showing the latest state of object including <em>married</em> field which was missing at time of logging.</p>
 <h2 id="consoledir">console.dir</h2>
 <p>The <em>console.dir()</em> is very useful method to see DOM elements, functions and objects interactively. We will see examples of each one of them and understand how it different from <em>console.log()</em>.</p>
-<h4 id="consoledirdom">console.dir(DOM)</h4>
+<h3 id="consoledirdom">console.dir(DOM)</h3>
 <p>DOM elements are printed as <em>HTML</em> using <em>console.log()</em>, whereas printed as <em>JSON</em> using <em>console.dir()</em>,</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(document.<span style="color:#a6e22e">body</span>);
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">dir</span>(document.<span style="color:#a6e22e">body</span>);
@@ -315,7 +318,7 @@ x = 1 y = hello
 </figure>
 
 <br /></p>
-<h4 id="consoledirfunctions">console.dir(functions)</h4>
+<h3 id="consoledirfunctions">console.dir(functions)</h3>
 <p>The <em>console.dir()</em> is quite useful to print function&rsquo;s internal properties such as prototype methods and closures.</p>
 <h6 id="log-functions-prototype-methods">Log Function&rsquo;s Prototype methods</h6>
 <p>We see in below example that <em>console.log()</em> just print the name of function whereas, using <em>console.dir()</em>, we&rsquo;re able to see all prototype methods of <em>Array</em> function.</p>
@@ -382,7 +385,7 @@ x = 1 y = hello
     <mark>➤ 1: Closure (outerFunc) {c: 3, a: 1}</mark>
     ➤ 2: Global {parent: Window, opener: null, top: Window, length: 1, frames: Window, …}
 </code></pre><p><br /></p>
-<h4 id="consoledirobjects">console.dir(Objects)</h4>
+<h3 id="consoledirobjects">console.dir(Objects)</h3>
 <p>Some of the browsers prints a stringify version of object when use <em>console.log()</em> whereas prints object json tree when use <em>console.dir()</em>. There is not much difference in printing in advance browsers such as chrome where both methods print object json tree.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">a</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">b</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>};
 

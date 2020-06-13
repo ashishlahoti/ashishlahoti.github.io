@@ -172,8 +172,8 @@ h2 {
 }
 
 h3 {
-	font-size: 24px;
-	font-size: 1.5rem;
+	font-size: 22px;
+	font-size: 1.375rem;
 }
 
 h4 {
@@ -789,22 +789,18 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 .toc__menu ul {
 	margin: 0;
 	list-style: none;
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+.toc__menu ul ul {
+	padding-left: 10px;
+	font-size: 14px;
+	font-size: 0.875rem;
 }
 
 .toc__menu ul ul ul a {
 	padding-left: 25px;
-}
-
-.toc__menu ul ul ul ul a {
-	padding-left: 45px;
-}
-
-.toc__menu ul ul ul ul ul a {
-	padding-left: 65px;
-}
-
-.toc__menu ul ul ul ul ul ul a {
-	padding-left: 85px;
 }
 
 .toc__menu li {
@@ -1433,3 +1429,18 @@ ul.share-icons li > * .label {
 		font-size: .6875rem;
 	}
 }
+
+/* Auto Numbering */
+body {counter-reset: h2}
+h2 {counter-reset: h3}
+h3 {counter-reset: h4}
+h4 {counter-reset: h5}
+h5 {counter-reset: h6}
+
+article[autonumbering] h2:before {counter-increment: h2; content: counter(h2) ". "}
+article[autonumbering] h3:before {counter-increment: h3; content: counter(h2) "." counter(h3) ". "}
+article[autonumbering] h4:before {counter-increment: h4; content: counter(h2) "." counter(h3) "." counter(h4) ". "}
+article[autonumbering] h5:before {counter-increment: h5; content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". "}
+
+article[autonumbering] .toc__menu ul { counter-reset: item }
+article[autonumbering] .toc__menu li a:before { content: counters(item, ".") ". "; counter-increment: item }

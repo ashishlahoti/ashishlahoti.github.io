@@ -91,7 +91,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/logo/gohugo.png"],
     "url" : "https:\/\/codingnconcepts.com\/hugo\/structure-data-json-ld-hugo\/",
-    "wordCount" : "1221",
+    "wordCount" : "1215",
     "genre" : ["Hugo Partial"],
     "keywords" :  null 
 }
@@ -186,7 +186,7 @@ if (!doNotTrack) {
 			<div class="primary">
 			
 <main class="main" role="main">
-	<article class="post">
+	<article class="post" autonumbering>
 		<header class="post__header">
 			<h1 class="post__title"><img class="post__thumbnail" src="/img/logo/gohugo.png" alt="Add Structure Data JSON-LD in Hugo Website Pages"> Add Structure Data JSON-LD in Hugo Website Pages</h1>
 			<p class="post__lead">Guide to create a Site Schema partial in Hugo</p>
@@ -210,28 +210,28 @@ if (!doNotTrack) {
 	<div class="toc__menu">
 		<nav id="TableOfContents">
   <ul>
-    <li><a href="#1-create-site_schemahtml-partial">1. Create <em>site_schema.html</em> Partial</a></li>
-    <li><a href="#2-relevant-front-matter">2. Relevant <em>front-matter</em></a>
+    <li><a href="#create-site_schemahtml-partial">Create <em>site_schema.html</em> Partial</a></li>
+    <li><a href="#relevant-front-matter">Relevant <em>front-matter</em></a>
       <ul>
         <li></li>
       </ul>
     </li>
-    <li><a href="#3-relevant-configtoml">3. Relevant <em>config.toml</em></a>
+    <li><a href="#relevant-configtoml">Relevant <em>config.toml</em></a>
       <ul>
         <li></li>
       </ul>
     </li>
-    <li><a href="#4-add-partial-to-the-head-tag-of-baseofhtml">4. Add partial to the <em>&lt;head&gt;</em> tag of <em>baseof.html</em></a>
+    <li><a href="#add-partial-to-the-head-tag-of-baseofhtml">Add partial to the <em>&lt;head&gt;</em> tag of <em>baseof.html</em></a>
       <ul>
         <li></li>
       </ul>
     </li>
-    <li><a href="#5-generated-structure-data-json-ld">5. Generated Structure Data JSON-LD</a>
+    <li><a href="#generated-structure-data-json-ld">Generated Structure Data JSON-LD</a>
       <ul>
         <li></li>
       </ul>
     </li>
-    <li><a href="#7-verify-structure-data-json-ld">7. Verify Structure Data JSON-LD</a></li>
+    <li><a href="#verify-structure-data-json-ld">Verify Structure Data JSON-LD</a></li>
   </ul>
 </nav>
 	</div>
@@ -242,7 +242,7 @@ if (!doNotTrack) {
 <p>Schema of structure data for all type of websites and web pages can be found in <a href="https://schema.org/docs/full.html">documentation</a> of <a href="https://schema.org">schema.org</a></p>
 <p><strong>Microdata</strong> and <strong>JSON-LD</strong> are two ways to add mark up in order to structure your data. Google recommends using <strong>JSON-LD</strong> as it is more cleaner approach to express the structure of the data in JSON format embedded as a <code>&lt;script&gt;</code> in the <code>&lt;head&gt;</code> tag of your HTML. Its a clear separation of structure from HTML elements as compare to <strong>Microdata</strong> where you add special properties like <code>itemprop</code>, <code>itemtype</code> in HTML element tags everywhere.</p>
 <p>Now we know that JSON-LD is way to go. There are the steps to add structure data using JSON-LD in hugo website:</p>
-<h2 id="1-create-site_schemahtml-partial">1. Create <em>site_schema.html</em> Partial</h2>
+<h2 id="create-site_schemahtml-partial">Create <em>site_schema.html</em> Partial</h2>
 <p>First of all we are going to create a partial called <code>site_schema.html</code> which is responsible to generate structure data JSON-LD for hugo website and hugo blog pages. All you need to do is copy the below code snippet and save it under <code>$hugo/layouts/partials/site_schema.html</code>.</p>
 <pre><code>{{ if .IsHome -}}
 &lt;script type=&quot;application/ld+json&quot;&gt;
@@ -312,7 +312,7 @@ if (!doNotTrack) {
 {{ end }}
 </code></pre><p><strong>Note:</strong> I am using hugo as a static site generator for this blog website and after spending so much time here and there, i came up with this partial. You can do the changes in this partial as per your need.</p>
 <p>The data to generate structure data json using this partial comes from the front-matter of the blog post and config.toml file. I have tried to feed in most of the data from front-matter and fallback as config.toml so that most of the blog post pages have their specific data.</p>
-<h2 id="2-relevant-front-matter">2. Relevant <em>front-matter</em></h2>
+<h2 id="relevant-front-matter">Relevant <em>front-matter</em></h2>
 <p>These are the relevant front-matter properties which are being used in generating JSON-LD schema for your blog page:-</p>
 <h6 id="blog-pagemd">blog-page.md</h6>
 <pre><code>---
@@ -332,7 +332,7 @@ keywords:
   - &quot;keyword 1 of blog post structure data&quot;
   - &quot;keyword 2 of blog post structure data &quot;
 ---
-</code></pre><h2 id="3-relevant-configtoml">3. Relevant <em>config.toml</em></h2>
+</code></pre><h2 id="relevant-configtoml">Relevant <em>config.toml</em></h2>
 <p>These are the relevant config.toml configuration properties which are being used in generating JSON-LD schema for your website:-</p>
 <h6 id="configtoml">config.toml</h6>
 <pre><code>baseURL = &quot;I am url of website structure data&quot;
@@ -344,7 +344,7 @@ title = &quot;I am name of website structure data&quot;
   description = &quot;I am description of website structure data&quot;
   logo = &quot;favicon-32x32.png&quot;
   copyright = &quot;I am license of website structure data&quot;
-</code></pre><h2 id="4-add-partial-to-the-head-tag-of-baseofhtml">4. Add partial to the <em>&lt;head&gt;</em> tag of <em>baseof.html</em></h2>
+</code></pre><h2 id="add-partial-to-the-head-tag-of-baseofhtml">Add partial to the <em>&lt;head&gt;</em> tag of <em>baseof.html</em></h2>
 <p>Once you created a partial, you need to add this partial in the <code>&lt;head&gt;</code> tag of html page under <code>_default</code> folder which generates your hugo website and blog HTML pages.</p>
 <p>If you are using any theme in hugo website then this HTML page could be <code>$hugo/themes/layouts/_default/baseof.html</code>. If you have designed hugo website on your own then this HTML page could be <code>$hugo/layouts/_default/baseof.html</code> depending upon your naming convention. Just add the partial in HTML head tag like below:</p>
 <h6 id="baseofhtml">baseof.html</h6>
@@ -360,7 +360,7 @@ title = &quot;I am name of website structure data&quot;
   &lt;<span style="color:#f92672">body</span>&gt;
   &lt;/<span style="color:#f92672">body</span>&gt;
 &lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div><h2 id="5-generated-structure-data-json-ld">5. Generated Structure Data JSON-LD</h2>
+</code></pre></div><h2 id="generated-structure-data-json-ld">Generated Structure Data JSON-LD</h2>
 <p>The following structure data are generated in JSON-LD format.</p>
 <h5 id="website-main-page">Website Main Page</h5>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
@@ -449,7 +449,7 @@ title = &quot;I am name of website structure data&quot;
   &lt;<span style="color:#f92672">body</span>&gt;
   &lt;/<span style="color:#f92672">body</span>&gt;
 &lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div><h2 id="7-verify-structure-data-json-ld">7. Verify Structure Data JSON-LD</h2>
+</code></pre></div><h2 id="verify-structure-data-json-ld">Verify Structure Data JSON-LD</h2>
 <p>You can verify the structure data using <a href="https://search.google.com/structured-data/testing-tool">Structured Data Testing Tool</a> provided by Google where either you give a URL of your page or just copy paste whole HTML to verify. Look for the errors and correct them.</p>
 		</div>
 		<footer class="post__footer">

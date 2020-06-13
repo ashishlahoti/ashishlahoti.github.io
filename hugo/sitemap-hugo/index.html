@@ -91,7 +91,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/logo/gohugo.png"],
     "url" : "https:\/\/codingnconcepts.com\/hugo\/sitemap-hugo\/",
-    "wordCount" : "986",
+    "wordCount" : "977",
     "genre" : ["Hugo Defaults"],
     "keywords" :  null 
 }
@@ -186,7 +186,7 @@ if (!doNotTrack) {
 			<div class="primary">
 			
 <main class="main" role="main">
-	<article class="post">
+	<article class="post" autonumbering>
 		<header class="post__header">
 			<h1 class="post__title"><img class="post__thumbnail" src="/img/logo/gohugo.png" alt="Customize sitemap in Hugo Website"> Customize sitemap in Hugo Website</h1>
 			<p class="post__lead">Guide to disable or customize sitemap.xml in hugo</p>
@@ -210,33 +210,33 @@ if (!doNotTrack) {
 	<div class="toc__menu">
 		<nav id="TableOfContents">
   <ul>
-    <li><a href="#1-overview">1. Overview</a>
+    <li><a href="#overview">Overview</a>
       <ul>
         <li></li>
       </ul>
     </li>
-    <li><a href="#2-disable-sitemapxml">2. Disable sitemap.xml</a>
+    <li><a href="#disable-sitemapxml">Disable sitemap.xml</a>
       <ul>
-        <li><a href="#21-disable-using-configtoml">2.1 Disable using config.toml</a></li>
-        <li><a href="#22-disable-using-command-line">2.2 Disable using command-line</a></li>
+        <li><a href="#disable-using-configtoml">Disable using config.toml</a></li>
+        <li><a href="#disable-using-command-line">Disable using command-line</a></li>
       </ul>
     </li>
-    <li><a href="#3-customize-sitemapxml">3. Customize sitemap.xml</a>
+    <li><a href="#customize-sitemapxml">Customize sitemap.xml</a>
       <ul>
         <li></li>
-        <li><a href="#31-exclude-taxonomy-pages-from-sitemapxml">3.1 Exclude taxonomy pages from sitemap.xml</a></li>
-        <li><a href="#32-exclude-specific-pages-from-sitemapxml">3.2 Exclude specific pages from sitemap.xml</a></li>
-        <li><a href="#33-exclude-taxonomy-and-specific-pages-from-sitemapxml">3.3 Exclude taxonomy and specific pages from sitemap.xml</a></li>
+        <li><a href="#exclude-taxonomy-pages-from-sitemapxml">Exclude taxonomy pages from sitemap.xml</a></li>
+        <li><a href="#exclude-specific-pages-from-sitemapxml">Exclude specific pages from sitemap.xml</a></li>
+        <li><a href="#exclude-taxonomy-and-specific-pages-from-sitemapxml">Exclude taxonomy and specific pages from sitemap.xml</a></li>
       </ul>
     </li>
-    <li><a href="#4-summary">4. Summary</a></li>
+    <li><a href="#summary">Summary</a></li>
   </ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
 			<p>In this tutorial, we&rsquo;ll learn how to disable or customize <em>sitemap.xml</em> for Hugo website.</p>
-<h2 id="1-overview">1. Overview</h2>
+<h2 id="overview">Overview</h2>
 <p>When you generate a website using Hugo static site generator. There are few points to understand about <em>sitemap.xml</em>:-</p>
 <ul>
 <li>Hugo out of the box creates a <em>sitemap.xml</em> based on the <a href="https://www.sitemaps.org/protocol.html">Sitemap Protocol</a> v0.9.</li>
@@ -291,9 +291,9 @@ if (!doNotTrack) {
     <span style="color:#f92672">&lt;lastmod&gt;</span>2020-06-04T00:00:00+00:00<span style="color:#f92672">&lt;/lastmod&gt;</span>
   <span style="color:#f92672">&lt;/url&gt;</span>
 <span style="color:#f92672">&lt;/urlset&gt;</span>
-</code></pre></div><h2 id="2-disable-sitemapxml">2. Disable sitemap.xml</h2>
+</code></pre></div><h2 id="disable-sitemapxml">Disable sitemap.xml</h2>
 <p>There are two ways to disable generating of <em>sitemap.xml</em></p>
-<h3 id="21-disable-using-configtoml">2.1 Disable using config.toml</h3>
+<h3 id="disable-using-configtoml">Disable using config.toml</h3>
 <p>This approach is recommended, when you want to disable <em>sitemap.xml</em> permanently everytime you build your website.</p>
 <p>Add the <code>&quot;sitemap&quot;</code> value to the <code>disableKinds</code> configuration variable in your configuration file.</p>
 <h6 id="configtoml">config.toml</h6>
@@ -318,7 +318,7 @@ baseurl = &quot;https://www.example.com&quot;
 [taxonomies]
     category = &quot;categories&quot;
     tag = &quot;tags&quot;
-</code></pre><h3 id="22-disable-using-command-line">2.2 Disable using command-line</h3>
+</code></pre><h3 id="disable-using-command-line">Disable using command-line</h3>
 <p>This approach is recommended, when you want to disable <em>sitemap.xml</em> for a specific build of your website.</p>
 <p>To generate a hugo website without sitemap, execute following command from terminal:</p>
 <pre><code>hugo --disableKinds=sitemap
@@ -328,7 +328,7 @@ baseurl = &quot;https://www.example.com&quot;
 <p>You can disable multiple kind of pages like <strong>sitemap.xml</strong> , <strong>RSS feed</strong> and <strong>robots.txt</strong> by executing following command from terminal:</p>
 </blockquote>
 <pre><code>hugo --disableKinds=sitemap,RSS,robotsTXT
-</code></pre><h2 id="3-customize-sitemapxml">3. Customize sitemap.xml</h2>
+</code></pre><h2 id="customize-sitemapxml">Customize sitemap.xml</h2>
 <p>Hugo has a built-in Sitemap template, but if you want to customize <em>sitemap.xml</em> then first of all copy and paste below <a href="https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/_default/sitemap.xml">hugo&rsquo;s default sitemap template</a> in <code>layouts/_default/sitemap.xml</code> location:-</p>
 <h6 id="layouts_defaultsitemapxml">/layouts/_default/sitemap.xml</h6>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">{{ printf &#34;<span style="color:#75715e">&lt;?xml version=\&#34;1.0\&#34; encoding=\&#34;utf-8\&#34; standalone=\&#34;yes\&#34;?&gt;</span>&#34; | safeHTML }}
@@ -355,7 +355,7 @@ baseurl = &quot;https://www.example.com&quot;
 <span style="color:#f92672">&lt;/urlset&gt;</span>
 </code></pre></div><p>Now let&rsquo;s do changes in above template to meet our requirement:-<br>
 <br /></p>
-<h3 id="31-exclude-taxonomy-pages-from-sitemapxml">3.1 Exclude taxonomy pages from sitemap.xml</h3>
+<h3 id="exclude-taxonomy-pages-from-sitemapxml">Exclude taxonomy pages from sitemap.xml</h3>
 <p>This is most common use case where you want to skip taxonomy pages like category (/category/<em>.</em>) and tags (/tags/<em>.</em>) pages from sitemap.xml.</p>
 <p>Notice that we have added a condition <code>{{ if ne .Kind &quot;taxonomy&quot; }}</code> in default sitemap template to exclude taxonomy pages</p>
 <h6 id="layouts_defaultsitemapxml-1">/layouts/_default/sitemap.xml</h6>
@@ -382,7 +382,7 @@ baseurl = &quot;https://www.example.com&quot;
   {{ end }}{{ end }}
 <span style="color:#f92672">&lt;/urlset&gt;</span>
 </code></pre></div><p><br /></p>
-<h3 id="32-exclude-specific-pages-from-sitemapxml">3.2 Exclude specific pages from sitemap.xml</h3>
+<h3 id="exclude-specific-pages-from-sitemapxml">Exclude specific pages from sitemap.xml</h3>
 <p>This is also very common use case where you want to skip some pages from <em>sitemap.xml</em>.</p>
 <p>Notice that we have added a condition <code>{{ if ne .Params.sitemap_ignore true }}</code> in default sitemap template to exclude pages based on <code>sitemap_ignore</code> flag</p>
 <h6 id="layouts_defaultsitemapxml-2">/layouts/_default/sitemap.xml</h6>
@@ -417,7 +417,7 @@ baseurl = &quot;https://www.example.com&quot;
 sitemap_ignore: true
 ---
 </code></pre><p><br /></p>
-<h3 id="33-exclude-taxonomy-and-specific-pages-from-sitemapxml">3.3 Exclude taxonomy and specific pages from sitemap.xml</h3>
+<h3 id="exclude-taxonomy-and-specific-pages-from-sitemapxml">Exclude taxonomy and specific pages from sitemap.xml</h3>
 <p>Let&rsquo;s combine the last two examples where you want to skip taxonomy pages and specific pages based <code>sitemap_ignore</code> flag. I am using the below <em>sitemap.xml</em> in my own website.</p>
 <p>Notice that we have combined the conditions of last two examples <code>{{ if and (ne .Kind &quot;taxonomy&quot;) (ne .Params.sitemap_ignore true) }}</code></p>
 <h6 id="layouts_defaultsitemapxml-3">/layouts/_default/sitemap.xml</h6>
@@ -443,7 +443,7 @@ sitemap_ignore: true
   <span style="color:#f92672">&lt;/url&gt;</span>
   {{ end }}{{ end }}
 <span style="color:#f92672">&lt;/urlset&gt;</span>
-</code></pre></div><h2 id="4-summary">4. Summary</h2>
+</code></pre></div><h2 id="summary">Summary</h2>
 <p>In this tutorial, we&rsquo;ve learned how to customize <em>sitemap.xml</em> for your hugo website. If you have any other requirements of <em>sitemap.xml</em> customization, or you are facing issue following the tutorial. Please comment, I&rsquo;ll try to solve your problem as soon as possible.</p>
 		</div>
 		<footer class="post__footer">
