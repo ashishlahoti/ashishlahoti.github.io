@@ -6,9 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>JavaScript Debugging Tips and Tricks - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Cool Tips and Tricks for JavaScript Debugging using alert, debugger statement and console methods.">
+	<meta name="description" content="Tips and Tricks for debugging JavaScript code using Chrome DevTool and different ways of logging to the console using Console APIs.">
 	<meta property="og:title" content="JavaScript Debugging Tips and Tricks" />
-<meta property="og:description" content="Cool Tips and Tricks for JavaScript Debugging using alert, debugger statement and console methods." />
+<meta property="og:description" content="Tips and Tricks for debugging JavaScript code using Chrome DevTool and different ways of logging to the console using Console APIs." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/javascript/debugging-tricks-javascript/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/js.png" />
@@ -25,7 +25,7 @@
 <meta name="twitter:image" content="https://codingnconcepts.com/img/logo/js.png"/>
 
 <meta name="twitter:title" content="JavaScript Debugging Tips and Tricks"/>
-<meta name="twitter:description" content="Cool Tips and Tricks for JavaScript Debugging using alert, debugger statement and console methods."/>
+<meta name="twitter:description" content="Tips and Tricks for debugging JavaScript code using Chrome DevTool and different ways of logging to the console using Console APIs."/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -54,7 +54,7 @@ if (!doNotTrack) {
     "name": "JavaScript Debugging Tips and Tricks",
     "headline": "JavaScript Debugging Tips and Tricks",
     "alternativeHeadline": "",
-    "description": "Cool Tips and Tricks for JavaScript Debugging using alert, debugger statement and console methods.",
+    "description": "Tips and Tricks for debugging JavaScript code using Chrome DevTool and different ways of logging to the console using Console APIs.",
     "inLanguage": "en-us",
 	"isFamilyFriendly": "true",
     "mainEntityOfPage": {
@@ -91,7 +91,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/logo/js.png"],
     "url" : "https:\/\/codingnconcepts.com\/javascript\/debugging-tricks-javascript\/",
-    "wordCount" : "2704",
+    "wordCount" : "3221",
     "genre" : ["Javascript Logging"],
     "keywords" :  null 
 }
@@ -223,26 +223,32 @@ if (!doNotTrack) {
         <li></li>
       </ul>
     </li>
-    <li><a href="#xhrfetch-breakpoints">XHR/Fetch breakpoints</a></li>
-    <li><a href="#event-listener-breakpoints">Event listener breakpoints</a></li>
-    <li><a href="#exception-breakpoints">Exception breakpoints</a></li>
-    <li><a href="#function-breakpoints">Function breakpoints</a></li>
+    <li><a href="#xhrfetch-breakpoint">XHR/Fetch Breakpoint</a></li>
+    <li><a href="#event-listener-breakpoint">Event listener Breakpoint</a></li>
+    <li><a href="#exception-breakpoint">Exception Breakpoint</a></li>
+    <li><a href="#function-breakpoint">Function Breakpoint</a></li>
+    <li><a href="#blackbox-script-files">Blackbox Script files</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
     <li><a href="#snippets">Snippets</a></li>
-    <li><a href="#print-multiple-values">Print multiple values</a></li>
+    <li><a href="#print-multiple-values">Print Multiple Values</a></li>
     <li><a href="#avoid-logging-object-reference">Avoid logging Object Reference</a></li>
     <li><a href="#print-dom-element-in-json-format">Print DOM element in JSON format</a></li>
-    <li><a href="#print-constructor-functions-prototype-methods">Print Constructor function&rsquo;s prototype methods</a></li>
+    <li><a href="#print-constructor-functions-prototype-methods">Print Constructor function&rsquo;s Prototype Methods</a></li>
     <li><a href="#print-functions-closure">Print Function&rsquo;s Closure</a></li>
     <li><a href="#print-objects-internal-properties">Print Object&rsquo;s internal properties</a></li>
     <li><a href="#print-objects-as-table">Print Objects as Table</a></li>
     <li><a href="#print-time-taken-for-code-execution">Print Time taken for Code Execution</a></li>
-    <li><a href="#print-stack-trace-of-method-execution">Print Stack trace of method execution</a></li>
+    <li><a href="#print-stack-trace-of-method-execution">Print Stack trace of Method Execution</a></li>
+    <li><a href="#use-a-unit-testing-framework">Use a Unit Testing Framework</a></li>
   </ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
-			<p>In this tutorial, we&rsquo;ll learn the cool tips and tricks for logging and debugging in JavaScript.</p>
+			<p>In this tutorial, we&rsquo;ll learn plenty of tips and tricks for debugging JavaScript code using Chrome DevTool, different ways of logging to the console using console APIs, and much more&hellip;</p>
 <h2 id="say-no-to-alerts">Say No to alerts</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;I will pop up in browser&#34;</span>);
 </code></pre></div><figure class="left">
@@ -390,7 +396,7 @@ mobile phones <em>(such as iPhone, Samsung Galaxy, Nexus, LG, Nokia, Blackberry,
 <li><strong>Attributes modifications:</strong> Triggered when an attribute is added or removed on the currently-selected node, or when an attribute value changes.</li>
 <li><strong>Node Removal:</strong> Triggered when the currently-selected node is removed.</li>
 </ul>
-<h2 id="xhrfetch-breakpoints">XHR/Fetch breakpoints</h2>
+<h2 id="xhrfetch-breakpoint">XHR/Fetch Breakpoint</h2>
 <p>If you encounter an error in AJAX request and you are not able to identify the code which is submitting this request, then XHR breakpoint is very useful to quickly find the AJAX source code.</p>
 <p>XHR breakpoint pause the execution of code when the request URL of an AJAX request contains a specified string. XHR breakpoint is supported for AJAX <code>send()</code> and <code>fetch()</code> methods.</p>
 <p>To set an XHR breakpoint:</p>
@@ -401,20 +407,22 @@ mobile phones <em>(such as iPhone, Samsung Galaxy, Nexus, LG, Nokia, Blackberry,
 <li>Enter the string which you want to break on. DevTools pauses when this string is present anywhere in an XHR&rsquo;s request URL.</li>
 <li>Press <em>Enter</em> to confirm.</li>
 </ol>
-<h2 id="event-listener-breakpoints">Event listener breakpoints</h2>
-<p>Use event listener breakpoints when you want to pause on the event listener code that runs after an event is fired. You can select specific events, such as <code>click</code>, or categories of events, such as all mouse events.</p>
+<h2 id="event-listener-breakpoint">Event listener Breakpoint</h2>
+<p>Use event listener breakpoints when you want to pause on the event listener code that runs after an event is fired. You can select specific events, such as <code>click</code> under mouse events, or all events, such as cut, copy, paste under <code>clipboard</code> category.</p>
+<p>To turn on event listener breakpoint:</p>
 <ol>
 <li>Click the <strong>Sources</strong> tab.</li>
 <li>Expand the <strong>Event Listener Breakpoints</strong> pane. DevTools shows a list of event categories, such as <em>Animation</em>, <em>Canvas</em>, <em>Clipboard</em>, <em>Mouse</em>, etc.</li>
-<li>Check one of these categories to pause whenever any event from that category is fired, or expand the category and check a specific event.</li>
+<li>Either check ☑ category to include all events under that category, or expand the category and check ☑ a specific event.</li>
 </ol>
-<h2 id="exception-breakpoints">Exception breakpoints</h2>
-<p>The Chrome Developer Tools allows you to pause execution of your JavaScript code upon throwing a caught or uncaught exception. This makes it possible for you to observe the state of your application at the time when the Error object was created.</p>
+<h2 id="exception-breakpoint">Exception Breakpoint</h2>
+<p>The Chrome Developer Tools allows you to pause execution of your JavaScript code upon throwing a caught or uncaught exception. This is particularly useful when your code is not throwing error and failing silently. This makes it possible for you to inspect the state of your application at the time when the Error object was created.</p>
 <p>To turn on exception breakpoint:</p>
 <ol>
 <li>Click the <strong>Sources</strong> tab.</li>
 <li>Click Pause on exceptions icon. It turns blue when enabled.</li>
-<li>Check <strong>Pause on uncaught exceptions</strong> if you want to pause execution on caught exceptions as well.</li>
+<li>Check <strong>☑ Pause on uncaught exceptions</strong> if you want to pause execution on caught exceptions as well.</li>
+<li>Remember to turn them off when done.</li>
 </ol>
 <figure class="center">
     <img src="/img/javascript/chrome-devtool-advance-breakpoints.png"
@@ -423,7 +431,7 @@ mobile phones <em>(such as iPhone, Samsung Galaxy, Nexus, LG, Nokia, Blackberry,
         </figcaption>
 </figure>
 
-<h2 id="function-breakpoints">Function breakpoints</h2>
+<h2 id="function-breakpoint">Function Breakpoint</h2>
 <p>Call <code>debug(functionName)</code>, where functionName is the function you want to debug, when you want to pause whenever a specific function is called. You can insert <code>debug()</code> into your code (like a console.log() statement) or call it from the DevTools Console. <code>debug()</code> is equivalent to setting a line-of-code breakpoint on the first line of the function.</p>
 <p>Make sure the target function is in scope. DevTools throws a ReferenceError if the function you want to debug is not in scope.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sum</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) {
@@ -432,8 +440,33 @@ mobile phones <em>(such as iPhone, Samsung Galaxy, Nexus, LG, Nokia, Blackberry,
 }
 <span style="color:#a6e22e">debug</span>(<span style="color:#a6e22e">sum</span>); <span style="color:#75715e">// Pass the function object, not a string.
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">sum</span>();
-</code></pre></div><h2 id="snippets">Snippets</h2>
-<p>Generally we use browser console to execute and test some JavaScript snippets. There are some time when we need to test same code again and again. Chrome DevTools provides a way to save your reusable code snippets and execute them.</p>
+</code></pre></div><h2 id="blackbox-script-files">Blackbox Script files</h2>
+<p>When you debug your application code in Chrome DevTool and step through your code line-by-line, the debugger sometimes jumps into a source file that&rsquo;s not your focus (such as a third-party JS library). I&rsquo;m sure you&rsquo;ve experienced the annoyance of stepping through the library code before getting back to your own application code.</p>
+<p>The Chrome DevTool provides an ability to blackbox JavaScript file(s) so that debugger will not jump into those files and ignore them when stepping through code you&rsquo;re debugging.</p>
+<h6 id="what-happens-when-you-blackbox-a-script">What happens when you blackbox a script?</h6>
+<ul>
+<li>Exceptions thrown from library code will not pause (if Pause on exceptions is enabled),</li>
+<li>Stepping into/out/over bypasses the library code,</li>
+<li>Event listener breakpoints don&rsquo;t break in library code,</li>
+<li>The debugger will not pause on any breakpoints set in library code.</li>
+</ul>
+<p>The end result is you are debugging your application code instead of third party resources. To blackbox JavaScript files:</p>
+<ol>
+<li>Click on <strong>Main Menu</strong> &gt; <strong>Settings</strong> icon <em>OR</em> use <code>F1</code> shortcut key to open settings</li>
+<li>Click on <strong>Blackboxing</strong> menu item.</li>
+<li>Click on <strong>Add Pattern&hellip;</strong> button.</li>
+<li>Enter file name or pattern in text box and click <strong>Add</strong> button.</li>
+<li>Check <strong>☑ Blackbox content script</strong> to enable blackboxing.</li>
+</ol>
+<figure class="center">
+    <img src="/img/javascript/chrome-devtool-blackbox-script.png"
+         alt="Chrome DevTool Blackbox Script"/> <figcaption>
+            <p>Chrome DevTool Blackbox Script</p>
+        </figcaption>
+</figure>
+
+<h2 id="snippets">Snippets</h2>
+<p>Generally we use browser console to execute and test some code snippets. Sometime, we need to test same code again and again. The Chrome DevTools provides the ability to save code snippets for future use.</p>
 <p>To save your code snippet:</p>
 <ol>
 <li>Click the <strong>Sources</strong> tab.</li>
@@ -441,8 +474,19 @@ mobile phones <em>(such as iPhone, Samsung Galaxy, Nexus, LG, Nokia, Blackberry,
 <li>Click on <strong>+ New Snippet</strong> to create a new file to save your code snippet.</li>
 <li>When you open a snippet code. There are icons to format and execute your code.</li>
 </ol>
-<p>Paul Irish&rsquo;s <a href="https://github.com/paulirish/devtools-addons/wiki/Snippets">snippets</a> such as stopBefore.js, captureCalls.js and Grep.js are very useful which you can save in your browser snippet and reuse them.</p>
-<h2 id="print-multiple-values">Print multiple values</h2>
+<p>You can use snippets to store your frequently used debugging code scripts, made by you or other developers. Paul Irish has written some useful <a href="https://github.com/paulirish/devtools-addons/wiki/Snippets">snippets</a> - <em>stopBefore.js</em>, <em>Grep.js</em> which you can copy in your DevTool snippets. Snippets are accessible from console. Let&rsquo;s go through them:-</p>
+<ul>
+<li>The <a href="https://gist.github.com/NV/5376464">storeBefore.js</a> snippet allows to setup a breakpoint that is triggered just before a certain function is called. For example, this will trigger a breakpoint just before the <code>document.getElementById</code> function is called:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">stopBefore</span>(document, <span style="color:#e6db74">&#39;getElementById&#39;</span>)
+</code></pre></div></li>
+<li>The <a href="https://gist.github.com/nicdaCosta/4072412">grep.js</a> snippet allows searching an object and its prototypical chain for properties that match a given search criteria. For example this instruction will search for all properties matching <em>get</em> in the <em>document</em> object:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">grep</span>(document, <span style="color:#e6db74">&#39;get&#39;</span>);
+</code></pre></div></li>
+<li>The <a href="https://gist.github.com/dmethvin/1676346">debugAccess.js</a> snippet allows to trigger a breakpoint when a given property is accessed. For example this will trigger a breakpoint each time <em>document.cookie</em> is called:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">debugAccess</span>(document, <span style="color:#e6db74">&#39;cookie&#39;</span>);
+</code></pre></div></li>
+</ul>
+<h2 id="print-multiple-values">Print Multiple Values</h2>
 <p>Most of the developers use <em>console.log()</em> for debugging values in browser console. It is a king of debugging and this solves most of your debugging problems.</p>
 <p>The thing you might not know is, <em>console.log()</em> can print multiple values by providing comma-separated values so you don&rsquo;t need to concat values yourself.</p>
 <p>Each comma <em>&quot;,&quot;</em> add a space between values.</p>
@@ -519,7 +563,7 @@ x = 1 y = hello fruits = (3) [&quot;apple&quot;, &quot;banana&quot;, &quot;mang
          alt="console.log vs console.dir"/> 
 </figure>
 
-<h2 id="print-constructor-functions-prototype-methods">Print Constructor function&rsquo;s prototype methods</h2>
+<h2 id="print-constructor-functions-prototype-methods">Print Constructor function&rsquo;s Prototype Methods</h2>
 <p>The <em>console.dir()</em> is quite useful to print constructor function&rsquo;s internal properties such as prototype methods.</p>
 <p>We see in below example that <em>console.log()</em> just print the name of constructor function whereas, using <em>console.dir()</em>, we&rsquo;re able to see all prototype methods of <em>Array</em> function.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Array);
@@ -692,7 +736,7 @@ x = 1 y = hello fruits = (3) [&quot;apple&quot;, &quot;banana&quot;, &quot;mang
 </code></pre></div><pre><code><div class="code_output">Output</div>
 Timer1: 13.088134765625ms
 Timer2: 26.070517578125ms
-</code></pre><h2 id="print-stack-trace-of-method-execution">Print Stack trace of method execution</h2>
+</code></pre><h2 id="print-stack-trace-of-method-execution">Print Stack trace of Method Execution</h2>
 <p>You can use <em>console.trace()</em> to print a stack trace of method execution flow to the console. Few pointers:-</p>
 <ul>
 <li><em>console.trace()</em> is compatible with the snippets feature of Chrome DevTools.</li>
@@ -712,7 +756,15 @@ Timer2: 26.070517578125ms
   second        @ <span style="color: blue">test:2</span>
   first	        @ <span style="color: blue">test:1</span>
   (anonymous)   @ <span style="color: blue">test:5</span>
-</code></pre><p><br /></p>
+</code></pre><h2 id="use-a-unit-testing-framework">Use a Unit Testing Framework</h2>
+<p>There are many third-party unit-testing framework for JavaScript available with their own philosophy and syntax. Here are most widely used JavaScript testing frameworks:-</p>
+<ul>
+<li><a href="https://mochajs.org/">Mocha</a> is feature-rich framework running on <em>Node.js</em> and in the browser, making asynchronous testing simple and fun. Mocha tests run serially, allowing for flexible and accurate reporting, while mapping uncaught exceptions to the correct test cases.</li>
+<li><a href="https://jestjs.io/">JEST</a> is popular framework maintained by <em>Facebook</em>. It is a preferred framework for the React based applications as it requires zero configuration. It works great with projects using <em>Babel</em>, <em>TypeScript</em>, <em>Node</em>, <em>React</em>, <em>Angular</em>, and <em>Vue</em>.</li>
+<li><a href="https://jasmine.github.io/">Jasmine</a> is a behavior-driven testing framework. It has no external dependencies. It does not require a DOM. And it has a clean, obvious syntax so that you can easily write tests.</li>
+<li><a href="http://qunitjs.com/">QUnit</a> is a powerful, easy-to-use JavaScript unit testing framework. It&rsquo;s used by the <em>jQuery</em>, <em>jQuery UI</em> and <em>jQuery Mobile</em> projects and is capable of testing any generic JavaScript code</li>
+</ul>
+<p><br /></p>
 <p>Thanks for reading till the end. I hope this tutorial would have helped you to find some useful tips for debugging and logging to the console, which you&rsquo;d not known before.</p>
 <p>Reference:</p>
 <ol>
@@ -770,7 +822,7 @@ Timer2: 26.070517578125ms
       
       
       <li>
-        <a href="whatsapp://send?text=JavaScript%20Debugging%20Tips%20and%20Tricks%2c%20by%20Coding%20N%20Concepts%0aCool%20Tips%20and%20Tricks%20for%20JavaScript%20Debugging%20using%20alert%2c%20debugger%20statement%20and%20console%20methods.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fdebugging-tricks-javascript%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=JavaScript%20Debugging%20Tips%20and%20Tricks%2c%20by%20Coding%20N%20Concepts%0aTips%20and%20Tricks%20for%20debugging%20JavaScript%20code%20using%20Chrome%20DevTool%20and%20different%20ways%20of%20logging%20to%20the%20console%20using%20Console%20APIs.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fdebugging-tricks-javascript%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>Email</p>
         </a>
@@ -780,7 +832,7 @@ Timer2: 26.070517578125ms
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - JavaScript%20Debugging%20Tips%20and%20Tricks.&amp;body=JavaScript%20Debugging%20Tips%20and%20Tricks%2c%20by%20Coding%20N%20Concepts%0aCool%20Tips%20and%20Tricks%20for%20JavaScript%20Debugging%20using%20alert%2c%20debugger%20statement%20and%20console%20methods.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fdebugging-tricks-javascript%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - JavaScript%20Debugging%20Tips%20and%20Tricks.&amp;body=JavaScript%20Debugging%20Tips%20and%20Tricks%2c%20by%20Coding%20N%20Concepts%0aTips%20and%20Tricks%20for%20debugging%20JavaScript%20code%20using%20Chrome%20DevTool%20and%20different%20ways%20of%20logging%20to%20the%20console%20using%20Console%20APIs.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fdebugging-tricks-javascript%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>
