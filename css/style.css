@@ -270,7 +270,7 @@ code {
 
 code {
 	padding: 0 5px;
-	color: #c33;
+	/* color: #c33; */
 }
 
 pre {
@@ -694,7 +694,8 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 }
 
 .content ol {
-	list-style: decimal;
+	list-style: none;
+	counter-reset: number-list-counter;
 }
 
 .content ul,
@@ -711,6 +712,17 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 
 .content li {
 	margin-bottom: 5px;
+}
+
+.content ol li {
+	counter-increment: number-list-counter;
+}
+
+.content ol > li::before {
+	content: counter(number-list-counter) ".";
+	font-size: 1.125rem;
+	margin-right: 0.5rem;
+	margin-left: -1em;
 }
 
 .post__footer {
@@ -1435,12 +1447,10 @@ body {counter-reset: h2}
 h2 {counter-reset: h3}
 h3 {counter-reset: h4}
 h4 {counter-reset: h5}
-h5 {counter-reset: h6}
 
 article[autonumbering] h2:before {counter-increment: h2; content: counter(h2) ". "}
 article[autonumbering] h3:before {counter-increment: h3; content: counter(h2) "." counter(h3) ". "}
 article[autonumbering] h4:before {counter-increment: h4; content: counter(h2) "." counter(h3) "." counter(h4) ". "}
-article[autonumbering] h5:before {counter-increment: h5; content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". "}
 
 article[autonumbering] .toc__menu ul { counter-reset: item }
 article[autonumbering] .toc__menu li a:before { content: counters(item, ".") ". "; counter-increment: item }

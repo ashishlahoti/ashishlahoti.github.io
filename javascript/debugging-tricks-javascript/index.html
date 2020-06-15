@@ -13,7 +13,7 @@
 <meta property="og:url" content="https://codingnconcepts.com/javascript/debugging-tricks-javascript/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/js.png" />
 <meta property="article:published_time" content="2020-06-11T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-06-14T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-15T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -77,7 +77,7 @@ if (!doNotTrack) {
     "copyrightYear" : "2020",
     "dateCreated": "2020-06-11T00:00:00.00Z",
     "datePublished": "2020-06-11T00:00:00.00Z",
-    "dateModified": "2020-06-14T00:00:00.00Z",
+    "dateModified": "2020-06-15T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -91,7 +91,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/logo/js.png"],
     "url" : "https:\/\/codingnconcepts.com\/javascript\/debugging-tricks-javascript\/",
-    "wordCount" : "1733",
+    "wordCount" : "2704",
     "genre" : ["Javascript Logging"],
     "keywords" :  null 
 }
@@ -195,7 +195,7 @@ if (!doNotTrack) {
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
 	<time class="meta__text" datetime="2020-06-11T00:00:00Z">June 11, 2020</time>
-	<time class="meta__text" datetime="2020-06-14T00:00:00Z"> (Last Modified: June 14, 2020)</time>
+	<time class="meta__text" datetime="2020-06-15T00:00:00Z"> (Last Modified: June 15, 2020)</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -215,8 +215,19 @@ if (!doNotTrack) {
         <li></li>
       </ul>
     </li>
-    <li><a href="#breakpoint-in-browser">Breakpoint in Browser</a></li>
-    <li><a href="#breakpoint-using-debugger-statement">Breakpoint using &lsquo;debugger&rsquo; statement</a></li>
+    <li><a href="#line-of-code-breakpoint">Line-of-code Breakpoint</a></li>
+    <li><a href="#set-breakpoint-from-code-using-debugger-statement">Set Breakpoint from code using &lsquo;debugger&rsquo; statement</a></li>
+    <li><a href="#conditional-breakpoint">Conditional Breakpoint</a></li>
+    <li><a href="#dom-change-breakpoint">DOM Change Breakpoint</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#xhrfetch-breakpoints">XHR/Fetch breakpoints</a></li>
+    <li><a href="#event-listener-breakpoints">Event listener breakpoints</a></li>
+    <li><a href="#exception-breakpoints">Exception breakpoints</a></li>
+    <li><a href="#function-breakpoints">Function breakpoints</a></li>
+    <li><a href="#snippets">Snippets</a></li>
     <li><a href="#print-multiple-values">Print multiple values</a></li>
     <li><a href="#avoid-logging-object-reference">Avoid logging Object Reference</a></li>
     <li><a href="#print-dom-element-in-json-format">Print DOM element in JSON format</a></li>
@@ -239,38 +250,199 @@ if (!doNotTrack) {
          alt="Browser debugging alert"/> 
 </figure>
 
-<p>Beginners in JavaScript sometimes use <em>alerts()</em> for debugging values that pop up in the browser. Alerts are blocking and annoying. Try to avoid them. There are many alternate ways available for debugging, we&rsquo;ll look at them subsequently.</p>
+<p>When we use <code>alert()</code> for debugging value, it pops up in the browser which is blocking and annoying. Try to avoid them as there are alternate ways available for debugging, we&rsquo;ll look at them subsequently.</p>
 <h2 id="browser-as-debugger">Browser as Debugger</h2>
 <p>Most of the modern browsers such as Chrome, Firefox, Edge, Opera, and Safari has built-in support for JavaScript debugging. Chrome as the debugger is generally the first choice among developers.</p>
-<h6 id="chrome-developer-tool">Chrome Developer Tool</h6>
+<h5 id="chrome-developer-tool">Chrome Developer Tool</h5>
 <blockquote>
-<p>Shortcut keys to enable developer tool in chrome browser is <strong>F12</strong> for windows and <strong>⌥⌘I</strong> for mac. Alternatively, From the menu, select &ldquo;More tools&rdquo; ➞ &ldquo;Developer tools&rdquo; to enable debugging.</p>
+<p>To open DevTool from Chrome&rsquo;s main menu, select <strong>More tools</strong> ➞ <strong>Developer tools</strong>.</p>
 </blockquote>
-<figure class="left">
+<table>
+<thead>
+<tr>
+<th align="left">Shortcut keys</th>
+<th align="left">Mac</th>
+<th align="left">Windows, Linux, Chrome OS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Elements Tab</td>
+<td align="left">Command+Option+C</td>
+<td align="left">Control+Shift+C</td>
+</tr>
+<tr>
+<td align="left">Console Tab</td>
+<td align="left">Command+Option+J</td>
+<td align="left">Control+Shift+J</td>
+</tr>
+<tr>
+<td align="left">Sources Tab</td>
+<td align="left">Command+Option+I</td>
+<td align="left">Control+Shift+I</td>
+</tr>
+</tbody>
+</table>
+<figure class="center">
     <img src="/img/javascript/chrome-developer-tool.png"
-         alt="Chrome Developer Tool"/> 
+         alt="Chrome Developer Tool"/> <figcaption>
+            <p>Chrome Developer Tool</p>
+        </figcaption>
 </figure>
 
 <p>Some of the most frequently used <strong>icons</strong> of Chrome DevTools are:-</p>
 <ol>
-<li>Use <span style="border: 3px solid green;border-radius:5px;padding:0px 3px;"><em>Inspect icon</em> ⬉</span> to select an element in the page and inspect its DOM position in &ldquo;Elements&rdquo; Tab. You can update or delete a DOM element, inspect the CSS applied on DOM element, and much more in &ldquo;Element&rdquo; Tab.</li>
-<li>Use <span style="border: 3px solid orange;border-radius:5px;padding:0px 3px;"><em>Device icon</em> ⍇</span> to check the responsiveness of the website. It adds an additional toolbar on your browser page where you can simulate viewport for different devices:-<br>
+<li>Use <span style="border: 3px solid green;border-radius:5px;padding:0px 3px;"><em>Inspect icon</em> <code>⬉</code></span> to select an element in the page and inspect its DOM position in <strong>Elements</strong> Tab. You can update or delete a DOM element, inspect the CSS applied on DOM element, and much more in <strong>Elements</strong> Tab.</li>
+<li>Use <span style="border: 3px solid orange;border-radius:5px;padding:0px 3px;"><em>Device icon</em> <code>⍇</code></span> to check the responsiveness of the website. It adds an additional toolbar on your browser page where you can simulate viewport for different devices, for e.g.
 mobile phones <em>(such as iPhone, Samsung Galaxy, Nexus, LG, Nokia, Blackberry, etc)</em>, tablets <em>(such as iPad etc)</em> and laptops <em>(with or without touch)</em>.</li>
-<li>You can see all JavaScript source code that renders the page, under &ldquo;Source&rdquo; Tab. Generally source files are minified and it is difficult to understand them and apply breakpoints. Use <span style="border: 3px solid red;border-radius:5px;padding:0px 5px;"><i>Format Icon</i> { }</span> to format these minified files in human readable format.</li>
+<li>You can see all JavaScript source code that renders the page, under <strong>Sources</strong> Tab. Generally source files are minified and it is difficult to understand them and apply breakpoints. Use <span style="border: 3px solid red;border-radius:5px;padding:0px 5px;"><i>Format Icon</i> <code>{}</code></span> to format these minified files in human readable format.</li>
 </ol>
-<h2 id="breakpoint-in-browser">Breakpoint in Browser</h2>
-<p>You can set a breakpoint in running Source code in browser. Go to &ldquo;Source&rdquo; Tab of the developer tool. Just open a file and click on the line number to set the breakpoint. Code execution will halt at the breakpoint and you can inspect the values of variables at that execution point. Click again on same line number to remove breakpoint.</p>
-<h2 id="breakpoint-using-debugger-statement">Breakpoint using &lsquo;debugger&rsquo; statement</h2>
+<h2 id="line-of-code-breakpoint">Line-of-code Breakpoint</h2>
+<p>You can use breakpoint to pause your JavaScript code in browser. The most well known type of breakpoint is line-of-code.</p>
+<p>To set a line-of-code breakpoint in DevTools:</p>
+<ol>
+<li>Click on <strong>Sources</strong> tab.</li>
+<li>Open the file and go to the line of code you want to debug.</li>
+<li>You will see line number column to the left of code. Click on it. An icon appears beside line number to indicate that the breakpoint is set.</li>
+<li>Click again on same line number if you want to remove breakpoint. Icon disappears.</li>
+</ol>
+<p><em>Please note that the breakpoint icon in DevTool may look different depending upon chrome version and OS (windows or MacOS)</em></p>
+<p>Sometime line-of-code breakpoints can be inefficient to set, especially if you don&rsquo;t know exactly where to look, or if you are working with a large codebase. You can save your time when debugging by knowing how and when to use the other types of breakpoints.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Breakpoint Type</th>
+<th align="left">Use This When You Want To Pause&hellip;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Line-of-code</td>
+<td align="left">On an exact line of code.</td>
+</tr>
+<tr>
+<td align="left">Conditional line-of-code</td>
+<td align="left">On an exact line of code, but only when some other condition is true.</td>
+</tr>
+<tr>
+<td align="left">DOM</td>
+<td align="left">On the code that changes or removes a specific DOM node, or its children.</td>
+</tr>
+<tr>
+<td align="left">XHR</td>
+<td align="left">On the XHR <code>send()</code> or <code>fetch()</code> method When the request URL contains a string pattern.</td>
+</tr>
+<tr>
+<td align="left">Event listener</td>
+<td align="left">On the code that runs after an event, such as <code>click</code>, is fired.</td>
+</tr>
+<tr>
+<td align="left">Exception</td>
+<td align="left">On the line of code that is throwing a caught or uncaught exception.</td>
+</tr>
+<tr>
+<td align="left">Function</td>
+<td align="left">Whenever a specific function is called.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="set-breakpoint-from-code-using-debugger-statement">Set Breakpoint from code using &lsquo;debugger&rsquo; statement</h2>
+<p>When debugger mode is on in the browser and the code execution reaches to <code>debugger;</code> statement, it pause on that line just like line-of-code breakpoint.</p>
 <p>The debugger statement is quite useful when you want to debug a certain part of your code in browser. Normally you find the buggy code in browser developer tool and set a breakpoint to debug. Sometimes it is not easy to find the code in browser, in that case, you can insert <em>debugger;</em> statement in your source code.</p>
-<p>When debugger mode is on in the browser and the code execution reaches to <em>debugger;</em> statement, it halts there just like setting a breakpoint.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">hello</span>(<span style="color:#a6e22e">name</span>) {
   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">phrase</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Hello, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">!`</span>;
 
-  <span style="color:#66d9ef">debugger</span>;  <span style="color:#75715e">// &lt;-- the debugger stops here
+  <span style="color:#66d9ef">debugger</span>;  <span style="color:#75715e">// &lt;-- the debugger pause on this line
 </span><span style="color:#75715e"></span>
   <span style="color:#a6e22e">say</span>(<span style="color:#a6e22e">phrase</span>);
 }
-</code></pre></div><h2 id="print-multiple-values">Print multiple values</h2>
+</code></pre></div><h2 id="conditional-breakpoint">Conditional Breakpoint</h2>
+<p>You can use a conditional line-of-code breakpoint when you know the exact line of code that you need to investigate, but you want to pause only when some other condition is true.</p>
+<p>To set a conditional line-of-code breakpoint:</p>
+<ol>
+<li>Click the <strong>Sources</strong> tab.</li>
+<li>Open the file and go to the line of code you want to debug.</li>
+<li>You will see line number column to the left of code.  Right-click it.</li>
+<li>Select <strong>Edit breakpoint..</strong>, A dialog displays underneath the line of code.</li>
+<li>Enter your condition in the dialog.</li>
+<li>Press Enter to activate the breakpoint.</li>
+</ol>
+<p><em>You see that icon for conditional breakpoint is different from simple line-of-code breakpoint. Breakpoint icon in DevTool may look different depending upon chrome version and OS (windows or MacOS)</em></p>
+<figure class="center">
+    <img src="/img/javascript/chrome-devtool-conditional-breakpoint.png"
+         alt="Chrome DevTool Conditional Breakpoint"/> <figcaption>
+            <p>Chrome DevTool Conditional Breakpoint</p>
+        </figcaption>
+</figure>
+
+<h2 id="dom-change-breakpoint">DOM Change Breakpoint</h2>
+<p>Use a DOM change breakpoint when you want to pause on the code that changes a DOM node or its children.</p>
+<p>To set a DOM change breakpoint:</p>
+<ol>
+<li>Click the <strong>Elements</strong> tab.</li>
+<li>Go the element that you want to set the breakpoint on.</li>
+<li>Right-click the element.</li>
+<li>Hover over <strong>Break on</strong> then select <strong>Subtree modifications</strong>, <strong>Attribute modifications</strong>, or <strong>Node removal</strong>.</li>
+</ol>
+<h6 id="types-of-dom-change-breakpoints">Types of DOM change breakpoints</h6>
+<ul>
+<li><strong>Subtree modifications:</strong> Triggered when a child of the currently-selected node is removed or added, or the contents of a child are changed. Not triggered on child node attribute changes, or on any changes to the currently-selected node.</li>
+<li><strong>Attributes modifications:</strong> Triggered when an attribute is added or removed on the currently-selected node, or when an attribute value changes.</li>
+<li><strong>Node Removal:</strong> Triggered when the currently-selected node is removed.</li>
+</ul>
+<h2 id="xhrfetch-breakpoints">XHR/Fetch breakpoints</h2>
+<p>If you encounter an error in AJAX request and you are not able to identify the code which is submitting this request, then XHR breakpoint is very useful to quickly find the AJAX source code.</p>
+<p>XHR breakpoint pause the execution of code when the request URL of an AJAX request contains a specified string. XHR breakpoint is supported for AJAX <code>send()</code> and <code>fetch()</code> methods.</p>
+<p>To set an XHR breakpoint:</p>
+<ol>
+<li>Click the <strong>Sources</strong> tab.</li>
+<li>Expand the <strong>XHR Breakpoints</strong> pane.</li>
+<li>Click <strong>Add breakpoint</strong>.</li>
+<li>Enter the string which you want to break on. DevTools pauses when this string is present anywhere in an XHR&rsquo;s request URL.</li>
+<li>Press <em>Enter</em> to confirm.</li>
+</ol>
+<h2 id="event-listener-breakpoints">Event listener breakpoints</h2>
+<p>Use event listener breakpoints when you want to pause on the event listener code that runs after an event is fired. You can select specific events, such as <code>click</code>, or categories of events, such as all mouse events.</p>
+<ol>
+<li>Click the <strong>Sources</strong> tab.</li>
+<li>Expand the <strong>Event Listener Breakpoints</strong> pane. DevTools shows a list of event categories, such as <em>Animation</em>, <em>Canvas</em>, <em>Clipboard</em>, <em>Mouse</em>, etc.</li>
+<li>Check one of these categories to pause whenever any event from that category is fired, or expand the category and check a specific event.</li>
+</ol>
+<h2 id="exception-breakpoints">Exception breakpoints</h2>
+<p>The Chrome Developer Tools allows you to pause execution of your JavaScript code upon throwing a caught or uncaught exception. This makes it possible for you to observe the state of your application at the time when the Error object was created.</p>
+<p>To turn on exception breakpoint:</p>
+<ol>
+<li>Click the <strong>Sources</strong> tab.</li>
+<li>Click Pause on exceptions icon. It turns blue when enabled.</li>
+<li>Check <strong>Pause on uncaught exceptions</strong> if you want to pause execution on caught exceptions as well.</li>
+</ol>
+<figure class="center">
+    <img src="/img/javascript/chrome-devtool-advance-breakpoints.png"
+         alt="Chrome DevTool XHR, Event Listener and Exception Breakpoints"/> <figcaption>
+            <p>Chrome DevTool XHR, Event Listener and Exception Breakpoints</p>
+        </figcaption>
+</figure>
+
+<h2 id="function-breakpoints">Function breakpoints</h2>
+<p>Call <code>debug(functionName)</code>, where functionName is the function you want to debug, when you want to pause whenever a specific function is called. You can insert <code>debug()</code> into your code (like a console.log() statement) or call it from the DevTools Console. <code>debug()</code> is equivalent to setting a line-of-code breakpoint on the first line of the function.</p>
+<p>Make sure the target function is in scope. DevTools throws a ReferenceError if the function you want to debug is not in scope.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sum</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>; <span style="color:#75715e">// DevTools pauses on this line.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">result</span>;
+}
+<span style="color:#a6e22e">debug</span>(<span style="color:#a6e22e">sum</span>); <span style="color:#75715e">// Pass the function object, not a string.
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">sum</span>();
+</code></pre></div><h2 id="snippets">Snippets</h2>
+<p>Generally we use browser console to execute and test some JavaScript snippets. There are some time when we need to test same code again and again. Chrome DevTools provides a way to save your reusable code snippets and execute them.</p>
+<p>To save your code snippet:</p>
+<ol>
+<li>Click the <strong>Sources</strong> tab.</li>
+<li>In the left panel of Sources Tab, Click on the <strong>Snippets</strong> sub-tab.</li>
+<li>Click on <strong>+ New Snippet</strong> to create a new file to save your code snippet.</li>
+<li>When you open a snippet code. There are icons to format and execute your code.</li>
+</ol>
+<p>Paul Irish&rsquo;s <a href="https://github.com/paulirish/devtools-addons/wiki/Snippets">snippets</a> such as stopBefore.js, captureCalls.js and Grep.js are very useful which you can save in your browser snippet and reuse them.</p>
+<h2 id="print-multiple-values">Print multiple values</h2>
 <p>Most of the developers use <em>console.log()</em> for debugging values in browser console. It is a king of debugging and this solves most of your debugging problems.</p>
 <p>The thing you might not know is, <em>console.log()</em> can print multiple values by providing comma-separated values so you don&rsquo;t need to concat values yourself.</p>
 <p>Each comma <em>&quot;,&quot;</em> add a space between values.</p>
@@ -523,7 +695,6 @@ Timer2: 26.070517578125ms
 </code></pre><h2 id="print-stack-trace-of-method-execution">Print Stack trace of method execution</h2>
 <p>You can use <em>console.trace()</em> to print a stack trace of method execution flow to the console. Few pointers:-</p>
 <ul>
-<li>You get <em>@ file_name:line_number</em> in console output which you can click on to navigate to the source.</li>
 <li><em>console.trace()</em> is compatible with the snippets feature of Chrome DevTools.</li>
 <li><em>console.trace()</em> is part of the Console API (just like console.log())</li>
 </ul>
@@ -533,7 +704,8 @@ Timer2: 26.070517578125ms
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">third</span> <span style="color:#f92672">=</span> () =&gt; { <span style="color:#a6e22e">fourth</span>(); };
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fourth</span> <span style="color:#f92672">=</span> () =&gt; { <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">trace</span>(<span style="color:#e6db74">&#34;The trace&#34;</span>); };
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span>  <span style="color:#a6e22e">first</span>();
-</code></pre></div><pre><code><div class="code_output">Output</div>
+</code></pre></div><p>You get <code>@ <span style="color: blue">file_name:line_number</span></code> in console output which you can click on to navigate to the source.</p>
+<pre><code><div class="code_output">Output</div>
 ▼ The trace
   fourth        @ <span style="color: blue">test:4</span>
   third	        @ <span style="color: blue">test:3</span>
@@ -542,6 +714,10 @@ Timer2: 26.070517578125ms
   (anonymous)   @ <span style="color: blue">test:5</span>
 </code></pre><p><br /></p>
 <p>Thanks for reading till the end. I hope this tutorial would have helped you to find some useful tips for debugging and logging to the console, which you&rsquo;d not known before.</p>
+<p>Reference:</p>
+<ol>
+<li><a href="https://developers.google.com/web/tools/chrome-devtools/">Google Developers Chrome DevTool</a></li>
+</ol>
 		</div>
 		<footer class="post__footer">
 			
