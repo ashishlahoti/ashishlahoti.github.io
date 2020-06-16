@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>JavaScript Debugging Tips and Tricks - Coding N Concepts</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="Tips and Tricks for debugging JavaScript code using Chrome DevTool, different ways of logging to the console using Console APIs, and much more...">
+	<meta property="og:title" content="JavaScript Debugging Tips and Tricks" />
+<meta property="og:description" content="Tips and Tricks for debugging JavaScript code using Chrome DevTool, different ways of logging to the console using Console APIs, and much more..." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://codingnconcepts.com/javascript/debugging-tips-and-tricks/" />
+<meta property="og:image" content="https://codingnconcepts.com/img/logo/js.png" />
+<meta property="article:published_time" content="2020-06-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-15T00:00:00+00:00" />
+<meta property="og:site_name" content="CodingNConcepts" />
+
+<meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
+<meta property="article:publisher" content="https://www.facebook.com/codingnconcepts" />
+<meta property="article:section" content="javascript" />
+<meta property="article:tag" content="Javascript Logging" />
+<meta property="fb:admins" content="177784346770196" />
+	<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://codingnconcepts.com/img/logo/js.png"/>
+
+<meta name="twitter:title" content="JavaScript Debugging Tips and Tricks"/>
+<meta name="twitter:description" content="Tips and Tricks for debugging JavaScript code using Chrome DevTool, different ways of logging to the console using Console APIs, and much more..."/>
+
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="canonical" href="https://codingnconcepts.com/javascript/debugging-tips-and-tricks/">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-160024498-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+	<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "articleSection": "javascript",
+    "name": "JavaScript Debugging Tips and Tricks",
+    "headline": "JavaScript Debugging Tips and Tricks",
+    "alternativeHeadline": "",
+    "description": "Tips and Tricks for debugging JavaScript code using Chrome DevTool, different ways of logging to the console using Console APIs, and much more...",
+    "inLanguage": "en-us",
+	"isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https:\/\/codingnconcepts.com\/javascript\/debugging-tips-and-tricks\/"
+    },
+    "author" : {
+        "@type": "Person",
+        "name": "Ashish Lahoti"
+    },
+    "creator" : {
+        "@type": "Person",
+        "name": "Ashish Lahoti"
+    },
+    "accountablePerson" : {
+        "@type": "Person",
+        "name": "Ashish Lahoti"
+    },
+    "copyrightHolder" : "Coding N Concepts",
+    "copyrightYear" : "2020",
+    "dateCreated": "2020-06-11T00:00:00.00Z",
+    "datePublished": "2020-06-11T00:00:00.00Z",
+    "dateModified": "2020-06-15T00:00:00.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "Coding N Concepts",
+        "url": "https://codingnconcepts.com/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https:\/\/codingnconcepts.com\/favicon-32x32.png",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "image": ["https://codingnconcepts.com/img/logo/js.png"],
+    "url" : "https:\/\/codingnconcepts.com\/javascript\/debugging-tips-and-tricks\/",
+    "wordCount" : "3221",
+    "genre" : ["Javascript Logging"],
+    "keywords" :  null 
+}
+</script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="Coding N Concepts" rel="home">
+				<div class="logo__title"><img src="/favicon-32x32.png" alt="JavaScript Debugging Tips and Tricks"> Coding N Concepts</div>
+				<div class="logo__tagline">Ashish Lahoti&#39;s Technical Blog</div>
+			</a>
+		</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/java/">
+				
+				<span class="menu__text">Java</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/javascript/">
+				
+				<span class="menu__text">JavaScript</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/spring-boot/">
+				
+				<span class="menu__text">Spring Boot</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/interview-questions/">
+				
+				<span class="menu__text">Interview Questions</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/kafka/">
+				
+				<span class="menu__text">Kafka</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/puzzle/">
+				
+				<span class="menu__text">Puzzles</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/hugo/">
+				
+				<span class="menu__text">Hugo</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About Me</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post" autonumbering>
+		<header class="post__header">
+			<h1 class="post__title"><img class="post__thumbnail" src="/img/logo/js.png" alt="JavaScript Debugging Tips and Tricks"> JavaScript Debugging Tips and Tricks</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg> <span class="meta__text">Ashish Lahoti</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2020-06-11T00:00:00Z">June 11, 2020</time>
+	<time class="meta__text" datetime="2020-06-15T00:00:00Z"> (Last Modified: June 15, 2020)</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/javascript/" rel="category">Javascript</a>
+	</span>
+</div></div>
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#say-no-to-alerts">Say No to alerts</a></li>
+    <li><a href="#browser-as-debugger">Browser as Debugger</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#line-of-code-breakpoint">Line-of-code Breakpoint</a></li>
+    <li><a href="#set-breakpoint-from-code-using-debugger-statement">Set Breakpoint from code using &lsquo;debugger&rsquo; statement</a></li>
+    <li><a href="#conditional-breakpoint">Conditional Breakpoint</a></li>
+    <li><a href="#dom-change-breakpoint">DOM Change Breakpoint</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#xhrfetch-breakpoint">XHR/Fetch Breakpoint</a></li>
+    <li><a href="#event-listener-breakpoint">Event listener Breakpoint</a></li>
+    <li><a href="#exception-breakpoint">Exception Breakpoint</a></li>
+    <li><a href="#function-breakpoint">Function Breakpoint</a></li>
+    <li><a href="#blackbox-script-files">Blackbox Script files</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#snippets">Snippets</a></li>
+    <li><a href="#print-multiple-values">Print Multiple Values</a></li>
+    <li><a href="#avoid-logging-object-reference">Avoid logging Object Reference</a></li>
+    <li><a href="#print-dom-element-in-json-format">Print DOM element in JSON format</a></li>
+    <li><a href="#print-constructor-functions-prototype-methods">Print Constructor function&rsquo;s Prototype Methods</a></li>
+    <li><a href="#print-functions-closure">Print Function&rsquo;s Closure</a></li>
+    <li><a href="#print-objects-internal-properties">Print Object&rsquo;s internal properties</a></li>
+    <li><a href="#print-objects-as-table">Print Objects as Table</a></li>
+    <li><a href="#print-time-taken-for-code-execution">Print Time taken for Code Execution</a></li>
+    <li><a href="#print-stack-trace-of-method-execution">Print Stack trace of Method Execution</a></li>
+    <li><a href="#use-a-unit-testing-framework">Use a Unit Testing Framework</a></li>
+  </ul>
+</nav>
+	</div>
+</div>
+<div class="content post__content clearfix">
+			<p>In this tutorial, we&rsquo;ll learn plenty of tips and tricks for debugging JavaScript code using Chrome DevTool, different ways of logging to the console using console APIs, and much more&hellip;</p>
+<h2 id="say-no-to-alerts">Say No to alerts</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;I will pop up in browser&#34;</span>);
+</code></pre></div><figure class="left">
+    <img src="/img/javascript/debug-alert.png"
+         alt="Browser debugging alert"/> 
+</figure>
+
+<p>When we use <code>alert()</code> for debugging value, it pops up in the browser which is blocking and annoying. Try to avoid them as there are alternate ways available for debugging, we&rsquo;ll look at them subsequently.</p>
+<h2 id="browser-as-debugger">Browser as Debugger</h2>
+<p>Most of the modern browsers such as Chrome, Firefox, Edge, Opera, and Safari has built-in support for JavaScript debugging. Chrome as the debugger is generally the first choice among developers.</p>
+<h5 id="chrome-developer-tool">Chrome Developer Tool</h5>
+<blockquote>
+<p>To open DevTool from Chrome&rsquo;s main menu, select <strong>More tools</strong> ➞ <strong>Developer tools</strong>.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">Shortcut keys</th>
+<th align="left">Mac</th>
+<th align="left">Windows, Linux, Chrome OS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Elements Tab</td>
+<td align="left">Command+Option+C</td>
+<td align="left">Control+Shift+C</td>
+</tr>
+<tr>
+<td align="left">Console Tab</td>
+<td align="left">Command+Option+J</td>
+<td align="left">Control+Shift+J</td>
+</tr>
+<tr>
+<td align="left">Sources Tab</td>
+<td align="left">Command+Option+I</td>
+<td align="left">Control+Shift+I</td>
+</tr>
+</tbody>
+</table>
+<figure class="center">
+    <img src="/img/javascript/chrome-developer-tool.png"
+         alt="Chrome Developer Tool"/> <figcaption>
+            <p>Chrome Developer Tool</p>
+        </figcaption>
+</figure>
+
+<p>Some of the most frequently used <strong>icons</strong> of Chrome DevTools are:-</p>
+<ol>
+<li>Use <span style="border: 3px solid green;border-radius:5px;padding:0px 3px;"><em>Inspect icon</em> <code>⬉</code></span> to select an element in the page and inspect its DOM position in <strong>Elements</strong> Tab. You can update or delete a DOM element, inspect the CSS applied on DOM element, and much more in <strong>Elements</strong> Tab.</li>
+<li>Use <span style="border: 3px solid orange;border-radius:5px;padding:0px 3px;"><em>Device icon</em> <code>⍇</code></span> to check the responsiveness of the website. It adds an additional toolbar on your browser page where you can simulate viewport for different devices, for e.g.
+mobile phones <em>(such as iPhone, Samsung Galaxy, Nexus, LG, Nokia, Blackberry, etc)</em>, tablets <em>(such as iPad etc)</em> and laptops <em>(with or without touch)</em>.</li>
+<li>You can see all JavaScript source code that renders the page, under <strong>Sources</strong> Tab. Generally source files are minified and it is difficult to understand them and apply breakpoints. Use <span style="border: 3px solid red;border-radius:5px;padding:0px 5px;"><i>Format Icon</i> <code>{}</code></span> to format these minified files in human readable format.</li>
+</ol>
+<h2 id="line-of-code-breakpoint">Line-of-code Breakpoint</h2>
+<p>You can use breakpoint to pause your JavaScript code in browser. The most well known type of breakpoint is line-of-code.</p>
+<p>To set a line-of-code breakpoint in DevTools:</p>
+<ol>
+<li>Click on <strong>Sources</strong> tab.</li>
+<li>Open the file and go to the line of code you want to debug.</li>
+<li>You will see line number column to the left of code. Click on it. An icon appears beside line number to indicate that the breakpoint is set.</li>
+<li>Click again on same line number if you want to remove breakpoint. Icon disappears.</li>
+</ol>
+<p><em>Please note that the breakpoint icon in DevTool may look different depending upon chrome version and OS (windows or MacOS)</em></p>
+<p>Sometime line-of-code breakpoints can be inefficient to set, especially if you don&rsquo;t know exactly where to look, or if you are working with a large codebase. You can save your time when debugging by knowing how and when to use the other types of breakpoints.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Breakpoint Type</th>
+<th align="left">Use This When You Want To Pause&hellip;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Line-of-code</td>
+<td align="left">On an exact line of code.</td>
+</tr>
+<tr>
+<td align="left">Conditional line-of-code</td>
+<td align="left">On an exact line of code, but only when some other condition is true.</td>
+</tr>
+<tr>
+<td align="left">DOM</td>
+<td align="left">On the code that changes or removes a specific DOM node, or its children.</td>
+</tr>
+<tr>
+<td align="left">XHR</td>
+<td align="left">On the XHR <code>send()</code> or <code>fetch()</code> method When the request URL contains a string pattern.</td>
+</tr>
+<tr>
+<td align="left">Event listener</td>
+<td align="left">On the code that runs after an event, such as <code>click</code>, is fired.</td>
+</tr>
+<tr>
+<td align="left">Exception</td>
+<td align="left">On the line of code that is throwing a caught or uncaught exception.</td>
+</tr>
+<tr>
+<td align="left">Function</td>
+<td align="left">Whenever a specific function is called.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="set-breakpoint-from-code-using-debugger-statement">Set Breakpoint from code using &lsquo;debugger&rsquo; statement</h2>
+<p>When debugger mode is on in the browser and the code execution reaches to <code>debugger;</code> statement, it pause on that line just like line-of-code breakpoint.</p>
+<p>The debugger statement is quite useful when you want to debug a certain part of your code in browser. Normally you find the buggy code in browser developer tool and set a breakpoint to debug. Sometimes it is not easy to find the code in browser, in that case, you can insert <em>debugger;</em> statement in your source code.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">hello</span>(<span style="color:#a6e22e">name</span>) {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">phrase</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Hello, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">!`</span>;
+
+  <span style="color:#66d9ef">debugger</span>;  <span style="color:#75715e">// &lt;-- the debugger pause on this line
+</span><span style="color:#75715e"></span>
+  <span style="color:#a6e22e">say</span>(<span style="color:#a6e22e">phrase</span>);
+}
+</code></pre></div><h2 id="conditional-breakpoint">Conditional Breakpoint</h2>
+<p>You can use a conditional line-of-code breakpoint when you know the exact line of code that you need to investigate, but you want to pause only when some other condition is true.</p>
+<p>To set a conditional line-of-code breakpoint:</p>
+<ol>
+<li>Click the <strong>Sources</strong> tab.</li>
+<li>Open the file and go to the line of code you want to debug.</li>
+<li>You will see line number column to the left of code.  Right-click it.</li>
+<li>Select <strong>Edit breakpoint..</strong>, A dialog displays underneath the line of code.</li>
+<li>Enter your condition in the dialog.</li>
+<li>Press Enter to activate the breakpoint.</li>
+</ol>
+<p><em>You see that icon for conditional breakpoint is different from simple line-of-code breakpoint. Breakpoint icon in DevTool may look different depending upon chrome version and OS (windows or MacOS)</em></p>
+<figure class="center">
+    <img src="/img/javascript/chrome-devtool-conditional-breakpoint.png"
+         alt="Chrome DevTool Conditional Breakpoint"/> <figcaption>
+            <p>Chrome DevTool Conditional Breakpoint</p>
+        </figcaption>
+</figure>
+
+<h2 id="dom-change-breakpoint">DOM Change Breakpoint</h2>
+<p>Use a DOM change breakpoint when you want to pause on the code that changes a DOM node or its children.</p>
+<p>To set a DOM change breakpoint:</p>
+<ol>
+<li>Click the <strong>Elements</strong> tab.</li>
+<li>Go the element that you want to set the breakpoint on.</li>
+<li>Right-click the element.</li>
+<li>Hover over <strong>Break on</strong> then select <strong>Subtree modifications</strong>, <strong>Attribute modifications</strong>, or <strong>Node removal</strong>.</li>
+</ol>
+<h6 id="types-of-dom-change-breakpoints">Types of DOM change breakpoints</h6>
+<ul>
+<li><strong>Subtree modifications:</strong> Triggered when a child of the currently-selected node is removed or added, or the contents of a child are changed. Not triggered on child node attribute changes, or on any changes to the currently-selected node.</li>
+<li><strong>Attributes modifications:</strong> Triggered when an attribute is added or removed on the currently-selected node, or when an attribute value changes.</li>
+<li><strong>Node Removal:</strong> Triggered when the currently-selected node is removed.</li>
+</ul>
+<h2 id="xhrfetch-breakpoint">XHR/Fetch Breakpoint</h2>
+<p>If you encounter an error in AJAX request and you are not able to identify the code which is submitting this request, then XHR breakpoint is very useful to quickly find the AJAX source code.</p>
+<p>XHR breakpoint pause the execution of code when the request URL of an AJAX request contains a specified string. XHR breakpoint is supported for AJAX <code>send()</code> and <code>fetch()</code> methods.</p>
+<p>To set an XHR breakpoint:</p>
+<ol>
+<li>Click the <strong>Sources</strong> tab.</li>
+<li>Expand the <strong>XHR Breakpoints</strong> pane.</li>
+<li>Click <strong>Add breakpoint</strong>.</li>
+<li>Enter the string which you want to break on. DevTools pauses when this string is present anywhere in an XHR&rsquo;s request URL.</li>
+<li>Press <em>Enter</em> to confirm.</li>
+</ol>
+<h2 id="event-listener-breakpoint">Event listener Breakpoint</h2>
+<p>Use event listener breakpoints when you want to pause on the event listener code that runs after an event is fired. You can select specific events, such as <code>click</code> under mouse events, or all events, such as cut, copy, paste under <code>clipboard</code> category.</p>
+<p>To turn on event listener breakpoint:</p>
+<ol>
+<li>Click the <strong>Sources</strong> tab.</li>
+<li>Expand the <strong>Event Listener Breakpoints</strong> pane. DevTools shows a list of event categories, such as <em>Animation</em>, <em>Canvas</em>, <em>Clipboard</em>, <em>Mouse</em>, etc.</li>
+<li>Either check ☑ category to include all events under that category, or expand the category and check ☑ a specific event.</li>
+</ol>
+<h2 id="exception-breakpoint">Exception Breakpoint</h2>
+<p>The Chrome Developer Tools allows you to pause execution of your JavaScript code upon throwing a caught or uncaught exception. This is particularly useful when your code is not throwing error and failing silently. This makes it possible for you to inspect the state of your application at the time when the Error object was created.</p>
+<p>To turn on exception breakpoint:</p>
+<ol>
+<li>Click the <strong>Sources</strong> tab.</li>
+<li>Click Pause on exceptions icon. It turns blue when enabled.</li>
+<li>Check <strong>☑ Pause on uncaught exceptions</strong> if you want to pause execution on caught exceptions as well.</li>
+<li>Remember to turn them off when done.</li>
+</ol>
+<figure class="center">
+    <img src="/img/javascript/chrome-devtool-advance-breakpoints.png"
+         alt="Chrome DevTool XHR, Event Listener and Exception Breakpoints"/> <figcaption>
+            <p>Chrome DevTool XHR, Event Listener and Exception Breakpoints</p>
+        </figcaption>
+</figure>
+
+<h2 id="function-breakpoint">Function Breakpoint</h2>
+<p>Call <code>debug(functionName)</code>, where functionName is the function you want to debug, when you want to pause whenever a specific function is called. You can insert <code>debug()</code> into your code (like a console.log() statement) or call it from the DevTools Console. <code>debug()</code> is equivalent to setting a line-of-code breakpoint on the first line of the function.</p>
+<p>Make sure the target function is in scope. DevTools throws a ReferenceError if the function you want to debug is not in scope.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sum</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>; <span style="color:#75715e">// DevTools pauses on this line.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">result</span>;
+}
+<span style="color:#a6e22e">debug</span>(<span style="color:#a6e22e">sum</span>); <span style="color:#75715e">// Pass the function object, not a string.
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">sum</span>();
+</code></pre></div><h2 id="blackbox-script-files">Blackbox Script files</h2>
+<p>When you debug your application code in Chrome DevTool and step through your code line-by-line, the debugger sometimes jumps into a source file that&rsquo;s not your focus (such as a third-party JS library). I&rsquo;m sure you&rsquo;ve experienced the annoyance of stepping through the library code before getting back to your own application code.</p>
+<p>The Chrome DevTool provides an ability to blackbox JavaScript file(s) so that debugger will not jump into those files and ignore them when stepping through code you&rsquo;re debugging.</p>
+<h6 id="what-happens-when-you-blackbox-a-script">What happens when you blackbox a script?</h6>
+<ul>
+<li>Exceptions thrown from library code will not pause (if Pause on exceptions is enabled),</li>
+<li>Stepping into/out/over bypasses the library code,</li>
+<li>Event listener breakpoints don&rsquo;t break in library code,</li>
+<li>The debugger will not pause on any breakpoints set in library code.</li>
+</ul>
+<p>The end result is you are debugging your application code instead of third party resources. To blackbox JavaScript files:</p>
+<ol>
+<li>Click on <strong>Main Menu</strong> &gt; <strong>Settings</strong> icon <em>OR</em> use <code>F1</code> shortcut key to open settings</li>
+<li>Click on <strong>Blackboxing</strong> menu item.</li>
+<li>Click on <strong>Add Pattern&hellip;</strong> button.</li>
+<li>Enter file name or pattern in text box and click <strong>Add</strong> button.</li>
+<li>Check <strong>☑ Blackbox content script</strong> to enable blackboxing.</li>
+</ol>
+<figure class="center">
+    <img src="/img/javascript/chrome-devtool-blackbox-script.png"
+         alt="Chrome DevTool Blackbox Script"/> <figcaption>
+            <p>Chrome DevTool Blackbox Script</p>
+        </figcaption>
+</figure>
+
+<h2 id="snippets">Snippets</h2>
+<p>Generally we use browser console to execute and test some code snippets. Sometime, we need to test same code again and again. The Chrome DevTools provides the ability to save code snippets for future use.</p>
+<p>To save your code snippet:</p>
+<ol>
+<li>Click the <strong>Sources</strong> tab.</li>
+<li>In the left panel of Sources Tab, Click on the <strong>Snippets</strong> sub-tab.</li>
+<li>Click on <strong>+ New Snippet</strong> to create a new file to save your code snippet.</li>
+<li>When you open a snippet code. There are icons to format and execute your code.</li>
+</ol>
+<p>You can use snippets to store your frequently used debugging code scripts, made by you or other developers. Paul Irish has written some useful <a href="https://github.com/paulirish/devtools-addons/wiki/Snippets">snippets</a> - <em>stopBefore.js</em>, <em>Grep.js</em> which you can copy in your DevTool snippets. Snippets are accessible from console. Let&rsquo;s go through them:-</p>
+<ul>
+<li>The <a href="https://gist.github.com/NV/5376464">storeBefore.js</a> snippet allows to setup a breakpoint that is triggered just before a certain function is called. For example, this will trigger a breakpoint just before the <code>document.getElementById</code> function is called:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">stopBefore</span>(document, <span style="color:#e6db74">&#39;getElementById&#39;</span>)
+</code></pre></div></li>
+<li>The <a href="https://gist.github.com/nicdaCosta/4072412">grep.js</a> snippet allows searching an object and its prototypical chain for properties that match a given search criteria. For example this instruction will search for all properties matching <em>get</em> in the <em>document</em> object:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">grep</span>(document, <span style="color:#e6db74">&#39;get&#39;</span>);
+</code></pre></div></li>
+<li>The <a href="https://gist.github.com/dmethvin/1676346">debugAccess.js</a> snippet allows to trigger a breakpoint when a given property is accessed. For example this will trigger a breakpoint each time <em>document.cookie</em> is called:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">debugAccess</span>(document, <span style="color:#e6db74">&#39;cookie&#39;</span>);
+</code></pre></div></li>
+</ul>
+<h2 id="print-multiple-values">Print Multiple Values</h2>
+<p>Most of the developers use <em>console.log()</em> for debugging values in browser console. It is a king of debugging and this solves most of your debugging problems.</p>
+<p>The thing you might not know is, <em>console.log()</em> can print multiple values by providing comma-separated values so you don&rsquo;t need to concat values yourself.</p>
+<p>Each comma <em>&quot;,&quot;</em> add a space between values.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;x =&#39;</span>, <span style="color:#a6e22e">x</span>);
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hello&#34;</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">fruits</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;banana&#39;</span>, <span style="color:#e6db74">&#39;mango&#39;</span>];
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">a</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">b</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>};
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;x =&#39;</span>, <span style="color:#a6e22e">x</span>, <span style="color:#e6db74">&#39;y =&#39;</span>, <span style="color:#a6e22e">y</span>, <span style="color:#e6db74">&#39;fruits =&#39;</span>, <span style="color:#a6e22e">fruits</span>, <span style="color:#e6db74">&#39;obj =&#39;</span>, <span style="color:#a6e22e">obj</span>);
+</code></pre></div><pre><code><div class="code_output">Output</div>
+x = 1
+x = 1 y = hello fruits = (3) [&quot;apple&quot;, &quot;banana&quot;, &quot;mango&quot;] obj = {a: 1, b: 2}
+</code></pre><p>You can also use <em>Template Literal</em> to combining multiple values in single string like this</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`x = </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">x</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, y = </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">y</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, fruits = </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">fruits</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, obj = </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">obj</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</code></pre></div><h2 id="avoid-logging-object-reference">Avoid logging Object Reference</h2>
+<blockquote>
+<p>Don&rsquo;t use <code>console.log(obj)</code>, use <code>console.log(JSON.parse(JSON.stringify(obj)))</code> instead.</p>
+</blockquote>
+<p>When you log an <em>array (or object)</em> using <em>console.log()</em> and update it afterward. Many browsers show you the latest state of the <em>array (or object)</em> which might be misleading.</p>
+<p>Logging using <code>console.log(JSON.parse(JSON.stringify(obj)))</code> make sure, you are printing a copy of <em>array (or object)</em> which will log the exact state at the time of printing.</p>
+<p>Let&rsquo;s understand this from below array example,</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">fruits</span> <span style="color:#f92672">=</span>  [<span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;banana&#39;</span>, <span style="color:#e6db74">&#39;mango&#39;</span>];
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">fruits</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">fruits</span>))); <span style="color:#75715e">//makes a copy of it
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">fruits</span>.<span style="color:#a6e22e">push</span>(<span style="color:#e6db74">&#39;grapes&#39;</span>);
+</code></pre></div><pre><code><div class="code_output">Output</div>
+▼ (3) [&quot;apple&quot;, &quot;banana&quot;, &quot;mango&quot;]
+   0: &quot;apple&quot;
+   1: &quot;banana&quot;
+   2: &quot;mango&quot;
+   3: &quot;grapes&quot;
+   length: 4
+ ➤ __proto__: Array(0)
+
+
+▼ (3) [&quot;apple&quot;, &quot;banana&quot;, &quot;mango&quot;]
+   0: &quot;apple&quot;
+   1: &quot;banana&quot;
+   2: &quot;mango&quot;
+   length: 3
+ ➤ __proto__: Array(0)
+</code></pre><p>We see that <em>console.log()</em> showing the latest state of array with length 4 whereas its length was 3 at the time of logging.</p>
+<p>Let&rsquo;s also look at object example,</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">person</span> <span style="color:#f92672">=</span>  { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;adam&#39;</span>, <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">21</span>, <span style="color:#a6e22e">gender</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;male&#39;</span> };
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">person</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">person</span>))); <span style="color:#75715e">//makes a copy of it
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">person</span>.<span style="color:#a6e22e">married</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;NO&#39;</span>;
+</code></pre></div><pre><code><div class="code_output">Output</div>
+▼ {name: &quot;adam&quot;, age: 21, gender: &quot;male&quot;}
+   age: 21
+   gender: &quot;male&quot;
+   married: &quot;NO&quot;
+   name: &quot;adam&quot;
+ ➤ __proto__: Object
+
+▼ {name: &quot;adam&quot;, age: 21, gender: &quot;male&quot;}
+   age: 21
+   gender: &quot;male&quot;
+   name: &quot;adam&quot;
+ ➤ __proto__: Object
+</code></pre><p>We see that <em>console.log()</em> showing the latest state of object including <em>married</em> field which was missing at the time of logging.</p>
+<h2 id="print-dom-element-in-json-format">Print DOM element in JSON format</h2>
+<p><em>DOM</em> elements are printed as <em>HTML</em> elements tree structure using <em>console.log()</em>. Instead, we can use <em>console.dir()</em> to see <em>DOM</em> elements in <em>JSON</em> like tree structure.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(document.<span style="color:#a6e22e">body</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">dir</span>(document.<span style="color:#a6e22e">body</span>);
+</code></pre></div><figure class="left">
+    <img src="/img/javascript/console-log-vs-dir.png"
+         alt="console.log vs console.dir"/> 
+</figure>
+
+<h2 id="print-constructor-functions-prototype-methods">Print Constructor function&rsquo;s Prototype Methods</h2>
+<p>The <em>console.dir()</em> is quite useful to print constructor function&rsquo;s internal properties such as prototype methods.</p>
+<p>We see in below example that <em>console.log()</em> just print the name of constructor function whereas, using <em>console.dir()</em>, we&rsquo;re able to see all prototype methods of <em>Array</em> function.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Array);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">dir</span>(Array);
+</code></pre></div><pre><code><div class="code_output">Output</div>
+ƒ Array() { [native code] }
+
+▼ ƒ Array()
+      arguments: (...)
+      caller: (...)
+      length: 1
+      name: &quot;Array&quot;
+    ▼ prototype: ƒ ()
+          length: 0
+        ➤ constructor: ƒ Array()
+        ➤ concat: ƒ concat()
+        ➤ find: ƒ find()
+        ➤ findIndex: ƒ findIndex()
+        ➤ lastIndexOf: ƒ lastIndexOf()
+        ➤ pop: ƒ pop()
+        ➤ push: ƒ push()
+        ➤ reverse: ƒ reverse()
+        ➤ slice: ƒ slice()
+        ➤ sort: ƒ sort()
+        ➤ splice: ƒ splice()
+        ➤ includes: ƒ includes()
+        ➤ indexOf: ƒ indexOf()
+        ➤ join: ƒ join()
+        ➤ toString: ƒ toString()
+        ...
+</code></pre><h2 id="print-functions-closure">Print Function&rsquo;s Closure</h2>
+<p>The <em>console.dir()</em> is quite useful to print function&rsquo;s internal properties such as scopes and closures.</p>
+<p>We see in below example that console.log() just print the function&rsquo;s signature, using console.dir(), we’re able to see the prototype methods, scopes and most importantly closures of the function.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">outerFunc</span>  <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">c</span>){ 
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">innerFunc</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">d</span>) {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">innerMostFunc</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">e</span>) {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">c</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">d</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">e</span>;
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">innerMostFunc</span>;
+  }
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">innerFunc</span>;
+}
+
+<span style="color:#75715e">// print innerMostFunc
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">outerFunc</span>(<span style="color:#ae81ff">3</span>)(<span style="color:#ae81ff">4</span>)); 
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">dir</span>(<span style="color:#a6e22e">outerFunc</span>(<span style="color:#ae81ff">3</span>)(<span style="color:#ae81ff">4</span>));
+</code></pre></div><pre><code><div class="code_output">Output</div>
+ƒ (e) {
+    return a + b + c + d + e;
+    }
+
+<mark>▼ ƒ innerMostFunc(c)</mark>
+    length: 1
+    name: &quot;innerMostFunc&quot;
+    arguments: null
+    caller: null
+  ➤ prototype: {constructor: ƒ}
+  ➤ __proto__: ƒ ()
+    [[FunctionLocation]]:
+  ▼ [[Scopes]]: Scopes[3]
+    <mark>➤ 0: Closure (innerFunc) {d: 4, b: 2}</mark>
+    <mark>➤ 1: Closure (outerFunc) {c: 3, a: 1}</mark>
+    ➤ 2: Global {parent: Window, opener: null, top: Window, length: 1, frames: Window, …}
+</code></pre><h2 id="print-objects-internal-properties">Print Object&rsquo;s internal properties</h2>
+<p>Some of the browsers print a stringify version of object when use <em>console.log()</em> whereas prints object <em>JSON</em> tree when use <em>console.dir()</em>. There is not much difference in printing in advance browsers such as chrome where both methods print object <em>JSON</em> tree.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">a</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">b</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>};
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">obj</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">dir</span>(<span style="color:#a6e22e">obj</span>);
+</code></pre></div><p>We see that nothing much different when print object using both methods in chrome browser,</p>
+<pre><code><div class="code_output">Output</div>
+▼ {a: 1, b: 2}
+  a: 1
+  b: 2
+➤ __proto__: Object
+
+▼ Object
+  a: 1
+  b: 2
+➤ __proto__: Object
+</code></pre><h2 id="print-objects-as-table">Print Objects as Table</h2>
+<p>The <em>console.table()</em> method is quite useful to print a large set of data in tabular format to visualize it easily. This method also provides the ability to print a few fields out of those large data sets. When rendered in browser as a table, browser provides the ability to sort the columns of the table.</p>
+<p>Let&rsquo;s look at the example where we are logging a large <em>JSON</em> in tabular format,</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">personDetails</span> <span style="color:#f92672">=</span> [
+  {
+    <span style="color:#e6db74">&#34;_id&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;5edbbb78633118f455e877fb&#34;</span>,
+    <span style="color:#e6db74">&#34;index&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+    <span style="color:#e6db74">&#34;guid&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;30dd1d2c-5083-4165-8580-5ae734cd0d12&#34;</span>,
+    <span style="color:#e6db74">&#34;isActive&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+    <span style="color:#e6db74">&#34;balance&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;$1,778.03&#34;</span>,
+    <span style="color:#e6db74">&#34;picture&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;http://placehold.it/32x32&#34;</span>,
+    <span style="color:#e6db74">&#34;age&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">26</span>,
+    <span style="color:#e6db74">&#34;eyeColor&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;blue&#34;</span>,
+    <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> {
+      <span style="color:#e6db74">&#34;first&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Anderson&#34;</span>,
+      <span style="color:#e6db74">&#34;last&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Sargent&#34;</span>
+    },
+    <span style="color:#e6db74">&#34;company&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;MAZUDA&#34;</span>,
+    <span style="color:#e6db74">&#34;email&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;anderson.sargent@mazuda.com&#34;</span>,
+    <span style="color:#e6db74">&#34;phone&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;+1 (839) 437-3851&#34;</span>,
+    <span style="color:#e6db74">&#34;address&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;235 Ashland Place, Chautauqua, Minnesota, 3487&#34;</span>,
+    <span style="color:#e6db74">&#34;about&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Pariatur nisi cillum culpa aliquip mollit veniam. Laboris in minim non dolor ut deserunt ex sit occaecat irure consequat pariatur esse. Cillum velit dolore enim non enim ipsum aliqua veniam fugiat adipisicing magna mollit occaecat.&#34;</span>,
+    <span style="color:#e6db74">&#34;registered&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Saturday, April 8, 2017 3:02 AM&#34;</span>,
+    <span style="color:#e6db74">&#34;latitude&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;26.03084&#34;</span>,
+    <span style="color:#e6db74">&#34;longitude&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;-74.869342&#34;</span>,
+    <span style="color:#e6db74">&#34;tags&#34;</span><span style="color:#f92672">:</span> [
+      <span style="color:#e6db74">&#34;labore&#34;</span>,
+      <span style="color:#e6db74">&#34;nulla&#34;</span>,
+      <span style="color:#e6db74">&#34;ea&#34;</span>,
+      <span style="color:#e6db74">&#34;qui&#34;</span>,
+      <span style="color:#e6db74">&#34;sunt&#34;</span>
+    ],
+    <span style="color:#e6db74">&#34;range&#34;</span><span style="color:#f92672">:</span> [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>],
+    <span style="color:#e6db74">&#34;friends&#34;</span><span style="color:#f92672">:</span> [
+      {
+        <span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+        <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Coleman Nunez&#34;</span>
+      },
+      {
+        <span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
+        <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Foley Curry&#34;</span>
+      },
+      {
+        <span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>,
+        <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Kara Glass&#34;</span>
+      }
+    ],
+    <span style="color:#e6db74">&#34;greeting&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Hello, Anderson! You have 5 unread messages.&#34;</span>,
+    <span style="color:#e6db74">&#34;favoriteFruit&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;apple&#34;</span>
+  }
+]
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">table</span>(<span style="color:#a6e22e">personDetails</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">table</span>(<span style="color:#a6e22e">personDetails</span>, [<span style="color:#e6db74">&#34;age&#34;</span>, <span style="color:#e6db74">&#34;eyeColor&#34;</span>]);  <span style="color:#75715e">// print few fields
+</span></code></pre></div><p>The below output in tabular format is from chrome browser,
+<figure class="left">
+    <img src="/img/javascript/console-table-output.png"
+         alt="console.table example"/> 
+</figure>
+</p>
+<blockquote>
+<p>Also learn more about <a href="https://codingnconcepts.com/javascript/console-table-javascript/">console.table() usage in JavaScript</a></p>
+</blockquote>
+<h2 id="print-time-taken-for-code-execution">Print Time taken for Code Execution</h2>
+<p>You can print time taken by a code execution by using <em>console.time()</em> before and <em>console.timeEnd()</em> after that particular piece of code. Few pointers:-</p>
+<ul>
+<li><em>console.time()</em> and <em>console.timeEnd()</em> methods should have same labels.</li>
+<li>You can also set up multiple timers by assigning different labels to the method.</li>
+<li><em>console.time()</em> and <em>console.timeEnd()</em> are part of the Console API (just like console.log())</li>
+</ul>
+<p>Let’s see how it works:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">time</span>(<span style="color:#e6db74">&#39;Timer1&#39;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">time</span>(<span style="color:#e6db74">&#39;Timer2&#39;</span>);
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">items</span> <span style="color:#f92672">=</span> [];
+
+<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">100000</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
+   <span style="color:#a6e22e">items</span>.<span style="color:#a6e22e">push</span>({<span style="color:#a6e22e">index</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">i</span>});
+}
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">timeEnd</span>(<span style="color:#e6db74">&#39;Timer1&#39;</span>);
+
+<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">j</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">100000</span>; <span style="color:#a6e22e">j</span><span style="color:#f92672">++</span>){
+   <span style="color:#a6e22e">items</span>.<span style="color:#a6e22e">push</span>({<span style="color:#a6e22e">index</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">j</span>});
+}
+ 
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">timeEnd</span>(<span style="color:#e6db74">&#39;Timer2&#39;</span>);
+</code></pre></div><pre><code><div class="code_output">Output</div>
+Timer1: 13.088134765625ms
+Timer2: 26.070517578125ms
+</code></pre><h2 id="print-stack-trace-of-method-execution">Print Stack trace of Method Execution</h2>
+<p>You can use <em>console.trace()</em> to print a stack trace of method execution flow to the console. Few pointers:-</p>
+<ul>
+<li><em>console.trace()</em> is compatible with the snippets feature of Chrome DevTools.</li>
+<li><em>console.trace()</em> is part of the Console API (just like console.log())</li>
+</ul>
+<p>Let’s see how it works:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">first</span> <span style="color:#f92672">=</span> () =&gt; { <span style="color:#a6e22e">second</span>(); };
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">second</span> <span style="color:#f92672">=</span> () =&gt; { <span style="color:#a6e22e">third</span>(); };
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">third</span> <span style="color:#f92672">=</span> () =&gt; { <span style="color:#a6e22e">fourth</span>(); };
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fourth</span> <span style="color:#f92672">=</span> () =&gt; { <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">trace</span>(<span style="color:#e6db74">&#34;The trace&#34;</span>); };
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span>  <span style="color:#a6e22e">first</span>();
+</code></pre></div><p>You get <code>@ <span  style="color:blue;">file_name:line_number</span></code> in console output which you can click on to navigate to the source.</p>
+<pre><code><div class="code_output">Output</div>
+▼ The trace
+  fourth        @ <span  style="color:blue;">test:4</span>
+  third	        @ <span  style="color:blue;">test:3</span>
+  second        @ <span  style="color:blue;">test:2</span>
+  first	        @ <span  style="color:blue;">test:1</span>
+  (anonymous)   @ <span  style="color:blue;">test:5</span>
+</code></pre><h2 id="use-a-unit-testing-framework">Use a Unit Testing Framework</h2>
+<p>There are many third-party unit-testing framework for JavaScript available with their own philosophy and syntax. Here are most widely used JavaScript testing frameworks:-</p>
+<ul>
+<li><a href="https://mochajs.org/">Mocha</a> is feature-rich framework running on <em>Node.js</em> and in the browser, making asynchronous testing simple and fun. Mocha tests run serially, allowing for flexible and accurate reporting, while mapping uncaught exceptions to the correct test cases.</li>
+<li><a href="https://jestjs.io/">JEST</a> is popular framework maintained by <em>Facebook</em>. It is a preferred framework for the React based applications as it requires zero configuration. It works great with projects using <em>Babel</em>, <em>TypeScript</em>, <em>Node</em>, <em>React</em>, <em>Angular</em>, and <em>Vue</em>.</li>
+<li><a href="https://jasmine.github.io/">Jasmine</a> is a behavior-driven testing framework. It has no external dependencies. It does not require a DOM. And it has a clean, obvious syntax so that you can easily write tests.</li>
+<li><a href="http://qunitjs.com/">QUnit</a> is a powerful, easy-to-use JavaScript unit testing framework. It&rsquo;s used by the <em>jQuery</em>, <em>jQuery UI</em> and <em>jQuery Mobile</em> projects and is capable of testing any generic JavaScript code</li>
+</ul>
+<p><br /></p>
+<p>Thanks for reading till the end. I hope this tutorial would have helped you to find some useful tips for debugging and logging to the console, which you&rsquo;d not known before.</p>
+<p>Reference:</p>
+<ol>
+<li><a href="https://developers.google.com/web/tools/chrome-devtools/">Google Developers Chrome DevTool</a></li>
+</ol>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link btn" href="/tags/javascript-logging/" rel="tag">Javascript Logging</a></li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+  
+  
+  
+
+  <section class="social-share">
+    <ul class="share-icons">
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?hashtags=codingnconcepts&amp;url=https%3a%2f%2fcodingnconcepts.com%2fjavascript%2fdebugging-tips-and-tricks%2f&amp;text=JavaScript%20Debugging%20Tips%20and%20Tricks" target="_blank" rel="noopener" aria-label="Share on Twitter" class="share-btn twitter">
+          <svg class="widget-social__link-icon icon icon-twitter" width="24" height="24" viewBox="0 0 384 312"><path d="m384 36.9c-14.1 6.3-29.3 10.5-45.2 12.4 16.3-9.7 28.8-25.2 34.6-43.6-15.2 9-32.1 15.6-50 19.1-14.4-15.2-34.9-24.8-57.5-24.8-43.5 0-78.8 35.3-78.8 78.8 0 6.2.7 12.2 2 17.9-65.5-3.3-123.5-34.6-162.4-82.3-6.7 11.6-10.6 25.2-10.6 39.6 0 27.3 13.9 51.4 35 65.6-12.9-.4-25.1-4-35.7-9.9v1c0 38.2 27.2 70 63.2 77.2-6.6 1.8-13.6 2.8-20.8 2.8-5.1 0-10-.5-14.8-1.4 10 31.3 39.1 54.1 73.6 54.7-27 21.1-60.9 33.7-97.8 33.7-6.4 0-12.6-.4-18.8-1.1 34.9 22.4 76.3 35.4 120.8 35.4 144.9 0 224.1-120 224.1-224.1 0-3.4-.1-6.8-.2-10.2 15.4-11.1 28.7-25 39.3-40.8z"/></svg>
+          <p>Twitter</p>
+          </a>
+      </li>
+      
+
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcodingnconcepts.com%2fjavascript%2fdebugging-tips-and-tricks%2f" target="_blank" rel="noopener" aria-label="Share on Facebook" class="share-btn facebook">
+          <svg class="widget-social__link-icon icon icon-facebook" width="24" height="24" viewBox="0 0 352 352"><path d="m0 32v288c0 17.5 14.5 32 32 32h288c17.5 0 32-14.5 32-32v-288c0-17.5-14.5-32-32-32h-288c-17.5 0-32 14.5-32 32zm320 0v288h-83v-108h41.5l6-48h-47.5v-31c0-14 3.5-23.5 23.5-23.5h26v-43.5c-4.4-.6-19.8-1.5-37.5-1.5-36.9 0-62 22.2-62 63.5v36h-42v48h42v108h-155v-288z"/></svg>
+          <p>Facebook</p>
+          </a>
+      </li>
+      
+
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fcodingnconcepts.com%2fjavascript%2fdebugging-tips-and-tricks%2f&amp;source=https%3a%2f%2fcodingnconcepts.com%2fjavascript%2fdebugging-tips-and-tricks%2f&amp;title=JavaScript%20Debugging%20Tips%20and%20Tricks&amp;summary=JavaScript%20Debugging%20Tips%20and%20Tricks" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="share-btn linkedin">
+          <svg class="widget-social__link-icon icon icon-linkedin" width="24" height="24" viewBox="0 0 352 352"><path d="M0,40v272c0,21.9,18.1,40,40,40h272c21.9,0,40-18.1,40-40V40c0-21.9-18.1-40-40-40H40C18.1,0,0,18.1,0,40z M312,32 c4.6,0,8,3.4,8,8v272c0,4.6-3.4,8-8,8H40c-4.6,0-8-3.4-8-8V40c0-4.6,3.4-8,8-8H312z M59.5,87c0,15.2,12.3,27.5,27.5,27.5 c15.2,0,27.5-12.3,27.5-27.5c0-15.2-12.3-27.5-27.5-27.5C71.8,59.5,59.5,71.8,59.5,87z M187,157h-1v-21h-45v152h47v-75 c0-19.8,3.9-39,28.5-39c24.2,0,24.5,22.4,24.5,40v74h47v-83.5c0-40.9-8.7-72-56.5-72C208.5,132.5,193.3,145.1,187,157z M64,288h47.5 V136H64V288z"/></svg>
+            <p>LinkedIn</p>
+          </a>
+      </li>
+      
+
+      
+      
+      <li>
+        <a href="whatsapp://send?text=JavaScript%20Debugging%20Tips%20and%20Tricks%2c%20by%20Coding%20N%20Concepts%0aTips%20and%20Tricks%20for%20debugging%20JavaScript%20code%20using%20Chrome%20DevTool%2c%20different%20ways%20of%20logging%20to%20the%20console%20using%20Console%20APIs%2c%20and%20much%20more...%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fdebugging-tips-and-tricks%2f%0a" target="_blank" class="share-btn whatsapp">
+          <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
+          <p>Email</p>
+        </a>
+      </li>
+      
+
+      
+      
+      <li>
+        <a href="mailto:?subject=Coding%20N%20Concepts - JavaScript%20Debugging%20Tips%20and%20Tricks.&amp;body=JavaScript%20Debugging%20Tips%20and%20Tricks%2c%20by%20Coding%20N%20Concepts%0aTips%20and%20Tricks%20for%20debugging%20JavaScript%20code%20using%20Chrome%20DevTool%2c%20different%20ways%20of%20logging%20to%20the%20console%20using%20Console%20APIs%2c%20and%20much%20more...%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fdebugging-tips-and-tricks%2f%0a" target="_blank" class="share-btn email">
+          <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
+          <p>Email</p>
+        </a>
+      </li>
+    </ul>
+  </section>
+  
+
+
+
+<div class="related_post_section">
+    <h2 class = "related_post_title">See Also</h2>
+    <ul class = "related_post">
+        
+        <li><a href="/javascript/console-table-javascript/">console.table() in JavaScript</a></li>
+        
+    </ul>
+</div>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Ashish Lahoti avatar" src="/media/authors/ashishlahoti.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Ashish Lahoti</span>
+	</div>
+	<div class="authorbox__description">
+		Ashish Lahoti is a senior application developer at DBS Bank having 10&#43; years of experience in full stack technologies | Confluent Certified Developer for Apache KAFKA | SCJP Certified
+	</div>
+</div>
+
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--prev">
+		<a class="post-nav__link" href="/javascript/console-table-javascript/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">console.table() in JavaScript</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next">
+		<a class="post-nav__link" href="/javascript/console-api-walkthrough/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">JavaScript Console API Walkthrough</p></a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "codingnconcepts" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 CodingNConcepts.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

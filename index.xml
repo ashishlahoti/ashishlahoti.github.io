@@ -6,17 +6,26 @@
     <description>Recent content on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://codingnconcepts.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>JavaScript Console API Walkthrough</title>
+      <link>https://codingnconcepts.com/javascript/console-api-walkthrough/</link>
+      <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/javascript/console-api-walkthrough/</guid>
+      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll walkthrough JavaScript&amp;rsquo;s Console API methods with quick examples&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>JavaScript Debugging Tips and Tricks</title>
-      <link>https://codingnconcepts.com/javascript/debugging-tricks-javascript/</link>
+      <link>https://codingnconcepts.com/javascript/debugging-tips-and-tricks/</link>
       <pubDate>Thu, 11 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://codingnconcepts.com/javascript/debugging-tricks-javascript/</guid>
+      <guid>https://codingnconcepts.com/javascript/debugging-tips-and-tricks/</guid>
       <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn plenty of tips and tricks for debugging JavaScript code using Chrome DevTool, different ways of logging to the console using console APIs, and much more&amp;hellip;&lt;/p&gt;</description>
     </item>
     
