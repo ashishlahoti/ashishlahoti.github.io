@@ -3,8 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://codingnconcepts.com/javascript/</loc>
-    <lastmod>2020-06-16T00:00:00+00:00</lastmod>
+    <loc>https://codingnconcepts.com/interview-questions/</loc>
+    <lastmod>2020-06-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -19,13 +19,24 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/javascript/console-api-walkthrough/</loc>
-    <lastmod>2020-06-16T00:00:00+00:00</lastmod>
+    <loc>https://codingnconcepts.com/tags/</loc>
+    <lastmod>2020-06-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/</loc>
+    <loc>https://codingnconcepts.com/top-java-8-interview-questions/</loc>
     <lastmod>2020-06-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/javascript/</loc>
+    <lastmod>2020-06-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/javascript/console-api-walkthrough/</loc>
+    <lastmod>2020-06-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -184,12 +195,6 @@
   <url>
     <loc>https://codingnconcepts.com/spring-boot/configure-info-and-health-endpoints/</loc>
     <lastmod>2020-04-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/interview-questions/</loc>
-    <lastmod>2020-06-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
