@@ -13,7 +13,7 @@
 <meta property="og:url" content="https://codingnconcepts.com/hugo/custom-shortcode-hugo/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/gohugo.png" />
 <meta property="article:published_time" content="2020-05-09T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-05-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-17T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -77,7 +77,7 @@ if (!doNotTrack) {
     "copyrightYear" : "2020",
     "dateCreated": "2020-05-09T00:00:00.00Z",
     "datePublished": "2020-05-09T00:00:00.00Z",
-    "dateModified": "2020-05-09T00:00:00.00Z",
+    "dateModified": "2020-06-17T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -91,7 +91,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/logo/gohugo.png"],
     "url" : "https:\/\/codingnconcepts.com\/hugo\/custom-shortcode-hugo\/",
-    "wordCount" : "493",
+    "wordCount" : "670",
     "genre" : ["Hugo Shortcode"],
     "keywords" : ["escape hugo shortcode","create custom shortcode","hugo shortcode example"]
 }
@@ -196,6 +196,7 @@ if (!doNotTrack) {
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
 	<time class="meta__text" datetime="2020-05-09T00:00:00Z">May 09, 2020</time>
+	<time class="meta__text" datetime="2020-06-17T00:00:00Z"> (Last Modified: June 17, 2020)</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -214,6 +215,7 @@ if (!doNotTrack) {
       <ul>
         <li><a href="#current-year">Current Year</a></li>
         <li><a href="#link-to-open-in-browser-window">Link to open in browser window</a></li>
+        <li><a href="#add-html-elements-in-code-block">Add HTML elements in Code Block</a></li>
         <li><a href="#highlighter">Highlighter</a></li>
         <li><a href="#strike">Strike</a></li>
         <li><a href="#code-block-output">Code Block Output</a></li>
@@ -233,26 +235,26 @@ if (!doNotTrack) {
 <h3 id="current-year">Current Year</h3>
 <p>This is useful when you want to show current year in markdown.</p>
 <h6 id="shortcode">shortcode</h6>
-<p><code>layouts/shortcodes/year.html</code></p>
+<p><em>layouts/shortcodes/year.html</em></p>
 <pre><code>{{ now.Format &quot;2006&quot; }}
 </code></pre><h6 id="usage">usage</h6>
-<p><code>content/post/myblogpost.md</code></p>
+<p><em>content/post/myblogpost.md</em></p>
 <pre><code>---
 # front-matter
 ---
 
 Top 10 things you should know in {{&lt; year &gt;}}
 </code></pre><h6 id="result">result</h6>
-<p><code>post/myblogpost.html</code></p>
+<p><em>post/myblogpost.html</em></p>
 <pre><code>Top 10 things you should know in 2020
 </code></pre><p><br /></p>
 <h3 id="link-to-open-in-browser-window">Link to open in browser window</h3>
 <p>By default when you create a link in hugo pages, it opens in same browser window. You can use this shortcode to open links in new browser window or tab.</p>
 <h6 id="shortcode-1">shortcode</h6>
-<p><code>layouts/shortcodes/a_blank.html</code></p>
+<p><em>layouts/shortcodes/a_blank.html</em></p>
 <pre><code>&lt;a href=&quot;{{ .Get &quot;url&quot; }}&quot; target=&quot;_blank&quot;&gt;{{ with .Get &quot;title&quot; }}{{.}}{{else}}{{.Get &quot;url&quot;}}{{end}}&lt;/a&gt;
 </code></pre><h6 id="usage-1">usage</h6>
-<p><code>content/post/myblogpost.md</code></p>
+<p><em>content/post/myblogpost.md</em></p>
 <pre><code>---
 # front-matter
 ---
@@ -260,49 +262,81 @@ Top 10 things you should know in {{&lt; year &gt;}}
 
 {{&lt; a_blank title=&quot;Coding N Concepts&quot; url=&quot;https://codingnconcepts.com/&quot; &gt;}} opens in new browser window.
 </code></pre><h6 id="result-1">result</h6>
-<p><code>post/myblogpost.html</code></p>
+<p><em>post/myblogpost.html</em></p>
 <p><a href="https://codingnconcepts.com/">Coding N Concepts</a> opens in same browser window</p>
 <p><a href="https://codingnconcepts.com/" target="_blank">Coding N Concepts</a> opens in new browser window.</p>
 <p><br /></p>
+<h3 id="add-html-elements-in-code-block">Add HTML elements in Code Block</h3>
+<p>Sometime we need support to add some specific styling in our markdown file. Hugo doesn&rsquo;t support adding raw HTML in markdown files by default but you can enable that by making <code>unsafe</code> property as true in <code>config.toml</code> file:</p>
+<pre><code>[markup]
+  [markup.goldmark.renderer]
+    unsafe= true
+</code></pre><p>You can now use raw HTML elements in your markdown files but there is still a limitation that you can not use raw HTML in code blocks. That is where <code>span</code> hugo shortcode is useful. It creates a <code>&lt;/span&gt;</code> element with given style attributes.</p>
+<h6 id="shortcode-2">shortcode</h6>
+<p><em>layouts/shortcodes/span.html</em></p>
+<pre><code>&lt;span {{ with .Get &quot;style&quot;}} style=&quot;{{ . | safeCSS }}&quot;{{ end }}&gt;{{ .Get &quot;text&quot; }}&lt;/span&gt;
+</code></pre><h6 id="usage-2">usage</h6>
+<p><em>content/post/myblogpost.md</em></p>
+<pre><code>---
+# front-matter
+---
+
+    ```
+    ▼ The trace
+      first         @ {{&lt; span style=&quot;color:red;&quot; text=&quot;test:1&quot; &gt;}}
+      second        @ {{&lt; span style=&quot;color:orange;font-style:italic;&quot; text=&quot;test:2&quot; &gt;}}
+      third         @ {{&lt; span style=&quot;color:green;background-color:yellow;&quot; text=&quot;test:3&quot; &gt;}}
+      fourth        @ {{&lt; span style=&quot;color:blue;border:1px solid blue;&quot; text=&quot;test:4&quot; &gt;}}
+      (anonymous)   @ {{&lt; span style=&quot;color:black;font-weight:bold;&quot; text=&quot;test:5&quot; &gt;}}
+    ```
+</code></pre><h6 id="result-2">result</h6>
+<p><em>post/myblogpost.html</em></p>
+<pre><code>▼ The trace
+  first         @ <span  style="color:red;">test:1</span>
+  second        @ <span  style="color:orange;font-style:italic;">test:2</span>
+  third         @ <span  style="color:green;background-color:yellow;">test:3</span>
+  fourth        @ <span  style="color:blue;border:1px solid blue;">test:4</span>
+  (anonymous)   @ <span  style="color:black;font-weight:bold;">test:5</span>
+</code></pre><p><br /></p>
 <h3 id="highlighter">Highlighter</h3>
 <p>This is useful when you want to highlight some of the content in markdown.</p>
-<h6 id="shortcode-2">shortcode</h6>
-<p><code>layouts/shortcodes/highlight.html</code></p>
+<h6 id="shortcode-3">shortcode</h6>
+<p><em>layouts/shortcodes/highlight.html</em></p>
 <pre><code>&lt;mark&gt;{{ with .Get 0 }}{{.}}{{end}}&lt;/mark&gt;
-</code></pre><h6 id="usage-2">usage</h6>
-<p><code>content/post/myblogpost.md</code></p>
+</code></pre><h6 id="usage-3">usage</h6>
+<p><em>content/post/myblogpost.md</em></p>
 <pre><code>---
 # front-matter
 ---
 
 This is the {{&lt; highlight &quot;most trending&quot; &gt;}} post of the decade.
-</code></pre><h6 id="result-2">result</h6>
-<p><code>post/myblogpost.html</code></p>
+</code></pre><h6 id="result-3">result</h6>
+<p><em>post/myblogpost.html</em></p>
 <pre><code>This is the <mark>most trending</mark> post of the decade.
 </code></pre><p><br /></p>
 <h3 id="strike">Strike</h3>
 <p>This is useful when you want to strike through some of the content in markdown.</p>
-<h6 id="shortcode-3">shortcode</h6>
-<p><code>layouts/shortcodes/strike.html</code></p>
+<h6 id="shortcode-4">shortcode</h6>
+<p><em>layouts/shortcodes/strike.html</em></p>
 <pre><code>&lt;strike&gt;{{ with .Get 0 }}{{.}}{{end}}&lt;/strike&gt;
-</code></pre><h6 id="usage-3">usage</h6>
-<p><code>content/post/myblogpost.md</code></p>
+</code></pre><h6 id="usage-4">usage</h6>
+<p><em>content/post/myblogpost.md</em></p>
 <pre><code>---
 # front-matter
 ---
 
 This is {{&lt; strike &quot;not trending&quot; &gt;}} trending post of the decade.
-</code></pre><h6 id="result-3">result</h6>
-<p><code>post/myblogpost.html</code></p>
+</code></pre><h6 id="result-4">result</h6>
+<p><em>post/myblogpost.html</em></p>
 <pre><code>This is the <strike>not trending</strike> trending post of the decade.
 </code></pre><p><br /></p>
 <h3 id="code-block-output">Code Block Output</h3>
 <p>This is useful when you want to show the output of certain code. It gives a beautiful title &ldquo;Output&rdquo;.</p>
-<h6 id="shortcode-4">shortcode</h6>
-<p><code>layouts/shortcodes/code_output.html</code></p>
+<h6 id="shortcode-5">shortcode</h6>
+<p><em>layouts/shortcodes/code_output.html</em></p>
 <pre><code>&lt;div class=&quot;code_output&quot;&gt;Output&lt;/div&gt;
-</code></pre><h6 id="usage-4">usage</h6>
-<p><code>content/post/myblogpost.md</code></p>
+</code></pre><h6 id="usage-5">usage</h6>
+<p><em>content/post/myblogpost.md</em></p>
 <pre><code>---
 # front-matter
 ---
@@ -313,8 +347,8 @@ This is {{&lt; strike &quot;not trending&quot; &gt;}} trending post of the decad
     2
     3
     ```
-</code></pre><h6 id="result-4">result</h6>
-<p><code>post/myblogpost.html</code></p>
+</code></pre><h6 id="result-5">result</h6>
+<p><em>post/myblogpost.html</em></p>
 <pre><code><div class="code_output">Output</div>
 1
 2
