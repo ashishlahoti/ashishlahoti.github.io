@@ -6,9 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>How to Clone an Array in JavaScript - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Understand how to clone an Array in JavaScript and also learn the difference in shallow copy and deep copy of an Array.">
+	<meta name="description" content="Understand how to clone an Array in JavaScript and also learn the difference between shallow copy and deep copy of an Array.">
 	<meta property="og:title" content="How to Clone an Array in JavaScript" />
-<meta property="og:description" content="Understand how to clone an Array in JavaScript and also learn the difference in shallow copy and deep copy of an Array." />
+<meta property="og:description" content="Understand how to clone an Array in JavaScript and also learn the difference between shallow copy and deep copy of an Array." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/javascript/how-to-clone-array-in-javascript/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/js.png" />
@@ -25,7 +25,7 @@
 <meta name="twitter:image" content="https://codingnconcepts.com/img/logo/js.png"/>
 
 <meta name="twitter:title" content="How to Clone an Array in JavaScript"/>
-<meta name="twitter:description" content="Understand how to clone an Array in JavaScript and also learn the difference in shallow copy and deep copy of an Array."/>
+<meta name="twitter:description" content="Understand how to clone an Array in JavaScript and also learn the difference between shallow copy and deep copy of an Array."/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -54,7 +54,7 @@ if (!doNotTrack) {
     "name": "How to Clone an Array in JavaScript",
     "headline": "How to Clone an Array in JavaScript",
     "alternativeHeadline": "",
-    "description": "Understand how to clone an Array in JavaScript and also learn the difference in shallow copy and deep copy of an Array.",
+    "description": "Understand how to clone an Array in JavaScript and also learn the difference between shallow copy and deep copy of an Array.",
     "inLanguage": "en-us",
 	"isFamilyFriendly": "true",
     "mainEntityOfPage": {
@@ -91,7 +91,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/logo/js.png"],
     "url" : "https:\/\/codingnconcepts.com\/javascript\/how-to-clone-array-in-javascript\/",
-    "wordCount" : "491",
+    "wordCount" : "511",
     "genre" : ["Javascript Core"],
     "keywords" :  null 
 }
@@ -363,10 +363,10 @@ if (!doNotTrack) {
 	</div>
 </div>
 <div class="content post__content clearfix">
-			<p>In this tutorial, we&rsquo;ll learn how to clone an Array in JavaScript and also learn the difference in shallow copy and deep copy of an Array.</p>
+			<p>In this tutorial, we&rsquo;ll learn how to clone an Array in JavaScript and also learn the difference between <em>shallow copy</em> and <em>deep copy</em> of an Array.</p>
 <h2 id="shallow-copy">Shallow Copy</h2>
 <p>We&rsquo;ll look at various methods to create a shallow copy of an Array in JavaScript. Shallow copy means the first level is copied and deeper levels are <strong>referenced</strong>.</p>
-<p>Shallow copy is good enough when you are working with <strong>one-dimensional array</strong> as in below examples:</p>
+<p>Shallow copy is good enough when you are working with <strong>one-dimensional array</strong>. Let&rsquo;s look at different ways to clone an array using shallow copy:</p>
 <h3 id="es6-spread-operator">ES6 Spread Operator</h3>
 <p>If you have started using ES6 then it is recommended to use spread operator to clone an array in JavaScript. It&rsquo;s short syntax is very handy.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fruits</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;banana&#39;</span>, <span style="color:#e6db74">&#39;mango&#39;</span>];
@@ -398,9 +398,9 @@ if (!doNotTrack) {
 <span style="color:#75715e">// (3) [[&#39;apple&#39;, &#39;banana&#39;, &#39;mango&#39;], [&#39;onion&#39;, &#39;potato&#39;, &#39;tomato&#39;], [&#39;milk&#39;, &#39;juice&#39;, &#39;beer&#39;]]
 </span><span style="color:#75715e">// (3) [[&#39;apple&#39;, &#39;banana&#39;, &#39;mango&#39;], [&#39;onion&#39;, &#39;potato&#39;, &#39;tomato&#39;], [&#39;milk&#39;, &#39;juice&#39;, &#39;beer&#39;]]
 </span><span style="color:#75715e">// They&#39;ve both been changed because they share references
-</span></code></pre></div><p>We see that both Array and its shallow copy have been changed because they share the reference. Remember, deeper level are referenced in shallow copy.</p>
+</span></code></pre></div><p>We see that both Array and its shallow copy have been changed because they share the reference. Remember, deeper levels are referenced in shallow copy.</p>
 <h2 id="deep-copy">Deep copy</h2>
-<p>To solve problem arise with shallow copying multi-dimensional (nested) array, We can deep copy them as in below examples:</p>
+<p>We can use deep copy instead to solve the problem arises with shallow copy of multi-dimensional (nested) array. Let&rsquo;s look at different ways to clone an array using deep copy:</p>
 <h3 id="jsonstringify-and-jsonparse">JSON.stringify and JSON.parse</h3>
 <p>We can make a deep copy of an Array using the combination of <code>JSON.stringify</code> and <code>JSON.parse</code></p>
 <ul>
@@ -437,7 +437,7 @@ if (!doNotTrack) {
 <span style="color:#75715e">// (3) [[&#39;apple&#39;, &#39;banana&#39;, &#39;mango&#39;], [&#39;onion&#39;, &#39;potato&#39;, &#39;tomato&#39;], [&#39;milk&#39;, &#39;juice&#39;, &#39;beer&#39;]]
 </span><span style="color:#75715e">// (3) [[&#39;apple&#39;, &#39;banana&#39;, &#39;mango&#39;], [&#39;onion&#39;, &#39;potato&#39;, &#39;tomato&#39;], [&#39;milk&#39;, &#39;juice&#39;]]
 </span><span style="color:#75715e">// These two arrays are completely separate!
-</span></code></pre></div><p>Please note that above example makes a deep copy of two-dimensional array. You need to iterate deeper if Array has more nested levels.</p>
+</span></code></pre></div><p>Please note that the above example makes a deep copy of two-dimensional array. You need to iterate deeper if Array has more nested levels.</p>
 		</div>
 		<footer class="post__footer">
 			
@@ -490,7 +490,7 @@ if (!doNotTrack) {
       
       
       <li>
-        <a href="whatsapp://send?text=How%20to%20Clone%20an%20Array%20in%20JavaScript%2c%20by%20Coding%20N%20Concepts%0aUnderstand%20how%20to%20clone%20an%20Array%20in%20JavaScript%20and%20also%20learn%20the%20difference%20in%20shallow%20copy%20and%20deep%20copy%20of%20an%20Array.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fhow-to-clone-array-in-javascript%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=How%20to%20Clone%20an%20Array%20in%20JavaScript%2c%20by%20Coding%20N%20Concepts%0aUnderstand%20how%20to%20clone%20an%20Array%20in%20JavaScript%20and%20also%20learn%20the%20difference%20between%20shallow%20copy%20and%20deep%20copy%20of%20an%20Array.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fhow-to-clone-array-in-javascript%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>Email</p>
         </a>
@@ -500,7 +500,7 @@ if (!doNotTrack) {
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - How%20to%20Clone%20an%20Array%20in%20JavaScript.&amp;body=How%20to%20Clone%20an%20Array%20in%20JavaScript%2c%20by%20Coding%20N%20Concepts%0aUnderstand%20how%20to%20clone%20an%20Array%20in%20JavaScript%20and%20also%20learn%20the%20difference%20in%20shallow%20copy%20and%20deep%20copy%20of%20an%20Array.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fhow-to-clone-array-in-javascript%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - How%20to%20Clone%20an%20Array%20in%20JavaScript.&amp;body=How%20to%20Clone%20an%20Array%20in%20JavaScript%2c%20by%20Coding%20N%20Concepts%0aUnderstand%20how%20to%20clone%20an%20Array%20in%20JavaScript%20and%20also%20learn%20the%20difference%20between%20shallow%20copy%20and%20deep%20copy%20of%20an%20Array.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fhow-to-clone-array-in-javascript%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>
@@ -515,6 +515,8 @@ if (!doNotTrack) {
     <h2 class = "related_post_title">See Also</h2>
     <ul class = "related_post">
         
+        <li><a href="/javascript/how-to-sort-array-in-javascript/">How to Sort an Array in JavaScript</a></li>
+        
         <li><a href="/javascript/comparison-operators-in-javascript/">Difference in == and === comparison operators in JavaScript</a></li>
         
         <li><a href="/javascript/this-keyword-in-javascript/">Understand all about this keyword in JavaScript</a></li>
@@ -522,8 +524,6 @@ if (!doNotTrack) {
         <li><a href="/javascript/call-vs-bind-vs-apply/">Understand call, bind and apply methods in JavaScript</a></li>
         
         <li><a href="/javascript/lexical-scope-closures-and-currying/">Lexical Scope, Closures and Currying in JavaScript</a></li>
-        
-        <li><a href="/javascript/virtual-dom-vs-shadow-dom/">Virtual Dom vs Shadow Dom</a></li>
         
     </ul>
 </div>
@@ -542,7 +542,7 @@ if (!doNotTrack) {
 
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="/javascript/console-api-walkthrough/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">JavaScript Console API Walkthrough</p></a>
+		<a class="post-nav__link" href="/javascript/how-to-sort-array-in-javascript/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">How to Sort an Array in JavaScript</p></a>
 	</div>
 </nav>
 
