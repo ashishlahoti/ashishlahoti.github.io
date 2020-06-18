@@ -6,10 +6,19 @@
     <description>Recent content in Javascript Core on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://codingnconcepts.com/tags/javascript-core/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to Clone an Array in JavaScript</title>
+      <link>https://codingnconcepts.com/javascript/how-to-clone-array-in-javascript/</link>
+      <pubDate>Thu, 18 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/javascript/how-to-clone-array-in-javascript/</guid>
+      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn how to clone an Array in JavaScript and also learn the difference in shallow copy and deep copy of an Array.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Difference in == and === comparison operators in JavaScript</title>

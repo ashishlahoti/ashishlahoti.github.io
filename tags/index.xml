@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://codingnconcepts.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Javascript Core</title>
+      <link>https://codingnconcepts.com/tags/javascript-core/</link>
+      <pubDate>Thu, 18 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/javascript-core/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Interview Q&amp;A</title>
@@ -138,6 +147,15 @@
     </item>
     
     <item>
+      <title>Popular Posts</title>
+      <link>https://codingnconcepts.com/tags/popular-posts/</link>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/popular-posts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Hugo Shortcode</title>
       <link>https://codingnconcepts.com/tags/hugo-shortcode/</link>
       <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
@@ -188,15 +206,6 @@
       <pubDate>Sun, 05 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/javascript-interview/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Javascript Core</title>
-      <link>https://codingnconcepts.com/tags/javascript-core/</link>
-      <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/javascript-core/</guid>
       <description></description>
     </item>
     
