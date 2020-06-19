@@ -91,7 +91,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/logo/js.png"],
     "url" : "https:\/\/codingnconcepts.com\/javascript\/how-to-capitalize-first-letter-of-string-in-javascript\/",
-    "wordCount" : "235",
+    "wordCount" : "319",
     "genre" : ["Javascript Core"],
     "keywords" :  null 
 }
@@ -352,22 +352,27 @@ if (!doNotTrack) {
 	<div class="toc__menu">
 		<nav id="TableOfContents">
   <ul>
-    <li><a href="#function">Function</a></li>
-    <li><a href="#function-details">Function Details</a></li>
-    <li><a href="#stringprototype">String.prototype</a></li>
+    <li><a href="#capitalize-function">&lsquo;capitalize&rsquo; Function</a></li>
+    <li><a href="#capitalize-function-details">&lsquo;capitalize&rsquo; Function Details</a></li>
+    <li><a href="#add-capitalize-to-string-methods">Add &lsquo;capitalize&rsquo; to String methods</a></li>
+    <li><a href="#capitalize-first-letter-of-each-word-in-a-given-string">Capitalize First Letter of each word in a given String</a></li>
   </ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
-			<p>In this quick tutorial, we&rsquo;ll learn how to capitalize the first letter of a String in JavaScript</p>
-<h2 id="function">Function</h2>
-<p>You can use following function to capitalize the first letter of a string:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">capitalizeFirstLetter</span>(<span style="color:#a6e22e">string</span>) {
+			<p>In this quick tutorial, we&rsquo;ll learn how to capitalize the first letter of a String in JavaScript.</p>
+<h2 id="capitalize-function">&lsquo;capitalize&rsquo; Function</h2>
+<p>You can use this custom made <code>capitalize()</code> function to capitalize the first letter of a string:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// es5 way
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">capitalize</span>(<span style="color:#a6e22e">string</span>) {
   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">string</span>.<span style="color:#a6e22e">charAt</span>(<span style="color:#ae81ff">0</span>).<span style="color:#a6e22e">toUpperCase</span>() <span style="color:#f92672">+</span> <span style="color:#a6e22e">string</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span>);
 }
-</code></pre></div><h2 id="function-details">Function Details</h2>
-<p>Let&rsquo;s look at the steps involved to change the first letter to capital (uppercase) of the given string:</p>
+
+<span style="color:#75715e">// es6 way using destructuring 
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">capitalize</span> <span style="color:#f92672">=</span> ([<span style="color:#a6e22e">first</span>,...<span style="color:#a6e22e">rest</span>]) =&gt; <span style="color:#a6e22e">first</span>.<span style="color:#a6e22e">toUpperCase</span>() <span style="color:#f92672">+</span> <span style="color:#a6e22e">rest</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#39;&#39;</span>);
+</code></pre></div><h2 id="capitalize-function-details">&lsquo;capitalize&rsquo; Function Details</h2>
+<p>Let&rsquo;s look at the steps involved to come up with <code>capitalize()</code> function:</p>
 <ol>
 <li>Get the first letter of the string using <code>charAt()</code> method
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">string</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;string&#34;</span>;
@@ -383,24 +388,24 @@ if (!doNotTrack) {
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">string</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;string&#34;</span>;
 
 <span style="color:#a6e22e">string</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span>);  <span style="color:#75715e">// Returns &#34;tring&#34;
-</span></code></pre></div><p>Note that <code>slice(1)</code> means get a substring from index 1 to end of the string.</p>
+</span></code></pre></div><p>Note that <code>slice(1)</code> means get a substring from index 1 to end of the string. Alternatively, You can also use <code>substring(1)</code>.</p>
 </li>
 <li>Finally, add the first uppercase letter to rest of the string
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">string</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;string&#34;</span>;
 
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">capitalizeFirstLetter</span>(<span style="color:#a6e22e">string</span>) {
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">capitalize</span>(<span style="color:#a6e22e">string</span>) {
   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">string</span>.<span style="color:#a6e22e">charAt</span>(<span style="color:#ae81ff">0</span>).<span style="color:#a6e22e">toUpperCase</span>() <span style="color:#f92672">+</span> <span style="color:#a6e22e">string</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span>);
 }
 
-<span style="color:#a6e22e">capitalizeFirstLetter</span>(<span style="color:#a6e22e">string</span>);  <span style="color:#75715e">// Returns &#34;String&#34;
+<span style="color:#a6e22e">capitalize</span>(<span style="color:#a6e22e">string</span>);  <span style="color:#75715e">// Returns &#34;String&#34;
 </span></code></pre></div></li>
 </ol>
-<h2 id="stringprototype">String.prototype</h2>
-<p>Moreover, you can also add this function to the <code>String.prototype</code> method to use it directly on a string. Let&rsquo;s look at the code:</p>
+<h2 id="add-capitalize-to-string-methods">Add &lsquo;capitalize&rsquo; to String methods</h2>
+<p>We can also add our custom made <code>capitalize()</code> function to <code>String.prototype</code> methods so that we can directly use that on a string.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">string</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;string&#34;</span>;
 
 <span style="color:#75715e">/* this is how methods are defined in prototype of any built-in Object */</span>
-Object.<span style="color:#a6e22e">defineProperty</span>(String.<span style="color:#a6e22e">prototype</span>, <span style="color:#e6db74">&#39;capitalizeFirstLetter&#39;</span>, {
+Object.<span style="color:#a6e22e">defineProperty</span>(String.<span style="color:#a6e22e">prototype</span>, <span style="color:#e6db74">&#39;capitalize&#39;</span>, {
     <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
         <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">charAt</span>(<span style="color:#ae81ff">0</span>).<span style="color:#a6e22e">toUpperCase</span>() <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span>);
     },
@@ -408,7 +413,18 @@ Object.<span style="color:#a6e22e">defineProperty</span>(String.<span style="col
 </span><span style="color:#75715e"></span>    <span style="color:#a6e22e">configurable</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> <span style="color:#75715e">// so that it can be deleted later
 </span><span style="color:#75715e"></span>});
 
-<span style="color:#a6e22e">string</span>.<span style="color:#a6e22e">capitalizeFirstLetter</span>(); <span style="color:#75715e">// Returns &#34;String&#34;
+<span style="color:#a6e22e">string</span>.<span style="color:#a6e22e">capitalize</span>(); <span style="color:#75715e">// Returns &#34;String&#34;
+</span></code></pre></div><h2 id="capitalize-first-letter-of-each-word-in-a-given-string">Capitalize First Letter of each word in a given String</h2>
+<p>We can use the <code>capitalizeSentence</code> function to capitalize first letter of each word in a sentence:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">capitalizeSentence</span>(<span style="color:#a6e22e">sentence</span>) {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">sentence</span>
+      .<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34; &#34;</span>)
+      .<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">string</span> =&gt; <span style="color:#a6e22e">string</span>.<span style="color:#a6e22e">charAt</span>(<span style="color:#ae81ff">0</span>).<span style="color:#a6e22e">toUpperCase</span>() <span style="color:#f92672">+</span> <span style="color:#a6e22e">string</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span>))
+      .<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#34; &#34;</span>);
+}
+
+<span style="color:#a6e22e">capitalizeSentence</span>(<span style="color:#e6db74">&#34;a quick brown fox jumps over the lazy dog&#34;</span>);
+<span style="color:#75715e">// &#34;A Quick Brown Fox Jumps Over The Lazy Dog&#34;
 </span></code></pre></div>
 		</div>
 		<footer class="post__footer">
