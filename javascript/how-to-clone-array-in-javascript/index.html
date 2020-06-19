@@ -19,7 +19,7 @@
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
 <meta property="article:publisher" content="https://www.facebook.com/codingnconcepts" />
 <meta property="article:section" content="javascript" />
-<meta property="article:tag" content="Javascript Core" />
+<meta property="article:tag" content="Javascript Array" />
 <meta property="fb:admins" content="177784346770196" />
 	<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://codingnconcepts.com/img/logo/js.png"/>
@@ -91,8 +91,8 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/logo/js.png"],
     "url" : "https:\/\/codingnconcepts.com\/javascript\/how-to-clone-array-in-javascript\/",
-    "wordCount" : "511",
-    "genre" : ["Javascript Core"],
+    "wordCount" : "574",
+    "genre" : ["Javascript Array"],
     "keywords" :  null 
 }
 </script>
@@ -213,9 +213,17 @@ if (!doNotTrack) {
 					</li>
 				
 					<li class="menu__item">
-					<a class="menu__link" href="/tags/javascript-logging/">
+					<a class="menu__link" href="/tags/javascript-array/">
 						
-						<span class="menu__text">JS Logging</span>
+						<span class="menu__text">JS Array</span>
+						
+					</a>
+					</li>
+				
+					<li class="menu__item">
+					<a class="menu__link" href="/tags/javascript-console/">
+						
+						<span class="menu__text">JS Console</span>
 						
 					</a>
 					</li>
@@ -364,7 +372,30 @@ if (!doNotTrack) {
 </div>
 <div class="content post__content clearfix">
 			<p>In this tutorial, we&rsquo;ll learn how to clone an Array in JavaScript and also learn the difference between <em>shallow copy</em> and <em>deep copy</em> of an Array.</p>
-<h2 id="shallow-copy">Shallow Copy</h2>
+<p>Here is a quick view of different ways to clone an array:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">/** Shallow Copy */</span>
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fruits</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;banana&#39;</span>, <span style="color:#e6db74">&#39;mango&#39;</span>];
+
+<span style="color:#75715e">// 1. ES6 Spread Operator
+</span><span style="color:#75715e"></span>[...<span style="color:#a6e22e">fruits</span>];
+
+<span style="color:#75715e">// 2. Array.slice
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">fruits</span>.<span style="color:#a6e22e">slice</span>();
+
+<span style="color:#75715e">// 3. Array.from
+</span><span style="color:#75715e"></span>Array.<span style="color:#a6e22e">from</span>(<span style="color:#a6e22e">fruits</span>);
+
+<span style="color:#75715e">/** Deep Copy */</span>
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">grocery</span> <span style="color:#f92672">=</span> [[<span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;banana&#39;</span>, <span style="color:#e6db74">&#39;mango&#39;</span>], 
+        [<span style="color:#e6db74">&#39;onion&#39;</span>, <span style="color:#e6db74">&#39;potato&#39;</span>, <span style="color:#e6db74">&#39;tomato&#39;</span>], 
+        [<span style="color:#e6db74">&#39;milk&#39;</span>, <span style="color:#e6db74">&#39;juice&#39;</span>]];
+
+<span style="color:#75715e">// 1. JSON.stringify &amp; JSON.parse
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">grocery</span>));
+
+<span style="color:#75715e">// 2. map
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">grocery</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">element</span> =&gt; [...<span style="color:#a6e22e">element</span>]);
+</code></pre></div><h2 id="shallow-copy">Shallow Copy</h2>
 <p>We&rsquo;ll look at various methods to create a shallow copy of an Array in JavaScript. Shallow copy means the first level is copied and deeper levels are <strong>referenced</strong>.</p>
 <p>Shallow copy is good enough when you are working with <strong>one-dimensional array</strong>. Let&rsquo;s look at different ways to clone an array using shallow copy:</p>
 <h3 id="es6-spread-operator">ES6 Spread Operator</h3>
@@ -444,7 +475,7 @@ if (!doNotTrack) {
 <div class="post__tags tags clearfix">
 	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link btn" href="/tags/javascript-core/" rel="tag">Javascript Core</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/javascript-array/" rel="tag">Javascript Array</a></li>
 	</ul>
 </div>
 		</footer>
@@ -517,14 +548,6 @@ if (!doNotTrack) {
         
         <li><a href="/javascript/how-to-sort-array-in-javascript/">How to Sort an Array in JavaScript</a></li>
         
-        <li><a href="/javascript/comparison-operators-in-javascript/">Difference in == and === comparison operators in JavaScript</a></li>
-        
-        <li><a href="/javascript/this-keyword-in-javascript/">Understand all about this keyword in JavaScript</a></li>
-        
-        <li><a href="/javascript/call-vs-bind-vs-apply/">Understand call, bind and apply methods in JavaScript</a></li>
-        
-        <li><a href="/javascript/lexical-scope-closures-and-currying/">Lexical Scope, Closures and Currying in JavaScript</a></li>
-        
     </ul>
 </div>
 
@@ -543,6 +566,9 @@ if (!doNotTrack) {
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--prev">
 		<a class="post-nav__link" href="/javascript/how-to-sort-array-in-javascript/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">How to Sort an Array in JavaScript</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next">
+		<a class="post-nav__link" href="/javascript/how-to-remove-array-duplicates-in-javascript/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">How to Remove Duplicates from Array in JavaScript</p></a>
 	</div>
 </nav>
 

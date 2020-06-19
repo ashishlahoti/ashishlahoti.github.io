@@ -6,10 +6,19 @@
     <description>Recent content on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://codingnconcepts.com/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to Remove Duplicates from Array in JavaScript</title>
+      <link>https://codingnconcepts.com/javascript/how-to-remove-array-duplicates-in-javascript/</link>
+      <pubDate>Fri, 19 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/javascript/how-to-remove-array-duplicates-in-javascript/</guid>
+      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn how to remove duplicates from an Array in JavaScript and return only unique values.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>How to Clone an Array in JavaScript</title>
