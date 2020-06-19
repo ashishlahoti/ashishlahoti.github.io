@@ -91,7 +91,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/logo/js.png"],
     "url" : "https:\/\/codingnconcepts.com\/javascript\/how-to-remove-array-duplicates-in-javascript\/",
-    "wordCount" : "524",
+    "wordCount" : "677",
     "genre" : ["Javascript Array"],
     "keywords" :  null 
 }
@@ -356,6 +356,7 @@ if (!doNotTrack) {
     <li><a href="#use-filter">Use filter</a></li>
     <li><a href="#use-foreach">Use forEach</a></li>
     <li><a href="#use-reduce">Use reduce</a></li>
+    <li><a href="#performance">Performance</a></li>
   </ul>
 </nav>
 	</div>
@@ -438,7 +439,40 @@ if (!doNotTrack) {
 
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">uniqueFruits</span>);
 <span style="color:#75715e">// ▶ Set(3) {&#34;apple&#34;, &#34;orange&#34;, &#34;banana&#34;}
-</span></code></pre></div>
+</span></code></pre></div><h2 id="performance">Performance</h2>
+<p>We have created an array with 1 million random numbers (ranging from 1 to 1000). Let&rsquo;s check the performance of each method.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Array:
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> [];
+<span style="color:#66d9ef">for</span> ( <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1000000</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> ) {
+    <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">push</span>(Math.<span style="color:#a6e22e">floor</span>((Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>));
+}
+
+<span style="color:#75715e">// 1. ES6 Set
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">time</span>(<span style="color:#e6db74">&#34;set&#34;</span>);
+[...<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Set</span>(<span style="color:#a6e22e">numbers</span>)];
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">timeEnd</span>(<span style="color:#e6db74">&#34;set&#34;</span>);
+
+<span style="color:#75715e">// 2. filter
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">time</span>(<span style="color:#e6db74">&#34;filter&#34;</span>);
+<span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">filter</span>((<span style="color:#a6e22e">item</span>, <span style="color:#a6e22e">index</span>) =&gt; <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#a6e22e">item</span>) <span style="color:#f92672">==</span> <span style="color:#a6e22e">index</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">timeEnd</span>(<span style="color:#e6db74">&#34;filter&#34;</span>);
+
+<span style="color:#75715e">// 3. forEach
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">time</span>(<span style="color:#e6db74">&#34;forEach&#34;</span>);
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">uniqueNumbers</span> <span style="color:#f92672">=</span> [];
+<span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">item</span> =&gt; <span style="color:#f92672">!</span><span style="color:#a6e22e">uniqueNumbers</span>.<span style="color:#a6e22e">includes</span>(<span style="color:#a6e22e">item</span>) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">uniqueNumbers</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">item</span>));
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">timeEnd</span>(<span style="color:#e6db74">&#34;forEach&#34;</span>);
+
+<span style="color:#75715e">// 4. reduce
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">time</span>(<span style="color:#e6db74">&#34;reduce&#34;</span>);
+<span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">newarray</span>, <span style="color:#a6e22e">item</span>) =&gt; <span style="color:#a6e22e">newarray</span>.<span style="color:#a6e22e">includes</span>(<span style="color:#a6e22e">item</span>) <span style="color:#f92672">?</span> <span style="color:#a6e22e">newarray</span> <span style="color:#f92672">:</span> [...<span style="color:#a6e22e">newarray</span>, <span style="color:#a6e22e">item</span>], []);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">timeEnd</span>(<span style="color:#e6db74">&#34;reduce&#34;</span>);
+</code></pre></div><p>Here is the result when i ran the above code on MacBook Pro&rsquo;s Google Chrome v83.0.4103.106 (64-bit):</p>
+<pre><code>set:      23.051025390625ms
+filter: 1004.9609375ms
+forEach: 471.6630859375ms
+reduce:  472.902099609375ms
+</code></pre><p>We see that ES6 <code>Set</code> is clear winner followed by <code>forEach</code> loop. It is highly recommended to use ES6 <code>Set</code> to remove duplicates from an array because of its shorthand syntax and performance.</p>
 		</div>
 		<footer class="post__footer">
 			
