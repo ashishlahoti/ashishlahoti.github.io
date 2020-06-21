@@ -6,15 +6,24 @@
     <description>Recent content in Tags on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://codingnconcepts.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>ES6</title>
+      <link>https://codingnconcepts.com/tags/es6/</link>
+      <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/es6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Javascript Array</title>
       <link>https://codingnconcepts.com/tags/javascript-array/</link>
-      <pubDate>Fri, 19 Jun 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/javascript-array/</guid>
       <description></description>
