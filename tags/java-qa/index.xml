@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java Q&amp;A on Coding N Concepts</title>
+    <link>https://codingnconcepts.com/tags/java-qa/</link>
+    <description>Recent content in Java Q&amp;A on Coding N Concepts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 Jun 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://codingnconcepts.com/tags/java-qa/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Top Java 8 Interview Questions</title>
+      <link>https://codingnconcepts.com/top-java-8-interview-questions/</link>
+      <pubDate>Wed, 17 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/top-java-8-interview-questions/</guid>
+      <description>&lt;p&gt;These Java interview questions are based on my personal interview experience. Topics are in the order of recent interview trends. Keep following this post link for regular updates.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Top Java Interview Questions</title>
+      <link>https://codingnconcepts.com/top-java-interview-questions/</link>
+      <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/top-java-interview-questions/</guid>
+      <description>&lt;p&gt;Comprehensive List of Java Interview Questions based on my personal interview experience over the last few years. Sequence of Questions in each section are in the order of recent interview trends. Keep following this post link for regular updates.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
