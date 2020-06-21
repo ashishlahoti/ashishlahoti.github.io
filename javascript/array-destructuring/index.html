@@ -6,9 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>How to use Array Destructuring in JavaScript - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Understand How to use Array Destructuring in JavaScript">
+	<meta name="description" content="Understand How to use Array Destructuring in JavaScript ES6 with examples">
 	<meta property="og:title" content="How to use Array Destructuring in JavaScript" />
-<meta property="og:description" content="Understand How to use Array Destructuring in JavaScript" />
+<meta property="og:description" content="Understand How to use Array Destructuring in JavaScript ES6 with examples" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/javascript/array-destructuring/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/js.png" />
@@ -26,7 +26,7 @@
 <meta name="twitter:image" content="https://codingnconcepts.com/img/logo/js.png"/>
 
 <meta name="twitter:title" content="How to use Array Destructuring in JavaScript"/>
-<meta name="twitter:description" content="Understand How to use Array Destructuring in JavaScript"/>
+<meta name="twitter:description" content="Understand How to use Array Destructuring in JavaScript ES6 with examples"/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -55,7 +55,7 @@ if (!doNotTrack) {
     "name": "How to use Array Destructuring in JavaScript",
     "headline": "How to use Array Destructuring in JavaScript",
     "alternativeHeadline": "",
-    "description": "Understand How to use Array Destructuring in JavaScript",
+    "description": "Understand How to use Array Destructuring in JavaScript ES6 with examples",
     "inLanguage": "en-us",
 	"isFamilyFriendly": "true",
     "mainEntityOfPage": {
@@ -92,7 +92,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/logo/js.png"],
     "url" : "https:\/\/codingnconcepts.com\/javascript\/array-destructuring\/",
-    "wordCount" : "788",
+    "wordCount" : "916",
     "genre" : ["ES6","Javascript Array"],
     "keywords" :  null 
 }
@@ -361,9 +361,15 @@ if (!doNotTrack) {
     <li><a href="#rest-and-spread-operators">Rest and Spread Operators</a></li>
     <li><a href="#destructuring-return-statement">Destructuring Return Statement</a></li>
     <li><a href="#destructuring-function-arguments">Destructuring Function Arguments</a></li>
-    <li><a href="#destructuring-inside-a-loop">Destructuring inside a Loop</a></li>
-    <li><a href="#destructuring-in-object-iteration">Destructuring in Object iteration</a></li>
-    <li><a href="#swapping-values">Swapping values</a></li>
+    <li><a href="#practical-use-cases">Practical Use Cases</a>
+      <ul>
+        <li><a href="#inside-for-of-loop">Inside <code>for-of</code> loop</a></li>
+        <li><a href="#inside-foreach-function">Inside <code>forEach</code> function</a></li>
+        <li><a href="#inside-map-iteration">Inside Map iteration</a></li>
+        <li><a href="#swapping-values">Swapping values</a></li>
+        <li><a href="#regular-expression">Regular Expression</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 	</div>
@@ -375,7 +381,7 @@ if (!doNotTrack) {
 </blockquote>
 <h2 id="basic-array-destructuring">Basic Array Destructuring</h2>
 <p>We can extract multiple elements from an Array and assign them to variables using <em>Array Destructuring</em> in a single statement.</p>
-<p><em>Array Destructuring</em> is quite useful and shorthand syntax as compare to our traditional way of assigning elements to the variables one by one.</p>
+<p><em>Array Destructuring</em> shorthand syntax is quite handy as compare to our traditional way of assigning elements to the variables one by one.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>];
 
 <span style="color:#75715e">//const one   = numbers[0];         //Traditional Way
@@ -387,7 +393,7 @@ if (!doNotTrack) {
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">one</span>);   <span style="color:#75715e">//1
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">two</span>);   <span style="color:#75715e">//2
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">three</span>); <span style="color:#75715e">//3
-</span></code></pre></div><p>We can also declare variables before assigned:</p>
+</span></code></pre></div><p>We can also declare the variables before assigned:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">one</span>, <span style="color:#a6e22e">two</span>, <span style="color:#a6e22e">three</span>
 <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>];
 [<span style="color:#a6e22e">one</span>, <span style="color:#a6e22e">two</span>, <span style="color:#a6e22e">three</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>;
@@ -440,7 +446,7 @@ if (!doNotTrack) {
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">others</span>); <span style="color:#75715e">//[4, 5, 6, 7, 8, 9]
 </span></code></pre></div><p>Note that <em>rest operator</em> can always be used at last, otherwise it throws error.</p>
 <h2 id="rest-and-spread-operators">Rest and Spread Operators</h2>
-<p>Often we confuse with Rest and Spread operator as both use the same <code>...</code> syntax. Both operator can be used together in the <em>Array Destructuring</em> statement:</p>
+<p>Often we get confused with Rest and Spread operator as both use the same <code>...</code> syntax. Rest and Spread operators can be used together in the <em>Array Destructuring</em> statement:</p>
 <ul>
 <li><strong>Rest Operator:</strong> Used at the <strong>left</strong> hand side of statement to <strong>get the rest of the elements</strong> from an array</li>
 <li><strong>Spread Operator:</strong> Used at the <strong>right</strong> hand side of statement to <strong>copy elements</strong> to an array</li>
@@ -463,7 +469,7 @@ if (!doNotTrack) {
     <span style="color:#66d9ef">return</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>];
 } 
 
-<span style="color:#66d9ef">var</span>[<span style="color:#a6e22e">one</span>, ...<span style="color:#a6e22e">others</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">getNumberArray</span>();
+<span style="color:#66d9ef">var</span> [<span style="color:#a6e22e">one</span>, ...<span style="color:#a6e22e">others</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">getNumberArray</span>();
 
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">one</span>);    <span style="color:#75715e">//1
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">others</span>); <span style="color:#75715e">//[2, 3, 4, 5]
@@ -477,7 +483,8 @@ if (!doNotTrack) {
 </span><span style="color:#75715e"></span>}
 
 <span style="color:#a6e22e">getNumberArray</span>(<span style="color:#a6e22e">numbers</span>);
-</code></pre></div><h2 id="destructuring-inside-a-loop">Destructuring inside a Loop</h2>
+</code></pre></div><h2 id="practical-use-cases">Practical Use Cases</h2>
+<h3 id="inside-for-of-loop">Inside <code>for-of</code> loop</h3>
 <p>We can use <em>Array Destructuring</em> inside <code>for-of</code> loop in this way:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> [ [ <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span> ], [ <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span> ], [ <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span> ] ];
 <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> [ <span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">c</span> ] <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">numbers</span>) {
@@ -486,12 +493,31 @@ if (!doNotTrack) {
 <span style="color:#75715e">// 1 2 3
 </span><span style="color:#75715e">// 4 5 6
 </span><span style="color:#75715e">// 7 8 9
-</span></code></pre></div><h2 id="destructuring-in-object-iteration">Destructuring in Object iteration</h2>
+</span></code></pre></div><h3 id="inside-foreach-function">Inside <code>forEach</code> function</h3>
 <p>We can iterate through Objects easily using <em>Array Destructuring</em>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">foo</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;bar&#39;</span>, <span style="color:#a6e22e">baz</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">42</span> };
 Object.<span style="color:#a6e22e">entries</span>(<span style="color:#a6e22e">obj</span>).<span style="color:#a6e22e">forEach</span>(([<span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">value</span>]) =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">key</span><span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">value</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>)); <span style="color:#75715e">// &#34;foo: bar&#34;, &#34;baz: 42&#34;
 </span></code></pre></div><p>We see that <code>Object.entries</code> returns an Array with key-value pairs which is extracted using <code>[key, value]</code> destructuring.</p>
-<h2 id="swapping-values">Swapping values</h2>
+<h3 id="inside-map-iteration">Inside Map iteration</h3>
+<p>We can also destruct the key-value pairs of a Map using <code>[key, value]</code> destructuring.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">map</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Map</span>();
+<span style="color:#a6e22e">map</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;one&#34;</span>, <span style="color:#ae81ff">1</span>);
+<span style="color:#a6e22e">map</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;two&#34;</span>, <span style="color:#ae81ff">2</span>);
+
+<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> [<span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">value</span>] <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">map</span>) {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">key</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; is &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">value</span>);
+}
+<span style="color:#75715e">// one is 1
+</span><span style="color:#75715e">// two is 2
+</span></code></pre></div><p>Iterate over only the keys:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> [<span style="color:#a6e22e">key</span>] <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">map</span>) {
+  <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>Or iterate over only the values:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> [,<span style="color:#a6e22e">value</span>] <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">map</span>) {
+  <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>}
+</code></pre></div><h3 id="swapping-values">Swapping values</h3>
 <p>This is quite interesting to swap values using <em>Array Destructuring</em>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">one</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">two</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
@@ -500,6 +526,11 @@ Object.<span style="color:#a6e22e">entries</span>(<span style="color:#a6e22e">ob
 
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">one</span>);  <span style="color:#75715e">//2
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">two</span>);  <span style="color:#75715e">//1
+</span></code></pre></div><h3 id="regular-expression">Regular Expression</h3>
+<p>Regular expressions functions such as <code>match</code> return an array of matched items, which can be mapped to variables using <em>Array Destructuring</em>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">c</span>, <span style="color:#a6e22e">d</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;one two three&#39;</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/\w+/g</span>);
+
+<span style="color:#75715e">// a = &#39;one&#39;, b = &#39;two&#39;, c = &#39;three&#39;, d = undefined
 </span></code></pre></div>
 		</div>
 		<footer class="post__footer">
@@ -554,7 +585,7 @@ Object.<span style="color:#a6e22e">entries</span>(<span style="color:#a6e22e">ob
       
       
       <li>
-        <a href="whatsapp://send?text=How%20to%20use%20Array%20Destructuring%20in%20JavaScript%2c%20by%20Coding%20N%20Concepts%0aUnderstand%20How%20to%20use%20Array%20Destructuring%20in%20JavaScript%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2farray-destructuring%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=How%20to%20use%20Array%20Destructuring%20in%20JavaScript%2c%20by%20Coding%20N%20Concepts%0aUnderstand%20How%20to%20use%20Array%20Destructuring%20in%20JavaScript%20ES6%20with%20examples%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2farray-destructuring%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>Email</p>
         </a>
@@ -564,7 +595,7 @@ Object.<span style="color:#a6e22e">entries</span>(<span style="color:#a6e22e">ob
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - How%20to%20use%20Array%20Destructuring%20in%20JavaScript.&amp;body=How%20to%20use%20Array%20Destructuring%20in%20JavaScript%2c%20by%20Coding%20N%20Concepts%0aUnderstand%20How%20to%20use%20Array%20Destructuring%20in%20JavaScript%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2farray-destructuring%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - How%20to%20use%20Array%20Destructuring%20in%20JavaScript.&amp;body=How%20to%20use%20Array%20Destructuring%20in%20JavaScript%2c%20by%20Coding%20N%20Concepts%0aUnderstand%20How%20to%20use%20Array%20Destructuring%20in%20JavaScript%20ES6%20with%20examples%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2farray-destructuring%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>
@@ -578,6 +609,8 @@ Object.<span style="color:#a6e22e">entries</span>(<span style="color:#a6e22e">ob
 <div class="related_post_section">
     <h2 class = "related_post_title">See Also</h2>
     <ul class = "related_post">
+        
+        <li><a href="/javascript/object-destructuring/">How to use Object Destructuring in JavaScript</a></li>
         
         <li><a href="/javascript/how-to-remove-array-duplicates-in-javascript/">How to Remove Duplicates from Array in JavaScript</a></li>
         
@@ -602,7 +635,7 @@ Object.<span style="color:#a6e22e">entries</span>(<span style="color:#a6e22e">ob
 
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="/javascript/how-to-capitalize-first-letter-of-string-in-javascript/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">How to Capitalize First Letter of String in JavaScript</p></a>
+		<a class="post-nav__link" href="/javascript/object-destructuring/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">How to use Object Destructuring in JavaScript</p></a>
 	</div>
 </nav>
 

@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>How to use Object Destructuring in JavaScript</title>
+      <link>https://codingnconcepts.com/javascript/object-destructuring/</link>
+      <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/javascript/object-destructuring/</guid>
+      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn the usage of &lt;em&gt;Object Destructuring&lt;/em&gt; in JavaScript ES6 with examples.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>How to Capitalize First Letter of String in JavaScript</title>
       <link>https://codingnconcepts.com/javascript/how-to-capitalize-first-letter-of-string-in-javascript/</link>
       <pubDate>Fri, 19 Jun 2020 00:00:00 +0000</pubDate>
