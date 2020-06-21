@@ -477,7 +477,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	color: #e22d30;
 }
 
-.menu__list {
+.menu__list, .submenu__list {
 	list-style: none;
 	background: #2a2a2a;
 }
@@ -503,7 +503,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	text-transform: uppercase;
 }
 
-.menu__list .menu__item .menu__list {
+.menu__list .menu__item .submenu__list {
     background: #2a2a2a;
     visibility: hidden;
   	opacity: 0;
@@ -511,28 +511,21 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	max-width: 15rem;
 	transition: all 0.5s ease;
 	border-top: 5px solid #e22d30;	  
-	display: none;
-	  
+	display: none;	  
 }
 
-.menu__list .menu__item.menu__dropdown > a::after {
-	content: '';
-	border-left: 5px solid transparent;
-	border-right: 5px solid transparent;
-	border-top: 5px solid #FFA500;
-	transform: translateY(-50%);
-	display: inline-block;
-  }
+.menu__item.menu__dropdown input[type="checkbox"] {
+	display: none;
+}
 
-.menu__list .menu__item:hover > .menu__list,
-.menu__list .menu__item:focus-within > .menu__list,
-.menu__list .menu__item .menu__list:hover,
-.menu__list .menu__item .menu__list:focus {
+.menu__list .menu__item:hover > .submenu__list,
+.menu__list .menu__item:focus-within > .submenu__list,
+.menu__list .menu__item .submenu__list:hover,
+.menu__list .menu__item .submenu__list:focus {
    visibility: visible;
    opacity: 1;
    display: block;
 }
-
 
 .menu__link:hover {
 	color: #fff;
@@ -1403,6 +1396,26 @@ ul.share-icons li > * .label {
 	.sidebar {
 		margin-top: 20px;
 	}
+
+	.menu__item.menu__dropdown .drop-icon {
+		position: absolute;
+		right: 1rem;
+  		top: auto;
+	}
+
+	.menu__item.menu__dropdown input[type="checkbox"] + .submenu__list {
+		display: none;
+	}
+
+	.menu__item.menu__dropdown input[type="checkbox"]:checked + .submenu__list {
+		border: none;
+		padding-left: 20px;
+		visibility: visible;
+		opacity: 1;
+		display: block;
+		position: relative;
+		max-width: 100%;
+	}
 }
 
 @media screen and (max-width: 620px) {
@@ -1470,6 +1483,26 @@ ul.share-icons li > * .label {
 		display: block;
 		font-size: 11px;
 		font-size: .6875rem;
+	}
+
+	.menu__item.menu__dropdown .drop-icon {
+		position: absolute;
+		right: 1rem;
+  		top: auto;
+	}
+
+	.menu__item.menu__dropdown input[type="checkbox"] + .submenu__list {
+		display: none;
+	}
+
+	.menu__item.menu__dropdown input[type="checkbox"]:checked + .submenu__list {
+		border: none;
+		padding-left: 20px;
+		visibility: visible;
+		opacity: 1;
+		display: block;
+		position: relative;
+		max-width: 100%;
 	}
 }
 

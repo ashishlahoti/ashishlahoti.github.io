@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Javascript ES6 on Coding N Concepts</title>
+    <title>JavaScript ES6 on Coding N Concepts</title>
     <link>https://codingnconcepts.com/tags/javascript-es6/</link>
-    <description>Recent content in Javascript ES6 on Coding N Concepts</description>
+    <description>Recent content in JavaScript ES6 on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://codingnconcepts.com/tags/javascript-es6/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to use Array Destructuring in JavaScript</title>
+      <link>https://codingnconcepts.com/javascript/array-destructuring/</link>
+      <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/javascript/array-destructuring/</guid>
+      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn the usage of &lt;em&gt;Array Destructuring&lt;/em&gt; in JavaScript ES6 with examples.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to use Object Destructuring in JavaScript</title>
+      <link>https://codingnconcepts.com/javascript/object-destructuring/</link>
+      <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/javascript/object-destructuring/</guid>
+      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn the usage of &lt;em&gt;Object Destructuring&lt;/em&gt; in JavaScript ES6 with examples.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Async/Await in JavaScript</title>

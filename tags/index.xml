@@ -12,20 +12,20 @@
     
     
     <item>
-      <title>ES6</title>
-      <link>https://codingnconcepts.com/tags/es6/</link>
-      <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/es6/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Javascript Array</title>
       <link>https://codingnconcepts.com/tags/javascript-array/</link>
       <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/javascript-array/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JavaScript ES6</title>
+      <link>https://codingnconcepts.com/tags/javascript-es6/</link>
+      <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/javascript-es6/</guid>
       <description></description>
     </item>
     
@@ -206,15 +206,6 @@
       <pubDate>Sat, 11 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/spring-boot-kafka/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Javascript ES6</title>
-      <link>https://codingnconcepts.com/tags/javascript-es6/</link>
-      <pubDate>Sun, 05 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/javascript-es6/</guid>
       <description></description>
     </item>
     
