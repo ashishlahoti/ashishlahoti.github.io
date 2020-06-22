@@ -92,7 +92,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/logo/aws.png"],
     "url" : "https:\/\/codingnconcepts.com\/aws\/aws-deepracer\/",
-    "wordCount" : "1393",
+    "wordCount" : "1591",
     "genre" : ["AWS","Popular Posts"],
     "keywords" :  null 
 }
@@ -425,24 +425,28 @@ if (!doNotTrack) {
 	</div>
 </div>
 <div class="content post__content clearfix">
-			<p>This step-by-step guide is helpful for beginners trying their hands on AWS DeepRacer and creating their first model.</p>
+			<p>This step-by-step guide is helpful for beginners trying their hands on machine learning and creating their first AWS DeepRacer model.</p>
 <h2 id="prerequisite">Prerequisite</h2>
-<p>You should have a valid AWS account. If haven&rsquo;t registered to AWS already, follow this <a href="https://codingnconcepts.com/aws/how-to-create-aws-account/">Step-by-step guide to create an AWS Account</a></p>
+<p>You should have a valid AWS account. If you haven&rsquo;t registered to AWS already, follow this <a href="https://codingnconcepts.com/aws/how-to-create-aws-account/">Step-by-step guide to create an AWS Account</a></p>
 <h2 id="what-is-aws-deepracer">What is AWS DeepRacer?</h2>
-<p>AWS DeepRacer is a car designed by AWS which is having sensors and cameras to make it fully autonomous. You can use this car for virtual training as well as on physical DeepRacer tracks.</p>
-<p>You train your car using <strong>reinforcement learning</strong> and make it ready to run on the DeepRacer racing tracks.</p>
+<p>AWS DeepRacer is a car designed by AWS which is having sensors and cameras to make it fully autonomous. You can use this car for virtual simulation as well as physical racing on DeepRacer tracks.</p>
+<p>In AWS DeepRacer, you choose your car, create <strong>reinforcement learning</strong> model, train and evaluate your car using this model on DeepRacer racing tracks, and finally you compete with others.</p>
 <h5 id="reinforcement-learning">Reinforcement learning</h5>
-<p>Reinforcement learning is one of the module under machine learning where all you need to do is write a <strong>reward function</strong>. Some of the key terms used:</p>
+<blockquote>
+<p><strong>Reinforcement learning (RL)</strong> is an area of machine learning concerned with how an <strong>agents</strong> should take actions in an <strong>environment</strong> in order to maximize the notion of cumulative <strong>reward</strong>. Reinforcement learning is one of three basic machine learning paradigms, alongside supervised learning and unsupervised learning.</p>
+</blockquote>
+<p>Let&rsquo;s understand the reinforcement learning key terms from AWS DeepRacer perspective:</p>
 <ul>
 <li>An <strong>agent</strong> is your Car</li>
 <li>An <strong>environment</strong> is the Racing Track of your Car</li>
-<li>A <strong>model</strong> is created when you select a car, racing track and write your reward function</li>
+<li>A <strong>model</strong> is created when you choose a car, racing track and write your reward function.</li>
 <li>The <strong>action space</strong> is number of actions a car can take in trial and error on racing track.</li>
 <li>The <strong>hyper parameters</strong> are reinforcement training and algorithm specific parameters.</li>
+<li>A <strong>reward function</strong> is a function written in python which returns reward in floating point number.</li>
 </ul>
 <h5 id="reward-function">Reward function</h5>
-<p>Reward function is something where you give high reward for good behavior and lower reward for bad behavior. Car learn from <strong>trial and error</strong> method and try to accumulate more reward points by behaving good.</p>
-<p>Here is sample reward function written in python:</p>
+<p>Reward function is something where you give high reward for good behavior and lower reward for bad behavior.</p>
+<p>Here is sample reward function written in python which return higher reward points for car to be on track:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reward_function</span>(params):
 
     <span style="color:#75715e"># Read input parameters</span>
@@ -454,9 +458,10 @@ if (!doNotTrack) {
         reward <span style="color:#f92672">=</span> <span style="color:#ae81ff">1e-3</span>  <span style="color:#75715e"># lower reward for car to go outside track</span>
   
     <span style="color:#66d9ef">return</span> float(reward)
-</code></pre></div><h2 id="1-getting-started">1. Getting Started</h2>
+</code></pre></div><p>When you train your car, it attempts to run in different directions on the track and try to accumulate reward points. In each subsequent attempts, it learns from its previous attempts and try to accumulate more reward points.</p>
+<h2 id="1-getting-started">1. Getting Started</h2>
 <p>① Go to <code>AWS Services</code> ➞ <code>AWS DeepRacer</code> ➞ <code>Reinforcement Learning</code> ➞ <code>Get Started</code></p>
-<p>② If it is your first time, you will see some errors. Choose <span style="background-color:#ec7211;border: 1px solid;border-radius: 3px;font-weight: 500;border-color:#e76d0c #e15500 #e15500;text-shadow:rgba(0,0,0,.05) 0 1px 0;background-image:linear-gradient(180deg,#f67c1b 0,#e15500);box-shadow:inset 0 1px 0 hsla(0,0%,100%,.2);color:#ffff;padding:0px 5px;font-weight:bold;">Reset Resources</span> and everything will be fine.</p>
+<p>② If it is your first time, you will see some errors. Don&rsquo;t worry. Choose <span style="background-color:#ec7211;border: 1px solid;border-radius: 3px;font-weight: 500;border-color:#e76d0c #e15500 #e15500;text-shadow:rgba(0,0,0,.05) 0 1px 0;background-image:linear-gradient(180deg,#f67c1b 0,#e15500);box-shadow:inset 0 1px 0 hsla(0,0%,100%,.2);color:#ffff;padding:0px 5px;font-weight:bold;">Reset Resources</span> and everything will be fine.</p>
 <figure class="center">
     <img src="/img/aws/aws-deepracer-get-started.png"
          alt="AWS DeepRacer Get Started"/> <figcaption>
@@ -561,7 +566,7 @@ if (!doNotTrack) {
 <p>⑧ Enter Stop Condition ➞ Maximum time is 60 minutes.</p>
 <p><strong>Note:</strong> Congratulations, You&rsquo;ve configured your model. Next step is to create, train and evaluate your model. Please note that you have not charged anything till this point. <strong>Subsequent steps will charge you money based on AWS resource utilization.</strong></p>
 <p>⑨ Once you choose <span style="background-color:#ec7211;border: 1px solid;border-radius: 3px;font-weight: 500;border-color:#e76d0c #e15500 #e15500;text-shadow:rgba(0,0,0,.05) 0 1px 0;background-image:linear-gradient(180deg,#f67c1b 0,#e15500);box-shadow:inset 0 1px 0 hsla(0,0%,100%,.2);color:#ffff;padding:0px 5px;font-weight:bold;">Create Model</span>. AWS resources will be provisioned to train your model for 60 minutes.</p>
-<p>It is recommended to watch the reward graph and simulator video stream while your car is training. This was thrilling experience for me.</p>
+<p>It is recommended to watch the reward graph and simulator video stream while your car is training. This was a thrilling experience for me to watch the live training of car using my first ever machine learning model.</p>
 <figure class="center">
     <img src="/img/aws/aws-deepracer-model-training.png"
          alt="AWS DeepRacer Reward Graph and Simulator Video Stream"/> <figcaption>
@@ -570,32 +575,34 @@ if (!doNotTrack) {
 </figure>
 
 <h5 id="reward-graph">Reward Graph</h5>
-<p>These are the basic things you should look in your reward graph.</p>
+<p>You should know how to read the reward graph in order to understand your model behavior:</p>
 <ul>
-<li><strong>Average Reward</strong> is reward points your car is accumulating in each trial and error attempts. Average reward line should go up linearly in the perfect scenario but there is nothing perfect when your car is learning so this is what you should look:
+<li><strong>Average Reward</strong> is reward points your car is accumulating in each attempt. Average reward line should go up linearly in the perfect scenario but this is rare. This is what you should look:
 <ul>
 <li><em>Average Reward</em> line should go up in the longer time period. That means your car is able to learn from its past failures and able to accumulate more reward points in subsequent attempts.</li>
-<li>If <em>Average Reward</em> line go down in shorter period then do not worry. That means your car is trying to find other alternative routes which are not good and give less reward points. Do not worry, your car will learn from these failures in a longer run.</li>
+<li>If <em>Average Reward</em> line go down in shorter period then do not worry. That means your car is trying to attempt those directions which return less reward points. Your car would learn from those attempts and won&rsquo;t try them again in subsequent attempts.</li>
 </ul>
 </li>
-<li>There are two phases when your car is training, you will notice this if you are watching simulator video:
+<li>There are two phases when your car is training, you will notice them if you are watching simulator video:
 <ul>
-<li><strong>Training Phase</strong>: Your car train on different part of racing track by starting at random position</li>
-<li><strong>Evaluating Phase</strong>: You car starts from the starting point of racing track and trying to complete the track.</li>
+<li><strong>Training Phase</strong>: Your car trains on different parts of the racing track by starting at random positions.</li>
+<li><strong>Evaluating Phase</strong>: You car starts from the starting point of racing track and try to complete the track.</li>
 </ul>
 </li>
-<li><strong>Average percentage completion (Training)</strong> is percentage of track completed in training phase. Since in training phase, main aim of car is to train at different parts of the track. Do not worry if it doesn&rsquo;t touch 100%. Generally it will remain below 50%.</li>
-<li><strong>Average percentage completion (Evaluating)</strong> is percentage of track completed in evaluating phase. Touching the 100% marker means your car is able to finish the racing track. It must touch the 100% at least once otherwise there are higher chances of your model failing in actual race.</li>
+<li><strong>Average percentage completion (Training)</strong> is percentage of track completed in training phase. Since in training phase, main aim of car is to train at different parts of the track, it doesn&rsquo;t complete the track most of the time and hence the graph line remain below and doesn&rsquo;t touch 100% marker.</li>
+<li><strong>Average percentage completion (Evaluating)</strong> is percentage of track completed in evaluating phase. Since in evaluating phase, main aim of car is to complete the track, it should touch the 100% marker and able to finish the racing track. If this graph line is not touching 100% marker then there are higher chances of your model failing in actual race.</li>
 </ul>
 <h2 id="personal-experience">Personal Experience</h2>
-<p>When i started making my first model, I thought that i will make my first model as master piece. I selected max out configuration i.e. max speed 4m/s and maximum action spaces and training period as 2 hours. It failed miserably and was not able to finish the track even in 2 hours training period.</p>
+<p>When i started making my first model, I thought that i will make my first model as master piece. I selected max out configuration i.e. max speed 4m/s and maximum action spaces and training period as 2 hours. It failed miserably. It was not able to even finish the track even in 2 hours training period and the reward graphs were all going in wrong direction.</p>
+<p>After that I used the model configuration and reward function as mentioned in the post and able to finish the track in 60 min training time. I, then increased the max-speed from 1m/s to 1.5m/s and able to finish the reInvent:2018 track in <strong>~19 seconds</strong>.</p>
 <p>I recommend:-</p>
 <ul>
 <li>Make you model with above example.</li>
 <li>Learn from the reward graph and simulator video.</li>
-<li>Take one step at a time say increase the max-speed from 1m/s to 2m/s and train again.</li>
+<li>Take one step at a time say increase the max-speed from 1m/s to 1.5m/s and train again.</li>
 <li>Continue to progress&hellip;</li>
 </ul>
+<p>Thanks for Reading. I am still in learning phase of AWS DeepRacer and keep updating this post based on my new findings.</p>
 		</div>
 		<footer class="post__footer">
 			
