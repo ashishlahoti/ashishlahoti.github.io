@@ -92,7 +92,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/logo/aws.png"],
     "url" : "https:\/\/codingnconcepts.com\/aws\/aws-deepracer\/",
-    "wordCount" : "1591",
+    "wordCount" : "1577",
     "genre" : ["AWS","Popular Posts"],
     "keywords" :  null 
 }
@@ -409,14 +409,14 @@ if (!doNotTrack) {
       </ul>
     </li>
     <li><a href="#1-getting-started">1. Getting Started</a></li>
-    <li><a href="#2-make-your-car">2. Make your Car</a>
+    <li><a href="#2-build-your-car">2. Build your Car</a>
       <ul>
-        <li></li>
+        <li><a href="#action-space">Action Space</a></li>
       </ul>
     </li>
     <li><a href="#3-create-model">3. Create Model</a>
       <ul>
-        <li></li>
+        <li><a href="#reward-graph">Reward Graph</a></li>
       </ul>
     </li>
     <li><a href="#personal-experience">Personal Experience</a></li>
@@ -475,17 +475,26 @@ if (!doNotTrack) {
 <li>Check AWS DeepRacer resource stack:
 <ul>
 <li><strong>Amazon SageMaker and AWS RoboMaker</strong> to train your model</li>
-<li><strong>Kinesis</strong> for streaming training data and show reward graph and streaming video of your car training and evaluating</li>
-<li><strong>S3 Bucket</strong> to store sample models and other models created by you including reward functions and configurations</li>
+<li><strong>Kinesis</strong> for streaming training data and simulation video, when your car is training and evaluating</li>
+<li><strong>S3 Bucket</strong> to store sample models and new models created by you</li>
 </ul>
 </li>
 </ol>
-<h2 id="2-make-your-car">2. Make your Car</h2>
-<p>You can either use the default Car <strong>The Original DeepRacer</strong> or build a new vehicle following these steps:</p>
+<h2 id="2-build-your-car">2. Build your Car</h2>
+<p>You can either use the default Car <strong>The Original DeepRacer</strong> or build a new vehicle by following these steps:</p>
 <p>① Go to <code>AWS DeepRacer</code> ➞ <code>Reinforcement Learning</code> ➞ <code>Your garage</code> and Choose <span style="background-color:#ec7211;border: 1px solid;border-radius: 3px;font-weight: 500;border-color:#e76d0c #e15500 #e15500;text-shadow:rgba(0,0,0,.05) 0 1px 0;background-image:linear-gradient(180deg,#f67c1b 0,#e15500);box-shadow:inset 0 1px 0 hsla(0,0%,100%,.2);color:#ffff;padding:0px 5px;font-weight:bold;">Build New Vehicle</span></p>
-<h5 id="camera--sensors">Camera &amp; Sensors</h5>
 <p>② Keep the default setting of Camera and Sensors. Choose <span style="background-color:#ec7211;border: 1px solid;border-radius: 3px;font-weight: 500;border-color:#e76d0c #e15500 #e15500;text-shadow:rgba(0,0,0,.05) 0 1px 0;background-image:linear-gradient(180deg,#f67c1b 0,#e15500);box-shadow:inset 0 1px 0 hsla(0,0%,100%,.2);color:#ffff;padding:0px 5px;font-weight:bold;">Next</span></p>
-<h5 id="action-space">Action Space</h5>
+<p>③ Keep the action space settings as below. Choose <span style="background-color:#ec7211;border: 1px solid;border-radius: 3px;font-weight: 500;border-color:#e76d0c #e15500 #e15500;text-shadow:rgba(0,0,0,.05) 0 1px 0;background-image:linear-gradient(180deg,#f67c1b 0,#e15500);box-shadow:inset 0 1px 0 hsla(0,0%,100%,.2);color:#ffff;padding:0px 5px;font-weight:bold;">Next</span>
+<figure class="center">
+    <img src="/img/aws/aws-deepracer-action-space.png"
+         alt="AWS DeepRacer Action Space for Beginners"/> <figcaption>
+            <p>AWS DeepRacer Action Space for Beginners</p>
+        </figcaption>
+</figure>
+</p>
+<p>④ Enter the name of your car and Choose color. Choose <span style="background-color:#ec7211;border: 1px solid;border-radius: 3px;font-weight: 500;border-color:#e76d0c #e15500 #e15500;text-shadow:rgba(0,0,0,.05) 0 1px 0;background-image:linear-gradient(180deg,#f67c1b 0,#e15500);box-shadow:inset 0 1px 0 hsla(0,0%,100%,.2);color:#ffff;padding:0px 5px;font-weight:bold;">Done</span></p>
+<p><br /></p>
+<h3 id="action-space">Action Space</h3>
 <p>Action space is number of actions a car can take in trial and error on racing track. It depends on following parameters:</p>
 <ol>
 <li><strong>Maximum Steering Angle:</strong> Max values are between 1 and 30.</li>
@@ -498,16 +507,6 @@ if (!doNotTrack) {
 </code></pre><p>Note that higher the action spaces, car has more options to choose from, more training time is required. The <strong>max speed</strong> of car also affect the training time.</p>
 <p>As a beginner, it is advised to use 3 steering angles and 3 speeds to start with (3*3) = 9 action spaces and also keep the maximum speed to 1m/s to train your car faster.</p>
 <p>Your primary focus while training your car should be on the accuracy and reliability of your model and not the speed or lap time of your Car. Once you have some insights, you can train your car by increasing the action spaces and max speed.</p>
-<p>③ Keep the action space settings as below. Choose <span style="background-color:#ec7211;border: 1px solid;border-radius: 3px;font-weight: 500;border-color:#e76d0c #e15500 #e15500;text-shadow:rgba(0,0,0,.05) 0 1px 0;background-image:linear-gradient(180deg,#f67c1b 0,#e15500);box-shadow:inset 0 1px 0 hsla(0,0%,100%,.2);color:#ffff;padding:0px 5px;font-weight:bold;">Next</span>
-<figure class="center">
-    <img src="/img/aws/aws-deepracer-action-space.png"
-         alt="AWS DeepRacer Action Space for Beginners"/> <figcaption>
-            <p>AWS DeepRacer Action Space for Beginners</p>
-        </figcaption>
-</figure>
-</p>
-<h5 id="name--color">Name &amp; Color</h5>
-<p>④ Enter the name of your car and Choose color. Choose <span style="background-color:#ec7211;border: 1px solid;border-radius: 3px;font-weight: 500;border-color:#e76d0c #e15500 #e15500;text-shadow:rgba(0,0,0,.05) 0 1px 0;background-image:linear-gradient(180deg,#f67c1b 0,#e15500);box-shadow:inset 0 1px 0 hsla(0,0%,100%,.2);color:#ffff;padding:0px 5px;font-weight:bold;">Done</span></p>
 <h2 id="3-create-model">3. Create Model</h2>
 <p>There are five out of the box models available to use in AWS DeepRacer:</p>
 <table>
@@ -566,6 +565,8 @@ if (!doNotTrack) {
 <p>⑧ Enter Stop Condition ➞ Maximum time is 60 minutes.</p>
 <p><strong>Note:</strong> Congratulations, You&rsquo;ve configured your model. Next step is to create, train and evaluate your model. Please note that you have not charged anything till this point. <strong>Subsequent steps will charge you money based on AWS resource utilization.</strong></p>
 <p>⑨ Once you choose <span style="background-color:#ec7211;border: 1px solid;border-radius: 3px;font-weight: 500;border-color:#e76d0c #e15500 #e15500;text-shadow:rgba(0,0,0,.05) 0 1px 0;background-image:linear-gradient(180deg,#f67c1b 0,#e15500);box-shadow:inset 0 1px 0 hsla(0,0%,100%,.2);color:#ffff;padding:0px 5px;font-weight:bold;">Create Model</span>. AWS resources will be provisioned to train your model for 60 minutes.</p>
+<p><br /></p>
+<h3 id="reward-graph">Reward Graph</h3>
 <p>It is recommended to watch the reward graph and simulator video stream while your car is training. This was a thrilling experience for me to watch the live training of car using my first ever machine learning model.</p>
 <figure class="center">
     <img src="/img/aws/aws-deepracer-model-training.png"
@@ -574,7 +575,6 @@ if (!doNotTrack) {
         </figcaption>
 </figure>
 
-<h5 id="reward-graph">Reward Graph</h5>
 <p>You should know how to read the reward graph in order to understand your model behavior:</p>
 <ul>
 <li><strong>Average Reward</strong> is reward points your car is accumulating in each attempt. Average reward line should go up linearly in the perfect scenario but this is rare. This is what you should look:
@@ -593,7 +593,7 @@ if (!doNotTrack) {
 <li><strong>Average percentage completion (Evaluating)</strong> is percentage of track completed in evaluating phase. Since in evaluating phase, main aim of car is to complete the track, it should touch the 100% marker and able to finish the racing track. If this graph line is not touching 100% marker then there are higher chances of your model failing in actual race.</li>
 </ul>
 <h2 id="personal-experience">Personal Experience</h2>
-<p>When i started making my first model, I thought that i will make my first model as master piece. I selected max out configuration i.e. max speed 4m/s and maximum action spaces and training period as 2 hours. It failed miserably. It was not able to even finish the track even in 2 hours training period and the reward graphs were all going in wrong direction.</p>
+<p>When i started making my first model, I thought that i will make my first model as master piece. I selected max out configuration i.e. max speed 4m/s and maximum action spaces and training period as 2 hours. It failed miserably. It was not able to finish the track even in 2 hours training period and the reward graphs were all going in wrong direction.</p>
 <p>After that I used the model configuration and reward function as mentioned in the post and able to finish the track in 60 min training time. I, then increased the max-speed from 1m/s to 1.5m/s and able to finish the reInvent:2018 track in <strong>~19 seconds</strong>.</p>
 <p>I recommend:-</p>
 <ul>
