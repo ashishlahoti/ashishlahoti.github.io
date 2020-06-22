@@ -20,5 +20,14 @@
       <description>&lt;p&gt;This step by step guide is very helpful for beginners to create a personal account with AWS.&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>Build Your First AWS DeepRacer Model</title>
+      <link>https://codingnconcepts.com/aws/aws-deepracer/</link>
+      <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/aws/aws-deepracer/</guid>
+      <description>&lt;p&gt;This step-by-step guide is helpful for beginners trying their hands on AWS DeepRacer and creating their first model.&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>
