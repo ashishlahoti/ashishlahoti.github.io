@@ -92,7 +92,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/logo/aws.png"],
     "url" : "https:\/\/codingnconcepts.com\/aws\/aws-deepracer\/",
-    "wordCount" : "1577",
+    "wordCount" : "1687",
     "genre" : ["AWS","Popular Posts"],
     "keywords" :  null 
 }
@@ -440,9 +440,11 @@ if (!doNotTrack) {
 <li>An <strong>agent</strong> is your Car</li>
 <li>An <strong>environment</strong> is the Racing Track of your Car</li>
 <li>A <strong>model</strong> is created when you choose a car, racing track and write your reward function.</li>
-<li>The <strong>action space</strong> is number of actions a car can take in trial and error on racing track.</li>
+<li>The <strong>action space</strong> is the amount of choices a Car has, given the circumstances in front of it.</li>
 <li>The <strong>hyper parameters</strong> are reinforcement training and algorithm specific parameters.</li>
-<li>A <strong>reward function</strong> is a function written in python which returns reward in floating point number.</li>
+<li>A <strong>reward function</strong> is a function written in python which returns reward in floating point number. Your car use this reward function in its training and try to accumulate more reward points</li>
+<li>An <strong>exploration phase</strong>, also known as <strong>training phase</strong> when your car make experiments at different part of racing track and try to get more reward points.</li>
+<li>An <strong>exploitation phase</strong>, also known as <strong>evaluating phase</strong> when your car use all those learnings from training phase. It starts from the starting point of racing track and try to reach <strong>convergence</strong> (finish line)</li>
 </ul>
 <h5 id="reward-function">Reward function</h5>
 <p>Reward function is something where you give high reward for good behavior and lower reward for bad behavior.</p>
@@ -495,7 +497,8 @@ if (!doNotTrack) {
 <p>④ Enter the name of your car and Choose color. Choose <span style="background-color:#ec7211;border: 1px solid;border-radius: 3px;font-weight: 500;border-color:#e76d0c #e15500 #e15500;text-shadow:rgba(0,0,0,.05) 0 1px 0;background-image:linear-gradient(180deg,#f67c1b 0,#e15500);box-shadow:inset 0 1px 0 hsla(0,0%,100%,.2);color:#ffff;padding:0px 5px;font-weight:bold;">Done</span></p>
 <p><br /></p>
 <h3 id="action-space">Action Space</h3>
-<p>Action space is number of actions a car can take in trial and error on racing track. It depends on following parameters:</p>
+<p>You car can turn left, turn right, move forward at different speeds. All these choice the car has, become the action spaces.
+Action space of a Car depends on following parameters:</p>
 <ol>
 <li><strong>Maximum Steering Angle:</strong> Max values are between 1 and 30.</li>
 <li><strong>Steering angle granularity:</strong> Possible values are 3, 5 and 7</li>
@@ -504,8 +507,12 @@ if (!doNotTrack) {
 </ol>
 <p>If you choose 5 <em>Steering angles granularity</em> and 3 <em>Speeds granularity</em> then it has total (5*3) = 15 action spaces <em>(all combinations of angles vs speed)</em>. A car choose random action out of these 15 action spaces in its trail and errors.</p>
 <pre><code>  Action Space = Steering angles granularity * Speeds granularity
-</code></pre><p>Note that higher the action spaces, car has more options to choose from, more training time is required. The <strong>max speed</strong> of car also affect the training time.</p>
-<p>As a beginner, it is advised to use 3 steering angles and 3 speeds to start with (3*3) = 9 action spaces and also keep the maximum speed to 1m/s to train your car faster.</p>
+</code></pre><p>Note that more the action spaces, more the choices a Car has to choose from. You might get the best finishing time and best time around the curve with more action spaces but it requires a lot of training and your Car might not reach the convergence (finish the racing track). Same is applicable for maximum speed.</p>
+<p>As a beginner, it is advised to use:</p>
+<ul>
+<li>3 steering angles and 3 speeds to start with (3*3) = 9 action spaces</li>
+<li>maximum speed to 1m/s to train your car faster.</li>
+</ul>
 <p>Your primary focus while training your car should be on the accuracy and reliability of your model and not the speed or lap time of your Car. Once you have some insights, you can train your car by increasing the action spaces and max speed.</p>
 <h2 id="3-create-model">3. Create Model</h2>
 <p>There are five out of the box models available to use in AWS DeepRacer:</p>
