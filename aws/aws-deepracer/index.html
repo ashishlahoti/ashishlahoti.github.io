@@ -92,7 +92,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/logo/aws.png"],
     "url" : "https:\/\/codingnconcepts.com\/aws\/aws-deepracer\/",
-    "wordCount" : "1687",
+    "wordCount" : "1701",
     "genre" : ["AWS","Popular Posts"],
     "keywords" :  null 
 }
@@ -405,7 +405,8 @@ if (!doNotTrack) {
     <li><a href="#prerequisite">Prerequisite</a></li>
     <li><a href="#what-is-aws-deepracer">What is AWS DeepRacer?</a>
       <ul>
-        <li></li>
+        <li><a href="#reinforcement-learning">Reinforcement learning</a></li>
+        <li><a href="#reward-function">Reward function</a></li>
       </ul>
     </li>
     <li><a href="#1-getting-started">1. Getting Started</a></li>
@@ -430,8 +431,9 @@ if (!doNotTrack) {
 <p>You should have a valid AWS account. If you haven&rsquo;t registered to AWS already, follow this <a href="https://codingnconcepts.com/aws/how-to-create-aws-account/">Step-by-step guide to create an AWS Account</a></p>
 <h2 id="what-is-aws-deepracer">What is AWS DeepRacer?</h2>
 <p>AWS DeepRacer is a car designed by AWS which is having sensors and cameras to make it fully autonomous. You can use this car for virtual simulation as well as physical racing on DeepRacer tracks.</p>
-<p>In AWS DeepRacer, you choose your car, create <strong>reinforcement learning</strong> model, train and evaluate your car using this model on DeepRacer racing tracks, and finally you compete with others.</p>
-<h5 id="reinforcement-learning">Reinforcement learning</h5>
+<p>In AWS DeepRacer, you choose your car, create <strong>reinforcement learning</strong> model, train and evaluate your car using this model on DeepRacer racing tracks, and finally you compete with others.<br>
+<br /></p>
+<h3 id="reinforcement-learning">Reinforcement learning</h3>
 <blockquote>
 <p><strong>Reinforcement learning (RL)</strong> is an area of machine learning concerned with how an <strong>agents</strong> should take actions in an <strong>environment</strong> in order to maximize the notion of cumulative <strong>reward</strong>. Reinforcement learning is one of three basic machine learning paradigms, alongside supervised learning and unsupervised learning.</p>
 </blockquote>
@@ -444,11 +446,12 @@ if (!doNotTrack) {
 <li>The <strong>hyper parameters</strong> are reinforcement training and algorithm specific parameters.</li>
 <li>A <strong>reward function</strong> is a function written in python which returns reward in floating point number. Your car use this reward function in its training and try to accumulate more reward points</li>
 <li>An <strong>exploration phase</strong>, also known as <strong>training phase</strong> when your car make experiments at different part of racing track and try to get more reward points.</li>
-<li>An <strong>exploitation phase</strong>, also known as <strong>evaluating phase</strong> when your car use all those learnings from training phase. It starts from the starting point of racing track and try to reach <strong>convergence</strong> (finish line)</li>
+<li>An <strong>exploitation phase</strong>, also known as <strong>evaluating phase</strong> when your car use all those learnings from training phase. It starts from the starting point of racing track and try to reach <strong>convergence</strong> (finish line).<br>
+<br /></li>
 </ul>
-<h5 id="reward-function">Reward function</h5>
-<p>Reward function is something where you give high reward for good behavior and lower reward for bad behavior.</p>
-<p>Here is sample reward function written in python which return higher reward points for car to be on track:</p>
+<h3 id="reward-function">Reward function</h3>
+<p>Reward function is a python function where you give higher reward points for good behavior and lower reward points for bad behavior.</p>
+<p>Here is sample reward function written in python which gives higher reward points to car for keeping it wheels on track:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reward_function</span>(params):
 
     <span style="color:#75715e"># Read input parameters</span>
@@ -460,7 +463,7 @@ if (!doNotTrack) {
         reward <span style="color:#f92672">=</span> <span style="color:#ae81ff">1e-3</span>  <span style="color:#75715e"># lower reward for car to go outside track</span>
   
     <span style="color:#66d9ef">return</span> float(reward)
-</code></pre></div><p>When you train your car, it attempts to run in different directions on the track and try to accumulate reward points. In each subsequent attempts, it learns from its previous attempts and try to accumulate more reward points.</p>
+</code></pre></div><p>When you train your car, it attempts to run at different angles and speed on the track and try to accumulate reward points. In each subsequent attempts, it learns from its previous attempts and try to accumulate more reward points by keeping it wheels on track.</p>
 <h2 id="1-getting-started">1. Getting Started</h2>
 <p>① Go to <code>AWS Services</code> ➞ <code>AWS DeepRacer</code> ➞ <code>Reinforcement Learning</code> ➞ <code>Get Started</code></p>
 <p>② If it is your first time, you will see some errors. Don&rsquo;t worry. Choose <span style="background-color:#ec7211;border: 1px solid;border-radius: 3px;font-weight: 500;border-color:#e76d0c #e15500 #e15500;text-shadow:rgba(0,0,0,.05) 0 1px 0;background-image:linear-gradient(180deg,#f67c1b 0,#e15500);box-shadow:inset 0 1px 0 hsla(0,0%,100%,.2);color:#ffff;padding:0px 5px;font-weight:bold;">Reset Resources</span> and everything will be fine.</p>
