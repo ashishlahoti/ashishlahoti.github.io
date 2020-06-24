@@ -92,7 +92,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/logo/aws.png"],
     "url" : "https:\/\/codingnconcepts.com\/aws\/aws-deepracer\/",
-    "wordCount" : "1701",
+    "wordCount" : "2183",
     "genre" : ["AWS","Popular Posts"],
     "keywords" :  null 
 }
@@ -418,6 +418,7 @@ if (!doNotTrack) {
     <li><a href="#3-create-model">3. Create Model</a>
       <ul>
         <li><a href="#reward-graph">Reward Graph</a></li>
+        <li><a href="#hyperparameters">Hyperparameters</a></li>
       </ul>
     </li>
     <li><a href="#personal-experience">Personal Experience</a></li>
@@ -430,23 +431,42 @@ if (!doNotTrack) {
 <h2 id="prerequisite">Prerequisite</h2>
 <p>You should have a valid AWS account. If you haven&rsquo;t registered to AWS already, follow this <a href="https://codingnconcepts.com/aws/how-to-create-aws-account/">Step-by-step guide to create an AWS Account</a></p>
 <h2 id="what-is-aws-deepracer">What is AWS DeepRacer?</h2>
-<p>AWS DeepRacer is a car designed by AWS which is having sensors and cameras to make it fully autonomous. You can use this car for virtual simulation as well as physical racing on DeepRacer tracks.</p>
-<p>In AWS DeepRacer, you choose your car, create <strong>reinforcement learning</strong> model, train and evaluate your car using this model on DeepRacer racing tracks, and finally you compete with others.<br>
-<br /></p>
+<p>AWS DeepRacer is an exciting way for developers to get hands-on experience with machine learning.</p>
+<p>In AWS DeepRacer, you use a 1/18 scale autonomous car equipped with sensors and cameras. You can use this car in virtual simulator, to train and evaluate. The same car is used in physical AWS DeepRacer global racing league.</p>
+<p>In AWS DeepRacer, You do this:</p>
+<ul>
+<li>build your car, or choose existing one,</li>
+<li>create your own <strong>reinforcement learning</strong> model, or choose from sample models,</li>
+<li>choose pre-defined racing track,</li>
+<li>train and evaluate your car on racing track using your model , and</li>
+<li>finally you compete with others.<br>
+<br /></li>
+</ul>
 <h3 id="reinforcement-learning">Reinforcement learning</h3>
 <blockquote>
-<p><strong>Reinforcement learning (RL)</strong> is an area of machine learning concerned with how an <strong>agents</strong> should take actions in an <strong>environment</strong> in order to maximize the notion of cumulative <strong>reward</strong>. Reinforcement learning is one of three basic machine learning paradigms, alongside supervised learning and unsupervised learning.</p>
+<p><strong>Reinforcement learning (RL)</strong> is an area of machine learning concerned with how an <strong>agents</strong> should take <strong>actions</strong> in an <strong>environment</strong> in order to maximize the notion of cumulative <strong>reward</strong>. Reinforcement learning is one of three basic machine learning paradigms, alongside supervised learning and unsupervised learning.</p>
 </blockquote>
 <p>Let&rsquo;s understand the reinforcement learning key terms from AWS DeepRacer perspective:</p>
+<figure class="center">
+    <img src="/img/aws/aws-deepracer-key-terms.png"
+         alt="AWS DeepRacer Key Terms"/> <figcaption>
+            <p>AWS DeepRacer Key Terms</p>
+        </figcaption>
+</figure>
+
 <ul>
-<li>An <strong>agent</strong> is your Car</li>
-<li>An <strong>environment</strong> is the Racing Track of your Car</li>
-<li>A <strong>model</strong> is created when you choose a car, racing track and write your reward function.</li>
-<li>The <strong>action space</strong> is the amount of choices a Car has, given the circumstances in front of it.</li>
-<li>The <strong>hyper parameters</strong> are reinforcement training and algorithm specific parameters.</li>
-<li>A <strong>reward function</strong> is a function written in python which returns reward in floating point number. Your car use this reward function in its training and try to accumulate more reward points</li>
-<li>An <strong>exploration phase</strong>, also known as <strong>training phase</strong> when your car make experiments at different part of racing track and try to get more reward points.</li>
-<li>An <strong>exploitation phase</strong>, also known as <strong>evaluating phase</strong> when your car use all those learnings from training phase. It starts from the starting point of racing track and try to reach <strong>convergence</strong> (finish line).<br>
+<li><strong>model</strong> is created when you choose a car, racing track and write your reward function.</li>
+<li><strong>agent</strong> is your Car</li>
+<li><strong>action space</strong> is the amount of choices a Car has, for e.g., turn left, turn right, move forward at different speeds.</li>
+<li><strong>state</strong> is position of Car on the track at a point of time.</li>
+<li><strong>environment</strong> is the Racing Track of your Car</li>
+<li><strong>reward function</strong> is a function written in python which returns reward in floating point number. Your car use this reward function in its training and try to accumulate more reward points</li>
+<li><strong>training phase</strong> is when you train your car on racing track using the model you created.<br>
+Also known as <em>exploration phase</em> where your car explore the racing track, and learn from which route it can get more reward points.</li>
+<li><strong>evaluating phase</strong> is when you evaluate your car after training is completed whether its able to complete the racing track or not.
+Also known as <em>exploitation phase</em> where your car exploit the learning from training and try to reach the <strong>convergence</strong> (finish line).</li>
+<li>The <strong>hyper parameters</strong> are reinforcement algorithm and training specific parameters which controls the car training process.</li>
+<li>You car make attempts to find the best route by accumulating reward point in training phase. Attempt starts either from the start line or any part of the track. Attempt ends when car reaches the finish line, or loose the track, or crash. Each of this attempt is called an <strong>episode</strong>.<br>
 <br /></li>
 </ul>
 <h3 id="reward-function">Reward function</h3>
@@ -479,12 +499,21 @@ if (!doNotTrack) {
 <li>Check IAM roles required for DeepRacer,</li>
 <li>Check AWS DeepRacer resource stack:
 <ul>
-<li><strong>Amazon SageMaker and AWS RoboMaker</strong> to train your model</li>
-<li><strong>Kinesis</strong> for streaming training data and simulation video, when your car is training and evaluating</li>
-<li><strong>S3 Bucket</strong> to store sample models and new models created by you</li>
+<li><strong>Amazon SageMaker and AWS RoboMaker</strong> are the brain behind training your model</li>
+<li><strong>Amazon S3</strong> to store samples and the new models created by you</li>
+<li><strong>Amazon Kinesis Video Streams</strong> for streaming data and simulation video, when your car is training and evaluating</li>
+<li><strong>Amazon CloudWatch</strong> to store and analyze the logs and metrics</li>
 </ul>
 </li>
 </ol>
+<p>You should be well-aware of the AWS services involved in AWS DeepRacer in order to understand the billing when AWS charge you money. Here is the AWS DeepRacer Simulator Architecture:</p>
+<figure class="center">
+    <img src="/img/aws/aws-deepracer-simulator-architecture.png"
+         alt="AWS DeepRacer Simulator Architecture"/> <figcaption>
+            <p>AWS DeepRacer Simulator Architecture</p>
+        </figcaption>
+</figure>
+
 <h2 id="2-build-your-car">2. Build your Car</h2>
 <p>You can either use the default Car <strong>The Original DeepRacer</strong> or build a new vehicle by following these steps:</p>
 <p>① Go to <code>AWS DeepRacer</code> ➞ <code>Reinforcement Learning</code> ➞ <code>Your garage</code> and Choose <span style="background-color:#ec7211;border: 1px solid;border-radius: 3px;font-weight: 500;border-color:#e76d0c #e15500 #e15500;text-shadow:rgba(0,0,0,.05) 0 1px 0;background-image:linear-gradient(180deg,#f67c1b 0,#e15500);box-shadow:inset 0 1px 0 hsla(0,0%,100%,.2);color:#ffff;padding:0px 5px;font-weight:bold;">Build New Vehicle</span></p>
@@ -572,7 +601,7 @@ Action space of a Car depends on following parameters:</p>
 <script type="application/javascript" src="https://gist.github.com/ashishlahoti/bf0b8cfeff63ac93a628f628f4d810c0.js"></script>
 
 <p>⑦ Keep the default setting of Training Algorithm <strong>⦿ PPO</strong> and hyperparameters.</p>
-<p>⑧ Enter Stop Condition ➞ Maximum time is 60 minutes.</p>
+<p>⑧ Enter Stop Condition ➞ Maximum time = 60 minutes.</p>
 <p><strong>Note:</strong> Congratulations, You&rsquo;ve configured your model. Next step is to create, train and evaluate your model. Please note that you have not charged anything till this point. <strong>Subsequent steps will charge you money based on AWS resource utilization.</strong></p>
 <p>⑨ Once you choose <span style="background-color:#ec7211;border: 1px solid;border-radius: 3px;font-weight: 500;border-color:#e76d0c #e15500 #e15500;text-shadow:rgba(0,0,0,.05) 0 1px 0;background-image:linear-gradient(180deg,#f67c1b 0,#e15500);box-shadow:inset 0 1px 0 hsla(0,0%,100%,.2);color:#ffff;padding:0px 5px;font-weight:bold;">Create Model</span>. AWS resources will be provisioned to train your model for 60 minutes.</p>
 <p><br /></p>
@@ -600,8 +629,68 @@ Action space of a Car depends on following parameters:</p>
 </ul>
 </li>
 <li><strong>Average percentage completion (Training)</strong> is percentage of track completed in training phase. Since in training phase, main aim of car is to train at different parts of the track, it doesn&rsquo;t complete the track most of the time and hence the graph line remain below and doesn&rsquo;t touch 100% marker.</li>
-<li><strong>Average percentage completion (Evaluating)</strong> is percentage of track completed in evaluating phase. Since in evaluating phase, main aim of car is to complete the track, it should touch the 100% marker and able to finish the racing track. If this graph line is not touching 100% marker then there are higher chances of your model failing in actual race.</li>
+<li><strong>Average percentage completion (Evaluating)</strong> is percentage of track completed in evaluating phase. Since in evaluating phase, main aim of car is to complete the track, it should touch the 100% marker and able to finish the racing track. If this graph line is not touching 100% marker then there are higher chances of your model failing in actual race.<br>
+<br /></li>
 </ul>
+<h3 id="hyperparameters">Hyperparameters</h3>
+<p>Tuning the hyperparameters can improve the quality of your model but it requires a steep learning curve and a lot of trials and errors. As a beginner, it is advised to use default optimized parameters but at the same time, it is good to know how they impact the training of your Car.</p>
+<ul>
+<li><strong>Number of episodes per iteration:</strong> Each attempt made by car in training phase is one episode. With Default value, a Car make 20 attempts in one iteration before updating training data to the network.</li>
+<li><strong>Batch Size:</strong> Iterations runs in batches. Batch size controls, how many iterations to be completed before updating training data to the network.</li>
+<li><strong>Number of Epochs:</strong> Number of times to repeat the batches and send optimized training data to network. Larger number of epochs is acceptable when the batch size is large.</li>
+<li><strong>Learning Rate:</strong> Controls the speed your car learns. Large learning rate prevents training data from reaching optimal solution whereas Small learning rate takes longer to learn.</li>
+<li><strong>Entropy:</strong> It is a degree of randomness in the Car&rsquo;s action. Larger the entropy means the more random actions a Car will take for exploration.</li>
+<li><strong>Discount Factor:</strong>  It is a factor specifies how much of the future reward contributes to the expected rewards. With larger discount factor, Car looks further into the future to consider rewards. With smaller discount factor, Car only consider immediate rewards.</li>
+</ul>
+<p>Take a quick look at hyperparameters:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Hyperparamter</th>
+<th align="left">Advantage of higher values</th>
+<th align="left">Disadvantage of higher values</th>
+<th align="left">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Batch Size</td>
+<td align="left">More stable updates</td>
+<td align="left">Slower training</td>
+<td align="left">64</td>
+</tr>
+<tr>
+<td align="left">Number of Epochs</td>
+<td align="left">More stable updates</td>
+<td align="left">Slower training</td>
+<td align="left">10</td>
+</tr>
+<tr>
+<td align="left">Learning Rate</td>
+<td align="left">Car learns faster</td>
+<td align="left">May struggle to converge</td>
+<td align="left">0.0003</td>
+</tr>
+<tr>
+<td align="left">Entropy</td>
+<td align="left">More experimental may lead to better results</td>
+<td align="left">May struggle to converge</td>
+<td align="left">0.01</td>
+</tr>
+<tr>
+<td align="left">Discount Factor</td>
+<td align="left">Model looks farther out</td>
+<td align="left">Slower training</td>
+<td align="left">0.999</td>
+</tr>
+<tr>
+<td align="left">Episodes</td>
+<td align="left">Improves model stability</td>
+<td align="left">Slower training</td>
+<td align="left">20</td>
+</tr>
+</tbody>
+</table>
 <h2 id="personal-experience">Personal Experience</h2>
 <p>When i started making my first model, I thought that i will make my first model as master piece. I selected max out configuration i.e. max speed 4m/s and maximum action spaces and training period as 2 hours. It failed miserably. It was not able to finish the track even in 2 hours training period and the reward graphs were all going in wrong direction.</p>
 <p>After that I used the model configuration and reward function as mentioned in the post and able to finish the track in 60 min training time. I, then increased the max-speed from 1m/s to 1.5m/s and able to finish the reInvent:2018 track in <strong>~19 seconds</strong>.</p>
