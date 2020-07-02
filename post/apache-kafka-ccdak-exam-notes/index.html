@@ -92,7 +92,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/post/ccdak-exam-notes-banner.png"],
     "url" : "https:\/\/codingnconcepts.com\/post\/apache-kafka-ccdak-exam-notes\/",
-    "wordCount" : "4212",
+    "wordCount" : "4241",
     "genre" : ["Confluent Kafka CCDAK","Popular Posts"],
     "keywords" : ["confluent certified developer for apache kafka","kafka certification sample questions"]
 }
@@ -470,44 +470,24 @@ if (!doNotTrack) {
 <li><a href="https://www.udemy.com/course/confluent-certified-developer-for-apache-kafka/" target="_blank">Udemy CCDAK 150 Practice Exam Questions</a></li>
 </ol>
 <p>You should prepare well for following topics. Recommended to study topics in the same sequence.</p>
-<ol>
-<li>
-<p><strong>Kafka Architecture</strong><br>
+<p>① <strong>Kafka Architecture</strong><br>
 Read <a href="https://www.confluent.io/wp-content/uploads/confluent-kafka-definitive-guide-complete.pdf" target="_blank">Confluent Kafka Definitive Guide PDF</a> and <a href="https://kafka.apache.org/documentation/" target="_blank">Apache Kafka Documentation</a>. Once you read both, revise using <a href="#kafka-architecture">Kafka Architecture</a> section in this post.</p>
-</li>
-<li>
-<p><strong>Kafka CLI</strong><br>
+<p>② <strong>Kafka CLI</strong><br>
 Read <a href="https://www.confluent.io/wp-content/uploads/confluent-kafka-definitive-guide-complete.pdf" target="_blank">Confluent Kafka Definitive Guide PDF</a> and revise using <a href="#kafka-cli">KAFKA CLI</a> section of this post.</p>
-</li>
-<li>
-<p><strong>Kafka Streams</strong><br>
+<p>③ <strong>Kafka Streams</strong><br>
 Read <a href="https://www.confluent.io/wp-content/uploads/confluent-kafka-definitive-guide-complete.pdf" target="_blank">Confluent Kafka Definitive Guide PDF</a> and revise using <a href="#kafka-streams">Kafka Streams</a> section of this post.</p>
-</li>
-<li>
-<p><strong>Kafka Security</strong><br>
+<p>④ <strong>Kafka Security</strong><br>
 Read <a href="https://kafka.apache.org/documentation/#security" target="_blank">Apache Kafka Documentation Security Section</a></p>
-</li>
-<li>
-<p><strong>Kafka APIs</strong><br>
+<p>⑤ <strong>Kafka APIs</strong><br>
 Read <a href="https://kafka.apache.org/documentation/#api" target="_blank">Apache Kafka Documentation API section</a> and revise using <a href="#kafka-api">KAFKA API</a> section of this post.</p>
-</li>
-<li>
-<p><strong>Kafka Monitoring (Metrics)</strong><br>
+<p>⑥ <strong>Kafka Monitoring (Metrics)</strong><br>
 Read <a href="https://www.confluent.io/wp-content/uploads/confluent-kafka-definitive-guide-complete.pdf" target="_blank">Confluent Kafka Definitive Guide PDF</a> and <a href="https://kafka.apache.org/documentation/" target="_blank">Apache Kafka Documentation</a> for important metrics. Read <a href="https://docs.confluent.io/current/index.html" target="_blank">Confluent Kafka Documentation</a> as well.</p>
-</li>
-<li>
-<p><strong>Confluent Schema Registry</strong><br>
+<p>⑦ <strong>Confluent Schema Registry</strong><br>
 Read <a href="https://docs.confluent.io/current/index.html" target="_blank">Confluent Kafka Documentation</a> and revise using <a href="#confluent-schema-registry">Confluent Schema Registry</a> section of this post.</p>
-</li>
-<li>
-<p><strong>Confluent KSQL</strong><br>
+<p>⑧ <strong>Confluent KSQL</strong><br>
 Read  <a href="https://docs.confluent.io/current/streams-ksql.html" target="_blank">Confluent Kafka Documentation KSQL and Kafka Streams section</a></p>
-</li>
-<li>
-<p><strong>Confluent REST Proxy</strong><br>
+<p>⑨ <strong>Confluent REST Proxy</strong><br>
 Read  <a href="https://docs.confluent.io/current/kafka-rest/index.html#" target="_blank">Confluent Kafka Documentation Rest Proxy Section</a></p>
-</li>
-</ol>
 <h2 id="sample-exam-questions">Sample Exam Questions</h2>
 <hr>
 <p>Please note that these are not the actual questions from the CCDAK exam but most likelihood to ask in exam.</p>
@@ -796,74 +776,57 @@ If tickTime=2000, initLimit=5 and syncLimit=2 then a follower can take (tickTime
 </ul>
 <h2 id="kafka-cli">KAFKA CLI</h2>
 <hr>
-<ol>
-<li>
-<p>Start a zookeeper at default port 2181<br>
-<code>$bin/zookeeper-server-start.sh config/zookeeper.properties</code></p>
-</li>
-<li>
-<p>Start a kafka server at default port 9092<br>
-<code>$bin/kafka-server-start.sh config/server.properties</code></p>
-</li>
-<li>
-<p>Create a kafka topic &lsquo;my-first-topic&rsquo; with 3 partitions and 3 replicas<br>
-<code>$bin/kafka-topics.sh --zookeeper localhost:2181 --topic my-first-topic --create --replication-factor 3 --partitions 3</code></p>
-</li>
-<li>
-<p>List all kafka topics<br>
-<code>$bin/kafka-topics.sh --zookeeper localhost:2181 --list</code></p>
-</li>
-<li>
-<p>Describe kafka topic &lsquo;my-first-topic&rsquo;<br>
-<code>$bin/kafka-topics.sh --zookeeper localhost:2181 --topic my-first-topic --describe</code></p>
-</li>
-<li>
-<p>Delete kafka topic &lsquo;my-first-topic&rsquo;<br>
-<code>$bin/kafka-topics.sh --zookeeper localhost:2181 --topic my-first-topic --delete</code><br>
-<strong>Note:</strong> This will have no impact if delete.topic.enable is not set to true</p>
-</li>
-<li>
-<p>Find out all the partitions without a leader<br>
-<code>$bin/kafka-topics.sh --zookeeper localhost:2181 --describe --unavailable-partitions</code></p>
-</li>
-<li>
-<p>Produce messages to Kafka topic my-first-topic<br>
-<code>$bin/kafka-console-producer.sh --broker-list localhost:9092 --topic my-first-topic --producer-property acks=all</code></p>
-<p><code>message 1</code></p>
-<p><code>message 2</code></p>
-<p><code>^C</code></p>
-</li>
-<li>
-<p>Start Consuming messages from kafka topic my-first-topic<br>
-<code>$bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic my-first-topic --from-beginning</code></p>
-<p><code>message 1</code></p>
-<p><code>message 2</code></p>
-</li>
-<li>
-<p>Start Consuming messages in a consumer group from kafka topic my-first-topic<br>
-<code>$bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic my-first-topic --group my-first-consumer-group --from-beginning</code></p>
-</li>
-<li>
-<p>List all consumer groups<br>
-<code>$bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --list</code></p>
-</li>
-<li>
-<p>Describe consumer group<br>
-<code>$bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe -group my-first-consumer-group</code></p>
-</li>
-<li>
-<p>Reset offset of consumer group to replay all messages<br>
-<code>$bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe -group my-first-consumer-group --reset-offsets --to-earliest --execute --topic my-first-topic</code></p>
-</li>
-<li>
-<p>Shift offsets by 2 (forward) as another strategy<br>
-<code>bin/kafka-consumer-groups --bootstrap-server localhost:9092 --group my-first-consumer-group --reset-offsets --shift-by 2 --execute --topic my-first_topic</code></p>
-</li>
-<li>
-<p>Shift offsets by 2 (backward) as another strategy<br>
-<code>bin/kafka-consumer-groups --bootstrap-server localhost:9092 --group my-first-consumer-group --reset-offsets --shift-by -2 --execute --topic my-first_topic</code></p>
-</li>
-</ol>
+<p>①  Start a zookeeper at default port 2181</p>
+<pre><code>$bin/zookeeper-server-start.sh config/zookeeper.properties
+</code></pre>
+<p>②  Start a kafka server at default port 9092</p>
+<pre><code>$bin/kafka-server-start.sh config/server.properties
+</code></pre>
+<p>③ Create a kafka topic &lsquo;my-first-topic&rsquo; with 3 partitions and 3 replicas</p>
+<pre><code>$bin/kafka-topics.sh --zookeeper localhost:2181 --topic my-first-topic --create --replication-factor 3 --partitions 3
+</code></pre>
+<p>④ List all kafka topics</p>
+<pre><code>$bin/kafka-topics.sh --zookeeper localhost:2181 --list
+</code></pre>
+<p>⑤ Describe kafka topic &lsquo;my-first-topic&rsquo;</p>
+<pre><code>$bin/kafka-topics.sh --zookeeper localhost:2181 --topic my-first-topic --describe
+</code></pre>
+<p>⑥ Delete kafka topic &lsquo;my-first-topic&rsquo;</p>
+<pre><code>$bin/kafka-topics.sh --zookeeper localhost:2181 --topic my-first-topic --delete
+</code></pre>
+<p><strong>Note:</strong> This will have no impact if delete.topic.enable is not set to true</p>
+<p>⑦ Find out all the partitions without a leader</p>
+<pre><code>$bin/kafka-topics.sh --zookeeper localhost:2181 --describe --unavailable-partitions
+</code></pre>
+<p>⑧ Produce messages to Kafka topic my-first-topic</p>
+<pre><code>$bin/kafka-console-producer.sh --broker-list localhost:9092 --topic my-first-topic --producer-property acks=all 
+&gt; message 1  
+&gt; message 2  
+&gt; ^C
+</code></pre>
+<p>⑨ Start Consuming messages from kafka topic my-first-topic</p>
+<pre><code>$bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic my-first-topic --from-beginning
+&gt; message 1  
+&gt; message 2
+</code></pre>
+<p>⑩ Start Consuming messages in a consumer group from kafka topic my-first-topic</p>
+<pre><code>$bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic my-first-topic --group my-first-consumer-group --from-beginning
+</code></pre>
+<p>⑪ List all consumer groups</p>
+<pre><code>$bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --list
+</code></pre>
+<p>⑫ Describe consumer group</p>
+<pre><code>$bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe -group my-first-consumer-group
+</code></pre>
+<p>⑬ Reset offset of consumer group to replay all messages</p>
+<pre><code>$bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe -group my-first-consumer-group --reset-offsets --to-earliest --execute --topic my-first-topic
+</code></pre>
+<p>⑭ Shift offsets by 2 (forward) as another strategy</p>
+<pre><code>bin/kafka-consumer-groups --bootstrap-server localhost:9092 --group my-first-consumer-group --reset-offsets --shift-by 2 --execute --topic my-first_topic
+</code></pre>
+<p>⑮ Shift offsets by 2 (backward) as another strategy</p>
+<pre><code>bin/kafka-consumer-groups --bootstrap-server localhost:9092 --group my-first-consumer-group --reset-offsets --shift-by -2 --execute --topic my-first_topic
+</code></pre>
 <h2 id="kafka-streams">Kafka Streams</h2>
 <hr>
 <p>Kafka Streams is used for building streaming applications which transform data of one Kafka topics and feeds to another Kafka topic.</p>

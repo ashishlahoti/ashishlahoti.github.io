@@ -91,7 +91,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/logo/springboot.png"],
     "url" : "https:\/\/codingnconcepts.com\/spring-boot\/configure-kafka-producer-and-consumer\/",
-    "wordCount" : "920",
+    "wordCount" : "916",
     "genre" : ["Spring Boot Kafka"],
     "keywords" :  null 
 }
@@ -379,7 +379,7 @@ if (!doNotTrack) {
 			<div class="primary">
 			
 <main class="main" role="main">
-	<article class="post">
+	<article class="post" autonumbering>
 		<header class="post__header">
 			<h1 class="post__title"><img class="post__thumbnail" src="/img/logo/springboot.png" alt="Configure Kafka Producer and Consumer in spring boot"> Configure Kafka Producer and Consumer in spring boot</h1>
 			<div class="post__meta meta"><div class="meta__item-author meta__item">
@@ -406,13 +406,14 @@ if (!doNotTrack) {
     <li><a href="#kafka-producer-and-consumer-configuration">Kafka Producer and Consumer Configuration</a></li>
     <li><a href="#spring-boot-kafka-producer">Spring Boot Kafka Producer</a>
       <ul>
-        <li></li>
+        <li><a href="#create-kafkaproducerconfig-class">Create KafkaProducerConfig Class</a></li>
+        <li><a href="#create-kafkaproducerservice-class">Create KafkaProducerService Class</a></li>
       </ul>
     </li>
     <li><a href="#spring-boot-kafka-consumer">Spring Boot Kafka Consumer</a>
       <ul>
-        <li></li>
-        <li><a href="#summary">Summary</a></li>
+        <li><a href="#create-kafkaconsumerconfig-class">Create KafkaConsumerConfig Class</a></li>
+        <li><a href="#create-kafkaconsumerservice-class">Create KafkaConsumerService Class</a></li>
       </ul>
     </li>
   </ul>
@@ -525,7 +526,7 @@ if (!doNotTrack) {
 </code></pre></div><p><br /></p>
 <h2 id="spring-boot-kafka-producer">Spring Boot Kafka Producer</h2>
 <p>If you want to create a producer service to send messages to a Kafka topic then you need to create two Classes,</p>
-<h4 id="1-create-kafkaproducerconfig-class">1. Create KafkaProducerConfig Class</h4>
+<h3 id="create-kafkaproducerconfig-class">Create KafkaProducerConfig Class</h3>
 <p>First, create a <strong>KafkaProducerConfig</strong> class which uses producer configuration defined in <strong>application.yml</strong> and define a <code>KafkaTemplate</code> bean which creates an instance of Kafka producer. We will use this instance in our producer service class.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.abc.demo.config<span style="color:#f92672">;</span>
 
@@ -561,7 +562,7 @@ if (!doNotTrack) {
 	<span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p><br /></p>
-<h4 id="2-create-kafkaproducerservice-class">2. Create KafkaProducerService Class</h4>
+<h3 id="create-kafkaproducerservice-class">Create KafkaProducerService Class</h3>
 <p>Second, create a <strong>KafkaProducerService</strong> class and its implementation class <strong>KafkaProducerServiceImpl</strong>. We are using producer instance created by KafkaTemplate to send kafka message to given kafka topic.</p>
 <p>Please read more about <a href="https://docs.spring.io/spring-kafka/api/org/springframework/kafka/core/KafkaTemplate.html">KafkaTemplate</a> which comes with overloaded <strong>send</strong> method to send messages with key, partition and routing information.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.abc.demo.service<span style="color:#f92672">;</span>
@@ -590,7 +591,7 @@ if (!doNotTrack) {
 </code></pre></div><p><br /></p>
 <h2 id="spring-boot-kafka-consumer">Spring Boot Kafka Consumer</h2>
 <p>If you want to create a consumer service to receive messages from a single Kafka topic or multiple Kafka topics then you need to create two Classes,</p>
-<h4 id="1-create-kafkaconsumerconfig-class">1. Create KafkaConsumerConfig Class</h4>
+<h3 id="create-kafkaconsumerconfig-class">Create KafkaConsumerConfig Class</h3>
 <p>First, create a <strong>KafkaConsumerConfig</strong> class which uses consumer configuration defined in <strong>application.yml</strong> and define a <code>ConcurrentKafkaListenerContainerFactory</code> bean which is responsible to create listener for given Kafka bootstrap server. We have also used <code>@EnableKafka</code> annotation at class level which tells spring boot to detect <code>@KafkaListener</code> annotation applied to any method in spring boot application. We will use this annotation in our consumer service class.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.abc.demo.config<span style="color:#f92672">;</span>
 
@@ -631,7 +632,7 @@ if (!doNotTrack) {
 	<span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p><br /></p>
-<h4 id="2-create-kafkaconsumerservice-class">2. Create KafkaConsumerService Class</h4>
+<h3 id="create-kafkaconsumerservice-class">Create KafkaConsumerService Class</h3>
 <p>Second, create a <strong>KafkaConsumerService</strong> class and its implementation class <strong>KafkaConsumerServiceImpl</strong>. We have used <code>@KafkaListener</code> annotation at method passing kafka consumer topic names, which will be detected by spring boot application automatically. You will be able to consumer messages from kafka topic using this method.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.abc.demo.service<span style="color:#f92672">;</span>
 
@@ -658,7 +659,7 @@ if (!doNotTrack) {
 	
 <span style="color:#f92672">}</span>
 </code></pre></div><p><br /></p>
-<h3 id="summary">Summary</h3>
+<h4 id="summary">Summary</h4>
 <p>Spring boot provides a wrapper over kafka producer and consumer implementation in Java which helps us to easily configure-</p>
 <ul>
 <li>Kafka Producer using <code>KafkaTemplate</code> which provides overloaded <strong>send</strong> method to send messages in multiple ways with keys, partitions and routing information.</li>

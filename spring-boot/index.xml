@@ -6,10 +6,19 @@
     <description>Recent content on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://codingnconcepts.com/spring-boot/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Jackson JSON Request and Response Mapping in Spring Boot</title>
+      <link>https://codingnconcepts.com/spring-boot/jackson-json-request-response-mapping/</link>
+      <pubDate>Thu, 02 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/jackson-json-request-response-mapping/</guid>
+      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn how to map Jackson JSON request and response in Spring Boot Application with various Jackson configurations.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Spring @ConfigurationProperties using YAML</title>

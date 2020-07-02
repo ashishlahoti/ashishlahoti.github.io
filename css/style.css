@@ -259,7 +259,8 @@ code,
 kbd,
 samp {
 	font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-	font-size: inherit;
+	font-size: 0.875rem;
+	font-size: 14px;
 }
 
 pre,
