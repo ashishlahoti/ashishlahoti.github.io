@@ -92,7 +92,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/post/ccdak-exam-notes-banner.png"],
     "url" : "https:\/\/codingnconcepts.com\/post\/apache-kafka-ccdak-exam-notes\/",
-    "wordCount" : "4241",
+    "wordCount" : "4257",
     "genre" : ["Confluent Kafka CCDAK","Popular Posts"],
     "keywords" : ["confluent certified developer for apache kafka","kafka certification sample questions"]
 }
@@ -636,14 +636,22 @@ Allows kafka to find a message with a timestamp</li>
 </ul>
 <h5 id="producer-acknowledgment">Producer Acknowledgment</h5>
 <ul>
-<li><strong>acks=0</strong> Producer do not wait for ack <em>( possible data loss )</em></li>
-<li><strong>acks=1</strong> Producer wait for leader ack <em>( limited data loss )</em></li>
-<li><strong>acks=all</strong> Producer wait for leader+replica ack <em>( no data loss )</em></li>
-<li><strong>acks=all</strong> must be used in conjunction with <strong>min.insync.replicas</strong> <em>( can be set at broker or topic level )</em>
+<li>
+<p><strong>acks=0</strong> Producer do not wait for ack <em>( possible data loss )</em></p>
+</li>
+<li>
+<p><strong>acks=1</strong> Producer wait for leader ack <em>( limited data loss )</em></p>
+</li>
+<li>
+<p><strong>acks=all</strong> Producer wait for leader+replica ack <em>( no data loss )</em></p>
+</li>
+<li>
+<p><strong>acks=all</strong> must be used in conjunction with <strong>min.insync.replicas</strong> which can be set at broker or topic level.</p>
+<p>*<em>( assuming that replicas are distributed across 3 brokers for below points )</em></p>
 <ul>
 <li><strong>min.insync.replica</strong> only matters if acks=all</li>
 <li><strong>acks=all, min.insync.replica=2</strong> implies that at least 2 brokers that are ISR <em>(including leader)</em> must acknowledge</li>
-<li><strong>replication.factor=3, acks=all, min.insync.replicas=2</strong> can only tolerate 1 broker going down, otherwise the producer will receive an exception NOT_ENOUGH_REPLICAS on send</li>
+<li>A kafka topic with <strong>replication.factor=3, acks=all, min.insync.replicas=2</strong> can only tolerate 1 broker going down, otherwise the producer will receive an exception NOT_ENOUGH_REPLICAS on send.</li>
 <li><strong>acks=all, min.insync.replica=1</strong> implies that at least 1 brokers that is ISR <em>(including leader)</em> must acknowledge</li>
 <li>A kafka topic with <strong>replication.factor=3, acks=all, min.insync.replicas=1</strong>, maximum number of 2 brokers can go down so that a producer can still produce to the topic.</li>
 </ul>
