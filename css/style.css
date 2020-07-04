@@ -505,9 +505,9 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 }
 
 .menu__list .menu__item .submenu__list {
-    background: #2a2a2a;
-    visibility: hidden;
-  	opacity: 0;
+  background: #2a2a2a;
+  visibility: hidden;
+  opacity: 0;
 	position: absolute;
 	max-width: 15rem;
 	transition: all 0.5s ease;
@@ -831,7 +831,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 }
 
 .toc__menu ul ul {
-	padding-left: 10px;
+	padding-left: 18px;
 	font-size: 14px;
 	font-size: 0.875rem;
 }
