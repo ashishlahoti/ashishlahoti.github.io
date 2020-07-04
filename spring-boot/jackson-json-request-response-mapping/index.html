@@ -91,7 +91,7 @@ if (!doNotTrack) {
     },
     "image": ["https://codingnconcepts.com/img/logo/springboot.png"],
     "url" : "https:\/\/codingnconcepts.com\/spring-boot\/jackson-json-request-response-mapping\/",
-    "wordCount" : "1012",
+    "wordCount" : "1288",
     "genre" : ["Spring Boot REST"],
     "keywords" :  null 
 }
@@ -401,16 +401,18 @@ if (!doNotTrack) {
 	<div class="toc__menu">
 		<nav id="TableOfContents">
   <ul>
-    <li><a href="#jackson-json-mapper">Jackson JSON Mapper</a>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
+    <li><a href="#jackson-json-mapper">Jackson JSON Mapper</a></li>
     <li><a href="#examples">Examples</a>
       <ul>
+        <li><a href="#prevent-failure-on-unknown-property-in-json-request-body">Prevent Failure on Unknown Property in JSON Request Body</a></li>
+        <li><a href="#dont-allow-certain-property-in-json-request-body">Don&rsquo;t allow certain property in JSON Request Body</a></li>
         <li><a href="#pretty-print-json-response">Pretty Print JSON Response</a></li>
         <li><a href="#format-date-and-datetime-properties-in-json-response">Format Date and DateTime properties in JSON Response</a></li>
-        <li><a href="#prevent-failure-on-unknown-property-in-json-request-body">Prevent Failure on Unknown Property in JSON Request Body</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a>
+      <ul>
+        <li></li>
       </ul>
     </li>
   </ul>
@@ -430,76 +432,7 @@ if (!doNotTrack) {
 <li>Java Object to JSON is known as <strong>Marshalling</strong>, or Serialization, and</li>
 <li>JSON to Java Object is called <strong>Unmarshalling</strong>, or Deserialization</li>
 </ul>
-<p>Here is the full list of Jackson serialization and deserialization properties configurable in Spring Boot Application using <em>application.yml</em>, or <em>application.properties</em> file. We&rsquo;ll look at frequently used properties in next section one by one with example:</p>
-<h6 id="applicationyml">application.yml</h6>
-<pre><code>spring:
-  jackson:
-    serialization:
-      CLOSE_CLOSEABLE: true/false
-      EAGER_SERIALIZER_FETCH: true/false
-      FAIL_ON_EMPTY_BEANS: true/false
-      FAIL_ON_SELF_REFERENCES: true/false
-      FAIL_ON_UNWRAPPED_TYPE_IDENTIFIERS: true/false
-      FLUSH_AFTER_WRITE_VALUE: true/false
-      INDENT_OUTPUT: true/false
-      ORDER_MAP_ENTRIES_BY_KEYS: true/false
-      USE_EQUALITY_FOR_OBJECT_ID: true/false
-      WRAP_EXCEPTIONS: true/false
-      WRAP_ROOT_VALUE: true/false
-      WRITE_BIGDECIMAL_AS_PLAIN: true/false
-      WRITE_CHAR_ARRAYS_AS_JSON_ARRAYS: true/false
-      WRITE_DATES_AS_TIMESTAMPS: true/false
-      WRITE_DATES_WITH_ZONE_ID: true/false
-      WRITE_DATE_KEYS_AS_TIMESTAMPS: true/false
-      WRITE_DATE_TIMESTAMPS_AS_NANOSECONDS: true/false
-      WRITE_DURATIONS_AS_TIMESTAMPS: true/false
-      WRITE_EMPTY_JSON_ARRAYS: true/false
-      WRITE_ENUMS_USING_INDEX: true/false
-      WRITE_ENUMS_USING_TO_STRING: true/false
-      WRITE_ENUM_KEYS_USING_INDEX: true/false
-      WRITE_NULL_MAP_VALUES: true/false
-      WRITE_SELF_REFERENCES_AS_NULL: true/false
-      WRITE_SINGLE_ELEM_ARRAYS_UNWRAPPED: true/false
-    deserialization:
-      ACCEPT_EMPTY_ARRAY_AS_NULL_OBJECT: true/false
-      ACCEPT_EMPTY_STRING_AS_NULL_OBJECT: true/false
-      ACCEPT_FLOAT_AS_INT: true/false
-      ACCEPT_SINGLE_VALUE_AS_ARRAY: true/false
-      ADJUST_DATES_TO_CONTEXT_TIME_ZONE: true/false
-      EAGER_DESERIALIZER_FETCH: true/false
-      FAIL_ON_IGNORED_PROPERTIES: true/false
-      FAIL_ON_INVALID_SUBTYPE: true/false
-      FAIL_ON_MISSING_CREATOR_PROPERTIES: true/false
-      FAIL_ON_MISSING_EXTERNAL_TYPE_ID_PROPERTY: true/false
-      FAIL_ON_NULL_CREATOR_PROPERTIES: true/false
-      FAIL_ON_NULL_FOR_PRIMITIVES: true/false
-      FAIL_ON_NUMBERS_FOR_ENUMS: true/false
-      FAIL_ON_READING_DUP_TREE_KEY: true/false
-      FAIL_ON_TRAILING_TOKENS: true/false
-      FAIL_ON_UNKNOWN_PROPERTIES: true/false
-      FAIL_ON_UNRESOLVED_OBJECT_IDS: true/false
-      READ_DATE_TIMESTAMPS_AS_NANOSECONDS: true/false
-      READ_ENUMS_USING_TO_STRING: true/false
-      READ_UNKNOWN_ENUM_VALUES_AS_NULL:true/false
-      READ_UNKNOWN_ENUM_VALUES_USING_DEFAULT_VALUE: true/false
-      UNWRAP_ROOT_VALUE: true/false
-      UNWRAP_SINGLE_VALUE_ARRAYS: true/false
-      USE_BIG_DECIMAL_FOR_FLOATS: true/false
-      USE_BIG_INTEGER_FOR_INTS: true/false
-      USE_JAVA_ARRAY_FOR_JSON_ARRAY: true/false
-      USE_LONG_FOR_INTS: true/false
-      WRAP_EXCEPTIONS: true/false
-</code></pre><p>Please note that spring boot configuration support <strong>Relax Binding</strong> that means properties can be in uppercase or lowercase, both are valid.</p>
-<pre><code>spring:
-  jackson:
-    serialization:
-      INDENT_OUTPUT: true
-</code></pre><p>is same as</p>
-<pre><code>spring:
-  jackson:
-    serialization:
-      indent_output: true
-</code></pre><h2 id="examples">Examples</h2>
+<h2 id="examples">Examples</h2>
 <p>Let&rsquo;s define a <code>UserController</code> with <code>GET</code> and <code>POST</code> HTTP methods:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.example.api.controller<span style="color:#f92672">;</span>
 
@@ -543,6 +476,122 @@ if (!doNotTrack) {
 <span style="color:#f92672">}</span>
 </code></pre></div><p>Let&rsquo;s look at various important configurations and their impact on API request and response<br>
 <br /></p>
+<h3 id="prevent-failure-on-unknown-property-in-json-request-body">Prevent Failure on Unknown Property in JSON Request Body</h3>
+<p>If there are unknown properties in JSON Request Body which cannot be mapped to Java Object then Jackson ObjectMapper throw <em>UnrecognizedPropertyException</em>. This feature is enabled by default.</p>
+<p>Let&rsquo;s add extra field <code>gender</code> in POST request body which is not there in <code>User</code> request mapping Object. It will throw exception.</p>
+<p><strong>spring.jackson.deserialization.FAIL_ON_UNKNOWN_PROPERTIES = true (default)</strong></p>
+<pre><code><div class="code_output">application.yml</div>
+spring:
+  jackson:
+    deserialization:
+      FAIL_ON_UNKNOWN_PROPERTIES: true
+
+<div class="code_output">Request</div>
+curl -X POST \
+  http://localhost:8080/users \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -d '{
+	&quot;id&quot;: 1,
+	&quot;name&quot;: &quot;Ashish&quot;,
+	&quot;dateOfBirth&quot;: &quot;1986-08-22&quot;,
+	&quot;gender&quot;: &quot;male&quot;
+}'
+
+<div class="code_output">Response Error</div>
+JSON parse error: Unrecognized field &quot;gender&quot; (class com.example.api.model.User), not marked as ignorable; 
+nested exception is com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException:
+Unrecognized field &quot;gender&quot; (class com.example.api.model.User), not marked as ignorable (3 known properties: &quot;dateOfBirth&quot;, &quot;id&quot;, &quot;name&quot;])
+</code></pre><p>We can disable this feature to allow unknown properties (or extra fields) in our JSON Request Body. Please note that if you are using Spring Boot&rsquo;s default ObjectMapper then you don&rsquo;t need to do anything as this feature is disabled by default.</p>
+<p>We see that POST request did not fail this time and returned <code>id</code> of created user.</p>
+<p><strong>spring.jackson.deserialization.FAIL_ON_UNKNOWN_PROPERTIES = false</strong></p>
+<pre><code><div class="code_output">application.yml</div>
+spring:
+  jackson:
+    deserialization:
+      FAIL_ON_UNKNOWN_PROPERTIES: false
+
+<div class="code_output">Request</div>
+curl -X POST \
+  http://localhost:8080/users \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -d '{
+	&quot;id&quot;: 1,
+	&quot;name&quot;: &quot;Ashish&quot;,
+	&quot;dateOfBirth&quot;: &quot;1986-08-22&quot;,
+	&quot;gender&quot;: &quot;male&quot;
+}'
+
+<div class="code_output">Response</div>
+1
+</code></pre><p><br /></p>
+<h3 id="dont-allow-certain-property-in-json-request-body">Don&rsquo;t allow certain property in JSON Request Body</h3>
+<p>Sometime we don&rsquo;t want certain properties such as <code>id</code> to be sent in request body because you would be generating that <code>id</code> in backend. In such case you can annotate such properties with <code>@JsonIgnore</code> and enable <code>FAIL_ON_IGNORED_PROPERTIES</code> feature.</p>
+<p>This feature throw <em>IgnoredPropertyException</em> if ignored properties are passed in JSON Request Body. This feature is disabled by default.</p>
+<p>We can annotate the <code>id</code> property in this way:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.example.api.model<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> <span style="color:#f92672">{</span>
+
+  <span style="color:#a6e22e">@JsonIgnore</span>
+  <span style="color:#66d9ef">private</span> Long id<span style="color:#f92672">;</span>
+	
+  <span style="color:#66d9ef">private</span> String name<span style="color:#f92672">;</span>
+	
+  <span style="color:#66d9ef">private</span> LocalDate dateOfBirth<span style="color:#f92672">;</span>
+  
+  <span style="color:#66d9ef">private</span> LocalDateTime lastLogin<span style="color:#f92672">;</span>
+
+	<span style="color:#75715e">/* Getters and Setters */</span>	
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Let&rsquo;s see the default behavior first where it allow ignored properties:</p>
+<p><strong>spring.jackson.deserialization.FAIL_ON_IGNORED_PROPERTIES = false (default)</strong></p>
+<pre><code><div class="code_output">application.yml</div>
+spring:
+  jackson:
+    deserialization:
+      FAIL_ON_IGNORED_PROPERTIES: false
+
+<div class="code_output">Request</div>
+curl -X POST \
+  http://localhost:8080/users \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -d '{
+	&quot;id&quot;: 1,
+	&quot;name&quot;: &quot;Ashish&quot;,
+	&quot;dateOfBirth&quot;: &quot;1986-08-22&quot;
+}'
+
+<div class="code_output">Response Error</div>
+1
+</code></pre><p>We see that POST request throw exception when we pass <code>id</code> in JSON Request Body once we enable this feature</p>
+<p><strong>spring.jackson.deserialization.FAIL_ON_IGNORED_PROPERTIES = true</strong></p>
+<pre><code><div class="code_output">application.yml</div>
+spring:
+  jackson:
+    deserialization:
+      FAIL_ON_IGNORED_PROPERTIES: true
+
+<div class="code_output">Request</div>
+curl -X POST \
+  http://localhost:8080/users \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -d '{
+	&quot;id&quot;: 1,
+	&quot;name&quot;: &quot;Ashish&quot;,
+	&quot;dateOfBirth&quot;: &quot;1986-08-22&quot;
+}'
+
+<div class="code_output">Response</div>
+JSON parse error: Ignored field &quot;id&quot; (class com.example.api.model.User) encountered; 
+mapper configured not to allow this; 
+nested exception is com.fasterxml.jackson.databind.exc.IgnoredPropertyException: 
+Ignored field &quot;id&quot; (class com.example.api.model.User) encountered; 
+mapper configured not to allow this (3 known properties: &quot;dateOfBirth&quot;, &quot;name&quot;, &quot;lastLogin&quot;])
+</code></pre><p><br /></p>
 <h3 id="pretty-print-json-response">Pretty Print JSON Response</h3>
 <p>API JSON responses are not pretty print (formatted) by default.</p>
 <p><strong>spring.jackson.serialization.INDENT_OUTPUT = false (default)</strong></p>
@@ -627,7 +676,6 @@ curl -X GET http://localhost:8080/users/1
 
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> <span style="color:#f92672">{</span>
 	
-	<span style="color:#a6e22e">@ApiModelProperty</span><span style="color:#f92672">(</span>hidden <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">)</span>
 	<span style="color:#66d9ef">private</span> Long id<span style="color:#f92672">;</span>
 	
 	<span style="color:#66d9ef">private</span> String name<span style="color:#f92672">;</span>
@@ -637,8 +685,8 @@ curl -X GET http://localhost:8080/users/1
 	
 	<span style="color:#a6e22e">@JsonFormat</span><span style="color:#f92672">(</span>pattern<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dd MMM yyyy hh:mm:ss&#34;</span><span style="color:#f92672">)</span>
 	<span style="color:#66d9ef">private</span> LocalDateTime lastLogin<span style="color:#f92672">;</span>
-
-  <span style="color:#a6e22e">@JsonFormat</span><span style="color:#f92672">(</span>pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;yyyy-MM-dd@HH:mm:ss.SSSXXX&#34;</span><span style="color:#f92672">,</span> locale <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;en_SG&#34;</span><span style="color:#f92672">,</span> timezone <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Asia/Singapore&#34;</span><span style="color:#f92672">)</span>
+	
+	<span style="color:#a6e22e">@JsonFormat</span><span style="color:#f92672">(</span>pattern <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;yyyy-MM-dd@HH:mm:ss.SSSXXX&#34;</span><span style="color:#f92672">,</span> locale <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;en_SG&#34;</span><span style="color:#f92672">,</span> timezone <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Asia/Singapore&#34;</span><span style="color:#f92672">)</span>
 	<span style="color:#66d9ef">private</span> ZonedDateTime zonedDateTime<span style="color:#f92672">;</span>
 
 	<span style="color:#75715e">/* Getters and Setters */</span>	
@@ -661,60 +709,78 @@ curl -X GET http://localhost:8080/users/1
   &quot;lastLogin&quot; : &quot;03 Jul 2020 01:03:34&quot;,
   &quot;zonedDateTime&quot; : &quot;2020-07-03@01:03:34.467+08:00&quot;
 }
-</code></pre><p><br /></p>
-<h3 id="prevent-failure-on-unknown-property-in-json-request-body">Prevent Failure on Unknown Property in JSON Request Body</h3>
-<p>If there are unknown properties in JSON Request Body which cannot be mapped to Java Object then Jackson ObjectMapper throw <em>UnrecognizedPropertyException</em>. This feature is enabled by default.</p>
-<p>Let&rsquo;s add extra field <code>gender</code> in POST request body which is not there in <code>User</code> request mapping Object. It will throw exception.</p>
-<p><strong>spring.jackson.deserialization.FAIL_ON_UNKNOWN_PROPERTIES = true (default)</strong></p>
-<pre><code><div class="code_output">application.yml</div>
-spring:
+</code></pre><p>Please note that once you apply <code>@JsonFormat</code> annotation on Date and DateTime fields, same format would be used for JSON deserialization. That means you need to pass date or datetime parameters in JSON request body of an HTTP request in same format.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>We looked at some of the useful configurations. Here is the full list of Jackson serialization and deserialization properties configurable in Spring Boot Application using <em>application.yml</em>, or <em>application.properties</em> file.</p>
+<h6 id="applicationyml">application.yml</h6>
+<pre><code>spring:
   jackson:
+    serialization:
+      CLOSE_CLOSEABLE: true/false
+      EAGER_SERIALIZER_FETCH: true/false
+      FAIL_ON_EMPTY_BEANS: true/false
+      FAIL_ON_SELF_REFERENCES: true/false
+      FAIL_ON_UNWRAPPED_TYPE_IDENTIFIERS: true/false
+      FLUSH_AFTER_WRITE_VALUE: true/false
+      INDENT_OUTPUT: true/false
+      ORDER_MAP_ENTRIES_BY_KEYS: true/false
+      USE_EQUALITY_FOR_OBJECT_ID: true/false
+      WRAP_EXCEPTIONS: true/false
+      WRAP_ROOT_VALUE: true/false
+      WRITE_BIGDECIMAL_AS_PLAIN: true/false
+      WRITE_CHAR_ARRAYS_AS_JSON_ARRAYS: true/false
+      WRITE_DATES_AS_TIMESTAMPS: true/false
+      WRITE_DATES_WITH_ZONE_ID: true/false
+      WRITE_DATE_KEYS_AS_TIMESTAMPS: true/false
+      WRITE_DATE_TIMESTAMPS_AS_NANOSECONDS: true/false
+      WRITE_DURATIONS_AS_TIMESTAMPS: true/false
+      WRITE_EMPTY_JSON_ARRAYS: true/false
+      WRITE_ENUMS_USING_INDEX: true/false
+      WRITE_ENUMS_USING_TO_STRING: true/false
+      WRITE_ENUM_KEYS_USING_INDEX: true/false
+      WRITE_NULL_MAP_VALUES: true/false
+      WRITE_SELF_REFERENCES_AS_NULL: true/false
+      WRITE_SINGLE_ELEM_ARRAYS_UNWRAPPED: true/false
     deserialization:
-      FAIL_ON_UNKNOWN_PROPERTIES: true
-
-<div class="code_output">Request</div>
-curl -X POST \
-  http://localhost:8080/users \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -d '{
-	&quot;id&quot;: 1,
-	&quot;name&quot;: &quot;Ashish&quot;,
-	&quot;dateOfBirth&quot;: &quot;1986-08-22&quot;,
-	&quot;gender&quot;: &quot;male&quot;
-}'
-
-<div class="code_output">Response Error</div>
-ERROR .w.s.m.s.DefaultHandlerExceptionResolver : 
-[org.springframework.http.converter.HttpMessageNotReadableException: 
-JSON parse error: Unrecognized field &quot;gender&quot; (class com.example.api.model.User), not marked as ignorable; 
-nested exception is com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException:
-Unrecognized field &quot;gender&quot; (class com.example.api.model.User), not marked as ignorable (3 known properties: &quot;dateOfBirth&quot;, &quot;id&quot;, &quot;name&quot;])
-</code></pre><p>We can disable this feature to allow unknown properties (or extra fields) in our JSON Request Body. Please note that if you are using Spring Boot&rsquo;s default ObjectMapper then this feature is disabled by default.</p>
-<p>We see that POST request did not fail this time and returned created user id.</p>
-<p><strong>spring.jackson.deserialization.FAIL_ON_UNKNOWN_PROPERTIES = false</strong></p>
-<pre><code><div class="code_output">application.yml</div>
-spring:
+      ACCEPT_EMPTY_ARRAY_AS_NULL_OBJECT: true/false
+      ACCEPT_EMPTY_STRING_AS_NULL_OBJECT: true/false
+      ACCEPT_FLOAT_AS_INT: true/false
+      ACCEPT_SINGLE_VALUE_AS_ARRAY: true/false
+      ADJUST_DATES_TO_CONTEXT_TIME_ZONE: true/false
+      EAGER_DESERIALIZER_FETCH: true/false
+      FAIL_ON_IGNORED_PROPERTIES: true/false
+      FAIL_ON_INVALID_SUBTYPE: true/false
+      FAIL_ON_MISSING_CREATOR_PROPERTIES: true/false
+      FAIL_ON_MISSING_EXTERNAL_TYPE_ID_PROPERTY: true/false
+      FAIL_ON_NULL_CREATOR_PROPERTIES: true/false
+      FAIL_ON_NULL_FOR_PRIMITIVES: true/false
+      FAIL_ON_NUMBERS_FOR_ENUMS: true/false
+      FAIL_ON_READING_DUP_TREE_KEY: true/false
+      FAIL_ON_TRAILING_TOKENS: true/false
+      FAIL_ON_UNKNOWN_PROPERTIES: true/false
+      FAIL_ON_UNRESOLVED_OBJECT_IDS: true/false
+      READ_DATE_TIMESTAMPS_AS_NANOSECONDS: true/false
+      READ_ENUMS_USING_TO_STRING: true/false
+      READ_UNKNOWN_ENUM_VALUES_AS_NULL:true/false
+      READ_UNKNOWN_ENUM_VALUES_USING_DEFAULT_VALUE: true/false
+      UNWRAP_ROOT_VALUE: true/false
+      UNWRAP_SINGLE_VALUE_ARRAYS: true/false
+      USE_BIG_DECIMAL_FOR_FLOATS: true/false
+      USE_BIG_INTEGER_FOR_INTS: true/false
+      USE_JAVA_ARRAY_FOR_JSON_ARRAY: true/false
+      USE_LONG_FOR_INTS: true/false
+      WRAP_EXCEPTIONS: true/false
+</code></pre><p>Please note that spring boot configuration support <strong>Relaxed Binding</strong> that means properties can be in uppercase or lowercase, both are valid.</p>
+<pre><code>spring:
   jackson:
-    deserialization:
-      FAIL_ON_UNKNOWN_PROPERTIES: false
-
-<div class="code_output">Request</div>
-curl -X POST \
-  http://localhost:8080/users \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -d '{
-	&quot;id&quot;: 1,
-	&quot;name&quot;: &quot;Ashish&quot;,
-	&quot;dateOfBirth&quot;: &quot;1986-08-22&quot;,
-	&quot;gender&quot;: &quot;male&quot;
-}'
-
-<div class="code_output">Response</div>
-1
-</code></pre><p><br /></p>
-<p>That&rsquo;s it for now. I&rsquo;ll keep updating this post with more practical use cases as I come across.</p>
+    serialization:
+      INDENT_OUTPUT: true
+</code></pre><p>is same as</p>
+<pre><code>spring:
+  jackson:
+    serialization:
+      indent_output: true
+</code></pre><p>That&rsquo;s it for now. I&rsquo;ll keep updating this post with more practical use cases as I come across.</p>
 <blockquote>
 <p>Download the source code for these examples from <a href="https://github.com/ashishlahoti/springboot-api">github/springboot-api</a></p>
 </blockquote>
