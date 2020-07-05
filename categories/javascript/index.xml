@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>How to Replace all Occurrences of a String in JavaScript</title>
+      <link>https://codingnconcepts.com/javascript/how-to-replace-all-occurrences-string-javascript/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/javascript/how-to-replace-all-occurrences-string-javascript/</guid>
+      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn how to replace all occurrences of a string in JavaScript using &lt;code&gt;String.replace()&lt;/code&gt; method. We will also look at &lt;code&gt;String.split()&lt;/code&gt; and &lt;code&gt;Array.join()&lt;/code&gt; approach.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>How to Reverse an Array in JavaScript</title>
       <link>https://codingnconcepts.com/javascript/how-to-reverse-array-in-javascript/</link>
       <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>

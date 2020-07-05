@@ -6,10 +6,19 @@
     <description>Recent content in Javascript Core on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 04 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://codingnconcepts.com/tags/javascript-core/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to Replace all Occurrences of a String in JavaScript</title>
+      <link>https://codingnconcepts.com/javascript/how-to-replace-all-occurrences-string-javascript/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/javascript/how-to-replace-all-occurrences-string-javascript/</guid>
+      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn how to replace all occurrences of a string in JavaScript using &lt;code&gt;String.replace()&lt;/code&gt; method. We will also look at &lt;code&gt;String.split()&lt;/code&gt; and &lt;code&gt;Array.join()&lt;/code&gt; approach.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Math Constants and Functions in JavaScript</title>

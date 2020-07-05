@@ -4,13 +4,13 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>How to Reverse an Array in JavaScript - Coding N Concepts</title>
+	<title>How to Replace all Occurrences of a String in JavaScript - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Understand how to reverse an array in JavaScript or Make a new copy of reversed array in JavaScript.">
-	<meta property="og:title" content="How to Reverse an Array in JavaScript" />
-<meta property="og:description" content="Understand how to reverse an array in JavaScript or Make a new copy of reversed array in JavaScript." />
+	<meta name="description" content="Understand how to replace all occurrences of a string in JavaScript using String replace method with RegEx. We can also use String split and Array join together to replace all occurrences.">
+	<meta property="og:title" content="How to Replace all Occurrences of a String in JavaScript" />
+<meta property="og:description" content="Understand how to replace all occurrences of a string in JavaScript using String replace method with RegEx. We can also use String split and Array join together to replace all occurrences." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://codingnconcepts.com/javascript/how-to-reverse-array-in-javascript/" />
+<meta property="og:url" content="https://codingnconcepts.com/javascript/how-to-replace-all-occurrences-string-javascript/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/js.png" />
 <meta property="article:published_time" content="2020-07-05T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-07-05T00:00:00+00:00" />
@@ -19,13 +19,13 @@
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
 <meta property="article:publisher" content="https://www.facebook.com/codingnconcepts" />
 <meta property="article:section" content="javascript" />
-<meta property="article:tag" content="Javascript Array" />
+<meta property="article:tag" content="Javascript Core" />
 <meta property="fb:admins" content="177784346770196" />
 	<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://codingnconcepts.com/img/logo/js.png"/>
 
-<meta name="twitter:title" content="How to Reverse an Array in JavaScript"/>
-<meta name="twitter:description" content="Understand how to reverse an array in JavaScript or Make a new copy of reversed array in JavaScript."/>
+<meta name="twitter:title" content="How to Replace all Occurrences of a String in JavaScript"/>
+<meta name="twitter:description" content="Understand how to replace all occurrences of a string in JavaScript using String replace method with RegEx. We can also use String split and Array join together to replace all occurrences."/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -33,7 +33,7 @@
 	<link rel="stylesheet" href="/css/style.css">
 	
 	<link rel="shortcut icon" href="/favicon.ico">
-	<link rel="canonical" href="https://codingnconcepts.com/javascript/how-to-reverse-array-in-javascript/">
+	<link rel="canonical" href="https://codingnconcepts.com/javascript/how-to-replace-all-occurrences-string-javascript/">
 		
 <script type="application/javascript">
 var doNotTrack = false;
@@ -51,15 +51,15 @@ if (!doNotTrack) {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
     "articleSection": "javascript",
-    "name": "How to Reverse an Array in JavaScript",
-    "headline": "How to Reverse an Array in JavaScript",
+    "name": "How to Replace all Occurrences of a String in JavaScript",
+    "headline": "How to Replace all Occurrences of a String in JavaScript",
     "alternativeHeadline": "",
-    "description": "Understand how to reverse an array in JavaScript or Make a new copy of reversed array in JavaScript.",
+    "description": "Understand how to replace all occurrences of a string in JavaScript using String replace method with RegEx. We can also use String split and Array join together to replace all occurrences.",
     "inLanguage": "en-us",
 	"isFamilyFriendly": "true",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https:\/\/codingnconcepts.com\/javascript\/how-to-reverse-array-in-javascript\/"
+        "@id": "https:\/\/codingnconcepts.com\/javascript\/how-to-replace-all-occurrences-string-javascript\/"
     },
     "author" : {
         "@type": "Person",
@@ -90,9 +90,9 @@ if (!doNotTrack) {
         }
     },
     "image": ["https://codingnconcepts.com/img/logo/js.png"],
-    "url" : "https:\/\/codingnconcepts.com\/javascript\/how-to-reverse-array-in-javascript\/",
-    "wordCount" : "286",
-    "genre" : ["Javascript Array"],
+    "url" : "https:\/\/codingnconcepts.com\/javascript\/how-to-replace-all-occurrences-string-javascript\/",
+    "wordCount" : "408",
+    "genre" : ["Javascript Core"],
     "keywords" :  null 
 }
 </script>
@@ -104,7 +104,7 @@ if (!doNotTrack) {
 	<div class="container">
 		<div class="logo">
 			<a class="logo__link" href="/" title="Coding N Concepts" rel="home">
-				<div class="logo__title"><img src="/favicon-32x32.png" alt="How to Reverse an Array in JavaScript"> Coding N Concepts</div>
+				<div class="logo__title"><img src="/favicon-32x32.png" alt="How to Replace all Occurrences of a String in JavaScript"> Coding N Concepts</div>
 				<div class="logo__tagline">Ashish Lahoti&#39;s Technical Blog</div>
 			</a>
 		</div>
@@ -381,7 +381,7 @@ if (!doNotTrack) {
 <main class="main" role="main">
 	<article class="post" autonumbering>
 		<header class="post__header">
-			<h1 class="post__title"><img class="post__thumbnail" src="/img/logo/js.png" alt="How to Reverse an Array in JavaScript"> How to Reverse an Array in JavaScript</h1>
+			<h1 class="post__title"><img class="post__thumbnail" src="/img/logo/js.png" alt="How to Replace all Occurrences of a String in JavaScript"> How to Replace all Occurrences of a String in JavaScript</h1>
 			<div class="post__meta meta"><div class="meta__item-author meta__item">
 	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg> <span class="meta__text">Ashish Lahoti</span>
 </div>
@@ -401,69 +401,79 @@ if (!doNotTrack) {
 	<div class="toc__menu">
 		<nav id="TableOfContents">
   <ul>
-    <li><a href="#arrayreverse">Array.reverse</a></li>
-    <li><a href="#spread-operator--and-arrayreverse">Spread Operator (&hellip;) and Array.reverse</a></li>
-    <li><a href="#arrayslice-and-arrayreverse">Array.slice and Array.reverse</a></li>
-    <li><a href="#arrayfrom-and-arrayreverse">Array.from and Array.reverse</a></li>
+    <li><a href="#using-stringreplace">Using String.replace</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#using-stringsplit-and-arrayjoin">Using String.split and Array.join</a></li>
   </ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
-			<p>In this tutorial, we&rsquo;ll learn how to reverse an Array in JavaScript.</p>
-<h2 id="arrayreverse">Array.reverse</h2>
-<p>The easiest way to reverse an array is to use <code>reverse()</code> method.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">list</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>];
-<span style="color:#a6e22e">list</span>.<span style="color:#a6e22e">reverse</span>();
+			<p>In this tutorial, we&rsquo;ll learn how to replace all occurrences of a string in JavaScript using <code>String.replace()</code> method. We will also look at <code>String.split()</code> and <code>Array.join()</code> approach.</p>
+<h2 id="using-stringreplace">Using String.replace</h2>
+<p>Let&rsquo;s take a quick look on the syntax:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">newStr</span> <span style="color:#f92672">=</span> String.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">&#34;pattern&#34;</span>, <span style="color:#e6db74">&#34;replacement&#34;</span>);
+</code></pre></div><p>The <code>String.replace()</code> method returns a new string after replacing the occurrences of matched <code>pattern</code> by <code>replacement</code>.</p>
+<h5 id="pattern-as-string-vs-regex">Pattern as String vs RegEx</h5>
+<p>Important point to note that the <code>pattern</code> can be a <code>String</code> or a <code>RegEx</code>.</p>
+<ul>
+<li>If <code>pattern</code> is <code>String</code>, then only the first occurrence is replaced.</li>
+<li>If <code>pattern</code> is <code>RegEx</code>, then all the occurrence are replaced if global flag <code>/g</code> is used. You can also enable the case insensitive replacement by using <code>/i</code> flag.</li>
+</ul>
+<p>Let&rsquo;s look at the example,</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">lyrics</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Smelly cat, smelly cat what are they feeding you?&#34;</span>;
 
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">list</span>); 
-<span style="color:#75715e">// prints [5, 4, 3, 2, 1]
-</span></code></pre></div><p>Here is the catch, it reversed the elements of your original array. Sometime you wish not to alter the original array, and assign it to a new variable instead.</p>
-<p>You can do in two steps:</p>
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">lyrics</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">&#34;cat&#34;</span>, <span style="color:#e6db74">&#34;kitty&#34;</span>));  <span style="color:#75715e">//pattern is String
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">lyrics</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/cat/</span>, <span style="color:#e6db74">&#34;kitty&#34;</span>));  <span style="color:#75715e">//pattern is RegEx
+</span></code></pre></div><pre><code><div class="code_output">Output</div>
+&quot;Smelly kitty, smelly cat what are they feeding you?&quot;
+&quot;Smelly kitty, smelly cat what are they feeding you?&quot;
+</code></pre><p>We see that pattern as <code>String</code> or <code>RegEx</code> both returned the same result and replaced only first occurrence.</p>
+<h5 id="regex-with-global-flag-g">RegEx with global flag <code>/g</code></h5>
+<p>Let&rsquo;s use the <code>RegEx</code> with global flag <code>/g</code> to replace all the occurrences.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">lyrics</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Smelly cat, smelly cat what are they feeding you?&#34;</span>;
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">lyrics</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/cat/g</span>, <span style="color:#e6db74">&#34;kitty&#34;</span>));
+</code></pre></div><pre><code><div class="code_output">Output</div>
+&quot;Smelly kitty, smelly kitty what are they feeding you?&quot;
+</code></pre><h5 id="regex-with-case-insensitive-flag-i">RegEx with case insensitive flag <code>/i</code></h5>
+<p>Please note that above replacements are <strong>case sensitive</strong>, If we try this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">lyrics</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Smelly cat, smelly cat what are they feeding you?&#34;</span>;
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">lyrics</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/Smelly cat/g</span>, <span style="color:#e6db74">&#34;Sweet kitty&#34;</span>));
+</code></pre></div><pre><code><div class="code_output">Output</div>
+&quot;Sweet kitty, smelly cat what are they feeding you?&quot;
+</code></pre><p>We see that only first occurrence is replaced. We can enable case insensitive replacement by using <code>/i</code> flag in <code>RegEx</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">lyrics</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Smelly cat, smelly cat what are they feeding you?&#34;</span>;
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">lyrics</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/Smelly cat/gi</span>, <span style="color:#e6db74">&#34;Sweet kitty&#34;</span>));
+</code></pre></div><pre><code><div class="code_output">Output</div>
+&quot;Sweet kitty, Sweet kitty what are they feeding you?&quot;
+</code></pre><p>Yay! We are able to replace all occurrences of a string using <code>Regex</code> with global and case insensitive flag <code>/gi</code></p>
+<h2 id="using-stringsplit-and-arrayjoin">Using String.split and Array.join</h2>
+<p>An alternative approach which is slower as compare to <code>String.replace()</code> is two step approach:-</p>
 <ol>
-<li>First you have to make a copy of the original array</li>
-<li>Reverse the copy and assign it to a new variable</li>
+<li>Split the string using <code>String.split()</code> to remove the occurrence of matched (case sensitive) pattern and returns array,</li>
+<li>Join the array again using <code>Array.join()</code> with replacement string</li>
 </ol>
-<p>In Javascript, you can do this in multiple ways in a single statement.</p>
-<h2 id="spread-operator--and-arrayreverse">Spread Operator (&hellip;) and Array.reverse</h2>
-<p>It is recommended to use spread operator <code>...</code> to make a copy of an array and chain it with <code>reverse()</code> method. It’s short syntax is very handy.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">list</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>];
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">reversedList</span> <span style="color:#f92672">=</span> [...<span style="color:#a6e22e">list</span>].<span style="color:#a6e22e">reverse</span>();
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">newStr</span> <span style="color:#f92672">=</span> String.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;pattern&#34;</span>).<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#34;replacement&#34;</span>);
+</code></pre></div><p>Let&rsquo;s look at the example.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">lyrics</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Smelly cat, smelly cat what are they feeding you?&#34;</span>;
 
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">list</span>);          
-<span style="color:#75715e">// prints [1, 2, 3, 4, 5]
-</span><span style="color:#75715e"></span>
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">reversedList</span>);  
-<span style="color:#75715e">// prints [5, 4, 3, 2, 1]
-</span></code></pre></div><p>We see that our original array remains the same and reversed array is assigned to a new variable.</p>
-<h2 id="arrayslice-and-arrayreverse">Array.slice and Array.reverse</h2>
-<p>You can also chain <code>slice()</code> method with <code>reverse()</code> method to make a new copy of reversed array.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">list</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>];
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">reversedList</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">list</span>.<span style="color:#a6e22e">slice</span>().<span style="color:#a6e22e">reverse</span>();
-
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">list</span>);          
-<span style="color:#75715e">// prints [1, 2, 3, 4, 5]
-</span><span style="color:#75715e"></span>
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">reversedList</span>);  
-<span style="color:#75715e">// prints [5, 4, 3, 2, 1]
-</span></code></pre></div><h2 id="arrayfrom-and-arrayreverse">Array.from and Array.reverse</h2>
-<p>Another way is to chain <code>Array.from()</code> method with <code>reverse()</code> method to make a new copy of reversed array.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">list</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>];
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">reversedList</span> <span style="color:#f92672">=</span> Array.<span style="color:#a6e22e">from</span>(<span style="color:#a6e22e">list</span>).<span style="color:#a6e22e">reverse</span>();
-
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">list</span>);          
-<span style="color:#75715e">// prints [1, 2, 3, 4, 5]
-</span><span style="color:#75715e"></span>
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">reversedList</span>);  
-<span style="color:#75715e">// prints [5, 4, 3, 2, 1]
-</span></code></pre></div>
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">lyrics</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;cat&#34;</span>).<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#34;kitty&#34;</span>));
+</code></pre></div><pre><code><div class="code_output">Output</div>
+&quot;Smelly kitty, smelly kitty what are they feeding you?&quot;
+</code></pre>
 		</div>
 		<footer class="post__footer">
 			
 <div class="post__tags tags clearfix">
 	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link btn" href="/tags/javascript-array/" rel="tag">Javascript Array</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/javascript-core/" rel="tag">Javascript Core</a></li>
 	</ul>
 </div>
 		</footer>
@@ -479,7 +489,7 @@ if (!doNotTrack) {
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?hashtags=codingnconcepts&amp;url=https%3a%2f%2fcodingnconcepts.com%2fjavascript%2fhow-to-reverse-array-in-javascript%2f&amp;text=How%20to%20Reverse%20an%20Array%20in%20JavaScript" target="_blank" rel="noopener" aria-label="Share on Twitter" class="share-btn twitter">
+        <a href="https://twitter.com/intent/tweet?hashtags=codingnconcepts&amp;url=https%3a%2f%2fcodingnconcepts.com%2fjavascript%2fhow-to-replace-all-occurrences-string-javascript%2f&amp;text=How%20to%20Replace%20all%20Occurrences%20of%20a%20String%20in%20JavaScript" target="_blank" rel="noopener" aria-label="Share on Twitter" class="share-btn twitter">
           <svg class="widget-social__link-icon icon icon-twitter" width="24" height="24" viewBox="0 0 384 312"><path d="m384 36.9c-14.1 6.3-29.3 10.5-45.2 12.4 16.3-9.7 28.8-25.2 34.6-43.6-15.2 9-32.1 15.6-50 19.1-14.4-15.2-34.9-24.8-57.5-24.8-43.5 0-78.8 35.3-78.8 78.8 0 6.2.7 12.2 2 17.9-65.5-3.3-123.5-34.6-162.4-82.3-6.7 11.6-10.6 25.2-10.6 39.6 0 27.3 13.9 51.4 35 65.6-12.9-.4-25.1-4-35.7-9.9v1c0 38.2 27.2 70 63.2 77.2-6.6 1.8-13.6 2.8-20.8 2.8-5.1 0-10-.5-14.8-1.4 10 31.3 39.1 54.1 73.6 54.7-27 21.1-60.9 33.7-97.8 33.7-6.4 0-12.6-.4-18.8-1.1 34.9 22.4 76.3 35.4 120.8 35.4 144.9 0 224.1-120 224.1-224.1 0-3.4-.1-6.8-.2-10.2 15.4-11.1 28.7-25 39.3-40.8z"/></svg>
           <p>Twitter</p>
           </a>
@@ -489,7 +499,7 @@ if (!doNotTrack) {
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcodingnconcepts.com%2fjavascript%2fhow-to-reverse-array-in-javascript%2f" target="_blank" rel="noopener" aria-label="Share on Facebook" class="share-btn facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcodingnconcepts.com%2fjavascript%2fhow-to-replace-all-occurrences-string-javascript%2f" target="_blank" rel="noopener" aria-label="Share on Facebook" class="share-btn facebook">
           <svg class="widget-social__link-icon icon icon-facebook" width="24" height="24" viewBox="0 0 352 352"><path d="m0 32v288c0 17.5 14.5 32 32 32h288c17.5 0 32-14.5 32-32v-288c0-17.5-14.5-32-32-32h-288c-17.5 0-32 14.5-32 32zm320 0v288h-83v-108h41.5l6-48h-47.5v-31c0-14 3.5-23.5 23.5-23.5h26v-43.5c-4.4-.6-19.8-1.5-37.5-1.5-36.9 0-62 22.2-62 63.5v36h-42v48h42v108h-155v-288z"/></svg>
           <p>Facebook</p>
           </a>
@@ -499,7 +509,7 @@ if (!doNotTrack) {
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fcodingnconcepts.com%2fjavascript%2fhow-to-reverse-array-in-javascript%2f&amp;source=https%3a%2f%2fcodingnconcepts.com%2fjavascript%2fhow-to-reverse-array-in-javascript%2f&amp;title=How%20to%20Reverse%20an%20Array%20in%20JavaScript&amp;summary=How%20to%20Reverse%20an%20Array%20in%20JavaScript" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="share-btn linkedin">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fcodingnconcepts.com%2fjavascript%2fhow-to-replace-all-occurrences-string-javascript%2f&amp;source=https%3a%2f%2fcodingnconcepts.com%2fjavascript%2fhow-to-replace-all-occurrences-string-javascript%2f&amp;title=How%20to%20Replace%20all%20Occurrences%20of%20a%20String%20in%20JavaScript&amp;summary=How%20to%20Replace%20all%20Occurrences%20of%20a%20String%20in%20JavaScript" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="share-btn linkedin">
           <svg class="widget-social__link-icon icon icon-linkedin" width="24" height="24" viewBox="0 0 352 352"><path d="M0,40v272c0,21.9,18.1,40,40,40h272c21.9,0,40-18.1,40-40V40c0-21.9-18.1-40-40-40H40C18.1,0,0,18.1,0,40z M312,32 c4.6,0,8,3.4,8,8v272c0,4.6-3.4,8-8,8H40c-4.6,0-8-3.4-8-8V40c0-4.6,3.4-8,8-8H312z M59.5,87c0,15.2,12.3,27.5,27.5,27.5 c15.2,0,27.5-12.3,27.5-27.5c0-15.2-12.3-27.5-27.5-27.5C71.8,59.5,59.5,71.8,59.5,87z M187,157h-1v-21h-45v152h47v-75 c0-19.8,3.9-39,28.5-39c24.2,0,24.5,22.4,24.5,40v74h47v-83.5c0-40.9-8.7-72-56.5-72C208.5,132.5,193.3,145.1,187,157z M64,288h47.5 V136H64V288z"/></svg>
             <p>LinkedIn</p>
           </a>
@@ -509,7 +519,7 @@ if (!doNotTrack) {
       
       
       <li>
-        <a href="whatsapp://send?text=How%20to%20Reverse%20an%20Array%20in%20JavaScript%2c%20by%20Coding%20N%20Concepts%0aUnderstand%20how%20to%20reverse%20an%20array%20in%20JavaScript%20or%20Make%20a%20new%20copy%20of%20reversed%20array%20in%20JavaScript.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fhow-to-reverse-array-in-javascript%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=How%20to%20Replace%20all%20Occurrences%20of%20a%20String%20in%20JavaScript%2c%20by%20Coding%20N%20Concepts%0aUnderstand%20how%20to%20replace%20all%20occurrences%20of%20a%20string%20in%20JavaScript%20using%20String%20replace%20method%20with%20RegEx.%20We%20can%20also%20use%20String%20split%20and%20Array%20join%20together%20to%20replace%20all%20occurrences.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fhow-to-replace-all-occurrences-string-javascript%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>Email</p>
         </a>
@@ -519,7 +529,7 @@ if (!doNotTrack) {
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - How%20to%20Reverse%20an%20Array%20in%20JavaScript.&amp;body=How%20to%20Reverse%20an%20Array%20in%20JavaScript%2c%20by%20Coding%20N%20Concepts%0aUnderstand%20how%20to%20reverse%20an%20array%20in%20JavaScript%20or%20Make%20a%20new%20copy%20of%20reversed%20array%20in%20JavaScript.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fhow-to-reverse-array-in-javascript%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - How%20to%20Replace%20all%20Occurrences%20of%20a%20String%20in%20JavaScript.&amp;body=How%20to%20Replace%20all%20Occurrences%20of%20a%20String%20in%20JavaScript%2c%20by%20Coding%20N%20Concepts%0aUnderstand%20how%20to%20replace%20all%20occurrences%20of%20a%20string%20in%20JavaScript%20using%20String%20replace%20method%20with%20RegEx.%20We%20can%20also%20use%20String%20split%20and%20Array%20join%20together%20to%20replace%20all%20occurrences.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fhow-to-replace-all-occurrences-string-javascript%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>
@@ -534,15 +544,15 @@ if (!doNotTrack) {
     <h2 class = "related_post_title">See Also</h2>
     <ul class = "related_post">
         
-        <li><a href="/javascript/how-to-divide-array-in-equal-parts-in-javascript/">How to Divide an Array in Equal Parts in JavaScript</a></li>
+        <li><a href="/javascript/math-constants-and-functions-in-javascript/">Math Constants and Functions in JavaScript</a></li>
         
-        <li><a href="/javascript/array-destructuring/">How to use Array Destructuring in JavaScript</a></li>
+        <li><a href="/javascript/how-to-capitalize-first-letter-of-string-in-javascript/">How to Capitalize First Letter of String in JavaScript</a></li>
         
-        <li><a href="/javascript/how-to-remove-array-duplicates-in-javascript/">How to Remove Duplicates from Array in JavaScript</a></li>
+        <li><a href="/javascript/comparison-operators-in-javascript/">Difference in == and === comparison operators in JavaScript</a></li>
         
-        <li><a href="/javascript/how-to-clone-array-in-javascript/">How to Clone an Array in JavaScript</a></li>
+        <li><a href="/javascript/this-keyword-in-javascript/">Understand all about this keyword in JavaScript</a></li>
         
-        <li><a href="/javascript/how-to-sort-array-in-javascript/">How to Sort an Array in JavaScript</a></li>
+        <li><a href="/javascript/call-vs-bind-vs-apply/">Understand call, bind and apply methods in JavaScript</a></li>
         
     </ul>
 </div>
@@ -561,10 +571,10 @@ if (!doNotTrack) {
 
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="/javascript/math-constants-and-functions-in-javascript/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Math Constants and Functions in JavaScript</p></a>
+		<a class="post-nav__link" href="/javascript/how-to-reverse-array-in-javascript/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">How to Reverse an Array in JavaScript</p></a>
 	</div>
 	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="/javascript/how-to-replace-all-occurrences-string-javascript/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">How to Replace all Occurrences of a String in JavaScript</p></a>
+		<a class="post-nav__link" href="/javascript/how-to-divide-array-in-equal-parts-in-javascript/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">How to Divide an Array in Equal Parts in JavaScript</p></a>
 	</div>
 </nav>
 
