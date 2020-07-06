@@ -35,7 +35,7 @@
       <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/javascript/how-to-reverse-array-in-javascript/</guid>
-      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn how to reverse an Array in JavaScript.&lt;/p&gt;</description>
+      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn how to reverse an Array in JavaScript using &lt;code&gt;Array.reverse()&lt;/code&gt; method.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -98,7 +98,7 @@
       <pubDate>Thu, 18 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/javascript/how-to-sort-array-in-javascript/</guid>
-      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn how to sort an Array in JavaScript by using built-in sort() method&lt;/p&gt;</description>
+      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn how to sort an Array in JavaScript by using &lt;code&gt;Array.sort()&lt;/code&gt; method.&lt;/p&gt;</description>
     </item>
     
     <item>
