@@ -6,10 +6,19 @@
     <description>Recent content on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://codingnconcepts.com/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Difference Between forEach() and map() in JavaScript Array</title>
+      <link>https://codingnconcepts.com/javascript/difference-between-foreach-and-map-in-javascript-array/</link>
+      <pubDate>Wed, 08 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/javascript/difference-between-foreach-and-map-in-javascript-array/</guid>
+      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll see the difference between &lt;code&gt;Array.forEach()&lt;/code&gt; and &lt;code&gt;Array.map()&lt;/code&gt; methods in JavaScript Array.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>How to Divide an Array in Equal Parts in JavaScript</title>
