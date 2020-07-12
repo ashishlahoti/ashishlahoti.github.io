@@ -1,1213 +1,236 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Coding N Concepts</title>
-    <link>https://codingnconcepts.com/</link>
-    <description>Recent content on Coding N Concepts</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 12 Jul 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://codingnconcepts.com/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Pixel to Rem Converter</title>
-      <link>https://codingnconcepts.com/converter/pixel-to-rem/</link>
-      <pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/converter/pixel-to-rem/</guid>
-      <description>&lt;style&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Coding N Concepts</title><link>https://codingnconcepts.com/</link><description>Recent content on Coding N Concepts</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 12 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Pixel to Rem Converter</title><link>https://codingnconcepts.com/converter/pixel-to-rem/</link><pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/converter/pixel-to-rem/</guid><description>&lt;style>
 .form-label, .form-input {
-  display: block;
-  margin-bottom: 0.5rem;
+display: block;
+margin-bottom: 0.5rem;
 }
 .form-input {
-  padding: 10px;
-  font-size: 16px;
+padding: 10px;
+font-size: 16px;
 }
 .form-group {
-  margin: auto;
-  min-width: 50%;
+margin: auto;
+min-width: 50%;
 }
 .input-group {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  width: 100%;
+position: relative;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-ms-flex-wrap: wrap;
+flex-wrap: wrap;
+-webkit-box-align: stretch;
+-ms-flex-align: stretch;
+align-items: stretch;
+width: 100%;
 }
 .input-group-prepend {
-  margin-right: -1px;
-  display: flex;
+margin-right: -1px;
+display: flex;
 }
 .input-group-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: .375rem .75rem;
-  margin-bottom: 0;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #495057;
-  text-align: center;
-  white-space: nowrap;
-  background-color: #e9ecef;
-  border: 1px solid #ced4da;
-  border-radius: .25rem;
-  min-width: 60px;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-align: center;
+-ms-flex-align: center;
+align-items: center;
+padding: .375rem .75rem;
+margin-bottom: 0;
+font-size: 1rem;
+font-weight: 400;
+line-height: 1.5;
+color: #495057;
+text-align: center;
+white-space: nowrap;
+background-color: #e9ecef;
+border: 1px solid #ced4da;
+border-radius: .25rem;
+min-width: 60px;
 }
 .form-control {
-  display: block;
-  width: 100%;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: .25rem;
-  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+display: block;
+width: 100%;
+padding: .375rem .75rem;
+font-size: 1rem;
+line-height: 1.5;
+color: #495057;
+background-color: #fff;
+background-clip: padding-box;
+border: 1px solid #ced4da;
+border-radius: .25rem;
+transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
-.input-group&gt;.form-control:not(:first-child) {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+.input-group>.form-control:not(:first-child) {
+border-top-left-radius: 0;
+border-bottom-left-radius: 0;
 }
-.input-group&gt;.input-group-prepend&gt;.input-group-text {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+.input-group>.input-group-prepend>.input-group-text {
+border-top-right-radius: 0;
+border-bottom-right-radius: 0;
 }
-.input-group&gt;.form-control {
-  position: relative;
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 1%;
-  margin-bottom: 0;
-  padding: 10px;
+.input-group>.form-control {
+position: relative;
+-webkit-box-flex: 1;
+-ms-flex: 1 1 auto;
+flex: 1 1 auto;
+width: 1%;
+margin-bottom: 0;
+padding: 10px;
 }
 .input-group {
-  padding-bottom: 20px;
+padding-bottom: 20px;
 }
-&lt;/style&gt;</description>
-    </item>
-    
-    <item>
-      <title>RGB to HEX Converter</title>
-      <link>https://codingnconcepts.com/converter/rgx-to-hex/</link>
-      <pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/converter/rgx-to-hex/</guid>
-      <description>&lt;style&gt;
+&lt;/style></description></item><item><title>RGB to HEX Converter</title><link>https://codingnconcepts.com/converter/rgx-to-hex/</link><pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/converter/rgx-to-hex/</guid><description>&lt;style>
 .form-label, .form-input {
-  display: block;
-  margin-bottom: 0.5rem;
+display: block;
+margin-bottom: 0.5rem;
 }
 .form-input {
-  padding: 10px;
-  font-size: 16px;
+padding: 10px;
+font-size: 16px;
 }
 .form-group {
-  margin: auto;
-  min-width: 50%;
+margin: auto;
+min-width: 50%;
 }
 .input-group {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  width: 100%;
+position: relative;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-ms-flex-wrap: wrap;
+flex-wrap: wrap;
+-webkit-box-align: stretch;
+-ms-flex-align: stretch;
+align-items: stretch;
+width: 100%;
 }
 .input-group-prepend {
-  margin-right: -1px;
-  display: flex;
+margin-right: -1px;
+display: flex;
 }
 .input-group-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: .375rem .75rem;
-  margin-bottom: 0;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #495057;
-  text-align: center;
-  white-space: nowrap;
-  background-color: #e9ecef;
-  border: 1px solid #ced4da;
-  border-radius: .25rem;
-  min-width: 60px;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-align: center;
+-ms-flex-align: center;
+align-items: center;
+padding: .375rem .75rem;
+margin-bottom: 0;
+font-size: 1rem;
+font-weight: 400;
+line-height: 1.5;
+color: #495057;
+text-align: center;
+white-space: nowrap;
+background-color: #e9ecef;
+border: 1px solid #ced4da;
+border-radius: .25rem;
+min-width: 60px;
 }
 .form-control {
-  display: block;
-  width: 100%;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: .25rem;
-  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+display: block;
+width: 100%;
+padding: .375rem .75rem;
+font-size: 1rem;
+line-height: 1.5;
+color: #495057;
+background-color: #fff;
+background-clip: padding-box;
+border: 1px solid #ced4da;
+border-radius: .25rem;
+transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
-.input-group&gt;.form-control:not(:first-child) {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+.input-group>.form-control:not(:first-child) {
+border-top-left-radius: 0;
+border-bottom-left-radius: 0;
 }
-.input-group&gt;.input-group-prepend&gt;.input-group-text {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+.input-group>.input-group-prepend>.input-group-text {
+border-top-right-radius: 0;
+border-bottom-right-radius: 0;
 }
-.input-group&gt;.form-control {
-  position: relative;
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 1%;
-  margin-bottom: 0;
-  padding: 10px;
+.input-group>.form-control {
+position: relative;
+-webkit-box-flex: 1;
+-ms-flex: 1 1 auto;
+flex: 1 1 auto;
+width: 1%;
+margin-bottom: 0;
+padding: 10px;
 }
 .input-group {
-  padding-bottom: 20px;
+padding-bottom: 20px;
 }
-&lt;/style&gt;</description>
-    </item>
-    
-    <item>
-      <title>CSS units for font-size: px, em and rem</title>
-      <link>https://codingnconcepts.com/css/font-size-units-px-em-and-rem/</link>
-      <pubDate>Sat, 11 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/css/font-size-units-px-em-and-rem/</guid>
-      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn different units to measure font-size in CSS i.e. &lt;code&gt;px&lt;/code&gt;, &lt;code&gt;em&lt;/code&gt;, and &lt;code&gt;rem&lt;/code&gt;, their differences, and which one to use when.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Difference Between forEach() and map() in JavaScript Array</title>
-      <link>https://codingnconcepts.com/javascript/difference-between-foreach-and-map-in-javascript-array/</link>
-      <pubDate>Wed, 08 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/javascript/difference-between-foreach-and-map-in-javascript-array/</guid>
-      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll see the difference between &lt;code&gt;Array.forEach()&lt;/code&gt; and &lt;code&gt;Array.map()&lt;/code&gt; methods in JavaScript Array.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>How to Divide an Array in Equal Parts in JavaScript</title>
-      <link>https://codingnconcepts.com/javascript/how-to-divide-array-in-equal-parts-in-javascript/</link>
-      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/javascript/how-to-divide-array-in-equal-parts-in-javascript/</guid>
-      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn how to divide an Array in equal parts using &lt;code&gt;Array.splice()&lt;/code&gt; method in JavaScript. We will also learn how it is different from &lt;code&gt;Array.slice()&lt;/code&gt; method.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>How to Replace all Occurrences of a String in JavaScript</title>
-      <link>https://codingnconcepts.com/javascript/how-to-replace-all-occurrences-string-javascript/</link>
-      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/javascript/how-to-replace-all-occurrences-string-javascript/</guid>
-      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn how to replace all occurrences of a string in JavaScript using &lt;code&gt;String.replace()&lt;/code&gt; method. We will also look at &lt;code&gt;String.split()&lt;/code&gt; and &lt;code&gt;Array.join()&lt;/code&gt; approach.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>How to Reverse an Array in JavaScript</title>
-      <link>https://codingnconcepts.com/javascript/how-to-reverse-array-in-javascript/</link>
-      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/javascript/how-to-reverse-array-in-javascript/</guid>
-      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn how to reverse an Array in JavaScript using &lt;code&gt;Array.reverse()&lt;/code&gt; method.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Math Constants and Functions in JavaScript</title>
-      <link>https://codingnconcepts.com/javascript/math-constants-and-functions-in-javascript/</link>
-      <pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/javascript/math-constants-and-functions-in-javascript/</guid>
-      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn about Math Object in JavaScript, which allows us to use mathematical constants such as &lt;code&gt;π&lt;/code&gt;, &lt;code&gt;e&lt;/code&gt;, &lt;code&gt;√2&lt;/code&gt; and perform mathematical operations on numbers such as &lt;code&gt;pow()&lt;/code&gt;, &lt;code&gt;sqrt()&lt;/code&gt;, &lt;code&gt;max()&lt;/code&gt;, &lt;code&gt;min()&lt;/code&gt;, &lt;code&gt;random()&lt;/code&gt;, &lt;code&gt;abs()&lt;/code&gt;, &lt;code&gt;ceil()&lt;/code&gt;, &lt;code&gt;floor()&lt;/code&gt;, &lt;code&gt;round()&lt;/code&gt;, and &lt;code&gt;truc()&lt;/code&gt;.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Jackson JSON Request and Response Mapping in Spring Boot</title>
-      <link>https://codingnconcepts.com/spring-boot/jackson-json-request-response-mapping/</link>
-      <pubDate>Thu, 02 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/spring-boot/jackson-json-request-response-mapping/</guid>
-      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn how to map Jackson JSON request and response in Spring Boot Application with various Jackson configurations.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Add Sub Menu in Hugo Website</title>
-      <link>https://codingnconcepts.com/hugo/nested-menu-hugo/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/hugo/nested-menu-hugo/</guid>
-      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn how to add sub menu (nested menu) in Hugo Website.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>A Step-by-Step Guide to Create an AWS Account</title>
-      <link>https://codingnconcepts.com/aws/how-to-create-aws-account/</link>
-      <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/aws/how-to-create-aws-account/</guid>
-      <description>&lt;p&gt;This step by step guide is very helpful for beginners to create a personal account with AWS.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Build Your First AWS DeepRacer Model</title>
-      <link>https://codingnconcepts.com/aws/aws-deepracer/</link>
-      <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/aws/aws-deepracer/</guid>
-      <description>&lt;p&gt;This step-by-step guide is helpful for beginners trying their hands on machine learning and creating their first AWS DeepRacer model.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>How to use Array Destructuring in JavaScript</title>
-      <link>https://codingnconcepts.com/javascript/array-destructuring/</link>
-      <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/javascript/array-destructuring/</guid>
-      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn the usage of &lt;em&gt;Array Destructuring&lt;/em&gt; in JavaScript ES6 with examples.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>How to use Object Destructuring in JavaScript</title>
-      <link>https://codingnconcepts.com/javascript/object-destructuring/</link>
-      <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/javascript/object-destructuring/</guid>
-      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn the usage of &lt;em&gt;Object Destructuring&lt;/em&gt; in JavaScript ES6 with examples.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>How to Capitalize First Letter of String in JavaScript</title>
-      <link>https://codingnconcepts.com/javascript/how-to-capitalize-first-letter-of-string-in-javascript/</link>
-      <pubDate>Fri, 19 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/javascript/how-to-capitalize-first-letter-of-string-in-javascript/</guid>
-      <description>&lt;p&gt;In this quick tutorial, we&amp;rsquo;ll learn how to capitalize the first letter of a String in JavaScript.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>How to Remove Duplicates from Array in JavaScript</title>
-      <link>https://codingnconcepts.com/javascript/how-to-remove-array-duplicates-in-javascript/</link>
-      <pubDate>Fri, 19 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/javascript/how-to-remove-array-duplicates-in-javascript/</guid>
-      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn how to remove duplicates from an Array in JavaScript and return only unique values.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>How to Clone an Array in JavaScript</title>
-      <link>https://codingnconcepts.com/javascript/how-to-clone-array-in-javascript/</link>
-      <pubDate>Thu, 18 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/javascript/how-to-clone-array-in-javascript/</guid>
-      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn how to clone an Array in JavaScript and also learn the difference between &lt;em&gt;shallow copy&lt;/em&gt; and &lt;em&gt;deep copy&lt;/em&gt; of an Array.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>How to Sort an Array in JavaScript</title>
-      <link>https://codingnconcepts.com/javascript/how-to-sort-array-in-javascript/</link>
-      <pubDate>Thu, 18 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/javascript/how-to-sort-array-in-javascript/</guid>
-      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn how to sort an Array in JavaScript by using &lt;code&gt;Array.sort()&lt;/code&gt; method.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Top Java 8 Interview Questions</title>
-      <link>https://codingnconcepts.com/top-java-8-interview-questions/</link>
-      <pubDate>Wed, 17 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/top-java-8-interview-questions/</guid>
-      <description>&lt;p&gt;These Java interview questions are based on my personal interview experience. Topics are in the order of recent interview trends. Keep following this post link for regular updates.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>JavaScript Console API Walkthrough</title>
-      <link>https://codingnconcepts.com/javascript/console-api-walkthrough/</link>
-      <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/javascript/console-api-walkthrough/</guid>
-      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll walkthrough JavaScript&amp;rsquo;s Console API methods with quick examples&amp;hellip;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>JavaScript Debugging Tips and Tricks</title>
-      <link>https://codingnconcepts.com/javascript/debugging-tips-and-tricks/</link>
-      <pubDate>Thu, 11 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/javascript/debugging-tips-and-tricks/</guid>
-      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn plenty of tips and tricks for debugging JavaScript code using Chrome DevTool, different ways of logging to the console using console APIs, and much more&amp;hellip;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Client Side Search Engine for Hugo Website</title>
-      <link>https://codingnconcepts.com/hugo/client-side-search-engine-hugo/</link>
-      <pubDate>Mon, 08 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/hugo/client-side-search-engine-hugo/</guid>
-      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn how to setup client side search engine for Hugo Website without any backend server or additional build steps required.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Factory Design Pattern In Java</title>
-      <link>https://codingnconcepts.com/java/factory-design-pattern-java/</link>
-      <pubDate>Sun, 07 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/java/factory-design-pattern-java/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Factory Design Pattern&lt;/em&gt; is one of the most commonly used design patterns. It falls under the category of &lt;em&gt;Creational Design Patterns&lt;/em&gt;.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>console.table() in JavaScript</title>
-      <link>https://codingnconcepts.com/javascript/console-table-javascript/</link>
-      <pubDate>Sat, 06 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/javascript/console-table-javascript/</guid>
-      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn how we can display data in tabular format in console using &lt;em&gt;console.table()&lt;/em&gt; advance logging method. This comes in very handy to visualize complex array and objects in JavaScript.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Add Social Icons in Hugo Website Pages</title>
-      <link>https://codingnconcepts.com/hugo/social-icons-hugo/</link>
-      <pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/hugo/social-icons-hugo/</guid>
-      <description>&lt;p&gt;If you are using Hugo as a static site generator tool then you can create a partial to show social icons like facebook, twitter, linkedin, whatsapp etc to share page links on social media.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Customize sitemap in Hugo Website</title>
-      <link>https://codingnconcepts.com/hugo/sitemap-hugo/</link>
-      <pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/hugo/sitemap-hugo/</guid>
-      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn how to disable or customize &lt;em&gt;sitemap.xml&lt;/em&gt; for Hugo website.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>How to Compare two Strings in Java</title>
-      <link>https://codingnconcepts.com/java/compare-two-strings-in-java/</link>
-      <pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/java/compare-two-strings-in-java/</guid>
-      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn different ways to compare two strings in Java&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>How to Iterate over a List in Java</title>
-      <link>https://codingnconcepts.com/java/iterate-list-in-java/</link>
-      <pubDate>Wed, 03 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/java/iterate-list-in-java/</guid>
-      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn different ways to iterate over a list in Java.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Find Middle Element of Linked List in Java</title>
-      <link>https://codingnconcepts.com/java/middle-element-of-linked-list-java/</link>
-      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/java/middle-element-of-linked-list-java/</guid>
-      <description>&lt;p&gt;In this article, we&amp;rsquo;ll learn how to find middle element of a linked list using multiple approach in Java.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Spring @ConfigurationProperties using YAML</title>
-      <link>https://codingnconcepts.com/spring-boot/spring-configuration-properties-using-yml/</link>
-      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/spring-boot/spring-configuration-properties-using-yml/</guid>
-      <description>&lt;p&gt;In this article, we&amp;rsquo;ll learn how to use &lt;em&gt;@ConfigurationProperties&lt;/em&gt; with &lt;em&gt;.yml&lt;/em&gt; file instead of &lt;em&gt;.properties&lt;/em&gt; file for configuration in Spring Boot Project.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Spring Initializr Plugin for Eclipse IDE</title>
-      <link>https://codingnconcepts.com/spring-boot/spring-initializr-for-eclipse-ide/</link>
-      <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/spring-boot/spring-initializr-for-eclipse-ide/</guid>
-      <description>&lt;p&gt;In this article, we&amp;rsquo;ll learn how to install &lt;em&gt;Spring Tool Plugin&lt;/em&gt; for Eclipse IDE to create a Spring Boot Project from Scratch using Spring Initializr.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Spring @Controller and @RestController</title>
-      <link>https://codingnconcepts.com/spring-boot/spring-controller-vs-restcontroller/</link>
-      <pubDate>Thu, 28 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/spring-boot/spring-controller-vs-restcontroller/</guid>
-      <description>&lt;p&gt;In this quick article, we&amp;rsquo;ll see &lt;em&gt;@Controller&lt;/em&gt; and &lt;em&gt;@RestController&lt;/em&gt; annotations and their difference in Spring MVC.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Java Math.pow() method Usage</title>
-      <link>https://codingnconcepts.com/java/math-pow-in-java/</link>
-      <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/java/math-pow-in-java/</guid>
-      <description>&lt;p&gt;In this quick article, We&amp;rsquo;ll see usage of Java &lt;em&gt;Math.pow()&lt;/em&gt; method which takes two arguments, a and b, and &lt;em&gt;returns a to the power of b i.e. a&lt;sup&gt;b&lt;/sup&gt;&lt;/em&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Java Regex to Validate Phone Number</title>
-      <link>https://codingnconcepts.com/java/java-regex-to-validate-phone-number/</link>
-      <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/java/java-regex-to-validate-phone-number/</guid>
-      <description>&lt;p&gt;In this article, we&amp;rsquo;ll learn how to validate mobile phone number of different country&amp;rsquo;s format using Java Regex (Regular Expressions)&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Spring @Value Annotation Guide</title>
-      <link>https://codingnconcepts.com/spring-boot/spring-value-annotation/</link>
-      <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/spring-boot/spring-value-annotation/</guid>
-      <description>&lt;p&gt;This article demonstrate use of Spring &lt;em&gt;@Value&lt;/em&gt; annotation with Primitives, Default value, Dates, List, Map, System Properties, Constructor Injection, Setter Injection, and Methods&amp;hellip;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Configure Feign Client in Spring Boot</title>
-      <link>https://codingnconcepts.com/spring-boot/configure-feign-rest-client/</link>
-      <pubDate>Tue, 26 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/spring-boot/configure-feign-rest-client/</guid>
-      <description>&lt;p&gt;In this article, we&amp;rsquo;ll learn how to configure a &lt;em&gt;Feign Client&lt;/em&gt; in your Spring Boot project to consume RESTFul APIs from other services.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Java String.format() method Usage</title>
-      <link>https://codingnconcepts.com/java/string-format-in-java/</link>
-      <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/java/string-format-in-java/</guid>
-      <description>&lt;p&gt;This article demonstrate use of &lt;code&gt;String.format()&lt;/code&gt; in Java with many examples&amp;hellip;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Build RESTFul API with Spring Boot</title>
-      <link>https://codingnconcepts.com/spring-boot/build-restful-api-with-spring-boot/</link>
-      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/spring-boot/build-restful-api-with-spring-boot/</guid>
-      <description>&lt;p&gt;In this article, we&amp;rsquo;ll learn step by step, how to build RESTFul API with Spring Boot. We&amp;rsquo;ll also learn the RestController, HTTP response codes and best practices along the way.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Setup a Spring Boot Project using Spring Initializr</title>
-      <link>https://codingnconcepts.com/spring-boot/setup-project-using-spring-initalizr/</link>
-      <pubDate>Sat, 23 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/spring-boot/setup-project-using-spring-initalizr/</guid>
-      <description>&lt;p&gt;In this article, we&amp;rsquo;ll learn how to create a Spring Boot project quickly from scratch use &lt;em&gt;Spring Initializer&lt;/em&gt;.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Blockchain Explained using JavaScript</title>
-      <link>https://codingnconcepts.com/javascript/blockchain-explained-using-javascript/</link>
-      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/javascript/blockchain-explained-using-javascript/</guid>
-      <description>&lt;p&gt;In this article, we&amp;rsquo;ll learn how to implement Blockchain using Javascript.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Blockchain Explained</title>
-      <link>https://codingnconcepts.com/post/blockchain-explained/</link>
-      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/post/blockchain-explained/</guid>
-      <description>&lt;p&gt;Most of us think Blockchain as the technology behind Bitcoin. While this was its original purpose, blockchain is capable of so much more&amp;hellip;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Useful Hugo Shortcodes</title>
-      <link>https://codingnconcepts.com/hugo/custom-shortcode-hugo/</link>
-      <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/hugo/custom-shortcode-hugo/</guid>
-      <description>&lt;p&gt;If you are using Hugo as a static site generator tool then you might have used hugo &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/&#34;&gt;built-in shortcodes&lt;/a&gt; but here are some amazing hugo shortcodes which can be used in markdown files of your hugo website.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Add Structure Data JSON-LD in Hugo Website Pages</title>
-      <link>https://codingnconcepts.com/hugo/structure-data-json-ld-hugo/</link>
-      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/hugo/structure-data-json-ld-hugo/</guid>
-      <description>&lt;p&gt;When you add structure data to your website, it helps google, bing or other website indexers to understand the content for your website and pages which leads to better search results for your website and eventually helps in SEO ranking.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Double Colon (::) Operator in Java 8</title>
-      <link>https://codingnconcepts.com/java/double-colon-operator-in-java-8/</link>
-      <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/java/double-colon-operator-in-java-8/</guid>
-      <description>&lt;p&gt;The double colon &lt;code&gt;::&lt;/code&gt; operator is introduced in Java 8 for method reference. It is a shorthand syntax for lambda expression that executes one method. You can write more compact and readable code using double colon operator as compare to anonymous classes and lambda expression. We are going to understand its usage with lots of examples.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Configure embedded Jetty server in spring boot</title>
-      <link>https://codingnconcepts.com/spring-boot/configure-embedded-jetty-server/</link>
-      <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/spring-boot/configure-embedded-jetty-server/</guid>
-      <description>&lt;p&gt;Spring boot use &lt;strong&gt;tomcat&lt;/strong&gt; as default embedded tomcat server to run a web application but you can configure &lt;strong&gt;jetty&lt;/strong&gt; server to replace tomcat in easy steps.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Custom API Request &amp; Response Logging in spring boot.</title>
-      <link>https://codingnconcepts.com/spring-boot/custom-api-request-response-logging/</link>
-      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/spring-boot/custom-api-request-response-logging/</guid>
-      <description>&lt;p&gt;When we create RESTFul APIs in spring boot application in microservices environment. It becomes essential to log incoming API request and response and push it to centralized logging system such as Splunk or ELK for debugging. Also all the logs related to one request should have some common id to relate them. In this post we are going to solve these problems.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>info and health endpoints in spring boot</title>
-      <link>https://codingnconcepts.com/spring-boot/configure-info-and-health-endpoints/</link>
-      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/spring-boot/configure-info-and-health-endpoints/</guid>
-      <description>&lt;p&gt;In spring boot microservices based application, where microservices talks to each other using RESTFul APIs. We can expose some important information about microservice such as name, version, description over some endpoints say &lt;em&gt;/info&lt;/em&gt; and also realtime status or health over some endpoint say &lt;em&gt;/health&lt;/em&gt; to create application dashboards, realtime alerts, track microservice updates and so on&amp;hellip;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Top Microservices Interview Questions</title>
-      <link>https://codingnconcepts.com/top-microservices-interview-questions/</link>
-      <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/top-microservices-interview-questions/</guid>
-      <description>&lt;p&gt;These Microservices based interview questions are based on my personal interview experience and feedback from other interviewees. These questions verifies your theoretical as well as practical knowledge about microservices. Keep following this post for regular updates.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Pretty print JSON response in spring boot</title>
-      <link>https://codingnconcepts.com/spring-boot/pretty-print-json-response/</link>
-      <pubDate>Mon, 13 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/spring-boot/pretty-print-json-response/</guid>
-      <description>&lt;p&gt;When you create a Spring &lt;code&gt;@RestController&lt;/code&gt; in a Spring Boot application to define API endpoints then it renders JSON response by default if jackson2 is in classpath.&lt;/p&gt;
+&lt;/style></description></item><item><title>CSS units for font-size: px, em and rem</title><link>https://codingnconcepts.com/css/font-size-units-px-em-and-rem/</link><pubDate>Sat, 11 Jul 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/css/font-size-units-px-em-and-rem/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll learn different units to measure font-size in CSS i.e. &lt;code>px&lt;/code>, &lt;code>em&lt;/code>, and &lt;code>rem&lt;/code>, their differences, and which one to use when.&lt;/p></description></item><item><title>Difference Between forEach() and map() in JavaScript Array</title><link>https://codingnconcepts.com/javascript/difference-between-foreach-and-map-in-javascript-array/</link><pubDate>Wed, 08 Jul 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/difference-between-foreach-and-map-in-javascript-array/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll see the difference between &lt;code>Array.forEach()&lt;/code> and &lt;code>Array.map()&lt;/code> methods in JavaScript Array.&lt;/p></description></item><item><title>How to Divide an Array in Equal Parts in JavaScript</title><link>https://codingnconcepts.com/javascript/how-to-divide-array-in-equal-parts-in-javascript/</link><pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/how-to-divide-array-in-equal-parts-in-javascript/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll learn how to divide an Array in equal parts using &lt;code>Array.splice()&lt;/code> method in JavaScript. We will also learn how it is different from &lt;code>Array.slice()&lt;/code> method.&lt;/p></description></item><item><title>How to Replace all Occurrences of a String in JavaScript</title><link>https://codingnconcepts.com/javascript/how-to-replace-all-occurrences-string-javascript/</link><pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/how-to-replace-all-occurrences-string-javascript/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll learn how to replace all occurrences of a string in JavaScript using &lt;code>String.replace()&lt;/code> method. We will also look at &lt;code>String.split()&lt;/code> and &lt;code>Array.join()&lt;/code> approach.&lt;/p></description></item><item><title>How to Reverse an Array in JavaScript</title><link>https://codingnconcepts.com/javascript/how-to-reverse-array-in-javascript/</link><pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/how-to-reverse-array-in-javascript/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll learn how to reverse an Array in JavaScript using &lt;code>Array.reverse()&lt;/code> method.&lt;/p></description></item><item><title>Math Constants and Functions in JavaScript</title><link>https://codingnconcepts.com/javascript/math-constants-and-functions-in-javascript/</link><pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/math-constants-and-functions-in-javascript/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll learn about Math Object in JavaScript, which allows us to use mathematical constants such as &lt;code>π&lt;/code>, &lt;code>e&lt;/code>, &lt;code>√2&lt;/code> and perform mathematical operations on numbers such as &lt;code>pow()&lt;/code>, &lt;code>sqrt()&lt;/code>, &lt;code>max()&lt;/code>, &lt;code>min()&lt;/code>, &lt;code>random()&lt;/code>, &lt;code>abs()&lt;/code>, &lt;code>ceil()&lt;/code>, &lt;code>floor()&lt;/code>, &lt;code>round()&lt;/code>, and &lt;code>truc()&lt;/code>.&lt;/p></description></item><item><title>Jackson JSON Request and Response Mapping in Spring Boot</title><link>https://codingnconcepts.com/spring-boot/jackson-json-request-response-mapping/</link><pubDate>Thu, 02 Jul 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/jackson-json-request-response-mapping/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll learn how to map Jackson JSON request and response in Spring Boot Application with various Jackson configurations.&lt;/p></description></item><item><title>Add Sub Menu in Hugo Website</title><link>https://codingnconcepts.com/hugo/nested-menu-hugo/</link><pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/hugo/nested-menu-hugo/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll learn how to add sub menu (nested menu) in Hugo Website.&lt;/p></description></item><item><title>A Step-by-Step Guide to Create an AWS Account</title><link>https://codingnconcepts.com/aws/how-to-create-aws-account/</link><pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/aws/how-to-create-aws-account/</guid><description>&lt;p>This step by step guide is very helpful for beginners to create a personal account with AWS.&lt;/p></description></item><item><title>Build Your First AWS DeepRacer Model</title><link>https://codingnconcepts.com/aws/aws-deepracer/</link><pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/aws/aws-deepracer/</guid><description>&lt;p>This step-by-step guide is helpful for beginners trying their hands on machine learning and creating their first AWS DeepRacer model.&lt;/p></description></item><item><title>How to use Array Destructuring in JavaScript</title><link>https://codingnconcepts.com/javascript/array-destructuring/</link><pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/array-destructuring/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll learn the usage of &lt;em>Array Destructuring&lt;/em> in JavaScript ES6 with examples.&lt;/p></description></item><item><title>How to use Object Destructuring in JavaScript</title><link>https://codingnconcepts.com/javascript/object-destructuring/</link><pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/object-destructuring/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll learn the usage of &lt;em>Object Destructuring&lt;/em> in JavaScript ES6 with examples.&lt;/p></description></item><item><title>How to Capitalize First Letter of String in JavaScript</title><link>https://codingnconcepts.com/javascript/how-to-capitalize-first-letter-of-string-in-javascript/</link><pubDate>Fri, 19 Jun 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/how-to-capitalize-first-letter-of-string-in-javascript/</guid><description>&lt;p>In this quick tutorial, we&amp;rsquo;ll learn how to capitalize the first letter of a String in JavaScript.&lt;/p></description></item><item><title>How to Remove Duplicates from Array in JavaScript</title><link>https://codingnconcepts.com/javascript/how-to-remove-array-duplicates-in-javascript/</link><pubDate>Fri, 19 Jun 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/how-to-remove-array-duplicates-in-javascript/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll learn how to remove duplicates from an Array in JavaScript and return only unique values.&lt;/p></description></item><item><title>How to Clone an Array in JavaScript</title><link>https://codingnconcepts.com/javascript/how-to-clone-array-in-javascript/</link><pubDate>Thu, 18 Jun 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/how-to-clone-array-in-javascript/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll learn how to clone an Array in JavaScript and also learn the difference between &lt;em>shallow copy&lt;/em> and &lt;em>deep copy&lt;/em> of an Array.&lt;/p></description></item><item><title>How to Sort an Array in JavaScript</title><link>https://codingnconcepts.com/javascript/how-to-sort-array-in-javascript/</link><pubDate>Thu, 18 Jun 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/how-to-sort-array-in-javascript/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll learn how to sort an Array in JavaScript by using &lt;code>Array.sort()&lt;/code> method.&lt;/p></description></item><item><title>Top Java 8 Interview Questions</title><link>https://codingnconcepts.com/top-java-8-interview-questions/</link><pubDate>Wed, 17 Jun 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/top-java-8-interview-questions/</guid><description>&lt;p>These Java interview questions are based on my personal interview experience. Topics are in the order of recent interview trends. Keep following this post link for regular updates.&lt;/p></description></item><item><title>JavaScript Console API Walkthrough</title><link>https://codingnconcepts.com/javascript/console-api-walkthrough/</link><pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/console-api-walkthrough/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll walkthrough JavaScript&amp;rsquo;s Console API methods with quick examples&amp;hellip;&lt;/p></description></item><item><title>JavaScript Debugging Tips and Tricks</title><link>https://codingnconcepts.com/javascript/debugging-tips-and-tricks/</link><pubDate>Thu, 11 Jun 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/debugging-tips-and-tricks/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll learn plenty of tips and tricks for debugging JavaScript code using Chrome DevTool, different ways of logging to the console using console APIs, and much more&amp;hellip;&lt;/p></description></item><item><title>Client Side Search Engine for Hugo Website</title><link>https://codingnconcepts.com/hugo/client-side-search-engine-hugo/</link><pubDate>Mon, 08 Jun 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/hugo/client-side-search-engine-hugo/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll learn how to setup client side search engine for Hugo Website without any backend server or additional build steps required.&lt;/p></description></item><item><title>Factory Design Pattern In Java</title><link>https://codingnconcepts.com/java/factory-design-pattern-java/</link><pubDate>Sun, 07 Jun 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/java/factory-design-pattern-java/</guid><description>&lt;p>&lt;em>Factory Design Pattern&lt;/em> is one of the most commonly used design patterns. It falls under the category of &lt;em>Creational Design Patterns&lt;/em>.&lt;/p></description></item><item><title>console.table() in JavaScript</title><link>https://codingnconcepts.com/javascript/console-table-javascript/</link><pubDate>Sat, 06 Jun 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/console-table-javascript/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll learn how we can display data in tabular format in console using &lt;em>console.table()&lt;/em> advance logging method. This comes in very handy to visualize complex array and objects in JavaScript.&lt;/p></description></item><item><title>Add Social Icons in Hugo Website Pages</title><link>https://codingnconcepts.com/hugo/social-icons-hugo/</link><pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/hugo/social-icons-hugo/</guid><description>&lt;p>If you are using Hugo as a static site generator tool then you can create a partial to show social icons like facebook, twitter, linkedin, whatsapp etc to share page links on social media.&lt;/p></description></item><item><title>Customize sitemap in Hugo Website</title><link>https://codingnconcepts.com/hugo/sitemap-hugo/</link><pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/hugo/sitemap-hugo/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll learn how to disable or customize &lt;em>sitemap.xml&lt;/em> for Hugo website.&lt;/p></description></item><item><title>How to Compare two Strings in Java</title><link>https://codingnconcepts.com/java/compare-two-strings-in-java/</link><pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/java/compare-two-strings-in-java/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll learn different ways to compare two strings in Java&lt;/p></description></item><item><title>How to Iterate over a List in Java</title><link>https://codingnconcepts.com/java/iterate-list-in-java/</link><pubDate>Wed, 03 Jun 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/java/iterate-list-in-java/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll learn different ways to iterate over a list in Java.&lt;/p></description></item><item><title>Find Middle Element of Linked List in Java</title><link>https://codingnconcepts.com/java/middle-element-of-linked-list-java/</link><pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/java/middle-element-of-linked-list-java/</guid><description>&lt;p>In this article, we&amp;rsquo;ll learn how to find middle element of a linked list using multiple approach in Java.&lt;/p></description></item><item><title>Spring @ConfigurationProperties using YAML</title><link>https://codingnconcepts.com/spring-boot/spring-configuration-properties-using-yml/</link><pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/spring-configuration-properties-using-yml/</guid><description>&lt;p>In this article, we&amp;rsquo;ll learn how to use &lt;em>@ConfigurationProperties&lt;/em> with &lt;em>.yml&lt;/em> file instead of &lt;em>.properties&lt;/em> file for configuration in Spring Boot Project.&lt;/p></description></item><item><title>Spring Initializr Plugin for Eclipse IDE</title><link>https://codingnconcepts.com/spring-boot/spring-initializr-for-eclipse-ide/</link><pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/spring-initializr-for-eclipse-ide/</guid><description>&lt;p>In this article, we&amp;rsquo;ll learn how to install &lt;em>Spring Tool Plugin&lt;/em> for Eclipse IDE to create a Spring Boot Project from Scratch using Spring Initializr.&lt;/p></description></item><item><title>Spring @Controller and @RestController</title><link>https://codingnconcepts.com/spring-boot/spring-controller-vs-restcontroller/</link><pubDate>Thu, 28 May 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/spring-controller-vs-restcontroller/</guid><description>&lt;p>In this quick article, we&amp;rsquo;ll see &lt;em>@Controller&lt;/em> and &lt;em>@RestController&lt;/em> annotations and their difference in Spring MVC.&lt;/p></description></item><item><title>Java Math.pow() method Usage</title><link>https://codingnconcepts.com/java/math-pow-in-java/</link><pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/java/math-pow-in-java/</guid><description>&lt;p>In this quick article, We&amp;rsquo;ll see usage of Java &lt;em>Math.pow()&lt;/em> method which takes two arguments, a and b, and &lt;em>returns a to the power of b i.e. a&lt;sup>b&lt;/sup>&lt;/em>&lt;/p></description></item><item><title>Java Regex to Validate Phone Number</title><link>https://codingnconcepts.com/java/java-regex-to-validate-phone-number/</link><pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/java/java-regex-to-validate-phone-number/</guid><description>&lt;p>In this article, we&amp;rsquo;ll learn how to validate mobile phone number of different country&amp;rsquo;s format using Java Regex (Regular Expressions)&lt;/p></description></item><item><title>Spring @Value Annotation Guide</title><link>https://codingnconcepts.com/spring-boot/spring-value-annotation/</link><pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/spring-value-annotation/</guid><description>&lt;p>This article demonstrate use of Spring &lt;em>@Value&lt;/em> annotation with Primitives, Default value, Dates, List, Map, System Properties, Constructor Injection, Setter Injection, and Methods&amp;hellip;&lt;/p></description></item><item><title>Configure Feign Client in Spring Boot</title><link>https://codingnconcepts.com/spring-boot/configure-feign-rest-client/</link><pubDate>Tue, 26 May 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/configure-feign-rest-client/</guid><description>&lt;p>In this article, we&amp;rsquo;ll learn how to configure a &lt;em>Feign Client&lt;/em> in your Spring Boot project to consume RESTFul APIs from other services.&lt;/p></description></item><item><title>Java String.format() method Usage</title><link>https://codingnconcepts.com/java/string-format-in-java/</link><pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/java/string-format-in-java/</guid><description>&lt;p>This article demonstrate use of &lt;code>String.format()&lt;/code> in Java with many examples&amp;hellip;&lt;/p></description></item><item><title>Build RESTFul API with Spring Boot</title><link>https://codingnconcepts.com/spring-boot/build-restful-api-with-spring-boot/</link><pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/build-restful-api-with-spring-boot/</guid><description>&lt;p>In this article, we&amp;rsquo;ll learn step by step, how to build RESTFul API with Spring Boot. We&amp;rsquo;ll also learn the RestController, HTTP response codes and best practices along the way.&lt;/p></description></item><item><title>Setup a Spring Boot Project using Spring Initializr</title><link>https://codingnconcepts.com/spring-boot/setup-project-using-spring-initalizr/</link><pubDate>Sat, 23 May 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/setup-project-using-spring-initalizr/</guid><description>&lt;p>In this article, we&amp;rsquo;ll learn how to create a Spring Boot project quickly from scratch use &lt;em>Spring Initializer&lt;/em>.&lt;/p></description></item><item><title>Blockchain Explained using JavaScript</title><link>https://codingnconcepts.com/javascript/blockchain-explained-using-javascript/</link><pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/blockchain-explained-using-javascript/</guid><description>&lt;p>In this article, we&amp;rsquo;ll learn how to implement Blockchain using Javascript.&lt;/p></description></item><item><title>Blockchain Explained</title><link>https://codingnconcepts.com/post/blockchain-explained/</link><pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/post/blockchain-explained/</guid><description>&lt;p>Most of us think Blockchain as the technology behind Bitcoin. While this was its original purpose, blockchain is capable of so much more&amp;hellip;&lt;/p></description></item><item><title>Useful Hugo Shortcodes</title><link>https://codingnconcepts.com/hugo/custom-shortcode-hugo/</link><pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/hugo/custom-shortcode-hugo/</guid><description>&lt;p>If you are using Hugo as a static site generator tool then you might have used hugo &lt;a href="https://gohugo.io/content-management/shortcodes/">built-in shortcodes&lt;/a> but here are some amazing hugo shortcodes which can be used in markdown files of your hugo website.&lt;/p></description></item><item><title>Add Structure Data JSON-LD in Hugo Website Pages</title><link>https://codingnconcepts.com/hugo/structure-data-json-ld-hugo/</link><pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/hugo/structure-data-json-ld-hugo/</guid><description>&lt;p>When you add structure data to your website, it helps google, bing or other website indexers to understand the content for your website and pages which leads to better search results for your website and eventually helps in SEO ranking.&lt;/p></description></item><item><title>Double Colon (::) Operator in Java 8</title><link>https://codingnconcepts.com/java/double-colon-operator-in-java-8/</link><pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/java/double-colon-operator-in-java-8/</guid><description>&lt;p>The double colon &lt;code>::&lt;/code> operator is introduced in Java 8 for method reference. It is a shorthand syntax for lambda expression that executes one method. You can write more compact and readable code using double colon operator as compare to anonymous classes and lambda expression. We are going to understand its usage with lots of examples.&lt;/p></description></item><item><title>Configure embedded Jetty server in spring boot</title><link>https://codingnconcepts.com/spring-boot/configure-embedded-jetty-server/</link><pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/configure-embedded-jetty-server/</guid><description>&lt;p>Spring boot use &lt;strong>tomcat&lt;/strong> as default embedded tomcat server to run a web application but you can configure &lt;strong>jetty&lt;/strong> server to replace tomcat in easy steps.&lt;/p></description></item><item><title>Custom API Request &amp; Response Logging in spring boot.</title><link>https://codingnconcepts.com/spring-boot/custom-api-request-response-logging/</link><pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/custom-api-request-response-logging/</guid><description>&lt;p>When we create RESTFul APIs in spring boot application in microservices environment. It becomes essential to log incoming API request and response and push it to centralized logging system such as Splunk or ELK for debugging. Also all the logs related to one request should have some common id to relate them. In this post we are going to solve these problems.&lt;/p></description></item><item><title>info and health endpoints in spring boot</title><link>https://codingnconcepts.com/spring-boot/configure-info-and-health-endpoints/</link><pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/configure-info-and-health-endpoints/</guid><description>&lt;p>In spring boot microservices based application, where microservices talks to each other using RESTFul APIs. We can expose some important information about microservice such as name, version, description over some endpoints say &lt;em>/info&lt;/em> and also realtime status or health over some endpoint say &lt;em>/health&lt;/em> to create application dashboards, realtime alerts, track microservice updates and so on&amp;hellip;&lt;/p></description></item><item><title>Top Microservices Interview Questions</title><link>https://codingnconcepts.com/top-microservices-interview-questions/</link><pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/top-microservices-interview-questions/</guid><description>&lt;p>These Microservices based interview questions are based on my personal interview experience and feedback from other interviewees. These questions verifies your theoretical as well as practical knowledge about microservices. Keep following this post for regular updates.&lt;/p></description></item><item><title>Pretty print JSON response in spring boot</title><link>https://codingnconcepts.com/spring-boot/pretty-print-json-response/</link><pubDate>Mon, 13 Apr 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/pretty-print-json-response/</guid><description>&lt;p>When you create a Spring &lt;code>@RestController&lt;/code> in a Spring Boot application to define API endpoints then it renders JSON response by default if jackson2 is in classpath.&lt;/p>
 &lt;!--
 Spring uses `HttpMessageConverters` for content conversion for e.g. Java Object to JSON or XML in order to render responses from `@RestController` class methods. Spring boot provides a default `MappingJackson2HttpMessageConverter` (if jackson2 is in classpath) to render JSON response.
---&gt;
-&lt;p&gt;JSON responses are not pretty print by default but you can enable it with just one property change.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Configure Kafka Producer and Consumer in spring boot</title>
-      <link>https://codingnconcepts.com/spring-boot/configure-kafka-producer-and-consumer/</link>
-      <pubDate>Sat, 11 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/spring-boot/configure-kafka-producer-and-consumer/</guid>
-      <description>&lt;p&gt;This post describes how to configure Kafka producer and consumer in spring boot application and also explains how to create service classes to send and receive Kafka messages to and from configured kafka topic respectively.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Async/Await in JavaScript</title>
-      <link>https://codingnconcepts.com/javascript/async-await-in-javascript/</link>
-      <pubDate>Sun, 05 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/javascript/async-await-in-javascript/</guid>
-      <description>&lt;p&gt;Async functions and Await keyword are latest additions in JavaScript as part of ECMAScript 2017 release which introduced a new way of writing asynchronous functions. In this post we will talk about why we should use async/wait, its syntax and practical usage with example.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Promises in JavaScript</title>
-      <link>https://codingnconcepts.com/javascript/promises-in-javascript/</link>
-      <pubDate>Fri, 03 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/javascript/promises-in-javascript/</guid>
-      <description>&lt;p&gt;Promises are introduced natively in ES6. They are very similar to our promises. As we keep or break our promises, Javascript promises are also either resolve or reject. In this post we will talk about why we should use promises, promise syntax, promise states and its practical usage with examples using fetch API.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Tricky Javascript Interview Questions</title>
-      <link>https://codingnconcepts.com/tricky-javascript-interview-questions/</link>
-      <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tricky-javascript-interview-questions/</guid>
-      <description>&lt;p&gt;This post is a collection of tricky interview questions based on different concepts in JavaScript. The difficulty level of question will increase as you read forward down the line in this post.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Difference in == and === comparison operators in JavaScript</title>
-      <link>https://codingnconcepts.com/javascript/comparison-operators-in-javascript/</link>
-      <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/javascript/comparison-operators-in-javascript/</guid>
-      <description>&lt;p&gt;This is frequently asked question in JavaScript interview. We can compare primitive types, array and object using two comparison operators &lt;code&gt;==&lt;/code&gt; and &lt;code&gt;===&lt;/code&gt; available in JavaScript. This post describes the difference between these two with many examples.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Understand all about this keyword in JavaScript</title>
-      <link>https://codingnconcepts.com/javascript/this-keyword-in-javascript/</link>
-      <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/javascript/this-keyword-in-javascript/</guid>
-      <description>&lt;p&gt;The &lt;code&gt;this&lt;/code&gt; keyword in JavaScript is very important concept but at the same time very confusing to understand.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Classes in JavaScript</title>
-      <link>https://codingnconcepts.com/javascript/classes-in-javascript/</link>
-      <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/javascript/classes-in-javascript/</guid>
-      <description>Let&amp;rsquo;s first look at example of each:
+-->
+&lt;p>JSON responses are not pretty print by default but you can enable it with just one property change.&lt;/p></description></item><item><title>Configure Kafka Producer and Consumer in spring boot</title><link>https://codingnconcepts.com/spring-boot/configure-kafka-producer-and-consumer/</link><pubDate>Sat, 11 Apr 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/configure-kafka-producer-and-consumer/</guid><description>&lt;p>This post describes how to configure Kafka producer and consumer in spring boot application and also explains how to create service classes to send and receive Kafka messages to and from configured kafka topic respectively.&lt;/p></description></item><item><title>Async/Await in JavaScript</title><link>https://codingnconcepts.com/javascript/async-await-in-javascript/</link><pubDate>Sun, 05 Apr 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/async-await-in-javascript/</guid><description>&lt;p>Async functions and Await keyword are latest additions in JavaScript as part of ECMAScript 2017 release which introduced a new way of writing asynchronous functions. In this post we will talk about why we should use async/wait, its syntax and practical usage with example.&lt;/p></description></item><item><title>Promises in JavaScript</title><link>https://codingnconcepts.com/javascript/promises-in-javascript/</link><pubDate>Fri, 03 Apr 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/promises-in-javascript/</guid><description>&lt;p>Promises are introduced natively in ES6. They are very similar to our promises. As we keep or break our promises, Javascript promises are also either resolve or reject. In this post we will talk about why we should use promises, promise syntax, promise states and its practical usage with examples using fetch API.&lt;/p></description></item><item><title>Tricky Javascript Interview Questions</title><link>https://codingnconcepts.com/tricky-javascript-interview-questions/</link><pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/tricky-javascript-interview-questions/</guid><description>&lt;p>This post is a collection of tricky interview questions based on different concepts in JavaScript. The difficulty level of question will increase as you read forward down the line in this post.&lt;/p></description></item><item><title>Difference in == and === comparison operators in JavaScript</title><link>https://codingnconcepts.com/javascript/comparison-operators-in-javascript/</link><pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/comparison-operators-in-javascript/</guid><description>&lt;p>This is frequently asked question in JavaScript interview. We can compare primitive types, array and object using two comparison operators &lt;code>==&lt;/code> and &lt;code>===&lt;/code> available in JavaScript. This post describes the difference between these two with many examples.&lt;/p></description></item><item><title>Understand all about this keyword in JavaScript</title><link>https://codingnconcepts.com/javascript/this-keyword-in-javascript/</link><pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/this-keyword-in-javascript/</guid><description>&lt;p>The &lt;code>this&lt;/code> keyword in JavaScript is very important concept but at the same time very confusing to understand.&lt;/p></description></item><item><title>Classes in JavaScript</title><link>https://codingnconcepts.com/javascript/classes-in-javascript/</link><pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/classes-in-javascript/</guid><description>Let&amp;rsquo;s first look at example of each:
 // ES5 Function Constructor function Person(name) { this.name = name; } // ES6 Class class Person { constructor(name) { this.name = name; } } For simple constructors, they look pretty similar.
-The main difference in the constructor comes when using inheritance. If we want to create a Student class that subclasses Person and add a studentId field, this is what we have to do in addition to the above.</description>
-    </item>
-    
-    <item>
-      <title>Understand call, bind and apply methods in JavaScript</title>
-      <link>https://codingnconcepts.com/javascript/call-vs-bind-vs-apply/</link>
-      <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/javascript/call-vs-bind-vs-apply/</guid>
-      <description>&lt;p&gt;This is frequently asked question in JavaScript interview. This post describes the Function prototype methods &lt;code&gt;call()&lt;/code&gt;, &lt;code&gt;apply()&lt;/code&gt; and &lt;code&gt;bind()&lt;/code&gt; with their syntax, usage and practical examples.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Lexical Scope, Closures and Currying in JavaScript</title>
-      <link>https://codingnconcepts.com/javascript/lexical-scope-closures-and-currying/</link>
-      <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/javascript/lexical-scope-closures-and-currying/</guid>
-      <description>&lt;p&gt;This post describes the &lt;a href=&#34;#lexical-scope&#34;&gt;Lexical Scope&lt;/a&gt;, &lt;a href=&#34;#closures&#34;&gt;Closures&lt;/a&gt;  and &lt;a href=&#34;#currying&#34;&gt;Currying Function&lt;/a&gt; in JavaScript and their relations with examples.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>M power N Using Recursive function</title>
-      <link>https://codingnconcepts.com/java/m-power-n-using-recursive/</link>
-      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/java/m-power-n-using-recursive/</guid>
-      <description>&lt;p&gt;This is one of the example of using recursive function in Java to find M power N&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Print All String Combinations Using Recursive function</title>
-      <link>https://codingnconcepts.com/java/print-all-string-combinations-using-recursive/</link>
-      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/java/print-all-string-combinations-using-recursive/</guid>
-      <description>&lt;p&gt;Print all the possible combinations of a given String using Recursive function in Java&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Streams in Java 8</title>
-      <link>https://codingnconcepts.com/java/streams-in-java-8/</link>
-      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/java/streams-in-java-8/</guid>
-      <description>&lt;p&gt;One of the major feature of Java 8 is addition of Stream. It also has introduced the functional programming in Java. We will discuss different stream operations available in Collection, Array, IntStream with examples. We will also discuss the difference between Intermediate and Terminal operations.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Decorator Design Pattern Using Java</title>
-      <link>https://codingnconcepts.com/java/decorator-design-pattern-using-java/</link>
-      <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/java/decorator-design-pattern-using-java/</guid>
-      <description>&lt;p&gt;Decorator design pattern is used to add a new feature on the existing object by wrapping it with a decorator class.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Difference in const and Object.freeze() in JavaScript</title>
-      <link>https://codingnconcepts.com/javascript/const-vs-object-freeze/</link>
-      <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/javascript/const-vs-object-freeze/</guid>
-      <description>&lt;p&gt;This post describes the best practices to define constants and configuration values in JavaScript using &lt;code&gt;const&lt;/code&gt; and &lt;code&gt;Object.freeze()&lt;/code&gt; and the difference between them.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Object methods in JavaScript</title>
-      <link>https://codingnconcepts.com/javascript/object-methods-in-javascript/</link>
-      <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/javascript/object-methods-in-javascript/</guid>
-      <description>&lt;p&gt;This post describes the usage of various Object methods like &lt;code&gt;Object.create()&lt;/code&gt;, &lt;code&gt;Object.assign()&lt;/code&gt;, &lt;code&gt;Object.freeze()&lt;/code&gt;, &lt;code&gt;Object.seal()&lt;/code&gt; and many more available in JavaScript with examples.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Difference between var, let and const</title>
-      <link>https://codingnconcepts.com/javascript/difference-between-var-let-and-const/</link>
-      <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/javascript/difference-between-var-let-and-const/</guid>
-      <description>&lt;p&gt;A nice feature addition in ES2015 (ES6) was the introduction of &lt;code&gt;let&lt;/code&gt; and &lt;code&gt;const&lt;/code&gt; keywords for variable declaration. You can use &lt;code&gt;var&lt;/code&gt;, &lt;code&gt;let&lt;/code&gt; and &lt;code&gt;const&lt;/code&gt; keyword interchangeably for variable declaration though it makes a difference in terms of their scope, usage and hoisting. If you are not aware of these differences then please continue to read&amp;hellip;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>1 Light Bulb and 3 Switches Puzzle</title>
-      <link>https://codingnconcepts.com/puzzle/1-light-bulb-and-3-switches/</link>
-      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/puzzle/1-light-bulb-and-3-switches/</guid>
-      <description>&lt;p&gt;The one light bulb and three switches puzzle has been asked several times in interviews to evaluate candidate&amp;rsquo;s analytical skills.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Fruit Basket Puzzle</title>
-      <link>https://codingnconcepts.com/puzzle/fruit-basket-puzzle/</link>
-      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/puzzle/fruit-basket-puzzle/</guid>
-      <description>&lt;p&gt;The Fruit basket puzzle comes under basic puzzles being asked in the interview.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>The Die Hard Water Jug Riddle (Solved)</title>
-      <link>https://codingnconcepts.com/puzzle/the-water-jug-riddle/</link>
-      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/puzzle/the-water-jug-riddle/</guid>
-      <description>&lt;p&gt;This riddle is from famous Die Hard movie where &lt;em&gt;Bruce Willis&lt;/em&gt; and &lt;em&gt;Jackson&lt;/em&gt; have to diffuse a bomb by placing exactly 4 gallon water on a scale using 3 gallon and 5 gallon water jug.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>2 Eggs and 100 Floors Problem (Solved)</title>
-      <link>https://codingnconcepts.com/puzzle/2-eggs-and-100-floors/</link>
-      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/puzzle/2-eggs-and-100-floors/</guid>
-      <description>&lt;p&gt;The &lt;em&gt;2 Eggs and 100 Floors&lt;/em&gt; problem is frequently asked in interview to evaluate candidate&amp;rsquo;s understanding on linear search and binary search. I have tried to explain this problem as easy as possible.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>25 Horses 5 Tracks Problem (Solved)</title>
-      <link>https://codingnconcepts.com/puzzle/25-horses-puzzle/</link>
-      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/puzzle/25-horses-puzzle/</guid>
-      <description>&lt;p&gt;The &lt;em&gt;25 Horses 5 Tracks&lt;/em&gt; Problem is a famous Google interview question that has been asked in many companies to evaluate candidate&amp;rsquo;s analytical ability and problem solving approach.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Burning Rope Puzzle (Solved)</title>
-      <link>https://codingnconcepts.com/puzzle/burning-rope/</link>
-      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/puzzle/burning-rope/</guid>
-      <description>&lt;p&gt;Burning Rope Puzzle comes under basic puzzles asked in the interview.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Einstein&#39;s Riddle</title>
-      <link>https://codingnconcepts.com/puzzle/einsteins-riddle/</link>
-      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/puzzle/einsteins-riddle/</guid>
-      <description>&lt;p&gt;The legend says that this problem was created by Albert Einstein in the last century. Einstein said that only 2% of the world could solve it.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>The 6s Math Puzzle</title>
-      <link>https://codingnconcepts.com/puzzle/the-6s-math-puzzle/</link>
-      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/puzzle/the-6s-math-puzzle/</guid>
-      <description>&lt;p&gt;This is a pure mathematical puzzle which evaluate your ability to solve maths equation. This is a great problem for building number sense.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>How to configure swagger in spring boot</title>
-      <link>https://codingnconcepts.com/spring-boot/how-to-configure-swagger/</link>
-      <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/spring-boot/how-to-configure-swagger/</guid>
-      <description>&lt;p&gt;Swagger library is very useful if you are creating spring boot web application and exposing REST endpoints. Swagger generates web page for you to execute and test GET, POST, PUT, DELETE HTTP endpoints. This is helpful since you do not need to use Postman or some other tool to test REST Apis. Once you configure swagger then web page can be accessible using following URL:-&lt;/p&gt;
-&lt;p&gt;http://localhost:8080/swagger-ui.html&lt;/p&gt;
-&lt;p&gt;Follow the steps to configure swagger in your spring boot application:-&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>How to create and configure custom banner in spring boot</title>
-      <link>https://codingnconcepts.com/spring-boot/how-to-create-custom-banner/</link>
-      <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/spring-boot/how-to-create-custom-banner/</guid>
-      <description>&lt;p&gt;Spring boot application comes with default banner which shows up first when you start your application.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  .   ____          _            __ _ _
- /\\ / ___&#39;_ __ _ _(_)_ __  __ _ \ \ \ \
-( ( )\___ | &#39;_ | &#39;_| | &#39;_ \/ _` | \ \ \ \
- \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-  &#39;  |____| .__|_| |_|_| |_\__, | / / / /
- =========|_|==============|___/=/_/_/_/
- :: Spring Boot ::        (v2.1.3.RELEASE)
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You can replace above banner with your self made custom banner in following two easy steps:-&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>How to disable command line properties in spring boot</title>
-      <link>https://codingnconcepts.com/spring-boot/how-to-disable-command-line-properties/</link>
-      <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/spring-boot/how-to-disable-command-line-properties/</guid>
-      <description>&lt;p&gt;Spring Boot Application converts any command line arguments starting with --, such as &lt;strong&gt;--spring.profiles.active=dev&lt;/strong&gt; to a property by default and adds them to the Spring Environment. Command line properties always take precedence over other property sources.&lt;/p&gt;
-&lt;p&gt;If you do not want command line properties to be added to the Environment, you can disable them from SpringBootApplication main method as follows:-&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>How to change server port in spring boot</title>
-      <link>https://codingnconcepts.com/spring-boot/how-to-change-server-port/</link>
-      <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/spring-boot/how-to-change-server-port/</guid>
-      <description>&lt;p&gt;Spring boot web application using embedded server by default runs on port 8080. Following are the ways to change default server port from &lt;strong&gt;8080&lt;/strong&gt; to say &lt;strong&gt;9090&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Follow any of the given five ways to change server port:-&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>How to disable default banner in spring boot</title>
-      <link>https://codingnconcepts.com/spring-boot/how-to-disable-banner/</link>
-      <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/spring-boot/how-to-disable-banner/</guid>
-      <description>&lt;p&gt;You would have seen below spring boot banner when starting a spring boot application&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  .   ____          _            __ _ _
- /\\ / ___&#39;_ __ _ _(_)_ __  __ _ \ \ \ \
-( ( )\___ | &#39;_ | &#39;_| | &#39;_ \/ _` | \ \ \ \
- \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-  &#39;  |____| .__|_| |_|_| |_\__, | / / / /
- =========|_|==============|___/=/_/_/_/
- :: Spring Boot ::        (v2.1.3.RELEASE)
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;There are multiple ways to disable spring boot banner as follows:&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Top Spring Boot Interview Questions</title>
-      <link>https://codingnconcepts.com/top-spring-boot-interview-questions/</link>
-      <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/top-spring-boot-interview-questions/</guid>
-      <description>&lt;p&gt;Java developers are now switching from Spring Framework to Spring Boot for enterprise application development in microservice architecture. Spring Boot has become a trending topic to be asked in interviews from Java backend developers in 2020.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Top Spring Interview Questions</title>
-      <link>https://codingnconcepts.com/top-spring-interview-questions/</link>
-      <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/top-spring-interview-questions/</guid>
-      <description>&lt;p&gt;Spring Framework is widely used by Java developers for enterprise application development and most frequent topic to be asked in interviews from Java backend developers in 2020.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Top CSS Interview Questions</title>
-      <link>https://codingnconcepts.com/top-css-interview-questions/</link>
-      <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/top-css-interview-questions/</guid>
-      <description>&lt;p&gt;These CSS and CSS3 interview questions are based on my personal interview experience and feedback from other interviewees. Keep following this post for regular updates.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Top Java Interview Questions</title>
-      <link>https://codingnconcepts.com/top-java-interview-questions/</link>
-      <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/top-java-interview-questions/</guid>
-      <description>&lt;p&gt;Comprehensive List of Java Interview Questions based on my personal interview experience over the last few years. Sequence of Questions in each section are in the order of recent interview trends. Keep following this post link for regular updates.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Top Javascript Interview Questions</title>
-      <link>https://codingnconcepts.com/top-javascript-interview-questions/</link>
-      <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/top-javascript-interview-questions/</guid>
-      <description>&lt;p&gt;These Javascript interview questions are based on my personal interview experience. Likelihood of question being asked in the interview is from top to bottom.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Singleton Design Pattern Using Java</title>
-      <link>https://codingnconcepts.com/java/singleton-design-pattern-using-java/</link>
-      <pubDate>Mon, 22 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/java/singleton-design-pattern-using-java/</guid>
-      <description>&lt;p&gt;This problem is frequently asked in the interview to check your understanding on singleton design pattern. This program answers following artefacts of singleton design pattern:-&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;How to make singleton class thread safe?
-&lt;ul&gt;
-&lt;li&gt;using double checked locking&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;How to prevent deserialization to create new object of singleton class?
-&lt;ul&gt;
-&lt;li&gt;using readResolve method to return same instance&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;How to prevent cloning to create a new object of singleton class?
-&lt;ul&gt;
-&lt;li&gt;override clone method to return same instance&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;How to prevent reflexion to create a new object of singleton class?
-&lt;ul&gt;
-&lt;li&gt;check instance exist in private constructor and throw exception if already exist
-You can find the singleton pattern implementation here.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;</description>
-    </item>
-    
-    <item>
-      <title>Ping pong using wait notify</title>
-      <link>https://codingnconcepts.com/java/ping-pong-using-wait-notify/</link>
-      <pubDate>Thu, 04 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/java/ping-pong-using-wait-notify/</guid>
-      <description>&lt;p&gt;This problem is frequently asked in the interview to check your understanding on threads and your programming skills. Problem statement might change for e.g.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Print ping pong using two threads.&lt;/li&gt;
-&lt;li&gt;Print alternate number using two threads.&lt;/li&gt;
-&lt;li&gt;Print even numbers by one thread and odd numbers by another thread.&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Apache Kafka CCDAK Exam Notes</title>
-      <link>https://codingnconcepts.com/post/apache-kafka-ccdak-exam-notes/</link>
-      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/post/apache-kafka-ccdak-exam-notes/</guid>
-      <description>&lt;p&gt;Hi Readers,&lt;/p&gt;
-&lt;p&gt;If you are planning or preparing for Apache Kafka Certification then this is the right place for you.There are many Apache Kafka Certifications are available in the market but &lt;a href=&#34;https://www.confluent.io/certification/&#34; target=&#34;_blank&#34;&gt;CCDAK (Confluent Certified Developer for Apache Kafka)&lt;/a&gt; is the most known certification as Kafka is now maintained by Confluent.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Virtual Dom vs Shadow Dom</title>
-      <link>https://codingnconcepts.com/javascript/virtual-dom-vs-shadow-dom/</link>
-      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/javascript/virtual-dom-vs-shadow-dom/</guid>
-      <description>&lt;p&gt;This post explains the DOM, Virtual DOM and Shadow DOM concepts and their differences&amp;hellip;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Kafka Consumer Using Java</title>
-      <link>https://codingnconcepts.com/post/apache-kafka-consumer-using-java/</link>
-      <pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/post/apache-kafka-consumer-using-java/</guid>
-      <description>&lt;p&gt;Implementation of Kafka Consumer using Java&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Kafka Producer Using Java</title>
-      <link>https://codingnconcepts.com/post/apache-kafka-producer-using-java/</link>
-      <pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/post/apache-kafka-producer-using-java/</guid>
-      <description>&lt;p&gt;Implementation of Kafka Producer using Java&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Immutable Class in Java</title>
-      <link>https://codingnconcepts.com/java/immutable-class-using-java/</link>
-      <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/java/immutable-class-using-java/</guid>
-      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn about &lt;em&gt;Immutable Class&lt;/em&gt; and its benefits in thread-safety, caching and collections. We will also look at rules to create immutable classes and eventually we&amp;rsquo;ll write an &lt;em&gt;Immutable Class&lt;/em&gt; from scratch in Java.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Fibonacci Series Using Recursive function</title>
-      <link>https://codingnconcepts.com/java/fibonacci-series-using-recursive/</link>
-      <pubDate>Sun, 12 Jul 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/java/fibonacci-series-using-recursive/</guid>
-      <description>&lt;p&gt;Fibonacci series implementation in java is frequently asked question in interview at fresher level. Moreover, it is a very famous example to show how to use recursive function in java.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Bubble Sort</title>
-      <link>https://codingnconcepts.com/java/bubble-sort-using-java/</link>
-      <pubDate>Tue, 09 Jun 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/java/bubble-sort-using-java/</guid>
-      <description>&lt;h3 id=&#34;why-it-is-called-bubble-sort-&#34;&gt;Why it is called bubble sort ?&lt;/h3&gt;
-&lt;p&gt;Bubble Sort is nothing but a comparison algorithm where -&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;At the end of first iteration, largest element in the array get placed at last index&lt;/li&gt;
-&lt;li&gt;At the end of second iteration, second largest element in the array get placed at second last index and so on&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This way large elements are moving towards the last indexes and hence small elements are moving towards the starting indexes which is also termed as smaller elements &amp;ldquo;bubble&amp;rdquo; to the top of the list that is why it is called bubble sort.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Design Elevator (Lift) in Java</title>
-      <link>https://codingnconcepts.com/java/elevator-implementation-using-java/</link>
-      <pubDate>Mon, 06 Apr 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/java/elevator-implementation-using-java/</guid>
-      <description>&lt;p&gt;Implementation of Elevator or Lift has been asked in many interviews. I have tried to implement it using muti-threading and TreeSet. TreeSet is used to store incoming request. It is a good choice here as it removes the duplicate requests and implements NavigableSet which provide you methods such as floor and ceiling.&lt;/p&gt;
-&lt;p&gt;Elevator in this program implements following features -&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;If elevator is going up or down, it checks for nearest floor request to process first in that direction.&lt;/li&gt;
-&lt;li&gt;If there is no request to process, it waits at last processed floor.&lt;/li&gt;
-&lt;li&gt;If a new request comes while elevator is processing a request. It process the new request first if it is nearest than the processing floor in same direction.&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>12 Balls Weight Puzzle (Solved)</title>
-      <link>https://codingnconcepts.com/puzzle/12-balls-weight-puzzle/</link>
-      <pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/puzzle/12-balls-weight-puzzle/</guid>
-      <description>&lt;p&gt;This is my favorite weight puzzle which have been asked from me in many interviews over the past few years.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>8 Balls Weight Puzzle (Solved)</title>
-      <link>https://codingnconcepts.com/puzzle/8-balls-weight-puzzle/</link>
-      <pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/puzzle/8-balls-weight-puzzle/</guid>
-      <description>&lt;p&gt;This is my favorite weight puzzle which have been asked from me in many interviews over the past few years.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Minimum set of weight puzzle</title>
-      <link>https://codingnconcepts.com/puzzle/minimum-set-of-weights/</link>
-      <pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/puzzle/minimum-set-of-weights/</guid>
-      <description>&lt;p&gt;This puzzle is a mix of weight and math puzzle.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Contaminated Pills Puzzle</title>
-      <link>https://codingnconcepts.com/puzzle/contaminated-pills/</link>
-      <pubDate>Sat, 21 Apr 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/puzzle/contaminated-pills/</guid>
-      <description>&lt;p&gt;The Contaminated Pills Puzzle also one of my favorite puzzle which is frequently asked in interviews.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>अबला या बला ?</title>
-      <link>https://codingnconcepts.com/poetry/abla-ya-bala/</link>
-      <pubDate>Wed, 07 Dec 2011 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/poetry/abla-ya-bala/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Yaar Anmulle</title>
-      <link>https://codingnconcepts.com/poetry/yaar-anmulle/</link>
-      <pubDate>Sun, 07 Aug 2011 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/poetry/yaar-anmulle/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>पापा</title>
-      <link>https://codingnconcepts.com/poetry/papa/</link>
-      <pubDate>Sun, 19 Jun 2011 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/poetry/papa/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>I&#39;m still a child !!</title>
-      <link>https://codingnconcepts.com/poetry/i-am-still-a-child/</link>
-      <pubDate>Sat, 28 May 2011 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/poetry/i-am-still-a-child/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>जिंदगी क्या है ?</title>
-      <link>https://codingnconcepts.com/poetry/jindagi-kya-hai/</link>
-      <pubDate>Sun, 01 May 2011 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/poetry/jindagi-kya-hai/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>याद आता है - VIT !!!</title>
-      <link>https://codingnconcepts.com/poetry/yaad-aata-hai-vit/</link>
-      <pubDate>Sat, 23 Apr 2011 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/poetry/yaad-aata-hai-vit/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>छोटा था तो अच्छा था !</title>
-      <link>https://codingnconcepts.com/poetry/chota-tha-to-accha-tha/</link>
-      <pubDate>Fri, 08 Apr 2011 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/poetry/chota-tha-to-accha-tha/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>About Me</title>
-      <link>https://codingnconcepts.com/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/about/</guid>
-      <description>Hey Everyone! I’m Ashish Lahoti. Welcome to my technology blog!
+The main difference in the constructor comes when using inheritance. If we want to create a Student class that subclasses Person and add a studentId field, this is what we have to do in addition to the above.</description></item><item><title>Understand call, bind and apply methods in JavaScript</title><link>https://codingnconcepts.com/javascript/call-vs-bind-vs-apply/</link><pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/call-vs-bind-vs-apply/</guid><description>&lt;p>This is frequently asked question in JavaScript interview. This post describes the Function prototype methods &lt;code>call()&lt;/code>, &lt;code>apply()&lt;/code> and &lt;code>bind()&lt;/code> with their syntax, usage and practical examples.&lt;/p></description></item><item><title>Lexical Scope, Closures and Currying in JavaScript</title><link>https://codingnconcepts.com/javascript/lexical-scope-closures-and-currying/</link><pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/lexical-scope-closures-and-currying/</guid><description>&lt;p>This post describes the &lt;a href="#lexical-scope">Lexical Scope&lt;/a>, &lt;a href="#closures">Closures&lt;/a> and &lt;a href="#currying">Currying Function&lt;/a> in JavaScript and their relations with examples.&lt;/p></description></item><item><title>M power N Using Recursive function</title><link>https://codingnconcepts.com/java/m-power-n-using-recursive/</link><pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/java/m-power-n-using-recursive/</guid><description>&lt;p>This is one of the example of using recursive function in Java to find M power N&lt;/p></description></item><item><title>Print All String Combinations Using Recursive function</title><link>https://codingnconcepts.com/java/print-all-string-combinations-using-recursive/</link><pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/java/print-all-string-combinations-using-recursive/</guid><description>&lt;p>Print all the possible combinations of a given String using Recursive function in Java&lt;/p></description></item><item><title>Streams in Java 8</title><link>https://codingnconcepts.com/java/streams-in-java-8/</link><pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/java/streams-in-java-8/</guid><description>&lt;p>One of the major feature of Java 8 is addition of Stream. It also has introduced the functional programming in Java. We will discuss different stream operations available in Collection, Array, IntStream with examples. We will also discuss the difference between Intermediate and Terminal operations.&lt;/p></description></item><item><title>Decorator Design Pattern Using Java</title><link>https://codingnconcepts.com/java/decorator-design-pattern-using-java/</link><pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/java/decorator-design-pattern-using-java/</guid><description>&lt;p>Decorator design pattern is used to add a new feature on the existing object by wrapping it with a decorator class.&lt;/p></description></item><item><title>Difference in const and Object.freeze() in JavaScript</title><link>https://codingnconcepts.com/javascript/const-vs-object-freeze/</link><pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/const-vs-object-freeze/</guid><description>&lt;p>This post describes the best practices to define constants and configuration values in JavaScript using &lt;code>const&lt;/code> and &lt;code>Object.freeze()&lt;/code> and the difference between them.&lt;/p></description></item><item><title>Object methods in JavaScript</title><link>https://codingnconcepts.com/javascript/object-methods-in-javascript/</link><pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/object-methods-in-javascript/</guid><description>&lt;p>This post describes the usage of various Object methods like &lt;code>Object.create()&lt;/code>, &lt;code>Object.assign()&lt;/code>, &lt;code>Object.freeze()&lt;/code>, &lt;code>Object.seal()&lt;/code> and many more available in JavaScript with examples.&lt;/p></description></item><item><title>Difference between var, let and const</title><link>https://codingnconcepts.com/javascript/difference-between-var-let-and-const/</link><pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/difference-between-var-let-and-const/</guid><description>&lt;p>A nice feature addition in ES2015 (ES6) was the introduction of &lt;code>let&lt;/code> and &lt;code>const&lt;/code> keywords for variable declaration. You can use &lt;code>var&lt;/code>, &lt;code>let&lt;/code> and &lt;code>const&lt;/code> keyword interchangeably for variable declaration though it makes a difference in terms of their scope, usage and hoisting. If you are not aware of these differences then please continue to read&amp;hellip;&lt;/p></description></item><item><title>1 Light Bulb and 3 Switches Puzzle</title><link>https://codingnconcepts.com/puzzle/1-light-bulb-and-3-switches/</link><pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/puzzle/1-light-bulb-and-3-switches/</guid><description>&lt;p>The one light bulb and three switches puzzle has been asked several times in interviews to evaluate candidate&amp;rsquo;s analytical skills.&lt;/p></description></item><item><title>Fruit Basket Puzzle</title><link>https://codingnconcepts.com/puzzle/fruit-basket-puzzle/</link><pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/puzzle/fruit-basket-puzzle/</guid><description>&lt;p>The Fruit basket puzzle comes under basic puzzles being asked in the interview.&lt;/p></description></item><item><title>The Die Hard Water Jug Riddle (Solved)</title><link>https://codingnconcepts.com/puzzle/the-water-jug-riddle/</link><pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/puzzle/the-water-jug-riddle/</guid><description>&lt;p>This riddle is from famous Die Hard movie where &lt;em>Bruce Willis&lt;/em> and &lt;em>Jackson&lt;/em> have to diffuse a bomb by placing exactly 4 gallon water on a scale using 3 gallon and 5 gallon water jug.&lt;/p></description></item><item><title>2 Eggs and 100 Floors Problem (Solved)</title><link>https://codingnconcepts.com/puzzle/2-eggs-and-100-floors/</link><pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/puzzle/2-eggs-and-100-floors/</guid><description>&lt;p>The &lt;em>2 Eggs and 100 Floors&lt;/em> problem is frequently asked in interview to evaluate candidate&amp;rsquo;s understanding on linear search and binary search. I have tried to explain this problem as easy as possible.&lt;/p></description></item><item><title>25 Horses 5 Tracks Problem (Solved)</title><link>https://codingnconcepts.com/puzzle/25-horses-puzzle/</link><pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/puzzle/25-horses-puzzle/</guid><description>&lt;p>The &lt;em>25 Horses 5 Tracks&lt;/em> Problem is a famous Google interview question that has been asked in many companies to evaluate candidate&amp;rsquo;s analytical ability and problem solving approach.&lt;/p></description></item><item><title>Burning Rope Puzzle (Solved)</title><link>https://codingnconcepts.com/puzzle/burning-rope/</link><pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/puzzle/burning-rope/</guid><description>&lt;p>Burning Rope Puzzle comes under basic puzzles asked in the interview.&lt;/p></description></item><item><title>Einstein's Riddle</title><link>https://codingnconcepts.com/puzzle/einsteins-riddle/</link><pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/puzzle/einsteins-riddle/</guid><description>&lt;p>The legend says that this problem was created by Albert Einstein in the last century. Einstein said that only 2% of the world could solve it.&lt;/p></description></item><item><title>The 6s Math Puzzle</title><link>https://codingnconcepts.com/puzzle/the-6s-math-puzzle/</link><pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/puzzle/the-6s-math-puzzle/</guid><description>&lt;p>This is a pure mathematical puzzle which evaluate your ability to solve maths equation. This is a great problem for building number sense.&lt;/p></description></item><item><title>How to configure swagger in spring boot</title><link>https://codingnconcepts.com/spring-boot/how-to-configure-swagger/</link><pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/how-to-configure-swagger/</guid><description>&lt;p>Swagger library is very useful if you are creating spring boot web application and exposing REST endpoints. Swagger generates web page for you to execute and test GET, POST, PUT, DELETE HTTP endpoints. This is helpful since you do not need to use Postman or some other tool to test REST Apis. Once you configure swagger then web page can be accessible using following URL:-&lt;/p>
+&lt;p>http://localhost:8080/swagger-ui.html&lt;/p>
+&lt;p>Follow the steps to configure swagger in your spring boot application:-&lt;/p></description></item><item><title>How to create and configure custom banner in spring boot</title><link>https://codingnconcepts.com/spring-boot/how-to-create-custom-banner/</link><pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/how-to-create-custom-banner/</guid><description>&lt;p>Spring boot application comes with default banner which shows up first when you start your application.&lt;/p>
+&lt;pre>&lt;code> . ____ _ __ _ _
+/\\ / ___'_ __ _ _(_)_ __ __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+\\/ ___)| |_)| | | | | || (_| | ) ) ) )
+' |____| .__|_| |_|_| |_\__, | / / / /
+=========|_|==============|___/=/_/_/_/
+:: Spring Boot :: (v2.1.3.RELEASE)
+&lt;/code>&lt;/pre>&lt;p>You can replace above banner with your self made custom banner in following two easy steps:-&lt;/p></description></item><item><title>How to disable command line properties in spring boot</title><link>https://codingnconcepts.com/spring-boot/how-to-disable-command-line-properties/</link><pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/how-to-disable-command-line-properties/</guid><description>&lt;p>Spring Boot Application converts any command line arguments starting with --, such as &lt;strong>--spring.profiles.active=dev&lt;/strong> to a property by default and adds them to the Spring Environment. Command line properties always take precedence over other property sources.&lt;/p>
+&lt;p>If you do not want command line properties to be added to the Environment, you can disable them from SpringBootApplication main method as follows:-&lt;/p></description></item><item><title>How to change server port in spring boot</title><link>https://codingnconcepts.com/spring-boot/how-to-change-server-port/</link><pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/how-to-change-server-port/</guid><description>&lt;p>Spring boot web application using embedded server by default runs on port 8080. Following are the ways to change default server port from &lt;strong>8080&lt;/strong> to say &lt;strong>9090&lt;/strong>&lt;/p>
+&lt;p>Follow any of the given five ways to change server port:-&lt;/p></description></item><item><title>How to disable default banner in spring boot</title><link>https://codingnconcepts.com/spring-boot/how-to-disable-banner/</link><pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/how-to-disable-banner/</guid><description>&lt;p>You would have seen below spring boot banner when starting a spring boot application&lt;/p>
+&lt;pre>&lt;code> . ____ _ __ _ _
+/\\ / ___'_ __ _ _(_)_ __ __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+\\/ ___)| |_)| | | | | || (_| | ) ) ) )
+' |____| .__|_| |_|_| |_\__, | / / / /
+=========|_|==============|___/=/_/_/_/
+:: Spring Boot :: (v2.1.3.RELEASE)
+&lt;/code>&lt;/pre>&lt;p>There are multiple ways to disable spring boot banner as follows:&lt;/p></description></item><item><title>Top Spring Boot Interview Questions</title><link>https://codingnconcepts.com/top-spring-boot-interview-questions/</link><pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/top-spring-boot-interview-questions/</guid><description>&lt;p>Java developers are now switching from Spring Framework to Spring Boot for enterprise application development in microservice architecture. Spring Boot has become a trending topic to be asked in interviews from Java backend developers in 2020.&lt;/p></description></item><item><title>Top Spring Interview Questions</title><link>https://codingnconcepts.com/top-spring-interview-questions/</link><pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/top-spring-interview-questions/</guid><description>&lt;p>Spring Framework is widely used by Java developers for enterprise application development and most frequent topic to be asked in interviews from Java backend developers in 2020.&lt;/p></description></item><item><title>Top CSS Interview Questions</title><link>https://codingnconcepts.com/top-css-interview-questions/</link><pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/top-css-interview-questions/</guid><description>&lt;p>These CSS and CSS3 interview questions are based on my personal interview experience and feedback from other interviewees. Keep following this post for regular updates.&lt;/p></description></item><item><title>Top Java Interview Questions</title><link>https://codingnconcepts.com/top-java-interview-questions/</link><pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/top-java-interview-questions/</guid><description>&lt;p>Comprehensive List of Java Interview Questions based on my personal interview experience over the last few years. Sequence of Questions in each section are in the order of recent interview trends. Keep following this post link for regular updates.&lt;/p></description></item><item><title>Top Javascript Interview Questions</title><link>https://codingnconcepts.com/top-javascript-interview-questions/</link><pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/top-javascript-interview-questions/</guid><description>&lt;p>These Javascript interview questions are based on my personal interview experience. Likelihood of question being asked in the interview is from top to bottom.&lt;/p></description></item><item><title>Singleton Design Pattern Using Java</title><link>https://codingnconcepts.com/java/singleton-design-pattern-using-java/</link><pubDate>Mon, 22 Jul 2019 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/java/singleton-design-pattern-using-java/</guid><description>&lt;p>This problem is frequently asked in the interview to check your understanding on singleton design pattern. This program answers following artefacts of singleton design pattern:-&lt;/p>
+&lt;ol>
+&lt;li>How to make singleton class thread safe?
+&lt;ul>
+&lt;li>using double checked locking&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>How to prevent deserialization to create new object of singleton class?
+&lt;ul>
+&lt;li>using readResolve method to return same instance&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>How to prevent cloning to create a new object of singleton class?
+&lt;ul>
+&lt;li>override clone method to return same instance&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>How to prevent reflexion to create a new object of singleton class?
+&lt;ul>
+&lt;li>check instance exist in private constructor and throw exception if already exist
+You can find the singleton pattern implementation here.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol></description></item><item><title>Ping pong using wait notify</title><link>https://codingnconcepts.com/java/ping-pong-using-wait-notify/</link><pubDate>Thu, 04 Jul 2019 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/java/ping-pong-using-wait-notify/</guid><description>&lt;p>This problem is frequently asked in the interview to check your understanding on threads and your programming skills. Problem statement might change for e.g.&lt;/p>
+&lt;ul>
+&lt;li>Print ping pong using two threads.&lt;/li>
+&lt;li>Print alternate number using two threads.&lt;/li>
+&lt;li>Print even numbers by one thread and odd numbers by another thread.&lt;/li>
+&lt;/ul></description></item><item><title>Apache Kafka CCDAK Exam Notes</title><link>https://codingnconcepts.com/post/apache-kafka-ccdak-exam-notes/</link><pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/post/apache-kafka-ccdak-exam-notes/</guid><description>&lt;p>Hi Readers,&lt;/p>
+&lt;p>If you are planning or preparing for Apache Kafka Certification then this is the right place for you.There are many Apache Kafka Certifications are available in the market but &lt;a href="https://www.confluent.io/certification/" target="_blank">CCDAK (Confluent Certified Developer for Apache Kafka)&lt;/a> is the most known certification as Kafka is now maintained by Confluent.&lt;/p></description></item><item><title>Virtual Dom vs Shadow Dom</title><link>https://codingnconcepts.com/javascript/virtual-dom-vs-shadow-dom/</link><pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/virtual-dom-vs-shadow-dom/</guid><description>&lt;p>This post explains the DOM, Virtual DOM and Shadow DOM concepts and their differences&amp;hellip;&lt;/p></description></item><item><title>Kafka Consumer Using Java</title><link>https://codingnconcepts.com/post/apache-kafka-consumer-using-java/</link><pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/post/apache-kafka-consumer-using-java/</guid><description>&lt;p>Implementation of Kafka Consumer using Java&lt;/p></description></item><item><title>Kafka Producer Using Java</title><link>https://codingnconcepts.com/post/apache-kafka-producer-using-java/</link><pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/post/apache-kafka-producer-using-java/</guid><description>&lt;p>Implementation of Kafka Producer using Java&lt;/p></description></item><item><title>Immutable Class in Java</title><link>https://codingnconcepts.com/java/immutable-class-using-java/</link><pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/java/immutable-class-using-java/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll learn about &lt;em>Immutable Class&lt;/em> and its benefits in thread-safety, caching and collections. We will also look at rules to create immutable classes and eventually we&amp;rsquo;ll write an &lt;em>Immutable Class&lt;/em> from scratch in Java.&lt;/p></description></item><item><title>Fibonacci Series Using Recursive function</title><link>https://codingnconcepts.com/java/fibonacci-series-using-recursive/</link><pubDate>Sun, 12 Jul 2015 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/java/fibonacci-series-using-recursive/</guid><description>&lt;p>Fibonacci series implementation in java is frequently asked question in interview at fresher level. Moreover, it is a very famous example to show how to use recursive function in java.&lt;/p></description></item><item><title>Bubble Sort</title><link>https://codingnconcepts.com/java/bubble-sort-using-java/</link><pubDate>Tue, 09 Jun 2015 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/java/bubble-sort-using-java/</guid><description>&lt;h3 id="why-it-is-called-bubble-sort-">Why it is called bubble sort ?&lt;/h3>
+&lt;p>Bubble Sort is nothing but a comparison algorithm where -&lt;/p>
+&lt;ul>
+&lt;li>At the end of first iteration, largest element in the array get placed at last index&lt;/li>
+&lt;li>At the end of second iteration, second largest element in the array get placed at second last index and so on&amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;p>This way large elements are moving towards the last indexes and hence small elements are moving towards the starting indexes which is also termed as smaller elements &amp;ldquo;bubble&amp;rdquo; to the top of the list that is why it is called bubble sort.&lt;/p></description></item><item><title>Design Elevator (Lift) in Java</title><link>https://codingnconcepts.com/java/elevator-implementation-using-java/</link><pubDate>Mon, 06 Apr 2015 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/java/elevator-implementation-using-java/</guid><description>&lt;p>Implementation of Elevator or Lift has been asked in many interviews. I have tried to implement it using muti-threading and TreeSet. TreeSet is used to store incoming request. It is a good choice here as it removes the duplicate requests and implements NavigableSet which provide you methods such as floor and ceiling.&lt;/p>
+&lt;p>Elevator in this program implements following features -&lt;/p>
+&lt;ul>
+&lt;li>If elevator is going up or down, it checks for nearest floor request to process first in that direction.&lt;/li>
+&lt;li>If there is no request to process, it waits at last processed floor.&lt;/li>
+&lt;li>If a new request comes while elevator is processing a request. It process the new request first if it is nearest than the processing floor in same direction.&lt;/li>
+&lt;/ul></description></item><item><title>12 Balls Weight Puzzle (Solved)</title><link>https://codingnconcepts.com/puzzle/12-balls-weight-puzzle/</link><pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/puzzle/12-balls-weight-puzzle/</guid><description>&lt;p>This is my favorite weight puzzle which have been asked from me in many interviews over the past few years.&lt;/p></description></item><item><title>8 Balls Weight Puzzle (Solved)</title><link>https://codingnconcepts.com/puzzle/8-balls-weight-puzzle/</link><pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/puzzle/8-balls-weight-puzzle/</guid><description>&lt;p>This is my favorite weight puzzle which have been asked from me in many interviews over the past few years.&lt;/p></description></item><item><title>Minimum set of weight puzzle</title><link>https://codingnconcepts.com/puzzle/minimum-set-of-weights/</link><pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/puzzle/minimum-set-of-weights/</guid><description>&lt;p>This puzzle is a mix of weight and math puzzle.&lt;/p></description></item><item><title>Contaminated Pills Puzzle</title><link>https://codingnconcepts.com/puzzle/contaminated-pills/</link><pubDate>Sat, 21 Apr 2012 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/puzzle/contaminated-pills/</guid><description>&lt;p>The Contaminated Pills Puzzle also one of my favorite puzzle which is frequently asked in interviews.&lt;/p></description></item><item><title>अबला या बला ?</title><link>https://codingnconcepts.com/poetry/abla-ya-bala/</link><pubDate>Wed, 07 Dec 2011 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/poetry/abla-ya-bala/</guid><description/></item><item><title>Yaar Anmulle</title><link>https://codingnconcepts.com/poetry/yaar-anmulle/</link><pubDate>Sun, 07 Aug 2011 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/poetry/yaar-anmulle/</guid><description/></item><item><title>पापा</title><link>https://codingnconcepts.com/poetry/papa/</link><pubDate>Sun, 19 Jun 2011 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/poetry/papa/</guid><description/></item><item><title>I'm still a child !!</title><link>https://codingnconcepts.com/poetry/i-am-still-a-child/</link><pubDate>Sat, 28 May 2011 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/poetry/i-am-still-a-child/</guid><description/></item><item><title>जिंदगी क्या है ?</title><link>https://codingnconcepts.com/poetry/jindagi-kya-hai/</link><pubDate>Sun, 01 May 2011 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/poetry/jindagi-kya-hai/</guid><description/></item><item><title>याद आता है - VIT !!!</title><link>https://codingnconcepts.com/poetry/yaad-aata-hai-vit/</link><pubDate>Sat, 23 Apr 2011 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/poetry/yaad-aata-hai-vit/</guid><description/></item><item><title>छोटा था तो अच्छा था !</title><link>https://codingnconcepts.com/poetry/chota-tha-to-accha-tha/</link><pubDate>Fri, 08 Apr 2011 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/poetry/chota-tha-to-accha-tha/</guid><description/></item><item><title>About Me</title><link>https://codingnconcepts.com/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/about/</guid><description>Hey Everyone! I’m Ashish Lahoti. Welcome to my technology blog!
 I created this blog to narrate my coding and concepts learning experiences. I like sharing my experiments and ideas with everyone by writing articles on latest technological trends.
 Primarily I write about Java, Spring, Kafka, Javascript, CSS and the list goes on&amp;hellip;
 Few pointers about me:-
- Full Stack Certified Kafka and SCJP Developer with 9+ years of extensive experience in Java and JavaScript Technologies.</description>
-    </item>
-    
-    <item>
-      <title>Search Results</title>
-      <link>https://codingnconcepts.com/search/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/search/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Unicode Characters</title>
-      <link>https://codingnconcepts.com/tools/unicode-characters/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tools/unicode-characters/</guid>
-      <description>Tool to copy special and fancy characters, symbols, emoji</description>
-    </item>
-    
-  </channel>
-</rss>
+Full Stack Certified Kafka and SCJP Developer with 9+ years of extensive experience in Java and JavaScript Technologies.</description></item><item><title>Search Results</title><link>https://codingnconcepts.com/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/search/</guid><description/></item><item><title>Unicode Characters</title><link>https://codingnconcepts.com/tools/unicode-characters/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/tools/unicode-characters/</guid><description>Tool to copy special and fancy characters, symbols, emoji</description></item></channel></rss>

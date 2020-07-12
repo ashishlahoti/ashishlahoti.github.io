@@ -1,443 +1,16 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en-us">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Add Structure Data JSON-LD in Hugo Website Pages - Coding N Concepts</title>
-	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Mark Up Hugo website main page and blog post pages using JSON-LD in order to structure data for hugo generated website for better google search result and SEO ranking.">
-	<meta property="og:title" content="Add Structure Data JSON-LD in Hugo Website Pages" />
-<meta property="og:description" content="Mark Up Hugo website main page and blog post pages using JSON-LD in order to structure data for hugo generated website for better google search result and SEO ranking." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://codingnconcepts.com/hugo/structure-data-json-ld-hugo/" />
-<meta property="og:image" content="https://codingnconcepts.com/img/logo/gohugo.png" />
-<meta property="article:published_time" content="2020-05-04T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-06-04T00:00:00+00:00" />
-<meta property="og:site_name" content="CodingNConcepts" />
-
-<meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
-<meta property="article:publisher" content="https://www.facebook.com/codingnconcepts" />
-<meta property="article:section" content="hugo" />
-<meta property="article:tag" content="Hugo Partial" />
-<meta property="fb:admins" content="177784346770196" />
-	<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://codingnconcepts.com/img/logo/gohugo.png"/>
-
-<meta name="twitter:title" content="Add Structure Data JSON-LD in Hugo Website Pages"/>
-<meta name="twitter:description" content="Mark Up Hugo website main page and blog post pages using JSON-LD in order to structure data for hugo generated website for better google search result and SEO ranking."/>
-
-	<link rel="dns-prefetch" href="//fonts.googleapis.com">
-	<link rel="dns-prefetch" href="//fonts.gstatic.com">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
-	<link rel="stylesheet" href="/css/style.css">
-	
-	<link rel="shortcut icon" href="/favicon.ico">
-	<link rel="canonical" href="https://codingnconcepts.com/hugo/structure-data-json-ld-hugo/">
-		
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-160024498-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-	<script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "BlogPosting",
-    "articleSection": "hugo",
-    "name": "Add Structure Data JSON-LD in Hugo Website Pages",
-    "headline": "Add Structure Data JSON-LD in Hugo Website Pages",
-    "alternativeHeadline": "Guide to create a Site Schema partial in Hugo",
-    "description": "Mark Up Hugo website main page and blog post pages using JSON-LD in order to structure data for hugo generated website for better google search result and SEO ranking.",
-    "inLanguage": "en-us",
-	"isFamilyFriendly": "true",
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https:\/\/codingnconcepts.com\/hugo\/structure-data-json-ld-hugo\/"
-    },
-    "author" : {
-        "@type": "Person",
-        "name": "Ashish Lahoti"
-    },
-    "creator" : {
-        "@type": "Person",
-        "name": "Ashish Lahoti"
-    },
-    "accountablePerson" : {
-        "@type": "Person",
-        "name": "Ashish Lahoti"
-    },
-    "copyrightHolder" : "Coding N Concepts",
-    "copyrightYear" : "2020",
-    "dateCreated": "2020-05-04T00:00:00.00Z",
-    "datePublished": "2020-05-04T00:00:00.00Z",
-    "dateModified": "2020-06-04T00:00:00.00Z",
-    "publisher":{
-        "@type":"Organization",
-        "name": "Coding N Concepts",
-        "url": "https://codingnconcepts.com/",
-        "logo": {
-            "@type": "ImageObject",
-            "url": "https:\/\/codingnconcepts.com\/favicon-32x32.png",
-            "width":"32",
-            "height":"32"
-        }
-    },
-    "image": ["https://codingnconcepts.com/img/logo/gohugo.png"],
-    "url" : "https:\/\/codingnconcepts.com\/hugo\/structure-data-json-ld-hugo\/",
-    "wordCount" : "1215",
-    "genre" : ["Hugo Partial"],
-    "keywords" :  null 
-}
-</script>
-
-</head>
-<body class="body">
-	<div class="container container--outer">
-		<header class="header">
-	<div class="container">
-		<div class="logo">
-			<a class="logo__link" href="/" title="Coding N Concepts" rel="home">
-				<div class="logo__title"><img src="/favicon-32x32.png" alt="Add Structure Data JSON-LD in Hugo Website Pages"> Coding N Concepts</div>
-				<div class="logo__tagline">Ashish Lahoti&#39;s Technical Blog</div>
-			</a>
-		</div>
-		
-<nav class="menu">
-	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
-		<span class="menu__btn-title" tabindex="-1">Menu</span>
-	</button>
-	<ul class="menu__list">
-		<li class="menu__item">
-			<a class="menu__link" href="/">
-				
-				<span class="menu__text">Home</span>
-				
-			</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/tags/popular-posts">
-				
-				<span class="menu__text">Popular</span>
-				
-			</a>
-		</li>
-		<li class="menu__item menu__dropdown">
-			<a class="menu__link" href="/java/">
-				
-				<span class="menu__text">Java</span>
-				<label class="drop-icon" for="Java">▾</label>
-				
-			</a>
-			<input type="checkbox" id="Java">
-			<ul class="submenu__list">
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/java-core/">
-						
-						<span class="menu__text">Core Java</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/java-collection/">
-						
-						<span class="menu__text">Collections</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/java-design-pattern/">
-						
-						<span class="menu__text">Design Patterns</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/java-recursive/">
-						
-						<span class="menu__text">Recursive</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/java-streams/">
-						
-						<span class="menu__text">Streams</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/java-string/">
-						
-						<span class="menu__text">String</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/java-threads/">
-						
-						<span class="menu__text">Threads</span>
-						
-					</a>
-					</li>
-				
-			</ul>
-		</li>
-		<li class="menu__item menu__dropdown">
-			<a class="menu__link" href="/javascript/">
-				
-				<span class="menu__text">JavaScript</span>
-				<label class="drop-icon" for="JavaScript">▾</label>
-				
-			</a>
-			<input type="checkbox" id="JavaScript">
-			<ul class="submenu__list">
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/javascript-core/">
-						
-						<span class="menu__text">JS Core</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/javascript-array/">
-						
-						<span class="menu__text">JS Array</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/javascript-console/">
-						
-						<span class="menu__text">JS Console</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/javascript-es6/">
-						
-						<span class="menu__text">ES6</span>
-						
-					</a>
-					</li>
-				
-			</ul>
-		</li>
-		<li class="menu__item menu__dropdown">
-			<a class="menu__link" href="/spring-boot/">
-				
-				<span class="menu__text">Spring Boot</span>
-				<label class="drop-icon" for="Spring Boot">▾</label>
-				
-			</a>
-			<input type="checkbox" id="Spring Boot">
-			<ul class="submenu__list">
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/spring-boot-basics/">
-						
-						<span class="menu__text">Spring Boot Basics</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/spring-boot-rest/">
-						
-						<span class="menu__text">Spring Boot REST</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/spring-boot-kafka/">
-						
-						<span class="menu__text">Spring Boot KAFKA</span>
-						
-					</a>
-					</li>
-				
-			</ul>
-		</li>
-		<li class="menu__item menu__dropdown">
-			<a class="menu__link" href="/puzzle/">
-				
-				<span class="menu__text">Puzzles</span>
-				<label class="drop-icon" for="Puzzles">▾</label>
-				
-			</a>
-			<input type="checkbox" id="Puzzles">
-			<ul class="submenu__list">
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/maths-puzzle/">
-						
-						<span class="menu__text">Maths Puzzles</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/weight-puzzle/">
-						
-						<span class="menu__text">Weight Puzzles</span>
-						
-					</a>
-					</li>
-				
-			</ul>
-		</li>
-		<li class="menu__item menu__dropdown">
-			<a class="menu__link" href="/interview-questions/">
-				
-				<span class="menu__text">Interview Q&amp;A</span>
-				<label class="drop-icon" for="Interview Q&amp;A">▾</label>
-				
-			</a>
-			<input type="checkbox" id="Interview Q&amp;A">
-			<ul class="submenu__list">
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/java-qa/">
-						
-						<span class="menu__text">Java</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/javascript-qa/">
-						
-						<span class="menu__text">JavaScript</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/css-qa/">
-						
-						<span class="menu__text">CSS</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/spring-qa/">
-						
-						<span class="menu__text">Spring</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/microservice-qa/">
-						
-						<span class="menu__text">Microservices</span>
-						
-					</a>
-					</li>
-				
-			</ul>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/hugo/">
-				
-				<span class="menu__text">Hugo</span>
-				
-			</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/about/">
-				
-				<span class="menu__text">About Me</span>
-				
-			</a>
-		</li>
-	</ul>
-</nav>
-
-	</div>
-</header>
-		<div class="wrapper flex">
-			<div class="primary">
-			
-<main class="main" role="main">
-	<article class="post" autonumbering>
-		<header class="post__header">
-			<h1 class="post__title"><img class="post__thumbnail" src="/img/logo/gohugo.png" alt="Add Structure Data JSON-LD in Hugo Website Pages"> Add Structure Data JSON-LD in Hugo Website Pages</h1>
-			<p class="post__lead">Guide to create a Site Schema partial in Hugo</p>
-			<div class="post__meta meta"><div class="meta__item-author meta__item">
-	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg> <span class="meta__text">Ashish Lahoti</span>
-</div>
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2020-05-04T00:00:00Z">May 04, 2020</time>
-	<time class="meta__text" datetime="2020-06-04T00:00:00Z"> (Last Modified: June 04, 2020)</time>
-</div>
-
-<div class="meta__item-categories meta__item">
-	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/hugo/" rel="category">Hugo</a>
-	</span>
-</div></div>
-		</header>
-<div class="post__toc toc">
-	<div class="toc__title">Page content</div>
-	<div class="toc__menu">
-		<nav id="TableOfContents">
-  <ul>
-    <li><a href="#create-site_schemahtml-partial">Create <em>site_schema.html</em> Partial</a></li>
-    <li><a href="#relevant-front-matter">Relevant <em>front-matter</em></a>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-    <li><a href="#relevant-configtoml">Relevant <em>config.toml</em></a>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-    <li><a href="#add-partial-to-the-head-tag-of-baseofhtml">Add partial to the <em>&lt;head&gt;</em> tag of <em>baseof.html</em></a>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-    <li><a href="#generated-structure-data-json-ld">Generated Structure Data JSON-LD</a>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-    <li><a href="#verify-structure-data-json-ld">Verify Structure Data JSON-LD</a></li>
-  </ul>
-</nav>
-	</div>
-</div>
-<div class="content post__content clearfix">
-			<p>When you add structure data to your website, it helps google, bing or other website indexers to understand the content for your website and pages which leads to better search results for your website and eventually helps in SEO ranking.</p>
-<p>Mark up schema is based on website type and its content. Suppose you have a blog website, then schema of your web pages will be of type &ldquo;Article&rdquo; or &ldquo;BlogPosting&rdquo;. You can go through the <a href="https://developers.google.com/search/docs/data-types/article">google&rsquo;s example</a> of adding structure data using JSON-LD for &ldquo;Article&rdquo; type of website pages.</p>
-<p>Schema of structure data for all type of websites and web pages can be found in <a href="https://schema.org/docs/full.html">documentation</a> of <a href="https://schema.org">schema.org</a></p>
-<p><strong>Microdata</strong> and <strong>JSON-LD</strong> are two ways to add mark up in order to structure your data. Google recommends using <strong>JSON-LD</strong> as it is more cleaner approach to express the structure of the data in JSON format embedded as a <code>&lt;script&gt;</code> in the <code>&lt;head&gt;</code> tag of your HTML. Its a clear separation of structure from HTML elements as compare to <strong>Microdata</strong> where you add special properties like <code>itemprop</code>, <code>itemtype</code> in HTML element tags everywhere.</p>
-<p>Now we know that JSON-LD is way to go. There are the steps to add structure data using JSON-LD in hugo website:</p>
-<h2 id="create-site_schemahtml-partial">Create <em>site_schema.html</em> Partial</h2>
-<p>First of all we are going to create a partial called <code>site_schema.html</code> which is responsible to generate structure data JSON-LD for hugo website and hugo blog pages. All you need to do is copy the below code snippet and save it under <code>$hugo/layouts/partials/site_schema.html</code>.</p>
-<pre><code>{{ if .IsHome -}}
+<!doctype html><html class=no-js lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><title>Add Structure Data JSON-LD in Hugo Website Pages - Coding N Concepts</title><script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script><meta name=description content="Mark Up Hugo website main page and blog post pages using JSON-LD in order to structure data for hugo generated website for better google search result and SEO ranking."><meta property="og:title" content="Add Structure Data JSON-LD in Hugo Website Pages"><meta property="og:description" content="Mark Up Hugo website main page and blog post pages using JSON-LD in order to structure data for hugo generated website for better google search result and SEO ranking."><meta property="og:type" content="article"><meta property="og:url" content="https://codingnconcepts.com/hugo/structure-data-json-ld-hugo/"><meta property="og:image" content="https://codingnconcepts.com/img/logo/gohugo.png"><meta property="article:published_time" content="2020-05-04T00:00:00+00:00"><meta property="article:modified_time" content="2020-06-04T00:00:00+00:00"><meta property="og:site_name" content="CodingNConcepts"><meta property="article:author" content="https://www.facebook.com/codingnconcepts"><meta property="article:publisher" content="https://www.facebook.com/codingnconcepts"><meta property="article:section" content="hugo"><meta property="article:tag" content="Hugo Partial"><meta property="fb:admins" content="177784346770196"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://codingnconcepts.com/img/logo/gohugo.png"><meta name=twitter:title content="Add Structure Data JSON-LD in Hugo Website Pages"><meta name=twitter:description content="Mark Up Hugo website main page and blog post pages using JSON-LD in order to structure data for hugo generated website for better google search result and SEO ranking."><link rel=dns-prefetch href=//fonts.googleapis.com><link rel=dns-prefetch href=//fonts.gstatic.com><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700"><link rel=stylesheet href=/css/style.css><link rel="shortcut icon" href=/favicon.ico><link rel=canonical href=https://codingnconcepts.com/hugo/structure-data-json-ld-hugo/><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-160024498-1','auto');ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","articleSection":"hugo","name":"Add Structure Data JSON-LD in Hugo Website Pages","headline":"Add Structure Data JSON-LD in Hugo Website Pages","alternativeHeadline":"Guide to create a Site Schema partial in Hugo","description":"Mark Up Hugo website main page and blog post pages using JSON-LD in order to structure data for hugo generated website for better google search result and SEO ranking.","inLanguage":"en-us","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/codingnconcepts.com\/hugo\/structure-data-json-ld-hugo\/"},"author":{"@type":"Person","name":"Ashish Lahoti"},"creator":{"@type":"Person","name":"Ashish Lahoti"},"accountablePerson":{"@type":"Person","name":"Ashish Lahoti"},"copyrightHolder":"Coding N Concepts","copyrightYear":"2020","dateCreated":"2020-05-04T00:00:00.00Z","datePublished":"2020-05-04T00:00:00.00Z","dateModified":"2020-06-04T00:00:00.00Z","publisher":{"@type":"Organization","name":"Coding N Concepts","url":"https://codingnconcepts.com/","logo":{"@type":"ImageObject","url":"https:\/\/codingnconcepts.com\/favicon-32x32.png","width":"32","height":"32"}},"image":["https://codingnconcepts.com/img/logo/gohugo.png"],"url":"https:\/\/codingnconcepts.com\/hugo\/structure-data-json-ld-hugo\/","wordCount":"1215","genre":["Hugo Partial"],"keywords":null}</script></head><body class=body><div class="container container--outer"><header class=header><div class=container><div class=logo><a class=logo__link href=/ title="Coding N Concepts" rel=home><div class=logo__title><img src=/favicon-32x32.png alt="Add Structure Data JSON-LD in Hugo Website Pages"> Coding N Concepts</div><div class=logo__tagline>Ashish Lahoti's Technical Blog</div></a></div><nav class=menu><button class=menu__btn aria-haspopup=true aria-expanded=false tabindex=0>
+<span class=menu__btn-title tabindex=-1>Menu</span></button><ul class=menu__list><li class=menu__item><a class=menu__link href=/><span class=menu__text>Home</span></a></li><li class=menu__item><a class=menu__link href=/tags/popular-posts><span class=menu__text>Popular</span></a></li><li class="menu__item menu__dropdown"><a class=menu__link href=/java/><span class=menu__text>Java</span>
+<label class=drop-icon for=Java>▾</label></a>
+<input type=checkbox id=Java><ul class=submenu__list><li class=menu__item><a class=menu__link href=/tags/java-core/><span class=menu__text>Core Java</span></a></li><li class=menu__item><a class=menu__link href=/tags/java-collection/><span class=menu__text>Collections</span></a></li><li class=menu__item><a class=menu__link href=/tags/java-design-pattern/><span class=menu__text>Design Patterns</span></a></li><li class=menu__item><a class=menu__link href=/tags/java-recursive/><span class=menu__text>Recursive</span></a></li><li class=menu__item><a class=menu__link href=/tags/java-streams/><span class=menu__text>Streams</span></a></li><li class=menu__item><a class=menu__link href=/tags/java-string/><span class=menu__text>String</span></a></li><li class=menu__item><a class=menu__link href=/tags/java-threads/><span class=menu__text>Threads</span></a></li></ul></li><li class="menu__item menu__dropdown"><a class=menu__link href=/javascript/><span class=menu__text>JavaScript</span>
+<label class=drop-icon for=JavaScript>▾</label></a>
+<input type=checkbox id=JavaScript><ul class=submenu__list><li class=menu__item><a class=menu__link href=/tags/javascript-core/><span class=menu__text>JS Core</span></a></li><li class=menu__item><a class=menu__link href=/tags/javascript-array/><span class=menu__text>JS Array</span></a></li><li class=menu__item><a class=menu__link href=/tags/javascript-console/><span class=menu__text>JS Console</span></a></li><li class=menu__item><a class=menu__link href=/tags/javascript-es6/><span class=menu__text>ES6</span></a></li></ul></li><li class="menu__item menu__dropdown"><a class=menu__link href=/spring-boot/><span class=menu__text>Spring Boot</span>
+<label class=drop-icon for="Spring Boot">▾</label></a>
+<input type=checkbox id="Spring Boot"><ul class=submenu__list><li class=menu__item><a class=menu__link href=/tags/spring-boot-basics/><span class=menu__text>Spring Boot Basics</span></a></li><li class=menu__item><a class=menu__link href=/tags/spring-boot-rest/><span class=menu__text>Spring Boot REST</span></a></li><li class=menu__item><a class=menu__link href=/tags/spring-boot-kafka/><span class=menu__text>Spring Boot KAFKA</span></a></li></ul></li><li class="menu__item menu__dropdown"><a class=menu__link href=/puzzle/><span class=menu__text>Puzzles</span>
+<label class=drop-icon for=Puzzles>▾</label></a>
+<input type=checkbox id=Puzzles><ul class=submenu__list><li class=menu__item><a class=menu__link href=/tags/maths-puzzle/><span class=menu__text>Maths Puzzles</span></a></li><li class=menu__item><a class=menu__link href=/tags/weight-puzzle/><span class=menu__text>Weight Puzzles</span></a></li></ul></li><li class="menu__item menu__dropdown"><a class=menu__link href=/interview-questions/><span class=menu__text>Interview Q&A</span>
+<label class=drop-icon for="Interview Q&A">▾</label></a>
+<input type=checkbox id="Interview Q&A"><ul class=submenu__list><li class=menu__item><a class=menu__link href=/tags/java-qa/><span class=menu__text>Java</span></a></li><li class=menu__item><a class=menu__link href=/tags/javascript-qa/><span class=menu__text>JavaScript</span></a></li><li class=menu__item><a class=menu__link href=/tags/css-qa/><span class=menu__text>CSS</span></a></li><li class=menu__item><a class=menu__link href=/tags/spring-qa/><span class=menu__text>Spring</span></a></li><li class=menu__item><a class=menu__link href=/tags/microservice-qa/><span class=menu__text>Microservices</span></a></li></ul></li><li class=menu__item><a class=menu__link href=/hugo/><span class=menu__text>Hugo</span></a></li><li class=menu__item><a class=menu__link href=/about/><span class=menu__text>About Me</span></a></li></ul></nav></div></header><div class="wrapper flex"><div class=primary><main class=main role=main><article class=post autonumbering><header class=post__header><h1 class=post__title><img class=post__thumbnail src=/img/logo/gohugo.png alt="Add Structure Data JSON-LD in Hugo Website Pages"> Add Structure Data JSON-LD in Hugo Website Pages</h1><p class=post__lead>Guide to create a Site Schema partial in Hugo</p><div class="post__meta meta"><div class="meta__item-author meta__item"><svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2.0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class=meta__text>Ashish Lahoti</span></div><div class="meta__item-datetime meta__item"><svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class=meta__text datetime=2020-05-04T00:00:00Z>May 04, 2020</time>
+<time class=meta__text datetime=2020-06-04T00:00:00Z>(Last Modified: June 04, 2020)</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class=meta__text><a class=meta__link href=/categories/hugo/ rel=category>Hugo</a></span></div></div></header><div class="post__toc toc"><div class=toc__title>Page content</div><div class=toc__menu><nav id=TableOfContents><ul><li><a href=#create-site_schemahtml-partial>Create <em>site_schema.html</em> Partial</a></li><li><a href=#relevant-front-matter>Relevant <em>front-matter</em></a><ul><li></li></ul></li><li><a href=#relevant-configtoml>Relevant <em>config.toml</em></a><ul><li></li></ul></li><li><a href=#add-partial-to-the-head-tag-of-baseofhtml>Add partial to the <em>&lt;head></em> tag of <em>baseof.html</em></a><ul><li></li></ul></li><li><a href=#generated-structure-data-json-ld>Generated Structure Data JSON-LD</a><ul><li></li></ul></li><li><a href=#verify-structure-data-json-ld>Verify Structure Data JSON-LD</a></li></ul></nav></div></div><div class="content post__content clearfix"><p>When you add structure data to your website, it helps google, bing or other website indexers to understand the content for your website and pages which leads to better search results for your website and eventually helps in SEO ranking.</p><p>Mark up schema is based on website type and its content. Suppose you have a blog website, then schema of your web pages will be of type &ldquo;Article&rdquo; or &ldquo;BlogPosting&rdquo;. You can go through the <a href=https://developers.google.com/search/docs/data-types/article>google&rsquo;s example</a> of adding structure data using JSON-LD for &ldquo;Article&rdquo; type of website pages.</p><p>Schema of structure data for all type of websites and web pages can be found in <a href=https://schema.org/docs/full.html>documentation</a> of <a href=https://schema.org>schema.org</a></p><p><strong>Microdata</strong> and <strong>JSON-LD</strong> are two ways to add mark up in order to structure your data. Google recommends using <strong>JSON-LD</strong> as it is more cleaner approach to express the structure of the data in JSON format embedded as a <code>&lt;script></code> in the <code>&lt;head></code> tag of your HTML. Its a clear separation of structure from HTML elements as compare to <strong>Microdata</strong> where you add special properties like <code>itemprop</code>, <code>itemtype</code> in HTML element tags everywhere.</p><p>Now we know that JSON-LD is way to go. There are the steps to add structure data using JSON-LD in hugo website:</p><h2 id=create-site_schemahtml-partial>Create <em>site_schema.html</em> Partial</h2><p>First of all we are going to create a partial called <code>site_schema.html</code> which is responsible to generate structure data JSON-LD for hugo website and hugo blog pages. All you need to do is copy the below code snippet and save it under <code>$hugo/layouts/partials/site_schema.html</code>.</p><pre><code>{{ if .IsHome -}}
 &lt;script type=&quot;application/ld+json&quot;&gt;
 {
     &quot;@context&quot;: &quot;http://schema.org&quot;,
@@ -503,12 +76,7 @@ if (!doNotTrack) {
 }
 &lt;/script&gt;
 {{ end }}
-</code></pre><p><strong>Note:</strong> I am using hugo as a static site generator for this blog website and after spending so much time here and there, i came up with this partial. You can do the changes in this partial as per your need.</p>
-<p>The data to generate structure data json using this partial comes from the front-matter of the blog post and config.toml file. I have tried to feed in most of the data from front-matter and fallback as config.toml so that most of the blog post pages have their specific data.</p>
-<h2 id="relevant-front-matter">Relevant <em>front-matter</em></h2>
-<p>These are the relevant front-matter properties which are being used in generating JSON-LD schema for your blog page:-</p>
-<h6 id="blog-pagemd">blog-page.md</h6>
-<pre><code>---
+</code></pre><p><strong>Note:</strong> I am using hugo as a static site generator for this blog website and after spending so much time here and there, i came up with this partial. You can do the changes in this partial as per your need.</p><p>The data to generate structure data json using this partial comes from the front-matter of the blog post and config.toml file. I have tried to feed in most of the data from front-matter and fallback as config.toml so that most of the blog post pages have their specific data.</p><h2 id=relevant-front-matter>Relevant <em>front-matter</em></h2><p>These are the relevant front-matter properties which are being used in generating JSON-LD schema for your blog page:-</p><h6 id=blog-pagemd>blog-page.md</h6><pre><code>---
 title: I am the name and headline of blog post structure data
 lead: I am alternativeHeadline of blog post structure data
 description: I am description of blog post structure data
@@ -525,10 +93,7 @@ keywords:
   - &quot;keyword 1 of blog post structure data&quot;
   - &quot;keyword 2 of blog post structure data &quot;
 ---
-</code></pre><h2 id="relevant-configtoml">Relevant <em>config.toml</em></h2>
-<p>These are the relevant config.toml configuration properties which are being used in generating JSON-LD schema for your website:-</p>
-<h6 id="configtoml">config.toml</h6>
-<pre><code>baseURL = &quot;I am url of website structure data&quot;
+</code></pre><h2 id=relevant-configtoml>Relevant <em>config.toml</em></h2><p>These are the relevant config.toml configuration properties which are being used in generating JSON-LD schema for your website:-</p><h6 id=configtoml>config.toml</h6><pre><code>baseURL = &quot;I am url of website structure data&quot;
 languageCode = &quot;en-us&quot;
 title = &quot;I am name of website structure data&quot;
 [Author]
@@ -537,241 +102,103 @@ title = &quot;I am name of website structure data&quot;
   description = &quot;I am description of website structure data&quot;
   logo = &quot;favicon-32x32.png&quot;
   copyright = &quot;I am license of website structure data&quot;
-</code></pre><h2 id="add-partial-to-the-head-tag-of-baseofhtml">Add partial to the <em>&lt;head&gt;</em> tag of <em>baseof.html</em></h2>
-<p>Once you created a partial, you need to add this partial in the <code>&lt;head&gt;</code> tag of html page under <code>_default</code> folder which generates your hugo website and blog HTML pages.</p>
-<p>If you are using any theme in hugo website then this HTML page could be <code>$hugo/themes/layouts/_default/baseof.html</code>. If you have designed hugo website on your own then this HTML page could be <code>$hugo/layouts/_default/baseof.html</code> depending upon your naming convention. Just add the partial in HTML head tag like below:</p>
-<h6 id="baseofhtml">baseof.html</h6>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
-&lt;<span style="color:#f92672">html</span>&gt;
-  &lt;<span style="color:#f92672">head</span>&gt;
-    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+</code></pre><h2 id=add-partial-to-the-head-tag-of-baseofhtml>Add partial to the <em>&lt;head></em> tag of <em>baseof.html</em></h2><p>Once you created a partial, you need to add this partial in the <code>&lt;head></code> tag of html page under <code>_default</code> folder which generates your hugo website and blog HTML pages.</p><p>If you are using any theme in hugo website then this HTML page could be <code>$hugo/themes/layouts/_default/baseof.html</code>. If you have designed hugo website on your own then this HTML page could be <code>$hugo/layouts/_default/baseof.html</code> depending upon your naming convention. Just add the partial in HTML head tag like below:</p><h6 id=baseofhtml>baseof.html</h6><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#75715e>&lt;!DOCTYPE html&gt;</span>
+&lt;<span style=color:#f92672>html</span>&gt;
+  &lt;<span style=color:#f92672>head</span>&gt;
+    &lt;<span style=color:#f92672>meta</span> <span style=color:#a6e22e>charset</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;UTF-8&#34;</span>&gt;
     ...
     ...
 
     {{ partial &#34;site_schema.html&#34; . }}
-  &lt;/<span style="color:#f92672">head</span>&gt;
-  &lt;<span style="color:#f92672">body</span>&gt;
-  &lt;/<span style="color:#f92672">body</span>&gt;
-&lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div><h2 id="generated-structure-data-json-ld">Generated Structure Data JSON-LD</h2>
-<p>The following structure data are generated in JSON-LD format.</p>
-<h5 id="website-main-page">Website Main Page</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
-&lt;<span style="color:#f92672">html</span>&gt;
-  &lt;<span style="color:#f92672">head</span>&gt;
-    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+  &lt;/<span style=color:#f92672>head</span>&gt;
+  &lt;<span style=color:#f92672>body</span>&gt;
+  &lt;/<span style=color:#f92672>body</span>&gt;
+&lt;/<span style=color:#f92672>html</span>&gt;
+</code></pre></div><h2 id=generated-structure-data-json-ld>Generated Structure Data JSON-LD</h2><p>The following structure data are generated in JSON-LD format.</p><h5 id=website-main-page>Website Main Page</h5><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#75715e>&lt;!DOCTYPE html&gt;</span>
+&lt;<span style=color:#f92672>html</span>&gt;
+  &lt;<span style=color:#f92672>head</span>&gt;
+    &lt;<span style=color:#f92672>meta</span> <span style=color:#a6e22e>charset</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;UTF-8&#34;</span>&gt;
     ...
     ...
     ...
 
-    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;application/ld+json&#34;</span>&gt;
+    &lt;<span style=color:#f92672>script</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;application/ld+json&#34;</span>&gt;
     {
-        <span style="color:#e6db74">&#34;@context&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;http://schema.org&#34;</span>,
-        <span style="color:#e6db74">&#34;@type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;WebSite&#34;</span>,
-        <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Coding N Concepts&#34;</span>,
-        <span style="color:#e6db74">&#34;url&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;https://codingnconcepts.com/&#34;</span>,
-        <span style="color:#e6db74">&#34;description&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Coding N Concepts is a technical blog for developers by developers to help you with coding problems, puzzle solving, interview preparation, learning concepts in simplified way.&#34;</span>,
-        <span style="color:#e6db74">&#34;thumbnailUrl&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;https://codingnconcepts.com/favicon-32x32.png&#34;</span>,
-        <span style="color:#e6db74">&#34;license&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Ashish Lahoti&#34;</span>
+        <span style=color:#e6db74>&#34;@context&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;http://schema.org&#34;</span>,
+        <span style=color:#e6db74>&#34;@type&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;WebSite&#34;</span>,
+        <span style=color:#e6db74>&#34;name&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Coding N Concepts&#34;</span>,
+        <span style=color:#e6db74>&#34;url&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;https://codingnconcepts.com/&#34;</span>,
+        <span style=color:#e6db74>&#34;description&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Coding N Concepts is a technical blog for developers by developers to help you with coding problems, puzzle solving, interview preparation, learning concepts in simplified way.&#34;</span>,
+        <span style=color:#e6db74>&#34;thumbnailUrl&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;https://codingnconcepts.com/favicon-32x32.png&#34;</span>,
+        <span style=color:#e6db74>&#34;license&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Ashish Lahoti&#34;</span>
     }
-    &lt;/<span style="color:#f92672">script</span>&gt;
-  &lt;/<span style="color:#f92672">head</span>&gt;
-  &lt;<span style="color:#f92672">body</span>&gt;
-  &lt;/<span style="color:#f92672">body</span>&gt;
-&lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div><h5 id="blog-post-page">Blog Post Page</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
-&lt;<span style="color:#f92672">html</span>&gt;
-  &lt;<span style="color:#f92672">head</span>&gt;
-    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+    &lt;/<span style=color:#f92672>script</span>&gt;
+  &lt;/<span style=color:#f92672>head</span>&gt;
+  &lt;<span style=color:#f92672>body</span>&gt;
+  &lt;/<span style=color:#f92672>body</span>&gt;
+&lt;/<span style=color:#f92672>html</span>&gt;
+</code></pre></div><h5 id=blog-post-page>Blog Post Page</h5><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#75715e>&lt;!DOCTYPE html&gt;</span>
+&lt;<span style=color:#f92672>html</span>&gt;
+  &lt;<span style=color:#f92672>head</span>&gt;
+    &lt;<span style=color:#f92672>meta</span> <span style=color:#a6e22e>charset</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;UTF-8&#34;</span>&gt;
     ...
     ...
     ...
 
-    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;application/ld+json&#34;</span>&gt;
+    &lt;<span style=color:#f92672>script</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;application/ld+json&#34;</span>&gt;
     {
-        <span style="color:#e6db74">&#34;@context&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;http://schema.org&#34;</span>,
-        <span style="color:#e6db74">&#34;@type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;BlogPosting&#34;</span>,
-        <span style="color:#e6db74">&#34;articleSection&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;hugo&#34;</span>,
-        <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Structure Data Using JSON-LD for Hugo&#34;</span>,
-        <span style="color:#e6db74">&#34;headline&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Structure Data Using JSON-LD for Hugo&#34;</span>,
-        <span style="color:#e6db74">&#34;alternativeHeadline&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>,
-        <span style="color:#e6db74">&#34;description&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Structure Data Using JSON-LD for Hugo&#34;</span>,
-        <span style="color:#e6db74">&#34;inLanguage&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;en-us&#34;</span>,
-        <span style="color:#e6db74">&#34;isFamilyFriendly&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;true&#34;</span>,
-        <span style="color:#e6db74">&#34;mainEntityOfPage&#34;</span><span style="color:#f92672">:</span> {
-            <span style="color:#e6db74">&#34;@type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;WebPage&#34;</span>,
-            <span style="color:#e6db74">&#34;@id&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;https://codingnconcepts/hugo/structure-data-json-ld&#34;</span>
+        <span style=color:#e6db74>&#34;@context&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;http://schema.org&#34;</span>,
+        <span style=color:#e6db74>&#34;@type&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;BlogPosting&#34;</span>,
+        <span style=color:#e6db74>&#34;articleSection&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;hugo&#34;</span>,
+        <span style=color:#e6db74>&#34;name&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Structure Data Using JSON-LD for Hugo&#34;</span>,
+        <span style=color:#e6db74>&#34;headline&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Structure Data Using JSON-LD for Hugo&#34;</span>,
+        <span style=color:#e6db74>&#34;alternativeHeadline&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;&#34;</span>,
+        <span style=color:#e6db74>&#34;description&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Structure Data Using JSON-LD for Hugo&#34;</span>,
+        <span style=color:#e6db74>&#34;inLanguage&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;en-us&#34;</span>,
+        <span style=color:#e6db74>&#34;isFamilyFriendly&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;true&#34;</span>,
+        <span style=color:#e6db74>&#34;mainEntityOfPage&#34;</span><span style=color:#f92672>:</span> {
+            <span style=color:#e6db74>&#34;@type&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;WebPage&#34;</span>,
+            <span style=color:#e6db74>&#34;@id&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;https://codingnconcepts/hugo/structure-data-json-ld&#34;</span>
         },
-        <span style="color:#e6db74">&#34;author&#34;</span> <span style="color:#f92672">:</span> {
-            <span style="color:#e6db74">&#34;@type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Person&#34;</span>,
-            <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Ashish Lahoti&#34;</span>
+        <span style=color:#e6db74>&#34;author&#34;</span> <span style=color:#f92672>:</span> {
+            <span style=color:#e6db74>&#34;@type&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Person&#34;</span>,
+            <span style=color:#e6db74>&#34;name&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Ashish Lahoti&#34;</span>
         },
-        <span style="color:#e6db74">&#34;creator&#34;</span> <span style="color:#f92672">:</span> {
-            <span style="color:#e6db74">&#34;@type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Person&#34;</span>,
-            <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Ashish Lahoti&#34;</span>
+        <span style=color:#e6db74>&#34;creator&#34;</span> <span style=color:#f92672>:</span> {
+            <span style=color:#e6db74>&#34;@type&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Person&#34;</span>,
+            <span style=color:#e6db74>&#34;name&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Ashish Lahoti&#34;</span>
         },
-        <span style="color:#e6db74">&#34;accountablePerson&#34;</span> <span style="color:#f92672">:</span> {
-            <span style="color:#e6db74">&#34;@type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Person&#34;</span>,
-            <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Ashish Lahoti&#34;</span>
+        <span style=color:#e6db74>&#34;accountablePerson&#34;</span> <span style=color:#f92672>:</span> {
+            <span style=color:#e6db74>&#34;@type&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Person&#34;</span>,
+            <span style=color:#e6db74>&#34;name&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Ashish Lahoti&#34;</span>
         },
-        <span style="color:#e6db74">&#34;copyrightHolder&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Coding N Concepts&#34;</span>,
-        <span style="color:#e6db74">&#34;copyrightYear&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;2020&#34;</span>,
-        <span style="color:#e6db74">&#34;dateCreated&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;2020-05-04T00:00:00.00Z&#34;</span>,
-        <span style="color:#e6db74">&#34;datePublished&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;2020-05-04T00:00:00.00Z&#34;</span>,
-        <span style="color:#e6db74">&#34;dateModified&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;2020-05-04T00:00:00.00Z&#34;</span>,
-        <span style="color:#e6db74">&#34;publisher&#34;</span><span style="color:#f92672">:</span>{
-            <span style="color:#e6db74">&#34;@type&#34;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;Organization&#34;</span>,
-            <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Coding N Concepts&#34;</span>,
-            <span style="color:#e6db74">&#34;url&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;http://localhost:1313/&#34;</span>,
-            <span style="color:#e6db74">&#34;logo&#34;</span><span style="color:#f92672">:</span> {
-                <span style="color:#e6db74">&#34;@type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;ImageObject&#34;</span>,
-                <span style="color:#e6db74">&#34;url&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;https://codingnconcepts/favicon-32x32.png&#34;</span>,
-                <span style="color:#e6db74">&#34;width&#34;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;32&#34;</span>,
-                <span style="color:#e6db74">&#34;height&#34;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;32&#34;</span>
+        <span style=color:#e6db74>&#34;copyrightHolder&#34;</span> <span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Coding N Concepts&#34;</span>,
+        <span style=color:#e6db74>&#34;copyrightYear&#34;</span> <span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;2020&#34;</span>,
+        <span style=color:#e6db74>&#34;dateCreated&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;2020-05-04T00:00:00.00Z&#34;</span>,
+        <span style=color:#e6db74>&#34;datePublished&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;2020-05-04T00:00:00.00Z&#34;</span>,
+        <span style=color:#e6db74>&#34;dateModified&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;2020-05-04T00:00:00.00Z&#34;</span>,
+        <span style=color:#e6db74>&#34;publisher&#34;</span><span style=color:#f92672>:</span>{
+            <span style=color:#e6db74>&#34;@type&#34;</span><span style=color:#f92672>:</span><span style=color:#e6db74>&#34;Organization&#34;</span>,
+            <span style=color:#e6db74>&#34;name&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Coding N Concepts&#34;</span>,
+            <span style=color:#e6db74>&#34;url&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;http://localhost:1313/&#34;</span>,
+            <span style=color:#e6db74>&#34;logo&#34;</span><span style=color:#f92672>:</span> {
+                <span style=color:#e6db74>&#34;@type&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;ImageObject&#34;</span>,
+                <span style=color:#e6db74>&#34;url&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;https://codingnconcepts/favicon-32x32.png&#34;</span>,
+                <span style=color:#e6db74>&#34;width&#34;</span><span style=color:#f92672>:</span><span style=color:#e6db74>&#34;32&#34;</span>,
+                <span style=color:#e6db74>&#34;height&#34;</span><span style=color:#f92672>:</span><span style=color:#e6db74>&#34;32&#34;</span>
             }
         },
-        <span style="color:#e6db74">&#34;image&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;https://codingnconcepts/favicon-32x32.png&#34;</span>,
-        <span style="color:#e6db74">&#34;url&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;https://codingnconcepts/hugo/structure-data-json-ld&#34;</span>,
-        <span style="color:#e6db74">&#34;wordCount&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;857&#34;</span>,
-        <span style="color:#e6db74">&#34;genre&#34;</span> <span style="color:#f92672">:</span> [ <span style="color:#e6db74">&#34;Hugo&#34;</span> , <span style="color:#e6db74">&#34;SEO&#34;</span> ],
-        <span style="color:#e6db74">&#34;keywords&#34;</span> <span style="color:#f92672">:</span> [ <span style="color:#e6db74">&#34;Schema markup using JSON-LD in hugo website&#34;</span>, <span style="color:#e6db74">&#34;SEO optimization for hugo&#34;</span> ]
+        <span style=color:#e6db74>&#34;image&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;https://codingnconcepts/favicon-32x32.png&#34;</span>,
+        <span style=color:#e6db74>&#34;url&#34;</span> <span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;https://codingnconcepts/hugo/structure-data-json-ld&#34;</span>,
+        <span style=color:#e6db74>&#34;wordCount&#34;</span> <span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;857&#34;</span>,
+        <span style=color:#e6db74>&#34;genre&#34;</span> <span style=color:#f92672>:</span> [ <span style=color:#e6db74>&#34;Hugo&#34;</span> , <span style=color:#e6db74>&#34;SEO&#34;</span> ],
+        <span style=color:#e6db74>&#34;keywords&#34;</span> <span style=color:#f92672>:</span> [ <span style=color:#e6db74>&#34;Schema markup using JSON-LD in hugo website&#34;</span>, <span style=color:#e6db74>&#34;SEO optimization for hugo&#34;</span> ]
     }
-    &lt;/<span style="color:#f92672">script</span>&gt;
-  &lt;/<span style="color:#f92672">head</span>&gt;
-  &lt;<span style="color:#f92672">body</span>&gt;
-  &lt;/<span style="color:#f92672">body</span>&gt;
-&lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div><h2 id="verify-structure-data-json-ld">Verify Structure Data JSON-LD</h2>
-<p>You can verify the structure data using <a href="https://search.google.com/structured-data/testing-tool">Structured Data Testing Tool</a> provided by Google where either you give a URL of your page or just copy paste whole HTML to verify. Look for the errors and correct them.</p>
-		</div>
-		<footer class="post__footer">
-			
-<div class="post__tags tags clearfix">
-	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
-	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link btn" href="/tags/hugo-partial/" rel="tag">Hugo Partial</a></li>
-	</ul>
-</div>
-		</footer>
-	</article>
-</main>
-
-  
-  
-  
-
-  <section class="social-share">
-    <ul class="share-icons">
-      
-      
-      <li>
-        <a href="https://twitter.com/intent/tweet?hashtags=codingnconcepts&amp;url=https%3a%2f%2fcodingnconcepts.com%2fhugo%2fstructure-data-json-ld-hugo%2f&amp;text=Add%20Structure%20Data%20JSON-LD%20in%20Hugo%20Website%20Pages" target="_blank" rel="noopener" aria-label="Share on Twitter" class="share-btn twitter">
-          <svg class="widget-social__link-icon icon icon-twitter" width="24" height="24" viewBox="0 0 384 312"><path d="m384 36.9c-14.1 6.3-29.3 10.5-45.2 12.4 16.3-9.7 28.8-25.2 34.6-43.6-15.2 9-32.1 15.6-50 19.1-14.4-15.2-34.9-24.8-57.5-24.8-43.5 0-78.8 35.3-78.8 78.8 0 6.2.7 12.2 2 17.9-65.5-3.3-123.5-34.6-162.4-82.3-6.7 11.6-10.6 25.2-10.6 39.6 0 27.3 13.9 51.4 35 65.6-12.9-.4-25.1-4-35.7-9.9v1c0 38.2 27.2 70 63.2 77.2-6.6 1.8-13.6 2.8-20.8 2.8-5.1 0-10-.5-14.8-1.4 10 31.3 39.1 54.1 73.6 54.7-27 21.1-60.9 33.7-97.8 33.7-6.4 0-12.6-.4-18.8-1.1 34.9 22.4 76.3 35.4 120.8 35.4 144.9 0 224.1-120 224.1-224.1 0-3.4-.1-6.8-.2-10.2 15.4-11.1 28.7-25 39.3-40.8z"/></svg>
-          <p>Twitter</p>
-          </a>
-      </li>
-      
-
-      
-      
-      <li>
-        <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcodingnconcepts.com%2fhugo%2fstructure-data-json-ld-hugo%2f" target="_blank" rel="noopener" aria-label="Share on Facebook" class="share-btn facebook">
-          <svg class="widget-social__link-icon icon icon-facebook" width="24" height="24" viewBox="0 0 352 352"><path d="m0 32v288c0 17.5 14.5 32 32 32h288c17.5 0 32-14.5 32-32v-288c0-17.5-14.5-32-32-32h-288c-17.5 0-32 14.5-32 32zm320 0v288h-83v-108h41.5l6-48h-47.5v-31c0-14 3.5-23.5 23.5-23.5h26v-43.5c-4.4-.6-19.8-1.5-37.5-1.5-36.9 0-62 22.2-62 63.5v36h-42v48h42v108h-155v-288z"/></svg>
-          <p>Facebook</p>
-          </a>
-      </li>
-      
-
-      
-      
-      <li>
-        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fcodingnconcepts.com%2fhugo%2fstructure-data-json-ld-hugo%2f&amp;source=https%3a%2f%2fcodingnconcepts.com%2fhugo%2fstructure-data-json-ld-hugo%2f&amp;title=Add%20Structure%20Data%20JSON-LD%20in%20Hugo%20Website%20Pages&amp;summary=Add%20Structure%20Data%20JSON-LD%20in%20Hugo%20Website%20Pages" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="share-btn linkedin">
-          <svg class="widget-social__link-icon icon icon-linkedin" width="24" height="24" viewBox="0 0 352 352"><path d="M0,40v272c0,21.9,18.1,40,40,40h272c21.9,0,40-18.1,40-40V40c0-21.9-18.1-40-40-40H40C18.1,0,0,18.1,0,40z M312,32 c4.6,0,8,3.4,8,8v272c0,4.6-3.4,8-8,8H40c-4.6,0-8-3.4-8-8V40c0-4.6,3.4-8,8-8H312z M59.5,87c0,15.2,12.3,27.5,27.5,27.5 c15.2,0,27.5-12.3,27.5-27.5c0-15.2-12.3-27.5-27.5-27.5C71.8,59.5,59.5,71.8,59.5,87z M187,157h-1v-21h-45v152h47v-75 c0-19.8,3.9-39,28.5-39c24.2,0,24.5,22.4,24.5,40v74h47v-83.5c0-40.9-8.7-72-56.5-72C208.5,132.5,193.3,145.1,187,157z M64,288h47.5 V136H64V288z"/></svg>
-            <p>LinkedIn</p>
-          </a>
-      </li>
-      
-
-      
-      
-      <li>
-        <a href="whatsapp://send?text=Add%20Structure%20Data%20JSON-LD%20in%20Hugo%20Website%20Pages%2c%20by%20Coding%20N%20Concepts%0aMark%20Up%20Hugo%20website%20main%20page%20and%20blog%20post%20pages%20using%20JSON-LD%20in%20order%20to%20structure%20data%20for%20hugo%20generated%20website%20for%20better%20google%20search%20result%20and%20SEO%20ranking.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fhugo%2fstructure-data-json-ld-hugo%2f%0a" target="_blank" class="share-btn whatsapp">
-          <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
-          <p>Email</p>
-        </a>
-      </li>
-      
-
-      
-      
-      <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - Add%20Structure%20Data%20JSON-LD%20in%20Hugo%20Website%20Pages.&amp;body=Add%20Structure%20Data%20JSON-LD%20in%20Hugo%20Website%20Pages%2c%20by%20Coding%20N%20Concepts%0aMark%20Up%20Hugo%20website%20main%20page%20and%20blog%20post%20pages%20using%20JSON-LD%20in%20order%20to%20structure%20data%20for%20hugo%20generated%20website%20for%20better%20google%20search%20result%20and%20SEO%20ranking.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fhugo%2fstructure-data-json-ld-hugo%2f%0a" target="_blank" class="share-btn email">
-          <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
-          <p>Email</p>
-        </a>
-      </li>
-    </ul>
-  </section>
-  
-
-
-
-<div class="authorbox clearfix">
-	<figure class="authorbox__avatar">
-		<img alt="Ashish Lahoti avatar" src="/media/authors/ashishlahoti.png" class="avatar" height="90" width="90">
-	</figure>
-	<div class="authorbox__header">
-		<span class="authorbox__name">About Ashish Lahoti</span>
-	</div>
-	<div class="authorbox__description">
-		Ashish Lahoti is a senior application developer at DBS Bank having 10&#43; years of experience in full stack technologies | Confluent Certified Developer for Apache KAFKA | SCJP Certified
-	</div>
-</div>
-
-<nav class="post-nav flex">
-	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="/hugo/custom-shortcode-hugo/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Useful Hugo Shortcodes</p></a>
-	</div>
-</nav>
-
-<section class="comments">
-	<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "codingnconcepts" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</section>
-
-
-			</div>
-			
-		</div>
-		<footer class="footer">
-	<div class="container footer__container flex">
-		
-		<div class="footer__copyright">
-			&copy; 2020 CodingNConcepts.
-			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
-		</div>
-	</div>
-</footer>
-	</div>
-<script async defer src="/js/menu.js"></script>
-</body>
-</html>
+    &lt;/<span style=color:#f92672>script</span>&gt;
+  &lt;/<span style=color:#f92672>head</span>&gt;
+  &lt;<span style=color:#f92672>body</span>&gt;
+  &lt;/<span style=color:#f92672>body</span>&gt;
+&lt;/<span style=color:#f92672>html</span>&gt;
+</code></pre></div><h2 id=verify-structure-data-json-ld>Verify Structure Data JSON-LD</h2><p>You can verify the structure data using <a href=https://search.google.com/structured-data/testing-tool>Structured Data Testing Tool</a> provided by Google where either you give a URL of your page or just copy paste whole HTML to verify. Look for the errors and correct them.</p></div><footer class=post__footer><div class="post__tags tags clearfix"><svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5.0 11V3C0 1.5.8.8.8.8S1.5.0 3 0h8c1.5.0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 100-6 3 3 0 000 6z"/></svg><ul class=tags__list><li class=tags__item><a class="tags__link btn" href=/tags/hugo-partial/ rel=tag>Hugo Partial</a></li></ul></div></footer></article></main><section class=social-share><ul class=share-icons><li><a href="https://twitter.com/intent/tweet?hashtags=codingnconcepts&url=https%3a%2f%2fcodingnconcepts.com%2fhugo%2fstructure-data-json-ld-hugo%2f&text=Add%20Structure%20Data%20JSON-LD%20in%20Hugo%20Website%20Pages" target=_blank rel=noopener aria-label="Share on Twitter" class="share-btn twitter"><svg class="widget-social__link-icon icon icon-twitter" width="24" height="24" viewBox="0 0 384 312"><path d="m384 36.9c-14.1 6.3-29.3 10.5-45.2 12.4 16.3-9.7 28.8-25.2 34.6-43.6-15.2 9-32.1 15.6-50 19.1-14.4-15.2-34.9-24.8-57.5-24.8-43.5.0-78.8 35.3-78.8 78.8.0 6.2.7 12.2 2 17.9-65.5-3.3-123.5-34.6-162.4-82.3-6.7 11.6-10.6 25.2-10.6 39.6.0 27.3 13.9 51.4 35 65.6-12.9-.4-25.1-4-35.7-9.9v1c0 38.2 27.2 70 63.2 77.2-6.6 1.8-13.6 2.8-20.8 2.8-5.1.0-10-.5-14.8-1.4 10 31.3 39.1 54.1 73.6 54.7-27 21.1-60.9 33.7-97.8 33.7-6.4.0-12.6-.4-18.8-1.1 34.9 22.4 76.3 35.4 120.8 35.4 144.9.0 224.1-120 224.1-224.1.0-3.4-.1-6.8-.2-10.2 15.4-11.1 28.7-25 39.3-40.8z"/></svg><p>Twitter</p></a></li><li><a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcodingnconcepts.com%2fhugo%2fstructure-data-json-ld-hugo%2f" target=_blank rel=noopener aria-label="Share on Facebook" class="share-btn facebook"><svg class="widget-social__link-icon icon icon-facebook" width="24" height="24" viewBox="0 0 352 352"><path d="m0 32v288c0 17.5 14.5 32 32 32h288c17.5.0 32-14.5 32-32V32c0-17.5-14.5-32-32-32H32C14.5.0.0 14.5.0 32zm320 0v288h-83V212h41.5l6-48H237v-31c0-14 3.5-23.5 23.5-23.5h26V66c-4.4-.6-19.8-1.5-37.5-1.5-36.9.0-62 22.2-62 63.5v36h-42v48h42v108H32V32z"/></svg><p>Facebook</p></a></li><li><a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcodingnconcepts.com%2fhugo%2fstructure-data-json-ld-hugo%2f&source=https%3a%2f%2fcodingnconcepts.com%2fhugo%2fstructure-data-json-ld-hugo%2f&title=Add%20Structure%20Data%20JSON-LD%20in%20Hugo%20Website%20Pages&summary=Add%20Structure%20Data%20JSON-LD%20in%20Hugo%20Website%20Pages" target=_blank rel=noopener aria-label="Share on LinkedIn" class="share-btn linkedin"><svg class="widget-social__link-icon icon icon-linkedin" width="24" height="24" viewBox="0 0 352 352"><path d="M0 40v272c0 21.9 18.1 40 40 40h272c21.9.0 40-18.1 40-40V40c0-21.9-18.1-40-40-40H40C18.1.0.0 18.1.0 40zm312-8c4.6.0 8 3.4 8 8v272c0 4.6-3.4 8-8 8H40c-4.6.0-8-3.4-8-8V40c0-4.6 3.4-8 8-8H312zM59.5 87c0 15.2 12.3 27.5 27.5 27.5s27.5-12.3 27.5-27.5S102.2 59.5 87 59.5 59.5 71.8 59.5 87zM187 157h-1v-21h-45v152h47v-75c0-19.8 3.9-39 28.5-39 24.2.0 24.5 22.4 24.5 40v74h47v-83.5c0-40.9-8.7-72-56.5-72C208.5 132.5 193.3 145.1 187 157zM64 288h47.5V136H64V288z"/></svg><p>LinkedIn</p></a></li><li><a href="whatsapp://send?text=Add%20Structure%20Data%20JSON-LD%20in%20Hugo%20Website%20Pages%2c%20by%20Coding%20N%20Concepts%0aMark%20Up%20Hugo%20website%20main%20page%20and%20blog%20post%20pages%20using%20JSON-LD%20in%20order%20to%20structure%20data%20for%20hugo%20generated%20website%20for%20better%20google%20search%20result%20and%20SEO%20ranking.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fhugo%2fstructure-data-json-ld-hugo%2f%0a" target=_blank class="share-btn whatsapp"><svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3.0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7.0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1.0-5.2 4.2-9.4 9.4-9.4 2.5.0 4.9 1 6.7 2.8s2.8 4.2 2.8 6.7c-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2s0-.5.1-.6.3-.3.4-.5c.2-.1.3-.3.4-.5s0-.4.0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg><p>Email</p></a></li><li><a href="mailto:?subject=Coding%20N%20Concepts - Add%20Structure%20Data%20JSON-LD%20in%20Hugo%20Website%20Pages.&body=Add%20Structure%20Data%20JSON-LD%20in%20Hugo%20Website%20Pages%2c%20by%20Coding%20N%20Concepts%0aMark%20Up%20Hugo%20website%20main%20page%20and%20blog%20post%20pages%20using%20JSON-LD%20in%20order%20to%20structure%20data%20for%20hugo%20generated%20website%20for%20better%20google%20search%20result%20and%20SEO%20ranking.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fhugo%2fstructure-data-json-ld-hugo%2f%0a" target=_blank class="share-btn email"><svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16V16 0h-16H16 0zm347 16-139 92.5L69 32zM199 157.5l9 5.5 9-5.5L384 46v210H32V46z"/></svg><p>Email</p></a></li></ul></section><div class="authorbox clearfix"><figure class=authorbox__avatar><img alt="Ashish Lahoti avatar" src=/media/authors/ashishlahoti.png class=avatar height=90 width=90></figure><div class=authorbox__header><span class=authorbox__name>About Ashish Lahoti</span></div><div class=authorbox__description>Ashish Lahoti is a senior application developer at DBS Bank having 10+ years of experience in full stack technologies | Confluent Certified Developer for Apache KAFKA | SCJP Certified</div></div><nav class="post-nav flex"><div class="post-nav__item post-nav__item--next"><a class=post-nav__link href=/hugo/custom-shortcode-hugo/ rel=next><span class=post-nav__caption>Next&#8201;»</span><p class=post-nav__post-title>Useful Hugo Shortcodes</p></a></div></nav><section class=comments><div id=disqus_thread></div><script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return;}
+var d=document,s=d.createElement('script');s.async=true;s.src='//'+"codingnconcepts"+'.disqus.com/embed.js';s.setAttribute('data-timestamp',+new Date());(d.head||d.body).appendChild(s);})();</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></section></div></div><footer class=footer><div class="container footer__container flex"><div class=footer__copyright>&copy; 2020 CodingNConcepts.
+<span class=footer__copyright-credits>Generated with <a href=https://gohugo.io/ rel="nofollow noopener" target=_blank>Hugo</a> and <a href=https://github.com/Vimux/Mainroad/ rel="nofollow noopener" target=_blank>Mainroad</a> theme.</span></div></div></footer></div><script async defer src=/js/menu.js></script></body></html>

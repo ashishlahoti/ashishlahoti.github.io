@@ -1,74 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Java Design Pattern on Coding N Concepts</title>
-    <link>https://codingnconcepts.com/tags/java-design-pattern/</link>
-    <description>Recent content in Java Design Pattern on Coding N Concepts</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 07 Jun 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://codingnconcepts.com/tags/java-design-pattern/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Factory Design Pattern In Java</title>
-      <link>https://codingnconcepts.com/java/factory-design-pattern-java/</link>
-      <pubDate>Sun, 07 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/java/factory-design-pattern-java/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Factory Design Pattern&lt;/em&gt; is one of the most commonly used design patterns. It falls under the category of &lt;em&gt;Creational Design Patterns&lt;/em&gt;.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Decorator Design Pattern Using Java</title>
-      <link>https://codingnconcepts.com/java/decorator-design-pattern-using-java/</link>
-      <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/java/decorator-design-pattern-using-java/</guid>
-      <description>&lt;p&gt;Decorator design pattern is used to add a new feature on the existing object by wrapping it with a decorator class.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Singleton Design Pattern Using Java</title>
-      <link>https://codingnconcepts.com/java/singleton-design-pattern-using-java/</link>
-      <pubDate>Mon, 22 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/java/singleton-design-pattern-using-java/</guid>
-      <description>&lt;p&gt;This problem is frequently asked in the interview to check your understanding on singleton design pattern. This program answers following artefacts of singleton design pattern:-&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;How to make singleton class thread safe?
-&lt;ul&gt;
-&lt;li&gt;using double checked locking&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;How to prevent deserialization to create new object of singleton class?
-&lt;ul&gt;
-&lt;li&gt;using readResolve method to return same instance&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;How to prevent cloning to create a new object of singleton class?
-&lt;ul&gt;
-&lt;li&gt;override clone method to return same instance&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;How to prevent reflexion to create a new object of singleton class?
-&lt;ul&gt;
-&lt;li&gt;check instance exist in private constructor and throw exception if already exist
-You can find the singleton pattern implementation here.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;</description>
-    </item>
-    
-    <item>
-      <title>Immutable Class in Java</title>
-      <link>https://codingnconcepts.com/java/immutable-class-using-java/</link>
-      <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/java/immutable-class-using-java/</guid>
-      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn about &lt;em&gt;Immutable Class&lt;/em&gt; and its benefits in thread-safety, caching and collections. We will also look at rules to create immutable classes and eventually we&amp;rsquo;ll write an &lt;em&gt;Immutable Class&lt;/em&gt; from scratch in Java.&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java Design Pattern on Coding N Concepts</title><link>https://codingnconcepts.com/tags/java-design-pattern/</link><description>Recent content in Java Design Pattern on Coding N Concepts</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 07 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/java-design-pattern/index.xml" rel="self" type="application/rss+xml"/><item><title>Factory Design Pattern In Java</title><link>https://codingnconcepts.com/java/factory-design-pattern-java/</link><pubDate>Sun, 07 Jun 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/java/factory-design-pattern-java/</guid><description>&lt;p>&lt;em>Factory Design Pattern&lt;/em> is one of the most commonly used design patterns. It falls under the category of &lt;em>Creational Design Patterns&lt;/em>.&lt;/p></description></item><item><title>Decorator Design Pattern Using Java</title><link>https://codingnconcepts.com/java/decorator-design-pattern-using-java/</link><pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/java/decorator-design-pattern-using-java/</guid><description>&lt;p>Decorator design pattern is used to add a new feature on the existing object by wrapping it with a decorator class.&lt;/p></description></item><item><title>Singleton Design Pattern Using Java</title><link>https://codingnconcepts.com/java/singleton-design-pattern-using-java/</link><pubDate>Mon, 22 Jul 2019 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/java/singleton-design-pattern-using-java/</guid><description>&lt;p>This problem is frequently asked in the interview to check your understanding on singleton design pattern. This program answers following artefacts of singleton design pattern:-&lt;/p>
+&lt;ol>
+&lt;li>How to make singleton class thread safe?
+&lt;ul>
+&lt;li>using double checked locking&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>How to prevent deserialization to create new object of singleton class?
+&lt;ul>
+&lt;li>using readResolve method to return same instance&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>How to prevent cloning to create a new object of singleton class?
+&lt;ul>
+&lt;li>override clone method to return same instance&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>How to prevent reflexion to create a new object of singleton class?
+&lt;ul>
+&lt;li>check instance exist in private constructor and throw exception if already exist
+You can find the singleton pattern implementation here.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol></description></item><item><title>Immutable Class in Java</title><link>https://codingnconcepts.com/java/immutable-class-using-java/</link><pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/java/immutable-class-using-java/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll learn about &lt;em>Immutable Class&lt;/em> and its benefits in thread-safety, caching and collections. We will also look at rules to create immutable classes and eventually we&amp;rsquo;ll write an &lt;em>Immutable Class&lt;/em> from scratch in Java.&lt;/p></description></item></channel></rss>
