@@ -724,7 +724,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 }
 
 .content ul {
-	list-style: square;
+	list-style: none;
 }
 
 .content ol {
@@ -750,13 +750,50 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 
 .content ol li {
 	counter-increment: number-list-counter;
+	position: relative;
+}
+
+.content ul li {
+	counter-increment: number-list-counter;
+	position: relative;
+}
+
+.content ul > li::before {
+	content: "●";
+  color: #fcd000;
+  font-size: 0.875rem;
+  font-weight: bold;
+  position: absolute;
+  --size: 12px;
+  left: calc(-1 * var(--size) - 10px);
+  line-height: 10px;
+  width: var(--size);
+  height: var(--size);
+  top: 7px;
+  transform: rotate(-0deg);
+  background: black;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 1px 1px 0 #999;
 }
 
 .content ol > li::before {
-	content: counter(number-list-counter) ".";
-	font-size: 1.125rem;
-	margin-right: 0.5rem;
-	margin-left: -1em;
+	content: counter(number-list-counter);
+  color: #fcd000;
+  font-size: 0.875rem;
+  font-weight: bold;
+  position: absolute;
+  --size: 14px;
+  left: calc(-1 * var(--size) - 10px);
+  line-height: 13px;
+  width: var(--size);
+  height: var(--size);
+  top: 5px;
+  transform: rotate(-0deg);
+  background: black;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 1px 1px 0 #999;
 }
 
 .post__footer {
@@ -1397,11 +1434,11 @@ ul.share-icons li > * .label {
 	}
 
 	.logo__title img{
-        width: 24px;
-        height: 24px;
-        width: 1.5rem;
-        height: 1.5rem;
-    }
+		width: 24px;
+		height: 24px;
+		width: 1.5rem;
+		height: 1.5rem;
+  }
 
 	.sidebar {
 		margin-top: 20px;
@@ -1498,7 +1535,7 @@ ul.share-icons li > * .label {
 	.menu__item.menu__dropdown .drop-icon {
 		position: absolute;
 		right: 1rem;
-  		top: auto;
+  	top: auto;
 	}
 
 	.menu__item.menu__dropdown input[type="checkbox"] + .submenu__list {
