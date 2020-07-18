@@ -796,6 +796,24 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
   box-shadow: 1px 1px 0 #999;
 }
 
+.count-badge {
+	color: #fcd000;
+  font-size: 1.125rem;
+  font-weight: bold;
+  position: absolute;
+  --size: 40px;
+  line-height: var(--size);
+  width: var(--size);
+  height: var(--size);
+  transform: rotate(-10deg);
+  background: black;
+  border-radius: 50%;
+  text-align: center;
+	box-shadow: 1px 1px 0 #999;
+	margin-left: 5px;
+	margin-top: -5px;
+}
+
 .post__footer {
 	margin-top: 20px;
 	margin-top: 1.25rem;
