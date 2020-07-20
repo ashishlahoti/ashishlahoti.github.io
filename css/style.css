@@ -783,9 +783,9 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
   font-size: 0.875rem;
   font-weight: bold;
   position: absolute;
-  --size: 14px;
+  --size: 16px;
   left: calc(-1 * var(--size) - 10px);
-  line-height: 13px;
+  line-height: var(--size);
   width: var(--size);
   height: var(--size);
   top: 5px;
