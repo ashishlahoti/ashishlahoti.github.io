@@ -612,7 +612,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 .main__content h1, .main__header h1{
 	color: #e22d30;
 	margin: 0 0 2.5rem 0;
-	font-family: Rowdies
+	font-family: Rowdies, "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 .meta {
@@ -810,6 +810,10 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	box-shadow: 1px 1px 0 #999;
 	margin-left: 5px;
 	margin-top: -5px;
+}
+
+.category-page-count {
+	float: right;
 }
 
 .post__footer {
