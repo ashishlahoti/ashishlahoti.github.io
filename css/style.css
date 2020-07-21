@@ -397,6 +397,7 @@ select {
 
 .logo {
 	padding: 25px;
+	font-family: Rowdies, "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 .logo__link {
@@ -413,8 +414,8 @@ select {
 }
 
 .logo__title img{
-    width: 32px;
-    height: 32px;
+  width: 32px;
+  height: 32px;
 	width: 2rem;
 	height: 2rem;
 }
@@ -600,11 +601,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 .main__header {
 	margin-bottom: 20px;
 	margin-bottom: 1.25rem;
-}
-
-.main__title {
-	font-size: 28px;
-	font-size: 1.75rem;
+	border-bottom: 1px solid #dadada;
 }
 
 .main__content {
@@ -615,6 +612,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 .main__content h1, .main__header h1{
 	color: #e22d30;
 	margin: 0 0 2.5rem 0;
+	font-family: Rowdies
 }
 
 .meta {
@@ -1475,7 +1473,9 @@ ul.share-icons li > * .label {
 	.menu__item.menu__dropdown .drop-icon {
 		position: absolute;
 		right: 1rem;
-  		top: auto;
+		top: auto;
+		width: 50%;
+		text-align: right;
 	}
 
 	.menu__item.menu__dropdown input[type="checkbox"] + .submenu__list {
