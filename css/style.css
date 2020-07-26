@@ -1289,11 +1289,6 @@ textarea {
 	display: none;
 }
  
-.social-share .share-icons li {
-	padding: 0 !important;
-	padding-bottom: 10px !important;
-}
- 
 .social-share .share-btn {
 	padding: 0.25em;
 	width: 3em;
@@ -1312,7 +1307,7 @@ ul.share-icons {
 
 ul.share-icons li {
 	display: inline-block;
-	padding: 0 1em 0 0;
+	margin: 0px 5px 10px 0px;
 }
 
 ul.share-icons li:last-child {
