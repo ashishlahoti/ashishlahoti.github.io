@@ -746,13 +746,12 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	margin-bottom: 5px;
 }
 
-.content ol li {
+.content ol > li {
 	counter-increment: number-list-counter;
 	position: relative;
 }
 
 .content ul li {
-	counter-increment: number-list-counter;
 	position: relative;
 }
 
