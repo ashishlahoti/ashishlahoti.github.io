@@ -686,12 +686,12 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 .content a,
 .warning a {
 	font-weight: 700;
-	color: #e22d30;
+	color: #28A8CB;
 }
 
 .content a:hover,
 .warning a:hover {
-	color: #e22d30;
+	color: #28A8CB;
 	text-decoration: underline;
 }
 
