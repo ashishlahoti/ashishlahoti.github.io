@@ -1591,3 +1591,10 @@ article[autonumbering] h4:before {counter-increment: h4; content: counter(h2) ".
 
 article[autonumbering] .toc__menu ul { counter-reset: item }
 article[autonumbering] .toc__menu li a:before { content: counters(item, ".") ". "; counter-increment: item }
+
+article[autoqnumbering] h2:before {counter-increment: h2; content: "Q" counter(h2) ". "}
+article[autoqnumbering] h3:before {counter-increment: h3; content: "Q" counter(h2) "." counter(h3) ". "}
+article[autoqnumbering] h4:before {counter-increment: h4; content: "Q" counter(h2) "." counter(h3) "." counter(h4) ". "}
+
+article[autoqnumbering] .toc__menu ul { counter-reset: item }
+article[autoqnumbering] .toc__menu li a:before { content: "Q" counters(item, ".") ". "; counter-increment: item }
