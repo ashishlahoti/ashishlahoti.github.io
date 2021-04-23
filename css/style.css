@@ -1213,6 +1213,11 @@ textarea {
 	fill: #fff;
 }
 
+.widget-social__link-button {
+	margin: 0 5px 0 0;
+	vertical-align: middle;
+}
+
 /* Tags Widget */
 .widget-taglist__link {
 	display: inline-block;
