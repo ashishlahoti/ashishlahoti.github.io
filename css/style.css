@@ -933,7 +933,12 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	float: left;
 	padding: 3px;
 	margin: 0 25px 0 0;
-	border: 1px solid #ebebeb;
+	border: 3px solid #2a2a2a;
+	border-radius: 250px;
+}
+
+.authorbox__avatar img {
+	border-radius: 250px;
 }
 
 .authorbox__header {
