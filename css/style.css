@@ -1413,6 +1413,40 @@ ul.share-icons li > * .label {
 	margin: 0;
 }
 
+/* Alerts */
+.alert-notification {
+    position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+	color: #004085;
+    background-color: #cce5ff;
+    border-color: #063261;
+	margin: 20px;
+	padding: 20px;
+}
+
+/* Animate opacity */
+@keyframes fade {
+from { opacity: 1 }
+to { opacity: 0 }
+}
+@-moz-keyframes fade {
+from { opacity: 1 }
+to { opacity: 0 }
+}
+@-webkit-keyframes fade {
+from { opacity: 1 }
+to { opacity: 0 }
+}
+
 /* Media Queries */
 @media screen and (max-width: 1475px) {
 	.container--outer {

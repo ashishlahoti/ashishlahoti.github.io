@@ -36,3 +36,23 @@ const romanToInteger = (roman) => {
   }
   return total;
 }
+
+const copyRomanToClipboard = () => {
+  const romanNumber = document.getElementById("roman-number").value;
+  copyToClipboard(romanNumber);
+  if(romanNumber){
+    alertNotification("Copied to clipboard: " + romanNumber);
+  }else{
+    alertNotification("No Roman Numeral to Copy");
+  }
+}
+
+const copyNumberToClipboard = () => {
+  const number = document.getElementById("decimal-number").value;
+  copyToClipboard(number);
+  if(number){
+    alertNotification("Copied to clipboard: " + number);
+  }else{
+    alertNotification("No Decimal Number to Copy");
+  }
+}

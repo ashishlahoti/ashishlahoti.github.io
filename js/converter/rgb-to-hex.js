@@ -47,3 +47,13 @@ const _rgbToHex = (rgb) => {
   }
   return hex;
 };
+
+const copyHexToClipboard = () => {
+  const hexValue = document.getElementById("hex").value;
+  copyToClipboard(hexValue);
+  if(hexValue){
+    alertNotification("Copied to clipboard: " + hexValue);
+  }else{
+    alertNotification("Nothing to copy");
+  }
+}

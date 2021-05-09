@@ -11,3 +11,14 @@ const changeInDefaultFontSize = (defaultFontSize) => {
 Number.prototype.round = function(places) {
   return +(Math.round(this + "e+" + places)  + "e-" + places);
 }
+
+const copyRemToClipboard = () => {
+  const remValue = document.getElementById("rem").value;
+  copyToClipboard(remValue);
+  if(remValue){
+    alertNotification("Copied to clipboard: " + remValue);
+  }else{
+    alertNotification("Nothing to copy");
+  }
+}
+
