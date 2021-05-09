@@ -1431,6 +1431,7 @@ ul.share-icons li > * .label {
     border-color: #063261;
 	margin: 20px;
 	padding: 20px;
+	z-index: 1000;
 }
 
 /* Animate opacity */
