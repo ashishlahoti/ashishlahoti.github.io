@@ -55,12 +55,17 @@ body {
 .container {
 	position: relative;
 	width: 100%;
-	max-width: 1080px;
+	margin: 0 auto;
+}
+
+.container--inner {
+	position: relative;
+	width: 100%;
 	margin: 0 auto;
 }
 
 .container--outer {
-	margin: 25px auto;
+	margin: 10px auto;
 	box-shadow: 0 0 10px rgba(50, 50, 50, .17);
 }
 
@@ -91,7 +96,16 @@ body {
 	margin: 0 0 0 2.5%;
 }
 
-.sidebar--left {
+.adsbar {
+	-webkit-flex: 1 0 20%;
+	flex: 1 0 20%;
+	-webkit-order: 2;
+	order: 2;
+	max-width: 250px;
+	margin: 0 0 0 2.5%;
+}
+
+.sidebar--left, .adsbar--left {
 	-webkit-order: 0;
 	order: 0;
 	margin: 0 2.5% 0 0;
@@ -1449,15 +1463,22 @@ to { opacity: 0 }
 }
 
 /* Media Queries */
+@media screen and (max-width: 2560px) {
+	.container--outer {
+		max-width: 80%;
+	}
+}
+
 @media screen and (max-width: 1475px) {
 	.container--outer {
-		width: 95%;
+		max-width: 80%;
 	}
 }
 
 @media screen and (max-width: 900px) {
 	.container--outer {
 		width: 100%;
+		max-width: 100%;
 		margin: 0 auto;
 	}
 
@@ -1486,6 +1507,12 @@ to { opacity: 0 }
 }
 
 @media screen and (max-width: 767px) {
+	.container--outer {
+		width: 100%;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
 	.wrapper {
 		display: block;
 	}
@@ -1494,6 +1521,10 @@ to { opacity: 0 }
 		float: none;
 		width: 100%;
 		margin: 0;
+	}
+
+	.adsbar {
+		display: none;
 	}
 
 	.logo {
@@ -1512,7 +1543,7 @@ to { opacity: 0 }
 		height: 1.5rem;
   }
 
-	.sidebar {
+	.sidebar, .adsbar {
 		margin-top: 20px;
 	}
 
@@ -1540,6 +1571,11 @@ to { opacity: 0 }
 }
 
 @media screen and (max-width: 620px) {
+	.container--outer {
+		width: 100%;
+		max-width: 100%;
+		margin: 0 auto;
+	}
 	input[type=text],
 	input[type=email],
 	input[type=tel],
