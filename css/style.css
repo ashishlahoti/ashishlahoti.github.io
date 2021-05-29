@@ -1393,14 +1393,17 @@ ul.share-icons li > * .label {
 .share-btn.reddit      { background: #ff5700; }
 .share-btn.email       { background: #444444; }
 .share-btn.gmail       { background: #F0F0EC; }
+.share-btn.rss         { background: #ea7819  }
 .share-btn.whatsapp    { background: #25d366; }
 .share-btn.github      { background: #211F1F; }
-.share-btn.home      	 { background: #ebc334; }
+.share-btn.home        { background: #ebc334; }
+.share-btn.followit    { background: #1FB050; }
 .share-btn.instagram   { background: #f09433; background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
 	background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
 	background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
-	}
+}
+
 
 
 
