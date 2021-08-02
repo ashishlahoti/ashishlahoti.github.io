@@ -772,7 +772,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 
 .content ul > li::before {
 	content: "●";
-  color: #fcd000;
+  color: white;
   font-size: 0.875rem;
   font-weight: bold;
   position: absolute;
@@ -791,7 +791,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 
 .content ol > li::before {
 	content: counter(number-list-counter);
-  color: #fcd000;
+  color: white;
   font-size: 0.875rem;
   font-weight: bold;
   position: absolute;
@@ -809,7 +809,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 }
 
 .count-badge {
-	color: #fcd000;
+  color: white;
   font-size: 1.125rem;
   font-weight: bold;
   position: absolute;
