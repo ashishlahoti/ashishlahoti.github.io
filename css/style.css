@@ -771,38 +771,38 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 }
 
 .content ul > li::before {
-	content: "●";
+  content: "●";
   color: white;
   font-size: 0.875rem;
   font-weight: bold;
   position: absolute;
-  --size: 12px;
+  --size: 0.875rem;
   left: calc(-1 * var(--size) - 10px);
-  line-height: 10px;
+  line-height: 0.75rem;
   width: var(--size);
   height: var(--size);
-  top: 7px;
+  top: 5px;
   transform: rotate(-0deg);
-  background: black;
+  background: #57595D;
   border-radius: 50%;
   text-align: center;
   box-shadow: 1px 1px 0 #999;
 }
 
 .content ol > li::before {
-	content: counter(number-list-counter);
+  content: counter(number-list-counter);
   color: white;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: bold;
   position: absolute;
-  --size: 16px;
+  --size: 0.875rem;
   left: calc(-1 * var(--size) - 10px);
   line-height: var(--size);
   width: var(--size);
   height: var(--size);
   top: 5px;
   transform: rotate(-0deg);
-  background: black;
+  background: #57595D;
   border-radius: 50%;
   text-align: center;
   box-shadow: 1px 1px 0 #999;
