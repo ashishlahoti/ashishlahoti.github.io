@@ -111,6 +111,11 @@ body {
 	margin: 0 2.5% 0 0;
 }
 
+.googleadblock {
+	position: sticky;
+	top: 0px;
+}
+
 .clearfix {
 	display: block;
 }
