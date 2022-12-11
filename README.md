@@ -4,6 +4,7 @@ Ashish Lahoti's Blog Site Hosted on Github Pages
 ## Blog Topics
 * Java
 * Spring Boot
+* Kotlin
 * JavaScript
 * CSS
 * Kafka
