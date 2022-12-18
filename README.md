@@ -1,5 +1,5 @@
 # ashishlahoti.github.io
-Ashish Lahoti's Technical Blog Site Hosted on Github Pages
+Ashish Lahoti's Technical Blog Site
 
 ## Blog Topics
 * Java
