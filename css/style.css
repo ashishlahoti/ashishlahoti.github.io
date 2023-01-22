@@ -1654,7 +1654,7 @@ to { opacity: 0 }
 	.menu__item.menu__dropdown .drop-icon {
 		position: absolute;
 		right: 1rem;
-  	top: auto;
+  		top: auto;
 	}
 
 	.menu__item.menu__dropdown input[type="checkbox"] + .submenu__list {
