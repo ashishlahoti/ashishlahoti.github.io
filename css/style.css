@@ -1100,6 +1100,8 @@ th {
 
 th {
 	font-weight: 700;
+	color: white;
+  	background: #4f6a96;
 }
 
 /* Forms */
