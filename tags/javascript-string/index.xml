@@ -1,1 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Javascript String on Coding N Concepts</title><link>https://codingnconcepts.com/tags/javascript-string/</link><description>Recent content in Javascript String on Coding N Concepts</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 05 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/javascript-string/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Replace all Occurrences of a String in JavaScript</title><link>https://codingnconcepts.com/javascript/how-to-replace-all-occurrences-string-javascript/</link><pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/how-to-replace-all-occurrences-string-javascript/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll learn how to replace all occurrences of a string in JavaScript using &lt;code>String.replace()&lt;/code> method. We will also look at &lt;code>String.split()&lt;/code> and &lt;code>Array.join()&lt;/code> approach.&lt;/p></description></item><item><title>How to Capitalize First Letter of String in JavaScript</title><link>https://codingnconcepts.com/javascript/how-to-capitalize-first-letter-of-string-in-javascript/</link><pubDate>Fri, 19 Jun 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/how-to-capitalize-first-letter-of-string-in-javascript/</guid><description>&lt;p>In this quick tutorial, we&amp;rsquo;ll learn how to capitalize the first letter of a String in JavaScript.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascript String on Coding N Concepts</title>
+    <link>https://codingnconcepts.com/tags/javascript-string/</link>
+    <description>Recent content in Javascript String on Coding N Concepts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/javascript-string/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Replace all Occurrences of a String in JavaScript</title>
+      <link>https://codingnconcepts.com/javascript/how-to-replace-all-occurrences-string-javascript/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/javascript/how-to-replace-all-occurrences-string-javascript/</guid>
+      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn how to replace all occurrences of a string in JavaScript using &lt;code&gt;String.replace()&lt;/code&gt; method. We will also look at &lt;code&gt;String.split()&lt;/code&gt; and &lt;code&gt;Array.join()&lt;/code&gt; approach.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to Capitalize First Letter of String in JavaScript</title>
+      <link>https://codingnconcepts.com/javascript/how-to-capitalize-first-letter-of-string-in-javascript/</link>
+      <pubDate>Fri, 19 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/javascript/how-to-capitalize-first-letter-of-string-in-javascript/</guid>
+      <description>&lt;p&gt;In this quick tutorial, we&amp;rsquo;ll learn how to capitalize the first letter of a String in JavaScript.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

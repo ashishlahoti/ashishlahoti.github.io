@@ -1,1 +1,35 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Maths Puzzle on Coding N Concepts</title><link>https://codingnconcepts.com/tags/maths-puzzle/</link><description>Recent content in Maths Puzzle on Coding N Concepts</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/maths-puzzle/index.xml" rel="self" type="application/rss+xml"/><item><title>The Die Hard Water Jug Riddle (Solved)</title><link>https://codingnconcepts.com/puzzle/the-water-jug-riddle/</link><pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/puzzle/the-water-jug-riddle/</guid><description>&lt;p>This riddle is from famous Die Hard movie where &lt;em>Bruce Willis&lt;/em> and &lt;em>Jackson&lt;/em> have to diffuse a bomb by placing exactly 4 gallon water on a scale using 3 gallon and 5 gallon water jug.&lt;/p></description></item><item><title>The 6s Math Puzzle</title><link>https://codingnconcepts.com/puzzle/the-6s-math-puzzle/</link><pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/puzzle/the-6s-math-puzzle/</guid><description>&lt;p>This is a pure mathematical puzzle which evaluate your ability to solve maths equation. This is a great problem for building number sense.&lt;/p></description></item><item><title>Minimum set of weight puzzle</title><link>https://codingnconcepts.com/puzzle/minimum-set-of-weights/</link><pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/puzzle/minimum-set-of-weights/</guid><description>&lt;p>This puzzle is a mix of weight and math puzzle.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Maths Puzzle on Coding N Concepts</title>
+    <link>https://codingnconcepts.com/tags/maths-puzzle/</link>
+    <description>Recent content in Maths Puzzle on Coding N Concepts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/maths-puzzle/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Die Hard Water Jug Riddle (Solved)</title>
+      <link>https://codingnconcepts.com/puzzle/the-water-jug-riddle/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/puzzle/the-water-jug-riddle/</guid>
+      <description>&lt;p&gt;This riddle is from famous Die Hard movie where &lt;em&gt;Bruce Willis&lt;/em&gt; and &lt;em&gt;Jackson&lt;/em&gt; have to diffuse a bomb by placing exactly 4 gallon water on a scale using 3 gallon and 5 gallon water jug.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The 6s Math Puzzle</title>
+      <link>https://codingnconcepts.com/puzzle/the-6s-math-puzzle/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/puzzle/the-6s-math-puzzle/</guid>
+      <description>&lt;p&gt;This is a pure mathematical puzzle which evaluate your ability to solve maths equation. This is a great problem for building number sense.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Minimum set of weight puzzle</title>
+      <link>https://codingnconcepts.com/puzzle/minimum-set-of-weights/</link>
+      <pubDate>Sun, 22 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/puzzle/minimum-set-of-weights/</guid>
+      <description>&lt;p&gt;This puzzle is a mix of weight and math puzzle.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

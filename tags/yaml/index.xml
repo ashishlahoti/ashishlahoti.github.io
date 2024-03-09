@@ -1,1 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>YAML on Coding N Concepts</title><link>https://codingnconcepts.com/tags/yaml/</link><description>Recent content in YAML on Coding N Concepts</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 31 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/yaml/index.xml" rel="self" type="application/rss+xml"/><item><title>application.properties vs application.yml in Spring Boot</title><link>https://codingnconcepts.com/spring-boot/spring-boot-application-properties-vs-yml/</link><pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/spring-boot-application-properties-vs-yml/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll compare Spring Boot Configuration using YAML file and Property file and their advantages one over the other.&lt;/p></description></item><item><title>Spring @ConfigurationProperties using YAML</title><link>https://codingnconcepts.com/spring-boot/spring-configuration-properties-using-yml/</link><pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/spring-configuration-properties-using-yml/</guid><description>&lt;p>In this article, we&amp;rsquo;ll learn how to use &lt;em>@ConfigurationProperties&lt;/em> with &lt;em>.yml&lt;/em> file instead of &lt;em>.properties&lt;/em> file for configuration in Spring Boot Project.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>YAML on Coding N Concepts</title>
+    <link>https://codingnconcepts.com/tags/yaml/</link>
+    <description>Recent content in YAML on Coding N Concepts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 31 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/yaml/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>application.properties vs application.yml in Spring Boot</title>
+      <link>https://codingnconcepts.com/spring-boot/spring-boot-application-properties-vs-yml/</link>
+      <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/spring-boot-application-properties-vs-yml/</guid>
+      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll compare Spring Boot Configuration using YAML file and Property file and their advantages one over the other.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Spring @ConfigurationProperties using YAML</title>
+      <link>https://codingnconcepts.com/spring-boot/spring-configuration-properties-using-yml/</link>
+      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/spring-configuration-properties-using-yml/</guid>
+      <description>&lt;p&gt;In this article, we&amp;rsquo;ll learn how to use &lt;em&gt;@ConfigurationProperties&lt;/em&gt; with &lt;em&gt;.yml&lt;/em&gt; file instead of &lt;em&gt;.properties&lt;/em&gt; file for configuration in Spring Boot Project.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

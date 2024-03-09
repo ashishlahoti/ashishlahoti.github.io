@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Log on Coding N Concepts</title><link>https://codingnconcepts.com/tags/log/</link><description>Recent content in Log on Coding N Concepts</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 23 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/log/index.xml" rel="self" type="application/rss+xml"/><item><title>Custom API Request &amp; Response Logging in spring boot.</title><link>https://codingnconcepts.com/spring-boot/custom-api-request-response-logging/</link><pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/custom-api-request-response-logging/</guid><description>&lt;p>When we create RESTFul APIs in spring boot application in microservices environment. It becomes essential to log incoming API request and response and push it to centralized logging system such as Splunk or ELK for debugging. Also all the logs related to one request should have some common id to relate them. In this post we are going to solve these problems.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Log on Coding N Concepts</title>
+    <link>https://codingnconcepts.com/tags/log/</link>
+    <description>Recent content in Log on Coding N Concepts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 23 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/log/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Custom API Request &amp; Response Logging in spring boot.</title>
+      <link>https://codingnconcepts.com/spring-boot/custom-api-request-response-logging/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/custom-api-request-response-logging/</guid>
+      <description>&lt;p&gt;When we create RESTFul APIs in spring boot application in microservices environment. It becomes essential to log incoming API request and response and push it to centralized logging system such as Splunk or ELK for debugging. Also all the logs related to one request should have some common id to relate them. In this post we are going to solve these problems.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

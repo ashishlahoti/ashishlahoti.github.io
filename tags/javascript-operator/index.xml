@@ -1,1 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Javascript Operator on Coding N Concepts</title><link>https://codingnconcepts.com/tags/javascript-operator/</link><description>Recent content in Javascript Operator on Coding N Concepts</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 27 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/javascript-operator/index.xml" rel="self" type="application/rss+xml"/><item><title>Optional Chaining ?. operator in JavaScript</title><link>https://codingnconcepts.com/javascript/optional-chaining-operator-javascript/</link><pubDate>Wed, 27 Jan 2021 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/optional-chaining-operator-javascript/</guid><description>&lt;p>Optional chaining &lt;code>?.&lt;/code> operator is used to access the nested object properties with implicit nullish check.&lt;/p></description></item><item><title>Difference in == and === comparison operators in JavaScript</title><link>https://codingnconcepts.com/javascript/comparison-operators-in-javascript/</link><pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/comparison-operators-in-javascript/</guid><description>&lt;p>This is frequently asked question in JavaScript interview. We can compare primitive types, array and object using two comparison operators &lt;code>==&lt;/code> and &lt;code>===&lt;/code> available in JavaScript. This post describes the difference between these two with many examples.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascript Operator on Coding N Concepts</title>
+    <link>https://codingnconcepts.com/tags/javascript-operator/</link>
+    <description>Recent content in Javascript Operator on Coding N Concepts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 27 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/javascript-operator/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Optional Chaining ?. operator in JavaScript</title>
+      <link>https://codingnconcepts.com/javascript/optional-chaining-operator-javascript/</link>
+      <pubDate>Wed, 27 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/javascript/optional-chaining-operator-javascript/</guid>
+      <description>&lt;p&gt;Optional chaining &lt;code&gt;?.&lt;/code&gt; operator is used to access the nested object properties with implicit nullish check.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Difference in == and === comparison operators in JavaScript</title>
+      <link>https://codingnconcepts.com/javascript/comparison-operators-in-javascript/</link>
+      <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/javascript/comparison-operators-in-javascript/</guid>
+      <description>&lt;p&gt;This is frequently asked question in JavaScript interview. We can compare primitive types, array and object using two comparison operators &lt;code&gt;==&lt;/code&gt; and &lt;code&gt;===&lt;/code&gt; available in JavaScript. This post describes the difference between these two with many examples.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

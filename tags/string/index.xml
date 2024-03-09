@@ -1,1 +1,35 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>String on Coding N Concepts</title><link>https://codingnconcepts.com/tags/string/</link><description>Recent content in String on Coding N Concepts</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 15 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/string/index.xml" rel="self" type="application/rss+xml"/><item><title>Convert Long to String in Java</title><link>https://codingnconcepts.com/java/convert-long-to-string-in-java/</link><pubDate>Fri, 15 Oct 2021 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/java/convert-long-to-string-in-java/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll learn different methods to convert &lt;strong>long&lt;/strong> primitive or &lt;strong>Long&lt;/strong> object to String in Java&lt;/p></description></item><item><title>How to Compare two Strings in Java</title><link>https://codingnconcepts.com/java/compare-two-strings-in-java/</link><pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/java/compare-two-strings-in-java/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll learn different ways to compare two strings in Java&lt;/p></description></item><item><title>Java String.format() method Usage</title><link>https://codingnconcepts.com/java/string-format-in-java/</link><pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/java/string-format-in-java/</guid><description>&lt;p>This article demonstrate use of &lt;code>String.format()&lt;/code> in Java with many examples&amp;hellip;&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>String on Coding N Concepts</title>
+    <link>https://codingnconcepts.com/tags/string/</link>
+    <description>Recent content in String on Coding N Concepts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 15 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/string/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Convert Long to String in Java</title>
+      <link>https://codingnconcepts.com/java/convert-long-to-string-in-java/</link>
+      <pubDate>Fri, 15 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/java/convert-long-to-string-in-java/</guid>
+      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn different methods to convert &lt;strong&gt;long&lt;/strong&gt; primitive or &lt;strong&gt;Long&lt;/strong&gt; object to String in Java&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to Compare two Strings in Java</title>
+      <link>https://codingnconcepts.com/java/compare-two-strings-in-java/</link>
+      <pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/java/compare-two-strings-in-java/</guid>
+      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn different ways to compare two strings in Java&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Java String.format() method Usage</title>
+      <link>https://codingnconcepts.com/java/string-format-in-java/</link>
+      <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/java/string-format-in-java/</guid>
+      <description>&lt;p&gt;This article demonstrate use of &lt;code&gt;String.format()&lt;/code&gt; in Java with many examples&amp;hellip;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

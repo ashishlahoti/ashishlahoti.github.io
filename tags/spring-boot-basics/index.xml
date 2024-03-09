@@ -1,19 +1,149 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Spring Boot Basics on Coding N Concepts</title><link>https://codingnconcepts.com/tags/spring-boot-basics/</link><description>Recent content in Spring Boot Basics on Coding N Concepts</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 01 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/spring-boot-basics/index.xml" rel="self" type="application/rss+xml"/><item><title>Configure Log4j 2 Logging in Spring Boot</title><link>https://codingnconcepts.com/spring-boot/configure-log4j-2-logging-spring-boot/</link><pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/configure-log4j-2-logging-spring-boot/</guid><description>&lt;p>In this quick tutorial, we&amp;rsquo;ll configure Log4j 2 logging by replacing it with the default Logback config in the Spring Boot application.&lt;/p></description></item><item><title>How to Change Context Path in Spring Boot</title><link>https://codingnconcepts.com/spring-boot/change-context-path/</link><pubDate>Fri, 16 Dec 2022 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/change-context-path/</guid><description>&lt;p>In this quick article, we learn how to change the servlet context path in the Spring Boot application.&lt;/p></description></item><item><title>Use Spring Boot Project as a Dependency</title><link>https://codingnconcepts.com/spring-boot/spring-boot-project-as-dependency/</link><pubDate>Tue, 13 Dec 2022 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/spring-boot-project-as-dependency/</guid><description>&lt;p>In this article, we will learn how to build a Spring Boot JAR as a library and use it as a dependency in other applications.&lt;/p></description></item><item><title>Configure embedded Undertow server in Spring Boot</title><link>https://codingnconcepts.com/spring-boot/configure-embedded-undertow-server/</link><pubDate>Sat, 12 Jun 2021 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/configure-embedded-undertow-server/</guid><description>&lt;p>In this quick tutorial, we&amp;rsquo;ll configure embedded Undertow server by replacing it with default Tomcat server in Spring Boot web application.&lt;/p></description></item><item><title>Conditional Annotations in Spring Boot</title><link>https://codingnconcepts.com/spring-boot/conditional-annotations-in-spring-boot/</link><pubDate>Fri, 11 Jun 2021 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/conditional-annotations-in-spring-boot/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll take a look at Conditional Annotations in Spring Boot with examples.&lt;/p></description></item><item><title>application.properties vs application.yml in Spring Boot</title><link>https://codingnconcepts.com/spring-boot/spring-boot-application-properties-vs-yml/</link><pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/spring-boot-application-properties-vs-yml/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll compare Spring Boot Configuration using YAML file and Property file and their advantages one over the other.&lt;/p></description></item><item><title>Spring @ConfigurationProperties using YAML</title><link>https://codingnconcepts.com/spring-boot/spring-configuration-properties-using-yml/</link><pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/spring-configuration-properties-using-yml/</guid><description>&lt;p>In this article, we&amp;rsquo;ll learn how to use &lt;em>@ConfigurationProperties&lt;/em> with &lt;em>.yml&lt;/em> file instead of &lt;em>.properties&lt;/em> file for configuration in Spring Boot Project.&lt;/p></description></item><item><title>Spring Initializr Plugin for Eclipse IDE</title><link>https://codingnconcepts.com/spring-boot/spring-initializr-for-eclipse-ide/</link><pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/spring-initializr-for-eclipse-ide/</guid><description>&lt;p>In this article, we&amp;rsquo;ll learn how to install &lt;em>Spring Tool Plugin&lt;/em> for Eclipse IDE to create a Spring Boot Project from Scratch using Spring Initializr.&lt;/p></description></item><item><title>Spring @Value Annotation Guide</title><link>https://codingnconcepts.com/spring-boot/spring-value-annotation/</link><pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/spring-value-annotation/</guid><description>&lt;p>In this article, we&amp;rsquo;ll learn how to inject values for Primitives, List, Map, and Date with inline values and from property file using @Value Annotation with examples. We&amp;rsquo;ll also see its usage with Constructor-based &amp;amp; Setter-based Injection, and SpEL.&lt;/p></description></item><item><title>Setup a Spring Boot Project using Spring Initializr</title><link>https://codingnconcepts.com/spring-boot/setup-project-using-spring-initializr/</link><pubDate>Sat, 23 May 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/setup-project-using-spring-initializr/</guid><description>&lt;p>In this article, we&amp;rsquo;ll learn how to create a Spring Boot project quickly from scratch use &lt;em>Spring Initializer&lt;/em>.&lt;/p></description></item><item><title>Configure embedded Jetty server in Spring Boot</title><link>https://codingnconcepts.com/spring-boot/configure-embedded-jetty-server/</link><pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/configure-embedded-jetty-server/</guid><description>&lt;p>In this quick tutorial, we&amp;rsquo;ll configure embedded Jetty server by replacing it with default Tomcat server in Spring Boot web application.&lt;/p></description></item><item><title>How to create and configure custom banner in spring boot</title><link>https://codingnconcepts.com/spring-boot/how-to-create-custom-banner/</link><pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/how-to-create-custom-banner/</guid><description>&lt;p>Spring boot application comes with default banner which shows up first when you start your application.&lt;/p>
-&lt;pre tabindex="0">&lt;code> . ____ _ __ _ _
-/\\ / ___&amp;#39;_ __ _ _(_)_ __ __ _ \ \ \ \
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spring Boot Basics on Coding N Concepts</title>
+    <link>https://codingnconcepts.com/tags/spring-boot-basics/</link>
+    <description>Recent content in Spring Boot Basics on Coding N Concepts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/spring-boot-basics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Configure Log4j 2 Logging in Spring Boot</title>
+      <link>https://codingnconcepts.com/spring-boot/configure-log4j-2-logging-spring-boot/</link>
+      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/configure-log4j-2-logging-spring-boot/</guid>
+      <description>&lt;p&gt;In this quick tutorial, we&amp;rsquo;ll configure Log4j 2 logging by replacing it with the default Logback config in the Spring Boot application.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to Change Context Path in Spring Boot</title>
+      <link>https://codingnconcepts.com/spring-boot/change-context-path/</link>
+      <pubDate>Fri, 16 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/change-context-path/</guid>
+      <description>&lt;p&gt;In this quick article, we learn how to change the servlet context path in the Spring Boot application.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Use Spring Boot Project as a Dependency</title>
+      <link>https://codingnconcepts.com/spring-boot/spring-boot-project-as-dependency/</link>
+      <pubDate>Tue, 13 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/spring-boot-project-as-dependency/</guid>
+      <description>&lt;p&gt;In this article, we will learn how to build a Spring Boot JAR as a library and use it as a dependency in other applications.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configure embedded Undertow server in Spring Boot</title>
+      <link>https://codingnconcepts.com/spring-boot/configure-embedded-undertow-server/</link>
+      <pubDate>Sat, 12 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/configure-embedded-undertow-server/</guid>
+      <description>&lt;p&gt;In this quick tutorial, we&amp;rsquo;ll configure embedded Undertow server by replacing it with default Tomcat server in Spring Boot web application.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Conditional Annotations in Spring Boot</title>
+      <link>https://codingnconcepts.com/spring-boot/conditional-annotations-in-spring-boot/</link>
+      <pubDate>Fri, 11 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/conditional-annotations-in-spring-boot/</guid>
+      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll take a look at Conditional Annotations in Spring Boot with examples.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>application.properties vs application.yml in Spring Boot</title>
+      <link>https://codingnconcepts.com/spring-boot/spring-boot-application-properties-vs-yml/</link>
+      <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/spring-boot-application-properties-vs-yml/</guid>
+      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll compare Spring Boot Configuration using YAML file and Property file and their advantages one over the other.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Spring @ConfigurationProperties using YAML</title>
+      <link>https://codingnconcepts.com/spring-boot/spring-configuration-properties-using-yml/</link>
+      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/spring-configuration-properties-using-yml/</guid>
+      <description>&lt;p&gt;In this article, we&amp;rsquo;ll learn how to use &lt;em&gt;@ConfigurationProperties&lt;/em&gt; with &lt;em&gt;.yml&lt;/em&gt; file instead of &lt;em&gt;.properties&lt;/em&gt; file for configuration in Spring Boot Project.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Spring Initializr Plugin for Eclipse IDE</title>
+      <link>https://codingnconcepts.com/spring-boot/spring-initializr-for-eclipse-ide/</link>
+      <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/spring-initializr-for-eclipse-ide/</guid>
+      <description>&lt;p&gt;In this article, we&amp;rsquo;ll learn how to install &lt;em&gt;Spring Tool Plugin&lt;/em&gt; for Eclipse IDE to create a Spring Boot Project from Scratch using Spring Initializr.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Spring @Value Annotation Guide</title>
+      <link>https://codingnconcepts.com/spring-boot/spring-value-annotation/</link>
+      <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/spring-value-annotation/</guid>
+      <description>&lt;p&gt;In this article, we&amp;rsquo;ll learn how to inject values for Primitives, List, Map, and Date with inline values and from property file using @Value Annotation with examples. We&amp;rsquo;ll also see its usage with Constructor-based &amp;amp; Setter-based Injection, and SpEL.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Setup a Spring Boot Project using Spring Initializr</title>
+      <link>https://codingnconcepts.com/spring-boot/setup-project-using-spring-initializr/</link>
+      <pubDate>Sat, 23 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/setup-project-using-spring-initializr/</guid>
+      <description>&lt;p&gt;In this article, we&amp;rsquo;ll learn how to create a Spring Boot project quickly from scratch use &lt;em&gt;Spring Initializer&lt;/em&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configure embedded Jetty server in Spring Boot</title>
+      <link>https://codingnconcepts.com/spring-boot/configure-embedded-jetty-server/</link>
+      <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/configure-embedded-jetty-server/</guid>
+      <description>&lt;p&gt;In this quick tutorial, we&amp;rsquo;ll configure embedded Jetty server by replacing it with default Tomcat server in Spring Boot web application.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to create and configure custom banner in spring boot</title>
+      <link>https://codingnconcepts.com/spring-boot/how-to-create-custom-banner/</link>
+      <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/how-to-create-custom-banner/</guid>
+      <description>&lt;p&gt;Spring boot application comes with default banner which shows up first when you start your application.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;  .   ____          _            __ _ _
+ /\\ / ___&amp;#39;_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | &amp;#39;_ | &amp;#39;_| | &amp;#39;_ \/ _` | \ \ \ \
-\\/ ___)| |_)| | | | | || (_| | ) ) ) )
-&amp;#39; |____| .__|_| |_|_| |_\__, | / / / /
-=========|_|==============|___/=/_/_/_/
-:: Spring Boot :: (v2.1.3.RELEASE)
-&lt;/code>&lt;/pre>&lt;p>You can replace above banner with your self made custom banner in following two easy steps:-&lt;/p></description></item><item><title>How to disable command line properties in spring boot</title><link>https://codingnconcepts.com/spring-boot/how-to-disable-command-line-properties/</link><pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/how-to-disable-command-line-properties/</guid><description>&lt;p>Spring Boot Application converts any command line arguments starting with --, such as &lt;strong>--spring.profiles.active=dev&lt;/strong> to a property by default and adds them to the Spring Environment. Command line properties always take precedence over other property sources.&lt;/p>
-&lt;p>If you do not want command line properties to be added to the Environment, you can disable them from SpringBootApplication main method as follows:-&lt;/p></description></item><item><title>How to change server port in spring boot</title><link>https://codingnconcepts.com/spring-boot/how-to-change-server-port/</link><pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/how-to-change-server-port/</guid><description>&lt;p>Spring boot web application using embedded server by default runs on port 8080. Following are the ways to change default server port from &lt;strong>8080&lt;/strong> to say &lt;strong>9090&lt;/strong>&lt;/p>
-&lt;p>Follow any of the given five ways to change server port:-&lt;/p></description></item><item><title>How to disable default banner in spring boot</title><link>https://codingnconcepts.com/spring-boot/how-to-disable-banner/</link><pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/how-to-disable-banner/</guid><description>&lt;p>You would have seen below spring boot banner when starting a spring boot application&lt;/p>
-&lt;pre tabindex="0">&lt;code> . ____ _ __ _ _
-/\\ / ___&amp;#39;_ __ _ _(_)_ __ __ _ \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  &amp;#39;  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.3.RELEASE)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You can replace above banner with your self made custom banner in following two easy steps:-&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to disable command line properties in spring boot</title>
+      <link>https://codingnconcepts.com/spring-boot/how-to-disable-command-line-properties/</link>
+      <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/how-to-disable-command-line-properties/</guid>
+      <description>&lt;p&gt;Spring Boot Application converts any command line arguments starting with --, such as &lt;strong&gt;--spring.profiles.active=dev&lt;/strong&gt; to a property by default and adds them to the Spring Environment. Command line properties always take precedence over other property sources.&lt;/p&gt;
+&lt;p&gt;If you do not want command line properties to be added to the Environment, you can disable them from SpringBootApplication main method as follows:-&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to change server port in spring boot</title>
+      <link>https://codingnconcepts.com/spring-boot/how-to-change-server-port/</link>
+      <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/how-to-change-server-port/</guid>
+      <description>&lt;p&gt;Spring boot web application using embedded server by default runs on port 8080. Following are the ways to change default server port from &lt;strong&gt;8080&lt;/strong&gt; to say &lt;strong&gt;9090&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Follow any of the given five ways to change server port:-&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to disable default banner in spring boot</title>
+      <link>https://codingnconcepts.com/spring-boot/how-to-disable-banner/</link>
+      <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/how-to-disable-banner/</guid>
+      <description>&lt;p&gt;You would have seen below spring boot banner when starting a spring boot application&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;  .   ____          _            __ _ _
+ /\\ / ___&amp;#39;_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | &amp;#39;_ | &amp;#39;_| | &amp;#39;_ \/ _` | \ \ \ \
-\\/ ___)| |_)| | | | | || (_| | ) ) ) )
-&amp;#39; |____| .__|_| |_|_| |_\__, | / / / /
-=========|_|==============|___/=/_/_/_/
-:: Spring Boot :: (v2.1.3.RELEASE)
-&lt;/code>&lt;/pre>&lt;p>There are multiple ways to disable spring boot banner as follows:&lt;/p></description></item></channel></rss>
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  &amp;#39;  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.3.RELEASE)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;There are multiple ways to disable spring boot banner as follows:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

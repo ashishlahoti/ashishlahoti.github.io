@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jetty on Coding N Concepts</title><link>https://codingnconcepts.com/tags/jetty/</link><description>Recent content in Jetty on Coding N Concepts</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 25 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/jetty/index.xml" rel="self" type="application/rss+xml"/><item><title>Configure embedded Jetty server in Spring Boot</title><link>https://codingnconcepts.com/spring-boot/configure-embedded-jetty-server/</link><pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/configure-embedded-jetty-server/</guid><description>&lt;p>In this quick tutorial, we&amp;rsquo;ll configure embedded Jetty server by replacing it with default Tomcat server in Spring Boot web application.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jetty on Coding N Concepts</title>
+    <link>https://codingnconcepts.com/tags/jetty/</link>
+    <description>Recent content in Jetty on Coding N Concepts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 25 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/jetty/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Configure embedded Jetty server in Spring Boot</title>
+      <link>https://codingnconcepts.com/spring-boot/configure-embedded-jetty-server/</link>
+      <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/configure-embedded-jetty-server/</guid>
+      <description>&lt;p&gt;In this quick tutorial, we&amp;rsquo;ll configure embedded Jetty server by replacing it with default Tomcat server in Spring Boot web application.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

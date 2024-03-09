@@ -1,1 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Database Q&amp;A on Coding N Concepts</title><link>https://codingnconcepts.com/tags/database-qa/</link><description>Recent content in Database Q&amp;A on Coding N Concepts</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 22 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/database-qa/index.xml" rel="self" type="application/rss+xml"/><item><title>Hibernate Interview Questions</title><link>https://codingnconcepts.com/hibernate-interview-questions/</link><pubDate>Wed, 22 Jun 2022 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/hibernate-interview-questions/</guid><description>&lt;p>List of frequently asked hibernate interview questions. Keep following this post for regular updates.&lt;/p></description></item><item><title>Relational Database Interview Questions</title><link>https://codingnconcepts.com/relational-database-interview-questions/</link><pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/relational-database-interview-questions/</guid><description>&lt;p>List of frequently asked relational database interview questions. Keep following this post for regular updates.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Database Q&amp;A on Coding N Concepts</title>
+    <link>https://codingnconcepts.com/tags/database-qa/</link>
+    <description>Recent content in Database Q&amp;A on Coding N Concepts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/database-qa/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hibernate Interview Questions</title>
+      <link>https://codingnconcepts.com/hibernate-interview-questions/</link>
+      <pubDate>Wed, 22 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/hibernate-interview-questions/</guid>
+      <description>&lt;p&gt;List of frequently asked hibernate interview questions. Keep following this post for regular updates.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Relational Database Interview Questions</title>
+      <link>https://codingnconcepts.com/relational-database-interview-questions/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/relational-database-interview-questions/</guid>
+      <description>&lt;p&gt;List of frequently asked relational database interview questions. Keep following this post for regular updates.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

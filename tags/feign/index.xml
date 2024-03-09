@@ -1,1 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Feign on Coding N Concepts</title><link>https://codingnconcepts.com/tags/feign/</link><description>Recent content in Feign on Coding N Concepts</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 19 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/feign/index.xml" rel="self" type="application/rss+xml"/><item><title>ApacheHttp5 FeignClient SSL and Proxy Connection in Spring Boot</title><link>https://codingnconcepts.com/spring-boot/feign-apachehttp5-ssl-proxy-connection/</link><pubDate>Sun, 19 Sep 2021 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/feign-apachehttp5-ssl-proxy-connection/</guid><description>&lt;p>In this article, we&amp;rsquo;ll learn how to configure a FeignClient with SSL and Proxy Connection using ApacheHttp5 in your Spring Boot project.&lt;/p></description></item><item><title>Configure Feign Client in Spring Boot</title><link>https://codingnconcepts.com/spring-boot/configure-feign-rest-client/</link><pubDate>Tue, 26 May 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/spring-boot/configure-feign-rest-client/</guid><description>&lt;p>In this article, we&amp;rsquo;ll learn how to configure a &lt;em>FeignClient&lt;/em> in your Spring Boot project to consume RESTFul APIs from other services.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Feign on Coding N Concepts</title>
+    <link>https://codingnconcepts.com/tags/feign/</link>
+    <description>Recent content in Feign on Coding N Concepts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 19 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/feign/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ApacheHttp5 FeignClient SSL and Proxy Connection in Spring Boot</title>
+      <link>https://codingnconcepts.com/spring-boot/feign-apachehttp5-ssl-proxy-connection/</link>
+      <pubDate>Sun, 19 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/feign-apachehttp5-ssl-proxy-connection/</guid>
+      <description>&lt;p&gt;In this article, we&amp;rsquo;ll learn how to configure a FeignClient with SSL and Proxy Connection using ApacheHttp5 in your Spring Boot project.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configure Feign Client in Spring Boot</title>
+      <link>https://codingnconcepts.com/spring-boot/configure-feign-rest-client/</link>
+      <pubDate>Tue, 26 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/spring-boot/configure-feign-rest-client/</guid>
+      <description>&lt;p&gt;In this article, we&amp;rsquo;ll learn how to configure a &lt;em&gt;FeignClient&lt;/em&gt; in your Spring Boot project to consume RESTFul APIs from other services.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

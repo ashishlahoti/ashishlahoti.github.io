@@ -1,1 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Authors on Coding N Concepts</title><link>https://codingnconcepts.com/authors/</link><description>Recent content in Authors on Coding N Concepts</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 27 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/authors/index.xml" rel="self" type="application/rss+xml"/><item><title>Sandhya Kabra</title><link>https://codingnconcepts.com/authors/sandhya-kabra/</link><pubDate>Thu, 27 Aug 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/authors/sandhya-kabra/</guid><description/></item><item><title>Ria Gupta</title><link>https://codingnconcepts.com/authors/ria-gupta/</link><pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/authors/ria-gupta/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors on Coding N Concepts</title>
+    <link>https://codingnconcepts.com/authors/</link>
+    <description>Recent content in Authors on Coding N Concepts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 27 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/authors/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sandhya Kabra</title>
+      <link>https://codingnconcepts.com/authors/sandhya-kabra/</link>
+      <pubDate>Thu, 27 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/authors/sandhya-kabra/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ria Gupta</title>
+      <link>https://codingnconcepts.com/authors/ria-gupta/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/authors/ria-gupta/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

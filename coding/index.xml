@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Codings on Coding N Concepts</title><link>https://codingnconcepts.com/coding/</link><description>Recent content in Codings on Coding N Concepts</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 07 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/coding/index.xml" rel="self" type="application/rss+xml"/><item><title>Basics of Time Complexity</title><link>https://codingnconcepts.com/coding/time-complexity/</link><pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/coding/time-complexity/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll learn how to calculate time complexity of a function execution with examples.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Codings on Coding N Concepts</title>
+    <link>https://codingnconcepts.com/coding/</link>
+    <description>Recent content in Codings on Coding N Concepts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 07 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Basics of Time Complexity</title>
+      <link>https://codingnconcepts.com/coding/time-complexity/</link>
+      <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/coding/time-complexity/</guid>
+      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn how to calculate time complexity of a function execution with examples.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blockchain on Coding N Concepts</title><link>https://codingnconcepts.com/tags/blockchain/</link><description>Recent content in Blockchain on Coding N Concepts</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 15 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/blockchain/index.xml" rel="self" type="application/rss+xml"/><item><title>Blockchain Explained</title><link>https://codingnconcepts.com/post/blockchain-explained/</link><pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/post/blockchain-explained/</guid><description>&lt;p>Most of us think Blockchain as the technology behind Bitcoin. While this was its original purpose, blockchain is capable of so much more&amp;hellip;&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blockchain on Coding N Concepts</title>
+    <link>https://codingnconcepts.com/tags/blockchain/</link>
+    <description>Recent content in Blockchain on Coding N Concepts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 15 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/blockchain/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blockchain Explained</title>
+      <link>https://codingnconcepts.com/post/blockchain-explained/</link>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/post/blockchain-explained/</guid>
+      <description>&lt;p&gt;Most of us think Blockchain as the technology behind Bitcoin. While this was its original purpose, blockchain is capable of so much more&amp;hellip;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

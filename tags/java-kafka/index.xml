@@ -1,1 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java Kafka on Coding N Concepts</title><link>https://codingnconcepts.com/tags/java-kafka/</link><description>Recent content in Java Kafka on Coding N Concepts</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 11 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/java-kafka/index.xml" rel="self" type="application/rss+xml"/><item><title>Kafka Consumer Using Java</title><link>https://codingnconcepts.com/post/apache-kafka-consumer-using-java/</link><pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/post/apache-kafka-consumer-using-java/</guid><description>&lt;p>Implementation of Kafka Consumer using Java&lt;/p></description></item><item><title>Kafka Producer Using Java</title><link>https://codingnconcepts.com/post/apache-kafka-producer-using-java/</link><pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/post/apache-kafka-producer-using-java/</guid><description>&lt;p>Implementation of Kafka Producer using Java&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java Kafka on Coding N Concepts</title>
+    <link>https://codingnconcepts.com/tags/java-kafka/</link>
+    <description>Recent content in Java Kafka on Coding N Concepts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/java-kafka/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kafka Consumer Using Java</title>
+      <link>https://codingnconcepts.com/post/apache-kafka-consumer-using-java/</link>
+      <pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/post/apache-kafka-consumer-using-java/</guid>
+      <description>&lt;p&gt;Implementation of Kafka Consumer using Java&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Kafka Producer Using Java</title>
+      <link>https://codingnconcepts.com/post/apache-kafka-producer-using-java/</link>
+      <pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/post/apache-kafka-producer-using-java/</guid>
+      <description>&lt;p&gt;Implementation of Kafka Producer using Java&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

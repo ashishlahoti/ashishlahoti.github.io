@@ -1,1 +1,43 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Markdown on Coding N Concepts</title><link>https://codingnconcepts.com/tags/markdown/</link><description>Recent content in Markdown on Coding N Concepts</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 26 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/markdown/index.xml" rel="self" type="application/rss+xml"/><item><title>MarkDown Getting Started</title><link>https://codingnconcepts.com/markdown/markdown-getting-started/</link><pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/markdown/markdown-getting-started/</guid><description>&lt;p>In this post, we&amp;rsquo;ll understand Markdown, its working and applications with examples.&lt;/p></description></item><item><title>MarkDown Cheat Sheet</title><link>https://codingnconcepts.com/markdown/markdown-cheat-sheet/</link><pubDate>Sun, 23 May 2021 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/markdown/markdown-cheat-sheet/</guid><description>&lt;p>Markdown cheat sheet gives you a quick overview of all the Markdown syntax elements.&lt;/p></description></item><item><title>The Markdown Syntax Guide</title><link>https://codingnconcepts.com/markdown/markdown-syntax/</link><pubDate>Sun, 23 May 2021 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/markdown/markdown-syntax/</guid><description>&lt;p>In this comprehensive guide, we&amp;rsquo;ll learn Markdown syntax with examples.&lt;/p></description></item><item><title>MarkDown and HTML Comparison</title><link>https://codingnconcepts.com/markdown/markdown-vs-html/</link><pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/markdown/markdown-vs-html/</guid><description>&lt;p>Markdown is gaining more popularity compare to HTML to style and format your content in text editors, blogs, and social media. Why so?&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Markdown on Coding N Concepts</title>
+    <link>https://codingnconcepts.com/tags/markdown/</link>
+    <description>Recent content in Markdown on Coding N Concepts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 26 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MarkDown Getting Started</title>
+      <link>https://codingnconcepts.com/markdown/markdown-getting-started/</link>
+      <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/markdown/markdown-getting-started/</guid>
+      <description>&lt;p&gt;In this post, we&amp;rsquo;ll understand Markdown, its working and applications with examples.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MarkDown Cheat Sheet</title>
+      <link>https://codingnconcepts.com/markdown/markdown-cheat-sheet/</link>
+      <pubDate>Sun, 23 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/markdown/markdown-cheat-sheet/</guid>
+      <description>&lt;p&gt;Markdown cheat sheet gives you a quick overview of all the Markdown syntax elements.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Markdown Syntax Guide</title>
+      <link>https://codingnconcepts.com/markdown/markdown-syntax/</link>
+      <pubDate>Sun, 23 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/markdown/markdown-syntax/</guid>
+      <description>&lt;p&gt;In this comprehensive guide, we&amp;rsquo;ll learn Markdown syntax with examples.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MarkDown and HTML Comparison</title>
+      <link>https://codingnconcepts.com/markdown/markdown-vs-html/</link>
+      <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/markdown/markdown-vs-html/</guid>
+      <description>&lt;p&gt;Markdown is gaining more popularity compare to HTML to style and format your content in text editors, blogs, and social media. Why so?&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

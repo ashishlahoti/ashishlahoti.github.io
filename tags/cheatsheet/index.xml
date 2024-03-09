@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cheatsheet on Coding N Concepts</title><link>https://codingnconcepts.com/tags/cheatsheet/</link><description>Recent content in Cheatsheet on Coding N Concepts</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 23 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/cheatsheet/index.xml" rel="self" type="application/rss+xml"/><item><title>MarkDown Cheat Sheet</title><link>https://codingnconcepts.com/markdown/markdown-cheat-sheet/</link><pubDate>Sun, 23 May 2021 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/markdown/markdown-cheat-sheet/</guid><description>&lt;p>Markdown cheat sheet gives you a quick overview of all the Markdown syntax elements.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cheatsheet on Coding N Concepts</title>
+    <link>https://codingnconcepts.com/tags/cheatsheet/</link>
+    <description>Recent content in Cheatsheet on Coding N Concepts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/cheatsheet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MarkDown Cheat Sheet</title>
+      <link>https://codingnconcepts.com/markdown/markdown-cheat-sheet/</link>
+      <pubDate>Sun, 23 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/markdown/markdown-cheat-sheet/</guid>
+      <description>&lt;p&gt;Markdown cheat sheet gives you a quick overview of all the Markdown syntax elements.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

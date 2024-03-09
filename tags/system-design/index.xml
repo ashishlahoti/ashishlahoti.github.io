@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>System Design on Coding N Concepts</title><link>https://codingnconcepts.com/tags/system-design/</link><description>Recent content in System Design on Coding N Concepts</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 05 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/system-design/index.xml" rel="self" type="application/rss+xml"/><item><title>System Design Cheat Sheet</title><link>https://codingnconcepts.com/system-design-cheat-sheet/</link><pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/system-design-cheat-sheet/</guid><description>&lt;p>This System Design Cheat Sheet gives you a quick idea to tackle with the building blocks of any system design interview questions. Keep following this post for regular updates.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>System Design on Coding N Concepts</title>
+    <link>https://codingnconcepts.com/tags/system-design/</link>
+    <description>Recent content in System Design on Coding N Concepts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 05 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/system-design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>System Design Cheat Sheet</title>
+      <link>https://codingnconcepts.com/system-design-cheat-sheet/</link>
+      <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/system-design-cheat-sheet/</guid>
+      <description>&lt;p&gt;This System Design Cheat Sheet gives you a quick idea to tackle with the building blocks of any system design interview questions. Keep following this post for regular updates.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

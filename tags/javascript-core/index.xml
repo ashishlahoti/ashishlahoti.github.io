@@ -1,1 +1,67 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Javascript Core on Coding N Concepts</title><link>https://codingnconcepts.com/tags/javascript-core/</link><description>Recent content in Javascript Core on Coding N Concepts</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 10 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/javascript-core/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Make AJAX Calls in JavaScript</title><link>https://codingnconcepts.com/javascript/how-to-make-ajax-calls-in-javascript/</link><pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/how-to-make-ajax-calls-in-javascript/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll learn how to make AJAX calls in JavaScript.&lt;/p></description></item><item><title>Error Handling in JavaScript</title><link>https://codingnconcepts.com/javascript/error-handling-in-javascript/</link><pubDate>Tue, 14 Jul 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/error-handling-in-javascript/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll learn error handling using &lt;code>try&lt;/code>, &lt;code>catch&lt;/code>, &lt;code>finally&lt;/code> and &lt;code>throw&lt;/code> statements. We&amp;rsquo;ll also learn about built-in JavaScript error objects &lt;em>(Error, SyntaxError, ReferenceError, etc.)&lt;/em> and how to define custom errors.&lt;/p></description></item><item><title>Math Constants and Functions in JavaScript</title><link>https://codingnconcepts.com/javascript/math-constants-and-functions-in-javascript/</link><pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/math-constants-and-functions-in-javascript/</guid><description>&lt;p>In this tutorial, we&amp;rsquo;ll learn about Math Object in JavaScript, which allows us to use mathematical constants such as &lt;code>π&lt;/code>, &lt;code>e&lt;/code>, &lt;code>√2&lt;/code> and perform mathematical operations on numbers such as &lt;code>pow()&lt;/code>, &lt;code>sqrt()&lt;/code>, &lt;code>max()&lt;/code>, &lt;code>min()&lt;/code>, &lt;code>random()&lt;/code>, &lt;code>abs()&lt;/code>, &lt;code>ceil()&lt;/code>, &lt;code>floor()&lt;/code>, &lt;code>round()&lt;/code>, and &lt;code>truc()&lt;/code>.&lt;/p></description></item><item><title>Understand all about this keyword in JavaScript</title><link>https://codingnconcepts.com/javascript/this-keyword-in-javascript/</link><pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/this-keyword-in-javascript/</guid><description>&lt;p>The &lt;code>this&lt;/code> keyword in JavaScript is very important concept but at the same time very confusing to understand.&lt;/p></description></item><item><title>Understand call, bind and apply methods in JavaScript</title><link>https://codingnconcepts.com/javascript/call-vs-bind-vs-apply/</link><pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/call-vs-bind-vs-apply/</guid><description>&lt;p>This is frequently asked question in JavaScript interview. This post describes the Function prototype methods &lt;code>call()&lt;/code>, &lt;code>apply()&lt;/code> and &lt;code>bind()&lt;/code> with their syntax, usage and practical examples.&lt;/p></description></item><item><title>Lexical Scope, Closures and Currying in JavaScript</title><link>https://codingnconcepts.com/javascript/lexical-scope-closures-and-currying/</link><pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/lexical-scope-closures-and-currying/</guid><description>&lt;p>This post describes the &lt;a href="#lexical-scope">Lexical Scope&lt;/a>, &lt;a href="#closures">Closures&lt;/a> and &lt;a href="#currying">Currying Function&lt;/a> in JavaScript and their relations with examples.&lt;/p></description></item><item><title>Virtual Dom vs Shadow Dom</title><link>https://codingnconcepts.com/javascript/virtual-dom-vs-shadow-dom/</link><pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate><guid>https://codingnconcepts.com/javascript/virtual-dom-vs-shadow-dom/</guid><description>&lt;p>This post explains the DOM, Virtual DOM and Shadow DOM concepts and their differences&amp;hellip;&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascript Core on Coding N Concepts</title>
+    <link>https://codingnconcepts.com/tags/javascript-core/</link>
+    <description>Recent content in Javascript Core on Coding N Concepts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 10 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/javascript-core/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Make AJAX Calls in JavaScript</title>
+      <link>https://codingnconcepts.com/javascript/how-to-make-ajax-calls-in-javascript/</link>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/javascript/how-to-make-ajax-calls-in-javascript/</guid>
+      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn how to make AJAX calls in JavaScript.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Error Handling in JavaScript</title>
+      <link>https://codingnconcepts.com/javascript/error-handling-in-javascript/</link>
+      <pubDate>Tue, 14 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/javascript/error-handling-in-javascript/</guid>
+      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn error handling using &lt;code&gt;try&lt;/code&gt;, &lt;code&gt;catch&lt;/code&gt;, &lt;code&gt;finally&lt;/code&gt; and &lt;code&gt;throw&lt;/code&gt; statements. We&amp;rsquo;ll also learn about built-in JavaScript error objects &lt;em&gt;(Error, SyntaxError, ReferenceError, etc.)&lt;/em&gt; and how to define custom errors.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Math Constants and Functions in JavaScript</title>
+      <link>https://codingnconcepts.com/javascript/math-constants-and-functions-in-javascript/</link>
+      <pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/javascript/math-constants-and-functions-in-javascript/</guid>
+      <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn about Math Object in JavaScript, which allows us to use mathematical constants such as &lt;code&gt;π&lt;/code&gt;, &lt;code&gt;e&lt;/code&gt;, &lt;code&gt;√2&lt;/code&gt; and perform mathematical operations on numbers such as &lt;code&gt;pow()&lt;/code&gt;, &lt;code&gt;sqrt()&lt;/code&gt;, &lt;code&gt;max()&lt;/code&gt;, &lt;code&gt;min()&lt;/code&gt;, &lt;code&gt;random()&lt;/code&gt;, &lt;code&gt;abs()&lt;/code&gt;, &lt;code&gt;ceil()&lt;/code&gt;, &lt;code&gt;floor()&lt;/code&gt;, &lt;code&gt;round()&lt;/code&gt;, and &lt;code&gt;truc()&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Understand all about this keyword in JavaScript</title>
+      <link>https://codingnconcepts.com/javascript/this-keyword-in-javascript/</link>
+      <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/javascript/this-keyword-in-javascript/</guid>
+      <description>&lt;p&gt;The &lt;code&gt;this&lt;/code&gt; keyword in JavaScript is very important concept but at the same time very confusing to understand.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Understand call, bind and apply methods in JavaScript</title>
+      <link>https://codingnconcepts.com/javascript/call-vs-bind-vs-apply/</link>
+      <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/javascript/call-vs-bind-vs-apply/</guid>
+      <description>&lt;p&gt;This is frequently asked question in JavaScript interview. This post describes the Function prototype methods &lt;code&gt;call()&lt;/code&gt;, &lt;code&gt;apply()&lt;/code&gt; and &lt;code&gt;bind()&lt;/code&gt; with their syntax, usage and practical examples.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lexical Scope, Closures and Currying in JavaScript</title>
+      <link>https://codingnconcepts.com/javascript/lexical-scope-closures-and-currying/</link>
+      <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/javascript/lexical-scope-closures-and-currying/</guid>
+      <description>&lt;p&gt;This post describes the &lt;a href=&#34;#lexical-scope&#34;&gt;Lexical Scope&lt;/a&gt;, &lt;a href=&#34;#closures&#34;&gt;Closures&lt;/a&gt;  and &lt;a href=&#34;#currying&#34;&gt;Currying Function&lt;/a&gt; in JavaScript and their relations with examples.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Virtual Dom vs Shadow Dom</title>
+      <link>https://codingnconcepts.com/javascript/virtual-dom-vs-shadow-dom/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/javascript/virtual-dom-vs-shadow-dom/</guid>
+      <description>&lt;p&gt;This post explains the DOM, Virtual DOM and Shadow DOM concepts and their differences&amp;hellip;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
