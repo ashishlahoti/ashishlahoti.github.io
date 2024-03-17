@@ -1751,8 +1751,3 @@ div.notices.tip p {
 div.notices.tip p:first-child:after {
     content: 'Tip';
 }
-
-/* Quizdown */
-div.quizdown-content img {
-	max-height: 200px;
-}
