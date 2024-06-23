@@ -90,7 +90,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/java.png"],
     "url": "https://codingnconcepts.com/java/age-calculator-java/",
-    "wordCount": 326 ,
+    "wordCount": 327 ,
     "genre": ["Java Date"],
     "keywords":  null 
 }
@@ -521,15 +521,15 @@
 		<nav id="TableOfContents">
   <ul>
     <li><a href="#requirement">Requirement</a></li>
-    <li><a href="#date-utlity-method">Date Utlity Method</a></li>
+    <li><a href="#date-utility-method">Date Utility Method</a></li>
   </ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
-			<p>In this quick tutorial, we&rsquo;ll learn how to calculate the age in human readable format in Java.</p>
+			<p>In this quick tutorial, we&rsquo;ll learn how to calculate the age in human-readable format in Java.</p>
 <h2 id="requirement">Requirement</h2>
-<p>We want to create a utility method in Java which calculate the age from birth date as of today in human readable format i.e. in Years, Months, and Days.</p>
+<p>We want to create a utility method in Java that calculates the age from birth date as of today in human-readable format i.e. in Years, Months, and Days.</p>
 <p>These are few examples of expected age as of date 2024-01-01 from the given birth date:-</p>
 <table>
 <thead>
@@ -558,8 +558,8 @@
 </tbody>
 </table>
 <p>Let&rsquo;s build a utility method to achieve this.</p>
-<h2 id="date-utlity-method">Date Utlity Method</h2>
-<p>Let&rsquo;s create a utility method <code>DateUtils.calculateAge(birthDate)</code> to calculate age from birth date as of today in human readable format i.e. in Years, Months, and Days.</p>
+<h2 id="date-utility-method">Date Utility Method</h2>
+<p>Let&rsquo;s create a LocalDate Java utility method <code>DateUtils.calculateAge(birthDate)</code> to calculate age from the birth date as of today in human-readable format i.e. in Years, Months, and Days.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> com.example.util<span style="color:#f92672">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.time.LocalDate<span style="color:#f92672">;</span>
@@ -608,8 +608,8 @@
 </span></span><span style="display:flex;"><span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Age: &#34;</span> <span style="color:#f92672">+</span> calculateAge<span style="color:#f92672">(</span>birthDate<span style="color:#f92672">));</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//BirthDate: 1980-08-22
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">//Age: 43 Years, 4 Months and 13 Days
-</span></span></span></code></pre></div><p>Please note that the Age calculation will be different depending upon today&rsquo;s date.</p>
-<p>That&rsquo;s it! You can copy the code and use. Thanks for reading!</p>
+</span></span></span></code></pre></div><p>Please note that the Age calculation will be different depending on today&rsquo;s date.</p>
+<p>That&rsquo;s it! You can copy the code and use it. Thanks for reading!</p>
 		</div>
 		<footer class="post__footer">
 			
