@@ -8,6 +8,14 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 27 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>AWS Certified Solutions Architect Associate (SAA-C03) Exam Notes</title>
+      <link>https://codingnconcepts.com/aws/aws-certified-solutions-architect-associate/</link>
+      <pubDate>Sun, 27 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/aws/aws-certified-solutions-architect-associate/</guid>
+      <description>&lt;p&gt;If you are planning or preparing for AWS Certified Solutions Architect Associate (SAA-C03) exam then this article is for you to get started.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>AWS Certified Solutions Architect Associate (SAA-C03) Exam Questions</title>
       <link>https://codingnconcepts.com/aws/aws-certified-solutions-architect-associate-exam-questions/</link>
       <pubDate>Sun, 27 Apr 2025 00:00:00 +0000</pubDate>
@@ -158,14 +166,6 @@
       
       <guid>https://codingnconcepts.com/java/print-array-in-java/</guid>
       <description>&lt;p&gt;In this tutorial, we&amp;rsquo;ll learn how to print the elements of a given Array in Java.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>AWS Certified Solutions Architect Associate (SAA-C03) Exam Notes</title>
-      <link>https://codingnconcepts.com/aws/aws-certified-solutions-architect-associate/</link>
-      <pubDate>Tue, 16 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/aws/aws-certified-solutions-architect-associate/</guid>
-      <description>&lt;p&gt;If you are planning or preparing for AWS Certified Solutions Architect Associate (SAA-C02) exam then this article is for you to get started.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hashicorp Terraform Associate (003) Exam Questions</title>
