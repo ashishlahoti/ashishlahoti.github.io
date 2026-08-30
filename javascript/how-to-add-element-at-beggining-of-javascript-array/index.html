@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en-us">
+<html class="no-js" lang="en-US">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,14 +8,14 @@
 	<title>How to Add Element at Beginning of an Array in JavaScript - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
-	<meta name="description" content="Understand how to Add new Elements at the Beginning of an Array in JavaScript">
+	<meta name="description" content="Understand how to add new elements at the beginning of an Array in JavaScript with unshift(), spread and concat(), and why unshift() is slower than push() on large arrays">
 	<meta property="og:title" content="How to Add Element at Beginning of an Array in JavaScript" />
-<meta property="og:description" content="Understand how to Add new Elements at the Beginning of an Array in JavaScript" />
+<meta property="og:description" content="Understand how to add new elements at the beginning of an Array in JavaScript with unshift(), spread and concat(), and why unshift() is slower than push() on large arrays" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/javascript/how-to-add-element-at-beggining-of-javascript-array/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/js.png" />
 <meta property="article:published_time" content="2020-09-20T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-09-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-08-30T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -27,7 +27,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:image" content="https://codingnconcepts.com/img/logo/js.png">
 	<meta name="twitter:title" content="How to Add Element at Beginning of an Array in JavaScript">
-	<meta name="twitter:description" content="Understand how to Add new Elements at the Beginning of an Array in JavaScript">
+	<meta name="twitter:description" content="Understand how to add new elements at the beginning of an Array in JavaScript with unshift(), spread and concat(), and why unshift() is slower than push() on large arrays">
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -57,8 +57,8 @@
     "name": "How to Add Element at Beginning of an Array in JavaScript",
     "headline": "How to Add Element at Beginning of an Array in JavaScript",
     "alternativeHeadline": "Array.unshift(), Array.concat() and Spread Operator (...)",
-    "description": "Understand how to Add new Elements at the Beginning of an Array in JavaScript",
-    "inLanguage": "en-us",
+    "description": "Understand how to add new elements at the beginning of an Array in JavaScript with unshift(), spread and concat(), and why unshift() is slower than push() on large arrays",
+    "inLanguage": "en-US",
 	"isFamilyFriendly": true,
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -80,7 +80,7 @@
     "copyrightYear": "2020",
     "dateCreated": "2020-09-20T00:00:00.00Z",
     "datePublished": "2020-09-20T00:00:00.00Z",
-    "dateModified": "2020-09-20T00:00:00.00Z",
+    "dateModified": "2026-08-30T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -94,7 +94,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/js.png"],
     "url": "https://codingnconcepts.com/javascript/how-to-add-element-at-beggining-of-javascript-array/",
-    "wordCount": 240 ,
+    "wordCount": 694 ,
     "genre": ["Javascript Array"],
     "keywords":  null 
 }
@@ -119,7 +119,8 @@
         {
             "@type": "ListItem",
             "position": 3,
-            "name": "How to Add Element at Beginning of an Array in JavaScript"
+            "name": "How to Add Element at Beginning of an Array in JavaScript",
+            "item": "https://codingnconcepts.com/javascript/how-to-add-element-at-beggining-of-javascript-array/"
         }
     ]
 }
@@ -546,7 +547,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2020-09-20T00:00:00Z">Last Modified: Sep 20, 2020</time>
+	<time class="meta__text" datetime="2026-08-30T00:00:00Z">Last Modified: Aug 30, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -563,6 +564,8 @@
     <li><a href="#using-arrayunshift">Using Array.unshift()</a></li>
     <li><a href="#using-spread-operator-">Using Spread Operator (&hellip;)</a></li>
     <li><a href="#using-arrayconcat">Using Array.concat()</a></li>
+    <li><a href="#using-arraysplice">Using Array.splice()</a></li>
+    <li><a href="#performance-unshift-vs-push">Performance: unshift() vs. push()</a></li>
   </ul>
 </nav>
 	</div>
@@ -580,8 +583,8 @@
 </span></span><span class="line"><span class="cl"><span class="nx">fruits</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="s2">&#34;Guava&#34;</span><span class="p">,</span> <span class="s2">&#34;Papaya&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruits</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="c1">// Prints [&#34;Guava&#34;, &#34;Papaya&#34;, &#34;Orange&#34;, &#34;Apple&#34;, &#34;Banana&#34;, &#34;Mango&#34;]
-</span></span></span></code></pre></div><p>It adds the elements of your original array. Sometime you wish not to alter the original array, and assign it to a new variable instead.</p>
-<p>In Javascript, you can do this in multiple ways in a single statement.</p>
+</span></span></span></code></pre></div><p><code>unshift()</code> returns the new <code>length</code> of the array, and it <strong>mutates the original array in place</strong> — every existing element has to be shifted up by one index to make room, which matters for performance on large arrays (more on that below).</p>
+<p>Sometimes you don&rsquo;t want to alter the original array, and would rather assign the result to a new variable instead. In JavaScript, you can do this in multiple ways in a single statement.</p>
 <h2 id="using-spread-operator-">Using Spread Operator (&hellip;)</h2>
 <p>We can use spread operator <code>...</code> to make a copy of an array. It’s short syntax is very handy.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;Apple&#34;</span><span class="p">,</span> <span class="s2">&#34;Banana&#34;</span><span class="p">,</span> <span class="s2">&#34;Mango&#34;</span><span class="p">];</span>
@@ -607,7 +610,46 @@
 </span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">allFruits</span> <span class="o">=</span> <span class="nx">someoMoreFruits</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">moreFruits</span><span class="p">,</span> <span class="nx">fruits</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">allFruits</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="c1">// Prints [&#34;Guava&#34;, &#34;Papaya&#34;, &#34;Orange&#34;, &#34;Apple&#34;, &#34;Banana&#34;, &#34;Mango&#34;]
-</span></span></span></code></pre></div>
+</span></span></span></code></pre></div><p>Like the spread operator, <code>concat()</code> doesn&rsquo;t mutate any of the arrays passed to it — it always returns a brand-new array.</p>
+<h2 id="using-arraysplice">Using Array.splice()</h2>
+<p><code>splice()</code> can also insert at the front, and unlike spread/concat it mutates the original array (same as <code>unshift()</code>). Its signature is <code>splice(startIndex, deleteCount, ...itemsToInsert)</code> — passing <code>0</code> for both the start index and the delete count means &ldquo;insert here, remove nothing&rdquo;:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;Apple&#34;</span><span class="p">,</span> <span class="s2">&#34;Banana&#34;</span><span class="p">,</span> <span class="s2">&#34;Mango&#34;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">removed</span> <span class="o">=</span> <span class="nx">fruits</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&#34;Orange&#34;</span><span class="p">,</span> <span class="s2">&#34;Kiwi&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruits</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// [ &#39;Orange&#39;, &#39;Kiwi&#39;, &#39;Apple&#39;, &#39;Banana&#39;, &#39;Mango&#39; ]
+</span></span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">removed</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// [] — splice() returns the removed elements, and none were removed here
+</span></span></span></code></pre></div><p><code>splice()</code> is really a general-purpose &ldquo;remove and/or insert at any position&rdquo; tool rather than a beginning-of-array specialist, so reach for <code>unshift()</code> when you specifically mean &ldquo;add to the front&rdquo; — it says what it does.</p>
+<h2 id="performance-unshift-vs-push">Performance: unshift() vs. push()</h2>
+<p>Because <code>unshift()</code> (and <code>splice()</code> at index 0) has to re-index every existing element to open up a slot at the front, it runs in <code>𝘖(n)</code> time — the more elements already in the array, the more work each call does. <code>push()</code>, which appends to the end, doesn&rsquo;t need to move anything else and runs in amortized <code>𝘖(1)</code>.</p>
+<p>The difference is easy to see by timing 100,000 insertions of each kind into a growing array:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">N</span> <span class="o">=</span> <span class="mi">100000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">arr1</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">time</span><span class="p">(</span><span class="s1">&#39;push&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">N</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">arr1</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">timeEnd</span><span class="p">(</span><span class="s1">&#39;push&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">arr2</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">time</span><span class="p">(</span><span class="s1">&#39;unshift&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">N</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">arr2</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">timeEnd</span><span class="p">(</span><span class="s1">&#39;unshift&#39;</span><span class="p">);</span>
+</span></span></code></pre></div><pre tabindex="0"><code><div class="code_output">Output</div>
+push: 3.979ms
+unshift: 774.099ms
+</code></pre><p>(Timings measured with Node.js 22 — exact numbers vary by machine and JS engine version, but the gap between the two is consistently two to three orders of magnitude, since <code>push</code> does a constant amount of work per call while <code>unshift</code> does more work as the array grows.)</p>
+<p>If you&rsquo;re repeatedly adding elements to the front of a large array in a hot loop, this cost adds up fast. Common ways to avoid it:</p>
+<ul>
+<li><strong>Build the array in reverse and <code>push()</code>, then reverse once at the end</strong> (or <code>push()</code> in order and simply read it back-to-front) — trades <code>N</code> shifts for a single <code>𝘖(n)</code> reverse.</li>
+<li><strong>Use a different data structure</strong>, such as a linked list or a deque-like structure, if front-insertion is a frequent operation rather than a one-off.</li>
+</ul>
+<p>For a handful of insertions, or in a script that isn&rsquo;t performance-sensitive, <code>unshift()</code> is perfectly fine — reach for these alternatives only once profiling shows front-insertion is actually a bottleneck.</p>
 		</div>
 		<footer class="post__footer">
 			
@@ -668,7 +710,7 @@
       
       
       <li>
-        <a href="whatsapp://send?text=How%20to%20Add%20Element%20at%20Beginning%20of%20an%20Array%20in%20JavaScript%2c%20by%20Coding%20N%20Concepts%0aUnderstand%20how%20to%20Add%20new%20Elements%20at%20the%20Beginning%20of%20an%20Array%20in%20JavaScript%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fhow-to-add-element-at-beggining-of-javascript-array%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=How%20to%20Add%20Element%20at%20Beginning%20of%20an%20Array%20in%20JavaScript%2c%20by%20Coding%20N%20Concepts%0aUnderstand%20how%20to%20add%20new%20elements%20at%20the%20beginning%20of%20an%20Array%20in%20JavaScript%20with%20unshift%28%29%2c%20spread%20and%20concat%28%29%2c%20and%20why%20unshift%28%29%20is%20slower%20than%20push%28%29%20on%20large%20arrays%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fhow-to-add-element-at-beggining-of-javascript-array%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>WhatsApp</p>
         </a>
@@ -678,7 +720,7 @@
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - How%20to%20Add%20Element%20at%20Beginning%20of%20an%20Array%20in%20JavaScript.&amp;body=How%20to%20Add%20Element%20at%20Beginning%20of%20an%20Array%20in%20JavaScript%2c%20by%20Coding%20N%20Concepts%0aUnderstand%20how%20to%20Add%20new%20Elements%20at%20the%20Beginning%20of%20an%20Array%20in%20JavaScript%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fhow-to-add-element-at-beggining-of-javascript-array%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - How%20to%20Add%20Element%20at%20Beginning%20of%20an%20Array%20in%20JavaScript.&amp;body=How%20to%20Add%20Element%20at%20Beginning%20of%20an%20Array%20in%20JavaScript%2c%20by%20Coding%20N%20Concepts%0aUnderstand%20how%20to%20add%20new%20elements%20at%20the%20beginning%20of%20an%20Array%20in%20JavaScript%20with%20unshift%28%29%2c%20spread%20and%20concat%28%29%2c%20and%20why%20unshift%28%29%20is%20slower%20than%20push%28%29%20on%20large%20arrays%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fhow-to-add-element-at-beggining-of-javascript-array%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>

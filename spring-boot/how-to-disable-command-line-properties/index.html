@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en-us">
+<html class="no-js" lang="en-US">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,14 +8,14 @@
 	<title>How to disable command line properties in spring boot - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
-	<meta name="description" content="How to disable command line properties from spring boot application.">
+	<meta name="description" content="How to disable Spring Boot&#39;s command-line argument property source, why it exists, and when disabling it can break --spring.profiles.active and other startup flags.">
 	<meta property="og:title" content="How to disable command line properties in spring boot" />
-<meta property="og:description" content="How to disable command line properties from spring boot application." />
+<meta property="og:description" content="How to disable Spring Boot&#39;s command-line argument property source, why it exists, and when disabling it can break --spring.profiles.active and other startup flags." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/spring-boot/how-to-disable-command-line-properties/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/springboot.png" />
 <meta property="article:published_time" content="2020-03-10T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-03-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-08-30T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -27,7 +27,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:image" content="https://codingnconcepts.com/img/logo/springboot.png">
 	<meta name="twitter:title" content="How to disable command line properties in spring boot">
-	<meta name="twitter:description" content="How to disable command line properties from spring boot application.">
+	<meta name="twitter:description" content="How to disable Spring Boot&#39;s command-line argument property source, why it exists, and when disabling it can break --spring.profiles.active and other startup flags.">
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -57,8 +57,8 @@
     "name": "How to disable command line properties in spring boot",
     "headline": "How to disable command line properties in spring boot",
     "alternativeHeadline":  null ,
-    "description": "How to disable command line properties from spring boot application.",
-    "inLanguage": "en-us",
+    "description": "How to disable Spring Boot's command-line argument property source, why it exists, and when disabling it can break --spring.profiles.active and other startup flags.",
+    "inLanguage": "en-US",
 	"isFamilyFriendly": true,
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -80,7 +80,7 @@
     "copyrightYear": "2020",
     "dateCreated": "2020-03-10T00:00:00.00Z",
     "datePublished": "2020-03-10T00:00:00.00Z",
-    "dateModified": "2020-03-10T00:00:00.00Z",
+    "dateModified": "2026-08-30T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -94,7 +94,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/springboot.png"],
     "url": "https://codingnconcepts.com/spring-boot/how-to-disable-command-line-properties/",
-    "wordCount": 80 ,
+    "wordCount": 408 ,
     "genre": ["Spring Boot Basics"],
     "keywords":  null 
 }
@@ -119,7 +119,8 @@
         {
             "@type": "ListItem",
             "position": 3,
-            "name": "How to disable command line properties in spring boot"
+            "name": "How to disable command line properties in spring boot",
+            "item": "https://codingnconcepts.com/spring-boot/how-to-disable-command-line-properties/"
         }
     ]
 }
@@ -545,7 +546,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2020-03-10T00:00:00Z">Last Modified: Mar 10, 2020</time>
+	<time class="meta__text" datetime="2026-08-30T00:00:00Z">Last Modified: Aug 30, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -566,7 +567,17 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">app</span><span class="p">.</span><span class="na">run</span><span class="p">(</span><span class="n">args</span><span class="p">);</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
-</span></span></span></code></pre></div>
+</span></span></span></code></pre></div><p><code>setAddCommandLineProperties(false)</code> must be called before <code>app.run(args)</code> — it configures how <code>SpringApplication</code> builds its <code>Environment</code>, so it has no effect if set afterwards.</p>
+<h2 id="why-this-property-source-has-such-high-precedence">Why This Property Source Has Such High Precedence</h2>
+<p>Under the hood, <code>--key=value</code> arguments are parsed into a <code>PropertySource</code> named <code>commandLineArgs</code>. Spring Boot deliberately gives it one of the highest precedence levels among all externalized configuration sources — higher than <code>application.properties</code>, <code>application.yml</code>, and OS environment variables. That ordering is intentional: it lets you override any configured value at deploy or launch time (<code>--server.port=9090</code>, <code>--spring.profiles.active=prod</code>) without repackaging the jar or touching a config file baked into it.</p>
+<h2 id="why-you-might-disable-it">Why You Might Disable It</h2>
+<ul>
+<li><strong>A CLI tool with its own arguments.</strong> If your Spring Boot app is a command-line tool that takes its own positional or <code>--flag</code>-style arguments unrelated to Spring configuration, you may not want every <code>--</code> argument silently reinterpreted as a Spring property.</li>
+<li><strong>Locking down configuration in a sensitive environment.</strong> If operators launch the jar with a fixed set of arguments and you want to guarantee no one can override, say, <code>spring.datasource.url</code> from the command line, disabling this source closes that path.</li>
+<li><strong>Avoiding accidental overrides.</strong> Because command-line properties beat everything else, a stray <code>--server.port=...</code> passed by whatever process launches the app (a shell script, a supervisor, a CI runner) can silently override a value you expect to come from <code>application.yml</code>. Disabling it removes that surprise entirely.</li>
+</ul>
+<h2 id="the-gotcha">The Gotcha</h2>
+<p>This setting is all-or-nothing — it disables <em>every</em> <code>--</code> argument as a property, not selected ones. That includes properties you&rsquo;d normally rely on, like <code>--spring.profiles.active=prod</code>. If you disable command-line properties and then deploy with a script that activates profiles via <code>--spring.profiles.active</code>, that flag is now silently ignored rather than raising an error — the application just starts with the wrong (or default) profile. If you still need profile selection or other overrides at launch time after disabling this, use an environment variable (<code>SPRING_PROFILES_ACTIVE=prod</code>) or a JVM system property (<code>-Dspring.profiles.active=prod</code>) instead — both are separate property sources unaffected by this setting.</p>
 		</div>
 		<footer class="post__footer">
 			
@@ -627,7 +638,7 @@
       
       
       <li>
-        <a href="whatsapp://send?text=How%20to%20disable%20command%20line%20properties%20in%20spring%20boot%2c%20by%20Coding%20N%20Concepts%0aHow%20to%20disable%20command%20line%20properties%20from%20spring%20boot%20application.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fhow-to-disable-command-line-properties%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=How%20to%20disable%20command%20line%20properties%20in%20spring%20boot%2c%20by%20Coding%20N%20Concepts%0aHow%20to%20disable%20Spring%20Boot%27s%20command-line%20argument%20property%20source%2c%20why%20it%20exists%2c%20and%20when%20disabling%20it%20can%20break%20--spring.profiles.active%20and%20other%20startup%20flags.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fhow-to-disable-command-line-properties%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>WhatsApp</p>
         </a>
@@ -637,7 +648,7 @@
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - How%20to%20disable%20command%20line%20properties%20in%20spring%20boot.&amp;body=How%20to%20disable%20command%20line%20properties%20in%20spring%20boot%2c%20by%20Coding%20N%20Concepts%0aHow%20to%20disable%20command%20line%20properties%20from%20spring%20boot%20application.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fhow-to-disable-command-line-properties%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - How%20to%20disable%20command%20line%20properties%20in%20spring%20boot.&amp;body=How%20to%20disable%20command%20line%20properties%20in%20spring%20boot%2c%20by%20Coding%20N%20Concepts%0aHow%20to%20disable%20Spring%20Boot%27s%20command-line%20argument%20property%20source%2c%20why%20it%20exists%2c%20and%20when%20disabling%20it%20can%20break%20--spring.profiles.active%20and%20other%20startup%20flags.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fhow-to-disable-command-line-properties%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>

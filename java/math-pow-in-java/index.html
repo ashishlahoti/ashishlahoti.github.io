@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en-us">
+<html class="no-js" lang="en-US">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,14 +8,14 @@
 	<title>Java Math.pow() method Usage - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
-	<meta name="description" content="Java Math.pow() method usage and example">
+	<meta name="description" content="Java Math.pow() method usage and examples, including its NaN/Infinity edge cases and the precision limits of using it for large integer powers.">
 	<meta property="og:title" content="Java Math.pow() method Usage" />
-<meta property="og:description" content="Java Math.pow() method usage and example" />
+<meta property="og:description" content="Java Math.pow() method usage and examples, including its NaN/Infinity edge cases and the precision limits of using it for large integer powers." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/java/math-pow-in-java/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/java.png" />
 <meta property="article:published_time" content="2020-05-27T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-05-27T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-08-30T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -27,7 +27,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:image" content="https://codingnconcepts.com/img/logo/java.png">
 	<meta name="twitter:title" content="Java Math.pow() method Usage">
-	<meta name="twitter:description" content="Java Math.pow() method usage and example">
+	<meta name="twitter:description" content="Java Math.pow() method usage and examples, including its NaN/Infinity edge cases and the precision limits of using it for large integer powers.">
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -57,8 +57,8 @@
     "name": "Java Math.pow() method Usage",
     "headline": "Java Math.pow() method Usage",
     "alternativeHeadline":  null ,
-    "description": "Java Math.pow() method usage and example",
-    "inLanguage": "en-us",
+    "description": "Java Math.pow() method usage and examples, including its NaN/Infinity edge cases and the precision limits of using it for large integer powers.",
+    "inLanguage": "en-US",
 	"isFamilyFriendly": true,
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -80,7 +80,7 @@
     "copyrightYear": "2020",
     "dateCreated": "2020-05-27T00:00:00.00Z",
     "datePublished": "2020-05-27T00:00:00.00Z",
-    "dateModified": "2020-05-27T00:00:00.00Z",
+    "dateModified": "2026-08-30T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -94,7 +94,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/java.png"],
     "url": "https://codingnconcepts.com/java/math-pow-in-java/",
-    "wordCount": 161 ,
+    "wordCount": 543 ,
     "genre": ["Core Java"],
     "keywords":  null 
 }
@@ -119,7 +119,8 @@
         {
             "@type": "ListItem",
             "position": 3,
-            "name": "Java Math.pow() method Usage"
+            "name": "Java Math.pow() method Usage",
+            "item": "https://codingnconcepts.com/java/math-pow-in-java/"
         }
     ]
 }
@@ -545,7 +546,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2020-05-27T00:00:00Z">Last Modified: May 27, 2020</time>
+	<time class="meta__text" datetime="2026-08-30T00:00:00Z">Last Modified: Aug 30, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -590,6 +591,26 @@
 <li>If second argument is 1 then result will be value of first argument</li>
 <li>If second argument is NaN then result will be NaN</li>
 </ol>
+<h2 id="why-its-𝘖1-not-a-loop-or-recursion">Why It&rsquo;s 𝘖(1), Not a Loop or Recursion</h2>
+<p>Unlike a hand-written power function — such as the recursive <code>M^N</code> implementation in <a href="https://codingnconcepts.com/java/m-power-n-using-recursive/">M Power N Using Recursive function</a>, which takes <code>𝘖(n)</code> or <code>𝘖(log n)</code> depending on the algorithm — <code>Math.pow()</code> doesn&rsquo;t loop or recurse over the exponent at all. It&rsquo;s backed by a native/hardware (or <code>StrictMath</code>) floating-point implementation that computes the result directly, so a single call runs in <code>𝘖(1)</code> regardless of how large the exponent is. That&rsquo;s fine for <code>double</code> math, but it comes with the precision trade-offs below when you actually want an exact integer result.</p>
+<h2 id="more-edge-cases">More Edge Cases</h2>
+<ul>
+<li><strong>Negative base, integer exponent — works as expected.</strong> <code>Math.pow(-2, 3)</code> returns <code>-8.0</code>.</li>
+<li><strong>Negative base, fractional exponent — always <code>NaN</code>.</strong> <code>Math.pow(-8, 1.0 / 3.0)</code> returns <code>NaN</code>, even though the real cube root of <code>-8</code> is <code>-2</code>. Raising a negative number to a non-integer power isn&rsquo;t a single-valued real operation, so <code>Math.pow</code> refuses rather than guessing. If you specifically need a real cube root (including of negative numbers), use <code>Math.cbrt(-8)</code>, which correctly returns <code>-2.0</code>.</li>
+<li><strong><code>Math.pow(0, 0)</code> is <code>1.0</code></strong>, not <code>0.0</code> or <code>NaN</code> — this matches the IEEE 754 / most-languages convention for <code>0^0</code>.</li>
+<li><strong>A base of <code>1</code> does not special-case a <code>NaN</code> exponent.</strong> You might expect &ldquo;anything except unresolved-NaN cases raised to a weird power is still itself when the base is 1&rdquo;, but verified in Java, <code>Math.pow(1, Double.NaN)</code> still returns <code>NaN</code>, not <code>1.0</code>.</li>
+<li><strong>Infinite exponents saturate.</strong> <code>Math.pow(2, Double.POSITIVE_INFINITY)</code> returns <code>Infinity</code> (a base greater than 1 diverges), while <code>Math.pow(0.5, Double.POSITIVE_INFINITY)</code> returns <code>0.0</code> (a base between 0 and 1 collapses toward zero).</li>
+</ul>
+<h2 id="precision-limits-for-large-integer-powers">Precision Limits for Large Integer Powers</h2>
+<p><code>Math.pow()</code> always computes in <code>double</code>, and a <code>double</code>&rsquo;s 52-bit mantissa can only represent integers <em>exactly</em> up to 2<sup>53</sup> (<code>9007199254740992</code>). Ask it for a large integer power beyond that range and it silently rounds off the low-order digits instead of erroring:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.math.BigInteger</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kt">double</span><span class="w"> </span><span class="n">approx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="n">3</span><span class="p">,</span><span class="w"> </span><span class="n">40</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">BigInteger</span><span class="w"> </span><span class="n">exact</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BigInteger</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">3</span><span class="p">).</span><span class="na">pow</span><span class="p">(</span><span class="n">40</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">approx</span><span class="p">);</span><span class="w"> </span><span class="c1">// 1.2157665459056929E19</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">exact</span><span class="p">);</span><span class="w">  </span><span class="c1">// 12157665459056928801</span><span class="w">
+</span></span></span></code></pre></div><p>Printed in full, <code>approx</code> is <code>12157665459056929000</code> — the last few digits don&rsquo;t match the true value, <code>...928801</code>. <code>3^30</code> (<code>205891132094649</code>, 15 digits) still round-trips exactly, so the rounding only shows up once the result outgrows <code>double</code>&rsquo;s exact-integer range. For an exact large integer power, use <code>BigInteger.pow(int)</code> instead of <code>Math.pow()</code>, or the integer-only fast-exponentiation approach in <a href="https://codingnconcepts.com/java/m-power-n-using-recursive/">M Power N Using Recursive function</a>.</p>
 		</div>
 		<footer class="post__footer">
 			
@@ -650,7 +671,7 @@
       
       
       <li>
-        <a href="whatsapp://send?text=Java%20Math.pow%28%29%20method%20Usage%2c%20by%20Coding%20N%20Concepts%0aJava%20Math.pow%28%29%20method%20usage%20and%20example%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjava%2fmath-pow-in-java%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=Java%20Math.pow%28%29%20method%20Usage%2c%20by%20Coding%20N%20Concepts%0aJava%20Math.pow%28%29%20method%20usage%20and%20examples%2c%20including%20its%20NaN%2fInfinity%20edge%20cases%20and%20the%20precision%20limits%20of%20using%20it%20for%20large%20integer%20powers.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjava%2fmath-pow-in-java%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>WhatsApp</p>
         </a>
@@ -660,7 +681,7 @@
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - Java%20Math.pow%28%29%20method%20Usage.&amp;body=Java%20Math.pow%28%29%20method%20Usage%2c%20by%20Coding%20N%20Concepts%0aJava%20Math.pow%28%29%20method%20usage%20and%20example%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjava%2fmath-pow-in-java%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - Java%20Math.pow%28%29%20method%20Usage.&amp;body=Java%20Math.pow%28%29%20method%20Usage%2c%20by%20Coding%20N%20Concepts%0aJava%20Math.pow%28%29%20method%20usage%20and%20examples%2c%20including%20its%20NaN%2fInfinity%20edge%20cases%20and%20the%20precision%20limits%20of%20using%20it%20for%20large%20integer%20powers.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjava%2fmath-pow-in-java%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>

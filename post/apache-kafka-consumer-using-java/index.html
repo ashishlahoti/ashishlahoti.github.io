@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en-us">
+<html class="no-js" lang="en-US">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,13 +8,13 @@
 	<title>Kafka Consumer Using Java - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
-	<meta name="description" content="Kafka Consumer Using Java.">
+	<meta name="description" content="How to build a Kafka consumer in Java, how consumer groups and offset commits actually work, and how to shut the polling loop down cleanly.">
 	<meta property="og:title" content="Kafka Consumer Using Java" />
-<meta property="og:description" content="Kafka Consumer Using Java." />
+<meta property="og:description" content="How to build a Kafka consumer in Java, how consumer groups and offset commits actually work, and how to shut the polling loop down cleanly." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/post/apache-kafka-consumer-using-java/" />
 <meta property="article:published_time" content="2019-05-11T00:00:00+00:00" />
-<meta property="article:modified_time" content="2019-05-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-08-30T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -26,7 +26,7 @@
 	
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Kafka Consumer Using Java">
-	<meta name="twitter:description" content="Kafka Consumer Using Java.">
+	<meta name="twitter:description" content="How to build a Kafka consumer in Java, how consumer groups and offset commits actually work, and how to shut the polling loop down cleanly.">
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -56,8 +56,8 @@
     "name": "Kafka Consumer Using Java",
     "headline": "Kafka Consumer Using Java",
     "alternativeHeadline":  null ,
-    "description": "Kafka Consumer Using Java.",
-    "inLanguage": "en-us",
+    "description": "How to build a Kafka consumer in Java, how consumer groups and offset commits actually work, and how to shut the polling loop down cleanly.",
+    "inLanguage": "en-US",
 	"isFamilyFriendly": true,
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -79,7 +79,7 @@
     "copyrightYear": "2019",
     "dateCreated": "2019-05-11T00:00:00.00Z",
     "datePublished": "2019-05-11T00:00:00.00Z",
-    "dateModified": "2019-05-11T00:00:00.00Z",
+    "dateModified": "2026-08-30T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -93,7 +93,7 @@
     },
     "image": "https://codingnconcepts.com/favicon-32x32.png",
     "url": "https://codingnconcepts.com/post/apache-kafka-consumer-using-java/",
-    "wordCount": 115 ,
+    "wordCount": 716 ,
     "genre": ["Java Kafka","Java Coding"],
     "keywords":  null 
 }
@@ -118,7 +118,8 @@
         {
             "@type": "ListItem",
             "position": 3,
-            "name": "Kafka Consumer Using Java"
+            "name": "Kafka Consumer Using Java",
+            "item": "https://codingnconcepts.com/post/apache-kafka-consumer-using-java/"
         }
     ]
 }
@@ -544,7 +545,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2019-05-11T00:00:00Z">Last Modified: May 11, 2019</time>
+	<time class="meta__text" datetime="2026-08-30T00:00:00Z">Last Modified: Aug 30, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -554,7 +555,7 @@
 </div></div>
 		</header><div class="content post__content clearfix">
 			<p>Implementation of Kafka Consumer using Java</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">ppackage</span><span class="w"> </span><span class="n">com</span><span class="p">.</span><span class="na">abc</span><span class="p">;</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nn">com.abc</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.time.Duration</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Collections</span><span class="p">;</span><span class="w">
@@ -605,7 +606,33 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">  
 </span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
-</span></span></span></code></pre></div>
+</span></span></span></code></pre></div><h2 id="consumer-groups-and-groupid">Consumer Groups and group.id</h2>
+<p>Every consumer belongs to a consumer group, identified by <code>ConsumerConfig.GROUP_ID_CONFIG</code> (<code>&quot;group.id&quot;</code>). Kafka guarantees that within a group, <strong>each partition of the subscribed topic is consumed by exactly one consumer at a time</strong> — so if <code>my-first-topic</code> has 6 partitions and you start 3 consumer instances with the same <code>group.id</code>, each one is assigned roughly 2 partitions. Start a 4th instance and the group <em>rebalances</em>, redistributing partitions across all 4. Consumers with <strong>different</strong> <code>group.id</code> values are independent of each other and each gets its own full copy of every partition&rsquo;s data.</p>
+<p>This is the mechanism that gives you both horizontal scaling (add more consumer instances, up to one per partition, to process faster) and pub/sub-style fan-out (give each application its own group id).</p>
+<h2 id="autooffsetreset-only-applies-when-theres-no-committed-offset">auto.offset.reset Only Applies When There&rsquo;s No Committed Offset</h2>
+<p><code>ConsumerConfig.AUTO_OFFSET_RESET_CONFIG</code> (<code>&quot;earliest&quot;</code> here) decides where to start reading <strong>only when the broker has no valid committed offset for that consumer group and partition</strong> — either because the group has never consumed from this topic before, or because the previously committed offset has aged out (governed by the broker&rsquo;s <code>offsets.retention.minutes</code>) or fallen outside the log&rsquo;s retained range. If a committed offset already exists, the consumer resumes from it regardless of what <code>auto.offset.reset</code> says. A common mix-up: restarting a consumer with a <em>new</em> <code>group.id</code> to &ldquo;start fresh&rdquo; will trigger <code>auto.offset.reset</code> again, while restarting with the <em>same</em> <code>group.id</code> will not, even after code changes.</p>
+<h2 id="manual-commits-and-delivery-semantics">Manual Commits and Delivery Semantics</h2>
+<p>This example sets <code>ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG</code> to <code>false</code> and calls <code>consumer.commitAsync()</code> after processing each batch of records — that ordering (process, then commit) gives you <strong>at-least-once</strong> delivery: if the process crashes after handling a record but before the commit lands, the next consumer to take that partition re-reads and reprocesses it. Committing <em>before</em> processing would give you <strong>at-most-once</strong> instead (a crash mid-processing means the record is skipped for good). Kafka&rsquo;s consumer API doesn&rsquo;t give you exactly-once processing on its own — that requires either idempotent downstream writes or the transactional producer/consumer APIs.</p>
+<p><code>commitAsync()</code> doesn&rsquo;t retry on failure (retrying could commit a stale offset out of order if a later commit already succeeded), so production code typically passes it a callback to at least log failures, and calls the blocking <code>commitSync()</code> once during shutdown to make sure the final offset is durably committed before the consumer exits.</p>
+<h2 id="shutting-the-poll-loop-down-cleanly">Shutting the Poll Loop Down Cleanly</h2>
+<p><code>while(true)</code> with a blocking <code>poll()</code> call has no way to exit on its own. The standard pattern is to call <code>consumer.wakeup()</code> from another thread (typically a JVM shutdown hook) — this interrupts an in-progress or subsequent <code>poll()</code> by throwing <code>org.apache.kafka.common.errors.WakeupException</code> on the polling thread, which you catch to break the loop and close the consumer cleanly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Runtime</span><span class="p">.</span><span class="na">getRuntime</span><span class="p">().</span><span class="na">addShutdownHook</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Thread</span><span class="p">(</span><span class="n">consumer</span><span class="p">::</span><span class="n">wakeup</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">ConsumerRecords</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">records</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">consumer</span><span class="p">.</span><span class="na">poll</span><span class="p">(</span><span class="n">Duration</span><span class="p">.</span><span class="na">ofMillis</span><span class="p">(</span><span class="n">1000</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// ... process records ...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">consumer</span><span class="p">.</span><span class="na">commitAsync</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">WakeupException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// expected on shutdown, nothing to do</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">consumer</span><span class="p">.</span><span class="na">commitSync</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">consumer</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>Skipping this means the JVM can only be stopped by killing the process outright, leaving the last batch&rsquo;s offsets uncommitted and forcing a rebalance and reprocessing on the next start.</p>
+<h2 id="gotcha-maxpollintervalms">Gotcha: max.poll.interval.ms</h2>
+<p>If the code between two <code>poll()</code> calls takes too long — for example, slow downstream processing of a large batch — the broker assumes the consumer has died and kicks it out of the group, triggering a rebalance, even though the process is still running and hasn&rsquo;t crashed. <code>ConsumerConfig.MAX_POLL_INTERVAL_MS_CONFIG</code> (<code>&quot;max.poll.interval.ms&quot;</code>, default 5 minutes) controls that timeout, and <code>ConsumerConfig.MAX_POLL_RECORDS_CONFIG</code> (<code>&quot;max.poll.records&quot;</code>) controls how many records a single <code>poll()</code> returns — lowering it is often the simplest fix when per-record processing is slow enough to risk tripping the interval.</p>
 		</div>
 		<footer class="post__footer">
 			
@@ -667,7 +694,7 @@
       
       
       <li>
-        <a href="whatsapp://send?text=Kafka%20Consumer%20Using%20Java%2c%20by%20Coding%20N%20Concepts%0aKafka%20Consumer%20Using%20Java.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fpost%2fapache-kafka-consumer-using-java%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=Kafka%20Consumer%20Using%20Java%2c%20by%20Coding%20N%20Concepts%0aHow%20to%20build%20a%20Kafka%20consumer%20in%20Java%2c%20how%20consumer%20groups%20and%20offset%20commits%20actually%20work%2c%20and%20how%20to%20shut%20the%20polling%20loop%20down%20cleanly.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fpost%2fapache-kafka-consumer-using-java%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>WhatsApp</p>
         </a>
@@ -677,7 +704,7 @@
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - Kafka%20Consumer%20Using%20Java.&amp;body=Kafka%20Consumer%20Using%20Java%2c%20by%20Coding%20N%20Concepts%0aKafka%20Consumer%20Using%20Java.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fpost%2fapache-kafka-consumer-using-java%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - Kafka%20Consumer%20Using%20Java.&amp;body=Kafka%20Consumer%20Using%20Java%2c%20by%20Coding%20N%20Concepts%0aHow%20to%20build%20a%20Kafka%20consumer%20in%20Java%2c%20how%20consumer%20groups%20and%20offset%20commits%20actually%20work%2c%20and%20how%20to%20shut%20the%20polling%20loop%20down%20cleanly.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fpost%2fapache-kafka-consumer-using-java%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>

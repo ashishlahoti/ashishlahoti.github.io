@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en-us">
+<html class="no-js" lang="en-US">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,14 +8,14 @@
 	<title>Combine Two or more JSON Objects in JavaScript - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
-	<meta name="description" content="Combine Two or more JSON Objects in JavaScript using Object.assign() and Spread operator (...)">
+	<meta name="description" content="Combine two or more objects in JavaScript with Object.assign() and the spread operator, including how key collisions are resolved and why nested objects only merge one level deep.">
 	<meta property="og:title" content="Combine Two or more JSON Objects in JavaScript" />
-<meta property="og:description" content="Combine Two or more JSON Objects in JavaScript using Object.assign() and Spread operator (...)" />
+<meta property="og:description" content="Combine two or more objects in JavaScript with Object.assign() and the spread operator, including how key collisions are resolved and why nested objects only merge one level deep." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/javascript/combine-json-objects-in-javascript/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/js.png" />
 <meta property="article:published_time" content="2020-09-08T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-09-08T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-08-30T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -27,7 +27,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:image" content="https://codingnconcepts.com/img/logo/js.png">
 	<meta name="twitter:title" content="Combine Two or more JSON Objects in JavaScript">
-	<meta name="twitter:description" content="Combine Two or more JSON Objects in JavaScript using Object.assign() and Spread operator (...)">
+	<meta name="twitter:description" content="Combine two or more objects in JavaScript with Object.assign() and the spread operator, including how key collisions are resolved and why nested objects only merge one level deep.">
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -57,8 +57,8 @@
     "name": "Combine Two or more JSON Objects in JavaScript",
     "headline": "Combine Two or more JSON Objects in JavaScript",
     "alternativeHeadline":  null ,
-    "description": "Combine Two or more JSON Objects in JavaScript using Object.assign() and Spread operator (...)",
-    "inLanguage": "en-us",
+    "description": "Combine two or more objects in JavaScript with Object.assign() and the spread operator, including how key collisions are resolved and why nested objects only merge one level deep.",
+    "inLanguage": "en-US",
 	"isFamilyFriendly": true,
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -80,7 +80,7 @@
     "copyrightYear": "2020",
     "dateCreated": "2020-09-08T00:00:00.00Z",
     "datePublished": "2020-09-08T00:00:00.00Z",
-    "dateModified": "2020-09-08T00:00:00.00Z",
+    "dateModified": "2026-08-30T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -94,7 +94,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/js.png"],
     "url": "https://codingnconcepts.com/javascript/combine-json-objects-in-javascript/",
-    "wordCount": 150 ,
+    "wordCount": 740 ,
     "genre": ["Javascript Object"],
     "keywords":  null 
 }
@@ -119,7 +119,8 @@
         {
             "@type": "ListItem",
             "position": 3,
-            "name": "Combine Two or more JSON Objects in JavaScript"
+            "name": "Combine Two or more JSON Objects in JavaScript",
+            "item": "https://codingnconcepts.com/javascript/combine-json-objects-in-javascript/"
         }
     ]
 }
@@ -545,7 +546,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2020-09-08T00:00:00Z">Last Modified: Sep 08, 2020</time>
+	<time class="meta__text" datetime="2026-08-30T00:00:00Z">Last Modified: Aug 30, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -554,9 +555,10 @@
 	</span>
 </div></div>
 		</header><div class="content post__content clearfix">
-			<p>In this quick tutorial, we&rsquo;ll learn how to combine two or more JSON object into one object in JavaScript.</p>
+			<p>In this quick tutorial, we&rsquo;ll learn how to combine two or more objects into one object in JavaScript, and what happens when the objects being merged have overlapping or nested keys.</p>
+<p>A quick note on the title: these are plain <strong>JavaScript objects</strong>, not JSON (JSON is a text format — what you&rsquo;d get from <code>JSON.stringify()</code>). The techniques below work the same either way since a JS object literal and a parsed JSON payload are both just objects at runtime, but it&rsquo;s worth knowing the two aren&rsquo;t literally the same thing.</p>
 <h2 id="objectassign">Object.assign()</h2>
-<p>The <code>Object.assign</code> is the most straightforward approach to add two or more objects.</p>
+<p><code>Object.assign(target, ...sources)</code> copies the <em>own enumerable</em> properties of one or more source objects onto a target object, and returns that target.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">obj1</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">eat</span><span class="o">:</span> <span class="s1">&#39;pizza&#39;</span><span class="p">,</span> <span class="nx">drink</span><span class="o">:</span> <span class="s1">&#39;coke&#39;</span> <span class="p">};</span>
 </span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">obj2</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">drive</span><span class="o">:</span> <span class="s1">&#39;car&#39;</span><span class="p">,</span> <span class="nx">ride</span><span class="o">:</span> <span class="s1">&#39;bus&#39;</span> <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">obj3</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">pet</span><span class="o">:</span> <span class="s1">&#39;dog&#39;</span> <span class="p">}</span>
@@ -564,9 +566,17 @@
 </span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">obj4</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">({},</span> <span class="nx">obj1</span><span class="p">,</span> <span class="nx">obj2</span><span class="p">,</span> <span class="nx">obj3</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">obj4</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="c1">// {eat: &#34;pizza&#34;, drink: &#34;coke&#34;, drive: &#34;car&#34;, ride: &#34;bus&#34;, pet: &#34;dog&#34;}
+</span></span><span class="line"><span class="cl"><span class="c1">// { eat: &#39;pizza&#39;, drink: &#39;coke&#39;, drive: &#39;car&#39;, ride: &#39;bus&#39;, pet: &#39;dog&#39; }
+</span></span></span></code></pre></div><p><strong>Watch the first argument.</strong> Passing an empty object <code>{}</code> as the target keeps <code>obj1</code>, <code>obj2</code> and <code>obj3</code> untouched. If you instead write <code>Object.assign(obj1, obj2, obj3)</code>, <code>obj1</code> itself is mutated and becomes the merged object — <code>Object.assign</code> always writes into its first argument and returns that same reference, it never creates a new object for you:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">target</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">eat</span><span class="o">:</span> <span class="s1">&#39;pizza&#39;</span><span class="p">,</span> <span class="nx">drink</span><span class="o">:</span> <span class="s1">&#39;coke&#39;</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">source</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">drive</span><span class="o">:</span> <span class="s1">&#39;car&#39;</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">source</span><span class="p">);</span> <span class="c1">// no {} — target is mutated!
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span> <span class="o">===</span> <span class="nx">target</span><span class="p">);</span> <span class="c1">// true — same object
+</span></span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">target</span><span class="p">);</span>            <span class="c1">// { eat: &#39;pizza&#39;, drink: &#39;coke&#39;, drive: &#39;car&#39; }
 </span></span></span></code></pre></div><h2 id="spread-operator-">Spread Operator (&hellip;)</h2>
-<p>If you have started using ES6 then it is recommended to use spread operator (&hellip;) which is more handy to combine two or more objects.</p>
+<p>If you&rsquo;re on ES2018+ (Node.js and every modern browser), the object spread operator <code>...</code> is the more idiomatic way to combine objects — it always produces a brand-new object, so there&rsquo;s no risk of accidentally mutating one of the sources.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">obj1</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">eat</span><span class="o">:</span> <span class="s1">&#39;pizza&#39;</span><span class="p">,</span> <span class="nx">drink</span><span class="o">:</span> <span class="s1">&#39;coke&#39;</span> <span class="p">};</span>
 </span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">obj2</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">drive</span><span class="o">:</span> <span class="s1">&#39;car&#39;</span><span class="p">,</span> <span class="nx">ride</span><span class="o">:</span> <span class="s1">&#39;bus&#39;</span> <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">obj3</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">pet</span><span class="o">:</span> <span class="s1">&#39;dog&#39;</span> <span class="p">}</span>
@@ -574,8 +584,51 @@
 </span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">obj4</span> <span class="o">=</span> <span class="p">{</span> <span class="p">...</span><span class="nx">obj1</span><span class="p">,</span> <span class="p">...</span><span class="nx">obj2</span><span class="p">,</span> <span class="p">...</span><span class="nx">obj3</span> <span class="p">};</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">obj4</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="c1">// {eat: &#34;pizza&#34;, drink: &#34;coke&#34;, drive: &#34;car&#34;, ride: &#34;bus&#34;, pet: &#34;dog&#34;}
-</span></span></span></code></pre></div>
+</span></span><span class="line"><span class="cl"><span class="c1">// { eat: &#39;pizza&#39;, drink: &#39;coke&#39;, drive: &#39;car&#39;, ride: &#39;bus&#39;, pet: &#39;dog&#39; }
+</span></span></span></code></pre></div><h2 id="key-collisions-last-one-wins">Key Collisions: Last One Wins</h2>
+<p>Both approaches resolve collisions the same way: when two objects share a key, <strong>whichever object is applied last overwrites the earlier value</strong>. This is why order matters and is commonly used for setting defaults with overrides:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">defaults</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">theme</span><span class="o">:</span> <span class="s1">&#39;light&#39;</span><span class="p">,</span> <span class="nx">fontSize</span><span class="o">:</span> <span class="mi">12</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">overrides</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">fontSize</span><span class="o">:</span> <span class="mi">16</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">({</span> <span class="p">...</span><span class="nx">defaults</span><span class="p">,</span> <span class="p">...</span><span class="nx">overrides</span> <span class="p">});</span> <span class="c1">// { theme: &#39;light&#39;, fontSize: 16 }
+</span></span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">({</span> <span class="p">...</span><span class="nx">overrides</span><span class="p">,</span> <span class="p">...</span><span class="nx">defaults</span> <span class="p">});</span> <span class="c1">// { fontSize: 12, theme: &#39;light&#39; }
+</span></span></span></code></pre></div><p>Put your defaults first and user-supplied overrides last, and you get an override-friendly config object in one line.</p>
+<h2 id="gotcha-nested-objects-only-merge-one-level-deep">Gotcha: Nested Objects Only Merge One Level Deep</h2>
+<p>Both <code>Object.assign()</code> and the spread operator perform a <strong>shallow merge</strong> — only top-level keys are combined. If a key holds an object in both sources, the later object&rsquo;s value <em>replaces</em> the earlier one entirely rather than merging with it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">user</span>  <span class="o">=</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="nx">address</span><span class="o">:</span> <span class="p">{</span> <span class="nx">city</span><span class="o">:</span> <span class="s1">&#39;Boston&#39;</span><span class="p">,</span> <span class="nx">zip</span><span class="o">:</span> <span class="s1">&#39;02101&#39;</span> <span class="p">}</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">patch</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">address</span><span class="o">:</span> <span class="p">{</span> <span class="nx">zip</span><span class="o">:</span> <span class="s1">&#39;10001&#39;</span> <span class="p">}</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">merged</span> <span class="o">=</span> <span class="p">{</span> <span class="p">...</span><span class="nx">user</span><span class="p">,</span> <span class="p">...</span><span class="nx">patch</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">merged</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// {&#34;name&#34;:&#34;Alice&#34;,&#34;address&#34;:{&#34;zip&#34;:&#34;10001&#34;}}
+</span></span></span><span class="line"><span class="cl"><span class="c1">// city is gone — the whole address object was overwritten, not merged
+</span></span></span></code></pre></div><p>There&rsquo;s a second trap hiding here: because the merge is shallow, <code>merged.address</code> is not a copy — it&rsquo;s the <em>same reference</em> as <code>patch.address</code>. Mutating one mutates the other:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">merged</span><span class="p">.</span><span class="nx">address</span> <span class="o">===</span> <span class="nx">patch</span><span class="p">.</span><span class="nx">address</span><span class="p">);</span> <span class="c1">// true
+</span></span></span><span class="line"><span class="cl"><span class="nx">merged</span><span class="p">.</span><span class="nx">address</span><span class="p">.</span><span class="nx">city</span> <span class="o">=</span> <span class="s1">&#39;NYC&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">patch</span><span class="p">.</span><span class="nx">address</span><span class="p">.</span><span class="nx">city</span><span class="p">);</span> <span class="c1">// &#39;NYC&#39; — patch.address changed too!
+</span></span></span></code></pre></div><h2 id="deep-merging">Deep Merging</h2>
+<p>If you need nested objects to merge recursively instead of being replaced, you have to walk the structure yourself (or use a library). A minimal recursive version:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">deepMerge</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">source</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">{</span> <span class="p">...</span><span class="nx">target</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">key</span> <span class="k">of</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">source</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">source</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="k">instanceof</span> <span class="nb">Object</span> <span class="o">&amp;&amp;</span>
+</span></span><span class="line"><span class="cl">      <span class="o">!</span><span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">source</span><span class="p">[</span><span class="nx">key</span><span class="p">])</span> <span class="o">&amp;&amp;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">target</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="k">instanceof</span> <span class="nb">Object</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">result</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="nx">deepMerge</span><span class="p">(</span><span class="nx">target</span><span class="p">[</span><span class="nx">key</span><span class="p">],</span> <span class="nx">source</span><span class="p">[</span><span class="nx">key</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">result</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="nx">source</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">deepMerge</span><span class="p">(</span><span class="nx">user</span><span class="p">,</span> <span class="nx">patch</span><span class="p">)));</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// {&#34;name&#34;:&#34;Alice&#34;,&#34;address&#34;:{&#34;city&#34;:&#34;Boston&#34;,&#34;zip&#34;:&#34;10001&#34;}}
+</span></span></span></code></pre></div><p>For anything beyond a quick script, reach for a well-tested implementation instead of hand-rolling this — Lodash&rsquo;s <code>merge()</code> handles arrays, <code>null</code>/<code>undefined</code> sources, and circular references correctly, edge cases that are easy to get wrong in a homemade version.</p>
+<p>You may also see <code>JSON.parse(JSON.stringify(obj))</code> used to deep-clone an object before merging it. It works for plain data, but silently drops functions, <code>undefined</code> values, and <code>Date</code>/<code>Map</code>/<code>Set</code> instances (dates become strings), so it&rsquo;s not a safe general-purpose substitute for a real deep merge.</p>
 		</div>
 		<footer class="post__footer">
 			
@@ -636,7 +689,7 @@
       
       
       <li>
-        <a href="whatsapp://send?text=Combine%20Two%20or%20more%20JSON%20Objects%20in%20JavaScript%2c%20by%20Coding%20N%20Concepts%0aCombine%20Two%20or%20more%20JSON%20Objects%20in%20JavaScript%20using%20Object.assign%28%29%20and%20Spread%20operator%20%28...%29%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fcombine-json-objects-in-javascript%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=Combine%20Two%20or%20more%20JSON%20Objects%20in%20JavaScript%2c%20by%20Coding%20N%20Concepts%0aCombine%20two%20or%20more%20objects%20in%20JavaScript%20with%20Object.assign%28%29%20and%20the%20spread%20operator%2c%20including%20how%20key%20collisions%20are%20resolved%20and%20why%20nested%20objects%20only%20merge%20one%20level%20deep.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fcombine-json-objects-in-javascript%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>WhatsApp</p>
         </a>
@@ -646,7 +699,7 @@
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - Combine%20Two%20or%20more%20JSON%20Objects%20in%20JavaScript.&amp;body=Combine%20Two%20or%20more%20JSON%20Objects%20in%20JavaScript%2c%20by%20Coding%20N%20Concepts%0aCombine%20Two%20or%20more%20JSON%20Objects%20in%20JavaScript%20using%20Object.assign%28%29%20and%20Spread%20operator%20%28...%29%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fcombine-json-objects-in-javascript%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - Combine%20Two%20or%20more%20JSON%20Objects%20in%20JavaScript.&amp;body=Combine%20Two%20or%20more%20JSON%20Objects%20in%20JavaScript%2c%20by%20Coding%20N%20Concepts%0aCombine%20two%20or%20more%20objects%20in%20JavaScript%20with%20Object.assign%28%29%20and%20the%20spread%20operator%2c%20including%20how%20key%20collisions%20are%20resolved%20and%20why%20nested%20objects%20only%20merge%20one%20level%20deep.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fcombine-json-objects-in-javascript%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>

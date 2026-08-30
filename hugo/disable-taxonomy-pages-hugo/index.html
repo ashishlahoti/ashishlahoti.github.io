@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en-us">
+<html class="no-js" lang="en-US">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,14 +8,14 @@
 	<title>Disable Categories and Tags Pages in Hugo Website - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
-	<meta name="description" content="Understand how to disable taxonomy and term pages (such as Categories and Tags) in Hugo website">
+	<meta name="description" content="Learn how to disable taxonomy and term pages (Categories and Tags) in Hugo using disableKinds, why you&#39;d want to for a small site&#39;s SEO, and the navigation tradeoffs to weigh first.">
 	<meta property="og:title" content="Disable Categories and Tags Pages in Hugo Website" />
-<meta property="og:description" content="Understand how to disable taxonomy and term pages (such as Categories and Tags) in Hugo website" />
+<meta property="og:description" content="Learn how to disable taxonomy and term pages (Categories and Tags) in Hugo using disableKinds, why you&#39;d want to for a small site&#39;s SEO, and the navigation tradeoffs to weigh first." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/hugo/disable-taxonomy-pages-hugo/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/gohugo.png" />
 <meta property="article:published_time" content="2020-07-18T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-07-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-08-30T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -26,7 +26,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:image" content="https://codingnconcepts.com/img/logo/gohugo.png">
 	<meta name="twitter:title" content="Disable Categories and Tags Pages in Hugo Website">
-	<meta name="twitter:description" content="Understand how to disable taxonomy and term pages (such as Categories and Tags) in Hugo website">
+	<meta name="twitter:description" content="Learn how to disable taxonomy and term pages (Categories and Tags) in Hugo using disableKinds, why you&#39;d want to for a small site&#39;s SEO, and the navigation tradeoffs to weigh first.">
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -56,8 +56,8 @@
     "name": "Disable Categories and Tags Pages in Hugo Website",
     "headline": "Disable Categories and Tags Pages in Hugo Website",
     "alternativeHeadline": "Disable Taxonomy and Term Pages in Hugo Website",
-    "description": "Understand how to disable taxonomy and term pages (such as Categories and Tags) in Hugo website",
-    "inLanguage": "en-us",
+    "description": "Learn how to disable taxonomy and term pages (Categories and Tags) in Hugo using disableKinds, why you'd want to for a small site's SEO, and the navigation tradeoffs to weigh first.",
+    "inLanguage": "en-US",
 	"isFamilyFriendly": true,
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -79,7 +79,7 @@
     "copyrightYear": "2020",
     "dateCreated": "2020-07-18T00:00:00.00Z",
     "datePublished": "2020-07-18T00:00:00.00Z",
-    "dateModified": "2020-07-18T00:00:00.00Z",
+    "dateModified": "2026-08-30T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -93,7 +93,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/gohugo.png"],
     "url": "https://codingnconcepts.com/hugo/disable-taxonomy-pages-hugo/",
-    "wordCount": 221 ,
+    "wordCount": 616 ,
     "genre":  null ,
     "keywords":  null 
 }
@@ -118,7 +118,8 @@
         {
             "@type": "ListItem",
             "position": 3,
-            "name": "Disable Categories and Tags Pages in Hugo Website"
+            "name": "Disable Categories and Tags Pages in Hugo Website",
+            "item": "https://codingnconcepts.com/hugo/disable-taxonomy-pages-hugo/"
         }
     ]
 }
@@ -545,7 +546,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2020-07-18T00:00:00Z">Last Modified: Jul 18, 2020</time>
+	<time class="meta__text" datetime="2026-08-30T00:00:00Z">Last Modified: Aug 30, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -560,12 +561,15 @@
 		<nav id="TableOfContents">
   <ul>
     <li><a href="#overview">Overview</a></li>
+    <li><a href="#why-disable-taxonomy-pages">Why Disable Taxonomy Pages?</a></li>
     <li><a href="#disable-taxonomy-and-term-pages">Disable Taxonomy and Term Pages</a>
       <ul>
         <li><a href="#disable-using-configtoml">Disable using config.toml</a></li>
         <li><a href="#disable-using-command-line">Disable using command-line</a></li>
       </ul>
     </li>
+    <li><a href="#taxonomy-vs-term-two-different-kinds">Taxonomy vs. Term: Two Different Kinds</a></li>
+    <li><a href="#tradeoffs-to-consider">Tradeoffs to Consider</a></li>
   </ul>
 </nav>
 	</div>
@@ -579,29 +583,42 @@
 <li><strong>Term Pages</strong> for Category e.g. <code>/categories/technology</code> and Tag e.g. <code>/tags/trending</code> which list out all the posts belongs to that category or tag.</li>
 </ul>
 <p>You can disable the default behavior of generating taxonomy and term pages.</p>
+<h2 id="why-disable-taxonomy-pages">Why Disable Taxonomy Pages?</h2>
+<p>Categories and tags are genuinely useful once a site has enough posts that readers need a way to browse by topic. On a small or early-stage site, though, a taxonomy page listing two or three posts adds little value to a visitor and can actively hurt SEO: search engines see a <code>/tags/foo</code> page whose entire content is a couple of excerpts already indexed on their own post pages, which reads as thin or duplicate content. Spread across dozens of one-off tags, that&rsquo;s a lot of low-value pages competing with your real content for crawl budget and diluting the site&rsquo;s overall content-quality signal. If you&rsquo;re not deliberately building out topic hubs, turning taxonomy generation off keeps the site&rsquo;s index limited to pages that actually earn their place.</p>
 <h2 id="disable-taxonomy-and-term-pages">Disable Taxonomy and Term Pages</h2>
-<p>Now you know about taxonomy and term pages. There are two ways to disable them:<br>
-<br /></p>
+<p>Now you know about taxonomy and term pages. There are two ways to disable them.</p>
 <h3 id="disable-using-configtoml">Disable using config.toml</h3>
 <p>This approach is recommended, when you want to disable <em>taxonomy</em> and <em>term</em> pages permanently everytime you build your website.</p>
-<p>Add the &ldquo;taxonomy&rdquo; and &ldquo;term&rdquo; values to the <code>disableKinds</code> configuration variable in your configuration file.</p>
+<p>Add the <code>&quot;taxonomy&quot;</code> and <code>&quot;term&quot;</code> values to the <code>disableKinds</code> configuration variable in your configuration file.</p>
 <h6 id="configtoml">config.toml</h6>
-<pre tabindex="0"><code>title = &#34;Hugo example site&#34;
-baseurl = &#34;https://www.example.com&#34;
-
-<mark>disableKinds = [&#34;taxonomy&#34;, &#34;term&#34;]</mark>
-
-[taxonomies]
-    category = &#34;categories&#34;
-    tag = &#34;tags&#34;
-</code></pre><br />
-<h3 id="disable-using-command-line">Disable using command-line</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;Hugo example site&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">baseurl</span> <span class="p">=</span> <span class="s2">&#34;https://www.example.com&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">disableKinds</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;taxonomy&#34;</span><span class="p">,</span> <span class="s2">&#34;term&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">taxonomies</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">category</span> <span class="p">=</span> <span class="s2">&#34;categories&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">tag</span> <span class="p">=</span> <span class="s2">&#34;tags&#34;</span>
+</span></span></code></pre></div><h3 id="disable-using-command-line">Disable using command-line</h3>
 <p>This approach is recommended, when you want to disable <em>taxonomy</em> and <em>term</em> for a specific build of your website.</p>
 <p>Execute following command from terminal to disable them:</p>
-<pre tabindex="0"><code>hugo --disableKinds=taxonomy,term
-</code></pre><p>To serve website in the localhost environment, execute following command:</p>
-<pre tabindex="0"><code>hugo server --disableKinds=taxonomy,term
-</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo --disableKinds<span class="o">=</span>taxonomy,term
+</span></span></code></pre></div><p>To serve website in the localhost environment, execute following command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo server --disableKinds<span class="o">=</span>taxonomy,term
+</span></span></code></pre></div><h2 id="taxonomy-vs-term-two-different-kinds">Taxonomy vs. Term: Two Different Kinds</h2>
+<p><code>taxonomy</code> and <code>term</code> aren&rsquo;t interchangeable, and mixing them up is the most common reason people find their tags &ldquo;half disabled.&rdquo; Building a test site and toggling each value independently confirms the distinction Hugo&rsquo;s page kinds are actually built on:</p>
+<ul>
+<li><strong><code>taxonomy</code></strong> controls the <em>list-of-all-terms</em> page — <code>/tags/</code> and <code>/categories/</code>, the index that lists every tag or category on the site.</li>
+<li><strong><code>term</code></strong> controls each <em>individual term</em> page — <code>/tags/trending/</code>, the page that lists every post tagged <code>trending</code>.</li>
+</ul>
+<p>Disabling only <code>&quot;taxonomy&quot;</code> removes <code>/tags/</code> and <code>/categories/</code> but every individual <code>/tags/trending/</code>-style page still builds. You need <strong>both</strong> values in <code>disableKinds</code> to remove taxonomy pages entirely — which is exactly why the config example above lists them together.</p>
+<h2 id="tradeoffs-to-consider">Tradeoffs to Consider</h2>
+<p>Before disabling taxonomies site-wide, weigh a few consequences:</p>
+<ul>
+<li><strong>You lose tag/category browsing.</strong> Readers can no longer click a tag to see related posts — if your theme&rsquo;s menu or sidebar links to <code>/tags/...</code> or <code>/categories/...</code> URLs (a &ldquo;Recent Posts by Category&rdquo; widget, for example), those links now 404 once the pages stop building.</li>
+<li><strong>Existing inbound links break.</strong> If a tag or category page has already been indexed or linked to from elsewhere, disabling it turns that URL into a dead link with no automatic redirect — plan a redirect if the page has real backlinks or search traffic.</li>
+<li><strong>It&rsquo;s all-or-nothing per kind.</strong> <code>disableKinds</code> turns taxonomy and term pages off site-wide; it can&rsquo;t selectively keep <code>/tags/</code> while dropping only a handful of low-value tags. If you only want to prune a few, removing the tag from the post&rsquo;s front matter is the more targeted fix.</li>
+</ul>
 		</div>
 	</article>
 </main>
@@ -653,7 +670,7 @@ baseurl = &#34;https://www.example.com&#34;
       
       
       <li>
-        <a href="whatsapp://send?text=Disable%20Categories%20and%20Tags%20Pages%20in%20Hugo%20Website%2c%20by%20Coding%20N%20Concepts%0aUnderstand%20how%20to%20disable%20taxonomy%20and%20term%20pages%20%28such%20as%20Categories%20and%20Tags%29%20in%20Hugo%20website%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fhugo%2fdisable-taxonomy-pages-hugo%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=Disable%20Categories%20and%20Tags%20Pages%20in%20Hugo%20Website%2c%20by%20Coding%20N%20Concepts%0aLearn%20how%20to%20disable%20taxonomy%20and%20term%20pages%20%28Categories%20and%20Tags%29%20in%20Hugo%20using%20disableKinds%2c%20why%20you%27d%20want%20to%20for%20a%20small%20site%27s%20SEO%2c%20and%20the%20navigation%20tradeoffs%20to%20weigh%20first.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fhugo%2fdisable-taxonomy-pages-hugo%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>WhatsApp</p>
         </a>
@@ -663,7 +680,7 @@ baseurl = &#34;https://www.example.com&#34;
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - Disable%20Categories%20and%20Tags%20Pages%20in%20Hugo%20Website.&amp;body=Disable%20Categories%20and%20Tags%20Pages%20in%20Hugo%20Website%2c%20by%20Coding%20N%20Concepts%0aUnderstand%20how%20to%20disable%20taxonomy%20and%20term%20pages%20%28such%20as%20Categories%20and%20Tags%29%20in%20Hugo%20website%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fhugo%2fdisable-taxonomy-pages-hugo%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - Disable%20Categories%20and%20Tags%20Pages%20in%20Hugo%20Website.&amp;body=Disable%20Categories%20and%20Tags%20Pages%20in%20Hugo%20Website%2c%20by%20Coding%20N%20Concepts%0aLearn%20how%20to%20disable%20taxonomy%20and%20term%20pages%20%28Categories%20and%20Tags%29%20in%20Hugo%20using%20disableKinds%2c%20why%20you%27d%20want%20to%20for%20a%20small%20site%27s%20SEO%2c%20and%20the%20navigation%20tradeoffs%20to%20weigh%20first.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fhugo%2fdisable-taxonomy-pages-hugo%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>

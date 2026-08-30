@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en-us">
+<html class="no-js" lang="en-US">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,14 +8,14 @@
 	<title>M power N Using Recursive function - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
-	<meta name="description" content="M power N Using Recursive function in Java">
+	<meta name="description" content="Learn how to calculate M power N (M^N) using a recursive function in Java, including a common edge-case bug to avoid and an optimized O(log n) fast exponentiation approach.">
 	<meta property="og:title" content="M power N Using Recursive function" />
-<meta property="og:description" content="M power N Using Recursive function in Java" />
+<meta property="og:description" content="Learn how to calculate M power N (M^N) using a recursive function in Java, including a common edge-case bug to avoid and an optimized O(log n) fast exponentiation approach." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/java/m-power-n-using-recursive/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/java.png" />
 <meta property="article:published_time" content="2020-03-22T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-03-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-08-30T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -28,7 +28,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:image" content="https://codingnconcepts.com/img/logo/java.png">
 	<meta name="twitter:title" content="M power N Using Recursive function">
-	<meta name="twitter:description" content="M power N Using Recursive function in Java">
+	<meta name="twitter:description" content="Learn how to calculate M power N (M^N) using a recursive function in Java, including a common edge-case bug to avoid and an optimized O(log n) fast exponentiation approach.">
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -58,8 +58,8 @@
     "name": "M power N Using Recursive function",
     "headline": "M power N Using Recursive function",
     "alternativeHeadline":  null ,
-    "description": "M power N Using Recursive function in Java",
-    "inLanguage": "en-us",
+    "description": "Learn how to calculate M power N (M^N) using a recursive function in Java, including a common edge-case bug to avoid and an optimized O(log n) fast exponentiation approach.",
+    "inLanguage": "en-US",
 	"isFamilyFriendly": true,
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -81,7 +81,7 @@
     "copyrightYear": "2020",
     "dateCreated": "2020-03-22T00:00:00.00Z",
     "datePublished": "2020-03-22T00:00:00.00Z",
-    "dateModified": "2020-03-22T00:00:00.00Z",
+    "dateModified": "2026-08-30T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -95,7 +95,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/java.png"],
     "url": "https://codingnconcepts.com/java/m-power-n-using-recursive/",
-    "wordCount": 45 ,
+    "wordCount": 449 ,
     "genre": ["Java Algorithm","Recursive"],
     "keywords":  null 
 }
@@ -120,7 +120,8 @@
         {
             "@type": "ListItem",
             "position": 3,
-            "name": "M power N Using Recursive function"
+            "name": "M power N Using Recursive function",
+            "item": "https://codingnconcepts.com/java/m-power-n-using-recursive/"
         }
     ]
 }
@@ -546,7 +547,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2020-03-22T00:00:00Z">Last Modified: Mar 22, 2020</time>
+	<time class="meta__text" datetime="2026-08-30T00:00:00Z">Last Modified: Aug 30, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -555,19 +556,61 @@
 	</span>
 </div></div>
 		</header><div class="content post__content clearfix">
-			<p>This is one of the example of using recursive function in Java to find M power N</p>
+			<p>This is one of the example of using recursive function in Java to find M power N (M<sup>N</sup>).</p>
+<h2 id="recursive-approach">Recursive Approach</h2>
+<p>The recurrence relation is straightforward: <code>M^N = M * M^(N-1)</code>, with a base case that stops the recursion once N reaches 0.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MPowerN</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">	
-</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">pow</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">){</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="o">&gt;</span><span class="n">1</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">m</span><span class="o">*</span><span class="n">pow</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="o">-</span><span class="n">1</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">m</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">pow</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="k">return</span><span class="w"> </span><span class="n">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">1</span><span class="p">);</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">	
+</span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Test</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">test</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">assertEquals</span><span class="p">(</span><span class="n">pow</span><span class="p">(</span><span class="n">2</span><span class="p">,</span><span class="n">3</span><span class="p">),</span><span class="w"> </span><span class="n">8</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">assertEquals</span><span class="p">(</span><span class="n">pow</span><span class="p">(</span><span class="n">2</span><span class="p">,</span><span class="w"> </span><span class="n">3</span><span class="p">),</span><span class="w"> </span><span class="n">8</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">assertEquals</span><span class="p">(</span><span class="n">pow</span><span class="p">(</span><span class="n">5</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">),</span><span class="w"> </span><span class="n">1</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">assertEquals</span><span class="p">(</span><span class="n">pow</span><span class="p">(</span><span class="n">7</span><span class="p">,</span><span class="w"> </span><span class="n">1</span><span class="p">),</span><span class="w"> </span><span class="n">7</span><span class="p">);</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
-</span></span></span></code></pre></div>
+</span></span></span></code></pre></div><p><strong>Watch the base case.</strong> It&rsquo;s tempting to write the base case as <code>n &gt; 1</code> (returning <code>m</code> once <code>n</code> reaches 1) instead of <code>n == 0</code> (returning <code>1</code>). That version happens to work for <code>n &gt;= 1</code>, but it silently returns the wrong answer for <code>pow(m, 0)</code> — mathematically any number raised to the power of 0 is <code>1</code>, not <code>m</code>. Always trace the base case against <code>n = 0</code> before trusting a power function.</p>
+<p>Tracing <code>pow(2, 3)</code> shows how the calls unwind:</p>
+<pre tabindex="0"><code>pow(2, 3) = 2 * pow(2, 2)
+          = 2 * (2 * pow(2, 1))
+          = 2 * (2 * (2 * pow(2, 0)))
+          = 2 * (2 * (2 * 1))
+          = 8
+</code></pre><p>Each call does one multiplication and recurses once, so this makes <code>N</code> recursive calls — time complexity is <code>𝘖(n)</code>, and space complexity is also <code>𝘖(n)</code> since each pending call stays on the call stack until the base case returns.</p>
+<h2 id="optimized-recursive-approach-fast-exponentiation">Optimized Recursive Approach (Fast Exponentiation)</h2>
+<p>We can cut the number of recursive calls from <code>N</code> down to <code>log₂N</code> by halving the exponent at every step instead of decrementing it by 1. This relies on two identities:</p>
+<ul>
+<li>If <code>N</code> is even: <code>M^N = (M^(N/2))^2</code></li>
+<li>If <code>N</code> is odd: <code>M^N = M * (M^(N/2))^2</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MPowerNFast</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="nf">pow</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="k">return</span><span class="w"> </span><span class="n">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="kt">long</span><span class="w"> </span><span class="n">half</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">2</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			</span><span class="k">return</span><span class="w"> </span><span class="n">half</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">half</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">half</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">half</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Test</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">testFastPow</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">assertEquals</span><span class="p">(</span><span class="n">pow</span><span class="p">(</span><span class="n">2</span><span class="p">,</span><span class="w"> </span><span class="n">10</span><span class="p">),</span><span class="w"> </span><span class="n">1024</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">assertEquals</span><span class="p">(</span><span class="n">pow</span><span class="p">(</span><span class="n">3</span><span class="p">,</span><span class="w"> </span><span class="n">5</span><span class="p">),</span><span class="w"> </span><span class="n">243</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">assertEquals</span><span class="p">(</span><span class="n">pow</span><span class="p">(</span><span class="n">5</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">),</span><span class="w"> </span><span class="n">1</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>This is the same technique used internally by <code>Math.pow()</code>-style implementations and is a common interview follow-up once you&rsquo;ve shown the naive <code>𝘖(n)</code> version — halving the exponent brings the time complexity down to <code>𝘖(log n)</code>.</p>
+<p>A couple of things to keep in mind if you extend this further: the result type is <code>long</code> here rather than <code>int</code>, since repeated squaring grows the result much faster than the naive version and overflows sooner; and this implementation only handles non-negative exponents — supporting negative <code>N</code> would mean returning <code>1.0 / pow(m, -n)</code> as a <code>double</code> instead.</p>
 		</div>
 		<footer class="post__footer">
 			
@@ -629,7 +672,7 @@
       
       
       <li>
-        <a href="whatsapp://send?text=M%20power%20N%20Using%20Recursive%20function%2c%20by%20Coding%20N%20Concepts%0aM%20power%20N%20Using%20Recursive%20function%20in%20Java%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjava%2fm-power-n-using-recursive%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=M%20power%20N%20Using%20Recursive%20function%2c%20by%20Coding%20N%20Concepts%0aLearn%20how%20to%20calculate%20M%20power%20N%20%28M%5eN%29%20using%20a%20recursive%20function%20in%20Java%2c%20including%20a%20common%20edge-case%20bug%20to%20avoid%20and%20an%20optimized%20O%28log%20n%29%20fast%20exponentiation%20approach.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjava%2fm-power-n-using-recursive%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>WhatsApp</p>
         </a>
@@ -639,7 +682,7 @@
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - M%20power%20N%20Using%20Recursive%20function.&amp;body=M%20power%20N%20Using%20Recursive%20function%2c%20by%20Coding%20N%20Concepts%0aM%20power%20N%20Using%20Recursive%20function%20in%20Java%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjava%2fm-power-n-using-recursive%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - M%20power%20N%20Using%20Recursive%20function.&amp;body=M%20power%20N%20Using%20Recursive%20function%2c%20by%20Coding%20N%20Concepts%0aLearn%20how%20to%20calculate%20M%20power%20N%20%28M%5eN%29%20using%20a%20recursive%20function%20in%20Java%2c%20including%20a%20common%20edge-case%20bug%20to%20avoid%20and%20an%20optimized%20O%28log%20n%29%20fast%20exponentiation%20approach.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjava%2fm-power-n-using-recursive%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>

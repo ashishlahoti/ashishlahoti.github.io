@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en-us">
+<html class="no-js" lang="en-US">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,14 +8,14 @@
 	<title>How to Loop through an Array in JavaScript - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
-	<meta name="description" content="Understand how to loop through elements of an Array using different ways in JavaScript">
+	<meta name="description" content="Understand how to loop through elements of an Array using different ways in JavaScript, when for-in is a trap, and how map() differs from forEach()">
 	<meta property="og:title" content="How to Loop through an Array in JavaScript" />
-<meta property="og:description" content="Understand how to loop through elements of an Array using different ways in JavaScript" />
+<meta property="og:description" content="Understand how to loop through elements of an Array using different ways in JavaScript, when for-in is a trap, and how map() differs from forEach()" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/javascript/how-to-loop-through-array-in-javascript/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/js.png" />
 <meta property="article:published_time" content="2021-01-24T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-01-24T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-08-30T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -27,7 +27,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:image" content="https://codingnconcepts.com/img/logo/js.png">
 	<meta name="twitter:title" content="How to Loop through an Array in JavaScript">
-	<meta name="twitter:description" content="Understand how to loop through elements of an Array using different ways in JavaScript">
+	<meta name="twitter:description" content="Understand how to loop through elements of an Array using different ways in JavaScript, when for-in is a trap, and how map() differs from forEach()">
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -57,8 +57,8 @@
     "name": "How to Loop through an Array in JavaScript",
     "headline": "How to Loop through an Array in JavaScript",
     "alternativeHeadline": "for, for-in, for-of, and Array.forEach()",
-    "description": "Understand how to loop through elements of an Array using different ways in JavaScript",
-    "inLanguage": "en-us",
+    "description": "Understand how to loop through elements of an Array using different ways in JavaScript, when for-in is a trap, and how map() differs from forEach()",
+    "inLanguage": "en-US",
 	"isFamilyFriendly": true,
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -80,7 +80,7 @@
     "copyrightYear": "2021",
     "dateCreated": "2021-01-24T00:00:00.00Z",
     "datePublished": "2021-01-24T00:00:00.00Z",
-    "dateModified": "2021-01-24T00:00:00.00Z",
+    "dateModified": "2026-08-30T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -94,7 +94,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/js.png"],
     "url": "https://codingnconcepts.com/javascript/how-to-loop-through-array-in-javascript/",
-    "wordCount": 219 ,
+    "wordCount": 590 ,
     "genre": ["Javascript Array"],
     "keywords":  null 
 }
@@ -119,7 +119,8 @@
         {
             "@type": "ListItem",
             "position": 3,
-            "name": "How to Loop through an Array in JavaScript"
+            "name": "How to Loop through an Array in JavaScript",
+            "item": "https://codingnconcepts.com/javascript/how-to-loop-through-array-in-javascript/"
         }
     ]
 }
@@ -546,7 +547,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2021-01-24T00:00:00Z">Last Modified: Jan 24, 2021</time>
+	<time class="meta__text" datetime="2026-08-30T00:00:00Z">Last Modified: Aug 30, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -564,6 +565,8 @@
     <li><a href="#for-in-loop">for-in loop</a></li>
     <li><a href="#for-of-loop">for-of loop</a></li>
     <li><a href="#arrayforeach">Array.forEach()</a></li>
+    <li><a href="#arraymap">Array.map()</a></li>
+    <li><a href="#stopping-the-loop-break-and-continue">Stopping the Loop: break and continue</a></li>
   </ul>
 </nav>
 	</div>
@@ -578,9 +581,9 @@
 </span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><pre tabindex="0"><code><div class="code_output">Output</div>
-0 &#34;one&#34;
-1 &#34;two&#34;
-2 &#34;three&#34;
+0 one
+1 two
+2 three
 </code></pre><h2 id="for-in-loop">for-in loop</h2>
 <p>The <code>for-in</code> statement loops through the index of an Array.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;one&#34;</span><span class="p">,</span> <span class="s2">&#34;two&#34;</span><span class="p">,</span> <span class="s2">&#34;three&#34;</span><span class="p">];</span>
@@ -588,10 +591,23 @@
 </span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="nx">array</span><span class="p">[</span><span class="nx">index</span><span class="p">]);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><pre tabindex="0"><code><div class="code_output">Output</div>
-0 &#34;one&#34;
-1 &#34;two&#34;
-2 &#34;three&#34;
-</code></pre><h2 id="for-of-loop">for-of loop</h2>
+0 one
+1 two
+2 three
+</code></pre><p><strong>Why <code>for-in</code> is risky for arrays.</strong> <code>index</code> here is a <em>string</em> (<code>&quot;0&quot;</code>, <code>&quot;1&quot;</code>, <code>&quot;2&quot;</code>), not a number, so <code>array[index]</code> works only because of implicit string-to-index coercion — code that expects <code>index</code> to support arithmetic (<code>index + 1</code>) will misbehave. Worse, <code>for-in</code> enumerates <strong>every enumerable property</strong>, including ones inherited through the prototype chain — not just numeric indices. If any code (yours or a library&rsquo;s) has added a property to <code>Array.prototype</code>, it shows up in the loop too:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;one&#34;</span><span class="p">,</span> <span class="s2">&#34;two&#34;</span><span class="p">,</span> <span class="s2">&#34;three&#34;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">extra</span> <span class="o">=</span> <span class="s2">&#34;oops&#34;</span><span class="p">;</span> <span class="c1">// some other script does this
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">index</span> <span class="k">in</span> <span class="nx">array</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="nx">array</span><span class="p">[</span><span class="nx">index</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><pre tabindex="0"><code><div class="code_output">Output</div>
+0 one
+1 two
+2 three
+extra oops
+</code></pre><p>This is why <code>for-in</code> is generally recommended for iterating <strong>object</strong> keys, not array elements — use <code>for</code>, <code>for-of</code>, or <code>forEach()</code> for arrays instead.</p>
+<h2 id="for-of-loop">for-of loop</h2>
 <p>The <code>for-of</code> statement loops through the values of an Array.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;one&#34;</span><span class="p">,</span> <span class="s2">&#34;two&#34;</span><span class="p">,</span> <span class="s2">&#34;three&#34;</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">element</span> <span class="k">of</span> <span class="nx">array</span><span class="p">){</span>
@@ -607,12 +623,31 @@ three
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nx">array</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">item</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="nx">item</span><span class="p">));</span>
 </span></span></code></pre></div><pre tabindex="0"><code><div class="code_output">Output</div>
-0 &#34;one&#34;
-1 &#34;two&#34;
-2 &#34;three&#34;
-</code></pre><br/>
-<p>That&rsquo;s it! These are the four different ways to loop-through an Array in JavaScript. It is recommended to use <code>Array.forEach()</code> with arrow function which makes your code very short and easy to understand.</p>
-<p>Though there is a limitation that we can not use <code>break;</code> and <code>continue;</code> flow control statements with <code>Array.forEach()</code> method. If you want to do so, use <code>for</code>, <code>for-in</code> or <code>for-of</code> loop instead.</p>
+0 one
+1 two
+2 three
+</code></pre><h2 id="arraymap">Array.map()</h2>
+<p><code>Array.map()</code> looks similar to <code>forEach()</code> — it also takes a callback and visits every element — but instead of just running side effects, it <strong>returns a new array</strong> built from the callback&rsquo;s return values. The original array is left untouched:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;one&#34;</span><span class="p">,</span> <span class="s2">&#34;two&#34;</span><span class="p">,</span> <span class="s2">&#34;three&#34;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">upper</span> <span class="o">=</span> <span class="nx">array</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">item</span> <span class="p">=&gt;</span> <span class="nx">item</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">upper</span><span class="p">);</span> <span class="c1">// [ &#39;ONE&#39;, &#39;TWO&#39;, &#39;THREE&#39; ]
+</span></span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">array</span><span class="p">);</span> <span class="c1">// [ &#39;one&#39;, &#39;two&#39;, &#39;three&#39; ] — unchanged
+</span></span></span></code></pre></div><p>Use <code>forEach()</code> when you just need to do something with each element (logging, pushing into an outside array, updating the DOM). Use <code>map()</code> when you need a transformed array back — it&rsquo;s built for that and chains cleanly with <code>.filter()</code> or <code>.reduce()</code> afterwards.</p>
+<h2 id="stopping-the-loop-break-and-continue">Stopping the Loop: break and continue</h2>
+<p><code>for</code>, <code>for-in</code> and <code>for-of</code> all support <code>break;</code> (stop entirely) and <code>continue;</code> (skip to the next iteration) because they&rsquo;re language-level loop statements:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;one&#34;</span><span class="p">,</span> <span class="s2">&#34;two&#34;</span><span class="p">,</span> <span class="s2">&#34;three&#34;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">element</span> <span class="k">of</span> <span class="nx">array</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">element</span> <span class="o">===</span> <span class="s2">&#34;two&#34;</span><span class="p">)</span> <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;kept&#34;</span><span class="p">,</span> <span class="nx">element</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><pre tabindex="0"><code><div class="code_output">Output</div>
+kept one
+</code></pre><p><code>forEach()</code> and <code>map()</code>, however, take a plain callback function — there is no loop statement for <code>break</code>/<code>continue</code> to attach to, so using either keyword inside the callback throws a <code>SyntaxError</code>. The only way to stop a <code>forEach()</code>/<code>map()</code> early is to throw from inside the callback and catch it outside, which is awkward enough that it&rsquo;s usually a sign you should reach for <code>for</code>/<code>for-of</code> (or <code>Array.some()</code>/<code>Array.every()</code>, which <em>do</em> stop as soon as the callback returns a value that ends the search) instead.</p>
+<br/>
+<p>That&rsquo;s it! These are the different ways to loop through an Array in JavaScript. For plain iteration, <code>forEach()</code> with an arrow function keeps your code short and readable. For transforming elements into a new array, prefer <code>map()</code>. And if you need to <code>break;</code> or <code>continue;</code> partway through, drop down to a <code>for</code>, <code>for-of</code>, or (for objects, not arrays) <code>for-in</code> loop.</p>
 		</div>
 		<footer class="post__footer">
 			
@@ -673,7 +708,7 @@ three
       
       
       <li>
-        <a href="whatsapp://send?text=How%20to%20Loop%20through%20an%20Array%20in%20JavaScript%2c%20by%20Coding%20N%20Concepts%0aUnderstand%20how%20to%20loop%20through%20elements%20of%20an%20Array%20using%20different%20ways%20in%20JavaScript%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fhow-to-loop-through-array-in-javascript%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=How%20to%20Loop%20through%20an%20Array%20in%20JavaScript%2c%20by%20Coding%20N%20Concepts%0aUnderstand%20how%20to%20loop%20through%20elements%20of%20an%20Array%20using%20different%20ways%20in%20JavaScript%2c%20when%20for-in%20is%20a%20trap%2c%20and%20how%20map%28%29%20differs%20from%20forEach%28%29%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fhow-to-loop-through-array-in-javascript%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>WhatsApp</p>
         </a>
@@ -683,7 +718,7 @@ three
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - How%20to%20Loop%20through%20an%20Array%20in%20JavaScript.&amp;body=How%20to%20Loop%20through%20an%20Array%20in%20JavaScript%2c%20by%20Coding%20N%20Concepts%0aUnderstand%20how%20to%20loop%20through%20elements%20of%20an%20Array%20using%20different%20ways%20in%20JavaScript%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fhow-to-loop-through-array-in-javascript%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - How%20to%20Loop%20through%20an%20Array%20in%20JavaScript.&amp;body=How%20to%20Loop%20through%20an%20Array%20in%20JavaScript%2c%20by%20Coding%20N%20Concepts%0aUnderstand%20how%20to%20loop%20through%20elements%20of%20an%20Array%20using%20different%20ways%20in%20JavaScript%2c%20when%20for-in%20is%20a%20trap%2c%20and%20how%20map%28%29%20differs%20from%20forEach%28%29%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fhow-to-loop-through-array-in-javascript%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en-us">
+<html class="no-js" lang="en-US">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,14 +8,14 @@
 	<title>How to change server port in spring boot - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
-	<meta name="description" content="How to change embedded server (tomcat) port of spring boot application">
+	<meta name="description" content="Five ways to change the embedded server port in Spring Boot, how their precedence interacts, and how to pick a random free port for tests.">
 	<meta property="og:title" content="How to change server port in spring boot" />
-<meta property="og:description" content="How to change embedded server (tomcat) port of spring boot application" />
+<meta property="og:description" content="Five ways to change the embedded server port in Spring Boot, how their precedence interacts, and how to pick a random free port for tests." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/spring-boot/how-to-change-server-port/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/springboot.png" />
 <meta property="article:published_time" content="2020-03-09T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-03-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-08-30T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -27,7 +27,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:image" content="https://codingnconcepts.com/img/logo/springboot.png">
 	<meta name="twitter:title" content="How to change server port in spring boot">
-	<meta name="twitter:description" content="How to change embedded server (tomcat) port of spring boot application">
+	<meta name="twitter:description" content="Five ways to change the embedded server port in Spring Boot, how their precedence interacts, and how to pick a random free port for tests.">
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -57,8 +57,8 @@
     "name": "How to change server port in spring boot",
     "headline": "How to change server port in spring boot",
     "alternativeHeadline":  null ,
-    "description": "How to change embedded server (tomcat) port of spring boot application",
-    "inLanguage": "en-us",
+    "description": "Five ways to change the embedded server port in Spring Boot, how their precedence interacts, and how to pick a random free port for tests.",
+    "inLanguage": "en-US",
 	"isFamilyFriendly": true,
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -80,7 +80,7 @@
     "copyrightYear": "2020",
     "dateCreated": "2020-03-09T00:00:00.00Z",
     "datePublished": "2020-03-09T00:00:00.00Z",
-    "dateModified": "2020-03-09T00:00:00.00Z",
+    "dateModified": "2026-08-30T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -94,7 +94,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/springboot.png"],
     "url": "https://codingnconcepts.com/spring-boot/how-to-change-server-port/",
-    "wordCount": 107 ,
+    "wordCount": 563 ,
     "genre": ["Spring Boot Basics"],
     "keywords":  null 
 }
@@ -119,7 +119,8 @@
         {
             "@type": "ListItem",
             "position": 3,
-            "name": "How to change server port in spring boot"
+            "name": "How to change server port in spring boot",
+            "item": "https://codingnconcepts.com/spring-boot/how-to-change-server-port/"
         }
     ]
 }
@@ -545,7 +546,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2020-03-09T00:00:00Z">Last Modified: Mar 09, 2020</time>
+	<time class="meta__text" datetime="2026-08-30T00:00:00Z">Last Modified: Aug 30, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -557,15 +558,15 @@
 			<p>Spring boot web application using embedded server by default runs on port 8080. Following are the ways to change default server port from <strong>8080</strong> to say <strong>9090</strong></p>
 <p>Follow any of the given five ways to change server port:-</p>
 <h5 id="1-applicationproperties">1. application.properties</h5>
-<pre tabindex="0"><code>server.port = 9090
-</code></pre><h5 id="2-applicationyml">2. application.yml</h5>
-<pre tabindex="0"><code>server:
-  port: 9090
-</code></pre><h5 id="3-command-line-parameter">3. command-line parameter</h5>
-<pre tabindex="0"><code>$ java -jar -Dserver.port=9090 spring-boot-app-1.0.jar
-</code></pre><p>OR</p>
-<pre tabindex="0"><code>$ java -jar spring-boot-app-1.0.jar --server.port=9090
-</code></pre><h5 id="4-springbootapplication-main-method">4. SpringBootApplication main method</h5>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-properties" data-lang="properties"><span class="line"><span class="cl"><span class="na">server.port</span> <span class="o">=</span> <span class="s">9090</span>
+</span></span></code></pre></div><h5 id="2-applicationyml">2. application.yml</h5>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">server</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">9090</span><span class="w">
+</span></span></span></code></pre></div><h5 id="3-command-line-parameter">3. command-line parameter</h5>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ java -jar -Dserver.port<span class="o">=</span><span class="m">9090</span> spring-boot-app-1.0.jar
+</span></span></code></pre></div><p>OR</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ java -jar spring-boot-app-1.0.jar --server.port<span class="o">=</span><span class="m">9090</span>
+</span></span></code></pre></div><h5 id="4-springbootapplication-main-method">4. SpringBootApplication main method</h5>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@SpringBootApplication</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SpringBootDemoApplication</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
@@ -586,7 +587,26 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">factory</span><span class="p">.</span><span class="na">setPort</span><span class="p">(</span><span class="n">9090</span><span class="p">);</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
-</span></span></span></code></pre></div>
+</span></span></span></code></pre></div><h2 id="which-one-wins-if-you-use-more-than-one">Which One Wins If You Use More Than One?</h2>
+<p>These five approaches don&rsquo;t exist in isolation — Spring Boot merges all configured property sources into one <code>Environment</code>, and when the same property is set in more than one place, precedence decides which value applies. From highest to lowest among the options above:</p>
+<ol>
+<li><strong>Command-line argument</strong> (<code>--server.port=9090</code>) — always wins over file-based configuration.</li>
+<li><strong>JVM system property</strong> (<code>-Dserver.port=9090</code>) — also wins over file-based configuration.</li>
+<li><strong><code>application.properties</code> / <code>application.yml</code></strong> — read at startup; profile-specific files (e.g. <code>application-prod.yml</code>) override the base file for that profile.</li>
+<li><strong><code>setDefaultProperties(...)</code></strong> — the <em>lowest</em>-precedence source of all, despite being set in code. It&rsquo;s meant purely as a fallback used only when nothing else supplies the property.</li>
+</ol>
+<p>The <code>WebServerFactoryCustomizer</code> approach in option 5 is different in kind — it&rsquo;s not a property source at all, it&rsquo;s imperative code that runs during server bean creation and calls <code>factory.setPort(9090)</code> directly. Because it executes as part of building the <code>WebServerFactory</code> bean, it effectively has the final say and will override a <code>server.port</code> value coming from any property source, which is worth knowing if you use it alongside <code>application.yml</code> and the port doesn&rsquo;t seem to take effect the way you expect.</p>
+<h2 id="picking-a-random-free-port">Picking a Random Free Port</h2>
+<p>A common need in integration tests is a server port that doesn&rsquo;t collide with anything else running on the machine. Spring Boot supports this directly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-properties" data-lang="properties"><span class="line"><span class="cl"><span class="na">server.port</span> <span class="o">=</span> <span class="s">0</span>
+</span></span></code></pre></div><p>Setting <code>server.port</code> to <code>0</code> tells the underlying servlet container (Tomcat, Jetty, or Undertow) to bind to any available ephemeral port assigned by the OS, rather than a fixed one. Since you don&rsquo;t know the value ahead of time, you retrieve it at runtime — for example, in a Spring Boot test with <code>@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)</code>, by injecting it with <code>@LocalServerPort</code> (or <code>@Value(&quot;${local.server.port}&quot;)</code>).</p>
+<h2 id="gotchas">Gotchas</h2>
+<ul>
+<li><strong>Port already in use.</strong> If another process already holds the configured port, the embedded server fails to start and Spring Boot throws a <code>PortInUseException</code> — the whole application context fails to come up, it doesn&rsquo;t just skip starting the web server.</li>
+<li><strong>Reactive apps use the same property.</strong> If you&rsquo;re on Spring WebFlux with the embedded Netty server instead of Tomcat, <code>server.port</code> is still the correct property — the property name doesn&rsquo;t change with the underlying server implementation.</li>
+<li><strong>Actuator can live on a different port.</strong> If you separately expose Actuator endpoints and want them reachable on their own port (common for keeping management endpoints off the public-facing port), that&rsquo;s a distinct property, <code>management.server.port</code>, not <code>server.port</code>.</li>
+<li><strong>Container port mapping isn&rsquo;t the same thing.</strong> In Docker, mapping <code>-p 8080:9090</code> on the host doesn&rsquo;t change what port Spring Boot listens on inside the container — you still need <code>server.port=9090</code> (or one of the methods above) set for the <em>application</em>; the Docker flag only maps the host-visible port to it.</li>
+</ul>
 		</div>
 		<footer class="post__footer">
 			
@@ -647,7 +667,7 @@
       
       
       <li>
-        <a href="whatsapp://send?text=How%20to%20change%20server%20port%20in%20spring%20boot%2c%20by%20Coding%20N%20Concepts%0aHow%20to%20change%20embedded%20server%20%28tomcat%29%20port%20of%20spring%20boot%20application%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fhow-to-change-server-port%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=How%20to%20change%20server%20port%20in%20spring%20boot%2c%20by%20Coding%20N%20Concepts%0aFive%20ways%20to%20change%20the%20embedded%20server%20port%20in%20Spring%20Boot%2c%20how%20their%20precedence%20interacts%2c%20and%20how%20to%20pick%20a%20random%20free%20port%20for%20tests.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fhow-to-change-server-port%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>WhatsApp</p>
         </a>
@@ -657,7 +677,7 @@
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - How%20to%20change%20server%20port%20in%20spring%20boot.&amp;body=How%20to%20change%20server%20port%20in%20spring%20boot%2c%20by%20Coding%20N%20Concepts%0aHow%20to%20change%20embedded%20server%20%28tomcat%29%20port%20of%20spring%20boot%20application%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fhow-to-change-server-port%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - How%20to%20change%20server%20port%20in%20spring%20boot.&amp;body=How%20to%20change%20server%20port%20in%20spring%20boot%2c%20by%20Coding%20N%20Concepts%0aFive%20ways%20to%20change%20the%20embedded%20server%20port%20in%20Spring%20Boot%2c%20how%20their%20precedence%20interacts%2c%20and%20how%20to%20pick%20a%20random%20free%20port%20for%20tests.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fhow-to-change-server-port%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>

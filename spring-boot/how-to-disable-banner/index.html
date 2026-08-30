@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en-us">
+<html class="no-js" lang="en-US">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,14 +8,14 @@
 	<title>How to disable default banner in spring boot - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
-	<meta name="description" content="How to disable default Spring banner from console output of spring boot application.">
+	<meta name="description" content="Four ways to disable the Spring Boot startup banner, what Banner.Mode actually controls, and how to replace the banner instead of just turning it off.">
 	<meta property="og:title" content="How to disable default banner in spring boot" />
-<meta property="og:description" content="How to disable default Spring banner from console output of spring boot application." />
+<meta property="og:description" content="Four ways to disable the Spring Boot startup banner, what Banner.Mode actually controls, and how to replace the banner instead of just turning it off." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/spring-boot/how-to-disable-banner/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/springboot.png" />
 <meta property="article:published_time" content="2020-03-09T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-03-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-08-30T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -27,7 +27,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:image" content="https://codingnconcepts.com/img/logo/springboot.png">
 	<meta name="twitter:title" content="How to disable default banner in spring boot">
-	<meta name="twitter:description" content="How to disable default Spring banner from console output of spring boot application.">
+	<meta name="twitter:description" content="Four ways to disable the Spring Boot startup banner, what Banner.Mode actually controls, and how to replace the banner instead of just turning it off.">
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -57,8 +57,8 @@
     "name": "How to disable default banner in spring boot",
     "headline": "How to disable default banner in spring boot",
     "alternativeHeadline":  null ,
-    "description": "How to disable default Spring banner from console output of spring boot application.",
-    "inLanguage": "en-us",
+    "description": "Four ways to disable the Spring Boot startup banner, what Banner.Mode actually controls, and how to replace the banner instead of just turning it off.",
+    "inLanguage": "en-US",
 	"isFamilyFriendly": true,
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -80,7 +80,7 @@
     "copyrightYear": "2020",
     "dateCreated": "2020-03-09T00:00:00.00Z",
     "datePublished": "2020-03-09T00:00:00.00Z",
-    "dateModified": "2020-03-09T00:00:00.00Z",
+    "dateModified": "2026-08-30T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -94,7 +94,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/springboot.png"],
     "url": "https://codingnconcepts.com/spring-boot/how-to-disable-banner/",
-    "wordCount": 169 ,
+    "wordCount": 460 ,
     "genre": ["Spring Boot Basics"],
     "keywords":  null 
 }
@@ -119,7 +119,8 @@
         {
             "@type": "ListItem",
             "position": 3,
-            "name": "How to disable default banner in spring boot"
+            "name": "How to disable default banner in spring boot",
+            "item": "https://codingnconcepts.com/spring-boot/how-to-disable-banner/"
         }
     ]
 }
@@ -545,7 +546,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2020-03-09T00:00:00Z">Last Modified: Mar 09, 2020</time>
+	<time class="meta__text" datetime="2026-08-30T00:00:00Z">Last Modified: Aug 30, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -582,16 +583,24 @@ CONSOLE – Print the banner to System.out.
 LOG     – Print the banner to the log file
 </code></pre>
 <h5 id="2-applicationproperties">2. application.properties</h5>
-<pre tabindex="0"><code>spring.main.banner-mode=off
-</code></pre><h5 id="3-applicationyml">3. application.yml</h5>
-<pre tabindex="0"><code>spring:
-  main:
-    banner-mode:&#34;off&#34;
-</code></pre><h5 id="4-command-line-parameter">4. command-line parameter</h5>
-<pre tabindex="0"><code>$ java -jar -Dspring.main.banner-mode=off spring-boot-app-1.0.jar
-</code></pre><p>OR</p>
-<pre tabindex="0"><code>$ java -jar spring-boot-app-1.0.jar --spring.main.banner-mode=off
-</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-properties" data-lang="properties"><span class="line"><span class="cl"><span class="na">spring.main.banner-mode</span><span class="o">=</span><span class="s">off</span>
+</span></span></code></pre></div><h5 id="3-applicationyml">3. application.yml</h5>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">spring</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">main</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">banner-mode</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;off&#34;</span><span class="w">
+</span></span></span></code></pre></div><p>Note the space after the colon in <code>banner-mode: &quot;off&quot;</code> — YAML requires it to treat this as a <code>key: value</code> mapping. Without it (<code>banner-mode:&quot;off&quot;</code>), the parser treats the whole thing as a single plain-scalar string instead, and the property is never set.</p>
+<h5 id="4-command-line-parameter">4. command-line parameter</h5>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ java -jar -Dspring.main.banner-mode<span class="o">=</span>off spring-boot-app-1.0.jar
+</span></span></code></pre></div><p>OR</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ java -jar spring-boot-app-1.0.jar --spring.main.banner-mode<span class="o">=</span>off
+</span></span></code></pre></div><h2 id="replacing-the-banner-instead-of-disabling-it">Replacing the Banner Instead of Disabling It</h2>
+<p>Rather than turning the banner off, you can replace it with your own by adding a <code>banner.txt</code> file to <code>src/main/resources</code> — Spring Boot picks it up automatically at startup and prints its contents instead of the default ASCII art. It supports a handful of placeholders you can use inside the text, including <code>${application.version}</code>, <code>${spring-boot.version}</code>, and <code>${application.formatted-version}</code>, which are resolved against your app&rsquo;s version and the Spring Boot version on the classpath. This only takes effect when <code>Banner.Mode</code> is not <code>OFF</code> — setting <code>banner-mode=off</code> suppresses <code>banner.txt</code> too, since there&rsquo;s no banner phase for it to run in.</p>
+<h2 id="gotchas">Gotchas</h2>
+<ul>
+<li><strong><code>LOG</code> mode doesn&rsquo;t mean &ldquo;printed with visible log formatting.&rdquo;</strong> <code>Banner.Mode.LOG</code> writes the banner through the configured <code>Logger</code> (at <code>INFO</code> level) instead of directly to <code>System.out</code>. If your log level is set above <code>INFO</code>, or your logging configuration filters it, the banner silently disappears from the log output even though you didn&rsquo;t explicitly disable it.</li>
+<li><strong>Property key casing/format.</strong> Like most Spring Boot properties, <code>banner-mode</code> follows the standard kebab-case convention in <code>.properties</code>/<code>.yml</code> files and binds to the <code>Banner.Mode</code> enum values case-insensitively (<code>off</code>, <code>OFF</code>, and <code>Off</code> are all accepted) — but the enum constants themselves in Java code (<code>Banner.Mode.OFF</code>) must be written in uppercase since they&rsquo;re plain Java enum values, not relaxed-bound properties.</li>
+<li><strong>This only affects Spring Boot&rsquo;s own banner.</strong> Disabling it has no effect on anything your application itself prints to the console at startup, such as messages inside <code>CommandLineRunner</code>/<code>ApplicationRunner</code> beans or your own logging statements.</li>
+</ul>
 		</div>
 		<footer class="post__footer">
 			
@@ -652,7 +661,7 @@ LOG     – Print the banner to the log file
       
       
       <li>
-        <a href="whatsapp://send?text=How%20to%20disable%20default%20banner%20in%20spring%20boot%2c%20by%20Coding%20N%20Concepts%0aHow%20to%20disable%20default%20Spring%20banner%20from%20console%20output%20of%20spring%20boot%20application.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fhow-to-disable-banner%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=How%20to%20disable%20default%20banner%20in%20spring%20boot%2c%20by%20Coding%20N%20Concepts%0aFour%20ways%20to%20disable%20the%20Spring%20Boot%20startup%20banner%2c%20what%20Banner.Mode%20actually%20controls%2c%20and%20how%20to%20replace%20the%20banner%20instead%20of%20just%20turning%20it%20off.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fhow-to-disable-banner%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>WhatsApp</p>
         </a>
@@ -662,7 +671,7 @@ LOG     – Print the banner to the log file
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - How%20to%20disable%20default%20banner%20in%20spring%20boot.&amp;body=How%20to%20disable%20default%20banner%20in%20spring%20boot%2c%20by%20Coding%20N%20Concepts%0aHow%20to%20disable%20default%20Spring%20banner%20from%20console%20output%20of%20spring%20boot%20application.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fhow-to-disable-banner%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - How%20to%20disable%20default%20banner%20in%20spring%20boot.&amp;body=How%20to%20disable%20default%20banner%20in%20spring%20boot%2c%20by%20Coding%20N%20Concepts%0aFour%20ways%20to%20disable%20the%20Spring%20Boot%20startup%20banner%2c%20what%20Banner.Mode%20actually%20controls%2c%20and%20how%20to%20replace%20the%20banner%20instead%20of%20just%20turning%20it%20off.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fhow-to-disable-banner%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>

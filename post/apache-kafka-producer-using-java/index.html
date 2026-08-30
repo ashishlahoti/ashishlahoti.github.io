@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en-us">
+<html class="no-js" lang="en-US">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,13 +8,13 @@
 	<title>Kafka Producer Using Java - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
-	<meta name="description" content="Kafka Producer Using Java.">
+	<meta name="description" content="How to build a Kafka producer in Java, what &#34;safe producer&#34; settings like acks, idempotence and retries actually guarantee, and how send() behaves under the hood.">
 	<meta property="og:title" content="Kafka Producer Using Java" />
-<meta property="og:description" content="Kafka Producer Using Java." />
+<meta property="og:description" content="How to build a Kafka producer in Java, what &#34;safe producer&#34; settings like acks, idempotence and retries actually guarantee, and how send() behaves under the hood." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/post/apache-kafka-producer-using-java/" />
 <meta property="article:published_time" content="2019-05-11T00:00:00+00:00" />
-<meta property="article:modified_time" content="2019-05-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-08-30T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -26,7 +26,7 @@
 	
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Kafka Producer Using Java">
-	<meta name="twitter:description" content="Kafka Producer Using Java.">
+	<meta name="twitter:description" content="How to build a Kafka producer in Java, what &#34;safe producer&#34; settings like acks, idempotence and retries actually guarantee, and how send() behaves under the hood.">
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -56,8 +56,8 @@
     "name": "Kafka Producer Using Java",
     "headline": "Kafka Producer Using Java",
     "alternativeHeadline":  null ,
-    "description": "Kafka Producer Using Java.",
-    "inLanguage": "en-us",
+    "description": "How to build a Kafka producer in Java, what \"safe producer\" settings like acks, idempotence and retries actually guarantee, and how send() behaves under the hood.",
+    "inLanguage": "en-US",
 	"isFamilyFriendly": true,
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -79,7 +79,7 @@
     "copyrightYear": "2019",
     "dateCreated": "2019-05-11T00:00:00.00Z",
     "datePublished": "2019-05-11T00:00:00.00Z",
-    "dateModified": "2019-05-11T00:00:00.00Z",
+    "dateModified": "2026-08-30T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -93,7 +93,7 @@
     },
     "image": "https://codingnconcepts.com/favicon-32x32.png",
     "url": "https://codingnconcepts.com/post/apache-kafka-producer-using-java/",
-    "wordCount": 182 ,
+    "wordCount": 904 ,
     "genre": ["Java Kafka","Java Coding"],
     "keywords":  null 
 }
@@ -118,7 +118,8 @@
         {
             "@type": "ListItem",
             "position": 3,
-            "name": "Kafka Producer Using Java"
+            "name": "Kafka Producer Using Java",
+            "item": "https://codingnconcepts.com/post/apache-kafka-producer-using-java/"
         }
     ]
 }
@@ -544,7 +545,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2019-05-11T00:00:00Z">Last Modified: May 11, 2019</time>
+	<time class="meta__text" datetime="2026-08-30T00:00:00Z">Last Modified: Aug 30, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -618,7 +619,34 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">producer</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
-</span></span></span></code></pre></div>
+</span></span></span></code></pre></div><h2 id="send-is-asynchronous-by-default">send() Is Asynchronous by Default</h2>
+<p><code>producer.send()</code> doesn&rsquo;t wait for the broker to acknowledge the record — it hands the <code>ProducerRecord</code> to an internal buffer and a background I/O thread does the actual network work, returning immediately with a <code>Future&lt;RecordMetadata&gt;</code>. That gives you three ways to use it, in increasing order of overhead:</p>
+<ul>
+<li><strong>Fire-and-forget</strong> — <code>producer.send(record)</code> and ignore the return value. Fastest, but you won&rsquo;t know if the write failed.</li>
+<li><strong>Asynchronous with a callback</strong> — as in the example above, <code>producer.send(record, callback)</code>. The callback runs on the producer&rsquo;s I/O thread once the send completes (or fails), so you get delivery confirmation without blocking the calling thread.</li>
+<li><strong>Synchronous</strong> — <code>producer.send(record).get()</code>. Calling <code>.get()</code> on the returned <code>Future</code> blocks the calling thread until the broker responds, turning the async call into a request/response round trip. This throws away most of the throughput benefit of batching and should be reserved for cases where you genuinely need to know the outcome before moving on.</li>
+</ul>
+<h2 id="building-a-safe-producer">Building a &ldquo;Safe&rdquo; Producer</h2>
+<p>The block of properties in the example — <code>ENABLE_IDEMPOTENCE_CONFIG</code>, <code>ACKS_CONFIG</code>, <code>RETRIES_CONFIG</code>, and <code>MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION</code> — together configure what&rsquo;s commonly called a <em>safe</em> producer, one that avoids both message loss and duplicate/out-of-order writes under retries:</p>
+<ul>
+<li><strong><code>acks=all</code></strong> tells the leader broker to wait until the record has been replicated to all in-sync replicas before acknowledging it, so a single broker crash right after the write can&rsquo;t lose the record.</li>
+<li><strong><code>enable.idempotence=true</code></strong> has the producer tag each record with a sequence number per partition; the broker uses that to detect and drop duplicate retries, so a retried send can&rsquo;t create a duplicate message the way a plain retry otherwise could.</li>
+<li><strong><code>retries</code></strong> set high (<code>Integer.MAX_VALUE</code> here) means transient errors get retried rather than surfaced as a failed send.</li>
+<li><strong><code>max.in.flight.requests.per.connection</code></strong> caps how many unacknowledged requests can be outstanding to a broker at once. With idempotence enabled, Kafka allows this to be as high as 5 while still preserving per-partition ordering (the sequence numbers let the broker put retried batches back in order); without idempotence, anything above 1 risks a retried batch landing after a later one and reordering your records.</li>
+</ul>
+<p>One naming quirk worth knowing if you go looking at <code>ProducerConfig</code>&rsquo;s source: almost every constant there ends in <code>_CONFIG</code> (<code>ACKS_CONFIG</code>, <code>RETRIES_CONFIG</code>, <code>BATCH_SIZE_CONFIG</code>&hellip;) — except <code>MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION</code>, which doesn&rsquo;t. It&rsquo;s easy to typo this one by reflexively adding <code>_CONFIG</code>, which won&rsquo;t compile.</p>
+<p>As of Kafka 3.0, <code>enable.idempotence</code> defaults to <code>true</code> and <code>acks</code> defaults to <code>all</code> for newly created producers (KIP-679), so a modern client gets much of this safety even without setting these properties explicitly — but pinning them yourself keeps the behavior explicit and version-independent.</p>
+<h2 id="retries-are-time-bounded-by-deliverytimeoutms">Retries Are Time-Bounded by delivery.timeout.ms</h2>
+<p>Setting <code>retries</code> to <code>Integer.MAX_VALUE</code> doesn&rsquo;t mean the producer retries forever. The actual ceiling is <code>ProducerConfig.DELIVERY_TIMEOUT_MS_CONFIG</code> (<code>&quot;delivery.timeout.ms&quot;</code>, default 120000ms / 2 minutes) — the total time budget from when <code>send()</code> is called to when the record is either acknowledged or given up on, covering all retries and backoffs in between. Once that window elapses, the send fails (surfaced via the callback&rsquo;s <code>exception</code> argument, or thrown from <code>.get()</code> for a synchronous call) regardless of how many retries are left.</p>
+<h2 id="partitioning-where-does-a-record-end-up">Partitioning: Where Does a Record End Up?</h2>
+<p>Which partition a <code>ProducerRecord</code> lands in depends on what you construct it with:</p>
+<ul>
+<li><strong>Explicit partition number</strong> — <code>new ProducerRecord&lt;&gt;(&quot;topicName&quot;, 1, &quot;MessageKey&quot;, &quot;Message&quot;)</code> goes exactly there, no further logic involved.</li>
+<li><strong>Key, no partition</strong> — the default partitioner hashes the key so that <strong>every record with the same key always lands on the same partition</strong>, which is what lets you preserve per-key ordering (e.g. all events for one user processed in order).</li>
+<li><strong>No key, no partition</strong> — records are distributed across partitions using a <em>sticky</em> partitioner: it batches all records without a key onto one partition at a time and switches partitions when a batch fills or <code>linger.ms</code> elapses, rather than choosing a new partition per record. This favors larger, more efficient batches over perfectly even per-record distribution.</li>
+</ul>
+<h2 id="flushing-and-closing">Flushing and Closing</h2>
+<p><code>producer.flush()</code> blocks until every record sent so far has completed (delivered or failed) — useful before shutting down, or between logically distinct groups of sends when you need a completion checkpoint. <code>producer.close()</code> does an implicit flush before releasing the producer&rsquo;s network resources, so calling both back-to-back as in the example is redundant but harmless. For a bounded shutdown, <code>producer.close(Duration)</code> lets you cap how long <code>close()</code> will wait for in-flight sends before forcing the connection closed.</p>
 		</div>
 		<footer class="post__footer">
 			
@@ -680,7 +708,7 @@
       
       
       <li>
-        <a href="whatsapp://send?text=Kafka%20Producer%20Using%20Java%2c%20by%20Coding%20N%20Concepts%0aKafka%20Producer%20Using%20Java.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fpost%2fapache-kafka-producer-using-java%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=Kafka%20Producer%20Using%20Java%2c%20by%20Coding%20N%20Concepts%0aHow%20to%20build%20a%20Kafka%20producer%20in%20Java%2c%20what%20%22safe%20producer%22%20settings%20like%20acks%2c%20idempotence%20and%20retries%20actually%20guarantee%2c%20and%20how%20send%28%29%20behaves%20under%20the%20hood.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fpost%2fapache-kafka-producer-using-java%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>WhatsApp</p>
         </a>
@@ -690,7 +718,7 @@
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - Kafka%20Producer%20Using%20Java.&amp;body=Kafka%20Producer%20Using%20Java%2c%20by%20Coding%20N%20Concepts%0aKafka%20Producer%20Using%20Java.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fpost%2fapache-kafka-producer-using-java%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - Kafka%20Producer%20Using%20Java.&amp;body=Kafka%20Producer%20Using%20Java%2c%20by%20Coding%20N%20Concepts%0aHow%20to%20build%20a%20Kafka%20producer%20in%20Java%2c%20what%20%22safe%20producer%22%20settings%20like%20acks%2c%20idempotence%20and%20retries%20actually%20guarantee%2c%20and%20how%20send%28%29%20behaves%20under%20the%20hood.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fpost%2fapache-kafka-producer-using-java%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>

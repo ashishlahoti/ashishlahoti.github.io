@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en-us">
+<html class="no-js" lang="en-US">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,14 +8,14 @@
 	<title>Fibonacci Series Using Recursive function - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
-	<meta name="description" content="Fibonacci Series Using Recursive function in Java">
+	<meta name="description" content="Fibonacci series in Java using plain recursion, memoization, and an iterative dynamic-programming approach, with complexity analysis and int-overflow edge cases.">
 	<meta property="og:title" content="Fibonacci Series Using Recursive function" />
-<meta property="og:description" content="Fibonacci Series Using Recursive function in Java" />
+<meta property="og:description" content="Fibonacci series in Java using plain recursion, memoization, and an iterative dynamic-programming approach, with complexity analysis and int-overflow edge cases." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/java/fibonacci-series-using-recursive/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/java.png" />
 <meta property="article:published_time" content="2015-07-12T00:00:00+00:00" />
-<meta property="article:modified_time" content="2015-07-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-08-30T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -28,7 +28,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:image" content="https://codingnconcepts.com/img/logo/java.png">
 	<meta name="twitter:title" content="Fibonacci Series Using Recursive function">
-	<meta name="twitter:description" content="Fibonacci Series Using Recursive function in Java">
+	<meta name="twitter:description" content="Fibonacci series in Java using plain recursion, memoization, and an iterative dynamic-programming approach, with complexity analysis and int-overflow edge cases.">
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -58,8 +58,8 @@
     "name": "Fibonacci Series Using Recursive function",
     "headline": "Fibonacci Series Using Recursive function",
     "alternativeHeadline":  null ,
-    "description": "Fibonacci Series Using Recursive function in Java",
-    "inLanguage": "en-us",
+    "description": "Fibonacci series in Java using plain recursion, memoization, and an iterative dynamic-programming approach, with complexity analysis and int-overflow edge cases.",
+    "inLanguage": "en-US",
 	"isFamilyFriendly": true,
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -81,7 +81,7 @@
     "copyrightYear": "2015",
     "dateCreated": "2015-07-12T00:00:00.00Z",
     "datePublished": "2015-07-12T00:00:00.00Z",
-    "dateModified": "2015-07-12T00:00:00.00Z",
+    "dateModified": "2026-08-30T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -95,7 +95,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/java.png"],
     "url": "https://codingnconcepts.com/java/fibonacci-series-using-recursive/",
-    "wordCount": 200 ,
+    "wordCount": 593 ,
     "genre": ["Java Algorithm","Recursive"],
     "keywords":  null 
 }
@@ -120,7 +120,8 @@
         {
             "@type": "ListItem",
             "position": 3,
-            "name": "Fibonacci Series Using Recursive function"
+            "name": "Fibonacci Series Using Recursive function",
+            "item": "https://codingnconcepts.com/java/fibonacci-series-using-recursive/"
         }
     ]
 }
@@ -546,7 +547,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2015-07-12T00:00:00Z">Last Modified: Jul 12, 2015</time>
+	<time class="meta__text" datetime="2026-08-30T00:00:00Z">Last Modified: Aug 30, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -587,7 +588,26 @@
 </span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
 </span></span></span></code></pre></div><pre tabindex="0"><code><div class="code_output">Output</div>
 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 
-</code></pre><p>Recursive approach time complexity is approx <code>𝘖(2ⁿ)</code></p>
+</code></pre><p><code>fib(n)</code> recomputes the same values over and over — <code>fib(5)</code> calls <code>fib(3)</code> twice, <code>fib(2)</code> three times, and so on, because neither call knows the other already did (or will do) the same work. The call tree branches twice per level, so recursive approach time complexity is approx <code>𝘖(2ⁿ)</code>. Space complexity is only <code>𝘖(n)</code> though, since the call stack only ever holds the <em>current</em> chain of pending calls (one path from root to leaf), not the whole tree at once.</p>
+<h2 id="memoized-top-down-approach">Memoized (Top-Down) Approach</h2>
+<p>We can keep the exact same recursive shape and still eliminate the repeated work, by caching each result the first time it&rsquo;s computed:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Map</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">fibMemo</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">memo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">memo</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="n">n</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">memo</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fibMemo</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">memo</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fibMemo</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">2</span><span class="p">,</span><span class="w"> </span><span class="n">memo</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">memo</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">result</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><pre tabindex="0"><code><div class="code_output">Output</div>
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 
+</code></pre><p>Because every value from <code>0</code> to <code>n</code> is now computed exactly once and reused on every later call, this brings the time complexity down to <code>𝘖(n)</code> — at the cost of <code>𝘖(n)</code> extra space for the memo map, in addition to the <code>𝘖(n)</code> call stack.</p>
 <h2 id="dynamic-approach">Dynamic Approach</h2>
 <p>We can use dynamic approach for linear time complexity i.e. <code>𝘖(n)</code></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">fibonacci</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -602,7 +622,12 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">fib</span><span class="o">[</span><span class="n">n</span><span class="o">]</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
-</span></span></span></code></pre></div>
+</span></span></span></code></pre></div><pre tabindex="0"><code><div class="code_output">Output</div>
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 
+</code></pre><p>This iterative version keeps the memoized version&rsquo;s <code>𝘖(n)</code> time, but needs no map and no call stack — it only ever looks at the previous two entries, so if you don&rsquo;t need the whole history you can drop the array and keep just two rolling variables for <code>𝘖(1)</code> extra space.</p>
+<h2 id="edge-cases">Edge Cases</h2>
+<p><strong>Negative input isn&rsquo;t rejected.</strong> All three versions share the same base case, <code>n &lt;= 1</code>, which also matches negative numbers — <code>fib(-5)</code> simply returns <code>-5</code> instead of throwing or signaling an error. If <code>n</code> can come from user input, validate it&rsquo;s non-negative before calling any of these; otherwise the caller just gets a nonsense answer instead of a clear failure.</p>
+<p><strong><code>int</code> overflows silently.</strong> <code>fib(46)</code> is <code>1836311903</code>, which still fits in a 32-bit <code>int</code>. But <code>fib(47)</code> is <code>2971215073</code> — that overflows <code>int</code> and wraps around to <code>-1323752223</code>, with no exception at all. Verified directly: calling <code>fibonacci(47)</code> above returns <code>-1323752223</code>, while computing the same sequence with <code>long</code> accumulators gives the true value, <code>2971215073</code>. Past <code>fib(46)</code>, switch <code>int</code> to <code>long</code> (safe up to <code>fib(92)</code>) or to <code>BigInteger</code> if you need terms beyond that.</p>
 		</div>
 		<footer class="post__footer">
 			
@@ -664,7 +689,7 @@
       
       
       <li>
-        <a href="whatsapp://send?text=Fibonacci%20Series%20Using%20Recursive%20function%2c%20by%20Coding%20N%20Concepts%0aFibonacci%20Series%20Using%20Recursive%20function%20in%20Java%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjava%2ffibonacci-series-using-recursive%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=Fibonacci%20Series%20Using%20Recursive%20function%2c%20by%20Coding%20N%20Concepts%0aFibonacci%20series%20in%20Java%20using%20plain%20recursion%2c%20memoization%2c%20and%20an%20iterative%20dynamic-programming%20approach%2c%20with%20complexity%20analysis%20and%20int-overflow%20edge%20cases.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjava%2ffibonacci-series-using-recursive%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>WhatsApp</p>
         </a>
@@ -674,7 +699,7 @@
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - Fibonacci%20Series%20Using%20Recursive%20function.&amp;body=Fibonacci%20Series%20Using%20Recursive%20function%2c%20by%20Coding%20N%20Concepts%0aFibonacci%20Series%20Using%20Recursive%20function%20in%20Java%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjava%2ffibonacci-series-using-recursive%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - Fibonacci%20Series%20Using%20Recursive%20function.&amp;body=Fibonacci%20Series%20Using%20Recursive%20function%2c%20by%20Coding%20N%20Concepts%0aFibonacci%20series%20in%20Java%20using%20plain%20recursion%2c%20memoization%2c%20and%20an%20iterative%20dynamic-programming%20approach%2c%20with%20complexity%20analysis%20and%20int-overflow%20edge%20cases.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjava%2ffibonacci-series-using-recursive%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>
