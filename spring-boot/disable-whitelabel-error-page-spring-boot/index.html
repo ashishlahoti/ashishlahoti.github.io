@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://codingnconcepts.com/spring-boot/disable-whitelabel-error-page-spring-boot/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/springboot.png" />
 <meta property="article:published_time" content="2022-11-27T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-11-27T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-08-30T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -81,7 +81,7 @@
     "copyrightYear": "2022",
     "dateCreated": "2022-11-27T00:00:00.00Z",
     "datePublished": "2022-11-27T00:00:00.00Z",
-    "dateModified": "2022-11-27T00:00:00.00Z",
+    "dateModified": "2026-08-30T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -95,7 +95,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/springboot.png"],
     "url": "https://codingnconcepts.com/spring-boot/disable-whitelabel-error-page-spring-boot/",
-    "wordCount": 300 ,
+    "wordCount": 512 ,
     "genre": ["Spring Boot API","REST"],
     "keywords":  null 
 }
@@ -547,7 +547,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2022-11-27T00:00:00Z">Last Modified: Nov 27, 2022</time>
+	<time class="meta__text" datetime="2026-08-30T00:00:00Z">Last Modified: Aug 30, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -568,6 +568,7 @@
         <li></li>
       </ul>
     </li>
+    <li><a href="#debugging-see-the-real-error-instead-of-just-hiding-the-page">Debugging: See the Real Error Instead of Just Hiding the Page</a></li>
   </ul>
 </nav>
 	</div>
@@ -634,7 +635,20 @@
 </span></span></span><span class="line"><span class="cl"><span class="nt">spring</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">autoconfigure</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">exclude</span><span class="p">:</span><span class="w"> </span><span class="l">org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration</span><span class="w">
-</span></span></span></code></pre></div>
+</span></span></span></code></pre></div><h2 id="debugging-see-the-real-error-instead-of-just-hiding-the-page">Debugging: See the Real Error Instead of Just Hiding the Page</h2>
+<p>Disabling the Whitelabel page only removes the generic page — it doesn&rsquo;t tell you <em>why</em> the request failed. If you got here because your app is throwing an unexpected error, you usually want the actual exception message and stack trace, not just a different-looking blank error.</p>
+<p>By default, Spring Boot deliberately hides these details for security reasons — leaking a stack trace or exception message to a client can expose internal implementation details. Since Spring Boot 2.3, <code>server.error.include-message</code> and <code>server.error.include-stacktrace</code> both default to <code>never</code>, and this hasn&rsquo;t changed in Spring Boot 3.x.</p>
+<p>To see them for local debugging, set:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-properties" data-lang="properties"><span class="line"><span class="cl"><span class="na">server.error.include-message</span> <span class="o">=</span> <span class="s">always</span>
+</span></span><span class="line"><span class="cl"><span class="na">server.error.include-stacktrace</span> <span class="o">=</span> <span class="s">always</span>
+</span></span><span class="line"><span class="cl"><span class="na">server.error.include-binding-errors</span> <span class="o">=</span> <span class="s">always</span>
+</span></span></code></pre></div><p>Each of these properties accepts one of three values:</p>
+<ul>
+<li><code>never</code> — the attribute is never included (the default)</li>
+<li><code>always</code> — the attribute is always included</li>
+<li><code>on-param</code> — the attribute is included only when the request has a matching query parameter (e.g. <code>?trace=true</code>), which is a safer middle ground for a shared/staging environment than leaving it on <code>always</code></li>
+</ul>
+<p><strong>Never set these to <code>always</code> in production.</strong> Use <code>on-param</code> if you need occasional access to the details on a shared environment, and keep production defaulted to <code>never</code> so you don&rsquo;t leak stack traces to end users.</p>
 		</div>
 		<footer class="post__footer">
 			
