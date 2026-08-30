@@ -1,4 +1,5 @@
 User-Agent: *
 Disallow: /page/*
+Disallow: /search/
 
 Sitemap: https://codingnconcepts.com/sitemap.xml
