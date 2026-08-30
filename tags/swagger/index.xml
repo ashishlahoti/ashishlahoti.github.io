@@ -6,6 +6,7 @@
     <description>Recent content in Swagger on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>CodingNConcepts</copyright>
     <lastBuildDate>Fri, 25 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/swagger/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>RESTful API documentation using OpenAPI</title>

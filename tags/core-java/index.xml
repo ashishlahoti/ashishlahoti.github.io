@@ -6,6 +6,7 @@
     <description>Recent content in Core Java on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>CodingNConcepts</copyright>
     <lastBuildDate>Sun, 12 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/core-java/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java Regex to Validate IPv4 Address</title>

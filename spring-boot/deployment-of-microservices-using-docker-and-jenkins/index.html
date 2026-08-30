@@ -4,8 +4,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="color-scheme" content="light dark">
 	<title>Deployment of Spring Boot Microservices using Docker and Jenkins - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
 	<meta name="description" content="Automate the deployment of Spring Boot based microservices using Docker, Jenkins and Gradle">
 	<meta property="og:title" content="Deployment of Spring Boot Microservices using Docker and Jenkins" />
 <meta property="og:description" content="Automate the deployment of Spring Boot based microservices using Docker, Jenkins and Gradle" />
@@ -23,15 +25,17 @@
 <meta property="article:tag" content="Docker" />
 <meta property="article:tag" content="Jenkins" />
 <meta property="fb:admins" content="177784346770196" />
-	<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://codingnconcepts.com/img/logo/springboot.png"/>
-
-<meta name="twitter:title" content="Deployment of Spring Boot Microservices using Docker and Jenkins"/>
-<meta name="twitter:description" content="Automate the deployment of Spring Boot based microservices using Docker, Jenkins and Gradle"/>
+	
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://codingnconcepts.com/img/logo/springboot.png">
+	<meta name="twitter:title" content="Deployment of Spring Boot Microservices using Docker and Jenkins">
+	<meta name="twitter:description" content="Automate the deployment of Spring Boot based microservices using Docker, Jenkins and Gradle">
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Rowdies">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@600;700;800&display=swap">
 	<link rel="stylesheet" href="/css/style.css">
 	
 	
@@ -110,6 +114,10 @@
 				<div class="logo__tagline">Ashish Lahoti&#39;s Technical Blog</div>
 			</a>
 		</div>
+		<form class="header-search" role="search" method="get" action="https://codingnconcepts.com/search">
+			<label class="menu__text--sr" for="headerSearchInput">Find related posts&hellip;</label>
+			<input class="header-search__field" id="headerSearchInput" type="search" placeholder="Find related posts&hellip;" name="s" aria-label="Find related posts">
+		</form>
 		
 <nav class="menu">
 	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
@@ -117,9 +125,10 @@
 	</button>
 	<ul class="menu__list">
 		<li class="menu__item">
-			<a class="menu__link" href="/">
+			<a class="menu__link menu__link--icon" href="/" title="Home">
 				
-				<span class="menu__text">Home</span>
+				<svg class="menu__home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5 10v9.5a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"></path></svg>
+				<span class="menu__text menu__text--sr">Home</span>
 				
 			</a>
 		</li>
@@ -494,8 +503,13 @@
 	</ul>
 </nav>
 
+		<button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+			<svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+			<svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+		</button>
 	</div>
 </header>
+		
 		<div class="wrapper flex">
 			<div class="primary">
 			
@@ -508,7 +522,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2021-10-31T00:00:00Z">Last Modified: October 31, 2021</time>
+	<time class="meta__text" datetime="2021-10-31T00:00:00Z">Last Modified: Oct 31, 2021</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -517,8 +531,8 @@
 	</span>
 </div></div>
 		</header>
-<div class="post__toc toc">
-	<div class="toc__title">Page content</div>
+<details class="post__toc toc" open>
+	<summary class="toc__title">Page content</summary>
 	<div class="toc__menu">
 		<nav id="TableOfContents">
   <ul>
@@ -543,7 +557,7 @@
   </ul>
 </nav>
 	</div>
-</div>
+</details>
 <div class="content post__content clearfix">
 			<p>In this article, we&rsquo;ll learn how to automate the build &amp; deployment of Spring boot based microservices using Docker, Jenkins, Gradle and Git.</p>
 <h2 id="overview">Overview</h2>
@@ -560,9 +574,9 @@
 <p>We&rsquo;re created our two Spring boot based microservices in a single GitHub repository <a href="https://github.com/ashishlahoti/springboot-microservices">github/springboot-microservices</a> as modules also called as <a href="https://www.atlassian.com/git/tutorials/monorepos">Git Monorepo</a>. You can clone or download this repository and setup in your favourite IDE to follow along.</p>
 <p>It is recommended to use Git Monorepo for smaller applications having 5 to 10 microservices for faster development and collaboration.</p>
 <figure class="center"><img src="/img/spring-boot/microservice-project-structure.png"
-         alt="Project structure for Spring Boot based Microservices" width="600"/><figcaption>
-            <p>Project structure for Spring Boot based Microservices</p>
-        </figcaption>
+			alt="Project structure for Spring Boot based Microservices" width="600"><figcaption>
+			<p>Project structure for Spring Boot based Microservices</p>
+		</figcaption>
 </figure>
 
 <p>About our project structure in the monorepo,</p>
@@ -577,22 +591,22 @@
 </ul>
 <p>Assume that our spring boot based microservices are running on following server port:</p>
 <table>
-<thead>
-<tr>
-<th style="text-align:left">Microservice</th>
-<th style="text-align:left">Running on..</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">product-service</td>
-<td style="text-align:left">http://localhost:8081</td>
-</tr>
-<tr>
-<td style="text-align:left">review-service</td>
-<td style="text-align:left">http://localhost:8082</td>
-</tr>
-</tbody>
+	<thead>
+			<tr>
+					<th style="text-align: left">Microservice</th>
+					<th style="text-align: left">Running on..</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">product-service</td>
+					<td style="text-align: left">http://localhost:8081</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">review-service</td>
+					<td style="text-align: left">http://localhost:8082</td>
+			</tr>
+	</tbody>
 </table>
 <p>We can configure the port for each microservice using <code>server.port</code> property in <code>application.yml</code> file.</p>
 <p>Let&rsquo;s deep dive into the automation of build and deployment of these microservices.</p>
@@ -600,14 +614,14 @@
 <p>Dockerfile is essentially a set of instruction describing how to build a Docker image.</p>
 <p>We&rsquo;ve created a <strong>Dockerfile</strong> in our <code>product-service</code> project to dockerize our microservice:-</p>
 <span  style="color:blue">$springboot-microservices/product-service/Dockerfile</span>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> adoptopenjdk/openjdk11:alpine-jre</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ARG</span> APP_NAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;product-service&#34;</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ARG</span> APP_VERSION<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0.0.1&#34;</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ARG</span> JAR_FILE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/build/libs/</span><span style="color:#e6db74">${</span>APP_NAME<span style="color:#e6db74">}</span><span style="color:#e6db74">-</span><span style="color:#e6db74">${</span>APP_VERSION<span style="color:#e6db74">}</span><span style="color:#e6db74">.jar&#34;</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> <span style="color:#e6db74">${</span>JAR_FILE<span style="color:#e6db74">}</span> app.jar<span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ENTRYPOINT</span> [<span style="color:#e6db74">&#34;java&#34;</span>,<span style="color:#e6db74">&#34;-jar&#34;</span>, <span style="color:#e6db74">&#34;app.jar&#34;</span>]<span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl"><span class="k">FROM</span><span class="w"> </span><span class="s">adoptopenjdk/openjdk11:alpine-jre</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="k">ARG</span> <span class="nv">APP_NAME</span><span class="o">=</span><span class="s2">&#34;product-service&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="k">ARG</span> <span class="nv">APP_VERSION</span><span class="o">=</span><span class="s2">&#34;0.0.1&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="k">ARG</span> <span class="nv">JAR_FILE</span><span class="o">=</span><span class="s2">&#34;/build/libs/</span><span class="si">${</span><span class="nv">APP_NAME</span><span class="si">}</span><span class="s2">-</span><span class="si">${</span><span class="nv">APP_VERSION</span><span class="si">}</span><span class="s2">.jar&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="k">COPY</span> <span class="si">${</span><span class="nv">JAR_FILE</span><span class="si">}</span> app.jar<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="k">ENTRYPOINT</span> <span class="p">[</span><span class="s2">&#34;java&#34;</span><span class="p">,</span><span class="s2">&#34;-jar&#34;</span><span class="p">,</span> <span class="s2">&#34;app.jar&#34;</span><span class="p">]</span><span class="err">
 </span></span></span></code></pre></div><br/>
 <p>Let&rsquo;s understand the meaning of each instruction:-</p>
 <ul>
@@ -688,47 +702,47 @@ e2eb06d8af82: Layer already exists
 <p><a href="https://docs.docker.com/compose/">Docker Compose</a> is quite useful to build and run docker images of multiple microservices using single command.</p>
 <p>Let&rsquo;s create a Docker Compose configuration file <code>docker-compose.yaml</code> in the root directory <code>$springboot-microservices</code> to build and run our both microservices <code>product-service</code> and <code>review-service</code> using a single command:-</p>
 <span  style="color:blue">$springboot-microservices/docker-compose.yaml</span>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;3.8&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">services</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">product-service</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">com.example/product-service:latest</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">product-service</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">build</span>:
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">context</span>: <span style="color:#ae81ff">./product-service</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">args</span>:
-</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">APP_NAME=product-service</span>
-</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">APP_VERSION=0.0.1</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">SPRING_PROFILES_ACTIVE</span>: <span style="color:#ae81ff">dev</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">expose</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">8081</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">8081</span>:<span style="color:#ae81ff">8081</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">review-service</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">com.example/review-service:latest</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">review-service</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">build</span>:
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">context</span>: <span style="color:#ae81ff">./review-service</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">args</span>:
-</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">APP_NAME=review-service</span>
-</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">APP_VERSION=0.0.1</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">SPRING_PROFILES_ACTIVE</span>: <span style="color:#ae81ff">dev</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">expose</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">8082</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">8082</span>:<span style="color:#ae81ff">8082</span>
-</span></span></code></pre></div><p>You can use remote image <code>aklahoti/product-service/0.0.1</code> instead of local image <code>com.example/product-service:latest</code> in docker-compose.yaml as well.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;3.8&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">product-service</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">com.example/product-service:latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">product-service</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="l">./product-service</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">args</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">APP_NAME=product-service</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">APP_VERSION=0.0.1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">SPRING_PROFILES_ACTIVE</span><span class="p">:</span><span class="w"> </span><span class="l">dev</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">expose</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="m">8081</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="m">8081</span><span class="p">:</span><span class="m">8081</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">review-service</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">com.example/review-service:latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">review-service</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="l">./review-service</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">args</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">APP_NAME=review-service</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="l">APP_VERSION=0.0.1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">SPRING_PROFILES_ACTIVE</span><span class="p">:</span><span class="w"> </span><span class="l">dev</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">expose</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="m">8082</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="m">8082</span><span class="p">:</span><span class="m">8082</span><span class="w">
+</span></span></span></code></pre></div><p>You can use remote image <code>aklahoti/product-service/0.0.1</code> instead of local image <code>com.example/product-service:latest</code> in docker-compose.yaml as well.</p>
 <br/>
 <p>Once Docker Compose configuration is in place, You can build and run the docker images of both the microservices using single command:-</p>
 <pre tabindex="0"><code><span  style="color:blue">$springboot-microservices %</span>  docker-compose up
 </code></pre><br/>
 <p>You will see that images for both the microservices are created with name <code>com.example/product-service</code> and <code>com.example/review-service</code> and docker containers are up and running <em>(showing IN USE)</em> for both the microservices at port <code>8081</code> and <code>8082</code> respectively in Docker Desktop&rsquo;s <strong>images</strong> menu like this:-</p>
 <figure class="center"><img src="/img/spring-boot/docker-desktop.png"
-         alt="Docker Desktop" width="1200"/><figcaption>
-            <p>Docker Desktop</p>
-        </figcaption>
+			alt="Docker Desktop" width="1200"><figcaption>
+			<p>Docker Desktop</p>
+		</figcaption>
 </figure>
 
 <p>You can access the running Docker containers from Docker Desktop&rsquo;s <strong>Containers/Apps</strong> menu.</p>
@@ -739,21 +753,21 @@ e2eb06d8af82: Layer already exists
 <br/>
 <h5 id="gradle-plugin-for-docker">Gradle Plugin for Docker</h5>
 <p>For this, we are going to use <a href="https://github.com/palantir/gradle-docker">Palantir Gradle Docker plugin</a> which expose useful gradle tasks like <code>docker</code> to build docker image and <code>dockerRun</code> to run it.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gradle" data-lang="gradle"><span style="display:flex;"><span>plugins <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    id <span style="color:#e6db74">&#39;com.palantir.docker&#39;</span> version <span style="color:#e6db74">&#39;0.26.0&#39;</span>
-</span></span><span style="display:flex;"><span>    id <span style="color:#e6db74">&#39;com.palantir.docker-run&#39;</span> version <span style="color:#e6db74">&#39;0.26.0&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl"><span class="n">plugins</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">id</span> <span class="s1">&#39;com.palantir.docker&#39;</span> <span class="n">version</span> <span class="s1">&#39;0.26.0&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">id</span> <span class="s1">&#39;com.palantir.docker-run&#39;</span> <span class="n">version</span> <span class="s1">&#39;0.26.0&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
 </span></span></code></pre></div><br/>
 <h5 id="build-docker-image-using-gradle">Build Docker image using Gradle</h5>
 <p>We provide additional configuration to <code>docker</code> gradle task to describe, how to build docker image:-</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gradle" data-lang="gradle"><span style="display:flex;"><span>group <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;com.example&#39;</span>
-</span></span><span style="display:flex;"><span>String imageName <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;${project.group}/${project.name}&#34;</span>
-</span></span><span style="display:flex;"><span>docker <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    dockerfile project<span style="color:#f92672">.</span><span style="color:#a6e22e">file</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;Dockerfile&#39;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>    name imageName
-</span></span><span style="display:flex;"><span>    files bootJar<span style="color:#f92672">.</span><span style="color:#a6e22e">archiveFile</span><span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">()</span>
-</span></span><span style="display:flex;"><span>    buildArgs<span style="color:#f92672">([</span><span style="color:#e6db74">&#39;JAR_FILE&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;${bootJar.archiveFileName.get()}&#34;</span><span style="color:#f92672">])</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl"><span class="n">group</span> <span class="o">=</span> <span class="s1">&#39;com.example&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">String</span> <span class="n">imageName</span> <span class="o">=</span> <span class="s2">&#34;${project.group}/${project.name}&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">docker</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dockerfile</span> <span class="n">project</span><span class="o">.</span><span class="na">file</span><span class="o">(</span><span class="s1">&#39;Dockerfile&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">name</span> <span class="n">imageName</span>
+</span></span><span class="line"><span class="cl">    <span class="n">files</span> <span class="n">bootJar</span><span class="o">.</span><span class="na">archiveFile</span><span class="o">.</span><span class="na">get</span><span class="o">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">buildArgs</span><span class="o">([</span><span class="s1">&#39;JAR_FILE&#39;</span><span class="o">:</span> <span class="s2">&#34;${bootJar.archiveFileName.get()}&#34;</span><span class="o">])</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
 </span></span></code></pre></div><p>Let&rsquo;s understand the configuration:-</p>
 <ul>
 <li><strong>imageName</strong> is a variable to be used at multiple places, in this case define the name of the docker image i.e. <em>&ldquo;com.example/product-service&rdquo;</em></li>
@@ -769,15 +783,15 @@ e2eb06d8af82: Layer already exists
 <br/>
 <h5 id="run-docker-image-using-gradle">Run Docker image using Gradle</h5>
 <p>We provide additional configuration to <code>dockerRun</code> gradle task to describe, how to run docker container from image:-</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gradle" data-lang="gradle"><span style="display:flex;"><span>String imageName <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;${project.group}/${project.name}&#34;</span>
-</span></span><span style="display:flex;"><span>dockerRun <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    name <span style="color:#e6db74">&#34;${project.name}-container&#34;</span>
-</span></span><span style="display:flex;"><span>    image imageName
-</span></span><span style="display:flex;"><span>    ports <span style="color:#e6db74">&#39;8081:8081&#39;</span>
-</span></span><span style="display:flex;"><span>    env <span style="color:#e6db74">&#39;SPRING_PROFILES_ACTIVE&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;dev&#39;</span>
-</span></span><span style="display:flex;"><span>    daemonize <span style="color:#66d9ef">true</span>
-</span></span><span style="display:flex;"><span>    clean <span style="color:#66d9ef">true</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl"><span class="n">String</span> <span class="n">imageName</span> <span class="o">=</span> <span class="s2">&#34;${project.group}/${project.name}&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">dockerRun</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">name</span> <span class="s2">&#34;${project.name}-container&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">image</span> <span class="n">imageName</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ports</span> <span class="s1">&#39;8081:8081&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">env</span> <span class="s1">&#39;SPRING_PROFILES_ACTIVE&#39;</span><span class="o">:</span> <span class="s1">&#39;dev&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">daemonize</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="n">clean</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
 </span></span></code></pre></div><p>Let&rsquo;s understand the configuration:-</p>
 <ul>
 <li><strong>dockerRun</strong> is the gradle task name, for which we are proving configuration</li>
@@ -794,65 +808,65 @@ e2eb06d8af82: Layer already exists
 <br/>
 <h5 id="buildgradle-1">build.gradle</h5>
 <p>A typical <strong>build.gradle</strong> with docker plugins and configurations looks like this:-</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-gradle" data-lang="gradle"><span style="display:flex;"><span>plugins <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    id <span style="color:#e6db74">&#39;org.springframework.boot&#39;</span> version <span style="color:#e6db74">&#39;2.5.0&#39;</span>
-</span></span><span style="display:flex;"><span>    id <span style="color:#e6db74">&#39;io.spring.dependency-management&#39;</span> version <span style="color:#e6db74">&#39;1.0.11.RELEASE&#39;</span>
-</span></span><span style="display:flex;"><span>    id <span style="color:#e6db74">&#39;java&#39;</span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span>    id <span style="color:#e6db74">&#39;com.palantir.docker&#39;</span> version <span style="color:#e6db74">&#39;0.26.0&#39;</span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span>    id <span style="color:#e6db74">&#39;com.palantir.docker-run&#39;</span> version <span style="color:#e6db74">&#39;0.26.0&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>group <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;com.example&#39;</span>
-</span></span><span style="display:flex;"><span>version <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0.0.1&#39;</span>
-</span></span><span style="display:flex;"><span>sourceCompatibility <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;11&#39;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>repositories <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    mavenCentral<span style="color:#f92672">()</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>ext <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    set<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;springCloudVersion&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;2020.0.3&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>dependencies <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    implementation <span style="color:#e6db74">&#39;org.springframework.boot:spring-boot-starter-web&#39;</span>
-</span></span><span style="display:flex;"><span>    implementation <span style="color:#e6db74">&#39;org.springframework.cloud:spring-cloud-starter-openfeign&#39;</span>
-</span></span><span style="display:flex;"><span>    implementation <span style="color:#e6db74">&#39;org.springdoc:springdoc-openapi-ui:latest.release&#39;</span>
-</span></span><span style="display:flex;"><span>    implementation <span style="color:#e6db74">&#39;commons-io:commons-io:2.6&#39;</span>
-</span></span><span style="display:flex;"><span>    implementation <span style="color:#a6e22e">project</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;:common-library&#39;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    testImplementation <span style="color:#e6db74">&#39;org.springframework.boot:spring-boot-starter-test&#39;</span>
-</span></span><span style="display:flex;"><span>    testImplementation <span style="color:#e6db74">&#39;org.springframework.cloud:spring-cloud-starter-contract-stub-runner&#39;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    compileOnly <span style="color:#e6db74">&#39;org.projectlombok:lombok:1.18.20&#39;</span>
-</span></span><span style="display:flex;"><span>    annotationProcessor <span style="color:#e6db74">&#39;org.projectlombok:lombok:1.18.20&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>dependencyManagement <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    imports <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        mavenBom <span style="color:#e6db74">&#34;org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>test <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    useJUnitPlatform<span style="color:#f92672">()</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span>String imageName <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;${project.group}/${project.name}&#34;</span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span>docker <span style="color:#f92672">{</span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span>    dockerfile <span style="color:#a6e22e">file</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;Dockerfile&#39;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span>    name imageName
-</span></span><span style="display:flex; background-color:#3c3d38"><span>    files bootJar<span style="color:#f92672">.</span><span style="color:#a6e22e">archiveFile</span><span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">()</span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span>    buildArgs<span style="color:#f92672">([</span><span style="color:#e6db74">&#39;JAR_FILE&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;${bootJar.archiveFileName.get()}&#34;</span><span style="color:#f92672">])</span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span>dockerRun <span style="color:#f92672">{</span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span>    name <span style="color:#e6db74">&#34;${project.name}-container&#34;</span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span>    image imageName
-</span></span><span style="display:flex; background-color:#3c3d38"><span>    ports <span style="color:#e6db74">&#39;8081:8081&#39;</span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span>    env <span style="color:#e6db74">&#39;SPRING_PROFILES_ACTIVE&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;dev&#39;</span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span>    daemonize <span style="color:#66d9ef">true</span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span>    clean <span style="color:#66d9ef">false</span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span><span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl"><span class="n">plugins</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">id</span> <span class="s1">&#39;org.springframework.boot&#39;</span> <span class="n">version</span> <span class="s1">&#39;2.5.0&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">id</span> <span class="s1">&#39;io.spring.dependency-management&#39;</span> <span class="n">version</span> <span class="s1">&#39;1.0.11.RELEASE&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">id</span> <span class="s1">&#39;java&#39;</span>
+</span></span><span class="line hl"><span class="cl">    <span class="n">id</span> <span class="s1">&#39;com.palantir.docker&#39;</span> <span class="n">version</span> <span class="s1">&#39;0.26.0&#39;</span>
+</span></span><span class="line hl"><span class="cl">    <span class="n">id</span> <span class="s1">&#39;com.palantir.docker-run&#39;</span> <span class="n">version</span> <span class="s1">&#39;0.26.0&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">group</span> <span class="o">=</span> <span class="s1">&#39;com.example&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;0.0.1&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">sourceCompatibility</span> <span class="o">=</span> <span class="s1">&#39;11&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">repositories</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">mavenCentral</span><span class="o">()</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ext</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">set</span><span class="o">(</span><span class="s1">&#39;springCloudVersion&#39;</span><span class="o">,</span> <span class="s2">&#34;2020.0.3&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">dependencies</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">implementation</span> <span class="s1">&#39;org.springframework.boot:spring-boot-starter-web&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">implementation</span> <span class="s1">&#39;org.springframework.cloud:spring-cloud-starter-openfeign&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">implementation</span> <span class="s1">&#39;org.springdoc:springdoc-openapi-ui:latest.release&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">implementation</span> <span class="s1">&#39;commons-io:commons-io:2.6&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">implementation</span> <span class="nf">project</span><span class="o">(</span><span class="s1">&#39;:common-library&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">testImplementation</span> <span class="s1">&#39;org.springframework.boot:spring-boot-starter-test&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">testImplementation</span> <span class="s1">&#39;org.springframework.cloud:spring-cloud-starter-contract-stub-runner&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">compileOnly</span> <span class="s1">&#39;org.projectlombok:lombok:1.18.20&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">annotationProcessor</span> <span class="s1">&#39;org.projectlombok:lombok:1.18.20&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">dependencyManagement</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">imports</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">mavenBom</span> <span class="s2">&#34;org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">test</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">useJUnitPlatform</span><span class="o">()</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line hl"><span class="cl"><span class="n">String</span> <span class="n">imageName</span> <span class="o">=</span> <span class="s2">&#34;${project.group}/${project.name}&#34;</span>
+</span></span><span class="line hl"><span class="cl"><span class="n">docker</span> <span class="o">{</span>
+</span></span><span class="line hl"><span class="cl">    <span class="n">dockerfile</span> <span class="nf">file</span><span class="o">(</span><span class="s1">&#39;Dockerfile&#39;</span><span class="o">)</span>
+</span></span><span class="line hl"><span class="cl">    <span class="n">name</span> <span class="n">imageName</span>
+</span></span><span class="line hl"><span class="cl">    <span class="n">files</span> <span class="n">bootJar</span><span class="o">.</span><span class="na">archiveFile</span><span class="o">.</span><span class="na">get</span><span class="o">()</span>
+</span></span><span class="line hl"><span class="cl">    <span class="n">buildArgs</span><span class="o">([</span><span class="s1">&#39;JAR_FILE&#39;</span><span class="o">:</span> <span class="s2">&#34;${bootJar.archiveFileName.get()}&#34;</span><span class="o">])</span>
+</span></span><span class="line hl"><span class="cl"><span class="o">}</span>
+</span></span><span class="line hl"><span class="cl"><span class="n">dockerRun</span> <span class="o">{</span>
+</span></span><span class="line hl"><span class="cl">    <span class="n">name</span> <span class="s2">&#34;${project.name}-container&#34;</span>
+</span></span><span class="line hl"><span class="cl">    <span class="n">image</span> <span class="n">imageName</span>
+</span></span><span class="line hl"><span class="cl">    <span class="n">ports</span> <span class="s1">&#39;8081:8081&#39;</span>
+</span></span><span class="line hl"><span class="cl">    <span class="n">env</span> <span class="s1">&#39;SPRING_PROFILES_ACTIVE&#39;</span><span class="o">:</span> <span class="s1">&#39;dev&#39;</span>
+</span></span><span class="line hl"><span class="cl">    <span class="n">daemonize</span> <span class="kc">true</span>
+</span></span><span class="line hl"><span class="cl">    <span class="n">clean</span> <span class="kc">false</span>
+</span></span><span class="line hl"><span class="cl"><span class="o">}</span>
 </span></span></code></pre></div><h2 id="jenkinsfile">Jenkinsfile</h2>
 <p>Jenkinsfile is essentially defines the automation pipeline with various stages such as build, test, dockerize, run docker container etc. It is used by Jenkins to trigger a job as per the defined pipeline.</p>
 <p>Let&rsquo;s create <strong>Jenkinsfile</strong> in the root of <code>product-service</code> project:-</p>
@@ -933,9 +947,9 @@ reload
 <li>Click on <strong>Save</strong>. Congrats your pipeline is created.</li>
 </ol>
 <figure class="center"><img src="/img/spring-boot/create-jenkins-pipeline-from-jenkinsfile.png"
-         alt="Create Jenkins pipeline from Jenkinsfile" width="1000"/><figcaption>
-            <p>Create Jenkins pipeline from Jenkinsfile</p>
-        </figcaption>
+			alt="Create Jenkins pipeline from Jenkinsfile" width="1000"><figcaption>
+			<p>Create Jenkins pipeline from Jenkinsfile</p>
+		</figcaption>
 </figure>
 
 <br/>
@@ -944,9 +958,9 @@ reload
 <p>Click on the <strong>Build Now</strong> option to run Jenkins pipeline. You will see your build pipeline and stages like this:-</p>
 <p><em>Note: Make sure that Docker Desktop is running in the background in your local machine otherwise build will fail and say that docker daemon is not running.</em></p>
 <figure class="center"><img src="/img/spring-boot/build-jenkins-pipeline.png"
-         alt="Build stages of Jenkins pipeline" width="1000"/><figcaption>
-            <p>Build stages of Jenkins pipeline</p>
-        </figcaption>
+			alt="Build stages of Jenkins pipeline" width="1000"><figcaption>
+			<p>Build stages of Jenkins pipeline</p>
+		</figcaption>
 </figure>
 
 <p>You will see that once the build is successful, docker container for microservices will be running in your local machine. You can verify them using Docker Desktop.</p>
@@ -978,8 +992,9 @@ reload
     <ul class="share-icons">
       
       <li>
-        <a href="https://www.buymeacoffee.com/codingnconcepts" target="_blank">
+        <a href="https://www.buymeacoffee.com/codingnconcepts" target="_blank" rel="noopener" aria-label="Buy me a coffee" class="share-btn bmc">
           <svg class="widget-social__link-button icon icon-category" fill="none" height="68" viewBox="0 0 184 68" width="184" xmlns="http://www.w3.org/2000/svg"><rect fill="#fddc48" height="47" rx="9" width="182" x="1" y="11"/><g stroke-width="1.5"><path d="m24.9312 24.2374-.3942 1.0203h1.0938 14.9077 1.0938l-.3942-1.0203-1.3553-3.5077-.1853-.4797h-.5143-12.1972-.5142l-.1854.4797z" fill="#fff" stroke="#000"/><path d="m41.4154 26.7-3.5077 22.8" stroke="#f69935"/><path d="m28.2615 49.5-3.9461-23.2385h17.9769l-3.5077 23.2385z" stroke="#000"/><path d="m25.1923 42.0462-1.7538-9.6462h19.7307l-1.7538 9.6462z" fill="#fff" stroke="#000"/><path d="m23 26.2615v-2.6307h20.1692v2.6307z" fill="#fff" stroke="#000"/></g><path d="m55.5361 40v-9.9531h3.4864c1.2076 0 2.1237.2324 2.748.6972.6244.4603.9365 1.1371.9365 2.0303 0 .4876-.1253.9183-.3759 1.292-.2507.3691-.5993.6403-1.0459.8135.5104.1276.9114.3851 1.2031.7724.2962.3874.4443.8614.4443 1.4219 0 .957-.3053 1.6817-.916 2.1738-.6107.4922-1.4811.7429-2.6113.752zm2.0508-4.334v2.6865h1.7569c.483 0 .859-.1139 1.1279-.3418.2734-.2324.4101-.5514.4101-.957 0-.9114-.4716-1.374-1.415-1.3877zm0-1.4492h1.5176c1.0345-.0182 1.5517-.4307 1.5517-1.2373 0-.4512-.1321-.7747-.3964-.9707-.2598-.2005-.6722-.3008-1.2373-.3008h-1.4356zm11.1904 5.0312c-.4876.5925-1.1621.8887-2.0234.8887-.793 0-1.3991-.2278-1.8184-.6836-.4147-.4557-.6266-1.1233-.6357-2.0029v-4.8467h1.9756v4.7783c0 .7702.3509 1.1553 1.0527 1.1553.6699 0 1.1302-.2324 1.3809-.6973v-5.2363h1.9824v7.3965h-1.8594zm6.1661-2.0439 1.3671-4.6006h2.1192l-2.9736 8.5449-.1641.3897c-.4421.9661-1.1712 1.4492-2.1875 1.4492-.2871 0-.5788-.0433-.875-.1299v-1.497l.3008.0068c.3737 0 .6517-.057.834-.1709.1868-.1139.3326-.3031.4375-.5674l.2324-.6084-2.5908-7.417h2.1259zm9.6045-4.6006.0615.8272c.5241-.6426 1.2327-.9639 2.126-.9639.9524 0 1.6064.376 1.9619 1.1279.5195-.7519 1.2601-1.1279 2.2216-1.1279.8021 0 1.3991.2347 1.7911.7041.3919.4648.5879 1.1667.5879 2.1055v4.7236h-1.9825v-4.7168c0-.4193-.082-.7246-.2461-.916-.164-.196-.4534-.294-.8681-.294-.5925 0-1.0026.2826-1.2305.8477l.0068 5.0791h-1.9755v-4.71c0-.4283-.0844-.7382-.253-.9296-.1686-.1915-.4557-.2872-.8613-.2872-.5606 0-.9662.2325-1.2168.6973v5.2295h-1.9756v-7.3965zm13.6787 7.5332c-1.0847 0-1.9688-.3327-2.6524-.998-.679-.6654-1.0185-1.5518-1.0185-2.6592v-.1914c0-.7429.1435-1.4059.4306-1.9893.2871-.5879.6927-1.039 1.2168-1.3535.5287-.319 1.1302-.4785 1.8047-.4785 1.0117 0 1.807.319 2.3862.957.583.638.875 1.5427.875 2.7139v.8066h-4.7104c.0638.4831.2552.8705.5742 1.1621.3236.2917.7315.4375 1.2236.4375.7611 0 1.3558-.2757 1.7846-.8271l.97 1.0869c-.296.4193-.697.7474-1.2028.9844-.5059.2324-1.0664.3486-1.6816.3486zm-.2256-6.0703c-.392 0-.711.1322-.9571.3965-.2415.2643-.3964.6426-.4648 1.1348h2.748v-.1573c-.0091-.4375-.1276-.7747-.3554-1.0117-.2279-.2415-.5515-.3623-.9707-.3623zm12.168 5.9336c-.091-.1777-.157-.3988-.198-.6631-.479.5332-1.101.7998-1.867.7998-.724 0-1.326-.2096-1.804-.6289-.474-.4193-.711-.9479-.711-1.5859 0-.7839.289-1.3854.868-1.8047.583-.4193 1.424-.6312 2.522-.6358h.91v-.4238c0-.3418-.089-.6152-.267-.8203-.173-.2051-.449-.3076-.827-.3076-.333 0-.595.0797-.786.2392-.187.1596-.28.3783-.28.6563h-1.976c0-.4284.132-.8249.396-1.1895.265-.3645.638-.6494 1.122-.8545.483-.2096 1.025-.3144 1.626-.3144.912 0 1.634.2301 2.167.6904.538.4558.807 1.0983.807 1.9278v3.206c.005.7018.103 1.2328.294 1.5928v.1162zm-1.634-1.374c.292 0 .561-.0638.807-.1914.246-.1322.428-.3076.547-.5264v-1.2715h-.739c-.989 0-1.515.3418-1.579 1.0254l-.007.1162c0 .2461.087.4489.26.6084s.41.2393.711.2393zm11.416-.0821c.365 0 .661-.1002.889-.3007.228-.2006.346-.4672.355-.7998h1.853c-.005.5013-.141.9615-.41 1.3808-.269.4147-.638.7383-1.108.9707-.465.2279-.98.3418-1.545.3418-1.057 0-1.891-.3349-2.502-1.0049-.61-.6744-.916-1.6041-.916-2.789v-.1299c0-1.1393.303-2.0485.91-2.7275.606-.6791 1.437-1.0186 2.495-1.0186.925 0 1.665.2643 2.221.793.561.5241.846 1.2236.855 2.0986h-1.853c-.009-.3828-.127-.6927-.355-.9297-.228-.2415-.529-.3623-.902-.3623-.461 0-.809.1686-1.046.5059-.233.3326-.349.875-.349 1.6269v.2051c0 .7611.116 1.3079.349 1.6406.232.3327.585.499 1.059.499zm3.917-2.3105c0-.7337.141-1.3877.424-1.9619s.688-1.0186 1.217-1.333c.533-.3145 1.151-.4717 1.852-.4717.998 0 1.812.3053 2.441.916.633.6107.986 1.4401 1.059 2.4883l.014.5059c0 1.1347-.317 2.0462-.95 2.7343-.634.6836-1.484 1.0254-2.55 1.0254s-1.919-.3418-2.557-1.0254c-.633-.6836-.95-1.6133-.95-2.789zm1.976.1436c0 .7018.132 1.2395.396 1.6132.265.3692.643.5537 1.135.5537.479 0 .852-.1822 1.121-.5468.269-.3692.403-.9571.403-1.7637 0-.6882-.134-1.2214-.403-1.5996-.269-.3783-.647-.5674-1.135-.5674-.483 0-.856.1891-1.121.5674-.264.3737-.396.9547-.396 1.7432zm6.788 3.623v-5.9473h-1.101v-1.4492h1.101v-.6289c0-.8294.237-1.472.711-1.9277.478-.4603 1.146-.6905 2.003-.6905.273 0 .608.0456 1.005.1368l-.021 1.5312c-.164-.041-.365-.0615-.601-.0615-.743 0-1.115.3486-1.115 1.0459v.5947h1.47v1.4492h-1.47v5.9473zm5.017 0v-5.9473h-1.1v-1.4492h1.1v-.6289c0-.8294.237-1.472.711-1.9277.479-.4603 1.147-.6905 2.003-.6905.274 0 .609.0456 1.005.1368l-.02 1.5312c-.164-.041-.365-.0615-.602-.0615-.743 0-1.114.3486-1.114 1.0459v.5947h1.47v1.4492h-1.47v5.9473zm7.718.1367c-1.084 0-1.969-.3327-2.652-.998-.679-.6654-1.019-1.5518-1.019-2.6592v-.1914c0-.7429.144-1.4059.431-1.9893.287-.5879.693-1.039 1.217-1.3535.528-.319 1.13-.4785 1.804-.4785 1.012 0 1.807.319 2.386.957.584.638.875 1.5427.875 2.7139v.8066h-4.71c.064.4831.255.8705.574 1.1621.324.2917.732.4375 1.224.4375.761 0 1.356-.2757 1.784-.8271l.971 1.0869c-.296.4193-.697.7474-1.203.9844-.506.2324-1.067.3486-1.682.3486zm-.225-6.0703c-.392 0-.711.1322-.957.3965-.242.2643-.397.6426-.465 1.1348h2.748v-.1573c-.009-.4375-.128-.7747-.356-1.0117-.228-.2415-.551-.3623-.97-.3623zm7.799 6.0703c-1.084 0-1.968-.3327-2.652-.998-.679-.6654-1.018-1.5518-1.018-2.6592v-.1914c0-.7429.143-1.4059.43-1.9893.287-.5879.693-1.039 1.217-1.3535.529-.319 1.13-.4785 1.805-.4785 1.011 0 1.807.319 2.385.957.584.638.875 1.5427.875 2.7139v.8066h-4.71c.064.4831.256.8705.575 1.1621.323.2917.731.4375 1.223.4375.761 0 1.356-.2757 1.784-.8271l.971 1.0869c-.296.4193-.697.7474-1.203.9844-.506.2324-1.066.3486-1.682.3486zm-.225-6.0703c-.392 0-.711.1322-.957.3965-.242.2643-.397.6426-.465 1.1348h2.748v-.1573c-.009-.4375-.128-.7747-.355-1.0117-.228-.2415-.552-.3623-.971-.3623z" fill="#000"/><rect height="47" rx="9" stroke="#000" stroke-width="2" width="182" x="1" y="11"/></svg>
+          <p>Buy me a coffee</p>
         </a>
       </li>
 
@@ -1018,7 +1033,7 @@ reload
       <li>
         <a href="whatsapp://send?text=Deployment%20of%20Spring%20Boot%20Microservices%20using%20Docker%20and%20Jenkins%2c%20by%20Coding%20N%20Concepts%0aAutomate%20the%20deployment%20of%20Spring%20Boot%20based%20microservices%20using%20Docker%2c%20Jenkins%20and%20Gradle%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fdeployment-of-microservices-using-docker-and-jenkins%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
-          <p>Email</p>
+          <p>WhatsApp</p>
         </a>
       </li>
       
@@ -1038,18 +1053,16 @@ reload
 
 
 <div class="related_post_section">
-    <h2 class = "related_post_title">See Also</h2>
-    <ul class = "related_post">
+    <h2 class="related_post_title">See Also</h2>
+    <ul class="related_post">
         
-        <li><a href="/spring-boot/configure-springdoc-openapi/">RESTful API documentation using OpenAPI</a></li>
+        <li><a href="/spring-boot/configure-springdoc-openapi/"><img class="related_post__thumb" src="/img/logo/springboot.png" alt="" loading="lazy"><span class="related_post__title">RESTful API documentation using OpenAPI</span></a></li>
         
-        <li><a href="/spring-boot/change-default-feign-client-implementation/">Change Default Feign Client implementation in Spring Boot</a></li>
+        <li><a href="/spring-boot/change-default-feign-client-implementation/"><img class="related_post__thumb" src="/img/logo/springboot.png" alt="" loading="lazy"><span class="related_post__title">Change Default Feign Client implementation in Spring Boot</span></a></li>
         
-        <li><a href="/spring-boot/build-graphql-api-with-spring-boot/">Build GraphQL API with Spring Boot</a></li>
+        <li><a href="/spring-boot/build-graphql-api-with-spring-boot/"><img class="related_post__thumb" src="/img/logo/springboot.png" alt="" loading="lazy"><span class="related_post__title">Build GraphQL API with Spring Boot</span></a></li>
         
-        <li><a href="/spring-boot/jackson-json-request-response-mapping/">Jackson JSON Request and Response Mapping in Spring Boot</a></li>
-        
-        <li><a href="/spring-boot/spring-controller-vs-restcontroller/">Spring @Controller and @RestController</a></li>
+        <li><a href="/spring-boot/jackson-json-request-response-mapping/"><img class="related_post__thumb" src="/img/logo/springboot.png" alt="" loading="lazy"><span class="related_post__title">Jackson JSON Request and Response Mapping in Spring Boot</span></a></li>
         
     </ul>
 </div>
@@ -1093,14 +1106,7 @@ reload
 
 			</div>
 			
-			<aside class="adsbar"><div class="widget-search widget">
-	<form class="widget-search__form" role="search" method="get" action="https://codingnconcepts.com/search">
-		<label>
-			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="s" aria-label="SEARCH...">
-		</label>
-		<input class="widget-search__submit" type="submit" value="Search">
-	</form>
-</div>
+			<aside class="adsbar">
 <div class="widget-social widget">
 	<h4 class="widget-social__title widget__title">Follow Us</h4>
 	<div class="widget-social__content widget__content">
@@ -1207,11 +1213,11 @@ reload
 		
 		<div class="footer__copyright">
 			&copy; 2026 CodingNConcepts.
-			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>
 </footer>
 	</div>
 <script async defer src="/js/menu.js"></script>
+<script defer src="/js/theme-toggle.js"></script>
 </body>
 </html>

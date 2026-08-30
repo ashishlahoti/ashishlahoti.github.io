@@ -4,8 +4,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="color-scheme" content="light dark">
 	<title>Unicode Characters - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
 	<meta name="description" content="">
 	<meta property="og:title" content="Unicode Characters" />
 <meta property="og:description" content="Tool to copy special and fancy characters, symbols, emoji" />
@@ -18,13 +20,16 @@
 <meta property="article:publisher" content="https://www.facebook.com/codingnconcepts" />
 <meta property="article:section" content="tools" />
 <meta property="fb:admins" content="177784346770196" />
-	<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Unicode Characters"/>
-<meta name="twitter:description" content="Tool to copy special and fancy characters, symbols, emoji"/>
+	
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Unicode Characters">
+	<meta name="twitter:description" content="Tool to copy special and fancy characters, symbols, emoji">
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Rowdies">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@600;700;800&display=swap">
 	<link rel="stylesheet" href="/css/style.css">
 	
 	
@@ -103,6 +108,10 @@
 				<div class="logo__tagline">Ashish Lahoti&#39;s Technical Blog</div>
 			</a>
 		</div>
+		<form class="header-search" role="search" method="get" action="https://codingnconcepts.com/search">
+			<label class="menu__text--sr" for="headerSearchInput">Find related posts&hellip;</label>
+			<input class="header-search__field" id="headerSearchInput" type="search" placeholder="Find related posts&hellip;" name="s" aria-label="Find related posts">
+		</form>
 		
 <nav class="menu">
 	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
@@ -110,9 +119,10 @@
 	</button>
 	<ul class="menu__list">
 		<li class="menu__item">
-			<a class="menu__link" href="/">
+			<a class="menu__link menu__link--icon" href="/" title="Home">
 				
-				<span class="menu__text">Home</span>
+				<svg class="menu__home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5 10v9.5a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"></path></svg>
+				<span class="menu__text menu__text--sr">Home</span>
 				
 			</a>
 		</li>
@@ -487,8 +497,13 @@
 	</ul>
 </nav>
 
+		<button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+			<svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+			<svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+		</button>
 	</div>
 </header>
+		
 		<div class="wrapper flex">
 			<div class="primary">
 			
@@ -3775,14 +3790,7 @@
 
 			</div>
 			
-			<aside class="adsbar"><div class="widget-search widget">
-	<form class="widget-search__form" role="search" method="get" action="https://codingnconcepts.com/search">
-		<label>
-			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="s" aria-label="SEARCH...">
-		</label>
-		<input class="widget-search__submit" type="submit" value="Search">
-	</form>
-</div>
+			<aside class="adsbar">
 <div class="widget-social widget">
 	<h4 class="widget-social__title widget__title">Follow Us</h4>
 	<div class="widget-social__content widget__content">
@@ -3889,11 +3897,11 @@
 		
 		<div class="footer__copyright">
 			&copy; 2026 CodingNConcepts.
-			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>
 </footer>
 	</div>
 <script async defer src="/js/menu.js"></script>
+<script defer src="/js/theme-toggle.js"></script>
 </body>
 </html>

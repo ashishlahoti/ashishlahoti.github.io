@@ -4,8 +4,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="color-scheme" content="light dark">
 	<title>Top Spring Interview Questions - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
 	<meta name="description" content="Frequently asked Spring Framework Interview Questions on Spring Core, Bean, IoC, MVC, JDBC, AOP, Annotations, Autowiring, etc.">
 	<meta property="og:title" content="Top Spring Interview Questions" />
 <meta property="og:description" content="Frequently asked Spring Framework Interview Questions on Spring Core, Bean, IoC, MVC, JDBC, AOP, Annotations, Autowiring, etc." />
@@ -22,15 +24,17 @@
 <meta property="article:tag" content="Interview Q&amp;A" />
 <meta property="article:tag" content="Spring Q&amp;A" />
 <meta property="fb:admins" content="177784346770196" />
-	<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://codingnconcepts.com/img/interview/interview-questions-spring.png"/>
-
-<meta name="twitter:title" content="Top Spring Interview Questions"/>
-<meta name="twitter:description" content="Frequently asked Spring Framework Interview Questions on Spring Core, Bean, IoC, MVC, JDBC, AOP, Annotations, Autowiring, etc."/>
+	
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://codingnconcepts.com/img/interview/interview-questions-spring.png">
+	<meta name="twitter:title" content="Top Spring Interview Questions">
+	<meta name="twitter:description" content="Frequently asked Spring Framework Interview Questions on Spring Core, Bean, IoC, MVC, JDBC, AOP, Annotations, Autowiring, etc.">
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Rowdies">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@600;700;800&display=swap">
 	<link rel="stylesheet" href="/css/style.css">
 	
 	
@@ -109,6 +113,10 @@
 				<div class="logo__tagline">Ashish Lahoti&#39;s Technical Blog</div>
 			</a>
 		</div>
+		<form class="header-search" role="search" method="get" action="https://codingnconcepts.com/search">
+			<label class="menu__text--sr" for="headerSearchInput">Find related posts&hellip;</label>
+			<input class="header-search__field" id="headerSearchInput" type="search" placeholder="Find related posts&hellip;" name="s" aria-label="Find related posts">
+		</form>
 		
 <nav class="menu">
 	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
@@ -116,9 +124,10 @@
 	</button>
 	<ul class="menu__list">
 		<li class="menu__item">
-			<a class="menu__link" href="/">
+			<a class="menu__link menu__link--icon" href="/" title="Home">
 				
-				<span class="menu__text">Home</span>
+				<svg class="menu__home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5 10v9.5a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"></path></svg>
+				<span class="menu__text menu__text--sr">Home</span>
 				
 			</a>
 		</li>
@@ -493,8 +502,13 @@
 	</ul>
 </nav>
 
+		<button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+			<svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+			<svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+		</button>
 	</div>
 </header>
+		
 		<div class="wrapper flex">
 			<div class="primary">
 			
@@ -507,7 +521,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2020-10-01T00:00:00Z">Last Modified: October 01, 2020</time>
+	<time class="meta__text" datetime="2020-10-01T00:00:00Z">Last Modified: Oct 01, 2020</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -516,8 +530,8 @@
 	</span>
 </div></div>
 		</header>
-<div class="post__toc toc">
-	<div class="toc__title">Page content</div>
+<details class="post__toc toc" open>
+	<summary class="toc__title">Page content</summary>
 	<div class="toc__menu">
 		<nav id="TableOfContents">
   <ul>
@@ -570,7 +584,7 @@
   </ul>
 </nav>
 	</div>
-</div>
+</details>
 <div class="content post__content clearfix">
 			<p>Spring Framework is widely used by Java developers for enterprise application development and most frequent topic to be asked in interviews from Java backend developers in 2026.</p>
 <p>I have spent quite some time to prepare a very comprehensive list of questions and answers being asked in spring framework interview. I hope, this will benefit both freshers as well as experienced developers in their interview preparation.<br>
@@ -593,9 +607,9 @@
 </ul>
 <h3 id="q3-what-are-the-modules-available-in-spring-framework">Q3. What are the Modules available in Spring Framework?</h3>
 <figure class="center"><img src="/img/interview/spring-modules-overview.png"
-         alt="Spring Framework Overview"/><figcaption>
-            <p>Spring Framework Overview</p>
-        </figcaption>
+			alt="Spring Framework Overview"><figcaption>
+			<p>Spring Framework Overview</p>
+		</figcaption>
 </figure>
 
 <h5 id="1-core-container">1. Core Container</h5>
@@ -665,39 +679,39 @@ The Spring Framework DI provides us the way to describe the object and its depen
 <p>Spring framework provides three ways for dependency injection:-</p>
 <h4 id="1-constructor-based-dependency-injection">1. Constructor-Based Dependency Injection</h4>
 <p>Spring use constructor to inject dependency. It is recommended to use for mandatory dependencies.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AppConfig</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Bean</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Item <span style="color:#a6e22e">item1</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ItemImpl1<span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Bean</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Store <span style="color:#a6e22e">store</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Store<span style="color:#f92672">(</span>item1<span style="color:#f92672">());</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;item1&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;com.abc.ItemImpl1&#34;</span> <span style="color:#f92672">/&gt;</span> 
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;store&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;com.abc.Store&#34;</span><span style="color:#f92672">&gt;</span> 
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;constructor-arg</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;ItemImpl1&#34;</span> <span style="color:#a6e22e">index=</span><span style="color:#e6db74">&#34;0&#34;</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;item&#34;</span> <span style="color:#a6e22e">ref=</span><span style="color:#e6db74">&#34;item1&#34;</span> <span style="color:#f92672">/&gt;</span> 
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/bean&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AppConfig</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Bean</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Item</span><span class="w"> </span><span class="nf">item1</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ItemImpl1</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Bean</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Store</span><span class="w"> </span><span class="nf">store</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Store</span><span class="p">(</span><span class="n">item1</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&#34;item1&#34;</span> <span class="na">class=</span><span class="s">&#34;com.abc.ItemImpl1&#34;</span> <span class="nt">/&gt;</span> 
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&#34;store&#34;</span> <span class="na">class=</span><span class="s">&#34;com.abc.Store&#34;</span><span class="nt">&gt;</span> 
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;constructor-arg</span> <span class="na">type=</span><span class="s">&#34;ItemImpl1&#34;</span> <span class="na">index=</span><span class="s">&#34;0&#34;</span> <span class="na">name=</span><span class="s">&#34;item&#34;</span> <span class="na">ref=</span><span class="s">&#34;item1&#34;</span> <span class="nt">/&gt;</span> 
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/bean&gt;</span>
 </span></span></code></pre></div><h4 id="2-setter-based-dependency-injection">2. Setter-Based Dependency Injection</h4>
 <p>Spring use setter method to inject dependency. It is recommended to use for optional dependencies.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Bean</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> Store <span style="color:#a6e22e">store</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    Store store <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Store<span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>    store<span style="color:#f92672">.</span><span style="color:#a6e22e">setItem</span><span style="color:#f92672">(</span>item1<span style="color:#f92672">());</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> store<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;store&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;com.abc.Store&#34;</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;item&#34;</span> <span style="color:#a6e22e">ref=</span><span style="color:#e6db74">&#34;item1&#34;</span> <span style="color:#f92672">/&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/bean&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Bean</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="n">Store</span><span class="w"> </span><span class="nf">store</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">Store</span><span class="w"> </span><span class="n">store</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Store</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">store</span><span class="p">.</span><span class="na">setItem</span><span class="p">(</span><span class="n">item1</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">store</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&#34;store&#34;</span> <span class="na">class=</span><span class="s">&#34;com.abc.Store&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&#34;item&#34;</span> <span class="na">ref=</span><span class="s">&#34;item1&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/bean&gt;</span>
 </span></span></code></pre></div><h4 id="3-field-based-dependency-injection">3. Field-Based Dependency Injection</h4>
 <p>Spring looks for fields annotated with <code>@Autowired</code> and inject them using reflection.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Store</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Autowired</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Item item<span style="color:#f92672">;</span> 
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><br />
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Store</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Autowired</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Item</span><span class="w"> </span><span class="n">item</span><span class="p">;</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><br />
 <h3 id="q8-differentiate-between-constructor-and-setter-based-dependency-injection">Q8. Differentiate between Constructor and Setter Based Dependency Injection?</h3>
 <h6 id="constructor-vs-setter-based-dependency-injection">Constructor vs Setter Based Dependency Injection</h6>
 <ul>
@@ -730,34 +744,34 @@ The Spring Framework DI provides us the way to describe the object and its depen
 <h3 id="q10-differentiate-between-beanfactory-and-applicationcontext">Q10. Differentiate between BeanFactory and ApplicationContext?</h3>
 <h6 id="beanfactory-vs-applicationcontext">BeanFactory vs ApplicationContext</h6>
 <table>
-<thead>
-<tr>
-<th style="text-align:left">BeanFactory</th>
-<th style="text-align:left">ApplicationContext</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">It is an interface defined in <em><strong>org.springframework .beans.factory</strong></em> package</td>
-<td style="text-align:left">It is an interface defined in <em><strong>org.springframework .context</strong></em> package</td>
-</tr>
-<tr>
-<td style="text-align:left">It uses Lazy initialization</td>
-<td style="text-align:left">It uses Eager initialization by default</td>
-</tr>
-<tr>
-<td style="text-align:left">It explicitly provides a resource object using the syntax</td>
-<td style="text-align:left">It creates and manages resource objects on its own</td>
-</tr>
-<tr>
-<td style="text-align:left">It doesn’t supports internationalization</td>
-<td style="text-align:left">It supports internationalization</td>
-</tr>
-<tr>
-<td style="text-align:left">It doesn’t supports annotation based dependency</td>
-<td style="text-align:left">It supports annotation based dependency</td>
-</tr>
-</tbody>
+	<thead>
+			<tr>
+					<th style="text-align: left">BeanFactory</th>
+					<th style="text-align: left">ApplicationContext</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">It is an interface defined in <em><strong>org.springframework .beans.factory</strong></em> package</td>
+					<td style="text-align: left">It is an interface defined in <em><strong>org.springframework .context</strong></em> package</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">It uses Lazy initialization</td>
+					<td style="text-align: left">It uses Eager initialization by default</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">It explicitly provides a resource object using the syntax</td>
+					<td style="text-align: left">It creates and manages resource objects on its own</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">It doesn’t supports internationalization</td>
+					<td style="text-align: left">It supports internationalization</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">It doesn’t supports annotation based dependency</td>
+					<td style="text-align: left">It supports annotation based dependency</td>
+			</tr>
+	</tbody>
 </table>
 <br />
 <h3 id="q11-what-is-a-spring-bean">Q11. What is a Spring Bean?</h3>
@@ -765,9 +779,9 @@ The Spring Framework DI provides us the way to describe the object and its depen
 <br /></p>
 <h3 id="q12-explain-the-spring-bean-life-cycle">Q12. Explain the Spring Bean Life Cycle?</h3>
 <figure class="center"><img src="/img/interview/spring-bean-life-cycle.png"
-         alt="Spring Bean Life Cycle"/><figcaption>
-            <p>Spring Bean Life Cycle</p>
-        </figcaption>
+			alt="Spring Bean Life Cycle"><figcaption>
+			<p>Spring Bean Life Cycle</p>
+		</figcaption>
 </figure>
 
 <p>Spring bean follow the following sequence in its life cycle:-</p>
@@ -785,7 +799,7 @@ The Spring Framework DI provides us the way to describe the object and its depen
 <li>If class has <strong>custom destroy</strong> method defined then it will be called.</li>
 </ol>
 <h6 id="custom-init-and-custom-destroy-example">custom-init and custom-destroy example</h6>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>  <span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;store&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;com.abc.Store&#34;</span> <span style="color:#a6e22e">init-method=</span><span style="color:#e6db74">&#34;myCustomInit&#34;</span> <span style="color:#a6e22e">destroy-method=</span><span style="color:#e6db74">&#34;myCustomDestroy&#34;</span><span style="color:#f92672">&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl">  <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&#34;store&#34;</span> <span class="na">class=</span><span class="s">&#34;com.abc.Store&#34;</span> <span class="na">init-method=</span><span class="s">&#34;myCustomInit&#34;</span> <span class="na">destroy-method=</span><span class="s">&#34;myCustomDestroy&#34;</span><span class="nt">&gt;</span>
 </span></span></code></pre></div><br />
 <h3 id="q13-what-are-different-ways-to-configure-spring-beans">Q13. What are different ways to configure Spring Beans?</h3>
 <p>There are three ways to define Beans configuration in Spring Framework:-</p>
@@ -797,14 +811,14 @@ The Spring Framework DI provides us the way to describe the object and its depen
 </ul>
 <h3 id="q14-what-is-xml-based-spring-configuration">Q14. What is XML-based Spring Configuration?</h3>
 <p>In XML-Based configuration, all the bean definitions and application specific configurations are defined in an XML file in a specific format. Parent XML element is <code>&lt;/beans&gt;</code> and individual bean is defined using <code>&lt;/bean&gt;</code> element.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- Spring Configurations --&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;viewResolver&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;org.springframework.web.servlet.view.BeanNameViewResolver&#34;</span><span style="color:#f92672">/&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;jsonTemplate&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;org.springframework.web.servlet.view.json.MappingJackson2JsonView&#34;</span><span style="color:#f92672">/&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;restTemplate&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;org.springframework.web.client.RestTemplate&#34;</span><span style="color:#f92672">/&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- Bean Definition --&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;tutorial&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;com.abc.TutorialBean&#34;</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span> <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;CodingNConcepts&#34;</span><span style="color:#f92672">&gt;&lt;/property&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/bean&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="c">&lt;!-- Spring Configurations --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;bean</span> <span class="na">name=</span><span class="s">&#34;viewResolver&#34;</span> <span class="na">class=</span><span class="s">&#34;org.springframework.web.servlet.view.BeanNameViewResolver&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;bean</span> <span class="na">name=</span><span class="s">&#34;jsonTemplate&#34;</span> <span class="na">class=</span><span class="s">&#34;org.springframework.web.servlet.view.json.MappingJackson2JsonView&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&#34;restTemplate&#34;</span> <span class="na">class=</span><span class="s">&#34;org.springframework.web.client.RestTemplate&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- Bean Definition --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&#34;tutorial&#34;</span> <span class="na">class=</span><span class="s">&#34;com.abc.TutorialBean&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&#34;name&#34;</span> <span class="na">value=</span><span class="s">&#34;CodingNConcepts&#34;</span><span class="nt">&gt;&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/bean&gt;</span>
 </span></span></code></pre></div><br />
 <h3 id="q15-what-is-java-based-spring-configuration">Q15. What is Java-based Spring Configuration?</h3>
 <p>Spring configuration can also be defined using <code>@Configuration</code> annotated classes and <code>@Bean</code> annotated methods where,</p>
@@ -812,59 +826,59 @@ The Spring Framework DI provides us the way to describe the object and its depen
 <li><code>@Configuration</code> annotated class represents an XML configuration file</li>
 <li><code>@Bean</code> annotated methods represent the <bean/> element and responsible to provide a bean definition.</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AppConfig</span> 
-</span></span><span style="display:flex;"><span><span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Bean</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> MyService <span style="color:#a6e22e">myService</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> MyServiceImpl<span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p>is equivalent of following XML configuration</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;beans&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;myService&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;com.abc.services.MyServiceImpl&#34;</span><span style="color:#f92672">/&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/beans&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AppConfig</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Bean</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">MyService</span><span class="w"> </span><span class="nf">myService</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MyServiceImpl</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>is equivalent of following XML configuration</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;beans&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&#34;myService&#34;</span> <span class="na">class=</span><span class="s">&#34;com.abc.services.MyServiceImpl&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/beans&gt;</span>
 </span></span></code></pre></div><p>To instantiate such config, you will need the help of <code>AnnotationConfigApplicationContext</code> class.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    ApplicationContext ctx <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> AnnotationConfigApplicationContext<span style="color:#f92672">(</span>AppConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    MyService myService <span style="color:#f92672">=</span> ctx<span style="color:#f92672">.</span><span style="color:#a6e22e">getBean</span><span style="color:#f92672">(</span>MyService<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    myService<span style="color:#f92672">.</span><span style="color:#a6e22e">doStuff</span><span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p>or alternatively you can enable component scanning, to instantiate config automatically.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@ComponentScan</span><span style="color:#f92672">(</span>basePackages <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;com.abc&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AppConfig</span>  <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">...</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p>In the example above, the <em><strong>com.abc</strong></em> package will be scanned and look for <code>@Component</code> or other stereotypes annotated classes, and those classes will be instantiated and managed by as Spring container automatically.<br>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">ApplicationContext</span><span class="w"> </span><span class="n">ctx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AnnotationConfigApplicationContext</span><span class="p">(</span><span class="n">AppConfig</span><span class="p">.</span><span class="na">class</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">MyService</span><span class="w"> </span><span class="n">myService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ctx</span><span class="p">.</span><span class="na">getBean</span><span class="p">(</span><span class="n">MyService</span><span class="p">.</span><span class="na">class</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">myService</span><span class="p">.</span><span class="na">doStuff</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>or alternatively you can enable component scanning, to instantiate config automatically.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@ComponentScan</span><span class="p">(</span><span class="n">basePackages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;com.abc&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AppConfig</span><span class="w">  </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>In the example above, the <em><strong>com.abc</strong></em> package will be scanned and look for <code>@Component</code> or other stereotypes annotated classes, and those classes will be instantiated and managed by as Spring container automatically.<br>
 <br /></p>
 <h3 id="q16-what-is-annotation-based-spring-configuration">Q16. What is Annotation-based Spring Configuration?</h3>
 <p>Annotation-based container configuration is an alternative of XML-based configuration and is mostly used by developers. Rather than using XML for describing a bean wiring, the developer moves the configuration to the classes by using annotations on the class, field, or method declaration.</p>
 <p>By default, annotation config is turned off. It needs to be turned on explicitly by adding <code>&lt;context:annotation-config/&gt;</code> element in Spring Configuration XML file.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;beans&gt;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;context:annotation-config/&gt;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">&lt;!-- bean definitions go here --&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/beans&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;beans&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;context:annotation-config/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!-- bean definitions go here --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/beans&gt;</span>
 </span></span></code></pre></div><p>Alternatively, you can include <code>AutowiredAnnotationBeanPostProcessor</code> in bean configuration file.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;beans&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor&#34;</span><span style="color:#f92672">/&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/beans&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;beans&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;bean</span> <span class="na">class=</span><span class="s">&#34;org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/beans&gt;</span>
 </span></span></code></pre></div><br />
 <h3 id="q17-can-we-have-multiple-spring-configuration-files-in-one-project">Q17. Can We Have Multiple Spring Configuration Files in One Project?</h3>
 <p>Yes, in large projects, having multiple Spring configurations is recommended to increase maintainability and modularity.</p>
 <p>You can load multiple Java-based configuration files:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Import</span><span style="color:#f92672">({</span>MainConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">,</span> SchedulerConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">})</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AppConfig</span> <span style="color:#f92672">{</span>
-</span></span></code></pre></div><p>Or load one XML file that will contain all other configs:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>ApplicationContext context <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ClassPathXmlApplicationContext<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;spring-all.xml&#34;</span><span style="color:#f92672">);</span>
-</span></span></code></pre></div><p>And inside this XML file you&rsquo;ll have:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;import</span> <span style="color:#a6e22e">resource=</span><span style="color:#e6db74">&#34;main.xml&#34;</span><span style="color:#f92672">/&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;import</span> <span style="color:#a6e22e">resource=</span><span style="color:#e6db74">&#34;other.xml&#34;</span><span style="color:#f92672">/&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@Import</span><span class="p">({</span><span class="n">MainConfig</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">SchedulerConfig</span><span class="p">.</span><span class="na">class</span><span class="p">})</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AppConfig</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span></code></pre></div><p>Or load one XML file that will contain all other configs:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">ApplicationContext</span><span class="w"> </span><span class="n">context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ClassPathXmlApplicationContext</span><span class="p">(</span><span class="s">&#34;spring-all.xml&#34;</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></div><p>And inside this XML file you&rsquo;ll have:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;import</span> <span class="na">resource=</span><span class="s">&#34;main.xml&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;import</span> <span class="na">resource=</span><span class="s">&#34;other.xml&#34;</span><span class="nt">/&gt;</span>
 </span></span></code></pre></div><br />
 <h3 id="q18-how-to-define-scope-of-a-spring-bean">Q18. How to define Scope of a Spring Bean?</h3>
 <p>Spring Bean&rsquo;s scope can be defined either using <code>@Scope</code> annotation or <code>scope</code> attribute in XML configuration files. There are five supported scopes:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;mySingleton&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;com.abc.MySingleton&#34;</span> <span style="color:#a6e22e">scope=</span><span style="color:#e6db74">&#34;singleton&#34;</span><span style="color:#f92672">/&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&#34;mySingleton&#34;</span> <span class="na">class=</span><span class="s">&#34;com.abc.MySingleton&#34;</span> <span class="na">scope=</span><span class="s">&#34;singleton&#34;</span><span class="nt">/&gt;</span>
 </span></span></code></pre></div><ul>
 <li>
 <p><strong>singleton:</strong> bean scope provides single instance per Spring IoC container. This means everytime spring application context returns same instance when we ask.</p>
@@ -890,29 +904,29 @@ The Spring Framework DI provides us the way to describe the object and its depen
 <h3 id="q19-what-are-inner-beans-in-spring">Q19. What are inner beans in Spring?</h3>
 <p>In Spring framework, whenever a bean is used for only one particular property, it is  advised to declare it as an inner bean. The inner bean is supported both in setter injection <strong>property</strong> and constructor injection <strong>constructor-arg</strong>.</p>
 <p>For example, let’s say we have <code>Store</code> class having reference of <code>Item</code> class. In our application, we will be creating only one instance of <code>Item</code> class, and use it inside <code>Store</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Store</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Item item<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>     
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//Setters and Getters
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Item</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String name<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">long</span> quantity<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>     
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//Setters and Getters
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p>Now inner bean declaration will look like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;StoreBean&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;com.abc.Store&#34;</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;item&#34;</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&lt;!-- This is inner bean --&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;com.abc.Item&#34;</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;Fruits&#34;</span><span style="color:#f92672">&gt;&lt;/property&gt;</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;quantity&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;100&#34;</span><span style="color:#f92672">&gt;&lt;/property&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/bean&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/property&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/bean&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Store</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Item</span><span class="w"> </span><span class="n">item</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">     
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">//Setters and Getters</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Item</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">quantity</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">     
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">//Setters and Getters</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>Now inner bean declaration will look like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&#34;StoreBean&#34;</span> <span class="na">class=</span><span class="s">&#34;com.abc.Store&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&#34;item&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="c">&lt;!-- This is inner bean --&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;bean</span> <span class="na">class=</span><span class="s">&#34;com.abc.Item&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&#34;name&#34;</span> <span class="na">value=</span><span class="s">&#34;Fruits&#34;</span><span class="nt">&gt;&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&#34;quantity&#34;</span> <span class="na">value=</span><span class="s">&#34;100&#34;</span><span class="nt">&gt;&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;/bean&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/bean&gt;</span>
 </span></span></code></pre></div><br />
 <h3 id="q20-are-singleton-beans-thread-safe-in-spring-framework">Q20. Are Singleton beans thread safe in Spring Framework?</h3>
 <p>Spring framework does not do anything under the hood concerning the multi-threaded behavior of a singleton bean. It is the developer’s responsibility to deal with concurrency issue and thread safety of the singleton bean.</p>
@@ -927,93 +941,93 @@ The Spring Framework DI provides us the way to describe the object and its depen
 <li><code>&lt;props&gt;</code> : This can be used to inject a collection of name-value pairs where the name and value are both Strings.</li>
 </ul>
 <p>Let’s see example of each type.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;beans&gt;</span> 
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   <span style="color:#75715e">&lt;!-- Definition for javaCollection --&gt;</span>
-</span></span><span style="display:flex;"><span>   <span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;javaCollection&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;com.abc.JavaCollection&#34;</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>      <span style="color:#75715e">&lt;!-- java.util.List --&gt;</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;customList&#34;</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;list&gt;</span>
-</span></span><span style="display:flex;"><span>           <span style="color:#f92672">&lt;value&gt;</span>India<span style="color:#f92672">&lt;/value&gt;</span>
-</span></span><span style="display:flex;"><span>           <span style="color:#f92672">&lt;value&gt;</span>Singapore<span style="color:#f92672">&lt;/value&gt;</span>
-</span></span><span style="display:flex;"><span>           <span style="color:#f92672">&lt;value&gt;</span>USA<span style="color:#f92672">&lt;/value&gt;</span>
-</span></span><span style="display:flex;"><span>           <span style="color:#f92672">&lt;value&gt;</span>UK<span style="color:#f92672">&lt;/value&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/list&gt;</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;/property&gt;</span>
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">&lt;!-- java.util.Set --&gt;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;customSet&#34;</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;set&gt;</span>
-</span></span><span style="display:flex;"><span>           <span style="color:#f92672">&lt;value&gt;</span>India<span style="color:#f92672">&lt;/value&gt;</span>
-</span></span><span style="display:flex;"><span>           <span style="color:#f92672">&lt;value&gt;</span>Singapore<span style="color:#f92672">&lt;/value&gt;</span>
-</span></span><span style="display:flex;"><span>           <span style="color:#f92672">&lt;value&gt;</span>USA<span style="color:#f92672">&lt;/value&gt;</span>
-</span></span><span style="display:flex;"><span>           <span style="color:#f92672">&lt;value&gt;</span>UK<span style="color:#f92672">&lt;/value&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/set&gt;</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;/property&gt;</span>
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">&lt;!-- java.util.Map --&gt;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;customMap&#34;</span><span style="color:#f92672">&gt;</span>         
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;map&gt;</span>
-</span></span><span style="display:flex;"><span>           <span style="color:#f92672">&lt;entry</span> <span style="color:#a6e22e">key=</span><span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;India&#34;</span><span style="color:#f92672">/&gt;</span>
-</span></span><span style="display:flex;"><span>           <span style="color:#f92672">&lt;entry</span> <span style="color:#a6e22e">key=</span><span style="color:#e6db74">&#34;2&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;Singapore&#34;</span><span style="color:#f92672">/&gt;</span>
-</span></span><span style="display:flex;"><span>           <span style="color:#f92672">&lt;entry</span> <span style="color:#a6e22e">key=</span><span style="color:#e6db74">&#34;3&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;USA&#34;</span><span style="color:#f92672">/&gt;</span>
-</span></span><span style="display:flex;"><span>           <span style="color:#f92672">&lt;entry</span> <span style="color:#a6e22e">key=</span><span style="color:#e6db74">&#34;4&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;UK&#34;</span><span style="color:#f92672">/&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/map&gt;</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;/property&gt;</span>
-</span></span><span style="display:flex;"><span>       
-</span></span><span style="display:flex;"><span>      <span style="color:#75715e">&lt;!-- java.util.Properties --&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;customProperies&#34;</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;props&gt;</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;prop</span> <span style="color:#a6e22e">key=</span><span style="color:#e6db74">&#34;admin&#34;</span><span style="color:#f92672">&gt;</span>admin@myorg.com<span style="color:#f92672">&lt;/prop&gt;</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;prop</span> <span style="color:#a6e22e">key=</span><span style="color:#e6db74">&#34;support&#34;</span><span style="color:#f92672">&gt;</span>support@myorg.com<span style="color:#f92672">&lt;/prop&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/props&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/property&gt;</span>
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>   <span style="color:#f92672">&lt;/bean&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/beans&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;beans&gt;</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="c">&lt;!-- Definition for javaCollection --&gt;</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&#34;javaCollection&#34;</span> <span class="na">class=</span><span class="s">&#34;com.abc.JavaCollection&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">      <span class="c">&lt;!-- java.util.List --&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&#34;customList&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;list&gt;</span>
+</span></span><span class="line"><span class="cl">           <span class="nt">&lt;value&gt;</span>India<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">           <span class="nt">&lt;value&gt;</span>Singapore<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">           <span class="nt">&lt;value&gt;</span>USA<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">           <span class="nt">&lt;value&gt;</span>UK<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;/list&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">     <span class="c">&lt;!-- java.util.Set --&gt;</span>
+</span></span><span class="line"><span class="cl">     <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&#34;customSet&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;set&gt;</span>
+</span></span><span class="line"><span class="cl">           <span class="nt">&lt;value&gt;</span>India<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">           <span class="nt">&lt;value&gt;</span>Singapore<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">           <span class="nt">&lt;value&gt;</span>USA<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">           <span class="nt">&lt;value&gt;</span>UK<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;/set&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">     <span class="c">&lt;!-- java.util.Map --&gt;</span>
+</span></span><span class="line"><span class="cl">     <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&#34;customMap&#34;</span><span class="nt">&gt;</span>         
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;map&gt;</span>
+</span></span><span class="line"><span class="cl">           <span class="nt">&lt;entry</span> <span class="na">key=</span><span class="s">&#34;1&#34;</span> <span class="na">value=</span><span class="s">&#34;India&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">           <span class="nt">&lt;entry</span> <span class="na">key=</span><span class="s">&#34;2&#34;</span> <span class="na">value=</span><span class="s">&#34;Singapore&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">           <span class="nt">&lt;entry</span> <span class="na">key=</span><span class="s">&#34;3&#34;</span> <span class="na">value=</span><span class="s">&#34;USA&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">           <span class="nt">&lt;entry</span> <span class="na">key=</span><span class="s">&#34;4&#34;</span> <span class="na">value=</span><span class="s">&#34;UK&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;/map&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl">       
+</span></span><span class="line"><span class="cl">      <span class="c">&lt;!-- java.util.Properties --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&#34;customProperies&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;props&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;prop</span> <span class="na">key=</span><span class="s">&#34;admin&#34;</span><span class="nt">&gt;</span>admin@myorg.com<span class="nt">&lt;/prop&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;prop</span> <span class="na">key=</span><span class="s">&#34;support&#34;</span><span class="nt">&gt;</span>support@myorg.com<span class="nt">&lt;/prop&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;/props&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">   <span class="nt">&lt;/bean&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/beans&gt;</span>
 </span></span></code></pre></div><br />
 <h3 id="q22-how-to-inject-a-javautilproperties-into-a-spring-bean">Q22. How to inject a java.util.Properties into a Spring Bean?</h3>
 <p>You can initialize properties using <code>&lt;props&gt;</code> as below.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;adminUser&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;com.abc.common.Customer&#34;</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- java.util.Properties --&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;emails&#34;</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;props&gt;</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;prop</span> <span style="color:#a6e22e">key=</span><span style="color:#e6db74">&#34;admin&#34;</span><span style="color:#f92672">&gt;</span>admin@myorg.com<span style="color:#f92672">&lt;/prop&gt;</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;prop</span> <span style="color:#a6e22e">key=</span><span style="color:#e6db74">&#34;support&#34;</span><span style="color:#f92672">&gt;</span>support@myorg.com<span style="color:#f92672">&lt;/prop&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/props&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/property&gt;</span>
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/bean&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&#34;adminUser&#34;</span> <span class="na">class=</span><span class="s">&#34;com.abc.common.Customer&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- java.util.Properties --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&#34;emails&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;props&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;prop</span> <span class="na">key=</span><span class="s">&#34;admin&#34;</span><span class="nt">&gt;</span>admin@myorg.com<span class="nt">&lt;/prop&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;prop</span> <span class="na">key=</span><span class="s">&#34;support&#34;</span><span class="nt">&gt;</span>support@myorg.com<span class="nt">&lt;/prop&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;/props&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/bean&gt;</span>
 </span></span></code></pre></div><p>Alternatively you can use <code>&lt;util:properties&gt;</code> to define properties from a properties file, and use bean reference for setter injection.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;util:properties</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;emails&#34;</span> <span style="color:#a6e22e">location=</span><span style="color:#e6db74">&#34;classpath:com/foo/emails.properties&#34;</span> <span style="color:#f92672">/&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;util:properties</span> <span class="na">id=</span><span class="s">&#34;emails&#34;</span> <span class="na">location=</span><span class="s">&#34;classpath:com/foo/emails.properties&#34;</span> <span class="nt">/&gt;</span>
 </span></span></code></pre></div><br />
 <h3 id="q23-explain-spring-bean-autowiring">Q23. Explain Spring Bean Autowiring?</h3>
 <p>Autowiring allows the Spring container to automatically resolve dependencies between collaborating beans by inspecting the beans that have been defined.
 Spring Bean Autowiring can be done in three ways:-</p>
 <ol>
 <li>XML-based configuration using <code>&lt;/bean&gt;</code>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;store&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;com.abc.Store&#34;</span> <span style="color:#a6e22e">autowire=</span><span style="color:#e6db74">&#34;byType&#34;</span> <span style="color:#f92672">/&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&#34;store&#34;</span> <span class="na">class=</span><span class="s">&#34;com.abc.Store&#34;</span> <span class="na">autowire=</span><span class="s">&#34;byType&#34;</span> <span class="nt">/&gt;</span>
 </span></span></code></pre></div></li>
 <li>Annotation-based configuration using <code>@Autowired</code> on properties, setter-methods or constructor
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Store</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@Autowired</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> Item item<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Store</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nd">@Autowired</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="n">Item</span><span class="w"> </span><span class="n">item</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div></li>
 <li>Java-based configuration using <code>@Bean</code>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Bean</span><span style="color:#f92672">(</span>autowire <span style="color:#f92672">=</span> Autowire<span style="color:#f92672">.</span><span style="color:#a6e22e">BY_TYPE</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Store</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> Item item<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">setItem</span><span style="color:#f92672">(</span>Item item<span style="color:#f92672">){</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">item</span> <span style="color:#f92672">=</span> item<span style="color:#f92672">;</span>    
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Bean</span><span class="p">(</span><span class="n">autowire</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Autowire</span><span class="p">.</span><span class="na">BY_TYPE</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Store</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="n">Item</span><span class="w"> </span><span class="n">item</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="nf">setItem</span><span class="p">(</span><span class="n">Item</span><span class="w"> </span><span class="n">item</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="na">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">item</span><span class="p">;</span><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div></li>
 </ol>
 <br />
 <h3 id="q24-explain-different-modes-of-spring-bean-autowiring">Q24. Explain different Modes of Spring Bean Autowiring?</h3>
@@ -1030,81 +1044,81 @@ Spring Bean Autowiring can be done in three ways:-</p>
 <p>This annotation simply indicates that the affected bean property must be populated at configuration time, through an explicit property value in a bean definition or through autowiring. The container throws <code>BeanInitializationException</code> if the affected bean property has not been populated.</p>
 <p>This annotation is used to overcome the problem arise with setter-based injection where spring container doesn&rsquo;t warn or throw any exception if all the required properties are not populated.</p>
 <p>We can use <code>@Required</code> annotation over setter-method of bean property in class file to indicate it is a mandatory property,</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Store</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Item item<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>      
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Item <span style="color:#a6e22e">getItem</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> item<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Required</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setItem</span><span style="color:#f92672">(</span>Item item<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">item</span> <span style="color:#f92672">=</span> item<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><br />
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Store</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Item</span><span class="w"> </span><span class="n">item</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Item</span><span class="w"> </span><span class="nf">getItem</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">item</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Required</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setItem</span><span class="p">(</span><span class="n">Item</span><span class="w"> </span><span class="n">item</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">item</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><br />
 <h3 id="q26-explain-autowired-annotation-with-example">Q26. Explain @Autowired annotation with example?</h3>
 <p>This annotation provides more fine-grained control over where and how autowiring should be accomplished. The <code>@Autowired</code> annotation can be used to autowire bean on the setter method just like <code>@Required</code> annotation, constructor, a property or methods with arbitrary names and/or multiple arguments.</p>
 <p>E.g. You can use <code>@Autowired</code> annotation on setter methods to get rid of the <code>&lt;property&gt;</code> element in XML configuration file. When Spring finds an @Autowired annotation used with setter methods, it tries to perform <strong>byType</strong> autowiring on the method.</p>
 <p>You can apply <code>@Autowired</code> to constructors as well. A constructor @Autowired annotation indicates that the constructor should be autowired when creating the bean, even if no <code>&lt;constructor-arg&gt;</code> elements are used while configuring the bean in XML file.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TextEditor</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">private</span> SpellChecker spellChecker<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>   <span style="color:#a6e22e">@Autowired</span>
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">TextEditor</span><span style="color:#f92672">(</span>SpellChecker spellChecker<span style="color:#f92672">){</span>
-</span></span><span style="display:flex;"><span>      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Inside TextEditor constructor.&#34;</span> <span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">spellChecker</span> <span style="color:#f92672">=</span> spellChecker<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>   <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">spellCheck</span><span style="color:#f92672">(){</span>
-</span></span><span style="display:flex;"><span>      spellChecker<span style="color:#f92672">.</span><span style="color:#a6e22e">checkSpelling</span><span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>   <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p>And it’s configuration without constructor arguments.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;beans&gt;</span>
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>   <span style="color:#f92672">&lt;context:annotation-config/&gt;</span>
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>   <span style="color:#75715e">&lt;!-- Definition for textEditor bean without constructor-arg --&gt;</span>
-</span></span><span style="display:flex;"><span>   <span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;textEditor&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;com.howtodoinjava.TextEditor&#34;</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span>   <span style="color:#f92672">&lt;/bean&gt;</span>
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>   <span style="color:#75715e">&lt;!-- Definition for spellChecker bean --&gt;</span>
-</span></span><span style="display:flex;"><span>   <span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;spellChecker&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;com.howtodoinjava.SpellChecker&#34;</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span>   <span style="color:#f92672">&lt;/bean&gt;</span>
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/beans&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TextEditor</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="kd">private</span><span class="w"> </span><span class="n">SpellChecker</span><span class="w"> </span><span class="n">spellChecker</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="nd">@Autowired</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="nf">TextEditor</span><span class="p">(</span><span class="n">SpellChecker</span><span class="w"> </span><span class="n">spellChecker</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Inside TextEditor constructor.&#34;</span><span class="w"> </span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="na">spellChecker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spellChecker</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">spellCheck</span><span class="p">(){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="n">spellChecker</span><span class="p">.</span><span class="na">checkSpelling</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>And it’s configuration without constructor arguments.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;beans&gt;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">   <span class="nt">&lt;context:annotation-config/&gt;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">   <span class="c">&lt;!-- Definition for textEditor bean without constructor-arg --&gt;</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&#34;textEditor&#34;</span> <span class="na">class=</span><span class="s">&#34;com.howtodoinjava.TextEditor&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&lt;/bean&gt;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">   <span class="c">&lt;!-- Definition for spellChecker bean --&gt;</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&#34;spellChecker&#34;</span> <span class="na">class=</span><span class="s">&#34;com.howtodoinjava.SpellChecker&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&lt;/bean&gt;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/beans&gt;</span>
 </span></span></code></pre></div><br />
 <h3 id="q27-explain-qualifier-annotation-with-example">Q27. Explain @Qualifier annotation with example?</h3>
 <p>There may be a situation when you create two or more beans of the same type and want to wire only one of them with a property, in such case you can use <code>@Qualifier</code> annotation along with <code>@Autowired</code> to remove the confusion by specifying which exact bean will be wired.</p>
 <p>See below example, it will autowire a <strong>item</strong> bean into <code>Store</code> class,</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Store</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Autowired</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Item item<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p>And we have two bean definitions for <code>Item</code> class.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;store&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;com.abc.Store&#34;</span> <span style="color:#f92672">/&gt;</span>
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;itemA&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;com.abc.Item&#34;</span> <span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;Fruit&#34;</span> <span style="color:#f92672">/&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/bean&gt;</span>
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;itemB&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;com.abc.Item&#34;</span> <span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;Biscuits&#34;</span> <span style="color:#f92672">/&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/bean&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Store</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Autowired</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Item</span><span class="w"> </span><span class="n">item</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>And we have two bean definitions for <code>Item</code> class.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&#34;store&#34;</span> <span class="na">class=</span><span class="s">&#34;com.abc.Store&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&#34;itemA&#34;</span> <span class="na">class=</span><span class="s">&#34;com.abc.Item&#34;</span> <span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&#34;name&#34;</span> <span class="na">value=</span><span class="s">&#34;Fruit&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/bean&gt;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&#34;itemB&#34;</span> <span class="na">class=</span><span class="s">&#34;com.abc.Item&#34;</span> <span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&#34;name&#34;</span> <span class="na">value=</span><span class="s">&#34;Biscuits&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/bean&gt;</span>
 </span></span></code></pre></div><p>If you run the above example spring will throw an exception because it doesn&rsquo;t know which bean to autowire in <code>Store</code> class, <strong>itemA</strong> or <strong>itemB</strong>?</p>
 <pre tabindex="0"><code>Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: 
     No unique bean of type [com.abc.Item] is defined: 
         expected single matching bean but found 2: [itemA, itemB]
 </code></pre><p>We can use <code>@Qualifier</code> annotation to wire specific <strong>itemA</strong> bean like this:-</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Store</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Autowired</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Qualifier</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;itemA&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Item item<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><br />
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Store</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Autowired</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Qualifier</span><span class="p">(</span><span class="s">&#34;itemA&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Item</span><span class="w"> </span><span class="n">item</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><br />
 <h3 id="q28-what-are-spring-stereotype-annotations">Q28. What are Spring stereotype annotations?</h3>
 <h6 id="component-vs-service-vs-repository-vs-controller">@component vs @service vs @repository vs @controller</h6>
 <p>All the stereotype annotations are used at annotate classes auto-detection and bean configuration. There are mainly 4 types of stereotypes:-</p>
@@ -1124,27 +1138,27 @@ Spring Bean Autowiring can be done in three ways:-</p>
 </ul>
 <h3 id="q30-what-happens-when-you-define-two-beans-with-same-id-or-same-name-">Q30. What happens when you define two beans with same id or same name ?</h3>
 <h6 id="beansxml">beans.xml</h6>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;foo&#34;</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;sameName&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;com.abc.Foo&#34;</span> <span style="color:#f92672">/&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;bar&#34;</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;sameName&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;com.abc.Bar&#34;</span> <span style="color:#f92672">/&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&#34;foo&#34;</span> <span class="na">name=</span><span class="s">&#34;sameName&#34;</span> <span class="na">class=</span><span class="s">&#34;com.abc.Foo&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&#34;bar&#34;</span> <span class="na">name=</span><span class="s">&#34;sameName&#34;</span> <span class="na">class=</span><span class="s">&#34;com.abc.Bar&#34;</span> <span class="nt">/&gt;</span>
 </span></span></code></pre></div><p>When you use two bean with same name (or same id) in single configuration file then <em><strong>&ldquo;BeanDefinitionParsingException – Bean name &lsquo;sameName&rsquo; is already used in this file&rdquo;</strong></em> is thrown by the spring container at the time of loading.</p>
 <p>Where things get a little interesting is when bean definitions are spread out across many configuration files.  Say, for example, the <strong>foo</strong> bean is defined in <em><strong>beans1.xml</strong></em> while the <strong>bar</strong> bean is defined in <em><strong>beans2.xml</strong></em>.</p>
 <h6 id="beans1xml">beans1.xml</h6>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;foo&#34;</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;sameName&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;com.abc.Foo&#34;</span> <span style="color:#f92672">/&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&#34;foo&#34;</span> <span class="na">name=</span><span class="s">&#34;sameName&#34;</span> <span class="na">class=</span><span class="s">&#34;com.abc.Foo&#34;</span> <span class="nt">/&gt;</span>
 </span></span></code></pre></div><h6 id="beans2xml">beans2.xml</h6>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;bar&#34;</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;sameName&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;com.abc.Bar&#34;</span> <span style="color:#f92672">/&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&#34;bar&#34;</span> <span class="na">name=</span><span class="s">&#34;sameName&#34;</span> <span class="na">class=</span><span class="s">&#34;com.abc.Bar&#34;</span> <span class="nt">/&gt;</span>
 </span></span></code></pre></div><p>Now, if the two beans have the same name (or id), surprisingly no exception is thrown by the container!!!</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>FileSystemXmlApplicationContext context <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileSystemXmlApplicationContext<span style="color:#f92672">(</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> String<span style="color:#f92672">[]</span> <span style="color:#f92672">{</span> <span style="color:#e6db74">&#34;beans1.xml&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;beans2.xml&#34;</span> <span style="color:#f92672">});</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Bar f <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>Bar<span style="color:#f92672">)</span> context<span style="color:#f92672">.</span><span style="color:#a6e22e">getBean</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;sameName&#34;</span><span style="color:#f92672">);</span> <span style="color:#75715e">// works fine
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">FileSystemXmlApplicationContext</span><span class="w"> </span><span class="n">context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileSystemXmlApplicationContext</span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&#34;beans1.xml&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;beans2.xml&#34;</span><span class="w"> </span><span class="p">});</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">Bar</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Bar</span><span class="p">)</span><span class="w"> </span><span class="n">context</span><span class="p">.</span><span class="na">getBean</span><span class="p">(</span><span class="s">&#34;sameName&#34;</span><span class="p">);</span><span class="w"> </span><span class="c1">// works fine</span><span class="w">
 </span></span></span></code></pre></div><p>The documentation says <em><strong>&ldquo;the last bean definition with the same name (or id) wins, respectively to the order of the xml files.&rdquo;</strong></em>  In the example Java code above, beans2.xml is loaded in the last. Therefore, bean class <code>com.abc.Bar</code> will be loaded.</p>
 <p>you can always turn off this default behavior and make cause bean ids/names to be unique across all configurations of the container. Look into the <code>DefaultListableBeanFactory</code> <em>setAllowBeanDefinitionOverriding()</em> method.<br>
 <br /></p>
 <h3 id="q31-explain-spring-mvc-workflow">Q31. Explain Spring MVC Workflow?</h3>
 <figure class="center"><img src="/img/interview/spring-mvc-workflow.png"
-         alt="Spring MVC Workflow"/><figcaption>
-            <p>Spring MVC Workflow</p>
-        </figcaption>
+			alt="Spring MVC Workflow"><figcaption>
+			<p>Spring MVC Workflow</p>
+		</figcaption>
 </figure>
 
 <p>When you request from spring MVC application then it follow the following sequence:-</p>
@@ -1156,38 +1170,38 @@ Spring Bean Autowiring can be done in three ways:-</p>
 <p>Following are the different implementation of HandlerMapping:-</p>
 <h6 id="1-beannameurlhandlermapping">1) BeanNameUrlHandlerMapping</h6>
 <p>This is a default spring handler mapping. Name of bean considered as URL.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;/welcome.htm&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;com.abc.controller.WelcomeController&#34;</span><span style="color:#f92672">/&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;bean</span> <span class="na">name=</span><span class="s">&#34;/welcome.htm&#34;</span> <span class="na">class=</span><span class="s">&#34;com.abc.controller.WelcomeController&#34;</span><span class="nt">/&gt;</span>
 </span></span></code></pre></div><h6 id="2-simpleurlhandlermapping">2) SimpleUrlHandlerMapping</h6>
 <p>Map with key value pair of URL and controller bean name.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;org.springframework.web.servlet.handler.SimpleUrlHandlerMapping&#34;</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;mappings&#34;</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;props&gt;</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;prop</span> <span style="color:#a6e22e">key=</span><span style="color:#e6db74">&#34;/welcome.htm&#34;</span><span style="color:#f92672">&gt;</span>welcomeController<span style="color:#f92672">&lt;/prop&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/props&gt;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/property&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/bean&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;welcomeController&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;com.abc.controller.WelcomeController&#34;</span> <span style="color:#f92672">/&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;bean</span> <span class="na">class=</span><span class="s">&#34;org.springframework.web.servlet.handler.SimpleUrlHandlerMapping&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&#34;mappings&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;props&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;prop</span> <span class="na">key=</span><span class="s">&#34;/welcome.htm&#34;</span><span class="nt">&gt;</span>welcomeController<span class="nt">&lt;/prop&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/props&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/bean&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&#34;welcomeController&#34;</span> <span class="na">class=</span><span class="s">&#34;com.abc.controller.WelcomeController&#34;</span> <span class="nt">/&gt;</span>
 </span></span></code></pre></div><h6 id="3-defaultannotationhandlermapping">3) DefaultAnnotationHandlerMapping</h6>
 <p>This is the most popular implementation of HandlerMapping where each class annotated with <code>@Controller</code> maps one or more request to methods that process and execute the request with provided inputs.</p>
 <p><code>@RequestMapping</code> annotation is used at both class and method level to map the URL. In addition to simple use cases, we can use it for mapping of HTTP headers, binding parts of the URI with <code>@PathVariable</code>, and working with URI parameters and the <code>@RequestParam</code> annotation.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> com.abc.controller<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.stereotype.Controller<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.web.bind.annotation.RequestMapping<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.web.bind.annotation.RequestMethod<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.web.servlet.ModelAndView<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Controller</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/welcome&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WelcomeController</span><span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span>method <span style="color:#f92672">=</span> RequestMethod<span style="color:#f92672">.</span><span style="color:#a6e22e">GET</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> ModelAndView <span style="color:#a6e22e">helloWorld</span><span style="color:#f92672">(){</span>
-</span></span><span style="display:flex;"><span>    ModelAndView model <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ModelAndView<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;WelcomePage&#34;</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    model<span style="color:#f92672">.</span><span style="color:#a6e22e">addObject</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;msg&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;hello world&#34;</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> model<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><h4 id="3-controller">3. Controller</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nn">com.abc.controller</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.stereotype.Controller</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.web.bind.annotation.RequestMapping</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.web.bind.annotation.RequestMethod</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.web.servlet.ModelAndView</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@Controller</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">&#34;/welcome&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">WelcomeController</span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nd">@RequestMapping</span><span class="p">(</span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RequestMethod</span><span class="p">.</span><span class="na">GET</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">ModelAndView</span><span class="w"> </span><span class="nf">helloWorld</span><span class="p">(){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">ModelAndView</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ModelAndView</span><span class="p">(</span><span class="s">&#34;WelcomePage&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">model</span><span class="p">.</span><span class="na">addObject</span><span class="p">(</span><span class="s">&#34;msg&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;hello world&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">model</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h4 id="3-controller">3. Controller</h4>
 <p>Controller calls service layer to execute business logic and return ModelAndView, which is wrapper for model object and view name.</p>
 <p><em><strong>Popular Controller Types:</strong></em><br>
 AbstractController<br>
@@ -1234,9 +1248,9 @@ InternalResourceViewResolver</p>
 <p>The concern is the behavior we want to have in a particular module of an application. It can be defined as a functionality we want to implement.</p>
 <p>The cross-cutting concern is a concern which is applicable throughout the application. This affects the entire application. For example, logging, security and data transfer are the concerns needed in almost every module of an application, thus they are the cross-cutting concerns.<br>
 <figure class="center"><img src="/img/interview/cross-cutting-concern-in-aop.png"
-         alt="Spring AOP - Cross Cutting Concerns"/><figcaption>
-            <p>Spring AOP - Cross Cutting Concerns</p>
-        </figcaption>
+			alt="Spring AOP - Cross Cutting Concerns"><figcaption>
+			<p>Spring AOP - Cross Cutting Concerns</p>
+		</figcaption>
 </figure>
 
 <br /></p>
@@ -1255,22 +1269,22 @@ InternalResourceViewResolver</p>
 <li>iterating over the ResultSet and returning results</li>
 </ul>
 <p>To use it, we&rsquo;ll need to define the simple configuration of DataSource:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@ComponentScan</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.abc.jdbc&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringJdbcConfig</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Bean</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> DataSource <span style="color:#a6e22e">mysqlDataSource</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        DriverManagerDataSource dataSource <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DriverManagerDataSource<span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>        dataSource<span style="color:#f92672">.</span><span style="color:#a6e22e">setDriverClassName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.mysql.jdbc.Driver&#34;</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>        dataSource<span style="color:#f92672">.</span><span style="color:#a6e22e">setUrl</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;jdbc:mysql://localhost:3306/springjdbc&#34;</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>        dataSource<span style="color:#f92672">.</span><span style="color:#a6e22e">setUsername</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;guest_user&#34;</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>        dataSource<span style="color:#f92672">.</span><span style="color:#a6e22e">setPassword</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;guest_password&#34;</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> dataSource<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><br />
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@ComponentScan</span><span class="p">(</span><span class="s">&#34;com.abc.jdbc&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SpringJdbcConfig</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Bean</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">DataSource</span><span class="w"> </span><span class="nf">mysqlDataSource</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">DriverManagerDataSource</span><span class="w"> </span><span class="n">dataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DriverManagerDataSource</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">dataSource</span><span class="p">.</span><span class="na">setDriverClassName</span><span class="p">(</span><span class="s">&#34;com.mysql.jdbc.Driver&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">dataSource</span><span class="p">.</span><span class="na">setUrl</span><span class="p">(</span><span class="s">&#34;jdbc:mysql://localhost:3306/springjdbc&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">dataSource</span><span class="p">.</span><span class="na">setUsername</span><span class="p">(</span><span class="s">&#34;guest_user&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">dataSource</span><span class="p">.</span><span class="na">setPassword</span><span class="p">(</span><span class="s">&#34;guest_password&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">dataSource</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><br />
 <h3 id="q41-how-would-you-enable-transactions-in-spring-and-what-are-their-benefits">Q41. How Would You Enable Transactions in Spring and What Are Their Benefits?</h3>
 <p>There are two distinct ways to configure Transactions – with annotations or by using Aspect Oriented Programming (AOP) – each with their advantages.</p>
 <p>The benefits of using Spring Transactions, according to the official docs, are:</p>
@@ -1316,8 +1330,9 @@ InternalResourceViewResolver</p>
     <ul class="share-icons">
       
       <li>
-        <a href="https://www.buymeacoffee.com/codingnconcepts" target="_blank">
+        <a href="https://www.buymeacoffee.com/codingnconcepts" target="_blank" rel="noopener" aria-label="Buy me a coffee" class="share-btn bmc">
           <svg class="widget-social__link-button icon icon-category" fill="none" height="68" viewBox="0 0 184 68" width="184" xmlns="http://www.w3.org/2000/svg"><rect fill="#fddc48" height="47" rx="9" width="182" x="1" y="11"/><g stroke-width="1.5"><path d="m24.9312 24.2374-.3942 1.0203h1.0938 14.9077 1.0938l-.3942-1.0203-1.3553-3.5077-.1853-.4797h-.5143-12.1972-.5142l-.1854.4797z" fill="#fff" stroke="#000"/><path d="m41.4154 26.7-3.5077 22.8" stroke="#f69935"/><path d="m28.2615 49.5-3.9461-23.2385h17.9769l-3.5077 23.2385z" stroke="#000"/><path d="m25.1923 42.0462-1.7538-9.6462h19.7307l-1.7538 9.6462z" fill="#fff" stroke="#000"/><path d="m23 26.2615v-2.6307h20.1692v2.6307z" fill="#fff" stroke="#000"/></g><path d="m55.5361 40v-9.9531h3.4864c1.2076 0 2.1237.2324 2.748.6972.6244.4603.9365 1.1371.9365 2.0303 0 .4876-.1253.9183-.3759 1.292-.2507.3691-.5993.6403-1.0459.8135.5104.1276.9114.3851 1.2031.7724.2962.3874.4443.8614.4443 1.4219 0 .957-.3053 1.6817-.916 2.1738-.6107.4922-1.4811.7429-2.6113.752zm2.0508-4.334v2.6865h1.7569c.483 0 .859-.1139 1.1279-.3418.2734-.2324.4101-.5514.4101-.957 0-.9114-.4716-1.374-1.415-1.3877zm0-1.4492h1.5176c1.0345-.0182 1.5517-.4307 1.5517-1.2373 0-.4512-.1321-.7747-.3964-.9707-.2598-.2005-.6722-.3008-1.2373-.3008h-1.4356zm11.1904 5.0312c-.4876.5925-1.1621.8887-2.0234.8887-.793 0-1.3991-.2278-1.8184-.6836-.4147-.4557-.6266-1.1233-.6357-2.0029v-4.8467h1.9756v4.7783c0 .7702.3509 1.1553 1.0527 1.1553.6699 0 1.1302-.2324 1.3809-.6973v-5.2363h1.9824v7.3965h-1.8594zm6.1661-2.0439 1.3671-4.6006h2.1192l-2.9736 8.5449-.1641.3897c-.4421.9661-1.1712 1.4492-2.1875 1.4492-.2871 0-.5788-.0433-.875-.1299v-1.497l.3008.0068c.3737 0 .6517-.057.834-.1709.1868-.1139.3326-.3031.4375-.5674l.2324-.6084-2.5908-7.417h2.1259zm9.6045-4.6006.0615.8272c.5241-.6426 1.2327-.9639 2.126-.9639.9524 0 1.6064.376 1.9619 1.1279.5195-.7519 1.2601-1.1279 2.2216-1.1279.8021 0 1.3991.2347 1.7911.7041.3919.4648.5879 1.1667.5879 2.1055v4.7236h-1.9825v-4.7168c0-.4193-.082-.7246-.2461-.916-.164-.196-.4534-.294-.8681-.294-.5925 0-1.0026.2826-1.2305.8477l.0068 5.0791h-1.9755v-4.71c0-.4283-.0844-.7382-.253-.9296-.1686-.1915-.4557-.2872-.8613-.2872-.5606 0-.9662.2325-1.2168.6973v5.2295h-1.9756v-7.3965zm13.6787 7.5332c-1.0847 0-1.9688-.3327-2.6524-.998-.679-.6654-1.0185-1.5518-1.0185-2.6592v-.1914c0-.7429.1435-1.4059.4306-1.9893.2871-.5879.6927-1.039 1.2168-1.3535.5287-.319 1.1302-.4785 1.8047-.4785 1.0117 0 1.807.319 2.3862.957.583.638.875 1.5427.875 2.7139v.8066h-4.7104c.0638.4831.2552.8705.5742 1.1621.3236.2917.7315.4375 1.2236.4375.7611 0 1.3558-.2757 1.7846-.8271l.97 1.0869c-.296.4193-.697.7474-1.2028.9844-.5059.2324-1.0664.3486-1.6816.3486zm-.2256-6.0703c-.392 0-.711.1322-.9571.3965-.2415.2643-.3964.6426-.4648 1.1348h2.748v-.1573c-.0091-.4375-.1276-.7747-.3554-1.0117-.2279-.2415-.5515-.3623-.9707-.3623zm12.168 5.9336c-.091-.1777-.157-.3988-.198-.6631-.479.5332-1.101.7998-1.867.7998-.724 0-1.326-.2096-1.804-.6289-.474-.4193-.711-.9479-.711-1.5859 0-.7839.289-1.3854.868-1.8047.583-.4193 1.424-.6312 2.522-.6358h.91v-.4238c0-.3418-.089-.6152-.267-.8203-.173-.2051-.449-.3076-.827-.3076-.333 0-.595.0797-.786.2392-.187.1596-.28.3783-.28.6563h-1.976c0-.4284.132-.8249.396-1.1895.265-.3645.638-.6494 1.122-.8545.483-.2096 1.025-.3144 1.626-.3144.912 0 1.634.2301 2.167.6904.538.4558.807 1.0983.807 1.9278v3.206c.005.7018.103 1.2328.294 1.5928v.1162zm-1.634-1.374c.292 0 .561-.0638.807-.1914.246-.1322.428-.3076.547-.5264v-1.2715h-.739c-.989 0-1.515.3418-1.579 1.0254l-.007.1162c0 .2461.087.4489.26.6084s.41.2393.711.2393zm11.416-.0821c.365 0 .661-.1002.889-.3007.228-.2006.346-.4672.355-.7998h1.853c-.005.5013-.141.9615-.41 1.3808-.269.4147-.638.7383-1.108.9707-.465.2279-.98.3418-1.545.3418-1.057 0-1.891-.3349-2.502-1.0049-.61-.6744-.916-1.6041-.916-2.789v-.1299c0-1.1393.303-2.0485.91-2.7275.606-.6791 1.437-1.0186 2.495-1.0186.925 0 1.665.2643 2.221.793.561.5241.846 1.2236.855 2.0986h-1.853c-.009-.3828-.127-.6927-.355-.9297-.228-.2415-.529-.3623-.902-.3623-.461 0-.809.1686-1.046.5059-.233.3326-.349.875-.349 1.6269v.2051c0 .7611.116 1.3079.349 1.6406.232.3327.585.499 1.059.499zm3.917-2.3105c0-.7337.141-1.3877.424-1.9619s.688-1.0186 1.217-1.333c.533-.3145 1.151-.4717 1.852-.4717.998 0 1.812.3053 2.441.916.633.6107.986 1.4401 1.059 2.4883l.014.5059c0 1.1347-.317 2.0462-.95 2.7343-.634.6836-1.484 1.0254-2.55 1.0254s-1.919-.3418-2.557-1.0254c-.633-.6836-.95-1.6133-.95-2.789zm1.976.1436c0 .7018.132 1.2395.396 1.6132.265.3692.643.5537 1.135.5537.479 0 .852-.1822 1.121-.5468.269-.3692.403-.9571.403-1.7637 0-.6882-.134-1.2214-.403-1.5996-.269-.3783-.647-.5674-1.135-.5674-.483 0-.856.1891-1.121.5674-.264.3737-.396.9547-.396 1.7432zm6.788 3.623v-5.9473h-1.101v-1.4492h1.101v-.6289c0-.8294.237-1.472.711-1.9277.478-.4603 1.146-.6905 2.003-.6905.273 0 .608.0456 1.005.1368l-.021 1.5312c-.164-.041-.365-.0615-.601-.0615-.743 0-1.115.3486-1.115 1.0459v.5947h1.47v1.4492h-1.47v5.9473zm5.017 0v-5.9473h-1.1v-1.4492h1.1v-.6289c0-.8294.237-1.472.711-1.9277.479-.4603 1.147-.6905 2.003-.6905.274 0 .609.0456 1.005.1368l-.02 1.5312c-.164-.041-.365-.0615-.602-.0615-.743 0-1.114.3486-1.114 1.0459v.5947h1.47v1.4492h-1.47v5.9473zm7.718.1367c-1.084 0-1.969-.3327-2.652-.998-.679-.6654-1.019-1.5518-1.019-2.6592v-.1914c0-.7429.144-1.4059.431-1.9893.287-.5879.693-1.039 1.217-1.3535.528-.319 1.13-.4785 1.804-.4785 1.012 0 1.807.319 2.386.957.584.638.875 1.5427.875 2.7139v.8066h-4.71c.064.4831.255.8705.574 1.1621.324.2917.732.4375 1.224.4375.761 0 1.356-.2757 1.784-.8271l.971 1.0869c-.296.4193-.697.7474-1.203.9844-.506.2324-1.067.3486-1.682.3486zm-.225-6.0703c-.392 0-.711.1322-.957.3965-.242.2643-.397.6426-.465 1.1348h2.748v-.1573c-.009-.4375-.128-.7747-.356-1.0117-.228-.2415-.551-.3623-.97-.3623zm7.799 6.0703c-1.084 0-1.968-.3327-2.652-.998-.679-.6654-1.018-1.5518-1.018-2.6592v-.1914c0-.7429.143-1.4059.43-1.9893.287-.5879.693-1.039 1.217-1.3535.529-.319 1.13-.4785 1.805-.4785 1.011 0 1.807.319 2.385.957.584.638.875 1.5427.875 2.7139v.8066h-4.71c.064.4831.256.8705.575 1.1621.323.2917.731.4375 1.223.4375.761 0 1.356-.2757 1.784-.8271l.971 1.0869c-.296.4193-.697.7474-1.203.9844-.506.2324-1.066.3486-1.682.3486zm-.225-6.0703c-.392 0-.711.1322-.957.3965-.242.2643-.397.6426-.465 1.1348h2.748v-.1573c-.009-.4375-.128-.7747-.355-1.0117-.228-.2415-.552-.3623-.971-.3623z" fill="#000"/><rect height="47" rx="9" stroke="#000" stroke-width="2" width="182" x="1" y="11"/></svg>
+          <p>Buy me a coffee</p>
         </a>
       </li>
 
@@ -1356,7 +1371,7 @@ InternalResourceViewResolver</p>
       <li>
         <a href="whatsapp://send?text=Top%20Spring%20Interview%20Questions%2c%20by%20Coding%20N%20Concepts%0aFrequently%20asked%20Spring%20Framework%20Interview%20Questions%20on%20Spring%20Core%2c%20Bean%2c%20IoC%2c%20MVC%2c%20JDBC%2c%20AOP%2c%20Annotations%2c%20Autowiring%2c%20etc.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2ftop-spring-interview-questions%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
-          <p>Email</p>
+          <p>WhatsApp</p>
         </a>
       </li>
       
@@ -1376,18 +1391,16 @@ InternalResourceViewResolver</p>
 
 
 <div class="related_post_section">
-    <h2 class = "related_post_title">See Also</h2>
-    <ul class = "related_post">
+    <h2 class="related_post_title">See Also</h2>
+    <ul class="related_post">
         
-        <li><a href="/top-spring-boot-interview-questions/">Top Spring Boot Interview Questions</a></li>
+        <li><a href="/top-spring-boot-interview-questions/"><img class="related_post__thumb" src="/img/logo/interview.jpg" alt="" loading="lazy"><span class="related_post__title">Top Spring Boot Interview Questions</span></a></li>
         
-        <li><a href="/top-java-interview-questions/">Core Java Interview Questions</a></li>
+        <li><a href="/top-java-interview-questions/"><img class="related_post__thumb" src="/img/logo/interview.jpg" alt="" loading="lazy"><span class="related_post__title">Core Java Interview Questions</span></a></li>
         
-        <li><a href="/top-css-interview-questions/">Top CSS Interview Questions</a></li>
+        <li><a href="/top-css-interview-questions/"><img class="related_post__thumb" src="/img/logo/interview.jpg" alt="" loading="lazy"><span class="related_post__title">Top CSS Interview Questions</span></a></li>
         
-        <li><a href="/top-javascript-interview-questions/">Top Javascript Interview Questions</a></li>
-        
-        <li><a href="/hibernate-interview-questions/">Hibernate Interview Questions</a></li>
+        <li><a href="/top-javascript-interview-questions/"><img class="related_post__thumb" src="/img/logo/interview.jpg" alt="" loading="lazy"><span class="related_post__title">Top Javascript Interview Questions</span></a></li>
         
     </ul>
 </div>
@@ -1431,14 +1444,7 @@ InternalResourceViewResolver</p>
 
 			</div>
 			
-			<aside class="adsbar"><div class="widget-search widget">
-	<form class="widget-search__form" role="search" method="get" action="https://codingnconcepts.com/search">
-		<label>
-			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="s" aria-label="SEARCH...">
-		</label>
-		<input class="widget-search__submit" type="submit" value="Search">
-	</form>
-</div>
+			<aside class="adsbar">
 <div class="widget-social widget">
 	<h4 class="widget-social__title widget__title">Follow Us</h4>
 	<div class="widget-social__content widget__content">
@@ -1545,11 +1551,11 @@ InternalResourceViewResolver</p>
 		
 		<div class="footer__copyright">
 			&copy; 2026 CodingNConcepts.
-			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>
 </footer>
 	</div>
 <script async defer src="/js/menu.js"></script>
+<script defer src="/js/theme-toggle.js"></script>
 </body>
 </html>

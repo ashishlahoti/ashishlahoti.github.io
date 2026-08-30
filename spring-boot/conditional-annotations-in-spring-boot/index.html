@@ -4,8 +4,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="color-scheme" content="light dark">
 	<title>Conditional Annotations in Spring Boot - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
 	<meta name="description" content="Conditional Annotations in Spring Boot">
 	<meta property="og:title" content="Conditional Annotations in Spring Boot" />
 <meta property="og:description" content="Conditional Annotations in Spring Boot" />
@@ -22,15 +24,17 @@
 <meta property="article:tag" content="Spring Boot Basics" />
 <meta property="article:tag" content="REST" />
 <meta property="fb:admins" content="177784346770196" />
-	<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://codingnconcepts.com/img/logo/springboot.png"/>
-
-<meta name="twitter:title" content="Conditional Annotations in Spring Boot"/>
-<meta name="twitter:description" content="Conditional Annotations in Spring Boot"/>
+	
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://codingnconcepts.com/img/logo/springboot.png">
+	<meta name="twitter:title" content="Conditional Annotations in Spring Boot">
+	<meta name="twitter:description" content="Conditional Annotations in Spring Boot">
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Rowdies">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@600;700;800&display=swap">
 	<link rel="stylesheet" href="/css/style.css">
 	
 	
@@ -109,6 +113,10 @@
 				<div class="logo__tagline">Ashish Lahoti&#39;s Technical Blog</div>
 			</a>
 		</div>
+		<form class="header-search" role="search" method="get" action="https://codingnconcepts.com/search">
+			<label class="menu__text--sr" for="headerSearchInput">Find related posts&hellip;</label>
+			<input class="header-search__field" id="headerSearchInput" type="search" placeholder="Find related posts&hellip;" name="s" aria-label="Find related posts">
+		</form>
 		
 <nav class="menu">
 	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
@@ -116,9 +124,10 @@
 	</button>
 	<ul class="menu__list">
 		<li class="menu__item">
-			<a class="menu__link" href="/">
+			<a class="menu__link menu__link--icon" href="/" title="Home">
 				
-				<span class="menu__text">Home</span>
+				<svg class="menu__home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5 10v9.5a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"></path></svg>
+				<span class="menu__text menu__text--sr">Home</span>
 				
 			</a>
 		</li>
@@ -493,8 +502,13 @@
 	</ul>
 </nav>
 
+		<button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+			<svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+			<svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+		</button>
 	</div>
 </header>
+		
 		<div class="wrapper flex">
 			<div class="primary">
 			
@@ -507,7 +521,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2021-06-11T00:00:00Z">Last Modified: June 11, 2021</time>
+	<time class="meta__text" datetime="2021-06-11T00:00:00Z">Last Modified: Jun 11, 2021</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -516,8 +530,8 @@
 	</span>
 </div></div>
 		</header>
-<div class="post__toc toc">
-	<div class="toc__title">Page content</div>
+<details class="post__toc toc" open>
+	<summary class="toc__title">Page content</summary>
 	<div class="toc__menu">
 		<nav id="TableOfContents">
   <ul>
@@ -563,7 +577,7 @@
   </ul>
 </nav>
 	</div>
-</div>
+</details>
 <div class="content post__content clearfix">
 			<p>In this tutorial, we&rsquo;ll take a look at Conditional Annotations in Spring Boot with examples.</p>
 <h2 id="overview">Overview</h2>
@@ -593,68 +607,68 @@
 <br/>
 <h3 id="1-as-a-method-level-annotation">1. As a Method Level Annotation</h3>
 <p>We can use <code>@Conditional</code> on any method annotated with <code>@Bean</code> annotation to load that bean in Spring context if the condition is met.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ConditionalBeanConfiguration</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@Bean</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@Conditional</span><span style="color:#f92672">(</span>CustomCondition<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span> <span style="color:#75715e">//&lt;- method level condition
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  ConditionalBean <span style="color:#a6e22e">conditionalBean</span><span style="color:#f92672">(){</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ConditionalBean<span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">};</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><br/>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">ConditionalBeanConfiguration</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nd">@Bean</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nd">@Conditional</span><span class="p">(</span><span class="n">CustomCondition</span><span class="p">.</span><span class="na">class</span><span class="p">)</span><span class="w"> </span><span class="c1">//&lt;- method level condition</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">ConditionalBean</span><span class="w"> </span><span class="nf">conditionalBean</span><span class="p">(){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ConditionalBean</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><br/>
 <h3 id="2-as-a-type-class-level-annotation">2. As a Type (Class) Level Annotation</h3>
 <p>We can use <code>@Conditional</code> on any class annotated with <code>@Component</code>, <code>@Service</code>, <code>@Repository</code>, <code>@Controller</code>, <code>@RestController</code>, or <code>@Configuration</code> annotation to load that class bean in Spring context if the condition is met.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Component</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Conditional</span><span style="color:#f92672">(</span>CustomCondition<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span> <span style="color:#75715e">//&lt;- class level condition
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ConditionalComponent</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><br/>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Component</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@Conditional</span><span class="p">(</span><span class="n">CustomCondition</span><span class="p">.</span><span class="na">class</span><span class="p">)</span><span class="w"> </span><span class="c1">//&lt;- class level condition</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">ConditionalComponent</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><br/>
 <h6 id="configuration-with-conditional">@Configuration with @Conditional</h6>
 <p>If a <code>@Configuration</code> class is annotated with <code>@Conditional</code>, all the <code>@Bean</code> methods, <code>@Import</code> annotations, and <code>@ComponentScan</code> annotations associated with that class will be loaded only when the class level condition is met.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Conditional</span><span style="color:#f92672">(</span>CustomCondition<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span> <span style="color:#75715e">//&lt;- class level condition
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ConditionalConfiguration</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@Bean</span> <span style="color:#75715e">//&lt;- will be loaded only if class level condition is met
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  Bean <span style="color:#a6e22e">bean</span><span style="color:#f92672">(){</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Code for bean definition
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#f92672">};</span>
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><br/>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@Conditional</span><span class="p">(</span><span class="n">CustomCondition</span><span class="p">.</span><span class="na">class</span><span class="p">)</span><span class="w"> </span><span class="c1">//&lt;- class level condition</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">ConditionalConfiguration</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nd">@Bean</span><span class="w"> </span><span class="c1">//&lt;- will be loaded only if class level condition is met</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">Bean</span><span class="w"> </span><span class="nf">bean</span><span class="p">(){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Code for bean definition</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><br/>
 <h3 id="3-as-a-meta-annotation">3. As a Meta Annotation</h3>
 <p>We can use <code>@Conditional</code> as a meta annotation to create custom conditional annotations.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Target</span><span style="color:#f92672">({</span>ElementType<span style="color:#f92672">.</span><span style="color:#a6e22e">TYPE</span><span style="color:#f92672">,</span> ElementType<span style="color:#f92672">.</span><span style="color:#a6e22e">METHOD</span><span style="color:#f92672">})</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Retention</span><span style="color:#f92672">(</span>RetentionPolicy<span style="color:#f92672">.</span><span style="color:#a6e22e">RUNTIME</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Conditional</span><span style="color:#f92672">(</span>CustomCondition<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span> <span style="color:#75715e">//&lt;- meta annotation condition
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#a6e22e">@interface</span> CustomConditionAnnotation <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p>Now we can use our custom <code>@CustomConditionAnnotation</code> annotation at method and class level instead of <code>@Conditional</code> annotation like this:-</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ConditionalBeanConfiguration</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@Bean</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@CustomConditionAnnotation</span>  <span style="color:#75715e">//&lt;- custom annotation at method level
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  ConditionalBean <span style="color:#a6e22e">conditionalBean</span><span style="color:#f92672">(){</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ConditionalBean<span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">};</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Component</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@CustomConditionAnnotation</span> <span style="color:#75715e">//&lt;- custom annotation at class level
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ConditionalComponent</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><h2 id="custom-condition">Custom Condition</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Target</span><span class="p">({</span><span class="n">ElementType</span><span class="p">.</span><span class="na">TYPE</span><span class="p">,</span><span class="w"> </span><span class="n">ElementType</span><span class="p">.</span><span class="na">METHOD</span><span class="p">})</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@Retention</span><span class="p">(</span><span class="n">RetentionPolicy</span><span class="p">.</span><span class="na">RUNTIME</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@Conditional</span><span class="p">(</span><span class="n">CustomCondition</span><span class="p">.</span><span class="na">class</span><span class="p">)</span><span class="w"> </span><span class="c1">//&lt;- meta annotation condition</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="nd">@interface</span><span class="w"> </span><span class="n">CustomConditionAnnotation</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>Now we can use our custom <code>@CustomConditionAnnotation</code> annotation at method and class level instead of <code>@Conditional</code> annotation like this:-</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">ConditionalBeanConfiguration</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nd">@Bean</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nd">@CustomConditionAnnotation</span><span class="w">  </span><span class="c1">//&lt;- custom annotation at method level</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">ConditionalBean</span><span class="w"> </span><span class="nf">conditionalBean</span><span class="p">(){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ConditionalBean</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Component</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@CustomConditionAnnotation</span><span class="w"> </span><span class="c1">//&lt;- custom annotation at class level</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">ConditionalComponent</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h2 id="custom-condition">Custom Condition</h2>
 <p>You see that in previous examples, we have used <code>CustomCondition.class</code> in <code>@Conditional</code> annotation which provides the logic for condition matching.</p>
 <p>Let&rsquo;s create this custom condition by implementing Spring&rsquo;s <code>Condition</code> class and provide the matching logic in <code>matches</code> method:-</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CustomCondition</span> <span style="color:#66d9ef">implements</span> Condition <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">matches</span><span style="color:#f92672">(</span>ConditionContext context<span style="color:#f92672">,</span> AnnotatedTypeMetadata metadata<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> context<span style="color:#f92672">.</span><span style="color:#a6e22e">getEnvironment</span><span style="color:#f92672">().</span><span style="color:#a6e22e">getProperty</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;custom.condition.enabled&#34;</span><span style="color:#f92672">,</span> Boolean<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><pre tabindex="0"><code><div class="code_output">application.yml</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CustomCondition</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Condition</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">matches</span><span class="p">(</span><span class="n">ConditionContext</span><span class="w"> </span><span class="n">context</span><span class="p">,</span><span class="w"> </span><span class="n">AnnotatedTypeMetadata</span><span class="w"> </span><span class="n">metadata</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">context</span><span class="p">.</span><span class="na">getEnvironment</span><span class="p">().</span><span class="na">getProperty</span><span class="p">(</span><span class="s">&#34;custom.condition.enabled&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">Boolean</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><pre tabindex="0"><code><div class="code_output">application.yml</div>
 custom.condition.enabled: true
 </code></pre><p>We see that <code>CustomCondition</code> matches when property <code>custom.condition.enabled</code> is set to true.</p>
 <br/>
@@ -662,49 +676,49 @@ custom.condition.enabled: true
 <p>We can combine multiple conditions such that it is matched if any one of the underlying condition is matched. In another words, combining the conditions with &ldquo;OR&rdquo; logical operator.</p>
 <h6 id="create-one-more-condition-to-combine">Create one more condition to combine</h6>
 <p>We have already created one custom condition i.e. <code>CustomCondition</code>. Let&rsquo;s quickly create one more custom condition i.e. <code>AnotherCustomCondition</code>:-</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AnotherCustomCondition</span> <span style="color:#66d9ef">implements</span> Condition <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">matches</span><span style="color:#f92672">(</span>ConditionContext context<span style="color:#f92672">,</span> AnnotatedTypeMetadata metadata<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> context<span style="color:#f92672">.</span><span style="color:#a6e22e">getEnvironment</span><span style="color:#f92672">().</span><span style="color:#a6e22e">getProperty</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;another-custom.condition.enabled&#34;</span><span style="color:#f92672">,</span> Boolean<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><pre tabindex="0"><code><div class="code_output">application.yml</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AnotherCustomCondition</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Condition</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">matches</span><span class="p">(</span><span class="n">ConditionContext</span><span class="w"> </span><span class="n">context</span><span class="p">,</span><span class="w"> </span><span class="n">AnnotatedTypeMetadata</span><span class="w"> </span><span class="n">metadata</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">context</span><span class="p">.</span><span class="na">getEnvironment</span><span class="p">().</span><span class="na">getProperty</span><span class="p">(</span><span class="s">&#34;another-custom.condition.enabled&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">Boolean</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><pre tabindex="0"><code><div class="code_output">application.yml</div>
 another-custom.condition.enabled: true
 </code></pre><p>We see that <code>AnotherCustomCondition</code> matches when property <code>another-custom.condition.enabled</code> is set to true.</p>
 <br/>
 <h6 id="anynestedcondition">AnyNestedCondition</h6>
 <p>Now let&rsquo;s combine these two conditions <code>CustomCondition</code> and <code>AnotherCustomCondition</code> with <strong>any match</strong> by extending Spring&rsquo;s  <code>AnyNestedCondition</code> class:-</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CombinedConditionsWithAnyMatch</span> <span style="color:#66d9ef">extends</span> AnyNestedCondition <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">CombinedConditionsWithAnyMatch</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>ConfigurationPhase<span style="color:#f92672">.</span><span style="color:#a6e22e">PARSE_CONFIGURATION</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// super(ConfigurationPhase.REGISTER_BEAN);
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Conditional</span><span style="color:#f92672">(</span>CustomCondition<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OnCustomCondition</span> <span style="color:#f92672">{}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Conditional</span><span style="color:#f92672">(</span>AnotherCustomCondition<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OnAnotherCustomCondition</span> <span style="color:#f92672">{}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><br/>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CombinedConditionsWithAnyMatch</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">AnyNestedCondition</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">CombinedConditionsWithAnyMatch</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">ConfigurationPhase</span><span class="p">.</span><span class="na">PARSE_CONFIGURATION</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// super(ConfigurationPhase.REGISTER_BEAN);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Conditional</span><span class="p">(</span><span class="n">CustomCondition</span><span class="p">.</span><span class="na">class</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kd">class</span> <span class="nc">OnCustomCondition</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Conditional</span><span class="p">(</span><span class="n">AnotherCustomCondition</span><span class="p">.</span><span class="na">class</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kd">class</span> <span class="nc">OnAnotherCustomCondition</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><br/>
 <h6 id="configurationphase">ConfigurationPhase</h6>
 <p>Check the <code>ConfigurationPhase</code> parameter passed into constructor. If you want to apply your combined condition to <code>@Configuration</code> class, use the value <code>PARSE_CONFIGURATION</code>. If you want to apply the condition to <code>@Bean</code> bean, use <code>REGISTER_BEAN</code> as shown in the example above. Spring Boot needs to make this distinction so it can apply the conditions at the right time during application context startup.</p>
 <br/>
 <h6 id="apply-condition-with-any-match">Apply Condition with Any Match</h6>
 <p>Let&rsquo;s apply this combined condition to a configuration class:-</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Conditional</span><span style="color:#f92672">(</span>CombinedConditionsWithAnyMatch<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ConditionalConfiguration</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@Bean</span>
-</span></span><span style="display:flex;"><span>  Bean <span style="color:#a6e22e">bean</span><span style="color:#f92672">(){</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// TODO
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#f92672">};</span>
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p>This configuration will be loaded in Spring application context when any of the condition is true, means when any of the property is set to true:-</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@Conditional</span><span class="p">(</span><span class="n">CombinedConditionsWithAnyMatch</span><span class="p">.</span><span class="na">class</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">ConditionalConfiguration</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nd">@Bean</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">Bean</span><span class="w"> </span><span class="nf">bean</span><span class="p">(){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// TODO</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>This configuration will be loaded in Spring application context when any of the condition is true, means when any of the property is set to true:-</p>
 <pre tabindex="0"><code><div class="code_output">application.yml</div>
 custom.condition.enabled: true
 another-custom.condition.enabled: false
@@ -713,52 +727,52 @@ another-custom.condition.enabled: false
 <p>We can combine multiple conditions such that it is matched only when all the conditions are matched. In another words, combining the conditions with &ldquo;AND&rdquo; logical operator.</p>
 <h6 id="allnestedconditions">AllNestedConditions</h6>
 <p>This time we combine the two conditions <code>CustomCondition</code> and <code>AnotherCustomCondition</code> with <strong>all match</strong> by extending Spring&rsquo;s <code>AllNestedConditions</code> class:-</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CombinedConditionsWithAllMatch</span> <span style="color:#66d9ef">extends</span> AllNestedConditions <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">CombinedConditionsWithAllMatch</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// super(ConfigurationPhase.PARSE_CONFIGURATION);
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>ConfigurationPhase<span style="color:#f92672">.</span><span style="color:#a6e22e">REGISTER_BEAN</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Conditional</span><span style="color:#f92672">(</span>CustomCondition<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OnCustomCondition</span> <span style="color:#f92672">{}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Conditional</span><span style="color:#f92672">(</span>AnotherCustomCondition<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OnAnotherCustomCondition</span> <span style="color:#f92672">{}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><br/>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CombinedConditionsWithAllMatch</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">AllNestedConditions</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">CombinedConditionsWithAllMatch</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// super(ConfigurationPhase.PARSE_CONFIGURATION);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">ConfigurationPhase</span><span class="p">.</span><span class="na">REGISTER_BEAN</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Conditional</span><span class="p">(</span><span class="n">CustomCondition</span><span class="p">.</span><span class="na">class</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kd">class</span> <span class="nc">OnCustomCondition</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Conditional</span><span class="p">(</span><span class="n">AnotherCustomCondition</span><span class="p">.</span><span class="na">class</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kd">class</span> <span class="nc">OnAnotherCustomCondition</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><br/>
 <h6 id="apply-condition-with-all-match">Apply Condition with All Match</h6>
 <p>This time we passed <code>ConfigurationPhase.REGISTER_BEAN</code> into constructor as we want to apply the combined condition on <code>@Bean</code> bean like this:-</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ConditionalBeanConfiguration</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@Bean</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@Conditional</span><span style="color:#f92672">(</span>CombinedConditionsWithAllMatch<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span> <span style="color:#75715e">//&lt;- as method level annotation
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  ConditionalBean <span style="color:#a6e22e">conditionalBean</span><span style="color:#f92672">(){</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ConditionalBean<span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">};</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p>This bean will be loaded in Spring application context only when all of the conditions are true, means when all of the properties are set to true:-</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">ConditionalBeanConfiguration</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nd">@Bean</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nd">@Conditional</span><span class="p">(</span><span class="n">CombinedConditionsWithAllMatch</span><span class="p">.</span><span class="na">class</span><span class="p">)</span><span class="w"> </span><span class="c1">//&lt;- as method level annotation</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">ConditionalBean</span><span class="w"> </span><span class="nf">conditionalBean</span><span class="p">(){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ConditionalBean</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>This bean will be loaded in Spring application context only when all of the conditions are true, means when all of the properties are set to true:-</p>
 <pre tabindex="0"><code><div class="code_output">application.yml</div>
 custom.condition.enabled: true
 another-custom.condition.enabled: true
 </code></pre><br/>
 <h3 id="combine-conditions-with-none-match">Combine Conditions with None Match</h3>
 <p>We can combine multiple conditions such that it is matched only when all the conditions are <strong>NOT</strong> matched by extending Spring&rsquo;s <code>NoneNestedCondition</code> class:-</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CombinedConditionsWithNoneMatch</span> <span style="color:#66d9ef">extends</span> NoneNestedConditions <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">CombinedConditionsWithNoneMatch</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>ConfigurationPhase<span style="color:#f92672">.</span><span style="color:#a6e22e">PARSE_CONFIGURATION</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// or super(ConfigurationPhase.REGISTER_BEAN);
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Conditional</span><span style="color:#f92672">(</span>CustomCondition<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OnCustomCondition</span> <span style="color:#f92672">{}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Conditional</span><span style="color:#f92672">(</span>AnotherCustomCondition<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OnAnotherCustomCondition</span> <span style="color:#f92672">{}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p>The combined condition will be matched with following properties:-</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CombinedConditionsWithNoneMatch</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">NoneNestedConditions</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">CombinedConditionsWithNoneMatch</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">ConfigurationPhase</span><span class="p">.</span><span class="na">PARSE_CONFIGURATION</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// or super(ConfigurationPhase.REGISTER_BEAN);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Conditional</span><span class="p">(</span><span class="n">CustomCondition</span><span class="p">.</span><span class="na">class</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kd">class</span> <span class="nc">OnCustomCondition</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Conditional</span><span class="p">(</span><span class="n">AnotherCustomCondition</span><span class="p">.</span><span class="na">class</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kd">class</span> <span class="nc">OnAnotherCustomCondition</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>The combined condition will be matched with following properties:-</p>
 <pre tabindex="0"><code><div class="code_output">application.yml</div>
 custom.condition.enabled: false
 another-custom.condition.enabled: false
@@ -766,15 +780,15 @@ another-custom.condition.enabled: false
 <p>Spring Boot provides a set of predefined <code>@ConditionalOn...</code> annotations which are very handy. Let&rsquo;s have a look at them:-</p>
 <h3 id="conditionalonproperty">@ConditionalOnProperty</h3>
 <p>The <code>@ConditionalOnProperty</code> annotation is the most commonly used conditional annotation in Spring Boot. It allows to load classes or beans conditionally depending on a certain property:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@ConditionalOnProperty</span><span style="color:#f92672">(</span>
-</span></span><span style="display:flex;"><span>    value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;api.doc.enabled&#34;</span><span style="color:#f92672">,</span> 
-</span></span><span style="display:flex;"><span>    havingValue <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;true&#34;</span><span style="color:#f92672">,</span> 
-</span></span><span style="display:flex;"><span>    matchIfMissing <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ApiDocConfig</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// TODO
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p>The <code>ApiDocConfig</code> is only loaded if the <code>api.doc.enabled</code> property is set to true. If the property is not set at all, it will still be loaded, because we have defined <code>matchIfMissing = true</code>. This way, we have created a config that is loaded by default until we set the property to false.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@ConditionalOnProperty</span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">value</span><span class="o">=</span><span class="s">&#34;api.doc.enabled&#34;</span><span class="p">,</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">havingValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;true&#34;</span><span class="p">,</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">matchIfMissing</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">ApiDocConfig</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// TODO</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>The <code>ApiDocConfig</code> is only loaded if the <code>api.doc.enabled</code> property is set to true. If the property is not set at all, it will still be loaded, because we have defined <code>matchIfMissing = true</code>. This way, we have created a config that is loaded by default until we set the property to false.</p>
 <p>A common use case is when you want to enable certain config in development environment but disable in production environment or vice versa:-</p>
 <pre tabindex="0"><code><div class="code_output">application-dev.yml</div>
 api.doc.enabled: true
@@ -790,185 +804,185 @@ api.doc.enabled: false
 </code></pre><br/>
 <h3 id="conditionalonexpression">@ConditionalOnExpression</h3>
 <p>If we have a more complex condition based on multiple properties, we can use <code>@ConditionalOnExpression</code>:-</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@ConditionalOnExpression</span><span style="color:#f92672">(</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;${api.doc.enabled:true} and &#39;${spring.profile.active}&#39;.equalsIgnoreCase(&#39;DEV&#39;)&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ApiDocConfig</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// TODO
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p>The <code>ApiDocConfig</code> is only loaded if property <code>api.doc.enabled</code> is set to true and <code>spring.profile.active</code> is equal to dev. By appending <code>:true</code> to the <code>api.doc.enabled</code> property, we tell Spring Boot to use true as a default value in the case the properties have not been set.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@ConditionalOnExpression</span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="s">&#34;${api.doc.enabled:true} and &#39;${spring.profile.active}&#39;.equalsIgnoreCase(&#39;DEV&#39;)&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">ApiDocConfig</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// TODO</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>The <code>ApiDocConfig</code> is only loaded if property <code>api.doc.enabled</code> is set to true and <code>spring.profile.active</code> is equal to dev. By appending <code>:true</code> to the <code>api.doc.enabled</code> property, we tell Spring Boot to use true as a default value in the case the properties have not been set.</p>
 <p>We can make full use of the <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#expressions">Spring Expression Language</a> in the expression.</p>
 <br/>
 <h3 id="conditionalonbean">@ConditionalOnBean</h3>
 <p>We might want to load a bean only if dependent bean is available in the application context:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Service</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@ConditionalOnBean</span><span style="color:#f92672">(</span>ApiDocConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ApiDocService</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// TODO
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p>The <code>ApiDocService</code> is only loaded if there is a bean of class <code>ApiDocConfig</code> in the application context. This way we can define the dependencies of a bean on other beans.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Service</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@ConditionalOnBean</span><span class="p">(</span><span class="n">ApiDocConfig</span><span class="p">.</span><span class="na">class</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">ApiDocService</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// TODO</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>The <code>ApiDocService</code> is only loaded if there is a bean of class <code>ApiDocConfig</code> in the application context. This way we can define the dependencies of a bean on other beans.</p>
 <br/>
 <h3 id="conditionalonmissingbean">@ConditionalOnMissingBean</h3>
 <p>Similarly, we can use <code>@ConditionalOnMissingBean</code> if we want to load a bean only if another bean doesn&rsquo;t exist in the application context:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DatabaseConfig</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@Bean</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@ConditionalOnMissingBean</span>
-</span></span><span style="display:flex;"><span>  DataSource <span style="color:#a6e22e">dataSource</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> InMemoryDataSource<span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p>This examples loads the <code>InMemoryDataSource</code> into the application context if there is no other <code>DataSource</code> exist in application context. This is very similar to what Spring Boot does internally to provide an in-memory database in a test context.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">DatabaseConfig</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nd">@Bean</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nd">@ConditionalOnMissingBean</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">DataSource</span><span class="w"> </span><span class="nf">dataSource</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">InMemoryDataSource</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>This examples loads the <code>InMemoryDataSource</code> into the application context if there is no other <code>DataSource</code> exist in application context. This is very similar to what Spring Boot does internally to provide an in-memory database in a test context.</p>
 <br/>
 <h3 id="conditionalonresource">@ConditionalOnResource</h3>
 <p>The <code>@ConditionalOnResource</code> is used when we want to load a bean depending upon the certain resource availability in the class path</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@ConditionalOnResource</span><span style="color:#f92672">(</span>resources <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/logback.xml&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LoggingConfig</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// TODO
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p>The <code>LoggingConfig</code> is only loaded when the <code>logback.xml</code> configuration file is available in the classpath. This way, we can create similar config classes that are only loaded if their respective configuration file is available.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@ConditionalOnResource</span><span class="p">(</span><span class="n">resources</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;/logback.xml&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">LoggingConfig</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// TODO</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>The <code>LoggingConfig</code> is only loaded when the <code>logback.xml</code> configuration file is available in the classpath. This way, we can create similar config classes that are only loaded if their respective configuration file is available.</p>
 <br/>
 <hr/>
 <p>The conditional annotations described above are the most common ones which we generally use in our Spring Boot Project. Spring Boot provides many other conditional annotations. They are, however, not as common and more suited for framework development rather than application development (Spring Boot uses some of them heavily behind the scene). So, let’s only have a brief look at them here.</p>
 <br/>
 <h3 id="conditionalonclass">@ConditionalOnClass</h3>
 <p>Load a bean only when the specified class is in the classpath. We can specify the class either by fully qualified name or value.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Service</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@ConditionalOnClass</span><span style="color:#f92672">(</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;com.example.config.LoggingConfig&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LoggingService</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Code runs when class in available in classpath
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Service</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@ConditionalOnClass</span><span style="color:#f92672">(</span>LoggingConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LoggingService</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Code runs when class in available in classpath
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p>Similarly we can use <code>@ConditionalOnMissingClass</code> annotation to load a bean only if specified class in <strong>NOT</strong> in the classpath.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Service</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@ConditionalOnClass</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;com.example.config.LoggingConfig&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">LoggingService</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// Code runs when class in available in classpath</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@Service</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@ConditionalOnClass</span><span class="p">(</span><span class="n">LoggingConfig</span><span class="p">.</span><span class="na">class</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">LoggingService</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// Code runs when class in available in classpath</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>Similarly we can use <code>@ConditionalOnMissingClass</code> annotation to load a bean only if specified class in <strong>NOT</strong> in the classpath.</p>
 <br/>
 <h3 id="conditionalonwebapplication">@ConditionalOnWebApplication</h3>
 <p>Load a bean only when application is a web application. By default, any web application will match but it can be narrowed using the <code>type</code> attribute.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@ConditionalOnWebApplication</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RunsOnAnyWebApplication</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Code runs on web application
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@ConditionalOnWebApplication</span><span style="color:#f92672">(</span>type <span style="color:#f92672">=</span> ConditionalOnWebApplication<span style="color:#f92672">.</span><span style="color:#a6e22e">Type</span><span style="color:#f92672">.</span><span style="color:#a6e22e">SERVLET</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RunsOnServletBasedWebApplication</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Code runs on Servlet based web application
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p>Similarly we can use <code>@ConditionalOnNotWebApplication</code> annotation to load a bean only when the application context is a <strong>NOT</strong> a web application context.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@ConditionalOnWebApplication</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">RunsOnAnyWebApplication</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// Code runs on web application</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@ConditionalOnWebApplication</span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ConditionalOnWebApplication</span><span class="p">.</span><span class="na">Type</span><span class="p">.</span><span class="na">SERVLET</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">RunsOnServletBasedWebApplication</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// Code runs on Servlet based web application</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>Similarly we can use <code>@ConditionalOnNotWebApplication</code> annotation to load a bean only when the application context is a <strong>NOT</strong> a web application context.</p>
 <br/>
 <h3 id="conditionalonjava">@ConditionalOnJava</h3>
 <p>Load a bean only when application is running on a specified JVM version. By default, version equal and above will match but it can be changed using the <code>range</code> attribute</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@ConditionalOnJava</span><span style="color:#f92672">(</span>JavaVersion<span style="color:#f92672">.</span><span style="color:#a6e22e">EIGHT</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RunsOnJavaEightAndAbove</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Code runs on Java-8 and above versions
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@ConditionalOnJava</span><span style="color:#f92672">(</span>value <span style="color:#f92672">=</span> JavaVersion<span style="color:#f92672">.</span><span style="color:#a6e22e">ELEVEN</span><span style="color:#f92672">,</span> range <span style="color:#f92672">=</span> ConditionalOnJava<span style="color:#f92672">.</span><span style="color:#a6e22e">Range</span><span style="color:#f92672">.</span><span style="color:#a6e22e">OLDER_THAN</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RunsOnBelowJavaEleven</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Code runs below Java-11. 
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">// Code doesn&#39;t run on Java-11 and above versions
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><br/>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@ConditionalOnJava</span><span class="p">(</span><span class="n">JavaVersion</span><span class="p">.</span><span class="na">EIGHT</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">RunsOnJavaEightAndAbove</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// Code runs on Java-8 and above versions</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@ConditionalOnJava</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JavaVersion</span><span class="p">.</span><span class="na">ELEVEN</span><span class="p">,</span><span class="w"> </span><span class="n">range</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ConditionalOnJava</span><span class="p">.</span><span class="na">Range</span><span class="p">.</span><span class="na">OLDER_THAN</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">RunsOnBelowJavaEleven</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// Code runs below Java-11. </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// Code doesn&#39;t run on Java-11 and above versions</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><br/>
 <h3 id="conditionaloncloudplatform">@ConditionalOnCloudPlatform</h3>
 <p>Load a bean only when application is running on a specified cloud platform:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@ConditionalOnCloudPlatform</span><span style="color:#f92672">(</span>CloudPlatform<span style="color:#f92672">.</span><span style="color:#a6e22e">KUBERNETES</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RunsOnKubernetesCloudPlatform</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Code runs on application running on Kubernetes
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><br/>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@ConditionalOnCloudPlatform</span><span class="p">(</span><span class="n">CloudPlatform</span><span class="p">.</span><span class="na">KUBERNETES</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">RunsOnKubernetesCloudPlatform</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// Code runs on application running on Kubernetes</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><br/>
 <h3 id="conditionalonwardeployment">@ConditionalOnWarDeployment</h3>
 <p>Load a bean only when the application is a traditional war packaging and deployment. This condition returns false for applications running with embedded servers.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@ConditionalOnWarDeployment</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RunsWithWarPackages</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Code runs with WAR package deployment
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><br/>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@ConditionalOnWarDeployment</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">RunsWithWarPackages</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// Code runs with WAR package deployment</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><br/>
 <h3 id="conditionalonjndi">@ConditionalOnJndi</h3>
 <p>Load a bean only when a specified JNDI location exist. If no locations are specific the condition matches solely based on the presence of an <code>javax.naming.InitialContext</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@ConditionalOnJndi</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;java:comp/env/ejb/myEJB&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RunsWithJndiLocationAvailability</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Code runs when JNDI location is available
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><br/>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@ConditionalOnJndi</span><span class="p">(</span><span class="s">&#34;java:comp/env/ejb/myEJB&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">RunsWithJndiLocationAvailability</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// Code runs when JNDI location is available</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><br/>
 <h3 id="conditionalonsinglecandidate">@ConditionalOnSingleCandidate</h3>
 <p>Similar to <code>@ConditionalOnBean</code>, but load a bean only when a single candidate for the specified bean class can be determined. The condition will also match if multiple matching bean instances are already contained in the <code>BeanFactory</code> but a primary <code>@Primary</code> candidate has been defined; essentially, the condition match if auto-wiring a bean with the defined type will succeed. It is strongly recommended to use this condition on auto-configuration classes only.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@ConditionalOnSingleCandidate</span><span style="color:#f92672">(</span>DataSource<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RunsWithSingleDataSourceBean</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Code runs when single data source bean is determined
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><br/>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@ConditionalOnSingleCandidate</span><span class="p">(</span><span class="n">DataSource</span><span class="p">.</span><span class="na">class</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">RunsWithSingleDataSourceBean</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// Code runs when single data source bean is determined</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><br/>
 <h3 id="conditionalonmanagementport">@ConditionalOnManagementPort</h3>
 <p>Load a bean based on management server port <code>management.server.port</code> conditions, when:-</p>
 <ul>
 <li>the port is disabled means it is not defined</li>
 <li>the port is same or different from server port <code>server.port</code></li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@ConditionalOnManagementPort</span><span style="color:#f92672">(</span>ManagementPortType<span style="color:#f92672">.</span><span style="color:#a6e22e">DISABLED</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ManagementPortIsDisabled</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Code runs when management port is disabled
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@ConditionalOnManagementPort</span><span style="color:#f92672">(</span>ManagementPortType<span style="color:#f92672">.</span><span style="color:#a6e22e">SAME</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ManagementPortIsSameAsServerPort</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Code runs when management port is same as server port
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@ConditionalOnManagementPort</span><span style="color:#f92672">(</span>ManagementPortType<span style="color:#f92672">.</span><span style="color:#a6e22e">DIFFERENT</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ManagementPortIsDifferentFromServerPort</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Code runs when management port is different from server port
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><br/>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@ConditionalOnManagementPort</span><span class="p">(</span><span class="n">ManagementPortType</span><span class="p">.</span><span class="na">DISABLED</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">ManagementPortIsDisabled</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// Code runs when management port is disabled</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@ConditionalOnManagementPort</span><span class="p">(</span><span class="n">ManagementPortType</span><span class="p">.</span><span class="na">SAME</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">ManagementPortIsSameAsServerPort</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// Code runs when management port is same as server port</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@ConditionalOnManagementPort</span><span class="p">(</span><span class="n">ManagementPortType</span><span class="p">.</span><span class="na">DIFFERENT</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">ManagementPortIsDifferentFromServerPort</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// Code runs when management port is different from server port</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><br/>
 <h3 id="conditionalonavailableendpoint">@ConditionalOnAvailableEndpoint</h3>
 <p>Load a bean when management endpoint is available. An endpoint is considered available if it is both enabled and exposed using <code>management.endpoints.web.exposure.include</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@ConditionalOnAvailableEndpoint</span><span style="color:#f92672">(</span>endpoint <span style="color:#f92672">=</span> InfoEndpoint<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">InfoEndpointIsAvailable</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Code runs when info management endpoint in enabled and exposed
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p>The endpoint should be a bean of either an <code>@Endpoint</code> or an <code>@EndpointExtension</code>. Info endpoint is provided by Spring Boot out of the box.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@ConditionalOnAvailableEndpoint</span><span class="p">(</span><span class="n">endpoint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InfoEndpoint</span><span class="p">.</span><span class="na">class</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">InfoEndpointIsAvailable</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// Code runs when info management endpoint in enabled and exposed</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>The endpoint should be a bean of either an <code>@Endpoint</code> or an <code>@EndpointExtension</code>. Info endpoint is provided by Spring Boot out of the box.</p>
 <h6 id="custom-management-endpoint">Custom Management Endpoint</h6>
 <p>You can create custom management endpoint like this:-</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Component</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Endpoint</span><span style="color:#f92672">(</span>id <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;custom-endpoint&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CustomEndpoint</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@ReadOperation</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">print</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;This is custom management endpoint&#34;</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p>Now let&rsquo;s load a configuration only when our custom endpoint is available:-</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@ConditionalOnAvailableEndpoint</span><span style="color:#f92672">(</span>endpoint <span style="color:#f92672">=</span> CustomEndpoint<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CustomEndpointConfiguration</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Configuration for custom endpoint
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><br/>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Component</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@Endpoint</span><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;custom-endpoint&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CustomEndpoint</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@ReadOperation</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">print</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&#34;This is custom management endpoint&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>Now let&rsquo;s load a configuration only when our custom endpoint is available:-</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@ConditionalOnAvailableEndpoint</span><span class="p">(</span><span class="n">endpoint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CustomEndpoint</span><span class="p">.</span><span class="na">class</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">CustomEndpointConfiguration</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// Configuration for custom endpoint</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><br/>
 <h3 id="conditionalonenabledhealthindicator">@ConditionalOnEnabledHealthIndicator</h3>
 <p>Load a bean when health indicator is enabled from property <code>management.health.&lt;name&gt;.enabled</code> where <code>&lt;name&gt;</code> is the value specified.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@ConditionalOnEnabledHealthIndicator</span><span style="color:#f92672">(</span>value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;heartbeat&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HeatbeatHealthIndicator</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Code runs when management.health.heartbeat.enabled property is set to true.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><h2 id="conclusion">Conclusion</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@ConditionalOnEnabledHealthIndicator</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;heartbeat&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">HeatbeatHealthIndicator</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// Code runs when management.health.heartbeat.enabled property is set to true.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h2 id="conclusion">Conclusion</h2>
 <p>The <strong>Conditional</strong> annotation gives more power to Spring Boot to provide opinionated configuration and also gives us flexibility to load beans based on custom conditions using <code>@Conditional</code> and very handy predefined <code>@ConditionalOn...</code> annotations.</p>
 <p>We can also combine the custom conditions using AllNestedConditions, AnyNestedCondition, or NoneNestedCondition. These helps us to modularize code based on environment and other conditions.</p>
 <p>We should use the Conditional annotations wisely as they are difficult to debug and manage when overused.</p>
@@ -997,8 +1011,9 @@ api.doc.enabled: false
     <ul class="share-icons">
       
       <li>
-        <a href="https://www.buymeacoffee.com/codingnconcepts" target="_blank">
+        <a href="https://www.buymeacoffee.com/codingnconcepts" target="_blank" rel="noopener" aria-label="Buy me a coffee" class="share-btn bmc">
           <svg class="widget-social__link-button icon icon-category" fill="none" height="68" viewBox="0 0 184 68" width="184" xmlns="http://www.w3.org/2000/svg"><rect fill="#fddc48" height="47" rx="9" width="182" x="1" y="11"/><g stroke-width="1.5"><path d="m24.9312 24.2374-.3942 1.0203h1.0938 14.9077 1.0938l-.3942-1.0203-1.3553-3.5077-.1853-.4797h-.5143-12.1972-.5142l-.1854.4797z" fill="#fff" stroke="#000"/><path d="m41.4154 26.7-3.5077 22.8" stroke="#f69935"/><path d="m28.2615 49.5-3.9461-23.2385h17.9769l-3.5077 23.2385z" stroke="#000"/><path d="m25.1923 42.0462-1.7538-9.6462h19.7307l-1.7538 9.6462z" fill="#fff" stroke="#000"/><path d="m23 26.2615v-2.6307h20.1692v2.6307z" fill="#fff" stroke="#000"/></g><path d="m55.5361 40v-9.9531h3.4864c1.2076 0 2.1237.2324 2.748.6972.6244.4603.9365 1.1371.9365 2.0303 0 .4876-.1253.9183-.3759 1.292-.2507.3691-.5993.6403-1.0459.8135.5104.1276.9114.3851 1.2031.7724.2962.3874.4443.8614.4443 1.4219 0 .957-.3053 1.6817-.916 2.1738-.6107.4922-1.4811.7429-2.6113.752zm2.0508-4.334v2.6865h1.7569c.483 0 .859-.1139 1.1279-.3418.2734-.2324.4101-.5514.4101-.957 0-.9114-.4716-1.374-1.415-1.3877zm0-1.4492h1.5176c1.0345-.0182 1.5517-.4307 1.5517-1.2373 0-.4512-.1321-.7747-.3964-.9707-.2598-.2005-.6722-.3008-1.2373-.3008h-1.4356zm11.1904 5.0312c-.4876.5925-1.1621.8887-2.0234.8887-.793 0-1.3991-.2278-1.8184-.6836-.4147-.4557-.6266-1.1233-.6357-2.0029v-4.8467h1.9756v4.7783c0 .7702.3509 1.1553 1.0527 1.1553.6699 0 1.1302-.2324 1.3809-.6973v-5.2363h1.9824v7.3965h-1.8594zm6.1661-2.0439 1.3671-4.6006h2.1192l-2.9736 8.5449-.1641.3897c-.4421.9661-1.1712 1.4492-2.1875 1.4492-.2871 0-.5788-.0433-.875-.1299v-1.497l.3008.0068c.3737 0 .6517-.057.834-.1709.1868-.1139.3326-.3031.4375-.5674l.2324-.6084-2.5908-7.417h2.1259zm9.6045-4.6006.0615.8272c.5241-.6426 1.2327-.9639 2.126-.9639.9524 0 1.6064.376 1.9619 1.1279.5195-.7519 1.2601-1.1279 2.2216-1.1279.8021 0 1.3991.2347 1.7911.7041.3919.4648.5879 1.1667.5879 2.1055v4.7236h-1.9825v-4.7168c0-.4193-.082-.7246-.2461-.916-.164-.196-.4534-.294-.8681-.294-.5925 0-1.0026.2826-1.2305.8477l.0068 5.0791h-1.9755v-4.71c0-.4283-.0844-.7382-.253-.9296-.1686-.1915-.4557-.2872-.8613-.2872-.5606 0-.9662.2325-1.2168.6973v5.2295h-1.9756v-7.3965zm13.6787 7.5332c-1.0847 0-1.9688-.3327-2.6524-.998-.679-.6654-1.0185-1.5518-1.0185-2.6592v-.1914c0-.7429.1435-1.4059.4306-1.9893.2871-.5879.6927-1.039 1.2168-1.3535.5287-.319 1.1302-.4785 1.8047-.4785 1.0117 0 1.807.319 2.3862.957.583.638.875 1.5427.875 2.7139v.8066h-4.7104c.0638.4831.2552.8705.5742 1.1621.3236.2917.7315.4375 1.2236.4375.7611 0 1.3558-.2757 1.7846-.8271l.97 1.0869c-.296.4193-.697.7474-1.2028.9844-.5059.2324-1.0664.3486-1.6816.3486zm-.2256-6.0703c-.392 0-.711.1322-.9571.3965-.2415.2643-.3964.6426-.4648 1.1348h2.748v-.1573c-.0091-.4375-.1276-.7747-.3554-1.0117-.2279-.2415-.5515-.3623-.9707-.3623zm12.168 5.9336c-.091-.1777-.157-.3988-.198-.6631-.479.5332-1.101.7998-1.867.7998-.724 0-1.326-.2096-1.804-.6289-.474-.4193-.711-.9479-.711-1.5859 0-.7839.289-1.3854.868-1.8047.583-.4193 1.424-.6312 2.522-.6358h.91v-.4238c0-.3418-.089-.6152-.267-.8203-.173-.2051-.449-.3076-.827-.3076-.333 0-.595.0797-.786.2392-.187.1596-.28.3783-.28.6563h-1.976c0-.4284.132-.8249.396-1.1895.265-.3645.638-.6494 1.122-.8545.483-.2096 1.025-.3144 1.626-.3144.912 0 1.634.2301 2.167.6904.538.4558.807 1.0983.807 1.9278v3.206c.005.7018.103 1.2328.294 1.5928v.1162zm-1.634-1.374c.292 0 .561-.0638.807-.1914.246-.1322.428-.3076.547-.5264v-1.2715h-.739c-.989 0-1.515.3418-1.579 1.0254l-.007.1162c0 .2461.087.4489.26.6084s.41.2393.711.2393zm11.416-.0821c.365 0 .661-.1002.889-.3007.228-.2006.346-.4672.355-.7998h1.853c-.005.5013-.141.9615-.41 1.3808-.269.4147-.638.7383-1.108.9707-.465.2279-.98.3418-1.545.3418-1.057 0-1.891-.3349-2.502-1.0049-.61-.6744-.916-1.6041-.916-2.789v-.1299c0-1.1393.303-2.0485.91-2.7275.606-.6791 1.437-1.0186 2.495-1.0186.925 0 1.665.2643 2.221.793.561.5241.846 1.2236.855 2.0986h-1.853c-.009-.3828-.127-.6927-.355-.9297-.228-.2415-.529-.3623-.902-.3623-.461 0-.809.1686-1.046.5059-.233.3326-.349.875-.349 1.6269v.2051c0 .7611.116 1.3079.349 1.6406.232.3327.585.499 1.059.499zm3.917-2.3105c0-.7337.141-1.3877.424-1.9619s.688-1.0186 1.217-1.333c.533-.3145 1.151-.4717 1.852-.4717.998 0 1.812.3053 2.441.916.633.6107.986 1.4401 1.059 2.4883l.014.5059c0 1.1347-.317 2.0462-.95 2.7343-.634.6836-1.484 1.0254-2.55 1.0254s-1.919-.3418-2.557-1.0254c-.633-.6836-.95-1.6133-.95-2.789zm1.976.1436c0 .7018.132 1.2395.396 1.6132.265.3692.643.5537 1.135.5537.479 0 .852-.1822 1.121-.5468.269-.3692.403-.9571.403-1.7637 0-.6882-.134-1.2214-.403-1.5996-.269-.3783-.647-.5674-1.135-.5674-.483 0-.856.1891-1.121.5674-.264.3737-.396.9547-.396 1.7432zm6.788 3.623v-5.9473h-1.101v-1.4492h1.101v-.6289c0-.8294.237-1.472.711-1.9277.478-.4603 1.146-.6905 2.003-.6905.273 0 .608.0456 1.005.1368l-.021 1.5312c-.164-.041-.365-.0615-.601-.0615-.743 0-1.115.3486-1.115 1.0459v.5947h1.47v1.4492h-1.47v5.9473zm5.017 0v-5.9473h-1.1v-1.4492h1.1v-.6289c0-.8294.237-1.472.711-1.9277.479-.4603 1.147-.6905 2.003-.6905.274 0 .609.0456 1.005.1368l-.02 1.5312c-.164-.041-.365-.0615-.602-.0615-.743 0-1.114.3486-1.114 1.0459v.5947h1.47v1.4492h-1.47v5.9473zm7.718.1367c-1.084 0-1.969-.3327-2.652-.998-.679-.6654-1.019-1.5518-1.019-2.6592v-.1914c0-.7429.144-1.4059.431-1.9893.287-.5879.693-1.039 1.217-1.3535.528-.319 1.13-.4785 1.804-.4785 1.012 0 1.807.319 2.386.957.584.638.875 1.5427.875 2.7139v.8066h-4.71c.064.4831.255.8705.574 1.1621.324.2917.732.4375 1.224.4375.761 0 1.356-.2757 1.784-.8271l.971 1.0869c-.296.4193-.697.7474-1.203.9844-.506.2324-1.067.3486-1.682.3486zm-.225-6.0703c-.392 0-.711.1322-.957.3965-.242.2643-.397.6426-.465 1.1348h2.748v-.1573c-.009-.4375-.128-.7747-.356-1.0117-.228-.2415-.551-.3623-.97-.3623zm7.799 6.0703c-1.084 0-1.968-.3327-2.652-.998-.679-.6654-1.018-1.5518-1.018-2.6592v-.1914c0-.7429.143-1.4059.43-1.9893.287-.5879.693-1.039 1.217-1.3535.529-.319 1.13-.4785 1.805-.4785 1.011 0 1.807.319 2.385.957.584.638.875 1.5427.875 2.7139v.8066h-4.71c.064.4831.256.8705.575 1.1621.323.2917.731.4375 1.223.4375.761 0 1.356-.2757 1.784-.8271l.971 1.0869c-.296.4193-.697.7474-1.203.9844-.506.2324-1.066.3486-1.682.3486zm-.225-6.0703c-.392 0-.711.1322-.957.3965-.242.2643-.397.6426-.465 1.1348h2.748v-.1573c-.009-.4375-.128-.7747-.355-1.0117-.228-.2415-.552-.3623-.971-.3623z" fill="#000"/><rect height="47" rx="9" stroke="#000" stroke-width="2" width="182" x="1" y="11"/></svg>
+          <p>Buy me a coffee</p>
         </a>
       </li>
 
@@ -1037,7 +1052,7 @@ api.doc.enabled: false
       <li>
         <a href="whatsapp://send?text=Conditional%20Annotations%20in%20Spring%20Boot%2c%20by%20Coding%20N%20Concepts%0aConditional%20Annotations%20in%20Spring%20Boot%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fconditional-annotations-in-spring-boot%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
-          <p>Email</p>
+          <p>WhatsApp</p>
         </a>
       </li>
       
@@ -1057,18 +1072,16 @@ api.doc.enabled: false
 
 
 <div class="related_post_section">
-    <h2 class = "related_post_title">See Also</h2>
-    <ul class = "related_post">
+    <h2 class="related_post_title">See Also</h2>
+    <ul class="related_post">
         
-        <li><a href="/spring-boot/spring-boot-application-properties-vs-yml/">application.properties vs application.yml in Spring Boot</a></li>
+        <li><a href="/spring-boot/spring-boot-application-properties-vs-yml/"><img class="related_post__thumb" src="/img/logo/springboot.png" alt="" loading="lazy"><span class="related_post__title">application.properties vs application.yml in Spring Boot</span></a></li>
         
-        <li><a href="/spring-boot/spring-configuration-properties-using-yml/">Spring @ConfigurationProperties using YAML</a></li>
+        <li><a href="/spring-boot/spring-configuration-properties-using-yml/"><img class="related_post__thumb" src="/img/logo/springboot.png" alt="" loading="lazy"><span class="related_post__title">Spring @ConfigurationProperties using YAML</span></a></li>
         
-        <li><a href="/spring-boot/spring-initializr-for-eclipse-ide/">Spring Initializr Plugin for Eclipse IDE</a></li>
+        <li><a href="/spring-boot/spring-initializr-for-eclipse-ide/"><img class="related_post__thumb" src="/img/logo/springboot.png" alt="" loading="lazy"><span class="related_post__title">Spring Initializr Plugin for Eclipse IDE</span></a></li>
         
-        <li><a href="/spring-boot/spring-controller-vs-restcontroller/">Spring @Controller and @RestController</a></li>
-        
-        <li><a href="/spring-boot/spring-value-annotation/">Spring @Value Annotation Guide</a></li>
+        <li><a href="/spring-boot/spring-controller-vs-restcontroller/"><img class="related_post__thumb" src="/img/logo/springboot.png" alt="" loading="lazy"><span class="related_post__title">Spring @Controller and @RestController</span></a></li>
         
     </ul>
 </div>
@@ -1112,14 +1125,7 @@ api.doc.enabled: false
 
 			</div>
 			
-			<aside class="adsbar"><div class="widget-search widget">
-	<form class="widget-search__form" role="search" method="get" action="https://codingnconcepts.com/search">
-		<label>
-			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="s" aria-label="SEARCH...">
-		</label>
-		<input class="widget-search__submit" type="submit" value="Search">
-	</form>
-</div>
+			<aside class="adsbar">
 <div class="widget-social widget">
 	<h4 class="widget-social__title widget__title">Follow Us</h4>
 	<div class="widget-social__content widget__content">
@@ -1226,11 +1232,11 @@ api.doc.enabled: false
 		
 		<div class="footer__copyright">
 			&copy; 2026 CodingNConcepts.
-			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>
 </footer>
 	</div>
 <script async defer src="/js/menu.js"></script>
+<script defer src="/js/theme-toggle.js"></script>
 </body>
 </html>

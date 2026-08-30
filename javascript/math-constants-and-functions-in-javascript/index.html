@@ -4,8 +4,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="color-scheme" content="light dark">
 	<title>Math Constants and Functions in JavaScript - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
 	<meta name="description" content="Learn about Math built-in Object in JavaScript, which allows us to use mathematical constants such as π, e, √2 and perform mathematical operations on numbers such as pow(), sqrt(), max(), min(), random(), abs(), ceil(), floor(), round(), and truc().">
 	<meta property="og:title" content="Math Constants and Functions in JavaScript" />
 <meta property="og:description" content="Learn about Math built-in Object in JavaScript, which allows us to use mathematical constants such as π, e, √2 and perform mathematical operations on numbers such as pow(), sqrt(), max(), min(), random(), abs(), ceil(), floor(), round(), and truc()." />
@@ -21,15 +23,17 @@
 <meta property="article:section" content="javascript" />
 <meta property="article:tag" content="Javascript Core" />
 <meta property="fb:admins" content="177784346770196" />
-	<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://codingnconcepts.com/img/logo/js.png"/>
-
-<meta name="twitter:title" content="Math Constants and Functions in JavaScript"/>
-<meta name="twitter:description" content="Learn about Math built-in Object in JavaScript, which allows us to use mathematical constants such as π, e, √2 and perform mathematical operations on numbers such as pow(), sqrt(), max(), min(), random(), abs(), ceil(), floor(), round(), and truc()."/>
+	
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://codingnconcepts.com/img/logo/js.png">
+	<meta name="twitter:title" content="Math Constants and Functions in JavaScript">
+	<meta name="twitter:description" content="Learn about Math built-in Object in JavaScript, which allows us to use mathematical constants such as π, e, √2 and perform mathematical operations on numbers such as pow(), sqrt(), max(), min(), random(), abs(), ceil(), floor(), round(), and truc().">
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Rowdies">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@600;700;800&display=swap">
 	<link rel="stylesheet" href="/css/style.css">
 	
 	
@@ -108,6 +112,10 @@
 				<div class="logo__tagline">Ashish Lahoti&#39;s Technical Blog</div>
 			</a>
 		</div>
+		<form class="header-search" role="search" method="get" action="https://codingnconcepts.com/search">
+			<label class="menu__text--sr" for="headerSearchInput">Find related posts&hellip;</label>
+			<input class="header-search__field" id="headerSearchInput" type="search" placeholder="Find related posts&hellip;" name="s" aria-label="Find related posts">
+		</form>
 		
 <nav class="menu">
 	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
@@ -115,9 +123,10 @@
 	</button>
 	<ul class="menu__list">
 		<li class="menu__item">
-			<a class="menu__link" href="/">
+			<a class="menu__link menu__link--icon" href="/" title="Home">
 				
-				<span class="menu__text">Home</span>
+				<svg class="menu__home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5 10v9.5a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"></path></svg>
+				<span class="menu__text menu__text--sr">Home</span>
 				
 			</a>
 		</li>
@@ -492,8 +501,13 @@
 	</ul>
 </nav>
 
+		<button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+			<svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+			<svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+		</button>
 	</div>
 </header>
+		
 		<div class="wrapper flex">
 			<div class="primary">
 			
@@ -506,7 +520,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2020-07-04T00:00:00Z">Last Modified: July 04, 2020</time>
+	<time class="meta__text" datetime="2020-07-04T00:00:00Z">Last Modified: Jul 04, 2020</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -515,8 +529,8 @@
 	</span>
 </div></div>
 		</header>
-<div class="post__toc toc">
-	<div class="toc__title">Page content</div>
+<details class="post__toc toc" open>
+	<summary class="toc__title">Page content</summary>
 	<div class="toc__menu">
 		<nav id="TableOfContents">
   <ul>
@@ -571,103 +585,103 @@
   </ul>
 </nav>
 	</div>
-</div>
+</details>
 <div class="content post__content clearfix">
 			<p>In this tutorial, we&rsquo;ll learn about Math Object in JavaScript, which allows us to use mathematical constants such as <code>π</code>, <code>e</code>, <code>√2</code> and perform mathematical operations on numbers such as <code>pow()</code>, <code>sqrt()</code>, <code>max()</code>, <code>min()</code>, <code>random()</code>, <code>abs()</code>, <code>ceil()</code>, <code>floor()</code>, <code>round()</code>, and <code>truc()</code>.</p>
 <h2 id="math-constants">Math Constants</h2>
 <p>Math Object in JavaScript provides 8 mathematical constants that can be used:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>Math.<span style="color:#a6e22e">E</span>        <span style="color:#75715e">// returns 2.718281828459045  (Euler&#39;s number)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">PI</span>       <span style="color:#75715e">// returns 3.141592653589793  (PI)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">SQRT2</span>    <span style="color:#75715e">// returns 1.4142135623730951 (square root of 2)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">SQRT1_2</span>  <span style="color:#75715e">// returns 0.7071067811865476 (square root of 1/2)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">LN2</span>      <span style="color:#75715e">// returns 0.6931471805599453 (natural logarithm of 2)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">LN10</span>     <span style="color:#75715e">// returns 2.302585092994046  (natural logarithm of 10
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">LOG2E</span>    <span style="color:#75715e">// returns 1.4426950408889634 (base 2 logarithm of E)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">LOG10E</span>   <span style="color:#75715e">// returns 0.4342944819032518 (base 10 logarithm of E)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">E</span>        <span class="c1">// returns 2.718281828459045  (Euler&#39;s number)
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span>       <span class="c1">// returns 3.141592653589793  (PI)
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">SQRT2</span>    <span class="c1">// returns 1.4142135623730951 (square root of 2)
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">SQRT1_2</span>  <span class="c1">// returns 0.7071067811865476 (square root of 1/2)
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">LN2</span>      <span class="c1">// returns 0.6931471805599453 (natural logarithm of 2)
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">LN10</span>     <span class="c1">// returns 2.302585092994046  (natural logarithm of 10
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">LOG2E</span>    <span class="c1">// returns 1.4426950408889634 (base 2 logarithm of E)
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">LOG10E</span>   <span class="c1">// returns 0.4342944819032518 (base 10 logarithm of E)
 </span></span></span></code></pre></div><h3 id="calculate-circumference-of-a-circle">Calculate circumference of a circle</h3>
 <p>Let&rsquo;s use <code>Math.PI</code> constant to calculate the circumference <code>2πr</code> of a circle given the radius <code>r</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">calculateCircumference</span>(<span style="color:#a6e22e">radius</span>) {
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> Math.<span style="color:#a6e22e">PI</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">radius</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">calculateCircumference</span>(<span style="color:#ae81ff">10</span>); <span style="color:#75715e">// returns 62.83185307179586
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">calculateCircumference</span><span class="p">(</span><span class="nx">radius</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span> <span class="o">*</span> <span class="nx">radius</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">calculateCircumference</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span> <span class="c1">// returns 62.83185307179586
 </span></span></span></code></pre></div><h2 id="math-pow">Math Pow</h2>
 <p>The <code>Math.pow(a, b)</code> function returns the a (base) to the power of b (exponent), i.e.  <strong>a<sup>b</sup></strong>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>Math.<span style="color:#a6e22e">pow</span>(<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">3</span>);      
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// returns 64 i.e. 4×4×4
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>Math.<span style="color:#a6e22e">pow</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">3</span>);     
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// returns -64 i.e. (-4)×(-4)×(-4)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>Math.<span style="color:#a6e22e">pow</span>(<span style="color:#ae81ff">4</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>);     
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// returns 0.015625 i.e. 1 ÷ (4 × 4 x 4) 
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>Math.<span style="color:#a6e22e">pow</span>(<span style="color:#ae81ff">64</span>, <span style="color:#ae81ff">0.5</span>);   
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// returns 8 i.e. 2√64
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>Math.<span style="color:#a6e22e">pow</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">64</span>, <span style="color:#ae81ff">0.5</span>);  
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// returns NaN i.e. 2√-64 square root number cannot be negative
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>Math.<span style="color:#a6e22e">pow</span>(<span style="color:#ae81ff">64</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">0.5</span>);  
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// returns 0.125 i.e. 1 ÷ 2√64 = 1/8
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>      
+</span></span><span class="line"><span class="cl"><span class="c1">// returns 64 i.e. 4×4×4
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>     
+</span></span><span class="line"><span class="cl"><span class="c1">// returns -64 i.e. (-4)×(-4)×(-4)
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">);</span>     
+</span></span><span class="line"><span class="cl"><span class="c1">// returns 0.015625 i.e. 1 ÷ (4 × 4 x 4) 
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">);</span>   
+</span></span><span class="line"><span class="cl"><span class="c1">// returns 8 i.e. 2√64
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="o">-</span><span class="mi">64</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">);</span>  
+</span></span><span class="line"><span class="cl"><span class="c1">// returns NaN i.e. 2√-64 square root number cannot be negative
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">);</span>  
+</span></span><span class="line"><span class="cl"><span class="c1">// returns 0.125 i.e. 1 ÷ 2√64 = 1/8
 </span></span></span></code></pre></div><p>Let&rsquo;s breakdown the result of above examples for clear understanding:</p>
 <table>
-<thead>
-<tr>
-<th style="text-align:left">Math.pow(a, b)</th>
-<th style="text-align:center">a<sup>b</sup></th>
-<th style="text-align:left">breakdown</th>
-<th style="text-align:left">result</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">Math.pow(4, 3)</td>
-<td style="text-align:center">4<sup>3</sup></td>
-<td style="text-align:left">4 × 4 x 4</td>
-<td style="text-align:left">64</td>
-</tr>
-<tr>
-<td style="text-align:left">Math.pow(-4, 3)</td>
-<td style="text-align:center">(-4)<sup>3</sup></td>
-<td style="text-align:left">(-4) × (-4) x (-4)</td>
-<td style="text-align:left">-64</td>
-</tr>
-<tr>
-<td style="text-align:left">Math.pow(4, -3)</td>
-<td style="text-align:center">4<sup>(-3)</sup></td>
-<td style="text-align:left">1 ÷ (4 × 4 x 4)</td>
-<td style="text-align:left">0.015625</td>
-</tr>
-<tr>
-<td style="text-align:left">Math.pow(64, 0.5)</td>
-<td style="text-align:center">64<sup>0.5</sup></td>
-<td style="text-align:left">2√64</td>
-<td style="text-align:left">8</td>
-</tr>
-<tr>
-<td style="text-align:left">Math.pow(-64, 0.5)</td>
-<td style="text-align:center">(-64)<sup>0.5</sup></td>
-<td style="text-align:left">2√-64</td>
-<td style="text-align:left">NaN</td>
-</tr>
-<tr>
-<td style="text-align:left">Math.pow(64, -0.5)</td>
-<td style="text-align:center">64<sup>(-0.5)</sup></td>
-<td style="text-align:left">1 ÷ 2√64</td>
-<td style="text-align:left">0.125</td>
-</tr>
-</tbody>
+	<thead>
+			<tr>
+					<th style="text-align: left">Math.pow(a, b)</th>
+					<th style="text-align: center">a<sup>b</sup></th>
+					<th style="text-align: left">breakdown</th>
+					<th style="text-align: left">result</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">Math.pow(4, 3)</td>
+					<td style="text-align: center">4<sup>3</sup></td>
+					<td style="text-align: left">4 × 4 x 4</td>
+					<td style="text-align: left">64</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">Math.pow(-4, 3)</td>
+					<td style="text-align: center">(-4)<sup>3</sup></td>
+					<td style="text-align: left">(-4) × (-4) x (-4)</td>
+					<td style="text-align: left">-64</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">Math.pow(4, -3)</td>
+					<td style="text-align: center">4<sup>(-3)</sup></td>
+					<td style="text-align: left">1 ÷ (4 × 4 x 4)</td>
+					<td style="text-align: left">0.015625</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">Math.pow(64, 0.5)</td>
+					<td style="text-align: center">64<sup>0.5</sup></td>
+					<td style="text-align: left">2√64</td>
+					<td style="text-align: left">8</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">Math.pow(-64, 0.5)</td>
+					<td style="text-align: center">(-64)<sup>0.5</sup></td>
+					<td style="text-align: left">2√-64</td>
+					<td style="text-align: left">NaN</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">Math.pow(64, -0.5)</td>
+					<td style="text-align: center">64<sup>(-0.5)</sup></td>
+					<td style="text-align: left">1 ÷ 2√64</td>
+					<td style="text-align: left">0.125</td>
+			</tr>
+	</tbody>
 </table>
 <br />
 <h3 id="exponentiation-operator-">Exponentiation Operator (**)</h3>
 <p>It is very interesting to know that JavaScript ES6 provide shorthand syntax <code>**</code> for Math power also known as <strong>exponentiation operator</strong>. So the above <code>Math.pow</code> examples are same as:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#ae81ff">4</span> <span style="color:#f92672">**</span> <span style="color:#ae81ff">3</span>);       <span style="color:#75715e">// returns 64
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>((<span style="color:#f92672">-</span><span style="color:#ae81ff">4</span>) <span style="color:#f92672">**</span> <span style="color:#ae81ff">3</span>);    <span style="color:#75715e">// returns -64
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#ae81ff">4</span> <span style="color:#f92672">**</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>);      <span style="color:#75715e">// returns 0.015625
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#ae81ff">64</span> <span style="color:#f92672">**</span> <span style="color:#ae81ff">0.5</span>);    <span style="color:#75715e">// returns 8
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>((<span style="color:#f92672">-</span><span style="color:#ae81ff">64</span>) <span style="color:#f92672">**</span> <span style="color:#ae81ff">0.5</span>); <span style="color:#75715e">// returns NaN
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#ae81ff">64</span> <span style="color:#f92672">**</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0.5</span>);   <span style="color:#75715e">// returns 0.125
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">4</span> <span class="o">**</span> <span class="mi">3</span><span class="p">);</span>       <span class="c1">// returns 64
+</span></span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">((</span><span class="o">-</span><span class="mi">4</span><span class="p">)</span> <span class="o">**</span> <span class="mi">3</span><span class="p">);</span>    <span class="c1">// returns -64
+</span></span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">4</span> <span class="o">**</span> <span class="o">-</span><span class="mi">3</span><span class="p">);</span>      <span class="c1">// returns 0.015625
+</span></span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">64</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">);</span>    <span class="c1">// returns 8
+</span></span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">((</span><span class="o">-</span><span class="mi">64</span><span class="p">)</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">);</span> <span class="c1">// returns NaN
+</span></span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">64</span> <span class="o">**</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">);</span>   <span class="c1">// returns 0.125
 </span></span></span></code></pre></div><p>Please note that if you are using shorthand syntax with -ve base then you must wrap the base in parenthesis <code>()</code> to avoid <em>SyntaxError</em>.</p>
 <pre tabindex="0"><code>➤ -4 ** 3
 <span  style="color:red;">Uncaught SyntaxError: Unary operator used immediately before exponentiation expression. Parenthesis must be used to disambiguate operator precedence</span>
@@ -676,70 +690,70 @@
 <span  style="color:blue;">-64</span>
 </code></pre><h3 id="create-square-and-cube-methods-using-exponentiation-operator">Create square and cube methods using exponentiation operator</h3>
 <p>Let&rsquo;s create some math power methods using exponentiation operator <code>**</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">square</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span> =&gt; <span style="color:#a6e22e">x</span> <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cube</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span> =&gt; <span style="color:#a6e22e">x</span> <span style="color:#f92672">**</span> <span style="color:#ae81ff">3</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">square</span>(<span style="color:#ae81ff">4</span>); <span style="color:#75715e">// returns 16
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">cube</span>(<span style="color:#ae81ff">3</span>);   <span style="color:#75715e">// returns 27
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">square</span> <span class="o">=</span> <span class="nx">x</span> <span class="p">=&gt;</span> <span class="nx">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">cube</span> <span class="o">=</span> <span class="nx">x</span> <span class="p">=&gt;</span> <span class="nx">x</span> <span class="o">**</span> <span class="mi">3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">square</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span> <span class="c1">// returns 16
+</span></span></span><span class="line"><span class="cl"><span class="nx">cube</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>   <span class="c1">// returns 27
 </span></span></span></code></pre></div><h2 id="math-sqrt">Math Sqrt</h2>
 <p>The <code>Math.sqrt(x)</code> function returns the square root of the given number.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>Math.<span style="color:#a6e22e">sqrt</span>(<span style="color:#ae81ff">0</span>);     <span style="color:#75715e">// returns 0
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">sqrt</span>(<span style="color:#66d9ef">null</span>);  <span style="color:#75715e">// returns 0
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>Math.<span style="color:#a6e22e">sqrt</span>(<span style="color:#ae81ff">25</span>);    <span style="color:#75715e">// returns 5
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">sqrt</span>(<span style="color:#ae81ff">1</span>);     <span style="color:#75715e">// returns 1
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">sqrt</span>(<span style="color:#ae81ff">0.5</span>);   <span style="color:#75715e">// returns 0.7071067811865476
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>Math.<span style="color:#a6e22e">sqrt</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>);    <span style="color:#75715e">// returns NaN as number cannot be negative
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">sqrt</span>(<span style="color:#66d9ef">NaN</span>);   <span style="color:#75715e">// returns NaN as number cannot be NaN
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>     <span class="c1">// returns 0
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>  <span class="c1">// returns 0
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="mi">25</span><span class="p">);</span>    <span class="c1">// returns 5
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>     <span class="c1">// returns 1
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="mf">0.5</span><span class="p">);</span>   <span class="c1">// returns 0.7071067811865476
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">);</span>    <span class="c1">// returns NaN as number cannot be negative
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="kc">NaN</span><span class="p">);</span>   <span class="c1">// returns NaN as number cannot be NaN
 </span></span></span></code></pre></div><h3 id="create-our-own-squareroot-method">Create our own squareroot method</h3>
 <p>Let&rsquo;s create our own <code>squareroot</code> methods using ES6 exponentiation operator <code>**</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">squareroot</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span> =&gt; <span style="color:#a6e22e">x</span> <span style="color:#f92672">**</span> <span style="color:#ae81ff">0.5</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">squareroot</span>(<span style="color:#ae81ff">0</span>);      <span style="color:#75715e">// returns 0
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">squareroot</span>(<span style="color:#66d9ef">null</span>);   <span style="color:#75715e">// returns 0
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">squareroot</span>(<span style="color:#ae81ff">25</span>);     <span style="color:#75715e">// returns 5
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">squareroot</span>(<span style="color:#ae81ff">1</span>);      <span style="color:#75715e">// returns 1
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">squareroot</span>(<span style="color:#ae81ff">0.5</span>);    <span style="color:#75715e">// returns 0.707106781186547
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">squareroot</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>);     <span style="color:#75715e">// returns NaN as number cannot be negative
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">squareroot</span>(<span style="color:#66d9ef">NaN</span>);    <span style="color:#75715e">// returns NaN as number cannot be NaN 
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">squareroot</span> <span class="o">=</span> <span class="nx">x</span> <span class="p">=&gt;</span> <span class="nx">x</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">squareroot</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>      <span class="c1">// returns 0
+</span></span></span><span class="line"><span class="cl"><span class="nx">squareroot</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>   <span class="c1">// returns 0
+</span></span></span><span class="line"><span class="cl"><span class="nx">squareroot</span><span class="p">(</span><span class="mi">25</span><span class="p">);</span>     <span class="c1">// returns 5
+</span></span></span><span class="line"><span class="cl"><span class="nx">squareroot</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>      <span class="c1">// returns 1
+</span></span></span><span class="line"><span class="cl"><span class="nx">squareroot</span><span class="p">(</span><span class="mf">0.5</span><span class="p">);</span>    <span class="c1">// returns 0.707106781186547
+</span></span></span><span class="line"><span class="cl"><span class="nx">squareroot</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">);</span>     <span class="c1">// returns NaN as number cannot be negative
+</span></span></span><span class="line"><span class="cl"><span class="nx">squareroot</span><span class="p">(</span><span class="kc">NaN</span><span class="p">);</span>    <span class="c1">// returns NaN as number cannot be NaN 
 </span></span></span></code></pre></div><p>Keep in mind that the square root of negative numbers doesn&rsquo;t exist among the set of real numbers so JavaScript returns <code>NaN</code>. Square root of negative numbers is an imaginary number which is represented by <code>i</code> i.e. <code>√-1 = i</code></p>
 <h2 id="math-max">Math Max</h2>
 <p>The <code>Math.max(value1, value2, value3, ...)</code> function returns the largest value out of given values.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>Math.<span style="color:#a6e22e">max</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);      
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// returns 3
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>      
+</span></span><span class="line"><span class="cl"><span class="c1">// returns 3
 </span></span></span></code></pre></div><p>If any argument cannot be converted to a number, <code>NaN</code> is returned.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>Math.<span style="color:#a6e22e">max</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;0&#39;</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);    
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// returns 3 as &#39;0&#39; is converted to numeric 0
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>Math.<span style="color:#a6e22e">max</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;zero&#39;</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>); 
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// returns NaN as &#39;zero&#39; cannot be converted to numeric value
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>    
+</span></span><span class="line"><span class="cl"><span class="c1">// returns 3 as &#39;0&#39; is converted to numeric 0
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;zero&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl"><span class="c1">// returns NaN as &#39;zero&#39; cannot be converted to numeric value
 </span></span></span></code></pre></div><h3 id="find-the-largest-number-from-an-array">Find the largest number from an array</h3>
 <p>Let&rsquo;s use <code>Math.max</code> function to find a largest number from an array in three ways:-</p>
 <p>① Using spread operator <code>...</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>];
-</span></span><span style="display:flex;"><span>Math.<span style="color:#a6e22e">max</span>(...<span style="color:#a6e22e">numbers</span>);          
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// returns 5
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(...</span><span class="nx">numbers</span><span class="p">);</span>          
+</span></span><span class="line"><span class="cl"><span class="c1">// returns 5
 </span></span></span></code></pre></div><p>② Using function prototype <code>apply()</code> method</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>];
-</span></span><span style="display:flex;"><span>Math.<span style="color:#a6e22e">max</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#66d9ef">null</span>, <span style="color:#a6e22e">numbers</span>);  
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// returns 5
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">numbers</span><span class="p">);</span>  
+</span></span><span class="line"><span class="cl"><span class="c1">// returns 5
 </span></span></span></code></pre></div><p>③ Using <code>Array.reduce()</code> method</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>];
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">a</span>,<span style="color:#a6e22e">b</span>) =&gt; Math.<span style="color:#a6e22e">max</span>(<span style="color:#a6e22e">a</span>,<span style="color:#a6e22e">b</span>));  
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// returns 5
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="nx">numbers</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">));</span>  
+</span></span><span class="line"><span class="cl"><span class="c1">// returns 5
 </span></span></span></code></pre></div><p>However, both <code>spread (...)</code> and <code>apply()</code> will either fail or return the wrong result if the array has too many elements, because they try to pass the array elements as function parameters. The <code>Array.reduce()</code> method does not have this problem.</p>
 <h2 id="math-min">Math Min</h2>
 <p>The <code>Math.min(value1, value2, value3, ...)</code> function returns the smallest value out of given values.</p>
 <p>Usage example of <code>Math.min</code> is same as <code>Math.max</code> function.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>Math.<span style="color:#a6e22e">min</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);               <span style="color:#75715e">// returns -1
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">min</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;0&#39;</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);             <span style="color:#75715e">// returns -1
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">min</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;zero&#39;</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);          <span style="color:#75715e">// returns NaN
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>];  
-</span></span><span style="display:flex;"><span>Math.<span style="color:#a6e22e">min</span>(...<span style="color:#a6e22e">numbers</span>);                   <span style="color:#75715e">// returns 1
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">min</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#66d9ef">null</span>, <span style="color:#a6e22e">numbers</span>);          <span style="color:#75715e">// returns 1
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">a</span>,<span style="color:#a6e22e">b</span>) =&gt; Math.<span style="color:#a6e22e">min</span>(<span style="color:#a6e22e">a</span>,<span style="color:#a6e22e">b</span>)); <span style="color:#75715e">// returns 1 
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>               <span class="c1">// returns -1
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>             <span class="c1">// returns -1
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;zero&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>          <span class="c1">// returns NaN
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>  
+</span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(...</span><span class="nx">numbers</span><span class="p">);</span>                   <span class="c1">// returns 1
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">numbers</span><span class="p">);</span>          <span class="c1">// returns 1
+</span></span></span><span class="line"><span class="cl"><span class="nx">numbers</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">));</span> <span class="c1">// returns 1 
 </span></span></span></code></pre></div><h2 id="math-random">Math Random</h2>
 <p>The <code>Math.random()</code> functions returns a floating point random number between 0 (inclusive) to 1 (exclusive)</p>
 <pre tabindex="0"><code>0 ≤ Math.random() &lt; 1
@@ -747,217 +761,217 @@
 <br /></p>
 <h3 id="generate-a-random-integer-given-the-max-range">Generate a random integer given the max range</h3>
 <p>Let&rsquo;s first create a method <code>getRandomInt</code>, which returns a random integer given the max range</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">getRandomInt</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">max</span>) =&gt; Math.<span style="color:#a6e22e">floor</span>(Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">*</span> <span style="color:#a6e22e">max</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">getRandomInt</span> <span class="o">=</span> <span class="p">(</span><span class="nx">max</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">max</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
 </span></span></code></pre></div><p>Let&rsquo;s use this method to find a random user name from the given array</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">userList</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Alice&#34;</span>, <span style="color:#e6db74">&#34;Bob&#34;</span>, <span style="color:#e6db74">&#34;Charlie&#34;</span>, <span style="color:#e6db74">&#34;David&#34;</span>, <span style="color:#e6db74">&#34;Eric&#34;</span>, <span style="color:#e6db74">&#34;Franklin&#34;</span>, <span style="color:#e6db74">&#34;Gavin&#34;</span>, <span style="color:#e6db74">&#34;Harry&#34;</span>, <span style="color:#e6db74">&#34;Iris&#34;</span>, 
-</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;Joey&#34;</span>, <span style="color:#e6db74">&#34;Kate&#34;</span>, <span style="color:#e6db74">&#34;Leo&#34;</span>, <span style="color:#e6db74">&#34;Monica&#34;</span>, <span style="color:#e6db74">&#34;Nancy&#34;</span>, <span style="color:#e6db74">&#34;Oscar&#34;</span>, <span style="color:#e6db74">&#34;Phoebe&#34;</span>, <span style="color:#e6db74">&#34;Quinn&#34;</span>, <span style="color:#e6db74">&#34;Ross&#34;</span>, 
-</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;Sofia&#34;</span>, <span style="color:#e6db74">&#34;Tyler&#34;</span>, <span style="color:#e6db74">&#34;Umar&#34;</span>, <span style="color:#e6db74">&#34;Victor&#34;</span>, <span style="color:#e6db74">&#34;Wilson&#34;</span>, <span style="color:#e6db74">&#34;Xena&#34;</span>, <span style="color:#e6db74">&#34;Yasmine&#34;</span>, <span style="color:#e6db74">&#34;Zara&#34;</span>];
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">getRandomUser</span> <span style="color:#f92672">=</span> () =&gt; <span style="color:#a6e22e">userList</span>[<span style="color:#a6e22e">getRandomInt</span>(<span style="color:#a6e22e">userList</span>.<span style="color:#a6e22e">length</span>)];
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">getRandomUser</span>()); <span style="color:#75715e">// Wilson
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">getRandomUser</span>()); <span style="color:#75715e">// Charlie
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">getRandomUser</span>()); <span style="color:#75715e">// Leo
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">getRandomUser</span>()); <span style="color:#75715e">// Joey
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">getRandomUser</span>()); <span style="color:#75715e">// Gavin
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">userList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;Alice&#34;</span><span class="p">,</span> <span class="s2">&#34;Bob&#34;</span><span class="p">,</span> <span class="s2">&#34;Charlie&#34;</span><span class="p">,</span> <span class="s2">&#34;David&#34;</span><span class="p">,</span> <span class="s2">&#34;Eric&#34;</span><span class="p">,</span> <span class="s2">&#34;Franklin&#34;</span><span class="p">,</span> <span class="s2">&#34;Gavin&#34;</span><span class="p">,</span> <span class="s2">&#34;Harry&#34;</span><span class="p">,</span> <span class="s2">&#34;Iris&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;Joey&#34;</span><span class="p">,</span> <span class="s2">&#34;Kate&#34;</span><span class="p">,</span> <span class="s2">&#34;Leo&#34;</span><span class="p">,</span> <span class="s2">&#34;Monica&#34;</span><span class="p">,</span> <span class="s2">&#34;Nancy&#34;</span><span class="p">,</span> <span class="s2">&#34;Oscar&#34;</span><span class="p">,</span> <span class="s2">&#34;Phoebe&#34;</span><span class="p">,</span> <span class="s2">&#34;Quinn&#34;</span><span class="p">,</span> <span class="s2">&#34;Ross&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;Sofia&#34;</span><span class="p">,</span> <span class="s2">&#34;Tyler&#34;</span><span class="p">,</span> <span class="s2">&#34;Umar&#34;</span><span class="p">,</span> <span class="s2">&#34;Victor&#34;</span><span class="p">,</span> <span class="s2">&#34;Wilson&#34;</span><span class="p">,</span> <span class="s2">&#34;Xena&#34;</span><span class="p">,</span> <span class="s2">&#34;Yasmine&#34;</span><span class="p">,</span> <span class="s2">&#34;Zara&#34;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">getRandomUser</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">userList</span><span class="p">[</span><span class="nx">getRandomInt</span><span class="p">(</span><span class="nx">userList</span><span class="p">.</span><span class="nx">length</span><span class="p">)];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getRandomUser</span><span class="p">());</span> <span class="c1">// Wilson
+</span></span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getRandomUser</span><span class="p">());</span> <span class="c1">// Charlie
+</span></span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getRandomUser</span><span class="p">());</span> <span class="c1">// Leo
+</span></span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getRandomUser</span><span class="p">());</span> <span class="c1">// Joey
+</span></span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getRandomUser</span><span class="p">());</span> <span class="c1">// Gavin
 </span></span></span></code></pre></div><br />
 <h3 id="generate-a-random-integer-between-two-values-inclusive">Generate a random integer between two values (inclusive)</h3>
 <p>Let&rsquo;s first create a method <code>getRandomIntInclusive</code>, which returns a random integer between two values (inclusive)</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">getRandomIntInclusive</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">min</span>, <span style="color:#a6e22e">max</span>) =&gt; {
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">min</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">ceil</span>(<span style="color:#a6e22e">min</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">max</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">floor</span>(<span style="color:#a6e22e">max</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> Math.<span style="color:#a6e22e">floor</span>(Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">*</span> (<span style="color:#a6e22e">max</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">min</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)) <span style="color:#f92672">+</span> <span style="color:#a6e22e">min</span>;
-</span></span><span style="display:flex;"><span>};
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">getRandomIntInclusive</span> <span class="o">=</span> <span class="p">(</span><span class="nx">min</span><span class="p">,</span> <span class="nx">max</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">min</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nx">min</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">max</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">max</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="nx">max</span> <span class="o">-</span> <span class="nx">min</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="nx">min</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></div><p>Let&rsquo;s use this method to generate an array of 10 elements with two-digits random numbers i.e. between 10 to 99</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> [];
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">min</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">max</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">99</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> ( <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> ) {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">getRandomIntInclusive</span>(<span style="color:#a6e22e">min</span>, <span style="color:#a6e22e">max</span>));
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">numbers</span>);
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// [25, 55, 95, 51, 47, 10, 74, 86, 74, 77]
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">min</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">max</span> <span class="o">=</span> <span class="mi">99</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span> <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">numbers</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">getRandomIntInclusive</span><span class="p">(</span><span class="nx">min</span><span class="p">,</span> <span class="nx">max</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numbers</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// [25, 55, 95, 51, 47, 10, 74, 86, 74, 77]
 </span></span></span></code></pre></div><br />
 <h3 id="shuffle-the-elements-of-an-array">Shuffle the elements of an array</h3>
 <p>This is very interesting use of <code>Math.random()</code> function with <code>Array.sort()</code> functions to shuffle elements of an array. Let&rsquo;s create our <code>shuffleElements</code> method:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">shuffleElements</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">list</span>) =&gt; <span style="color:#a6e22e">list</span>.<span style="color:#a6e22e">sort</span>(() =&gt; Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">-</span> <span style="color:#ae81ff">0.5</span>);
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">shuffleElements</span> <span class="o">=</span> <span class="p">(</span><span class="nx">list</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">list</span><span class="p">.</span><span class="nx">sort</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">);</span>
 </span></span></code></pre></div><p>The idea here is generate random number using <code>Math.random()</code> between -0.5 to 0.5 and feed it to <code>Array.sort()</code> function which sort an array based on returned value is +ve, or 0, or -ve</p>
 <p>Let&rsquo;s use this method:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">list</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>];
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">shuffleElements</span>(<span style="color:#a6e22e">list</span>));
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// [6, 1, 2, 4, 3, 9, 5, 8, 7]
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">shuffleElements</span>(<span style="color:#a6e22e">list</span>));
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// [9, 6, 8, 1, 2, 7, 4, 5, 3]
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">shuffleElements</span>(<span style="color:#a6e22e">list</span>));
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// [6, 7, 3, 1, 2, 5, 8, 9, 4]
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">shuffleElements</span><span class="p">(</span><span class="nx">list</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// [6, 1, 2, 4, 3, 9, 5, 8, 7]
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">shuffleElements</span><span class="p">(</span><span class="nx">list</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// [9, 6, 8, 1, 2, 7, 4, 5, 3]
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">shuffleElements</span><span class="p">(</span><span class="nx">list</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// [6, 7, 3, 1, 2, 5, 8, 9, 4]
 </span></span></span></code></pre></div><h2 id="math-abs">Math Abs</h2>
 <p>The <code>Math.abs(x)</code> function returns the absolute of the a number i.e. |x|</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>Math.<span style="color:#a6e22e">abs</span>(<span style="color:#e6db74">&#39;-1&#39;</span>);     <span style="color:#75715e">// 1
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">abs</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>);       <span style="color:#75715e">// 2
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">abs</span>(<span style="color:#66d9ef">null</span>);     <span style="color:#75715e">// 0
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">abs</span>(<span style="color:#e6db74">&#39;&#39;</span>);       <span style="color:#75715e">// 0
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">abs</span>([]);       <span style="color:#75715e">// 0
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">abs</span>([<span style="color:#ae81ff">2</span>]);      <span style="color:#75715e">// 2
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">abs</span>([<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>]);    <span style="color:#75715e">// NaN
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">abs</span>({});       <span style="color:#75715e">// NaN
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">abs</span>(<span style="color:#e6db74">&#39;string&#39;</span>); <span style="color:#75715e">// NaN
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">abs</span>();         <span style="color:#75715e">// NaN
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="s1">&#39;-1&#39;</span><span class="p">);</span>     <span class="c1">// 1
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">);</span>       <span class="c1">// 2
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>     <span class="c1">// 0
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>       <span class="c1">// 0
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">([]);</span>       <span class="c1">// 0
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">([</span><span class="mi">2</span><span class="p">]);</span>      <span class="c1">// 2
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]);</span>    <span class="c1">// NaN
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">({});</span>       <span class="c1">// NaN
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="s1">&#39;string&#39;</span><span class="p">);</span> <span class="c1">// NaN
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">();</span>         <span class="c1">// NaN
 </span></span></span></code></pre></div><h3 id="find-absolute-difference-between-two-numbers">Find absolute difference between two numbers</h3>
 <p>Let&rsquo;s use <code>Math.abs()</code> to find the absolute difference between two given numbers:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">difference</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; Math.<span style="color:#a6e22e">abs</span>(<span style="color:#a6e22e">a</span><span style="color:#f92672">-</span><span style="color:#a6e22e">b</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">difference</span>(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>)); <span style="color:#75715e">// 2
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">difference</span>(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">3</span>)); <span style="color:#75715e">// 2
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">difference</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">a</span><span class="o">-</span><span class="nx">b</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">difference</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">));</span> <span class="c1">// 2
+</span></span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">difference</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span> <span class="c1">// 2
 </span></span></span></code></pre></div><h2 id="math-ceil">Math Ceil</h2>
 <p>The <code>Math.ceil(x)</code> function is used to round off the given number towards ceiling means upward direction.</p>
 <pre tabindex="0"><code>x ≤ Math.ceil(x) ≤ x+1
-</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>Math.<span style="color:#a6e22e">ceil</span>(<span style="color:#ae81ff">0.95</span>);    <span style="color:#75715e">// 1
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">ceil</span>(<span style="color:#ae81ff">45.95</span>);   <span style="color:#75715e">// 46
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">ceil</span>(<span style="color:#ae81ff">45.05</span>);   <span style="color:#75715e">// 46
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">ceil</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">0.95</span>);   <span style="color:#75715e">// -0
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">ceil</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">45.05</span>);  <span style="color:#75715e">// -45 
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">ceil</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">45.95</span>);  <span style="color:#75715e">// -45
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>Math.<span style="color:#a6e22e">ceil</span>(<span style="color:#66d9ef">null</span>);    <span style="color:#75715e">// 0
+</code></pre><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="mf">0.95</span><span class="p">);</span>    <span class="c1">// 1
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="mf">45.95</span><span class="p">);</span>   <span class="c1">// 46
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="mf">45.05</span><span class="p">);</span>   <span class="c1">// 46
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="o">-</span><span class="mf">0.95</span><span class="p">);</span>   <span class="c1">// -0
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="o">-</span><span class="mf">45.05</span><span class="p">);</span>  <span class="c1">// -45 
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="o">-</span><span class="mf">45.95</span><span class="p">);</span>  <span class="c1">// -45
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>    <span class="c1">// 0
 </span></span></span></code></pre></div><h2 id="math-floor">Math Floor</h2>
 <p>The <code>Math.floor(x)</code> function is used to round off the given number towards floor means downward direction.</p>
 <pre tabindex="0"><code>x-1 ≤ Math.floor(x) ≤ x
-</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>Math.<span style="color:#a6e22e">floor</span>(<span style="color:#ae81ff">0.95</span>);    <span style="color:#75715e">// 0
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">floor</span>(<span style="color:#ae81ff">45.95</span>);   <span style="color:#75715e">// 45
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">floor</span>(<span style="color:#ae81ff">45.05</span>);   <span style="color:#75715e">// 45
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">floor</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">0.95</span>);   <span style="color:#75715e">// -1
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">floor</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">45.05</span>);  <span style="color:#75715e">// -46 
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">floor</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">45.95</span>);  <span style="color:#75715e">// -46
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>Math.<span style="color:#a6e22e">floor</span>(<span style="color:#66d9ef">null</span>);    <span style="color:#75715e">// 0
+</code></pre><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="mf">0.95</span><span class="p">);</span>    <span class="c1">// 0
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="mf">45.95</span><span class="p">);</span>   <span class="c1">// 45
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="mf">45.05</span><span class="p">);</span>   <span class="c1">// 45
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="o">-</span><span class="mf">0.95</span><span class="p">);</span>   <span class="c1">// -1
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="o">-</span><span class="mf">45.05</span><span class="p">);</span>  <span class="c1">// -46 
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="o">-</span><span class="mf">45.95</span><span class="p">);</span>  <span class="c1">// -46
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>    <span class="c1">// 0
 </span></span></span></code></pre></div><h3 id="get-a-fraction-part-of-a-number">Get a fraction part of a number</h3>
 <p>Let&rsquo;s create a method <code>fraction</code> to get a fraction part of the number using <code>Math.floor()</code> and <code>Math.abs()</code> functions:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fraction</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">x</span>) =&gt; Math.<span style="color:#a6e22e">abs</span>(<span style="color:#a6e22e">x</span>) <span style="color:#f92672">-</span> Math.<span style="color:#a6e22e">floor</span>(Math.<span style="color:#a6e22e">abs</span>(<span style="color:#a6e22e">x</span>));
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fraction</span>(<span style="color:#ae81ff">45.95</span>);   <span style="color:#75715e">// 0.95
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">fraction</span>(<span style="color:#ae81ff">45.05</span>);   <span style="color:#75715e">// 0.05
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">fraction</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">45.95</span>);  <span style="color:#75715e">// 0.95
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">fraction</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">45.05</span>);  <span style="color:#75715e">// 0.05
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">fraction</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="o">-</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">x</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">fraction</span><span class="p">(</span><span class="mf">45.95</span><span class="p">);</span>   <span class="c1">// 0.95
+</span></span></span><span class="line"><span class="cl"><span class="nx">fraction</span><span class="p">(</span><span class="mf">45.05</span><span class="p">);</span>   <span class="c1">// 0.05
+</span></span></span><span class="line"><span class="cl"><span class="nx">fraction</span><span class="p">(</span><span class="o">-</span><span class="mf">45.95</span><span class="p">);</span>  <span class="c1">// 0.95
+</span></span></span><span class="line"><span class="cl"><span class="nx">fraction</span><span class="p">(</span><span class="o">-</span><span class="mf">45.05</span><span class="p">);</span>  <span class="c1">// 0.05
 </span></span></span></code></pre></div><h3 id="get-quotient-and-remainder-of-a-division-of-two-whole-numbers">Get quotient and remainder of a division of two whole numbers</h3>
 <p>The <code>Math.floor()</code> and <code>%</code> can be used find quotient and remainder of a division of two whole numbers respectively:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dividend</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">14</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">divisor</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;quotient&#34;</span>, Math.<span style="color:#a6e22e">floor</span>(<span style="color:#a6e22e">dividend</span><span style="color:#f92672">/</span><span style="color:#a6e22e">divisor</span>));
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;remainder&#34;</span>, <span style="color:#a6e22e">dividend</span> <span style="color:#f92672">%</span> <span style="color:#a6e22e">divisor</span>);
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// quotient 4
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// remainder 2
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">dividend</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">divisor</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;quotient&#34;</span><span class="p">,</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">dividend</span><span class="o">/</span><span class="nx">divisor</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;remainder&#34;</span><span class="p">,</span> <span class="nx">dividend</span> <span class="o">%</span> <span class="nx">divisor</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// quotient 4
+</span></span></span><span class="line"><span class="cl"><span class="c1">// remainder 2
 </span></span></span></code></pre></div><h2 id="math-round">Math Round</h2>
 <p>The <code>Math.round(x)</code> function is used to round off the given number to the nearest integer in any direction, upward or downward.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Math.<span style="color:#a6e22e">round</span>(<span style="color:#ae81ff">0.9</span>));
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// 1
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Math.<span style="color:#a6e22e">round</span>(<span style="color:#ae81ff">5.95</span>), Math.<span style="color:#a6e22e">round</span>(<span style="color:#ae81ff">5.5</span>), Math.<span style="color:#a6e22e">round</span>(<span style="color:#ae81ff">5.05</span>));
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// 6 6 5
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Math.<span style="color:#a6e22e">round</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">5.05</span>), Math.<span style="color:#a6e22e">round</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">5.5</span>), Math.<span style="color:#a6e22e">round</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">5.95</span>));
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// -5 -5 -6
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="mf">0.9</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 1
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="mf">5.95</span><span class="p">),</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="mf">5.5</span><span class="p">),</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="mf">5.05</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 6 6 5
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="o">-</span><span class="mf">5.05</span><span class="p">),</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="o">-</span><span class="mf">5.5</span><span class="p">),</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="o">-</span><span class="mf">5.95</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// -5 -5 -6
 </span></span></span></code></pre></div><h2 id="math-trunc">Math Trunc</h2>
 <p>The <code>Math.trunc(x)</code> function returns the integer part of a number by removing decimal part.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>Math.<span style="color:#a6e22e">trunc</span>(<span style="color:#ae81ff">0.123</span>);   <span style="color:#75715e">// 0
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">trunc</span>(<span style="color:#ae81ff">12.34</span>);   <span style="color:#75715e">// 12
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">trunc</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">0.123</span>);  <span style="color:#75715e">// -0
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">trunc</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">12.34</span>);  <span style="color:#75715e">// -12
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Math.<span style="color:#a6e22e">trunc</span>(<span style="color:#e6db74">&#39;foo&#39;</span>);   <span style="color:#75715e">// NaN
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">trunc</span><span class="p">(</span><span class="mf">0.123</span><span class="p">);</span>   <span class="c1">// 0
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">trunc</span><span class="p">(</span><span class="mf">12.34</span><span class="p">);</span>   <span class="c1">// 12
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">trunc</span><span class="p">(</span><span class="o">-</span><span class="mf">0.123</span><span class="p">);</span>  <span class="c1">// -0
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">trunc</span><span class="p">(</span><span class="o">-</span><span class="mf">12.34</span><span class="p">);</span>  <span class="c1">// -12
+</span></span></span><span class="line"><span class="cl"><span class="nb">Math</span><span class="p">.</span><span class="nx">trunc</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">);</span>   <span class="c1">// NaN
 </span></span></span></code></pre></div><p>Note that <code>Math.trunc(x)</code> function do not apply any rounding logic and simply truncate the dot and decimal part of the number.</p>
 <h3 id="create-our-own-truncate-method">Create our own truncate method</h3>
 <p>Let&rsquo;s create our own <code>truncate</code> methods using <code>Math.ceil()</code> and <code>Math.floor()</code> functions:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">truncate</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">x</span>) =&gt; <span style="color:#a6e22e">x</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">?</span> Math.<span style="color:#a6e22e">ceil</span>(<span style="color:#a6e22e">x</span>) <span style="color:#f92672">:</span> Math.<span style="color:#a6e22e">floor</span>(<span style="color:#a6e22e">x</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">truncate</span>(<span style="color:#ae81ff">0.123</span>);   <span style="color:#75715e">// 0
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">truncate</span>(<span style="color:#ae81ff">12.34</span>);   <span style="color:#75715e">// 12
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">truncate</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">0.123</span>);  <span style="color:#75715e">// -0
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">truncate</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">12.34</span>);  <span style="color:#75715e">// -12
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">truncate</span>(<span style="color:#e6db74">&#39;foo&#39;</span>);   <span style="color:#75715e">// NaN
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">truncate</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">x</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="o">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">truncate</span><span class="p">(</span><span class="mf">0.123</span><span class="p">);</span>   <span class="c1">// 0
+</span></span></span><span class="line"><span class="cl"><span class="nx">truncate</span><span class="p">(</span><span class="mf">12.34</span><span class="p">);</span>   <span class="c1">// 12
+</span></span></span><span class="line"><span class="cl"><span class="nx">truncate</span><span class="p">(</span><span class="o">-</span><span class="mf">0.123</span><span class="p">);</span>  <span class="c1">// -0
+</span></span></span><span class="line"><span class="cl"><span class="nx">truncate</span><span class="p">(</span><span class="o">-</span><span class="mf">12.34</span><span class="p">);</span>  <span class="c1">// -12
+</span></span></span><span class="line"><span class="cl"><span class="nx">truncate</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">);</span>   <span class="c1">// NaN
 </span></span></span></code></pre></div><h2 id="remaining-math-functions">Remaining Math Functions</h2>
 <p>We have covered most of the frequently used Math Object functions in JavaScript in details. These are the list of remaining Math functions which might be required in complex mathematical calculation.</p>
 <table>
-<thead>
-<tr>
-<th style="text-align:left">Method</th>
-<th style="text-align:left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">acos(x)</td>
-<td style="text-align:left">Returns the arccosine of x, in radians</td>
-</tr>
-<tr>
-<td style="text-align:left">acosh(x)</td>
-<td style="text-align:left">Returns the hyperbolic arccosine of x</td>
-</tr>
-<tr>
-<td style="text-align:left">asin(x)</td>
-<td style="text-align:left">Returns the arcsine of x, in radians</td>
-</tr>
-<tr>
-<td style="text-align:left">asinh(x)</td>
-<td style="text-align:left">Returns the hyperbolic arcsine of x</td>
-</tr>
-<tr>
-<td style="text-align:left">atan(x)</td>
-<td style="text-align:left">Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians</td>
-</tr>
-<tr>
-<td style="text-align:left">atan2(y, x)</td>
-<td style="text-align:left">Returns the arctangent of the quotient of its arguments</td>
-</tr>
-<tr>
-<td style="text-align:left">atanh(x)</td>
-<td style="text-align:left">Returns the hyperbolic arctangent of x</td>
-</tr>
-<tr>
-<td style="text-align:left">cbrt(x)</td>
-<td style="text-align:left">Returns the cubic root of x</td>
-</tr>
-<tr>
-<td style="text-align:left">cos(x)</td>
-<td style="text-align:left">Returns the cosine of x (x is in radians)</td>
-</tr>
-<tr>
-<td style="text-align:left">cosh(x)</td>
-<td style="text-align:left">Returns the hyperbolic cosine of x</td>
-</tr>
-<tr>
-<td style="text-align:left">exp(x)</td>
-<td style="text-align:left">Returns the value of e<sup>x</sup>, where e is Euler&rsquo;s number</td>
-</tr>
-<tr>
-<td style="text-align:left">expm1(x)</td>
-<td style="text-align:left">Returns the value of (e<sup>x</sup>-1), where e is Euler&rsquo;s number</td>
-</tr>
-<tr>
-<td style="text-align:left">log(x)</td>
-<td style="text-align:left">Returns the natural logarithm (base e) of x</td>
-</tr>
-<tr>
-<td style="text-align:left">sin(x)</td>
-<td style="text-align:left">Returns the sine of x (x is in radians)</td>
-</tr>
-<tr>
-<td style="text-align:left">sinh(x)</td>
-<td style="text-align:left">Returns the hyperbolic sine of x</td>
-</tr>
-<tr>
-<td style="text-align:left">tan(x)</td>
-<td style="text-align:left">Returns the tangent of an angle</td>
-</tr>
-<tr>
-<td style="text-align:left">tanh(x)</td>
-<td style="text-align:left">Returns the hyperbolic tangent of a number</td>
-</tr>
-</tbody>
+	<thead>
+			<tr>
+					<th style="text-align: left">Method</th>
+					<th style="text-align: left">Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">acos(x)</td>
+					<td style="text-align: left">Returns the arccosine of x, in radians</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">acosh(x)</td>
+					<td style="text-align: left">Returns the hyperbolic arccosine of x</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">asin(x)</td>
+					<td style="text-align: left">Returns the arcsine of x, in radians</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">asinh(x)</td>
+					<td style="text-align: left">Returns the hyperbolic arcsine of x</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">atan(x)</td>
+					<td style="text-align: left">Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">atan2(y, x)</td>
+					<td style="text-align: left">Returns the arctangent of the quotient of its arguments</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">atanh(x)</td>
+					<td style="text-align: left">Returns the hyperbolic arctangent of x</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">cbrt(x)</td>
+					<td style="text-align: left">Returns the cubic root of x</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">cos(x)</td>
+					<td style="text-align: left">Returns the cosine of x (x is in radians)</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">cosh(x)</td>
+					<td style="text-align: left">Returns the hyperbolic cosine of x</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">exp(x)</td>
+					<td style="text-align: left">Returns the value of e<sup>x</sup>, where e is Euler&rsquo;s number</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">expm1(x)</td>
+					<td style="text-align: left">Returns the value of (e<sup>x</sup>-1), where e is Euler&rsquo;s number</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">log(x)</td>
+					<td style="text-align: left">Returns the natural logarithm (base e) of x</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">sin(x)</td>
+					<td style="text-align: left">Returns the sine of x (x is in radians)</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">sinh(x)</td>
+					<td style="text-align: left">Returns the hyperbolic sine of x</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">tan(x)</td>
+					<td style="text-align: left">Returns the tangent of an angle</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">tanh(x)</td>
+					<td style="text-align: left">Returns the hyperbolic tangent of a number</td>
+			</tr>
+	</tbody>
 </table>
 		</div>
 		<footer class="post__footer">
@@ -980,8 +994,9 @@
     <ul class="share-icons">
       
       <li>
-        <a href="https://www.buymeacoffee.com/codingnconcepts" target="_blank">
+        <a href="https://www.buymeacoffee.com/codingnconcepts" target="_blank" rel="noopener" aria-label="Buy me a coffee" class="share-btn bmc">
           <svg class="widget-social__link-button icon icon-category" fill="none" height="68" viewBox="0 0 184 68" width="184" xmlns="http://www.w3.org/2000/svg"><rect fill="#fddc48" height="47" rx="9" width="182" x="1" y="11"/><g stroke-width="1.5"><path d="m24.9312 24.2374-.3942 1.0203h1.0938 14.9077 1.0938l-.3942-1.0203-1.3553-3.5077-.1853-.4797h-.5143-12.1972-.5142l-.1854.4797z" fill="#fff" stroke="#000"/><path d="m41.4154 26.7-3.5077 22.8" stroke="#f69935"/><path d="m28.2615 49.5-3.9461-23.2385h17.9769l-3.5077 23.2385z" stroke="#000"/><path d="m25.1923 42.0462-1.7538-9.6462h19.7307l-1.7538 9.6462z" fill="#fff" stroke="#000"/><path d="m23 26.2615v-2.6307h20.1692v2.6307z" fill="#fff" stroke="#000"/></g><path d="m55.5361 40v-9.9531h3.4864c1.2076 0 2.1237.2324 2.748.6972.6244.4603.9365 1.1371.9365 2.0303 0 .4876-.1253.9183-.3759 1.292-.2507.3691-.5993.6403-1.0459.8135.5104.1276.9114.3851 1.2031.7724.2962.3874.4443.8614.4443 1.4219 0 .957-.3053 1.6817-.916 2.1738-.6107.4922-1.4811.7429-2.6113.752zm2.0508-4.334v2.6865h1.7569c.483 0 .859-.1139 1.1279-.3418.2734-.2324.4101-.5514.4101-.957 0-.9114-.4716-1.374-1.415-1.3877zm0-1.4492h1.5176c1.0345-.0182 1.5517-.4307 1.5517-1.2373 0-.4512-.1321-.7747-.3964-.9707-.2598-.2005-.6722-.3008-1.2373-.3008h-1.4356zm11.1904 5.0312c-.4876.5925-1.1621.8887-2.0234.8887-.793 0-1.3991-.2278-1.8184-.6836-.4147-.4557-.6266-1.1233-.6357-2.0029v-4.8467h1.9756v4.7783c0 .7702.3509 1.1553 1.0527 1.1553.6699 0 1.1302-.2324 1.3809-.6973v-5.2363h1.9824v7.3965h-1.8594zm6.1661-2.0439 1.3671-4.6006h2.1192l-2.9736 8.5449-.1641.3897c-.4421.9661-1.1712 1.4492-2.1875 1.4492-.2871 0-.5788-.0433-.875-.1299v-1.497l.3008.0068c.3737 0 .6517-.057.834-.1709.1868-.1139.3326-.3031.4375-.5674l.2324-.6084-2.5908-7.417h2.1259zm9.6045-4.6006.0615.8272c.5241-.6426 1.2327-.9639 2.126-.9639.9524 0 1.6064.376 1.9619 1.1279.5195-.7519 1.2601-1.1279 2.2216-1.1279.8021 0 1.3991.2347 1.7911.7041.3919.4648.5879 1.1667.5879 2.1055v4.7236h-1.9825v-4.7168c0-.4193-.082-.7246-.2461-.916-.164-.196-.4534-.294-.8681-.294-.5925 0-1.0026.2826-1.2305.8477l.0068 5.0791h-1.9755v-4.71c0-.4283-.0844-.7382-.253-.9296-.1686-.1915-.4557-.2872-.8613-.2872-.5606 0-.9662.2325-1.2168.6973v5.2295h-1.9756v-7.3965zm13.6787 7.5332c-1.0847 0-1.9688-.3327-2.6524-.998-.679-.6654-1.0185-1.5518-1.0185-2.6592v-.1914c0-.7429.1435-1.4059.4306-1.9893.2871-.5879.6927-1.039 1.2168-1.3535.5287-.319 1.1302-.4785 1.8047-.4785 1.0117 0 1.807.319 2.3862.957.583.638.875 1.5427.875 2.7139v.8066h-4.7104c.0638.4831.2552.8705.5742 1.1621.3236.2917.7315.4375 1.2236.4375.7611 0 1.3558-.2757 1.7846-.8271l.97 1.0869c-.296.4193-.697.7474-1.2028.9844-.5059.2324-1.0664.3486-1.6816.3486zm-.2256-6.0703c-.392 0-.711.1322-.9571.3965-.2415.2643-.3964.6426-.4648 1.1348h2.748v-.1573c-.0091-.4375-.1276-.7747-.3554-1.0117-.2279-.2415-.5515-.3623-.9707-.3623zm12.168 5.9336c-.091-.1777-.157-.3988-.198-.6631-.479.5332-1.101.7998-1.867.7998-.724 0-1.326-.2096-1.804-.6289-.474-.4193-.711-.9479-.711-1.5859 0-.7839.289-1.3854.868-1.8047.583-.4193 1.424-.6312 2.522-.6358h.91v-.4238c0-.3418-.089-.6152-.267-.8203-.173-.2051-.449-.3076-.827-.3076-.333 0-.595.0797-.786.2392-.187.1596-.28.3783-.28.6563h-1.976c0-.4284.132-.8249.396-1.1895.265-.3645.638-.6494 1.122-.8545.483-.2096 1.025-.3144 1.626-.3144.912 0 1.634.2301 2.167.6904.538.4558.807 1.0983.807 1.9278v3.206c.005.7018.103 1.2328.294 1.5928v.1162zm-1.634-1.374c.292 0 .561-.0638.807-.1914.246-.1322.428-.3076.547-.5264v-1.2715h-.739c-.989 0-1.515.3418-1.579 1.0254l-.007.1162c0 .2461.087.4489.26.6084s.41.2393.711.2393zm11.416-.0821c.365 0 .661-.1002.889-.3007.228-.2006.346-.4672.355-.7998h1.853c-.005.5013-.141.9615-.41 1.3808-.269.4147-.638.7383-1.108.9707-.465.2279-.98.3418-1.545.3418-1.057 0-1.891-.3349-2.502-1.0049-.61-.6744-.916-1.6041-.916-2.789v-.1299c0-1.1393.303-2.0485.91-2.7275.606-.6791 1.437-1.0186 2.495-1.0186.925 0 1.665.2643 2.221.793.561.5241.846 1.2236.855 2.0986h-1.853c-.009-.3828-.127-.6927-.355-.9297-.228-.2415-.529-.3623-.902-.3623-.461 0-.809.1686-1.046.5059-.233.3326-.349.875-.349 1.6269v.2051c0 .7611.116 1.3079.349 1.6406.232.3327.585.499 1.059.499zm3.917-2.3105c0-.7337.141-1.3877.424-1.9619s.688-1.0186 1.217-1.333c.533-.3145 1.151-.4717 1.852-.4717.998 0 1.812.3053 2.441.916.633.6107.986 1.4401 1.059 2.4883l.014.5059c0 1.1347-.317 2.0462-.95 2.7343-.634.6836-1.484 1.0254-2.55 1.0254s-1.919-.3418-2.557-1.0254c-.633-.6836-.95-1.6133-.95-2.789zm1.976.1436c0 .7018.132 1.2395.396 1.6132.265.3692.643.5537 1.135.5537.479 0 .852-.1822 1.121-.5468.269-.3692.403-.9571.403-1.7637 0-.6882-.134-1.2214-.403-1.5996-.269-.3783-.647-.5674-1.135-.5674-.483 0-.856.1891-1.121.5674-.264.3737-.396.9547-.396 1.7432zm6.788 3.623v-5.9473h-1.101v-1.4492h1.101v-.6289c0-.8294.237-1.472.711-1.9277.478-.4603 1.146-.6905 2.003-.6905.273 0 .608.0456 1.005.1368l-.021 1.5312c-.164-.041-.365-.0615-.601-.0615-.743 0-1.115.3486-1.115 1.0459v.5947h1.47v1.4492h-1.47v5.9473zm5.017 0v-5.9473h-1.1v-1.4492h1.1v-.6289c0-.8294.237-1.472.711-1.9277.479-.4603 1.147-.6905 2.003-.6905.274 0 .609.0456 1.005.1368l-.02 1.5312c-.164-.041-.365-.0615-.602-.0615-.743 0-1.114.3486-1.114 1.0459v.5947h1.47v1.4492h-1.47v5.9473zm7.718.1367c-1.084 0-1.969-.3327-2.652-.998-.679-.6654-1.019-1.5518-1.019-2.6592v-.1914c0-.7429.144-1.4059.431-1.9893.287-.5879.693-1.039 1.217-1.3535.528-.319 1.13-.4785 1.804-.4785 1.012 0 1.807.319 2.386.957.584.638.875 1.5427.875 2.7139v.8066h-4.71c.064.4831.255.8705.574 1.1621.324.2917.732.4375 1.224.4375.761 0 1.356-.2757 1.784-.8271l.971 1.0869c-.296.4193-.697.7474-1.203.9844-.506.2324-1.067.3486-1.682.3486zm-.225-6.0703c-.392 0-.711.1322-.957.3965-.242.2643-.397.6426-.465 1.1348h2.748v-.1573c-.009-.4375-.128-.7747-.356-1.0117-.228-.2415-.551-.3623-.97-.3623zm7.799 6.0703c-1.084 0-1.968-.3327-2.652-.998-.679-.6654-1.018-1.5518-1.018-2.6592v-.1914c0-.7429.143-1.4059.43-1.9893.287-.5879.693-1.039 1.217-1.3535.529-.319 1.13-.4785 1.805-.4785 1.011 0 1.807.319 2.385.957.584.638.875 1.5427.875 2.7139v.8066h-4.71c.064.4831.256.8705.575 1.1621.323.2917.731.4375 1.223.4375.761 0 1.356-.2757 1.784-.8271l.971 1.0869c-.296.4193-.697.7474-1.203.9844-.506.2324-1.066.3486-1.682.3486zm-.225-6.0703c-.392 0-.711.1322-.957.3965-.242.2643-.397.6426-.465 1.1348h2.748v-.1573c-.009-.4375-.128-.7747-.355-1.0117-.228-.2415-.552-.3623-.971-.3623z" fill="#000"/><rect height="47" rx="9" stroke="#000" stroke-width="2" width="182" x="1" y="11"/></svg>
+          <p>Buy me a coffee</p>
         </a>
       </li>
 
@@ -1020,7 +1035,7 @@
       <li>
         <a href="whatsapp://send?text=Math%20Constants%20and%20Functions%20in%20JavaScript%2c%20by%20Coding%20N%20Concepts%0aLearn%20about%20Math%20built-in%20Object%20in%20JavaScript%2c%20which%20allows%20us%20to%20use%20mathematical%20constants%20such%20as%20%cf%80%2c%20e%2c%20%e2%88%9a2%20and%20perform%20mathematical%20operations%20on%20numbers%20such%20as%20pow%28%29%2c%20sqrt%28%29%2c%20max%28%29%2c%20min%28%29%2c%20random%28%29%2c%20abs%28%29%2c%20ceil%28%29%2c%20floor%28%29%2c%20round%28%29%2c%20and%20truc%28%29.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fmath-constants-and-functions-in-javascript%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
-          <p>Email</p>
+          <p>WhatsApp</p>
         </a>
       </li>
       
@@ -1040,16 +1055,16 @@
 
 
 <div class="related_post_section">
-    <h2 class = "related_post_title">See Also</h2>
-    <ul class = "related_post">
+    <h2 class="related_post_title">See Also</h2>
+    <ul class="related_post">
         
-        <li><a href="/javascript/this-keyword-in-javascript/">Understand all about this keyword in JavaScript</a></li>
+        <li><a href="/javascript/this-keyword-in-javascript/"><img class="related_post__thumb" src="/img/logo/js.png" alt="" loading="lazy"><span class="related_post__title">Understand all about this keyword in JavaScript</span></a></li>
         
-        <li><a href="/javascript/call-vs-bind-vs-apply/">Understand call, bind and apply methods in JavaScript</a></li>
+        <li><a href="/javascript/call-vs-bind-vs-apply/"><img class="related_post__thumb" src="/img/logo/js.png" alt="" loading="lazy"><span class="related_post__title">Understand call, bind and apply methods in JavaScript</span></a></li>
         
-        <li><a href="/javascript/lexical-scope-closures-and-currying/">Lexical Scope, Closures and Currying in JavaScript</a></li>
+        <li><a href="/javascript/lexical-scope-closures-and-currying/"><img class="related_post__thumb" src="/img/logo/js.png" alt="" loading="lazy"><span class="related_post__title">Lexical Scope, Closures and Currying in JavaScript</span></a></li>
         
-        <li><a href="/javascript/virtual-dom-vs-shadow-dom/">Virtual Dom vs Shadow Dom</a></li>
+        <li><a href="/javascript/virtual-dom-vs-shadow-dom/"><img class="related_post__thumb" src="/img/logo/js.png" alt="" loading="lazy"><span class="related_post__title">Virtual Dom vs Shadow Dom</span></a></li>
         
     </ul>
 </div>
@@ -1093,14 +1108,7 @@
 
 			</div>
 			
-			<aside class="adsbar"><div class="widget-search widget">
-	<form class="widget-search__form" role="search" method="get" action="https://codingnconcepts.com/search">
-		<label>
-			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="s" aria-label="SEARCH...">
-		</label>
-		<input class="widget-search__submit" type="submit" value="Search">
-	</form>
-</div>
+			<aside class="adsbar">
 <div class="widget-social widget">
 	<h4 class="widget-social__title widget__title">Follow Us</h4>
 	<div class="widget-social__content widget__content">
@@ -1207,11 +1215,11 @@
 		
 		<div class="footer__copyright">
 			&copy; 2026 CodingNConcepts.
-			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>
 </footer>
 	</div>
 <script async defer src="/js/menu.js"></script>
+<script defer src="/js/theme-toggle.js"></script>
 </body>
 </html>

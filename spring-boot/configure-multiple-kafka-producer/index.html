@@ -4,8 +4,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="color-scheme" content="light dark">
 	<title>Configure Multiple Kafka Producer in Spring Boot - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
 	<meta name="description" content="Configure Multiple Kafka Producer from application properties file in Spring boot project.">
 	<meta property="og:title" content="Configure Multiple Kafka Producer in Spring Boot" />
 <meta property="og:description" content="Configure Multiple Kafka Producer from application properties file in Spring boot project." />
@@ -21,15 +23,17 @@
 <meta property="article:section" content="spring-boot" />
 <meta property="article:tag" content="Spring Boot Kafka" />
 <meta property="fb:admins" content="177784346770196" />
-	<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://codingnconcepts.com/img/logo/springboot.png"/>
-
-<meta name="twitter:title" content="Configure Multiple Kafka Producer in Spring Boot"/>
-<meta name="twitter:description" content="Configure Multiple Kafka Producer from application properties file in Spring boot project."/>
+	
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://codingnconcepts.com/img/logo/springboot.png">
+	<meta name="twitter:title" content="Configure Multiple Kafka Producer in Spring Boot">
+	<meta name="twitter:description" content="Configure Multiple Kafka Producer from application properties file in Spring boot project.">
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Rowdies">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@600;700;800&display=swap">
 	<link rel="stylesheet" href="/css/style.css">
 	
 	
@@ -108,6 +112,10 @@
 				<div class="logo__tagline">Ashish Lahoti&#39;s Technical Blog</div>
 			</a>
 		</div>
+		<form class="header-search" role="search" method="get" action="https://codingnconcepts.com/search">
+			<label class="menu__text--sr" for="headerSearchInput">Find related posts&hellip;</label>
+			<input class="header-search__field" id="headerSearchInput" type="search" placeholder="Find related posts&hellip;" name="s" aria-label="Find related posts">
+		</form>
 		
 <nav class="menu">
 	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
@@ -115,9 +123,10 @@
 	</button>
 	<ul class="menu__list">
 		<li class="menu__item">
-			<a class="menu__link" href="/">
+			<a class="menu__link menu__link--icon" href="/" title="Home">
 				
-				<span class="menu__text">Home</span>
+				<svg class="menu__home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5 10v9.5a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"></path></svg>
+				<span class="menu__text menu__text--sr">Home</span>
 				
 			</a>
 		</li>
@@ -492,8 +501,13 @@
 	</ul>
 </nav>
 
+		<button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+			<svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+			<svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+		</button>
 	</div>
 </header>
+		
 		<div class="wrapper flex">
 			<div class="primary">
 			
@@ -506,7 +520,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2023-08-30T00:00:00Z">Last Modified: August 30, 2023</time>
+	<time class="meta__text" datetime="2023-08-30T00:00:00Z">Last Modified: Aug 30, 2023</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -515,8 +529,8 @@
 	</span>
 </div></div>
 		</header>
-<div class="post__toc toc">
-	<div class="toc__title">Page content</div>
+<details class="post__toc toc" open>
+	<summary class="toc__title">Page content</summary>
 	<div class="toc__menu">
 		<nav id="TableOfContents">
   <ul>
@@ -539,7 +553,7 @@
   </ul>
 </nav>
 	</div>
-</div>
+</details>
 <div class="content post__content clearfix">
 			<p>This post describes how to configure Multiple Kafka Producer in Spring Boot application from a property file having different configurations such as Kafka cluster, topic, etc.</p>
 <h2 id="setup-spring-boot-project">Setup Spring Boot Project</h2>
@@ -548,212 +562,212 @@
 <p>Click on the below link to generate <strong>maven project</strong> with pre-defined configuration:-</p>
 <p><small><a href="https://start.spring.io/#!type=maven-project&amp;language=java&amp;platformVersion=3.0.10&amp;packaging=jar&amp;jvmVersion=11&amp;groupId=com.example&amp;artifactId=springboot-kafka&amp;name=springboot-kafka&amp;description=Kafka%20producer%20and%20consumer%20configuration&amp;packageName=com.example.kafka&amp;dependencies=web,kafka,lombok">https://start.spring.io/#!type=maven-project&amp;language=java&amp;platformVersion=3.0.10&amp;packaging=jar&amp;jvmVersion=11&amp;groupId=com.example&amp;artifactId=springboot-kafka&amp;name=springboot-kafka&amp;description=Kafka%20producer%20and%20consumer%20configuration&amp;packageName=com.example.kafka&amp;dependencies=web,kafka,lombok</a></small></p>
 <p>A typical <em>pom.xml</em> file for a kafka project look like this:-</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;dependency&gt;</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-web<span style="color:#f92672">&lt;/artifactId&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependency&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;dependency&gt;</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.kafka<span style="color:#f92672">&lt;/groupId&gt;</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&lt;artifactId&gt;</span>spring-kafka<span style="color:#f92672">&lt;/artifactId&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependency&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;dependency&gt;</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-test<span style="color:#f92672">&lt;/artifactId&gt;</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&lt;scope&gt;</span>test<span style="color:#f92672">&lt;/scope&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependency&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;dependency&gt;</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.kafka<span style="color:#f92672">&lt;/groupId&gt;</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&lt;artifactId&gt;</span>spring-kafka-test<span style="color:#f92672">&lt;/artifactId&gt;</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&lt;scope&gt;</span>test<span style="color:#f92672">&lt;/scope&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependency&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;dependency&gt;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;groupId&gt;</span>org.projectlombok<span style="color:#f92672">&lt;/groupId&gt;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;artifactId&gt;</span>lombok<span style="color:#f92672">&lt;/artifactId&gt;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;optional&gt;</span>true<span style="color:#f92672">&lt;/optional&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependency&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;dependency&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-web<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/dependency&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;dependency&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&lt;groupId&gt;</span>org.springframework.kafka<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&lt;artifactId&gt;</span>spring-kafka<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/dependency&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;dependency&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-test<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/dependency&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;dependency&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&lt;groupId&gt;</span>org.springframework.kafka<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&lt;artifactId&gt;</span>spring-kafka-test<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/dependency&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;dependency&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;groupId&gt;</span>org.projectlombok<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;artifactId&gt;</span>lombok<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;optional&gt;</span>true<span class="nt">&lt;/optional&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/dependency&gt;</span>
 </span></span></code></pre></div><br/>
 <h6 id="gradle-project">Gradle Project</h6>
 <p>Click on the below link to generate <strong>gradle project</strong> with pre-defined configuration:-</p>
 <p><small><a href="https://start.spring.io/#!type=gradle-project&amp;language=java&amp;platformVersion=3.0.10&amp;packaging=jar&amp;jvmVersion=11&amp;groupId=com.example&amp;artifactId=springboot-kafka&amp;name=springboot-kafka&amp;description=Kafka%20producer%20and%20consumer%20configuration&amp;packageName=com.example.kafka&amp;dependencies=web,kafka,lombok">https://start.spring.io/#!type=gradle-project&amp;language=java&amp;platformVersion=3.0.10&amp;packaging=jar&amp;jvmVersion=11&amp;groupId=com.example&amp;artifactId=springboot-kafka&amp;name=springboot-kafka&amp;description=Kafka%20producer%20and%20consumer%20configuration&amp;packageName=com.example.kafka&amp;dependencies=web,kafka,lombok</a></small></p>
 <p>A typical <em>build.gradle</em> file for a kafka project look like this:-</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gradle" data-lang="gradle"><span style="display:flex;"><span>dependencies <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>  implementation <span style="color:#e6db74">&#39;org.springframework.boot:spring-boot-starter-web&#39;</span>
-</span></span><span style="display:flex;"><span>  implementation <span style="color:#e6db74">&#39;org.springframework.kafka:spring-kafka&#39;</span>
-</span></span><span style="display:flex;"><span>  testImplementation <span style="color:#e6db74">&#39;org.springframework.boot:spring-boot-starter-test&#39;</span>
-</span></span><span style="display:flex;"><span>  testImplementation <span style="color:#e6db74">&#39;org.springframework.kafka:spring-kafka-test&#39;</span>
-</span></span><span style="display:flex;"><span>  compileOnly <span style="color:#e6db74">&#39;org.projectlombok:lombok&#39;</span>
-</span></span><span style="display:flex;"><span>  annotationProcessor <span style="color:#e6db74">&#39;org.projectlombok:lombok&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl"><span class="n">dependencies</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">implementation</span> <span class="s1">&#39;org.springframework.boot:spring-boot-starter-web&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">implementation</span> <span class="s1">&#39;org.springframework.kafka:spring-kafka&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">testImplementation</span> <span class="s1">&#39;org.springframework.boot:spring-boot-starter-test&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">testImplementation</span> <span class="s1">&#39;org.springframework.kafka:spring-kafka-test&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">compileOnly</span> <span class="s1">&#39;org.projectlombok:lombok&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">annotationProcessor</span> <span class="s1">&#39;org.projectlombok:lombok&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
 </span></span></code></pre></div><h2 id="kafka-custom-properties">Kafka Custom Properties</h2>
 <p>Spring Boot Kafka only provides support for single-producer configuration. For example:-</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">spring</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">kafka</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">bootstrap-servers</span>: <span style="color:#ae81ff">localhost:9092, localhost:9093, localhost:9094</span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span>    <span style="color:#f92672">producer</span>:
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">retries</span>: <span style="color:#ae81ff">0</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">acks</span>: <span style="color:#ae81ff">all</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">key-serializer</span>: <span style="color:#ae81ff">org.apache.kafka.common.serialization.StringSerializer</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">value-serializer</span>: <span style="color:#ae81ff">org.apache.kafka.common.serialization.StringSerializer</span>
-</span></span></code></pre></div><p>We will write a custom class <code>KafkaCustomProperties</code> which will read the property file having multiple producer configurations. A typical example of  multiple producer configuration properties where we have two producers <code>producer1</code> and <code>producer2</code> publishing messages to different Kafka clusters defined in <code>bootstrap-servers</code>:-</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">spring</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">kafka</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">bootstrap-servers</span><span class="p">:</span><span class="w"> </span><span class="l">localhost:9092, localhost:9093, localhost:9094</span><span class="w">
+</span></span></span><span class="line hl"><span class="cl"><span class="w">    </span><span class="nt">producer</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">acks</span><span class="p">:</span><span class="w"> </span><span class="l">all</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">key-serializer</span><span class="p">:</span><span class="w"> </span><span class="l">org.apache.kafka.common.serialization.StringSerializer</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">value-serializer</span><span class="p">:</span><span class="w"> </span><span class="l">org.apache.kafka.common.serialization.StringSerializer</span><span class="w">
+</span></span></span></code></pre></div><p>We will write a custom class <code>KafkaCustomProperties</code> which will read the property file having multiple producer configurations. A typical example of  multiple producer configuration properties where we have two producers <code>producer1</code> and <code>producer2</code> publishing messages to different Kafka clusters defined in <code>bootstrap-servers</code>:-</p>
 <h6 id="applicationyml">application.yml</h6>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">kafka</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">producer</span>:
-</span></span><span style="display:flex; background-color:#3c3d38"><span>    <span style="color:#f92672">producer1</span>:
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">topic</span>: <span style="color:#ae81ff">topic1</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">bootstrap-servers</span>: <span style="color:#ae81ff">server1:9092, server2:9092, server3:9092</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">retries</span>: <span style="color:#ae81ff">0</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">acks</span>: <span style="color:#ae81ff">all</span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span>    <span style="color:#f92672">producer2</span>:
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">topic</span>: <span style="color:#ae81ff">topic2</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">bootstrap-servers</span>: <span style="color:#ae81ff">another.server1:9092, another.server2:9092, another.server3:9092</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">retries</span>: <span style="color:#ae81ff">2</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">acks</span>: <span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span>    <span style="color:#f92672">producer3</span>:
-</span></span><span style="display:flex;"><span>      <span style="color:#ae81ff">...</span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span>    <span style="color:#f92672">producer4</span>:
-</span></span><span style="display:flex;"><span>      <span style="color:#ae81ff">...</span>
-</span></span></code></pre></div><p>The value for <code>bootstrap-servers</code> in the above configuration is shown for illustration purposes. It should be replaced with Kafka cluster servers in comma-separated values.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">kafka</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">producer</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line hl"><span class="cl"><span class="w">    </span><span class="nt">producer1</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">topic</span><span class="p">:</span><span class="w"> </span><span class="l">topic1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">bootstrap-servers</span><span class="p">:</span><span class="w"> </span><span class="l">server1:9092, server2:9092, server3:9092</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">acks</span><span class="p">:</span><span class="w"> </span><span class="l">all</span><span class="w">
+</span></span></span><span class="line hl"><span class="cl"><span class="w">    </span><span class="nt">producer2</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">topic</span><span class="p">:</span><span class="w"> </span><span class="l">topic2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">bootstrap-servers</span><span class="p">:</span><span class="w"> </span><span class="l">another.server1:9092, another.server2:9092, another.server3:9092</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">acks</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span></span></span><span class="line hl"><span class="cl"><span class="w">    </span><span class="nt">producer3</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="l">...</span><span class="w">
+</span></span></span><span class="line hl"><span class="cl"><span class="w">    </span><span class="nt">producer4</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="l">...</span><span class="w">
+</span></span></span></code></pre></div><p>The value for <code>bootstrap-servers</code> in the above configuration is shown for illustration purposes. It should be replaced with Kafka cluster servers in comma-separated values.</p>
 <p>Here is a list of important custom auto-configuration properties:-</p>
 <div class="table-scroll">
 <table>
-<thead>
-<tr>
-<th style="text-align:left">Property</th>
-<th style="text-align:left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"><code>kafka.bootstrap-servers</code></td>
-<td style="text-align:left">Comma separated list of kafka servers (host:port) running as a cluster. Applies to all the producers unless overridden.</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>kafka.producer.producer1.bootstrap-servers</code></td>
-<td style="text-align:left">Kafka bootstrap server for producer1. Overrides <code>kafka.bootstrap-servers</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>kafka.client-id</code></td>
-<td style="text-align:left">Client-ID to pass to the server when making requests. Used for server-side logging.</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>kafka.producer.producer1.client-id</code></td>
-<td style="text-align:left">Client-ID to pass for producer1. Overrides <code>kafka.client-id</code></td>
-</tr>
-<tr>
-<td style="text-align:left"><code>kafka.ssl.*</code></td>
-<td style="text-align:left">Kafka SSL configuration is to provide secure communication between producer/consumer and Kafka server. You need to generate key-store and trust-store files and configure the location and password</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>kafka.producer.producer1.*</code></td>
-<td style="text-align:left">Kafka Producer related configurations. Support all configurations same as <code>spring.kafka.producer.*</code></td>
-</tr>
-</tbody>
+	<thead>
+			<tr>
+					<th style="text-align: left">Property</th>
+					<th style="text-align: left">Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><code>kafka.bootstrap-servers</code></td>
+					<td style="text-align: left">Comma separated list of kafka servers (host:port) running as a cluster. Applies to all the producers unless overridden.</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><code>kafka.producer.producer1.bootstrap-servers</code></td>
+					<td style="text-align: left">Kafka bootstrap server for producer1. Overrides <code>kafka.bootstrap-servers</code></td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><code>kafka.client-id</code></td>
+					<td style="text-align: left">Client-ID to pass to the server when making requests. Used for server-side logging.</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><code>kafka.producer.producer1.client-id</code></td>
+					<td style="text-align: left">Client-ID to pass for producer1. Overrides <code>kafka.client-id</code></td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><code>kafka.ssl.*</code></td>
+					<td style="text-align: left">Kafka SSL configuration is to provide secure communication between producer/consumer and Kafka server. You need to generate key-store and trust-store files and configure the location and password</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><code>kafka.producer.producer1.*</code></td>
+					<td style="text-align: left">Kafka Producer related configurations. Support all configurations same as <code>spring.kafka.producer.*</code></td>
+			</tr>
+	</tbody>
 </table>
 </div>
 <br/>
 <p>The custom Kafka configuration class which reads the above custom configuration:-</p>
 <h6 id="kafkacustompropertiesjava">KafkaCustomProperties.java</h6>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> com.example.kafka.config<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@ConfigurationProperties</span><span style="color:#f92672">(</span>prefix <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;kafka&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Getter</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Setter</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">KafkaCustomProperties</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> bootstrapServers <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;(</span>Collections<span style="color:#f92672">.</span><span style="color:#a6e22e">singletonList</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;localhost:9092&#34;</span><span style="color:#f92672">));</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> String clientId<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;</span> properties <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;();</span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span>  <span style="color:#66d9ef">private</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> KafkaProperties<span style="color:#f92672">.</span><span style="color:#a6e22e">Producer</span><span style="color:#f92672">&gt;</span> producer<span style="color:#f92672">;</span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span>  <span style="color:#66d9ef">private</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> KafkaProperties<span style="color:#f92672">.</span><span style="color:#a6e22e">Consumer</span><span style="color:#f92672">&gt;</span> consumer<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> KafkaProperties<span style="color:#f92672">.</span><span style="color:#a6e22e">Ssl</span> ssl <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> KafkaProperties<span style="color:#f92672">.</span><span style="color:#a6e22e">Ssl</span><span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> KafkaProperties<span style="color:#f92672">.</span><span style="color:#a6e22e">Security</span> security <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> KafkaProperties<span style="color:#f92672">.</span><span style="color:#a6e22e">Security</span><span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">buildCommonProperties</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span> properties <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;();</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">bootstrapServers</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>      properties<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>CommonClientConfigs<span style="color:#f92672">.</span><span style="color:#a6e22e">BOOTSTRAP_SERVERS_CONFIG</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">bootstrapServers</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">clientId</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>      properties<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>CommonClientConfigs<span style="color:#f92672">.</span><span style="color:#a6e22e">CLIENT_ID_CONFIG</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">clientId</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>    properties<span style="color:#f92672">.</span><span style="color:#a6e22e">putAll</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">ssl</span><span style="color:#f92672">.</span><span style="color:#a6e22e">buildProperties</span><span style="color:#f92672">());</span>
-</span></span><span style="display:flex;"><span>    properties<span style="color:#f92672">.</span><span style="color:#a6e22e">putAll</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">security</span><span style="color:#f92672">.</span><span style="color:#a6e22e">buildProperties</span><span style="color:#f92672">());</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>CollectionUtils<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">properties</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>      properties<span style="color:#f92672">.</span><span style="color:#a6e22e">putAll</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">properties</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> properties<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><h2 id="spring-boot-kafka-multiple-producer">Spring Boot Kafka Multiple Producer</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nn">com.example.kafka.config</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@ConfigurationProperties</span><span class="p">(</span><span class="n">prefix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;kafka&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@Getter</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@Setter</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">KafkaCustomProperties</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">bootstrapServers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">Collections</span><span class="p">.</span><span class="na">singletonList</span><span class="p">(</span><span class="s">&#34;localhost:9092&#34;</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">clientId</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">properties</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line hl"><span class="cl"><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">KafkaProperties</span><span class="p">.</span><span class="na">Producer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">producer</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line hl"><span class="cl"><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">KafkaProperties</span><span class="p">.</span><span class="na">Consumer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">consumer</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="n">KafkaProperties</span><span class="p">.</span><span class="na">Ssl</span><span class="w"> </span><span class="n">ssl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">KafkaProperties</span><span class="p">.</span><span class="na">Ssl</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="n">KafkaProperties</span><span class="p">.</span><span class="na">Security</span><span class="w"> </span><span class="n">security</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">KafkaProperties</span><span class="p">.</span><span class="na">Security</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">buildCommonProperties</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="n">properties</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">bootstrapServers</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="n">properties</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">CommonClientConfigs</span><span class="p">.</span><span class="na">BOOTSTRAP_SERVERS_CONFIG</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">bootstrapServers</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">clientId</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="n">properties</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">CommonClientConfigs</span><span class="p">.</span><span class="na">CLIENT_ID_CONFIG</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">clientId</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">properties</span><span class="p">.</span><span class="na">putAll</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">ssl</span><span class="p">.</span><span class="na">buildProperties</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">properties</span><span class="p">.</span><span class="na">putAll</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">security</span><span class="p">.</span><span class="na">buildProperties</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">CollectionUtils</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">properties</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="n">properties</span><span class="p">.</span><span class="na">putAll</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">properties</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">properties</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h2 id="spring-boot-kafka-multiple-producer">Spring Boot Kafka Multiple Producer</h2>
 <p>Let&rsquo;s initialize a <code>KafkaTemplate</code> bean for each producer using <code>@Qualifier</code> annotation:-</p>
 <h6 id="kafkamultipleproducerconfigjava">KafkaMultipleProducerConfig.java</h6>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> com.example.kafka.config<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@RequiredArgsConstructor</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Slf4j</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">KafkaMultipleProducerConfig</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> KafkaCustomProperties kafkaCustomProperties<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@Bean</span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span>  <span style="color:#a6e22e">@Qualifier</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;producer1&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> KafkaTemplate<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">producer1KafkaTemplate</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> KafkaTemplate<span style="color:#f92672">&lt;&gt;(</span>producerFactory<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;producer1&#34;</span><span style="color:#f92672">));</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@Bean</span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span>  <span style="color:#a6e22e">@Qualifier</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;producer2&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> KafkaTemplate<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">producer2KafkaTemplate</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> KafkaTemplate<span style="color:#f92672">&lt;&gt;(</span>producerFactory<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;producer2&#34;</span><span style="color:#f92672">));</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> ProducerFactory<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">producerFactory</span><span style="color:#f92672">(</span>String producerName<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span> properties <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;(</span>kafkaCustomProperties<span style="color:#f92672">.</span><span style="color:#a6e22e">buildCommonProperties</span><span style="color:#f92672">());</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nonNull<span style="color:#f92672">(</span>kafkaCustomProperties<span style="color:#f92672">.</span><span style="color:#a6e22e">getProducer</span><span style="color:#f92672">()))</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>      KafkaProperties<span style="color:#f92672">.</span><span style="color:#a6e22e">Producer</span> producerProperties <span style="color:#f92672">=</span> kafkaCustomProperties<span style="color:#f92672">.</span><span style="color:#a6e22e">getProducer</span><span style="color:#f92672">().</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>producerName<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nonNull<span style="color:#f92672">(</span>producerProperties<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        properties<span style="color:#f92672">.</span><span style="color:#a6e22e">putAll</span><span style="color:#f92672">(</span>producerProperties<span style="color:#f92672">.</span><span style="color:#a6e22e">buildProperties</span><span style="color:#f92672">());</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>    log<span style="color:#f92672">.</span><span style="color:#a6e22e">info</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Kafka Producer &#39;{}&#39; properties: {}&#34;</span><span style="color:#f92672">,</span> producerName<span style="color:#f92672">,</span> properties<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> DefaultKafkaProducerFactory<span style="color:#f92672">&lt;&gt;(</span>properties<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p>Let&rsquo;s create two producer service classes, which publish messages to different topics configured in different clusters:-</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Producer 1
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">@Service</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Slf4j</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">KafkaFirstProducerService</span> <span style="color:#66d9ef">implements</span> KafkaProducerService <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span>  <span style="color:#a6e22e">@Qualifier</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;producer1&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> KafkaTemplate<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;</span> kafkaTemplate<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;${kafka.producer.producer1.topic}&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> String topic<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@Override</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">send</span><span style="color:#f92672">(</span>String message<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    log<span style="color:#f92672">.</span><span style="color:#a6e22e">info</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;sending message from first producer: {}&#34;</span><span style="color:#f92672">,</span> message<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    kafkaTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">send</span><span style="color:#f92672">(</span>topic<span style="color:#f92672">,</span> message<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Producer 2
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">KafkaSecondProducerService</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex; background-color:#3c3d38"><span>  <span style="color:#a6e22e">@Qualifier</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;producer2&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> KafkaTemplate<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;</span> kafkaTemplate<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;${kafka.producer.producer2.topic}&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> String topic<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">send</span><span style="color:#f92672">(</span>String message<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    log<span style="color:#f92672">.</span><span style="color:#a6e22e">info</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;sending message from second producer: {}&#34;</span><span style="color:#f92672">,</span> message<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    kafkaTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">send</span><span style="color:#f92672">(</span>topic<span style="color:#f92672">,</span> message<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><h2 id="summary">Summary</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nn">com.example.kafka.config</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@Configuration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@RequiredArgsConstructor</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@Slf4j</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">KafkaMultipleProducerConfig</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">KafkaCustomProperties</span><span class="w"> </span><span class="n">kafkaCustomProperties</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nd">@Bean</span><span class="w">
+</span></span></span><span class="line hl"><span class="cl"><span class="w">  </span><span class="nd">@Qualifier</span><span class="p">(</span><span class="s">&#34;producer1&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">KafkaTemplate</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">producer1KafkaTemplate</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line hl"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">KafkaTemplate</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">producerFactory</span><span class="p">(</span><span class="s">&#34;producer1&#34;</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nd">@Bean</span><span class="w">
+</span></span></span><span class="line hl"><span class="cl"><span class="w">  </span><span class="nd">@Qualifier</span><span class="p">(</span><span class="s">&#34;producer2&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">KafkaTemplate</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">producer2KafkaTemplate</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line hl"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">KafkaTemplate</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">producerFactory</span><span class="p">(</span><span class="s">&#34;producer2&#34;</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="n">ProducerFactory</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">producerFactory</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">producerName</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="n">properties</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">kafkaCustomProperties</span><span class="p">.</span><span class="na">buildCommonProperties</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nonNull</span><span class="p">(</span><span class="n">kafkaCustomProperties</span><span class="p">.</span><span class="na">getProducer</span><span class="p">()))</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="n">KafkaProperties</span><span class="p">.</span><span class="na">Producer</span><span class="w"> </span><span class="n">producerProperties</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kafkaCustomProperties</span><span class="p">.</span><span class="na">getProducer</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="n">producerName</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nonNull</span><span class="p">(</span><span class="n">producerProperties</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">properties</span><span class="p">.</span><span class="na">putAll</span><span class="p">(</span><span class="n">producerProperties</span><span class="p">.</span><span class="na">buildProperties</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">log</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&#34;Kafka Producer &#39;{}&#39; properties: {}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">producerName</span><span class="p">,</span><span class="w"> </span><span class="n">properties</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DefaultKafkaProducerFactory</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">properties</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>Let&rsquo;s create two producer service classes, which publish messages to different topics configured in different clusters:-</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// Producer 1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@Service</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nd">@Slf4j</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">KafkaFirstProducerService</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">KafkaProducerService</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line hl"><span class="cl"><span class="w">  </span><span class="nd">@Qualifier</span><span class="p">(</span><span class="s">&#34;producer1&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="n">KafkaTemplate</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">kafkaTemplate</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nd">@Value</span><span class="p">(</span><span class="s">&#34;${kafka.producer.producer1.topic}&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">topic</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">send</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">message</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">log</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&#34;sending message from first producer: {}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">message</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">kafkaTemplate</span><span class="p">.</span><span class="na">send</span><span class="p">(</span><span class="n">topic</span><span class="p">,</span><span class="w"> </span><span class="n">message</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1">// Producer 2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">KafkaSecondProducerService</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line hl"><span class="cl"><span class="w">  </span><span class="nd">@Qualifier</span><span class="p">(</span><span class="s">&#34;producer2&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="n">KafkaTemplate</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">kafkaTemplate</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nd">@Value</span><span class="p">(</span><span class="s">&#34;${kafka.producer.producer2.topic}&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">topic</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">send</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">message</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">log</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&#34;sending message from second producer: {}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">message</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">kafkaTemplate</span><span class="p">.</span><span class="na">send</span><span class="p">(</span><span class="n">topic</span><span class="p">,</span><span class="w"> </span><span class="n">message</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h2 id="summary">Summary</h2>
 <p>Spring boot doesn&rsquo;t provide support for multiple Kafka producer configurations through a property file but we can leverage existing Kafka properties to create a custom configuration to support multiple producers.</p>
 <p>This solves the use case where you want to publish the messages to different Kafka topics configured in different Kafka clusters from the same Spring Boot Project.</p>
 <p>You can download the complete source code from <a href="https://github.com/ashishlahoti/springboot-examples/tree/main/springboot-kafka/src/main/java/com/example/kafka/multi">github</a> and read the official spring documentation <a href="https://docs.spring.io/spring-kafka/docs/2.4.5.RELEASE/reference/html/">Spring for Apache Kafka</a> for further exploration.</p>
@@ -781,8 +795,9 @@
     <ul class="share-icons">
       
       <li>
-        <a href="https://www.buymeacoffee.com/codingnconcepts" target="_blank">
+        <a href="https://www.buymeacoffee.com/codingnconcepts" target="_blank" rel="noopener" aria-label="Buy me a coffee" class="share-btn bmc">
           <svg class="widget-social__link-button icon icon-category" fill="none" height="68" viewBox="0 0 184 68" width="184" xmlns="http://www.w3.org/2000/svg"><rect fill="#fddc48" height="47" rx="9" width="182" x="1" y="11"/><g stroke-width="1.5"><path d="m24.9312 24.2374-.3942 1.0203h1.0938 14.9077 1.0938l-.3942-1.0203-1.3553-3.5077-.1853-.4797h-.5143-12.1972-.5142l-.1854.4797z" fill="#fff" stroke="#000"/><path d="m41.4154 26.7-3.5077 22.8" stroke="#f69935"/><path d="m28.2615 49.5-3.9461-23.2385h17.9769l-3.5077 23.2385z" stroke="#000"/><path d="m25.1923 42.0462-1.7538-9.6462h19.7307l-1.7538 9.6462z" fill="#fff" stroke="#000"/><path d="m23 26.2615v-2.6307h20.1692v2.6307z" fill="#fff" stroke="#000"/></g><path d="m55.5361 40v-9.9531h3.4864c1.2076 0 2.1237.2324 2.748.6972.6244.4603.9365 1.1371.9365 2.0303 0 .4876-.1253.9183-.3759 1.292-.2507.3691-.5993.6403-1.0459.8135.5104.1276.9114.3851 1.2031.7724.2962.3874.4443.8614.4443 1.4219 0 .957-.3053 1.6817-.916 2.1738-.6107.4922-1.4811.7429-2.6113.752zm2.0508-4.334v2.6865h1.7569c.483 0 .859-.1139 1.1279-.3418.2734-.2324.4101-.5514.4101-.957 0-.9114-.4716-1.374-1.415-1.3877zm0-1.4492h1.5176c1.0345-.0182 1.5517-.4307 1.5517-1.2373 0-.4512-.1321-.7747-.3964-.9707-.2598-.2005-.6722-.3008-1.2373-.3008h-1.4356zm11.1904 5.0312c-.4876.5925-1.1621.8887-2.0234.8887-.793 0-1.3991-.2278-1.8184-.6836-.4147-.4557-.6266-1.1233-.6357-2.0029v-4.8467h1.9756v4.7783c0 .7702.3509 1.1553 1.0527 1.1553.6699 0 1.1302-.2324 1.3809-.6973v-5.2363h1.9824v7.3965h-1.8594zm6.1661-2.0439 1.3671-4.6006h2.1192l-2.9736 8.5449-.1641.3897c-.4421.9661-1.1712 1.4492-2.1875 1.4492-.2871 0-.5788-.0433-.875-.1299v-1.497l.3008.0068c.3737 0 .6517-.057.834-.1709.1868-.1139.3326-.3031.4375-.5674l.2324-.6084-2.5908-7.417h2.1259zm9.6045-4.6006.0615.8272c.5241-.6426 1.2327-.9639 2.126-.9639.9524 0 1.6064.376 1.9619 1.1279.5195-.7519 1.2601-1.1279 2.2216-1.1279.8021 0 1.3991.2347 1.7911.7041.3919.4648.5879 1.1667.5879 2.1055v4.7236h-1.9825v-4.7168c0-.4193-.082-.7246-.2461-.916-.164-.196-.4534-.294-.8681-.294-.5925 0-1.0026.2826-1.2305.8477l.0068 5.0791h-1.9755v-4.71c0-.4283-.0844-.7382-.253-.9296-.1686-.1915-.4557-.2872-.8613-.2872-.5606 0-.9662.2325-1.2168.6973v5.2295h-1.9756v-7.3965zm13.6787 7.5332c-1.0847 0-1.9688-.3327-2.6524-.998-.679-.6654-1.0185-1.5518-1.0185-2.6592v-.1914c0-.7429.1435-1.4059.4306-1.9893.2871-.5879.6927-1.039 1.2168-1.3535.5287-.319 1.1302-.4785 1.8047-.4785 1.0117 0 1.807.319 2.3862.957.583.638.875 1.5427.875 2.7139v.8066h-4.7104c.0638.4831.2552.8705.5742 1.1621.3236.2917.7315.4375 1.2236.4375.7611 0 1.3558-.2757 1.7846-.8271l.97 1.0869c-.296.4193-.697.7474-1.2028.9844-.5059.2324-1.0664.3486-1.6816.3486zm-.2256-6.0703c-.392 0-.711.1322-.9571.3965-.2415.2643-.3964.6426-.4648 1.1348h2.748v-.1573c-.0091-.4375-.1276-.7747-.3554-1.0117-.2279-.2415-.5515-.3623-.9707-.3623zm12.168 5.9336c-.091-.1777-.157-.3988-.198-.6631-.479.5332-1.101.7998-1.867.7998-.724 0-1.326-.2096-1.804-.6289-.474-.4193-.711-.9479-.711-1.5859 0-.7839.289-1.3854.868-1.8047.583-.4193 1.424-.6312 2.522-.6358h.91v-.4238c0-.3418-.089-.6152-.267-.8203-.173-.2051-.449-.3076-.827-.3076-.333 0-.595.0797-.786.2392-.187.1596-.28.3783-.28.6563h-1.976c0-.4284.132-.8249.396-1.1895.265-.3645.638-.6494 1.122-.8545.483-.2096 1.025-.3144 1.626-.3144.912 0 1.634.2301 2.167.6904.538.4558.807 1.0983.807 1.9278v3.206c.005.7018.103 1.2328.294 1.5928v.1162zm-1.634-1.374c.292 0 .561-.0638.807-.1914.246-.1322.428-.3076.547-.5264v-1.2715h-.739c-.989 0-1.515.3418-1.579 1.0254l-.007.1162c0 .2461.087.4489.26.6084s.41.2393.711.2393zm11.416-.0821c.365 0 .661-.1002.889-.3007.228-.2006.346-.4672.355-.7998h1.853c-.005.5013-.141.9615-.41 1.3808-.269.4147-.638.7383-1.108.9707-.465.2279-.98.3418-1.545.3418-1.057 0-1.891-.3349-2.502-1.0049-.61-.6744-.916-1.6041-.916-2.789v-.1299c0-1.1393.303-2.0485.91-2.7275.606-.6791 1.437-1.0186 2.495-1.0186.925 0 1.665.2643 2.221.793.561.5241.846 1.2236.855 2.0986h-1.853c-.009-.3828-.127-.6927-.355-.9297-.228-.2415-.529-.3623-.902-.3623-.461 0-.809.1686-1.046.5059-.233.3326-.349.875-.349 1.6269v.2051c0 .7611.116 1.3079.349 1.6406.232.3327.585.499 1.059.499zm3.917-2.3105c0-.7337.141-1.3877.424-1.9619s.688-1.0186 1.217-1.333c.533-.3145 1.151-.4717 1.852-.4717.998 0 1.812.3053 2.441.916.633.6107.986 1.4401 1.059 2.4883l.014.5059c0 1.1347-.317 2.0462-.95 2.7343-.634.6836-1.484 1.0254-2.55 1.0254s-1.919-.3418-2.557-1.0254c-.633-.6836-.95-1.6133-.95-2.789zm1.976.1436c0 .7018.132 1.2395.396 1.6132.265.3692.643.5537 1.135.5537.479 0 .852-.1822 1.121-.5468.269-.3692.403-.9571.403-1.7637 0-.6882-.134-1.2214-.403-1.5996-.269-.3783-.647-.5674-1.135-.5674-.483 0-.856.1891-1.121.5674-.264.3737-.396.9547-.396 1.7432zm6.788 3.623v-5.9473h-1.101v-1.4492h1.101v-.6289c0-.8294.237-1.472.711-1.9277.478-.4603 1.146-.6905 2.003-.6905.273 0 .608.0456 1.005.1368l-.021 1.5312c-.164-.041-.365-.0615-.601-.0615-.743 0-1.115.3486-1.115 1.0459v.5947h1.47v1.4492h-1.47v5.9473zm5.017 0v-5.9473h-1.1v-1.4492h1.1v-.6289c0-.8294.237-1.472.711-1.9277.479-.4603 1.147-.6905 2.003-.6905.274 0 .609.0456 1.005.1368l-.02 1.5312c-.164-.041-.365-.0615-.602-.0615-.743 0-1.114.3486-1.114 1.0459v.5947h1.47v1.4492h-1.47v5.9473zm7.718.1367c-1.084 0-1.969-.3327-2.652-.998-.679-.6654-1.019-1.5518-1.019-2.6592v-.1914c0-.7429.144-1.4059.431-1.9893.287-.5879.693-1.039 1.217-1.3535.528-.319 1.13-.4785 1.804-.4785 1.012 0 1.807.319 2.386.957.584.638.875 1.5427.875 2.7139v.8066h-4.71c.064.4831.255.8705.574 1.1621.324.2917.732.4375 1.224.4375.761 0 1.356-.2757 1.784-.8271l.971 1.0869c-.296.4193-.697.7474-1.203.9844-.506.2324-1.067.3486-1.682.3486zm-.225-6.0703c-.392 0-.711.1322-.957.3965-.242.2643-.397.6426-.465 1.1348h2.748v-.1573c-.009-.4375-.128-.7747-.356-1.0117-.228-.2415-.551-.3623-.97-.3623zm7.799 6.0703c-1.084 0-1.968-.3327-2.652-.998-.679-.6654-1.018-1.5518-1.018-2.6592v-.1914c0-.7429.143-1.4059.43-1.9893.287-.5879.693-1.039 1.217-1.3535.529-.319 1.13-.4785 1.805-.4785 1.011 0 1.807.319 2.385.957.584.638.875 1.5427.875 2.7139v.8066h-4.71c.064.4831.256.8705.575 1.1621.323.2917.731.4375 1.223.4375.761 0 1.356-.2757 1.784-.8271l.971 1.0869c-.296.4193-.697.7474-1.203.9844-.506.2324-1.066.3486-1.682.3486zm-.225-6.0703c-.392 0-.711.1322-.957.3965-.242.2643-.397.6426-.465 1.1348h2.748v-.1573c-.009-.4375-.128-.7747-.355-1.0117-.228-.2415-.552-.3623-.971-.3623z" fill="#000"/><rect height="47" rx="9" stroke="#000" stroke-width="2" width="182" x="1" y="11"/></svg>
+          <p>Buy me a coffee</p>
         </a>
       </li>
 
@@ -821,7 +836,7 @@
       <li>
         <a href="whatsapp://send?text=Configure%20Multiple%20Kafka%20Producer%20in%20Spring%20Boot%2c%20by%20Coding%20N%20Concepts%0aConfigure%20Multiple%20Kafka%20Producer%20from%20application%20properties%20file%20in%20Spring%20boot%20project.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fconfigure-multiple-kafka-producer%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
-          <p>Email</p>
+          <p>WhatsApp</p>
         </a>
       </li>
       
@@ -841,12 +856,12 @@
 
 
 <div class="related_post_section">
-    <h2 class = "related_post_title">See Also</h2>
-    <ul class = "related_post">
+    <h2 class="related_post_title">See Also</h2>
+    <ul class="related_post">
         
-        <li><a href="/spring-boot/configure-multiple-kafka-consumer/">Configure Multiple Kafka Consumer in Spring Boot</a></li>
+        <li><a href="/spring-boot/configure-multiple-kafka-consumer/"><img class="related_post__thumb" src="/img/logo/springboot.png" alt="" loading="lazy"><span class="related_post__title">Configure Multiple Kafka Consumer in Spring Boot</span></a></li>
         
-        <li><a href="/spring-boot/configure-kafka-producer-and-consumer/">Configure Kafka Producer and Consumer in spring boot</a></li>
+        <li><a href="/spring-boot/configure-kafka-producer-and-consumer/"><img class="related_post__thumb" src="/img/logo/springboot.png" alt="" loading="lazy"><span class="related_post__title">Configure Kafka Producer and Consumer in spring boot</span></a></li>
         
     </ul>
 </div>
@@ -890,14 +905,7 @@
 
 			</div>
 			
-			<aside class="adsbar"><div class="widget-search widget">
-	<form class="widget-search__form" role="search" method="get" action="https://codingnconcepts.com/search">
-		<label>
-			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="s" aria-label="SEARCH...">
-		</label>
-		<input class="widget-search__submit" type="submit" value="Search">
-	</form>
-</div>
+			<aside class="adsbar">
 <div class="widget-social widget">
 	<h4 class="widget-social__title widget__title">Follow Us</h4>
 	<div class="widget-social__content widget__content">
@@ -1004,11 +1012,11 @@
 		
 		<div class="footer__copyright">
 			&copy; 2026 CodingNConcepts.
-			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>
 </footer>
 	</div>
 <script async defer src="/js/menu.js"></script>
+<script defer src="/js/theme-toggle.js"></script>
 </body>
 </html>

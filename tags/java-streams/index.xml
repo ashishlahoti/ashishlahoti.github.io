@@ -6,6 +6,7 @@
     <description>Recent content in Java Streams on Coding N Concepts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>CodingNConcepts</copyright>
     <lastBuildDate>Tue, 14 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/java-streams/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using Streams API with Map in Java 8</title>
