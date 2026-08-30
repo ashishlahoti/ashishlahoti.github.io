@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://codingnconcepts.com/javascript/async-await-in-javascript/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/js.png" />
 <meta property="article:published_time" content="2020-04-05T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-04-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-08-30T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -81,7 +81,7 @@
     "copyrightYear": "2020",
     "dateCreated": "2020-04-05T00:00:00.00Z",
     "datePublished": "2020-04-05T00:00:00.00Z",
-    "dateModified": "2020-04-05T00:00:00.00Z",
+    "dateModified": "2026-08-30T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -95,7 +95,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/js.png"],
     "url": "https://codingnconcepts.com/javascript/async-await-in-javascript/",
-    "wordCount": 983 ,
+    "wordCount": 2008 ,
     "genre": ["Javascript Interview","Javascript ES6"],
     "keywords":  null 
 }
@@ -547,7 +547,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2020-04-05T00:00:00Z">Last Modified: Apr 05, 2020</time>
+	<time class="meta__text" datetime="2026-08-30T00:00:00Z">Last Modified: Aug 30, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -674,7 +674,146 @@ Hello
   ➤ 4: {postId: 1, id: 5, name: &#34;vero eaque aliquid doloribus et culpa&#34;, email: &#34;Hayden@althea.biz&#34;, body: &#34;harum non quasi et ratione↵tempore iure ex volupta…ugit inventore cupiditate↵voluptates magni quo et&#34;}
     length: 5
   ➤ __proto__: Array(0)
-</code></pre><h2 id="summary">Summary</h2>
+</code></pre><h2 id="error-handling-with-trycatch">Error Handling with try/catch</h2>
+<p>One thing the examples above skip over: what happens when a promise in the chain rejects? With <code>.then()</code> chaining you handle that with <code>.catch()</code>. With async/await, the equivalent is a plain <code>try/catch</code> block wrapped around your <code>await</code> calls.</p>
+<p>Without a <code>try/catch</code>, a rejected promise inside an <code>async</code> function simply propagates as a rejected promise from the function itself — nothing &ldquo;catches&rdquo; it for you.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="kd">function</span> <span class="nx">getData</span><span class="p">(</span><span class="nx">shouldFail</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">  <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">    <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="nx">shouldFail</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">        <span class="nx">reject</span><span class="p">(</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&#34;Network error: could not fetch comments&#34;</span><span class="p">));</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">        <span class="nx">resolve</span><span class="p">([</span><span class="s2">&#34;comment1&#34;</span><span class="p">,</span> <span class="s2">&#34;comment2&#34;</span><span class="p">]);</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">    <span class="p">},</span> <span class="mi">50</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">
+</span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="c1">// no try/catch - the rejection is never handled
+</span></span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="kr">async</span> <span class="kd">function</span> <span class="nx">getCommentsUnhandled</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl">  <span class="kd">let</span> <span class="nx">comments</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">getData</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl">  <span class="k">return</span> <span class="nx">comments</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">17</span><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="ln">18</span><span class="cl">
+</span></span><span class="line"><span class="ln">19</span><span class="cl"><span class="nx">getCommentsUnhandled</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Result:&#34;</span><span class="p">,</span> <span class="nx">result</span><span class="p">));</span>
+</span></span></code></pre></div><p>Run this and Node doesn&rsquo;t just log a warning and move on — an unhandled promise rejection crashes the process:</p>
+<pre tabindex="0"><code><div class="code_output">Output</div>
+Error: Network error: could not fetch comments
+    at Timeout._onTimeout (unhandled.js:5:16)
+    at listOnTimeout (node:internal/timers:585:17)
+    at process.processTimers (node:internal/timers:521:7)
+
+Node.js v22.22.2
+</code></pre><p>(Exact wording depends on your Node version — older versions print an <code>UnhandledPromiseRejectionWarning</code> instead of crashing, but since Node 15 an unhandled rejection terminates the process by default. Either way, the point stands: nothing in the function above ever handles the error.)</p>
+<p>Wrap the <code>await</code> in <code>try/catch</code> and you get a chance to handle it gracefully instead:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="kr">async</span> <span class="kd">function</span> <span class="nx">getCommentsHandled</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">  <span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">    <span class="kd">let</span> <span class="nx">comments</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">getData</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">    <span class="k">return</span> <span class="nx">comments</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Caught error:&#34;</span><span class="p">,</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">    <span class="k">return</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="nx">getCommentsHandled</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Result:&#34;</span><span class="p">,</span> <span class="nx">result</span><span class="p">));</span>
+</span></span></code></pre></div><pre tabindex="0"><code><div class="code_output">Output</div>
+Caught error: Network error: could not fetch comments
+Result: []
+</code></pre><p>Applying this to the earlier <code>getCommentsOfFirstPostByFirstUser</code> example, you&rsquo;d wrap the three <code>await</code> calls in a single <code>try</code> block and handle the failure in one <code>catch</code>, rather than chaining a separate <code>.catch()</code> onto every step:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="kr">async</span> <span class="kd">function</span> <span class="nx">getCommentsOfFirstPostByFirstUser</span><span class="p">(){</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">  <span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">    <span class="kd">let</span> <span class="nx">users</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">getUsers</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">    <span class="kd">let</span> <span class="nx">firstUser</span> <span class="o">=</span> <span class="nx">users</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">    <span class="kd">let</span> <span class="nx">posts</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">getPosts</span><span class="p">(</span><span class="nx">firstUser</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">    <span class="kd">let</span> <span class="nx">firstPost</span> <span class="o">=</span> <span class="nx">posts</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">    <span class="kd">let</span> <span class="nx">comments</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">getComments</span><span class="p">(</span><span class="nx">firstPost</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    <span class="k">return</span> <span class="nx">comments</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&#34;Failed to fetch comments:&#34;</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">    <span class="k">return</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="anti-pattern-unnecessary-sequential-awaits">Anti-Pattern: Unnecessary Sequential Awaits</h2>
+<p>Look back at <code>getCommentsOfFirstPostByFirstUser</code> — each <code>await</code> runs one after another. That&rsquo;s <em>required</em> here because each call genuinely depends on the previous one&rsquo;s result (you need <code>firstUser.id</code> before you can fetch posts). But it&rsquo;s extremely common to see code that awaits several calls in sequence <strong>even when they don&rsquo;t depend on each other at all</strong>, which just wastes time waiting for each one to finish before starting the next.</p>
+<p>Here&rsquo;s the anti-pattern, using <code>setTimeout</code>-based mock promises so it&rsquo;s runnable without any real network calls:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="kd">function</span> <span class="nx">delay</span><span class="p">(</span><span class="nx">ms</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">  <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="nx">resolve</span> <span class="p">=&gt;</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">resolve</span><span class="p">(</span><span class="nx">value</span><span class="p">),</span> <span class="nx">ms</span><span class="p">));</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="kr">async</span> <span class="kd">function</span> <span class="nx">sequential</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">  <span class="kr">const</span> <span class="nx">start</span> <span class="o">=</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">();</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">  <span class="kr">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">delay</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="s2">&#34;a&#34;</span><span class="p">);</span> <span class="c1">// waits 300ms
+</span></span></span><span class="line"><span class="ln"> 8</span><span class="cl">  <span class="kr">const</span> <span class="nx">b</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">delay</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="s2">&#34;b&#34;</span><span class="p">);</span> <span class="c1">// then waits another 300ms
+</span></span></span><span class="line"><span class="ln"> 9</span><span class="cl">  <span class="kr">const</span> <span class="nx">c</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">delay</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="s2">&#34;c&#34;</span><span class="p">);</span> <span class="c1">// then another 300ms
+</span></span></span><span class="line"><span class="ln">10</span><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Sequential took&#34;</span><span class="p">,</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span> <span class="o">-</span> <span class="nx">start</span><span class="p">,</span> <span class="s2">&#34;ms -&gt;&#34;</span><span class="p">,</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">
+</span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="nx">sequential</span><span class="p">();</span>
+</span></span></code></pre></div><pre tabindex="0"><code><div class="code_output">Output</div>
+Sequential took 902 ms -&gt; a b c
+</code></pre><p>Since <code>a</code>, <code>b</code>, and <code>c</code> don&rsquo;t depend on each other, there&rsquo;s no reason to wait for each one before starting the next. <code>Promise.all()</code> fixes this by starting all three promises immediately and waiting for all of them to settle together:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="ln">1</span><span class="cl"><span class="kr">async</span> <span class="kd">function</span> <span class="nx">concurrent</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">  <span class="kr">const</span> <span class="nx">start</span> <span class="o">=</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">();</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">  <span class="kr">const</span> <span class="p">[</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="p">]</span> <span class="o">=</span> <span class="kr">await</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">([</span><span class="nx">delay</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="s2">&#34;a&#34;</span><span class="p">),</span> <span class="nx">delay</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="s2">&#34;b&#34;</span><span class="p">),</span> <span class="nx">delay</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="s2">&#34;c&#34;</span><span class="p">)]);</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Promise.all took&#34;</span><span class="p">,</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span> <span class="o">-</span> <span class="nx">start</span><span class="p">,</span> <span class="s2">&#34;ms -&gt;&#34;</span><span class="p">,</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">
+</span></span><span class="line"><span class="ln">7</span><span class="cl"><span class="nx">concurrent</span><span class="p">();</span>
+</span></span></code></pre></div><pre tabindex="0"><code><div class="code_output">Output</div>
+Promise.all took 301 ms -&gt; a b c
+</code></pre><p>Same result, roughly a third of the time — because all three 300ms delays now overlap instead of stacking up. <code>Promise.all()</code> rejects as soon as any one of its promises rejects, so pair it with the <code>try/catch</code> from the previous section when the calls can fail.</p>
+<h2 id="pitfall-await-inside-arrayforeach-doesnt-wait">Pitfall: <code>await</code> Inside <code>Array.forEach()</code> Doesn&rsquo;t Wait</h2>
+<p>A very common bug: passing an <code>async</code> callback to <code>Array.prototype.forEach()</code> and expecting the loop to wait for each iteration before moving on. It won&rsquo;t — <code>forEach</code> has no idea the callback is async, it just calls it and ignores whatever promise it returns. It doesn&rsquo;t wait, and it doesn&rsquo;t propagate rejections either.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="kd">function</span> <span class="nx">delay</span><span class="p">(</span><span class="nx">ms</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">  <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="nx">resolve</span> <span class="p">=&gt;</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">resolve</span><span class="p">(</span><span class="nx">value</span><span class="p">),</span> <span class="nx">ms</span><span class="p">));</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="kr">async</span> <span class="kd">function</span> <span class="nx">processWithForEach</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">  <span class="kr">const</span> <span class="nx">ids</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;forEach: starting&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">  <span class="nx">ids</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kr">async</span> <span class="p">(</span><span class="nx">id</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">    <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="sb">`item-</span><span class="si">${</span><span class="nx">id</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;forEach: processed&#34;</span><span class="p">,</span> <span class="nx">result</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;forEach: finished (but has it, really?)&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl">
+</span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="nx">processWithForEach</span><span class="p">();</span>
+</span></span></code></pre></div><pre tabindex="0"><code><div class="code_output">Output</div>
+forEach: starting
+forEach: finished (but has it, really?)
+forEach: processed item-1
+forEach: processed item-2
+forEach: processed item-3
+</code></pre><p>Notice <code>&quot;forEach: finished&quot;</code> logs <em>before</em> any item is processed — the function returned while the three <code>delay()</code> calls were still pending in the background. If the calling code assumed all items were done by the time <code>processWithForEach()</code> resolved, that assumption is wrong.</p>
+<p>The fix is either a <code>for...of</code> loop (which respects <code>await</code>, running iterations one at a time):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="ln">1</span><span class="cl"><span class="kr">async</span> <span class="kd">function</span> <span class="nx">processWithForOf</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">  <span class="kr">const</span> <span class="nx">ids</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;for...of: starting&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">id</span> <span class="k">of</span> <span class="nx">ids</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl">    <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="sb">`item-</span><span class="si">${</span><span class="nx">id</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;for...of: processed&#34;</span><span class="p">,</span> <span class="nx">result</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">7</span><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="ln">8</span><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;for...of: finished (this really is last)&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">9</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><pre tabindex="0"><code><div class="code_output">Output</div>
+for...of: starting
+for...of: processed item-1
+for...of: processed item-2
+for...of: processed item-3
+for...of: finished (this really is last)
+</code></pre><p>&hellip;or, if the items don&rsquo;t depend on each other and you want them running concurrently rather than one-by-one, <code>Promise.all()</code> with <code>.map()</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="ln">1</span><span class="cl"><span class="kr">async</span> <span class="kd">function</span> <span class="nx">processWithMap</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">  <span class="kr">const</span> <span class="nx">ids</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">  <span class="kr">await</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="nx">ids</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kr">async</span> <span class="p">(</span><span class="nx">id</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">    <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="sb">`item-</span><span class="si">${</span><span class="nx">id</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;map: processed&#34;</span><span class="p">,</span> <span class="nx">result</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">  <span class="p">}));</span>
+</span></span><span class="line"><span class="ln">7</span><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;map: finished (this really is last, and it&#39;s faster too)&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">8</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Either works — pick <code>for...of</code> when order matters or each step depends on the last, and <code>Promise.all(array.map(...))</code> when the items are independent and you want them to run in parallel. Just never reach for <code>forEach</code> when you need the loop to actually wait.</p>
+<h2 id="summary">Summary</h2>
 <p>We see that async/await are much easier to use as compare to promises.</p>
 		</div>
 		<footer class="post__footer">

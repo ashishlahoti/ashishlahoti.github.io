@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://codingnconcepts.com/java/print-array-in-java/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/java.png" />
 <meta property="article:published_time" content="2023-05-21T00:00:00+00:00" />
-<meta property="article:modified_time" content="2023-05-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-08-30T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -80,7 +80,7 @@
     "copyrightYear": "2023",
     "dateCreated": "2023-05-21T00:00:00.00Z",
     "datePublished": "2023-05-21T00:00:00.00Z",
-    "dateModified": "2023-05-21T00:00:00.00Z",
+    "dateModified": "2026-08-30T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -94,7 +94,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/java.png"],
     "url": "https://codingnconcepts.com/java/print-array-in-java/",
-    "wordCount": 425 ,
+    "wordCount": 978 ,
     "genre": ["Java Collection"],
     "keywords":  null 
 }
@@ -546,7 +546,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2023-05-21T00:00:00Z">Last Modified: May 21, 2023</time>
+	<time class="meta__text" datetime="2026-08-30T00:00:00Z">Last Modified: Aug 30, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -567,7 +567,15 @@
         <li><a href="#arraysdeeptostring-for-nested-array">Arrays.deepToString() for nested Array</a></li>
       </ul>
     </li>
-    <li><a href="#other-ways">Other ways</a></li>
+    <li><a href="#other-ways">Other ways</a>
+      <ul>
+        <li><a href="#list-backed-printing-arraysaslist-and-listof">List-backed printing: Arrays.asList() and List.of()</a></li>
+        <li><a href="#stringjoin-for-string-arrays">String.join() for String arrays</a></li>
+        <li><a href="#streams-intstream-stream-and-collectorsjoining">Streams: IntStream, Stream, and Collectors.joining()</a></li>
+        <li><a href="#foreach-for-one-per-line-output">forEach for one-per-line output</a></li>
+        <li><a href="#performance-and-readability">Performance and readability</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 	</div>
@@ -643,12 +651,22 @@
 </span></span></span><span class="line"><span class="cl"><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">days</span><span class="p">));</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">days</span><span class="p">));</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Stream</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">days</span><span class="p">).</span><span class="na">map</span><span class="p">(</span><span class="n">Object</span><span class="p">::</span><span class="n">toString</span><span class="p">).</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">joining</span><span class="p">(</span><span class="s">&#34;, &#34;</span><span class="p">)));</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">days</span><span class="p">));</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="n">Stream</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">days</span><span class="p">).</span><span class="na">forEach</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">);</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="n">Arrays</span><span class="p">.</span><span class="na">stream</span><span class="p">(</span><span class="n">days</span><span class="p">).</span><span class="na">forEach</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">);</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">days</span><span class="p">).</span><span class="na">forEach</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">);</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">days</span><span class="p">).</span><span class="na">forEach</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">);</span><span class="w">
-</span></span></span></code></pre></div>
+</span></span></span></code></pre></div><p>That&rsquo;s a lot of one-liners doing similar things, so it&rsquo;s worth understanding what each group is actually doing rather than copy-pasting whichever one compiles.</p>
+<h3 id="list-backed-printing-arraysaslist-and-listof">List-backed printing: Arrays.asList() and List.of()</h3>
+<p><code>Arrays.asList(strs)</code> and <code>List.of(strs)</code> both wrap the array in a <code>List</code>, and <code>List</code>&rsquo;s inherited <code>toString()</code> already produces the same <code>[John, Mary, Bob]</code> format you get from <code>Arrays.toString()</code> — so for printing purposes they&rsquo;re equivalent to what you already had, just routed through a <code>List</code>. The difference only matters if you intend to <em>keep</em> the list around afterwards: <code>Arrays.asList()</code> returns a fixed-size view backed by the original array (you can <code>set()</code> elements, which writes through to the array, but <code>add()</code>/<code>remove()</code> throw <code>UnsupportedOperationException</code>), while <code>List.of()</code> returns a fully immutable list that also rejects <code>null</code> elements. Don&rsquo;t reach for either one purely to print an array — that&rsquo;s a longer detour to the same <code>[a, b, c]</code> output <code>Arrays.toString()</code> already gives you directly.</p>
+<h3 id="stringjoin-for-string-arrays">String.join() for String arrays</h3>
+<p><code>String.join(&quot;, &quot;, strs)</code> is the simplest option when you already have a <code>String[]</code> and want control over the delimiter — no brackets, a custom separator, whatever you need. Its one limitation is right there in the signature: it only accepts <code>CharSequence</code> arguments, so it works directly on <code>String[]</code> but not on <code>int[]</code> or <code>DayOfWeek[]</code> without first converting each element to a <code>String</code>.</p>
+<h3 id="streams-intstream-stream-and-collectorsjoining">Streams: IntStream, Stream, and Collectors.joining()</h3>
+<p>This is where the primitive/object split in the code above actually matters. Arrays of primitives (<code>int[]</code>, <code>long[]</code>, <code>double[]</code>) don&rsquo;t implement <code>Iterable</code> and can&rsquo;t be turned into a <code>Stream&lt;Integer&gt;</code> directly — that&rsquo;s why the <code>int[]</code> example uses <code>IntStream.of(ints)</code> or <code>Arrays.stream(ints)</code> (both produce the same primitive-specialized <code>IntStream</code>), then <code>.mapToObj(Integer::toString)</code> or <code>.boxed().map(Object::toString)</code> to get from <code>int</code> to <code>String</code> before joining. Object arrays (<code>String[]</code>, <code>DayOfWeek[]</code>) skip that step and go straight to <code>Stream.of(strs)</code> or <code>Arrays.stream(strs)</code>.</p>
+<p>Once you have a <code>Stream&lt;String&gt;</code>, <code>.collect(Collectors.joining(&quot;, &quot;))</code> builds the same comma-separated output as <code>String.join()</code>, but as part of a stream pipeline — which is the point: reach for the streams version when you&rsquo;re already filtering, sorting, or transforming the array&rsquo;s elements before printing, not as a replacement for <code>String.join()</code> on an untouched <code>String[]</code>. For a plain array with no other processing, <code>Arrays.toString()</code> or <code>String.join()</code> says the same thing in less code and is easier for the next person to read.</p>
+<h3 id="foreach-for-one-per-line-output">forEach for one-per-line output</h3>
+<p><code>Stream.of(strs).forEach(System.out::println)</code>, <code>Arrays.stream(strs).forEach(...)</code>, and <code>Arrays.asList(strs).forEach(...)</code> all end up calling <code>println</code> once per element — the difference is purely which route gets you an <code>Iterable</code>/<code>Stream</code> to call <code>forEach</code> on, and functionally it doesn&rsquo;t matter which one you pick. What <em>does</em> matter is the output shape: <code>forEach</code> prints each element on its <strong>own line</strong>, while <code>Arrays.toString()</code>, <code>String.join()</code>, and <code>Collectors.joining()</code> all print everything on a <strong>single line</strong>. Pick based on what you actually want to see, not which one happens to be shortest.</p>
+<h3 id="performance-and-readability">Performance and readability</h3>
+<p>For a debug <code>println</code> or a log line, none of this matters at the scale most applications run at — <code>Arrays.toString()</code> is one call, easy to read, and fast enough. The streams-based approaches add object allocation (a stream pipeline, boxed wrapper objects for primitives, intermediate <code>String</code> objects) for the same result, so they&rsquo;re worth it only when you&rsquo;re already mid-stream doing something else — filtering out blanks, upper-casing, sorting — and printing is just the last step in that pipeline. Don&rsquo;t build a <code>Stream</code> solely to print an array; that&rsquo;s solving a one-line problem with a five-line pipeline.</p>
 		</div>
 		<footer class="post__footer">
 			

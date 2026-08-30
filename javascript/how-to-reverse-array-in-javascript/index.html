@@ -8,14 +8,14 @@
 	<title>How to Reverse an Array in JavaScript - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
-	<meta name="description" content="Understand how to reverse an array in JavaScript or Make a new copy of reversed array in JavaScript.">
+	<meta name="description" content="Reverse an array in JavaScript in place or as a non-mutating copy, plus how to reverse a string safely, the Big-O cost, and when you don&#39;t need to reverse at all.">
 	<meta property="og:title" content="How to Reverse an Array in JavaScript" />
-<meta property="og:description" content="Understand how to reverse an array in JavaScript or Make a new copy of reversed array in JavaScript." />
+<meta property="og:description" content="Reverse an array in JavaScript in place or as a non-mutating copy, plus how to reverse a string safely, the Big-O cost, and when you don&#39;t need to reverse at all." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/javascript/how-to-reverse-array-in-javascript/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/js.png" />
 <meta property="article:published_time" content="2020-07-05T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-07-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-08-30T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -27,7 +27,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:image" content="https://codingnconcepts.com/img/logo/js.png">
 	<meta name="twitter:title" content="How to Reverse an Array in JavaScript">
-	<meta name="twitter:description" content="Understand how to reverse an array in JavaScript or Make a new copy of reversed array in JavaScript.">
+	<meta name="twitter:description" content="Reverse an array in JavaScript in place or as a non-mutating copy, plus how to reverse a string safely, the Big-O cost, and when you don&#39;t need to reverse at all.">
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -57,7 +57,7 @@
     "name": "How to Reverse an Array in JavaScript",
     "headline": "How to Reverse an Array in JavaScript",
     "alternativeHeadline": "Array.reverse()",
-    "description": "Understand how to reverse an array in JavaScript or Make a new copy of reversed array in JavaScript.",
+    "description": "Reverse an array in JavaScript in place or as a non-mutating copy, plus how to reverse a string safely, the Big-O cost, and when you don't need to reverse at all.",
     "inLanguage": "en-US",
 	"isFamilyFriendly": true,
     "mainEntityOfPage": {
@@ -80,7 +80,7 @@
     "copyrightYear": "2020",
     "dateCreated": "2020-07-05T00:00:00.00Z",
     "datePublished": "2020-07-05T00:00:00.00Z",
-    "dateModified": "2020-07-05T00:00:00.00Z",
+    "dateModified": "2026-08-30T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -94,7 +94,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/js.png"],
     "url": "https://codingnconcepts.com/javascript/how-to-reverse-array-in-javascript/",
-    "wordCount": 289 ,
+    "wordCount": 862 ,
     "genre": ["Javascript Array"],
     "keywords":  null 
 }
@@ -547,7 +547,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2020-07-05T00:00:00Z">Last Modified: Jul 05, 2020</time>
+	<time class="meta__text" datetime="2026-08-30T00:00:00Z">Last Modified: Aug 30, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -565,6 +565,13 @@
     <li><a href="#spread-operator--and-arrayreverse">Spread Operator (&hellip;) and Array.reverse()</a></li>
     <li><a href="#arrayslice-and-arrayreverse">Array.slice() and Array.reverse()</a></li>
     <li><a href="#arrayfrom-and-arrayreverse">Array.from() and Array.reverse()</a></li>
+    <li><a href="#reversing-a-string">Reversing a String</a>
+      <ul>
+        <li><a href="#the-emoji--unicode-caveat">The Emoji / Unicode Caveat</a></li>
+      </ul>
+    </li>
+    <li><a href="#performance-big-o-of-arrayreverse">Performance: Big-O of Array.reverse()</a></li>
+    <li><a href="#when-you-dont-actually-need-to-reverse">When You Don&rsquo;t Actually Need to Reverse</a></li>
   </ul>
 </nav>
 	</div>
@@ -616,7 +623,57 @@
 </span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">reversedList</span><span class="p">);</span>  
 </span></span><span class="line"><span class="cl"><span class="c1">// prints [5, 4, 3, 2, 1]
-</span></span></span></code></pre></div>
+</span></span></span></code></pre></div><h2 id="reversing-a-string">Reversing a String</h2>
+<p>Strings don&rsquo;t have a <code>reverse()</code> method of their own, but since <code>split('')</code> turns a string into an array of characters, you can borrow <code>Array.reverse()</code> and <code>join('')</code> the result back together:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">reverseString</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">str</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">).</span><span class="nx">reverse</span><span class="p">().</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">reverseString</span><span class="p">(</span><span class="s2">&#34;hello&#34;</span><span class="p">);</span>       <span class="c1">// &#34;olleh&#34;
+</span></span></span><span class="line"><span class="cl"><span class="nx">reverseString</span><span class="p">(</span><span class="s2">&#34;JavaScript&#34;</span><span class="p">);</span>  <span class="c1">// &#34;tpircSavaJ&#34;
+</span></span></span></code></pre></div><p>This is by far the most common pattern you&rsquo;ll see for this, and it works fine for plain ASCII text.</p>
+<h3 id="the-emoji--unicode-caveat">The Emoji / Unicode Caveat</h3>
+<p><code>split('')</code> splits on UTF-16 <em>code units</em>, not visible characters. Most letters map one-to-one to a single code unit, but emoji and many other symbols outside the Basic Multilingual Plane are encoded as <strong>surrogate pairs</strong> — two code units that only make sense together. <code>split('')</code> doesn&rsquo;t know that, so it tears the pair apart, and reversing the array scrambles the two halves independently:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">reverseString</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">str</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">).</span><span class="nx">reverse</span><span class="p">().</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">withEmoji</span> <span class="o">=</span> <span class="s2">&#34;hello😀world&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">reverseString</span><span class="p">(</span><span class="nx">withEmoji</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// &#34;dlrow\ude00\ud83dolleh&#34; — the two surrogate halves got reversed
+</span></span></span><span class="line"><span class="cl"><span class="c1">// independently, so the emoji renders as broken/replacement glyphs
+</span></span></span><span class="line"><span class="cl"><span class="c1">// instead of the expected 😀
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">withEmoji</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// [&#34;h&#34;,&#34;e&#34;,&#34;l&#34;,&#34;l&#34;,&#34;o&#34;,&#34;\ud83d&#34;,&#34;\ude00&#34;,&#34;w&#34;,&#34;o&#34;,&#34;r&#34;,&#34;l&#34;,&#34;d&#34;]
+</span></span></span><span class="line"><span class="cl"><span class="c1">// the emoji has been split into two lone surrogate halves
+</span></span></span></code></pre></div><p>The fix is to iterate by Unicode code point instead of by code unit. The spread operator (and <code>for...of</code>) does exactly that, because both use the string&rsquo;s iterator, which is code-point aware:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">reverseString</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">[...</span><span class="nx">str</span><span class="p">].</span><span class="nx">reverse</span><span class="p">().</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">reverseString</span><span class="p">(</span><span class="s2">&#34;hello😀world&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// &#34;dlrow😀olleh&#34;  — correct
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[...</span><span class="nx">withEmoji</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// [&#34;h&#34;,&#34;e&#34;,&#34;l&#34;,&#34;l&#34;,&#34;o&#34;,&#34;😀&#34;,&#34;w&#34;,&#34;o&#34;,&#34;r&#34;,&#34;l&#34;,&#34;d&#34;]
+</span></span></span><span class="line"><span class="cl"><span class="c1">// the emoji stays intact as one element
+</span></span></span></code></pre></div><p>If you&rsquo;re reversing arbitrary user-generated text — which may contain emoji, or other astral-plane characters — prefer the spread version. Note that even the spread version isn&rsquo;t a complete Unicode solution: some emoji (flags, skin-tone modifiers, family emoji joined with ZWJ) are made of <em>multiple</em> code points that should stay grouped as one grapheme, and no built-in method splits those correctly without a full Intl.Segmenter (<code>new Intl.Segmenter().segment(str)</code>) pass. For everyday text and single-code-point emoji, though, the spread version is a solid, dependency-free fix.</p>
+<h2 id="performance-big-o-of-arrayreverse">Performance: Big-O of Array.reverse()</h2>
+<p><code>Array.prototype.reverse()</code> runs in <strong>O(n)</strong> time — it walks the array once, swapping elements from the outside in until the two pointers meet in the middle — and <strong>O(1)</strong> extra space, since it reverses in place rather than allocating a new array. The copying approaches (<code>[...list].reverse()</code>, <code>list.slice().reverse()</code>, <code>Array.from(list).reverse()</code>) are still O(n) overall, but they do two O(n) passes instead of one: one to copy, one to reverse.</p>
+<h2 id="when-you-dont-actually-need-to-reverse">When You Don&rsquo;t Actually Need to Reverse</h2>
+<p>It&rsquo;s easy to reach for <code>.reverse()</code> as a first step and then immediately loop over the result — but if all you need is to <em>process elements in reverse order</em>, and you don&rsquo;t need the reversed array to persist anywhere, reversing first is unnecessary extra work. A plain backward <code>for</code> loop gets you there in one pass, without mutating the original array or allocating a copy:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Unnecessary: copy + reverse just to iterate backward
+</span></span></span><span class="line"><span class="cl"><span class="p">[...</span><span class="nx">list</span><span class="p">].</span><span class="nx">reverse</span><span class="p">().</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">item</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">item</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Simpler and cheaper: iterate backward directly
+</span></span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="nx">list</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">list</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Reach for an actual reversed array when the <em>order itself</em> is the thing you need — returning reversed results from an API, rendering a list newest-first in the UI, or feeding the reversed sequence into something else that expects it in that order. Reach for a backward loop when reversing is just a means to &ldquo;visit these in the other direction&rdquo; and nothing needs to hold onto the reversed copy afterward.</p>
 		</div>
 		<footer class="post__footer">
 			
@@ -677,7 +734,7 @@
       
       
       <li>
-        <a href="whatsapp://send?text=How%20to%20Reverse%20an%20Array%20in%20JavaScript%2c%20by%20Coding%20N%20Concepts%0aUnderstand%20how%20to%20reverse%20an%20array%20in%20JavaScript%20or%20Make%20a%20new%20copy%20of%20reversed%20array%20in%20JavaScript.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fhow-to-reverse-array-in-javascript%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=How%20to%20Reverse%20an%20Array%20in%20JavaScript%2c%20by%20Coding%20N%20Concepts%0aReverse%20an%20array%20in%20JavaScript%20in%20place%20or%20as%20a%20non-mutating%20copy%2c%20plus%20how%20to%20reverse%20a%20string%20safely%2c%20the%20Big-O%20cost%2c%20and%20when%20you%20don%27t%20need%20to%20reverse%20at%20all.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fhow-to-reverse-array-in-javascript%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>WhatsApp</p>
         </a>
@@ -687,7 +744,7 @@
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - How%20to%20Reverse%20an%20Array%20in%20JavaScript.&amp;body=How%20to%20Reverse%20an%20Array%20in%20JavaScript%2c%20by%20Coding%20N%20Concepts%0aUnderstand%20how%20to%20reverse%20an%20array%20in%20JavaScript%20or%20Make%20a%20new%20copy%20of%20reversed%20array%20in%20JavaScript.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fhow-to-reverse-array-in-javascript%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - How%20to%20Reverse%20an%20Array%20in%20JavaScript.&amp;body=How%20to%20Reverse%20an%20Array%20in%20JavaScript%2c%20by%20Coding%20N%20Concepts%0aReverse%20an%20array%20in%20JavaScript%20in%20place%20or%20as%20a%20non-mutating%20copy%2c%20plus%20how%20to%20reverse%20a%20string%20safely%2c%20the%20Big-O%20cost%2c%20and%20when%20you%20don%27t%20need%20to%20reverse%20at%20all.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjavascript%2fhow-to-reverse-array-in-javascript%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>

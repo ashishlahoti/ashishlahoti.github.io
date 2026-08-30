@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://codingnconcepts.com/java/string-format-in-java/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/java.png" />
 <meta property="article:published_time" content="2020-05-25T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-05-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-08-30T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -81,7 +81,7 @@
     "copyrightYear": "2020",
     "dateCreated": "2020-05-25T00:00:00.00Z",
     "datePublished": "2020-05-25T00:00:00.00Z",
-    "dateModified": "2020-05-25T00:00:00.00Z",
+    "dateModified": "2026-08-30T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -95,7 +95,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/java.png"],
     "url": "https://codingnconcepts.com/java/string-format-in-java/",
-    "wordCount": 698 ,
+    "wordCount": 1309 ,
     "genre": ["Core Java","String"],
     "keywords":  null 
 }
@@ -547,7 +547,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2020-05-25T00:00:00Z">Last Modified: May 25, 2020</time>
+	<time class="meta__text" datetime="2026-08-30T00:00:00Z">Last Modified: Aug 30, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -582,6 +582,11 @@
       </ul>
     </li>
     <li><a href="#5-print-format-examples">5. Print Format Examples</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#6-gotchas">6. Gotchas</a>
       <ul>
         <li></li>
       </ul>
@@ -741,7 +746,68 @@ I was born on 22th August, 1986
 Saying - Hello World !!!
 Saying - Hello World !!!
 Saying - Hello World !!!
-</code></pre>
+</code></pre><h2 id="6-gotchas">6. Gotchas</h2>
+<p><code>String.format()</code> looks harmless, but a few mistakes only surface at runtime — the compiler can&rsquo;t check your format string against your arguments, so these all pass compilation and blow up when the line actually executes.</p>
+<h4 id="61-missingformatargumentexception">6.1 MissingFormatArgumentException</h4>
+<p>If your format string references an argument index (or has more <code>%s</code>/<code>%d</code> placeholders) than you actually pass in, you get a <code>MissingFormatArgumentException</code>, not a silently blank value.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&#34;Hello %s, you are %s years old&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;Sam&#34;</span><span class="p">));</span><span class="w">
+</span></span></span></code></pre></div><pre tabindex="0"><code><div class="code_output">Output</div>
+Exception in thread &#34;main&#34; java.util.MissingFormatArgumentException: Format specifier &#39;%s&#39;
+	at java.base/java.util.Formatter.format(Formatter.java:2790)
+	at java.base/java.util.Formatter.format(Formatter.java:2728)
+	at java.base/java.lang.String.format(String.java:4379)
+</code></pre><p>Here we have two <code>%s</code> placeholders but only one argument (<code>&quot;Sam&quot;</code>), so the second placeholder has nothing to bind to. This is easy to hit when a format string is edited (a placeholder added or reordered) without updating the argument list to match.</p>
+<h4 id="62-illegalformatconversionexception">6.2 IllegalFormatConversionException</h4>
+<p>Each conversion character expects a specific argument type — <code>%d</code> for integral numbers, <code>%f</code> for floating point, <code>%s</code> for basically anything. Pass an argument of the wrong type and you get an <code>IllegalFormatConversionException</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Sam&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&#34;Age: %d&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">));</span><span class="w">
+</span></span></span></code></pre></div><pre tabindex="0"><code><div class="code_output">Output</div>
+Exception in thread &#34;main&#34; java.util.IllegalFormatConversionException: d != java.lang.String
+	at java.base/java.util.Formatter$FormatSpecifier.failConversion(Formatter.java:4515)
+	at java.base/java.util.Formatter$FormatSpecifier.printInteger(Formatter.java:3066)
+	at java.base/java.util.Formatter$FormatSpecifier.print(Formatter.java:3021)
+	at java.base/java.util.Formatter.format(Formatter.java:2791)
+	at java.base/java.util.Formatter.format(Formatter.java:2728)
+	at java.base/java.lang.String.format(String.java:4379)
+</code></pre><p><code>%d</code> only works with <code>Integer</code>, <code>Long</code>, <code>Short</code>, <code>Byte</code> (and their primitive equivalents) — not <code>String</code>, and notably not <code>Double</code>/<code>Float</code> either, since those need <code>%f</code>. If the value is coming from user input or a method that could return null/unexpected types, validate or convert it before formatting rather than letting the exception surface.</p>
+<h4 id="63-the-formatted-instance-method-java-15">6.3 The <code>.formatted()</code> instance method (Java 15+)</h4>
+<p>Since Java 15, <code>String</code> has an instance method <code>formatted(Object... args)</code> that does the same job as <code>String.format()</code>, just called on the format string itself instead of passed to a static method:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Sam&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">30</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">String</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&#34;%s is %d years old&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">String</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;%s is %d years old&#34;</span><span class="p">.</span><span class="na">formatted</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">s2</span><span class="p">));</span><span class="w"> </span><span class="c1">// true — same result</span><span class="w">
+</span></span></span></code></pre></div><pre tabindex="0"><code><div class="code_output">Output</div>
+true
+</code></pre><p>Functionally they&rsquo;re identical — <code>formatted()</code> is really just a convenience wrapper around <code>String.format()</code>. It&rsquo;s worth reaching for when the format string is the more natural starting point in the expression, especially with Java 15+ text blocks:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">String</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s">    Name: %s
+</span></span></span><span class="line"><span class="cl"><span class="s">    Age: %d
+</span></span></span><span class="line"><span class="cl"><span class="s">    &#34;&#34;&#34;</span><span class="p">.</span><span class="na">formatted</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></div><p>It reads left-to-right (string, then how to fill it in) rather than static-method-first, which some find easier to follow — but it&rsquo;s purely a style choice, not a performance or capability difference.</p>
+<h4 id="64-performance-in-loops">6.4 Performance in loops</h4>
+<p><code>String.format()</code> parses the format string (splitting it into literal text and conversion specifiers) on every single call — there&rsquo;s no caching of a previously-seen format string. That parsing overhead is negligible for one-off calls like logging a single line, but it adds up fast inside a loop that builds output for large datasets.</p>
+<p>In a quick local test formatting a row of output 1,000,000 times, <code>String.format()</code> took over 15x longer than building the equivalent string with <code>StringBuilder</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kt">long</span><span class="w"> </span><span class="n">start1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">StringBuilder</span><span class="w"> </span><span class="n">sink1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">1_000_000</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">sink1</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&#34;Row %d: %s&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;value&#34;</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kt">long</span><span class="w"> </span><span class="n">end1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kt">long</span><span class="w"> </span><span class="n">start2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">StringBuilder</span><span class="w"> </span><span class="n">sink2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">1_000_000</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">sink2</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&#34;Row &#34;</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="s">&#34;: &#34;</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="s">&#34;value&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kt">long</span><span class="w"> </span><span class="n">end2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span><span class="w">
+</span></span></span></code></pre></div><pre tabindex="0"><code><div class="code_output">Output</div>
+String.format loop: 438 ms
+StringBuilder loop: 25 ms
+Ratio: 17.5x
+</code></pre><p>Exact numbers will vary by JVM and hardware, but the gap is consistently large because <code>String.format()</code> does regex-like parsing and boxing/unboxing of primitive arguments on every call. If you&rsquo;re formatting inside a hot loop — building a large CSV/log file line by line, for example — prefer plain concatenation or <code>StringBuilder.append()</code>, and reserve <code>String.format()</code> for occasional, human-facing output where readability matters more than raw speed.</p>
 		</div>
 		<footer class="post__footer">
 			

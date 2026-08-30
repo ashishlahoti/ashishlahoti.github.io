@@ -1031,7 +1031,7 @@ kbd {
 /* Categories: flowing chips instead of a full-width row list, so a long
    taxonomy doesn't push the whole sidebar down. */
 .widget-categories .widget__content { display: flex; flex-wrap: wrap; gap: 8px; }
-.widget-categories__link { color: var(--text-muted); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.02em; }
+.widget-categories__link { color: var(--text-muted); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.02em; padding: 3px 9px;}
 .widget-categories__count { color: var(--text-faint); font-weight: 500; }
 .widget-categories__link:hover .widget-categories__count { color: inherit; }
 

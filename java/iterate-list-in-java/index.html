@@ -8,14 +8,14 @@
 	<title>How to Iterate over a List in Java - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
-	<meta name="description" content="Guide to iterate over a list in java using basic and enhanced for loop, Java 8 forEach method, Iterator and ListIterator.">
+	<meta name="description" content="Guide to iterate over a list in Java using basic and enhanced for loop, Java 8 forEach method, Iterator, ListIterator, and streams — plus the ConcurrentModificationException gotcha when removing elements while iterating.">
 	<meta property="og:title" content="How to Iterate over a List in Java" />
-<meta property="og:description" content="Guide to iterate over a list in java using basic and enhanced for loop, Java 8 forEach method, Iterator and ListIterator." />
+<meta property="og:description" content="Guide to iterate over a list in Java using basic and enhanced for loop, Java 8 forEach method, Iterator, ListIterator, and streams — plus the ConcurrentModificationException gotcha when removing elements while iterating." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/java/iterate-list-in-java/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/java.png" />
 <meta property="article:published_time" content="2020-06-03T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-06-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-08-30T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -27,7 +27,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:image" content="https://codingnconcepts.com/img/logo/java.png">
 	<meta name="twitter:title" content="How to Iterate over a List in Java">
-	<meta name="twitter:description" content="Guide to iterate over a list in java using basic and enhanced for loop, Java 8 forEach method, Iterator and ListIterator.">
+	<meta name="twitter:description" content="Guide to iterate over a list in Java using basic and enhanced for loop, Java 8 forEach method, Iterator, ListIterator, and streams — plus the ConcurrentModificationException gotcha when removing elements while iterating.">
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -57,7 +57,7 @@
     "name": "How to Iterate over a List in Java",
     "headline": "How to Iterate over a List in Java",
     "alternativeHeadline":  null ,
-    "description": "Guide to iterate over a list in java using basic and enhanced for loop, Java 8 forEach method, Iterator and ListIterator.",
+    "description": "Guide to iterate over a list in Java using basic and enhanced for loop, Java 8 forEach method, Iterator, ListIterator, and streams — plus the ConcurrentModificationException gotcha when removing elements while iterating.",
     "inLanguage": "en-US",
 	"isFamilyFriendly": true,
     "mainEntityOfPage": {
@@ -80,7 +80,7 @@
     "copyrightYear": "2020",
     "dateCreated": "2020-06-03T00:00:00.00Z",
     "datePublished": "2020-06-03T00:00:00.00Z",
-    "dateModified": "2020-06-03T00:00:00.00Z",
+    "dateModified": "2026-08-30T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -94,7 +94,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/java.png"],
     "url": "https://codingnconcepts.com/java/iterate-list-in-java/",
-    "wordCount": 296 ,
+    "wordCount": 961 ,
     "genre": ["Java Collection"],
     "keywords":  null 
 }
@@ -546,7 +546,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2020-06-03T00:00:00Z">Last Modified: Jun 03, 2020</time>
+	<time class="meta__text" datetime="2026-08-30T00:00:00Z">Last Modified: Aug 30, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -564,6 +564,9 @@
     <li><a href="#print-list-using-foreach">Print List using <em>forEach</em></a></li>
     <li><a href="#print-list-using-iterator">Print List using <em>Iterator</em></a></li>
     <li><a href="#print-list-using-listiterator">Print List using <em>ListIterator</em></a></li>
+    <li><a href="#removing-elements-while-iterating-the-concurrentmodificationexception-gotcha">Removing elements while iterating: the ConcurrentModificationException gotcha</a></li>
+    <li><a href="#modern-alternatives-streams-and-java-21s-sequencedcollection">Modern alternatives: streams and Java 21&rsquo;s SequencedCollection</a></li>
+    <li><a href="#iterator-vs-listiterator-which-one-do-you-need">Iterator vs ListIterator: which one do you need?</a></li>
   </ul>
 </nav>
 	</div>
@@ -632,7 +635,56 @@
 </span></span></span><span class="line"><span class="cl"><span class="k">while</span><span class="p">(</span><span class="n">listIterator</span><span class="p">.</span><span class="na">hasPrevious</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">listIterator</span><span class="p">.</span><span class="na">previous</span><span class="p">());</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
-</span></span></span></code></pre></div>
+</span></span></span></code></pre></div><h2 id="removing-elements-while-iterating-the-concurrentmodificationexception-gotcha">Removing elements while iterating: the ConcurrentModificationException gotcha</h2>
+<p>It&rsquo;s tempting to remove elements from a list right inside an enhanced for loop. It compiles cleanly and looks harmless:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="ln">1</span><span class="cl"><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nums</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">2</span><span class="p">,</span><span class="w"> </span><span class="n">3</span><span class="p">,</span><span class="w"> </span><span class="n">4</span><span class="p">,</span><span class="w"> </span><span class="n">5</span><span class="p">,</span><span class="w"> </span><span class="n">6</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Integer</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">nums</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="w">        </span><span class="n">nums</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w">   </span><span class="c1">// removes the Integer object equal to n</span><span class="w">
+</span></span></span><span class="line"><span class="ln">6</span><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="ln">7</span><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>Run it, and it throws:</p>
+<pre tabindex="0"><code>Exception in thread &#34;main&#34; java.util.ConcurrentModificationException
+	at java.base/java.util.ArrayList$Itr.checkForComodification(ArrayList.java:1095)
+	at java.base/java.util.ArrayList$Itr.next(ArrayList.java:1049)
+	...
+</code></pre><p>An enhanced for loop over a <code>List</code> is syntactic sugar for an <code>Iterator</code> under the hood. <code>ArrayList</code>&rsquo;s iterator tracks a <code>modCount</code> snapshot taken when it was created, and every <code>next()</code> call checks that snapshot against the list&rsquo;s current <code>modCount</code>. Calling <code>list.remove(...)</code> directly on the list — bypassing the iterator — bumps <code>modCount</code> without the iterator knowing, so the very next <code>next()</code> call detects the mismatch and fails fast with <code>ConcurrentModificationException</code>. It&rsquo;s fail-<strong>fast</strong>, not fail-safe: the point is to surface the bug immediately rather than let you silently skip elements (note in the example above that once the exception is caught, the list is left as <code>[1, 3, 4, 5, 6]</code> — the <code>4</code> was never even checked, because removing <code>2</code> shifted <code>4</code> into the index the iterator had already stepped past).</p>
+<p>The fix is to remove through the iterator itself, using <code>Iterator.remove()</code>, which updates the iterator&rsquo;s own bookkeeping so no mismatch is ever detected:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nums</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">2</span><span class="p">,</span><span class="w"> </span><span class="n">3</span><span class="p">,</span><span class="w"> </span><span class="n">4</span><span class="p">,</span><span class="w"> </span><span class="n">5</span><span class="p">,</span><span class="w"> </span><span class="n">6</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="n">Iterator</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">iterator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">iterator</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="w">    </span><span class="n">Integer</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">iterator</span><span class="p">.</span><span class="na">next</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="w">        </span><span class="n">iterator</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nums</span><span class="p">);</span><span class="w">  </span><span class="c1">// [1, 3, 5]</span><span class="w">
+</span></span></span></code></pre></div><p>Since Java 8, if all you need is a removal-by-condition, <code>Collection.removeIf()</code> is shorter and does the same thing safely internally:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="ln">1</span><span class="cl"><span class="n">nums</span><span class="p">.</span><span class="na">removeIf</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">0</span><span class="p">);</span><span class="w">  </span><span class="c1">// [1, 3, 5]</span><span class="w">
+</span></span></span></code></pre></div><h2 id="modern-alternatives-streams-and-java-21s-sequencedcollection">Modern alternatives: streams and Java 21&rsquo;s SequencedCollection</h2>
+<p>Streams give you a functional way to iterate without an explicit loop at all — useful when you&rsquo;re transforming or filtering rather than just printing:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="ln">1</span><span class="cl"><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">primeNumbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">2</span><span class="p">,</span><span class="w"> </span><span class="n">3</span><span class="p">,</span><span class="w"> </span><span class="n">5</span><span class="p">,</span><span class="w"> </span><span class="n">7</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">doubled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">primeNumbers</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">map</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">2</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="w">        </span><span class="p">.</span><span class="na">toList</span><span class="p">();</span><span class="w">
+</span></span></span></code></pre></div><p>Streams are not a drop-in replacement for the loops above when the body has side effects or needs to break early — <code>forEach</code> on a stream can&rsquo;t <code>break</code>, and modifying the source collection mid-stream throws the same <code>ConcurrentModificationException</code> as an enhanced for loop.</p>
+<p>Java 21 also added the <code>SequencedCollection</code> interface, which every <code>List</code> implements. It gives you <code>getFirst()</code>/<code>getLast()</code> and, more relevantly here, <code>reversed()</code> — a view of the list in reverse order that you can iterate with a plain enhanced for loop, no <code>ListIterator</code> required:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="ln">1</span><span class="cl"><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">primeNumbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">2</span><span class="p">,</span><span class="w"> </span><span class="n">3</span><span class="p">,</span><span class="w"> </span><span class="n">5</span><span class="p">,</span><span class="w"> </span><span class="n">7</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">primeNumbers</span><span class="p">.</span><span class="na">reversed</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w">   </span><span class="c1">// 7, 5, 3, 2, 1</span><span class="w">
+</span></span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>For simple backward <em>reading</em>, <code>.reversed()</code> is now the more idiomatic choice on Java 21+. Reach for <code>ListIterator</code> specifically when you need to <strong>modify</strong> the list while walking it backward — <code>set()</code>, <code>add()</code>, or <code>remove()</code> mid-traversal — since <code>reversed()</code> gives you a view to read, not a cursor with mutation methods, and a plain <code>Iterator</code> only walks forward and only supports <code>remove()</code>, not <code>set()</code> or <code>add()</code>.</p>
+<h2 id="iterator-vs-listiterator-which-one-do-you-need">Iterator vs ListIterator: which one do you need?</h2>
+<ul>
+<li><strong>Enhanced for loop</strong> — the default choice for simple read-only iteration; shortest to write, but no access to the index and no safe way to remove.</li>
+<li><strong><code>Iterator</code></strong> — forward-only, but adds the one thing the for loop can&rsquo;t do safely: <code>remove()</code> mid-iteration. Reach for it whenever you&rsquo;re conditionally removing elements from a <code>List</code>, <code>Set</code>, or <code>Map</code> while looping.</li>
+<li><strong><code>ListIterator</code></strong> — everything <code>Iterator</code> offers, plus backward traversal, index access (<code>nextIndex()</code>/<code>previousIndex()</code>), and in-place mutation via <code>set()</code> and <code>add()</code>. Reach for it when you need to walk the list backward <em>and</em> modify it as you go — a plain <code>Iterator</code> can&rsquo;t move backward, and <code>.reversed()</code> can&rsquo;t mutate.</li>
+<li><strong>Streams</strong> — best when iteration is really a transformation (<code>map</code>, <code>filter</code>, <code>collect</code>) rather than a loop with side effects.</li>
+</ul>
 		</div>
 		<footer class="post__footer">
 			
@@ -693,7 +745,7 @@
       
       
       <li>
-        <a href="whatsapp://send?text=How%20to%20Iterate%20over%20a%20List%20in%20Java%2c%20by%20Coding%20N%20Concepts%0aGuide%20to%20iterate%20over%20a%20list%20in%20java%20using%20basic%20and%20enhanced%20for%20loop%2c%20Java%208%20forEach%20method%2c%20Iterator%20and%20ListIterator.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjava%2fiterate-list-in-java%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=How%20to%20Iterate%20over%20a%20List%20in%20Java%2c%20by%20Coding%20N%20Concepts%0aGuide%20to%20iterate%20over%20a%20list%20in%20Java%20using%20basic%20and%20enhanced%20for%20loop%2c%20Java%208%20forEach%20method%2c%20Iterator%2c%20ListIterator%2c%20and%20streams%20%e2%80%94%20plus%20the%20ConcurrentModificationException%20gotcha%20when%20removing%20elements%20while%20iterating.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjava%2fiterate-list-in-java%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>WhatsApp</p>
         </a>
@@ -703,7 +755,7 @@
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - How%20to%20Iterate%20over%20a%20List%20in%20Java.&amp;body=How%20to%20Iterate%20over%20a%20List%20in%20Java%2c%20by%20Coding%20N%20Concepts%0aGuide%20to%20iterate%20over%20a%20list%20in%20java%20using%20basic%20and%20enhanced%20for%20loop%2c%20Java%208%20forEach%20method%2c%20Iterator%20and%20ListIterator.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjava%2fiterate-list-in-java%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - How%20to%20Iterate%20over%20a%20List%20in%20Java.&amp;body=How%20to%20Iterate%20over%20a%20List%20in%20Java%2c%20by%20Coding%20N%20Concepts%0aGuide%20to%20iterate%20over%20a%20list%20in%20Java%20using%20basic%20and%20enhanced%20for%20loop%2c%20Java%208%20forEach%20method%2c%20Iterator%2c%20ListIterator%2c%20and%20streams%20%e2%80%94%20plus%20the%20ConcurrentModificationException%20gotcha%20when%20removing%20elements%20while%20iterating.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fjava%2fiterate-list-in-java%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>
