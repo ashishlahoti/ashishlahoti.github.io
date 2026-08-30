@@ -8,5 +8,13 @@
     <language>en-US</language>
     <copyright>CodingNConcepts</copyright>
     <lastBuildDate>Tue, 15 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/roman/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Convert Integer to Roman in Java</title>
+      <link>https://codingnconcepts.com/java/integer-to-roman/</link>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/java/integer-to-roman/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Problem:&lt;/strong&gt; Given an Integer input, convert it to a Roman numeral. Input is within the range from 1 to 3999.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
