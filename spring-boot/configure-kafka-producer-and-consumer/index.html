@@ -5,17 +5,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="color-scheme" content="light dark">
-	<title>Configure Kafka Producer and Consumer in spring boot - Coding N Concepts</title>
+	<title>Configure Kafka Producer and Consumer in Spring Boot - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
-	<meta name="description" content="How to configure Kafka Producer to send messages to kafka topic and configure Kafka consumer to receive messages from kafka topic in spring boot application.">
-	<meta property="og:title" content="Configure Kafka Producer and Consumer in spring boot" />
-<meta property="og:description" content="How to configure Kafka Producer to send messages to kafka topic and configure Kafka consumer to receive messages from kafka topic in spring boot application." />
+	<meta name="description" content="Step-by-step guide to configure a Kafka producer and consumer in Spring Boot, covering application.yml, SSL configuration, KafkaTemplate, and @KafkaListener.">
+	<meta property="og:title" content="Configure Kafka Producer and Consumer in Spring Boot" />
+<meta property="og:description" content="Step-by-step guide to configure a Kafka producer and consumer in Spring Boot, covering application.yml, SSL configuration, KafkaTemplate, and @KafkaListener." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/spring-boot/configure-kafka-producer-and-consumer/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/springboot.png" />
 <meta property="article:published_time" content="2020-04-11T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-06-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-09-01T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -26,8 +26,8 @@
 	
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:image" content="https://codingnconcepts.com/img/logo/springboot.png">
-	<meta name="twitter:title" content="Configure Kafka Producer and Consumer in spring boot">
-	<meta name="twitter:description" content="How to configure Kafka Producer to send messages to kafka topic and configure Kafka consumer to receive messages from kafka topic in spring boot application.">
+	<meta name="twitter:title" content="Configure Kafka Producer and Consumer in Spring Boot">
+	<meta name="twitter:description" content="Step-by-step guide to configure a Kafka producer and consumer in Spring Boot, covering application.yml, SSL configuration, KafkaTemplate, and @KafkaListener.">
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -54,10 +54,10 @@
     "@context": "http://schema.org",
     "@type": "BlogPosting",
     "articleSection": "spring-boot",
-    "name": "Configure Kafka Producer and Consumer in spring boot",
-    "headline": "Configure Kafka Producer and Consumer in spring boot",
+    "name": "Configure Kafka Producer and Consumer in Spring Boot",
+    "headline": "Configure Kafka Producer and Consumer in Spring Boot",
     "alternativeHeadline":  null ,
-    "description": "How to configure Kafka Producer to send messages to kafka topic and configure Kafka consumer to receive messages from kafka topic in spring boot application.",
+    "description": "Step-by-step guide to configure a Kafka producer and consumer in Spring Boot, covering application.yml, SSL configuration, KafkaTemplate, and @KafkaListener.",
     "inLanguage": "en-US",
 	"isFamilyFriendly": true,
     "mainEntityOfPage": {
@@ -80,7 +80,7 @@
     "copyrightYear": "2020",
     "dateCreated": "2020-04-11T00:00:00.00Z",
     "datePublished": "2020-04-11T00:00:00.00Z",
-    "dateModified": "2021-06-06T00:00:00.00Z",
+    "dateModified": "2026-09-01T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -94,7 +94,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/springboot.png"],
     "url": "https://codingnconcepts.com/spring-boot/configure-kafka-producer-and-consumer/",
-    "wordCount": 1399 ,
+    "wordCount": 1574 ,
     "genre": ["Spring Boot Kafka"],
     "keywords":  null 
 }
@@ -119,7 +119,7 @@
         {
             "@type": "ListItem",
             "position": 3,
-            "name": "Configure Kafka Producer and Consumer in spring boot",
+            "name": "Configure Kafka Producer and Consumer in Spring Boot",
             "item": "https://codingnconcepts.com/spring-boot/configure-kafka-producer-and-consumer/"
         }
     ]
@@ -134,7 +134,7 @@
 	<div class="container--inner">
 		<div class="logo">
 			<a class="logo__link" href="/" title="Coding N Concepts" rel="home">
-				<div class="logo__title"><img src="/favicon-32x32.png" alt="Configure Kafka Producer and Consumer in spring boot"> Coding N Concepts</div>
+				<div class="logo__title"><img src="/favicon-32x32.png" alt="Configure Kafka Producer and Consumer in Spring Boot"> Coding N Concepts</div>
 				<div class="logo__tagline">Ashish Lahoti&#39;s Technical Blog</div>
 			</a>
 		</div>
@@ -540,13 +540,13 @@
 <main class="main" role="main">
 	<article class="post" autonumbering>
 		<header class="post__header">
-			<h1 class="post__title"><img class="post__thumbnail" src="/img/logo/springboot.png" alt="Configure Kafka Producer and Consumer in spring boot"> Configure Kafka Producer and Consumer in spring boot</h1>
+			<h1 class="post__title"><img class="post__thumbnail" src="/img/logo/springboot.png" alt="Configure Kafka Producer and Consumer in Spring Boot"> Configure Kafka Producer and Consumer in Spring Boot</h1>
 			<div class="post__meta meta"><div class="meta__item-author meta__item">
 	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg> <span class="meta__text">Ashish Lahoti</span>
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2021-06-06T00:00:00Z">Last Modified: Jun 06, 2021</time>
+	<time class="meta__text" datetime="2026-09-01T00:00:00Z">Last Modified: Sep 01, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -584,6 +584,7 @@
       </ul>
     </li>
     <li><a href="#summary">Summary</a></li>
+    <li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
   </ul>
 </nav>
 	</div>
@@ -594,7 +595,7 @@
 <p>It is recommended to use <a href="https://codingnconcepts.com/spring-boot/setup-project-using-spring-initializr/">Spring Initializr</a> to generate initial project. Our project should have Web and Kafka dependencies.</p>
 <h3 id="maven-project">Maven Project</h3>
 <p>Click on the below link to generate <strong>maven project</strong> with pre-defined configuration:-</p>
-<p><small><a href="https://start.spring.io/#!type=maven-project&amp;language=java&amp;platformVersion=2.5.0.RELEASE&amp;packaging=jar&amp;jvmVersion=11&amp;groupId=com.example&amp;artifactId=springboot-kafka&amp;name=springboot-kafka&amp;description=Kafka%20producer%20and%20consumer%20configuration&amp;packageName=com.example.kafka&amp;dependencies=web,kafka">https://start.spring.io/#!type=maven-project&amp;language=java&amp;platformVersion=2.5.0.RELEASE&amp;packaging=jar&amp;jvmVersion=11&amp;groupId=com.example&amp;artifactId=springboot-kafka&amp;name=springboot-kafka&amp;description=Kafka%20producer%20and%20consumer%20configuration&amp;packageName=com.example.kafka&amp;dependencies=web,kafka</a></small></p>
+<p><small><a href="https://start.spring.io/#!type=maven-project&amp;language=java&amp;platformVersion=4.1.1&amp;packaging=jar&amp;jvmVersion=25&amp;groupId=com.example&amp;artifactId=springboot-kafka&amp;name=springboot-kafka&amp;description=Kafka%20producer%20and%20consumer%20configuration&amp;packageName=com.example.kafka&amp;dependencies=web,kafka">https://start.spring.io/#!type=maven-project&amp;language=java&amp;platformVersion=4.1.1&amp;packaging=jar&amp;jvmVersion=25&amp;groupId=com.example&amp;artifactId=springboot-kafka&amp;name=springboot-kafka&amp;description=Kafka%20producer%20and%20consumer%20configuration&amp;packageName=com.example.kafka&amp;dependencies=web,kafka</a></small></p>
 <p>A typical <em>pom.xml</em> file for a kafka project look like this:-</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;dependency&gt;</span>
 </span></span><span class="line"><span class="cl">	<span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
@@ -618,7 +619,7 @@
 </span></span></code></pre></div><br/>
 <h3 id="gradle-project">Gradle Project</h3>
 <p>Click on the below link to generate <strong>gradle project</strong> with pre-defined configuration:-</p>
-<p><small><a href="https://start.spring.io/#!type=gradle-project&amp;language=java&amp;platformVersion=2.5.0.RELEASE&amp;packaging=jar&amp;jvmVersion=11&amp;groupId=com.example&amp;artifactId=springboot-kafka&amp;name=springboot-kafka&amp;description=Kafka%20producer%20and%20consumer%20configuration&amp;packageName=com.example.kafka&amp;dependencies=web,kafka">https://start.spring.io/#!type=gradle-project&amp;language=java&amp;platformVersion=2.5.0.RELEASE&amp;packaging=jar&amp;jvmVersion=11&amp;groupId=com.example&amp;artifactId=springboot-kafka&amp;name=springboot-kafka&amp;description=Kafka%20producer%20and%20consumer%20configuration&amp;packageName=com.example.kafka&amp;dependencies=web,kafka</a></small></p>
+<p><small><a href="https://start.spring.io/#!type=gradle-project&amp;language=java&amp;platformVersion=4.1.1&amp;packaging=jar&amp;jvmVersion=25&amp;groupId=com.example&amp;artifactId=springboot-kafka&amp;name=springboot-kafka&amp;description=Kafka%20producer%20and%20consumer%20configuration&amp;packageName=com.example.kafka&amp;dependencies=web,kafka">https://start.spring.io/#!type=gradle-project&amp;language=java&amp;platformVersion=4.1.1&amp;packaging=jar&amp;jvmVersion=25&amp;groupId=com.example&amp;artifactId=springboot-kafka&amp;name=springboot-kafka&amp;description=Kafka%20producer%20and%20consumer%20configuration&amp;packageName=com.example.kafka&amp;dependencies=web,kafka</a></small></p>
 <p>A typical <em>build.gradle</em> file for a kafka project look like this:-</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl"><span class="n">dependencies</span> <span class="o">{</span>
 </span></span><span class="line"><span class="cl">  <span class="n">implementation</span> <span class="s1">&#39;org.springframework.boot:spring-boot-starter-web&#39;</span>
@@ -640,7 +641,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="c">#SPRING PROPERTIES</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="nt">spring</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">kafka</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  	</span><span class="nt">bootstrap-servers</span><span class="p">:</span><span class="w"> </span><span class="l">localhost:9200,localhost:9300,localhost:9400</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">bootstrap-servers</span><span class="p">:</span><span class="w"> </span><span class="l">localhost:9200,localhost:9300,localhost:9400</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">properties</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c">#Server host name verification is disabled by setting ssl.endpoint.identification.algorithm to an empty string</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">ssl.endpoint.identification.algorithm</span><span class="p">:</span><span class="w">
@@ -689,7 +690,7 @@
 <p>If you have enabled SSL for kafka Server, then sometime Spring Boot startup throw error due to hostname verification. You can disable the server host name verification by setting the property <code>ssl.endpoint.identification.algorithm</code> to an empty string to avoid the error.</p>
 <br/>
 <h5 id="kafka-full-configuration">Kafka Full Configuration</h5>
-<p>You can refer to the Spring Boot official <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html">documentation</a> for full list of available kafka producer and consumer configuration.</p>
+<p>You can refer to the Spring Boot official <a href="https://docs.spring.io/spring-boot/appendix/application-properties/index.html">documentation</a> for full list of available kafka producer and consumer configuration.</p>
 <p>Here is a list of important auto-configuration properties:-</p>
 <div class="table-scroll">
 <table>
@@ -729,7 +730,7 @@
 					<td style="text-align: left">Kafka SSL configuration is to provide secure communication between producer/consumer and Kafka server. You need to generate key-store and trust-store files and configure the location and password</td>
 			</tr>
 			<tr>
-					<td style="text-align: left"><code>spring.kafka.properties .ssl.endpoint.identification.algorithm</code></td>
+					<td style="text-align: left"><code>spring.kafka.properties.ssl.endpoint.identification.algorithm</code></td>
 					<td style="text-align: left">If you have enabled SSL for kafka Server, then host name verification can be disabled by setting this property to empty string, otherwise spring boot startup throw error</td>
 			</tr>
 			<tr>
@@ -880,10 +881,51 @@
 <li>Kafka Producer using <code>KafkaTemplate</code> which provides overloaded <strong>send</strong> method to send messages in multiple ways with keys, partitions and routing information.</li>
 <li>Kafka Consumer using <code>@EnableKafka</code> annotation which auto detects <code>@KafkaListener</code> annotation applied to any method and that methods becomes a Kafka Listener.</li>
 </ul>
-<p>You can download complete source code from <a href="https://github.com/ashishlahoti/springboot-examples/tree/main/springboot-kafka">github</a> and read official spring documentation <a href="https://docs.spring.io/spring-kafka/docs/2.4.5.RELEASE/reference/html/">Spring for Apache Kafka</a> for further exploration.</p>
+<p>You can download complete source code from <a href="https://github.com/ashishlahoti/springboot-examples/tree/main/springboot-kafka">github</a> and read official spring documentation <a href="https://docs.spring.io/spring-kafka/reference/">Spring for Apache Kafka</a> for further exploration.</p>
 <blockquote>
 <p>Also Read <a href="https://codingnconcepts.com/post/apache-kafka-installation/">How to install kafka broker on local machine for development and testing</a></p>
+<p>Also Read <a href="https://codingnconcepts.com/spring-boot/configure-multiple-kafka-producer/">How to Configure Multiple Kafka Producer in Spring Boot</a></p>
+<p>Also Read <a href="https://codingnconcepts.com/spring-boot/configure-multiple-kafka-consumer/">How to Configure Multiple Kafka Consumer in Spring Boot</a></p>
 </blockquote>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<p><strong>Does Spring Boot auto-configure a Kafka producer and consumer without extra code?</strong></p>
+<p>Yes. If you provide <code>spring.kafka.*</code> properties (bootstrap-servers, key/value serializers, etc.) in <code>application.yml</code>, Spring Boot auto-configures a <code>KafkaTemplate</code> for producing and a <code>ConcurrentKafkaListenerContainerFactory</code> for consuming - you only need to inject <code>KafkaTemplate</code> to send messages and use <code>@KafkaListener</code> to receive them.</p>
+<p><strong>How do I make a Kafka consumer listen to multiple topics?</strong></p>
+<p>Pass a comma-separated list of topic names to <code>@KafkaListener(topics = ...)</code>, as shown with <code>app.kafka.consumer.topic</code> split by comma using a SpEL expression - the listener then receives messages published to any of those topics.</p>
+<p><strong>Why would I need a custom KafkaProducerConfig or KafkaConsumerConfig bean instead of relying on auto-configuration?</strong></p>
+<p>Create a custom config bean when you need to modify properties Spring Boot doesn&rsquo;t expose directly - for example, decrypting encrypted SSL passwords at runtime before they&rsquo;re used to build the <code>ProducerFactory</code> or <code>ConsumerFactory</code>, as shown in this guide.</p>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does Spring Boot auto-configure a Kafka producer and consumer without extra code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. If you provide spring.kafka.* properties (bootstrap-servers, key/value serializers, etc.) in application.yml, Spring Boot auto-configures a KafkaTemplate for producing and a ConcurrentKafkaListenerContainerFactory for consuming - you only need to inject KafkaTemplate to send messages and use @KafkaListener to receive them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I make a Kafka consumer listen to multiple topics?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pass a comma-separated list of topic names to @KafkaListener(topics = ...), as shown with app.kafka.consumer.topic split by comma using a SpEL expression - the listener then receives messages published to any of those topics."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why would I need a custom KafkaProducerConfig or KafkaConsumerConfig bean instead of relying on auto-configuration?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Create a custom config bean when you need to modify properties Spring Boot doesn't expose directly - for example, decrypting encrypted SSL passwords at runtime before they're used to build the ProducerFactory or ConsumerFactory, as shown in this guide."
+      }
+    }
+  ]
+}
+</script>
 		</div>
 		<footer class="post__footer">
 			
@@ -914,7 +956,7 @@
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?hashtags=codingnconcepts&amp;url=https%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fconfigure-kafka-producer-and-consumer%2f&amp;text=Configure%20Kafka%20Producer%20and%20Consumer%20in%20spring%20boot" target="_blank" rel="noopener" aria-label="Share on Twitter" class="share-btn twitter">
+        <a href="https://twitter.com/intent/tweet?hashtags=codingnconcepts&amp;url=https%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fconfigure-kafka-producer-and-consumer%2f&amp;text=Configure%20Kafka%20Producer%20and%20Consumer%20in%20Spring%20Boot" target="_blank" rel="noopener" aria-label="Share on Twitter" class="share-btn twitter">
           <svg class="widget-social__link-icon icon icon-twitter" width="24" height="24" viewBox="0 0 384 312"><path d="m384 36.9c-14.1 6.3-29.3 10.5-45.2 12.4 16.3-9.7 28.8-25.2 34.6-43.6-15.2 9-32.1 15.6-50 19.1-14.4-15.2-34.9-24.8-57.5-24.8-43.5 0-78.8 35.3-78.8 78.8 0 6.2.7 12.2 2 17.9-65.5-3.3-123.5-34.6-162.4-82.3-6.7 11.6-10.6 25.2-10.6 39.6 0 27.3 13.9 51.4 35 65.6-12.9-.4-25.1-4-35.7-9.9v1c0 38.2 27.2 70 63.2 77.2-6.6 1.8-13.6 2.8-20.8 2.8-5.1 0-10-.5-14.8-1.4 10 31.3 39.1 54.1 73.6 54.7-27 21.1-60.9 33.7-97.8 33.7-6.4 0-12.6-.4-18.8-1.1 34.9 22.4 76.3 35.4 120.8 35.4 144.9 0 224.1-120 224.1-224.1 0-3.4-.1-6.8-.2-10.2 15.4-11.1 28.7-25 39.3-40.8z"/></svg>
           <p>Twitter</p>
           </a>
@@ -934,7 +976,7 @@
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fconfigure-kafka-producer-and-consumer%2f&amp;source=https%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fconfigure-kafka-producer-and-consumer%2f&amp;title=Configure%20Kafka%20Producer%20and%20Consumer%20in%20spring%20boot&amp;summary=Configure%20Kafka%20Producer%20and%20Consumer%20in%20spring%20boot" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="share-btn linkedin">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fconfigure-kafka-producer-and-consumer%2f&amp;source=https%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fconfigure-kafka-producer-and-consumer%2f&amp;title=Configure%20Kafka%20Producer%20and%20Consumer%20in%20Spring%20Boot&amp;summary=Configure%20Kafka%20Producer%20and%20Consumer%20in%20Spring%20Boot" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="share-btn linkedin">
           <svg class="widget-social__link-icon icon icon-linkedin" width="24" height="24" viewBox="0 0 352 352"><path d="M0,40v272c0,21.9,18.1,40,40,40h272c21.9,0,40-18.1,40-40V40c0-21.9-18.1-40-40-40H40C18.1,0,0,18.1,0,40z M312,32 c4.6,0,8,3.4,8,8v272c0,4.6-3.4,8-8,8H40c-4.6,0-8-3.4-8-8V40c0-4.6,3.4-8,8-8H312z M59.5,87c0,15.2,12.3,27.5,27.5,27.5 c15.2,0,27.5-12.3,27.5-27.5c0-15.2-12.3-27.5-27.5-27.5C71.8,59.5,59.5,71.8,59.5,87z M187,157h-1v-21h-45v152h47v-75 c0-19.8,3.9-39,28.5-39c24.2,0,24.5,22.4,24.5,40v74h47v-83.5c0-40.9-8.7-72-56.5-72C208.5,132.5,193.3,145.1,187,157z M64,288h47.5 V136H64V288z"/></svg>
             <p>LinkedIn</p>
           </a>
@@ -944,7 +986,7 @@
       
       
       <li>
-        <a href="whatsapp://send?text=Configure%20Kafka%20Producer%20and%20Consumer%20in%20spring%20boot%2c%20by%20Coding%20N%20Concepts%0aHow%20to%20configure%20Kafka%20Producer%20to%20send%20messages%20to%20kafka%20topic%20and%20configure%20Kafka%20consumer%20to%20receive%20messages%20from%20kafka%20topic%20in%20spring%20boot%20application.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fconfigure-kafka-producer-and-consumer%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=Configure%20Kafka%20Producer%20and%20Consumer%20in%20Spring%20Boot%2c%20by%20Coding%20N%20Concepts%0aStep-by-step%20guide%20to%20configure%20a%20Kafka%20producer%20and%20consumer%20in%20Spring%20Boot%2c%20covering%20application.yml%2c%20SSL%20configuration%2c%20KafkaTemplate%2c%20and%20%40KafkaListener.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fconfigure-kafka-producer-and-consumer%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>WhatsApp</p>
         </a>
@@ -954,7 +996,7 @@
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - Configure%20Kafka%20Producer%20and%20Consumer%20in%20spring%20boot.&amp;body=Configure%20Kafka%20Producer%20and%20Consumer%20in%20spring%20boot%2c%20by%20Coding%20N%20Concepts%0aHow%20to%20configure%20Kafka%20Producer%20to%20send%20messages%20to%20kafka%20topic%20and%20configure%20Kafka%20consumer%20to%20receive%20messages%20from%20kafka%20topic%20in%20spring%20boot%20application.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fconfigure-kafka-producer-and-consumer%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - Configure%20Kafka%20Producer%20and%20Consumer%20in%20Spring%20Boot.&amp;body=Configure%20Kafka%20Producer%20and%20Consumer%20in%20Spring%20Boot%2c%20by%20Coding%20N%20Concepts%0aStep-by-step%20guide%20to%20configure%20a%20Kafka%20producer%20and%20consumer%20in%20Spring%20Boot%2c%20covering%20application.yml%2c%20SSL%20configuration%2c%20KafkaTemplate%2c%20and%20%40KafkaListener.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fconfigure-kafka-producer-and-consumer%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>

@@ -8,14 +8,14 @@
 	<title>Configure Multiple Kafka Consumer in Spring Boot - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
-	<meta name="description" content="Configure Multiple Kafka Consumer from application properties file in Spring boot project.">
+	<meta name="description" content="Step-by-step guide to configure multiple Kafka consumers in Spring Boot from a properties file, each reading a different topic from a different Kafka cluster.">
 	<meta property="og:title" content="Configure Multiple Kafka Consumer in Spring Boot" />
-<meta property="og:description" content="Configure Multiple Kafka Consumer from application properties file in Spring boot project." />
+<meta property="og:description" content="Step-by-step guide to configure multiple Kafka consumers in Spring Boot from a properties file, each reading a different topic from a different Kafka cluster." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/spring-boot/configure-multiple-kafka-consumer/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/springboot.png" />
 <meta property="article:published_time" content="2023-08-30T00:00:00+00:00" />
-<meta property="article:modified_time" content="2026-08-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-08-31T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -27,7 +27,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:image" content="https://codingnconcepts.com/img/logo/springboot.png">
 	<meta name="twitter:title" content="Configure Multiple Kafka Consumer in Spring Boot">
-	<meta name="twitter:description" content="Configure Multiple Kafka Consumer from application properties file in Spring boot project.">
+	<meta name="twitter:description" content="Step-by-step guide to configure multiple Kafka consumers in Spring Boot from a properties file, each reading a different topic from a different Kafka cluster.">
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -57,7 +57,7 @@
     "name": "Configure Multiple Kafka Consumer in Spring Boot",
     "headline": "Configure Multiple Kafka Consumer in Spring Boot",
     "alternativeHeadline":  null ,
-    "description": "Configure Multiple Kafka Consumer from application properties file in Spring boot project.",
+    "description": "Step-by-step guide to configure multiple Kafka consumers in Spring Boot from a properties file, each reading a different topic from a different Kafka cluster.",
     "inLanguage": "en-US",
 	"isFamilyFriendly": true,
     "mainEntityOfPage": {
@@ -80,7 +80,7 @@
     "copyrightYear": "2023",
     "dateCreated": "2023-08-30T00:00:00.00Z",
     "datePublished": "2023-08-30T00:00:00.00Z",
-    "dateModified": "2026-08-30T00:00:00.00Z",
+    "dateModified": "2026-08-31T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -94,7 +94,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/springboot.png"],
     "url": "https://codingnconcepts.com/spring-boot/configure-multiple-kafka-consumer/",
-    "wordCount": 761 ,
+    "wordCount": 928 ,
     "genre": ["Spring Boot Kafka"],
     "keywords":  null 
 }
@@ -546,7 +546,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2026-08-30T00:00:00Z">Last Modified: Aug 30, 2026</time>
+	<time class="meta__text" datetime="2026-08-31T00:00:00Z">Last Modified: Aug 31, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -576,6 +576,7 @@
       </ul>
     </li>
     <li><a href="#summary">Summary</a></li>
+    <li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
   </ul>
 </nav>
 	</div>
@@ -586,7 +587,7 @@
 <p>It is recommended to use <a href="https://codingnconcepts.com/spring-boot/setup-project-using-spring-initializr/">Spring Initializr</a> to generate the initial project. Our project should have Web and Kafka dependencies.</p>
 <h6 id="maven-project">Maven Project</h6>
 <p>Click on the below link to generate <strong>maven project</strong> with pre-defined configuration:-</p>
-<p><small><a href="https://start.spring.io/#!type=maven-project&amp;language=java&amp;platformVersion=3.5.16&amp;packaging=jar&amp;jvmVersion=25&amp;groupId=com.example&amp;artifactId=springboot-kafka&amp;name=springboot-kafka&amp;description=Kafka%20producer%20and%20consumer%20configuration&amp;packageName=com.example.kafka&amp;dependencies=web,kafka,lombok">https://start.spring.io/#!type=maven-project&amp;language=java&amp;platformVersion=3.5.16&amp;packaging=jar&amp;jvmVersion=25&amp;groupId=com.example&amp;artifactId=springboot-kafka&amp;name=springboot-kafka&amp;description=Kafka%20producer%20and%20consumer%20configuration&amp;packageName=com.example.kafka&amp;dependencies=web,kafka,lombok</a></small></p>
+<p><small><a href="https://start.spring.io/#!type=maven-project&amp;language=java&amp;platformVersion=4.1.1&amp;packaging=jar&amp;jvmVersion=25&amp;groupId=com.example&amp;artifactId=springboot-kafka&amp;name=springboot-kafka&amp;description=Kafka%20producer%20and%20consumer%20configuration&amp;packageName=com.example.kafka&amp;dependencies=web,kafka,lombok">https://start.spring.io/#!type=maven-project&amp;language=java&amp;platformVersion=4.1.1&amp;packaging=jar&amp;jvmVersion=25&amp;groupId=com.example&amp;artifactId=springboot-kafka&amp;name=springboot-kafka&amp;description=Kafka%20producer%20and%20consumer%20configuration&amp;packageName=com.example.kafka&amp;dependencies=web,kafka,lombok</a></small></p>
 <p>A typical <em>pom.xml</em> file for a kafka project look like this:-</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;dependency&gt;</span>
 </span></span><span class="line"><span class="cl">	<span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
@@ -615,7 +616,7 @@
 </span></span></code></pre></div><br/>
 <h6 id="gradle-project">Gradle Project</h6>
 <p>Click on the below link to generate <strong>gradle project</strong> with pre-defined configuration:-</p>
-<p><small><a href="https://start.spring.io/#!type=gradle-project&amp;language=java&amp;platformVersion=3.5.16&amp;packaging=jar&amp;jvmVersion=25&amp;groupId=com.example&amp;artifactId=springboot-kafka&amp;name=springboot-kafka&amp;description=Kafka%20producer%20and%20consumer%20configuration&amp;packageName=com.example.kafka&amp;dependencies=web,kafka,lombok">https://start.spring.io/#!type=gradle-project&amp;language=java&amp;platformVersion=3.5.16&amp;packaging=jar&amp;jvmVersion=25&amp;groupId=com.example&amp;artifactId=springboot-kafka&amp;name=springboot-kafka&amp;description=Kafka%20producer%20and%20consumer%20configuration&amp;packageName=com.example.kafka&amp;dependencies=web,kafka,lombok</a></small></p>
+<p><small><a href="https://start.spring.io/#!type=gradle-project&amp;language=java&amp;platformVersion=4.1.1&amp;packaging=jar&amp;jvmVersion=25&amp;groupId=com.example&amp;artifactId=springboot-kafka&amp;name=springboot-kafka&amp;description=Kafka%20producer%20and%20consumer%20configuration&amp;packageName=com.example.kafka&amp;dependencies=web,kafka,lombok">https://start.spring.io/#!type=gradle-project&amp;language=java&amp;platformVersion=4.1.1&amp;packaging=jar&amp;jvmVersion=25&amp;groupId=com.example&amp;artifactId=springboot-kafka&amp;name=springboot-kafka&amp;description=Kafka%20producer%20and%20consumer%20configuration&amp;packageName=com.example.kafka&amp;dependencies=web,kafka,lombok</a></small></p>
 <p>A typical <em>build.gradle</em> file for a kafka project look like this:-</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl"><span class="n">dependencies</span> <span class="o">{</span>
 </span></span><span class="line"><span class="cl">  <span class="n">implementation</span> <span class="s1">&#39;org.springframework.boot:spring-boot-starter-web&#39;</span>
@@ -697,6 +698,9 @@
 </div>
 <br/>
 <p>The custom Kafka configuration class which reads the above custom configuration:-</p>
+<blockquote>
+<p><strong>Note:</strong> <code>KafkaProperties</code> moved packages in Spring Boot 4.x as part of the autoconfigure module restructuring. Import <code>org.springframework.boot.kafka.autoconfigure.KafkaProperties</code> on Spring Boot 4+, or <code>org.springframework.boot.autoconfigure.kafka.KafkaProperties</code> if your project is still on Spring Boot 3.x.</p>
+</blockquote>
 <h6 id="kafkacustompropertiesjava">KafkaCustomProperties.java</h6>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nn">com.example.kafka.config</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
@@ -801,6 +805,13 @@
 <blockquote>
 <p>Also Read <a href="https://codingnconcepts.com/spring-boot/configure-multiple-kafka-producer/">How to Configure Multiple Kafka Producer in Spring Boot</a></p>
 </blockquote>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<p><strong>Does Spring Boot support multiple Kafka consumer configurations out of the box?</strong></p>
+<p>No. Spring Boot&rsquo;s <code>spring.kafka.consumer.*</code> properties only configure a single consumer. To run multiple consumers against different clusters or topics, you need a custom <code>@ConfigurationProperties</code> class like <code>KafkaCustomProperties</code>, as shown in this guide.</p>
+<p><strong>Can each Kafka consumer use a different bootstrap-servers cluster?</strong></p>
+<p>Yes. Each named consumer block (<code>consumer1</code>, <code>consumer2</code>, etc.) under <code>kafka.consumer.*</code> can override <code>kafka.bootstrap-servers</code> with its own comma-separated list of brokers, so different consumers can point at entirely different Kafka clusters.</p>
+<p><strong>How do I override a common Kafka property for just one consumer?</strong></p>
+<p>Set the property under that consumer&rsquo;s own block, such as <code>kafka.consumer.consumer1.client-id</code>. Per-consumer values override the shared <code>kafka.client-id</code> (or <code>kafka.bootstrap-servers</code>) defined at the top level, while consumers that don&rsquo;t override a property fall back to the shared default.</p>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -893,7 +904,7 @@
       
       
       <li>
-        <a href="whatsapp://send?text=Configure%20Multiple%20Kafka%20Consumer%20in%20Spring%20Boot%2c%20by%20Coding%20N%20Concepts%0aConfigure%20Multiple%20Kafka%20Consumer%20from%20application%20properties%20file%20in%20Spring%20boot%20project.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fconfigure-multiple-kafka-consumer%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=Configure%20Multiple%20Kafka%20Consumer%20in%20Spring%20Boot%2c%20by%20Coding%20N%20Concepts%0aStep-by-step%20guide%20to%20configure%20multiple%20Kafka%20consumers%20in%20Spring%20Boot%20from%20a%20properties%20file%2c%20each%20reading%20a%20different%20topic%20from%20a%20different%20Kafka%20cluster.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fconfigure-multiple-kafka-consumer%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>WhatsApp</p>
         </a>
@@ -903,7 +914,7 @@
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - Configure%20Multiple%20Kafka%20Consumer%20in%20Spring%20Boot.&amp;body=Configure%20Multiple%20Kafka%20Consumer%20in%20Spring%20Boot%2c%20by%20Coding%20N%20Concepts%0aConfigure%20Multiple%20Kafka%20Consumer%20from%20application%20properties%20file%20in%20Spring%20boot%20project.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fconfigure-multiple-kafka-consumer%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - Configure%20Multiple%20Kafka%20Consumer%20in%20Spring%20Boot.&amp;body=Configure%20Multiple%20Kafka%20Consumer%20in%20Spring%20Boot%2c%20by%20Coding%20N%20Concepts%0aStep-by-step%20guide%20to%20configure%20multiple%20Kafka%20consumers%20in%20Spring%20Boot%20from%20a%20properties%20file%2c%20each%20reading%20a%20different%20topic%20from%20a%20different%20Kafka%20cluster.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fspring-boot%2fconfigure-multiple-kafka-consumer%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>
@@ -920,7 +931,7 @@
         
         <li><a href="/spring-boot/configure-multiple-kafka-producer/"><img class="related_post__thumb" src="/img/logo/springboot.png" alt="" loading="lazy"><span class="related_post__title">Configure Multiple Kafka Producer in Spring Boot</span></a></li>
         
-        <li><a href="/spring-boot/configure-kafka-producer-and-consumer/"><img class="related_post__thumb" src="/img/logo/springboot.png" alt="" loading="lazy"><span class="related_post__title">Configure Kafka Producer and Consumer in spring boot</span></a></li>
+        <li><a href="/spring-boot/configure-kafka-producer-and-consumer/"><img class="related_post__thumb" src="/img/logo/springboot.png" alt="" loading="lazy"><span class="related_post__title">Configure Kafka Producer and Consumer in Spring Boot</span></a></li>
         
     </ul>
 </div>
