@@ -1175,7 +1175,7 @@ These sample questions cover all official SAFe Practice Consultant exam domains 
       <description>&lt;p&gt;In this quick article, we&amp;rsquo;ll learn how to pretty print JSON response in Spring Boot web application using Jackson property.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Configure Kafka Producer and Consumer in spring boot</title>
+      <title>Configure Kafka Producer and Consumer in Spring Boot</title>
       <link>https://codingnconcepts.com/spring-boot/configure-kafka-producer-and-consumer/</link>
       <pubDate>Sat, 11 Apr 2020 00:00:00 +0000</pubDate>
       
