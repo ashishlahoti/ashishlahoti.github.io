@@ -158,7 +158,7 @@ a:hover { color: var(--link-hover); text-decoration: underline; }
 	width: 100%;
 	max-width: var(--maxw);
 	margin: 0 auto;
-	padding: 32px 24px;
+	padding: 32px 0;
 	flex: 1;
 }
 
