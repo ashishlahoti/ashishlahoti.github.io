@@ -380,7 +380,7 @@ a:hover { color: var(--link-hover); text-decoration: underline; }
 .content h1:first-child { margin-top: 0; }
 .content h2 { font-size: 1.75rem; margin: 3.125rem 0 1.25rem; }
 .content h2:first-child { margin-top: 0; }
-.content h3 { font-size: 1.375rem; }
+.content h3 { font-size: 1.375rem; margin: 3.125rem 0 1.25rem; }
 .content h4 { font-size: 1.25rem; }
 .content h5 { font-size: 1.125rem; }
 .content h6 { font-size: 1rem; }
