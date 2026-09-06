@@ -908,7 +908,7 @@ kbd {
 	justify-content: center;
 }
 :root[data-theme="dark"] .list__thumbnail { background: #000; }
-.list__thumbnail img { width: 100%; height: 100%; object-fit: contain; padding: 8px; }
+.list__thumbnail img { width: 100%; height: 100%; object-fit: contain; padding: 6px; }
 
 .list__body { flex: 1 1 auto; min-width: 0; }
 .list__header { min-width: 0; }
