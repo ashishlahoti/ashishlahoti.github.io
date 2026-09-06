@@ -154,7 +154,7 @@ a:hover { color: var(--link-hover); text-decoration: underline; }
 .wrapper.flex {
 	display: flex;
 	align-items: flex-start;
-	gap: 40px;
+	gap: 20px;
 	width: 100%;
 	max-width: var(--maxw);
 	margin: 0 auto;
@@ -404,7 +404,7 @@ a:hover { color: var(--link-hover); text-decoration: underline; }
 	width: 100%;
 	max-width: var(--maxw);
 	margin: 0 auto;
-	padding: 28px 24px 0;
+	padding: 22px 10px 0;
 }
 .page-header .main__header { margin-bottom: 14px; }
 .page-header .main__content h1 { font-size: 1.6rem; margin: 0 0 8px; }
@@ -634,7 +634,6 @@ kbd {
 	font-size: 0.55em;
 	font-weight: 700;
 	vertical-align: middle;
-	margin-left: 0.4em;
 }
 
 /* ------------------------------------------------------------------ *
