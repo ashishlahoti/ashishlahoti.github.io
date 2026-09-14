@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://codingnconcepts.com/azure/azure-ai-apps-and-agents-developer-exam-questions/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/azure.png" />
 <meta property="article:published_time" content="2026-09-06T00:00:00+00:00" />
-<meta property="article:modified_time" content="2026-09-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-09-14T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -81,7 +81,7 @@
     "copyrightYear": "2026",
     "dateCreated": "2026-09-06T00:00:00.00Z",
     "datePublished": "2026-09-06T00:00:00.00Z",
-    "dateModified": "2026-09-06T00:00:00.00Z",
+    "dateModified": "2026-09-14T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -95,7 +95,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/azure.png"],
     "url": "https://codingnconcepts.com/azure/azure-ai-apps-and-agents-developer-exam-questions/",
-    "wordCount": 10017 ,
+    "wordCount": 12194 ,
     "genre": ["Azure Certification","Certification"],
     "keywords":  null 
 }
@@ -579,7 +579,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2026-09-06T00:00:00Z">Last Modified: Sep 06, 2026</time>
+	<time class="meta__text" datetime="2026-09-14T00:00:00Z">Last Modified: Sep 14, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -600,7 +600,11 @@
     </li>
     <li><a href="#practice-questions">Practice Questions</a>
       <ul>
-        <li></li>
+        <li><a href="#domain-1-plan-and-manage-an-azure-ai-solution-28">Domain 1: Plan and Manage an Azure AI Solution (28%)</a></li>
+        <li><a href="#domain-2-implement-generative-ai-and-agentic-solutions-32">Domain 2: Implement Generative AI and Agentic Solutions (32%)</a></li>
+        <li><a href="#domain-3-implement-computer-vision-solutions-14">Domain 3: Implement Computer Vision Solutions (14%)</a></li>
+        <li><a href="#domain-4-implement-text-analysis-solutions-14">Domain 4: Implement Text Analysis Solutions (14%)</a></li>
+        <li><a href="#domain-5-implement-information-extraction-solutions-12">Domain 5: Implement Information Extraction Solutions (12%)</a></li>
       </ul>
     </li>
   </ul>
@@ -670,6 +674,8 @@ div[autonumbering] h6:first-child { padding: 5px; margin: 0 0 15px 0;}
 div[autonumbering] p { font-size: 15px;}
 </style>
 <div autonumbering>
+<h3 id="domain-1-plan-and-manage-an-azure-ai-solution-28">Domain 1: Plan and Manage an Azure AI Solution (28%)</h3>
+<hr>
 <h6 id="a-company-wants-a-single-unified-platform-to-discover-and-deploy-models-from-a-large-model-catalog-build-both-simple-declarative-agents-and-full-code-hosted-agents-and-get-built-in-tracing-evaluation-and-governance-for-all-of-it-which-microsoft-platform-is-purpose-built-for-this">A company wants a single, unified platform to discover and deploy models from a large model catalog, build both simple declarative agents and full-code hosted agents, and get built-in tracing, evaluation, and governance for all of it. Which Microsoft platform is purpose-built for this?</h6>
 <p>✅ A. Microsoft Foundry<br>
 ⬜ B. Azure Kubernetes Service<br>
@@ -852,6 +858,59 @@ C: Availability zones are physically separate datacenters within an Azure region
 D: Region pairs are a disaster-recovery pairing between two Azure regions; they have no role in organizing projects within a Foundry resource.<br>
 <small>Source: <a href="https://learn.microsoft.com/en-us/azure/foundry/what-is-foundry">What is Microsoft Foundry? - Microsoft Learn</a></small></p>
 <hr>
+<h6 id="a-generative-ai-applications-default-content-filtering-configuration-is-blocking-some-legitimate-medical-education-content-because-it-is-being-flagged-under-the-self-harm-category-at-a-low-severity-threshold-the-team-has-a-valid-approved-use-case-and-wants-to-adjust-how-aggressively-that-specific-category-is-filtered-for-their-deployment-what-should-they-configure">A generative AI application&rsquo;s default content filtering configuration is blocking some legitimate medical-education content because it is being flagged under the &ldquo;self-harm&rdquo; category at a low severity threshold. The team has a valid, approved use case and wants to adjust how aggressively that specific category is filtered for their deployment. What should they configure?</h6>
+<p>✅ A. A custom content filter configuration with an adjusted severity threshold for that category, subject to Microsoft&rsquo;s eligibility and review process<br>
+⬜ B. Permanently disable all content filtering for the resource with no review<br>
+⬜ C. Switch to a completely different, less capable model<br>
+⬜ D. Ignore the issue since content filters cannot be adjusted</p>
+<p><strong><u>Explanation</u>:</strong><br>
+Microsoft Foundry allows configuring custom content filter configurations, including adjusting severity thresholds per harm category, for legitimate approved use cases, typically requiring the customer to apply for modified content filtering through Microsoft&rsquo;s review process rather than filtering being fixed and unchangeable.<br>
+<u>Why other options are incorrect</u>:<br>
+B: Permanently disabling all content filtering with no review removes safety guardrails across every category, which is broader and riskier than the targeted adjustment needed, and is not how responsible configuration changes are made.<br>
+C: Switching to a different model does not address the content filtering configuration itself and may not resolve the specific false-positive category issue.<br>
+D: Content filter configurations can, in fact, be adjusted for approved scenarios; assuming they cannot be adjusted is factually incorrect.<br>
+<small>Source: <a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/content-filter-severity-levels">Harm categories and severity levels in Microsoft Foundry - Microsoft Learn</a></small></p>
+<hr>
+<h6 id="a-company-deploying-an-internal-generative-ai-assistant-wants-to-make-sure-its-data-used-for-grounding-via-rag-stays-isolated-to-their-own-tenant-and-is-not-used-to-train-or-improve-microsofts-underlying-foundation-models-which-general-principle-from-microsofts-approach-to-foundry-and-azure-openai-addresses-this-concern">A company deploying an internal generative AI assistant wants to make sure its data used for grounding (via RAG) stays isolated to their own tenant and is not used to train or improve Microsoft&rsquo;s underlying foundation models. Which general principle from Microsoft&rsquo;s approach to Foundry and Azure OpenAI addresses this concern?</h6>
+<p>✅ A. Customer data used in Foundry (including RAG grounding data and prompts) is not used to train the underlying foundation models without explicit customer opt-in<br>
+⬜ B. All customer data is automatically pooled to improve the shared model for every tenant<br>
+⬜ C. Data isolation cannot be guaranteed on any Azure AI service<br>
+⬜ D. Customers must disable logging entirely to prevent any data use</p>
+<p><strong><u>Explanation</u>:</strong><br>
+Microsoft&rsquo;s stated data, privacy, and security approach for Azure OpenAI / Microsoft Foundry is that customer prompts, completions, and grounding data are not used to train, retrain, or improve the underlying foundation models, and remain within the customer&rsquo;s Azure tenant/resource boundary unless the customer explicitly opts in to a different arrangement.<br>
+<u>Why other options are incorrect</u>:<br>
+B: This is the opposite of Microsoft&rsquo;s stated approach; customer data is not pooled across tenants to improve shared foundation models by default.<br>
+C: Microsoft&rsquo;s Azure AI services documentation does describe specific data isolation and residency guarantees; claiming isolation cannot be guaranteed at all is inaccurate.<br>
+D: Disabling logging entirely is not required to prevent training use, since Microsoft&rsquo;s default policy already excludes customer data from model training; logging (like abuse monitoring) is a separate, configurable concern.<br>
+<small>Source: <a href="https://learn.microsoft.com/en-us/azure/foundry/">Microsoft Foundry documentation - Microsoft Learn</a></small></p>
+<hr>
+<h6 id="a-team-designing-a-generative-ai-application-follows-microsofts-layered-approach-to-responsible-ai-and-wants-to-apply-a-mitigation-at-the-safety-system-level-to-help-block-harmful-model-output-independent-of-any-application-level-prompt-engineering-or-user-education-which-microsoft-foundry-capability-operates-at-this-safety-system-level">A team designing a generative AI application follows Microsoft&rsquo;s layered approach to responsible AI and wants to apply a mitigation at the &ldquo;Safety System&rdquo; level to help block harmful model output, independent of any application-level prompt engineering or user education. Which Microsoft Foundry capability operates at this safety system level?</h6>
+<p>✅ A. Guardrails (formerly called content filters)<br>
+⬜ B. DALL-E model support<br>
+⬜ C. Fine-tuning<br>
+⬜ D. A resource lock</p>
+<p><strong><u>Explanation</u>:</strong><br>
+Microsoft&rsquo;s layered approach to mitigating harmful content spans four levels: Model, Safety System, Application, and Positioning (user education). At the Safety System level, platform-level mitigations — Microsoft Foundry Guardrails (previously called content filters) — run independently of the model and the application to detect and block harmful content in both prompts and completions.<br>
+<u>Why other options are incorrect</u>:<br>
+B: DALL-E model support refers to the availability of an image-generation model in the catalog; it is a model capability, not a safety-system mitigation.<br>
+C: Fine-tuning retrains a model&rsquo;s weights on custom data and operates at the Model level of the layered approach, not the Safety System level.<br>
+D: A resource lock protects a resource from accidental deletion or modification; it has no role in mitigating harmful content generation.<br>
+<small>Source: <a href="https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/overview">Overview of Responsible AI practices for Azure OpenAI in Foundry Models - Microsoft Learn</a></small></p>
+<hr>
+<h6 id="you-are-planning-a-microsoft-foundry-project-that-will-contain-multiple-agents-each-agent-will-access-the-same-azure-ai-search-resource-you-need-to-recommend-a-solution-to-centrally-manage-the-azure-ai-search-credentials-within-the-project-so-the-same-configuration-is-used-across-all-the-agents-what-should-you-recommend">You are planning a Microsoft Foundry project that will contain multiple agents. Each agent will access the same Azure AI Search resource. You need to recommend a solution to centrally manage the Azure AI Search credentials within the project, so the same configuration is used across all the agents. What should you recommend?</h6>
+<p>⬜ A. Enable role-based access control (RBAC) for the Azure AI Search resource.<br>
+✅ B. Add a connection to the Azure AI Search resource.<br>
+⬜ C. Disable key-based access control on the Azure AI Search resource.<br>
+⬜ D. Create a managed private endpoint that connects to the Azure AI Search resource.</p>
+<p><strong><u>Explanation</u>:</strong><br>
+A Foundry project connection stores the Azure AI Search endpoint and credentials (key-based or Microsoft Entra ID) once at the project level. Every agent in the project then references that single connection by ID, so credentials are configured and updated in one place rather than duplicated per agent.<br>
+<u>Why other options are incorrect</u>:<br>
+A: Enabling RBAC changes how the search resource authenticates a caller (keyless, identity-based access), but it doesn&rsquo;t by itself create the shared, centrally referenced configuration that agents consume — a connection is still what agents point to.<br>
+C: Disabling key-based access control is a security hardening step that forces Microsoft Entra ID authentication; it doesn&rsquo;t provide a central place for agents to obtain the resource&rsquo;s configuration.<br>
+D: A managed private endpoint restricts network traffic to a private virtual network, addressing network isolation, not centralized credential management across agents.<br>
+<small>Source: <a href="https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/tools/ai-search">Connect an Azure AI Search index to Foundry agents - Microsoft Learn</a></small></p>
+<h3 id="domain-2-implement-generative-ai-and-agentic-solutions-32">Domain 2: Implement Generative AI and Agentic Solutions (32%)</h3>
+<hr>
 <h6 id="a-developer-deploys-a-gpt-model-in-microsoft-foundry-and-wants-to-establish-the-assistants-persona-tone-and-behavioral-constraints-such-as-always-respond-in-formal-english-and-never-provide-medical-advice-before-any-user-messages-are-sent-where-should-this-instruction-be-placed-in-the-chat-completion-request">A developer deploys a GPT model in Microsoft Foundry and wants to establish the assistant&rsquo;s persona, tone, and behavioral constraints (such as &ldquo;always respond in formal English and never provide medical advice&rdquo;) before any user messages are sent. Where should this instruction be placed in the chat completion request?</h6>
 <p>✅ A. In the system message<br>
 ⬜ B. In the user message<br>
@@ -890,19 +949,6 @@ B: Increasing the temperature parameter affects the randomness/creativity of the
 C: Disabling the content filter removes a safety mechanism and has nothing to do with grounding responses in updated documentation.<br>
 D: Switching to a smaller model may reduce cost or latency but does not give the model access to the company&rsquo;s internal, frequently updated documentation.<br>
 <small>Source: <a href="https://learn.microsoft.com/en-us/azure/foundry/concepts/retrieval-augmented-generation">Retrieval augmented generation (RAG) and indexes in Microsoft Foundry - Microsoft Learn</a></small></p>
-<hr>
-<h6 id="in-a-retrieval-augmented-generation-rag-pipeline-documents-and-user-queries-are-converted-into-high-dimensional-numerical-representations-so-that-semantically-similar-pieces-of-text-can-be-found-even-when-they-dont-share-exact-keywords-what-are-these-numerical-representations-called">In a Retrieval Augmented Generation (RAG) pipeline, documents and user queries are converted into high-dimensional numerical representations so that semantically similar pieces of text can be found even when they don&rsquo;t share exact keywords. What are these numerical representations called?</h6>
-<p>✅ A. Embeddings<br>
-⬜ B. Tokens<br>
-⬜ C. Resource tags<br>
-⬜ D. System messages</p>
-<p><strong><u>Explanation</u>:</strong><br>
-Embeddings are numerical vector representations of text (or other content) that capture semantic meaning, allowing a similarity search (vector search) to find semantically related content even when the wording differs, which is foundational to how RAG retrieves relevant grounding data.<br>
-<u>Why other options are incorrect</u>:<br>
-B: Tokens are the discrete units (roughly word or sub-word pieces) that a language model processes and that count against context-window and billing limits; they are not the semantic vector representations used for similarity search.<br>
-C: Resource tags are metadata labels used to organize Azure resources for management and cost purposes, unrelated to semantic search.<br>
-D: System messages configure a model&rsquo;s persona and behavior in a chat completion request; they are not numerical representations of text used for retrieval.<br>
-<small>Source: <a href="https://learn.microsoft.com/en-us/azure/search/vector-search-overview">Vector search overview - Azure AI Search - Microsoft Learn</a></small></p>
 <hr>
 <h6 id="a-developer-wants-to-build-an-ai-agent-by-simply-specifying-its-instructions-choosing-a-model-from-the-catalog-and-attaching-a-couple-of-built-in-tools-all-through-the-foundry-portal-or-sdk-without-writing-custom-orchestration-code-or-managing-any-infrastructure-which-foundry-agent-building-approach-fits-this-scenario">A developer wants to build an AI agent by simply specifying its instructions, choosing a model from the catalog, and attaching a couple of built-in tools, all through the Foundry portal or SDK, without writing custom orchestration code or managing any infrastructure. Which Foundry agent-building approach fits this scenario?</h6>
 <p>✅ A. A prompt agent<br>
@@ -956,19 +1002,6 @@ C: Vector indexing is the process of building a searchable index of embeddings f
 D: Resource tagging is an Azure resource-organization feature for cost and management purposes, unrelated to agent workflow design.<br>
 <small>Source: <a href="https://learn.microsoft.com/en-us/azure/foundry/agents/overview">What is Foundry Agent Service? - Microsoft Learn</a></small></p>
 <hr>
-<h6 id="a-generative-ai-applications-default-content-filtering-configuration-is-blocking-some-legitimate-medical-education-content-because-it-is-being-flagged-under-the-self-harm-category-at-a-low-severity-threshold-the-team-has-a-valid-approved-use-case-and-wants-to-adjust-how-aggressively-that-specific-category-is-filtered-for-their-deployment-what-should-they-configure">A generative AI application&rsquo;s default content filtering configuration is blocking some legitimate medical-education content because it is being flagged under the &ldquo;self-harm&rdquo; category at a low severity threshold. The team has a valid, approved use case and wants to adjust how aggressively that specific category is filtered for their deployment. What should they configure?</h6>
-<p>✅ A. A custom content filter configuration with an adjusted severity threshold for that category, subject to Microsoft&rsquo;s eligibility and review process<br>
-⬜ B. Permanently disable all content filtering for the resource with no review<br>
-⬜ C. Switch to a completely different, less capable model<br>
-⬜ D. Ignore the issue since content filters cannot be adjusted</p>
-<p><strong><u>Explanation</u>:</strong><br>
-Microsoft Foundry allows configuring custom content filter configurations, including adjusting severity thresholds per harm category, for legitimate approved use cases, typically requiring the customer to apply for modified content filtering through Microsoft&rsquo;s review process rather than filtering being fixed and unchangeable.<br>
-<u>Why other options are incorrect</u>:<br>
-B: Permanently disabling all content filtering with no review removes safety guardrails across every category, which is broader and riskier than the targeted adjustment needed, and is not how responsible configuration changes are made.<br>
-C: Switching to a different model does not address the content filtering configuration itself and may not resolve the specific false-positive category issue.<br>
-D: Content filter configurations can, in fact, be adjusted for approved scenarios; assuming they cannot be adjusted is factually incorrect.<br>
-<small>Source: <a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/content-filter-severity-levels">Harm categories and severity levels in Microsoft Foundry - Microsoft Learn</a></small></p>
-<hr>
 <h6 id="a-company-has-a-very-specific-narrow-task-classifying-support-tickets-into-one-of-12-internal-categories-using-their-own-historical-labeled-examples-and-wants-the-model-itself-to-internalize-this-pattern-so-it-performs-the-task-accurately-with-short-prompts-and-lower-per-call-token-usage-rather-than-repeatedly-including-many-examples-in-every-prompt-which-approach-best-fits-this-requirement">A company has a very specific, narrow task (classifying support tickets into one of 12 internal categories using their own historical labeled examples) and wants the model itself to internalize this pattern so it performs the task accurately with short prompts and lower per-call token usage, rather than repeatedly including many examples in every prompt. Which approach best fits this requirement?</h6>
 <p>✅ A. Fine-tuning a model on the company&rsquo;s labeled dataset<br>
 ⬜ B. Increasing the context window size only<br>
@@ -1008,19 +1041,6 @@ C: The content filter severity threshold controls how aggressively harmful conte
 D: A region pair is a disaster-recovery pairing between two Azure regions and has no bearing on a model&rsquo;s input size limits.<br>
 <small>Source: <a href="https://learn.microsoft.com/en-us/azure/foundry/">Microsoft Foundry documentation - Microsoft Learn</a></small></p>
 <hr>
-<h6 id="a-marketing-team-wants-to-generate-original-promotional-images-from-text-descriptions-for-example-a-minimalist-product-photo-of-a-coffee-mug-on-a-wooden-table-as-part-of-their-generative-ai-application-which-type-of-model-should-be-deployed-for-this-capability">A marketing team wants to generate original promotional images from text descriptions (for example, &ldquo;a minimalist product photo of a coffee mug on a wooden table&rdquo;) as part of their generative AI application. Which type of model should be deployed for this capability?</h6>
-<p>✅ A. An image generation model (such as a DALL-E-family model)<br>
-⬜ B. A speech-to-text model<br>
-⬜ C. A text embedding model<br>
-⬜ D. A key phrase extraction model</p>
-<p><strong><u>Explanation</u>:</strong><br>
-Image generation models, such as DALL-E-family models available through the Foundry model catalog, take a text description (prompt) and generate original images matching that description, which directly fits the marketing team&rsquo;s requirement.<br>
-<u>Why other options are incorrect</u>:<br>
-B: A speech-to-text model transcribes spoken audio into text; it has no capability to generate images.<br>
-C: A text embedding model converts text into numerical vector representations for semantic search; it does not generate images.<br>
-D: A key phrase extraction model identifies important phrases within text; it has no image-generation capability.<br>
-<small>Source: <a href="https://learn.microsoft.com/en-us/azure/foundry/">Microsoft Foundry documentation - Microsoft Learn</a></small></p>
-<hr>
 <h6 id="a-development-team-wants-their-foundry-agent-to-connect-to-an-external-standardized-tool-server-that-exposes-capabilities-like-file-access-and-web-search-through-a-common-model-agnostic-protocol-so-the-agent-can-use-tools-built-by-third-parties-without-custom-per-tool-integration-code-which-capability-supports-this">A development team wants their Foundry agent to connect to an external, standardized tool server that exposes capabilities like file access and web search through a common, model-agnostic protocol, so the agent can use tools built by third parties without custom per-tool integration code. Which capability supports this?</h6>
 <p>✅ A. Connecting to tools via the Model Context Protocol (MCP)<br>
 ⬜ B. Applying a resource lock<br>
@@ -1047,17 +1067,68 @@ C: Increasing the content filter severity threshold is a safety configuration se
 D: Applying a customer-managed key is an encryption-at-rest feature, unrelated to agent orchestration framework choice.<br>
 <small>Source: <a href="https://learn.microsoft.com/en-us/azure/foundry/agents/overview">What is Foundry Agent Service? - Microsoft Learn</a></small></p>
 <hr>
-<h6 id="a-company-deploying-an-internal-generative-ai-assistant-wants-to-make-sure-its-data-used-for-grounding-via-rag-stays-isolated-to-their-own-tenant-and-is-not-used-to-train-or-improve-microsofts-underlying-foundation-models-which-general-principle-from-microsofts-approach-to-foundry-and-azure-openai-addresses-this-concern">A company deploying an internal generative AI assistant wants to make sure its data used for grounding (via RAG) stays isolated to their own tenant and is not used to train or improve Microsoft&rsquo;s underlying foundation models. Which general principle from Microsoft&rsquo;s approach to Foundry and Azure OpenAI addresses this concern?</h6>
-<p>✅ A. Customer data used in Foundry (including RAG grounding data and prompts) is not used to train the underlying foundation models without explicit customer opt-in<br>
-⬜ B. All customer data is automatically pooled to improve the shared model for every tenant<br>
-⬜ C. Data isolation cannot be guaranteed on any Azure AI service<br>
-⬜ D. Customers must disable logging entirely to prevent any data use</p>
+<h6 id="a-developer-building-a-rag-based-generative-ai-application-assembles-the-final-prompt-that-gets-sent-to-the-generative-model-from-several-distinct-parts-which-of-the-following-are-typically-components-of-that-assembled-prompt-select-all-that-apply">A developer building a RAG-based generative AI application assembles the final prompt that gets sent to the generative model from several distinct parts. Which of the following are typically components of that assembled prompt? (Select all that apply.)</h6>
+<p>✅ A. The retrieved data as context (grounding data)<br>
+✅ B. The query<br>
+✅ C. Instructions for the response, such as tone, length, and specificity<br>
+⬜ D. The vector embeddings</p>
 <p><strong><u>Explanation</u>:</strong><br>
-Microsoft&rsquo;s stated data, privacy, and security approach for Azure OpenAI / Microsoft Foundry is that customer prompts, completions, and grounding data are not used to train, retrain, or improve the underlying foundation models, and remain within the customer&rsquo;s Azure tenant/resource boundary unless the customer explicitly opts in to a different arrangement.<br>
+In a RAG pattern, the application combines the user&rsquo;s query, the retrieved content used as grounding context, and instructions (typically carried in a system message) that guide tone, length, and specificity into the final prompt sent to the model for generation.<br>
+<u>Why option D is incorrect</u>:<br>
+Vector embeddings are the numerical representations used during the retrieval step to find semantically relevant content via similarity search; they are a retrieval mechanism, not text that is itself included in the assembled prompt sent to the model.<br>
+<small>Source: <a href="https://learn.microsoft.com/en-us/azure/foundry/concepts/retrieval-augmented-generation">Retrieval augmented generation (RAG) and indexes in Microsoft Foundry - Microsoft Learn</a></small></p>
+<hr>
+<h6 id="an-ai-agent-is-connected-to-the-azure-language-mcp-server-as-a-tool-provider-when-processing-a-users-prompt-how-does-the-agent-determine-which-specific-azure-language-mcp-tool-to-call">An AI agent is connected to the Azure Language MCP server as a tool provider. When processing a user&rsquo;s prompt, how does the agent determine which specific Azure Language MCP tool to call?</h6>
+<p>✅ A. The agent matches the prompt to the tool descriptions it receives from the MCP server<br>
+⬜ B. The developer writes custom routing logic to direct each prompt to a specific tool<br>
+⬜ C. The MCP server itself analyzes the prompt and automatically routes it to a tool<br>
+⬜ D. The user manually selects which tool should handle their prompt before sending it</p>
+<p><strong><u>Explanation</u>:</strong><br>
+Under the Model Context Protocol, an MCP server exposes its available tools along with descriptions of what each tool does. The agent (via the underlying language model&rsquo;s reasoning) matches the intent of the user&rsquo;s prompt against those tool descriptions to decide which tool to call, without the developer needing to hand-write per-prompt routing logic and without the server itself performing the routing.<br>
 <u>Why other options are incorrect</u>:<br>
-B: This is the opposite of Microsoft&rsquo;s stated approach; customer data is not pooled across tenants to improve shared foundation models by default.<br>
-C: Microsoft&rsquo;s Azure AI services documentation does describe specific data isolation and residency guarantees; claiming isolation cannot be guaranteed at all is inaccurate.<br>
-D: Disabling logging entirely is not required to prevent training use, since Microsoft&rsquo;s default policy already excludes customer data from model training; logging (like abuse monitoring) is a separate, configurable concern.<br>
+B: Writing custom routing logic for every prompt defeats the purpose of MCP, which standardizes tool discovery and selection so agents can reason about which tool to use.<br>
+C: The MCP server&rsquo;s role is to expose tools and their descriptions/schemas; it does not itself analyze prompts or perform routing — that reasoning happens in the agent.<br>
+D: Requiring the user to manually pick a tool would eliminate the agentic behavior that lets the model autonomously decide how to fulfill a request.<br>
+<small>Source: <a href="https://devblogs.microsoft.com/foundry/announcing-azure-language-in-foundry-tools-for-deterministic-privacy-first-agents/">Announcing Azure Language in Foundry Tools for deterministic, privacy-first agents - Microsoft Foundry Blog</a></small></p>
+<hr>
+<h6 id="what-is-the-primary-role-of-the-azure-language-mcp-server-in-an-agentic-ai-solution">What is the primary role of the Azure Language MCP server in an agentic AI solution?</h6>
+<p>✅ A. To expose Azure Language&rsquo;s text analysis capabilities — such as PII redaction, sentiment analysis, entity extraction, and summarization — as MCP tools that agents can call<br>
+⬜ B. To train and fine-tune custom language models for use by AI agents<br>
+⬜ C. To deploy and manage large language models within an Azure subscription<br>
+⬜ D. To provide a no-code portal for building declarative prompt agents</p>
+<p><strong><u>Explanation</u>:</strong><br>
+The Azure Language MCP server exposes Azure Language&rsquo;s deterministic text analysis capabilities — including PII redaction (for plain text and native documents), intent detection, question answering, sentiment analysis, entity extraction, and summarization — as a library of MCP tools that agents can call directly, removing the need for an agent to separately orchestrate each Azure Language API.<br>
+<u>Why other options are incorrect</u>:<br>
+B: Training and fine-tuning custom language models is a separate model-development activity, not the function of the MCP server, which surfaces existing prebuilt Language capabilities as tools.<br>
+C: Deploying and managing large language models is handled by the Foundry model catalog and deployment infrastructure, not by the Language MCP server.<br>
+D: A no-code portal for building declarative prompt agents describes the Foundry portal&rsquo;s prompt-agent experience, not the Language MCP server, which is a tool provider consumed by agents.<br>
+<small>Source: <a href="https://devblogs.microsoft.com/foundry/announcing-azure-language-in-foundry-tools-for-deterministic-privacy-first-agents/">Announcing Azure Language in Foundry Tools for deterministic, privacy-first agents - Microsoft Foundry Blog</a></small></p>
+<hr>
+<h6 id="you-have-a-microsoft-foundry-project-that-contains-a-high-traffic-agent-after-a-recent-update-operational-costs-increase-significantly-even-though-monitoring-confirms-the-volume-of-user-traffic-to-the-agent-is-unchanged-you-suspect-that-changes-to-the-request-or-response-characteristics-are-causing-the-increase-you-need-to-identify-whether-the-additional-costs-are-driven-by-the-model-input-size-the-model-output-size-or-expanded-tool-usage-which-observability-capability-should-you-use">You have a Microsoft Foundry project that contains a high-traffic agent. After a recent update, operational costs increase significantly, even though monitoring confirms the volume of user traffic to the agent is unchanged. You suspect that changes to the request or response characteristics are causing the increase. You need to identify whether the additional costs are driven by the model input size, the model output size, or expanded tool usage. Which observability capability should you use?</h6>
+<p>⬜ A. Evaluation metrics<br>
+✅ B. Token usage<br>
+⬜ C. Latency<br>
+⬜ D. Run success rate</p>
+<p><strong><u>Explanation</u>:</strong><br>
+The token usage metric in Foundry&rsquo;s agent observability dashboard shows the token counts consumed by agent runs over a time range. Since larger prompts, larger model responses, and additional tool-call round trips all consume tokens, tracking token usage lets you pinpoint which of these is driving the per-call cost increase, even while overall traffic volume stays flat.<br>
+<u>Why other options are incorrect</u>:<br>
+A: Evaluation metrics (such as groundedness, relevance, or coherence) score the quality of agent outputs; they don&rsquo;t reveal what is driving compute cost.<br>
+C: Latency measures how long a run takes to complete; slower runs don&rsquo;t necessarily mean higher token consumption or cost.<br>
+D: Run success rate reports the percentage of runs that complete successfully; it says nothing about token consumption or cost drivers.<br>
+<small>Source: <a href="https://learn.microsoft.com/en-us/azure/foundry/observability/how-to/how-to-monitor-agents-dashboard">Monitor agents with the Agent Monitoring Dashboard - Microsoft Learn</a></small></p>
+<h3 id="domain-3-implement-computer-vision-solutions-14">Domain 3: Implement Computer Vision Solutions (14%)</h3>
+<hr>
+<h6 id="a-marketing-team-wants-to-generate-original-promotional-images-from-text-descriptions-for-example-a-minimalist-product-photo-of-a-coffee-mug-on-a-wooden-table-as-part-of-their-generative-ai-application-which-type-of-model-should-be-deployed-for-this-capability">A marketing team wants to generate original promotional images from text descriptions (for example, &ldquo;a minimalist product photo of a coffee mug on a wooden table&rdquo;) as part of their generative AI application. Which type of model should be deployed for this capability?</h6>
+<p>✅ A. An image generation model (such as a DALL-E-family model)<br>
+⬜ B. A speech-to-text model<br>
+⬜ C. A text embedding model<br>
+⬜ D. A key phrase extraction model</p>
+<p><strong><u>Explanation</u>:</strong><br>
+Image generation models, such as DALL-E-family models available through the Foundry model catalog, take a text description (prompt) and generate original images matching that description, which directly fits the marketing team&rsquo;s requirement.<br>
+<u>Why other options are incorrect</u>:<br>
+B: A speech-to-text model transcribes spoken audio into text; it has no capability to generate images.<br>
+C: A text embedding model converts text into numerical vector representations for semantic search; it does not generate images.<br>
+D: A key phrase extraction model identifies important phrases within text; it has no image-generation capability.<br>
 <small>Source: <a href="https://learn.microsoft.com/en-us/azure/foundry/">Microsoft Foundry documentation - Microsoft Learn</a></small></p>
 <hr>
 <h6 id="a-media-company-wants-to-automatically-generate-a-short-natural-language-caption-describing-the-content-of-each-uploaded-photo-for-example-a-dog-running-on-a-beach-along-with-a-list-of-relevant-tags-which-azure-vision-capability-should-they-use">A media company wants to automatically generate a short natural-language caption describing the content of each uploaded photo (for example, &ldquo;a dog running on a beach&rdquo;), along with a list of relevant tags. Which Azure Vision capability should they use?</h6>
@@ -1072,19 +1143,6 @@ B: Custom Vision object detection requires training a custom model on labeled ex
 C: Document Intelligence extracts structured data from documents like forms, invoices, and receipts; it is not designed for general photo captioning.<br>
 D: Translator performs text and document translation between languages; it has no image analysis capability.<br>
 <small>Source: <a href="https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/">Azure Vision documentation - Microsoft Learn</a></small></p>
-<hr>
-<h6 id="a-logistics-company-wants-to-extract-all-the-printed-and-handwritten-text-from-scanned-shipping-labels-and-warehouse-documents-so-it-can-be-indexed-and-searched-which-azure-vision-capability-is-designed-specifically-for-this-text-extraction-task">A logistics company wants to extract all the printed and handwritten text from scanned shipping labels and warehouse documents so it can be indexed and searched. Which Azure Vision capability is designed specifically for this text-extraction task?</h6>
-<p>✅ A. OCR (Optical Character Recognition / Read API)<br>
-⬜ B. Face detection<br>
-⬜ C. Image captioning<br>
-⬜ D. Spatial analysis</p>
-<p><strong><u>Explanation</u>:</strong><br>
-Optical Character Recognition (OCR), exposed through the Read API in Azure Vision, is designed to extract both printed and handwritten text from images and documents, making it the correct capability for digitizing and indexing text from scanned shipping labels.<br>
-<u>Why other options are incorrect</u>:<br>
-B: Face detection identifies and analyzes human faces in images; it has no text-extraction capability.<br>
-C: Image captioning generates a natural-language description of an image&rsquo;s overall content; it does not extract exact printed or handwritten text.<br>
-D: Spatial analysis tracks how people move and interact with physical spaces using video feeds; it is unrelated to extracting text from documents.<br>
-<small>Source: <a href="https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-ocr">OCR - Optical Character Recognition - Microsoft Learn</a></small></p>
 <hr>
 <h6 id="a-manufacturer-wants-to-train-a-model-that-can-tell-the-difference-between-three-specific-types-of-proprietary-machine-parts-in-photos-taken-on-their-factory-floor-a-distinction-that-no-general-purpose-prebuilt-vision-model-would-know-out-of-the-box-which-azure-service-is-designed-for-training-this-kind-of-custom-image-classification-model-using-the-companys-own-labeled-images">A manufacturer wants to train a model that can tell the difference between three specific types of proprietary machine parts in photos taken on their factory floor, a distinction that no general-purpose, prebuilt vision model would know out of the box. Which Azure service is designed for training this kind of custom image classification model using the company&rsquo;s own labeled images?</h6>
 <p>✅ A. Custom Vision<br>
@@ -1150,6 +1208,20 @@ B: Object detection is used when you need bounding-box locations for one or more
 C: OCR extracts text from images; it has no relevance to visually classifying defect types.<br>
 D: Video Indexer analyzes video content for combined insights; this scenario involves still photos and a straightforward classification task, not video analysis.<br>
 <small>Source: <a href="https://learn.microsoft.com/en-us/azure/ai-services/custom-vision-service/quickstarts/image-classification">Quickstart: Image classification with Custom Vision - Microsoft Learn</a></small></p>
+<hr>
+<h6 id="you-are-deploying-a-support-agent-that-enables-users-to-upload-photos-you-need-to-automatically-classify-uploaded-images-for-harmful-content-and-the-solution-must-block-content-based-on-severity-levels-what-should-you-do">You are deploying a support agent that enables users to upload photos. You need to automatically classify uploaded images for harmful content, and the solution must block content based on severity levels. What should you do?</h6>
+<p>✅ A. Implement image moderation.<br>
+⬜ B. Enable prompt shields.<br>
+⬜ C. Apply keyword scanning to optical character recognition (OCR) output by using Azure Vision in Foundry Tools.<br>
+⬜ D. Use blocklists.</p>
+<p><strong><u>Explanation</u>:</strong><br>
+Azure AI Content Safety&rsquo;s image moderation capability analyzes uploaded images and classifies them across harm categories (hate, violence, self-harm, sexual content), returning a severity score for each category so the application can block or allow content based on configurable severity thresholds — directly meeting the requirement.<br>
+<u>Why other options are incorrect</u>:<br>
+B: Prompt shields detect and block prompt injection and jailbreak attempts embedded in text or documents; they don&rsquo;t classify image content for harm categories.<br>
+C: Running OCR and keyword-scanning the extracted text only catches harmful content that appears as visible text in the image; it misses harmful visual content with no text and provides no severity-based classification.<br>
+D: Blocklists match specific custom terms or phrases in text; they are not an image-analysis capability and can&rsquo;t classify visual content by severity.<br>
+<small>Source: <a href="https://learn.microsoft.com/en-us/azure/ai-services/content-safety/quickstart-image">Quickstart: Analyze image content - Azure AI Content Safety - Microsoft Learn</a></small></p>
+<h3 id="domain-4-implement-text-analysis-solutions-14">Domain 4: Implement Text Analysis Solutions (14%)</h3>
 <hr>
 <h6 id="a-retail-company-wants-to-automatically-determine-whether-each-customer-product-review-expresses-a-positive-negative-mixed-or-neutral-opinion-and-also-identify-which-specific-aspects-of-the-product-like-battery-life-or-screen-quality-drove-that-opinion-which-azure-language-capability-should-be-used">A retail company wants to automatically determine whether each customer product review expresses a positive, negative, mixed, or neutral opinion, and also identify which specific aspects of the product (like &ldquo;battery life&rdquo; or &ldquo;screen quality&rdquo;) drove that opinion. Which Azure Language capability should be used?</h6>
 <p>✅ A. Sentiment analysis and opinion mining<br>
@@ -1242,6 +1314,46 @@ C: Key phrase extraction identifies important concepts in text, which requires k
 D: PII detection identifies personal information within text; it does not determine what language the text is written in.<br>
 <small>Source: <a href="https://learn.microsoft.com/en-us/azure/ai-services/language-service/">Azure Language documentation - Microsoft Learn</a></small></p>
 <hr>
+<h6 id="you-are-creating-an-agent-workflow-in-a-microsoft-foundry-project-to-support-natural-voice-interactions-the-agent-must-receive-continuous-audio-input-convert-the-input-into-text-for-reasoning-and-then-return-spoken-responses-to-a-user-the-workflow-must-support-turn-taking-dynamics-where-the-agent-begins-to-generate-speech-output-before-the-user-finishes-speaking-and-must-operate-with-low-latency-to-maintain-a-conversational-experience-you-need-to-enable-both-speech-to-text-and-text-to-speech-in-a-real-time-agent-interaction-what-should-you-do">You are creating an agent workflow in a Microsoft Foundry project to support natural voice interactions. The agent must receive continuous audio input, convert the input into text for reasoning, and then return spoken responses to a user. The workflow must support turn-taking dynamics, where the agent begins to generate speech output before the user finishes speaking, and must operate with low latency to maintain a conversational experience. You need to enable both speech to text and text to speech in a real-time agent interaction. What should you do?</h6>
+<p>⬜ A. Use an embeddings model to encode the audio, and then decode the audio into text and speech.<br>
+⬜ B. Use batch transcription to convert the audio input and return text responses from the agent.<br>
+⬜ C. Use speech translation to convert the audio into another language and return the translated text.<br>
+✅ D. Use real-time speech to text for incoming audio and text to speech for agent responses.</p>
+<p><strong><u>Explanation</u>:</strong><br>
+Real-time speech to text continuously transcribes the incoming audio stream as the user speaks, letting the agent begin reasoning before the user has finished, while real-time text to speech streams the agent&rsquo;s spoken response back with minimal delay. Together they support the required turn-taking behavior and the low latency a conversational voice experience needs — the pattern behind Foundry&rsquo;s real-time voice agent capabilities such as the Voice Live API.<br>
+<u>Why other options are incorrect</u>:<br>
+A: An embeddings model produces numerical vector representations for semantic search; it isn&rsquo;t designed to transcribe speech or synthesize spoken output and doesn&rsquo;t address turn-taking or latency.<br>
+B: Batch transcription processes recorded audio asynchronously after it has been fully captured, which is unsuitable for continuous, low-latency, turn-taking conversation.<br>
+C: Speech translation converts spoken input into another language; it doesn&rsquo;t provide the real-time text-to-speech response loop the agent needs, and it doesn&rsquo;t address turn-taking.<br>
+<small>Source: <a href="https://learn.microsoft.com/en-us/azure/ai-services/speech-service/voice-live">Voice Live API overview - Microsoft Learn</a></small></p>
+<h3 id="domain-5-implement-information-extraction-solutions-12">Domain 5: Implement Information Extraction Solutions (12%)</h3>
+<hr>
+<h6 id="in-a-retrieval-augmented-generation-rag-pipeline-documents-and-user-queries-are-converted-into-high-dimensional-numerical-representations-so-that-semantically-similar-pieces-of-text-can-be-found-even-when-they-dont-share-exact-keywords-what-are-these-numerical-representations-called">In a Retrieval Augmented Generation (RAG) pipeline, documents and user queries are converted into high-dimensional numerical representations so that semantically similar pieces of text can be found even when they don&rsquo;t share exact keywords. What are these numerical representations called?</h6>
+<p>✅ A. Embeddings<br>
+⬜ B. Tokens<br>
+⬜ C. Resource tags<br>
+⬜ D. System messages</p>
+<p><strong><u>Explanation</u>:</strong><br>
+Embeddings are numerical vector representations of text (or other content) that capture semantic meaning, allowing a similarity search (vector search) to find semantically related content even when the wording differs, which is foundational to how RAG retrieves relevant grounding data.<br>
+<u>Why other options are incorrect</u>:<br>
+B: Tokens are the discrete units (roughly word or sub-word pieces) that a language model processes and that count against context-window and billing limits; they are not the semantic vector representations used for similarity search.<br>
+C: Resource tags are metadata labels used to organize Azure resources for management and cost purposes, unrelated to semantic search.<br>
+D: System messages configure a model&rsquo;s persona and behavior in a chat completion request; they are not numerical representations of text used for retrieval.<br>
+<small>Source: <a href="https://learn.microsoft.com/en-us/azure/search/vector-search-overview">Vector search overview - Azure AI Search - Microsoft Learn</a></small></p>
+<hr>
+<h6 id="a-logistics-company-wants-to-extract-all-the-printed-and-handwritten-text-from-scanned-shipping-labels-and-warehouse-documents-so-it-can-be-indexed-and-searched-which-azure-vision-capability-is-designed-specifically-for-this-text-extraction-task">A logistics company wants to extract all the printed and handwritten text from scanned shipping labels and warehouse documents so it can be indexed and searched. Which Azure Vision capability is designed specifically for this text-extraction task?</h6>
+<p>✅ A. OCR (Optical Character Recognition / Read API)<br>
+⬜ B. Face detection<br>
+⬜ C. Image captioning<br>
+⬜ D. Spatial analysis</p>
+<p><strong><u>Explanation</u>:</strong><br>
+Optical Character Recognition (OCR), exposed through the Read API in Azure Vision, is designed to extract both printed and handwritten text from images and documents, making it the correct capability for digitizing and indexing text from scanned shipping labels.<br>
+<u>Why other options are incorrect</u>:<br>
+B: Face detection identifies and analyzes human faces in images; it has no text-extraction capability.<br>
+C: Image captioning generates a natural-language description of an image&rsquo;s overall content; it does not extract exact printed or handwritten text.<br>
+D: Spatial analysis tracks how people move and interact with physical spaces using video feeds; it is unrelated to extracting text from documents.<br>
+<small>Source: <a href="https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-ocr">OCR - Optical Character Recognition - Microsoft Learn</a></small></p>
+<hr>
 <h6 id="an-accounts-payable-team-receives-thousands-of-vendor-invoices-in-varying-layouts-and-wants-to-automatically-extract-standard-fields-vendor-name-invoice-number-total-amount-due-date-without-training-any-custom-model-since-invoices-are-a-well-known-common-document-type-which-azure-ai-capability-should-they-use">An accounts payable team receives thousands of vendor invoices in varying layouts and wants to automatically extract standard fields (vendor name, invoice number, total amount, due date) without training any custom model, since invoices are a well-known, common document type. Which Azure AI capability should they use?</h6>
 <p>✅ A. A prebuilt Document Intelligence model (such as the invoice model)<br>
 ⬜ B. Custom Vision object detection<br>
@@ -1319,6 +1431,19 @@ B: The image analysis skill generates captions and tags for images; it is not de
 C: The language detection skill identifies which language text is written in; on its own, it does not detect or mask personal information.<br>
 D: The custom entity lookup skill matches text against a customer-supplied list of specific terms; while it could be adapted for narrow cases, it is not the purpose-built skill for general PII categories like phone numbers and emails.<br>
 <small>Source: <a href="https://learn.microsoft.com/en-us/azure/search/cognitive-search-skill-pii-detection">PII Detection Cognitive Skill - Azure AI Search - Microsoft Learn</a></small></p>
+<hr>
+<h6 id="you-have-a-chat-app-in-a-microsoft-foundry-project-and-an-azure-ai-search-vectorized-index-you-need-to-connect-to-the-index-to-meet-the-following-requirements-complex-questions-must-retrieve-information-from-multiple-chunks-multi-turn-conversations-must-influence-retrieval-planning-and-retrievals-must-run-in-parallel-to-reduce-latency-which-retrieval-approach-should-you-use">You have a chat app in a Microsoft Foundry project and an Azure AI Search vectorized index. You need to connect to the index to meet the following requirements: complex questions must retrieve information from multiple chunks; multi-turn conversations must influence retrieval planning; and retrievals must run in parallel to reduce latency. Which retrieval approach should you use?</h6>
+<p>⬜ A. Classic Retrieval Augmented Generation (RAG)<br>
+⬜ B. Chain of thought<br>
+✅ C. Agentic Retrieval Augmented Generation (RAG)<br>
+⬜ D. Iterative retrieval</p>
+<p><strong><u>Explanation</u>:</strong><br>
+Agentic retrieval in Azure AI Search uses a large language model to break a complex question into focused subqueries covering multiple chunks, incorporates conversation history from multi-turn interactions into that query-planning step, and then runs the resulting subqueries in parallel before semantically reranking and merging the results — meeting all three stated requirements in a single retrieval approach.<br>
+<u>Why other options are incorrect</u>:<br>
+A: Classic RAG performs a single retrieval pass per query and doesn&rsquo;t decompose complex questions into subqueries or factor conversation history into what gets retrieved.<br>
+B: Chain of thought is a prompting technique that has the model reason step by step in its own output; it is not a retrieval architecture and doesn&rsquo;t run searches in parallel.<br>
+D: Iterative retrieval describes running successive retrieval passes one after another; on its own it doesn&rsquo;t provide the parallel execution or conversation-aware query planning that agentic retrieval provides.<br>
+<small>Source: <a href="https://learn.microsoft.com/en-us/azure/search/agentic-retrieval-overview">Agentic retrieval overview - Azure AI Search - Microsoft Learn</a></small></p>
 </div>
 		</div>
 		<footer class="post__footer">
@@ -1408,7 +1533,7 @@ D: The custom entity lookup skill matches text against a customer-supplied list 
         
         <li><a href="/azure/azure-fundamentals-az-900-exam-questions/"><img class="related_post__thumb" src="/img/logo/azure.png" alt="" loading="lazy"><span class="related_post__title">Microsoft Azure Fundamentals (AZ-900) Exam Questions</span></a></li>
         
-        <li><a href="/agile/safe-advanced-scrum-master-asm-exam-questions/"><img class="related_post__thumb" src="/img/logo/safe-ai-empowered.png" alt="" loading="lazy"><span class="related_post__title">AI-Empowered SAFe Advanced Scrum Master ASM Exam Questions</span></a></li>
+        <li><a href="/agile/safe-advanced-scrum-master-sasm-exam-questions/"><img class="related_post__thumb" src="/img/logo/safe-ai-empowered.png" alt="" loading="lazy"><span class="related_post__title">AI-Empowered SAFe Advanced Scrum Master SASM Exam Questions</span></a></li>
         
         <li><a href="/aws/aws-certified-ai-practitioner-exam-questions/"><img class="related_post__thumb" src="/img/logo/aws.png" alt="" loading="lazy"><span class="related_post__title">AWS Certified AI Practitioner (AIF-C01) Exam Questions</span></a></li>
         
