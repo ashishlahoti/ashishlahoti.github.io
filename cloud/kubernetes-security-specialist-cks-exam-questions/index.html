@@ -679,7 +679,7 @@
 <style>
 div[autonumbering] h6:before {counter-increment: h6; content: "Q" counter(h6) ". "}
 div[autonumbering] {counter-reset: h6}
-div[autonumbering] h6 { padding: 5px; margin: 50px 0 15px 0; border: 1px solid var(--border-strong); }
+div[autonumbering] h6 { padding: 5px; margin: 50px 0 15px 0; border: 1px solid var(--border-strong); border-radius: var(--radius-sm);}
 div[autonumbering] hr + h6 { margin-top: 15px; }
 div[autonumbering] p { font-size: 15px;}
 </style>
@@ -704,7 +704,7 @@ NetworkPolicy objects are the mechanism for microsegmentation between Pods; a co
 </div>
 
 <style>
-.quiz-explanation { background: var(--bg-subtle); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px 16px; margin-top: 12px; }
+.quiz-explanation { background: var(--bg-subtle); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; margin-top: 12px; }
 .quiz-explanation-title { font-size: 1.15em; font-weight: 700; color: grey; }
 .quiz-explanation p { margin: 10px 0; }
 .quiz-explanation p:first-of-type { margin-top: 0; }
