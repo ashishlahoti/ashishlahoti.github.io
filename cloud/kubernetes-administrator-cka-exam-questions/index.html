@@ -96,7 +96,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/kubernetes.png"],
     "url": "https://codingnconcepts.com/cloud/kubernetes-administrator-cka-exam-questions/",
-    "wordCount": 8147 ,
+    "wordCount": 8175 ,
     "genre": ["Kubernetes","Certification","DevOps"],
     "keywords":  null 
 }
@@ -601,7 +601,11 @@
     </li>
     <li><a href="#practice-questions">Practice Questions</a>
       <ul>
-        <li></li>
+        <li><a href="#domain-1-cluster-architecture-installation-and-configuration-25">Domain 1: Cluster Architecture, Installation and Configuration (25%)</a></li>
+        <li><a href="#domain-2-workloads-and-scheduling-15">Domain 2: Workloads and Scheduling (15%)</a></li>
+        <li><a href="#domain-3-services-and-networking-20">Domain 3: Services and Networking (20%)</a></li>
+        <li><a href="#domain-4-storage-10">Domain 4: Storage (10%)</a></li>
+        <li><a href="#domain-5-troubleshooting-30">Domain 5: Troubleshooting (30%)</a></li>
       </ul>
     </li>
   </ul>
@@ -670,6 +674,8 @@ div[autonumbering] h6:first-child { padding: 5px; margin: 0 0 15px 0;}
 div[autonumbering] p { font-size: 15px;}
 </style>
 <div autonumbering>
+<h3 id="domain-1-cluster-architecture-installation-and-configuration-25">Domain 1: Cluster Architecture, Installation and Configuration (25%)</h3>
+<hr>
 <h6 id="an-administrator-is-bootstrapping-a-new-kubernetes-control-plane-node-using-kubeadm-init-which-component-is-responsible-for-initializing-the-clusters-control-plane-components-and-generating-the-initial-join-token-for-worker-nodes">An administrator is bootstrapping a new Kubernetes control-plane node using <code>kubeadm init</code>. Which component is responsible for initializing the cluster&rsquo;s control-plane components and generating the initial join token for worker nodes?</h6>
 <p>⬜ A. kubectl<br>
 ✅ B. kubeadm<br>
@@ -825,6 +831,7 @@ A: There is no built-in Kubernetes user-management database analogous to an OS u
 C: Users are not administrators by default; permissions must be explicitly granted through RBAC.<br>
 D: ServiceAccounts are Kubernetes-managed identities for workloads with their own tokens, distinct from external human user authentication mechanisms.<br>
 <small>Source: <a href="https://kubernetes.io/docs/reference/access-authn-authz/authentication/">Authenticating</a></small></p>
+<h3 id="domain-2-workloads-and-scheduling-15">Domain 2: Workloads and Scheduling (15%)</h3>
 <hr>
 <h6 id="a-team-wants-to-ensure-a-fixed-number-of-identical-pod-replicas-of-a-stateless-web-application-are-always-running-with-automatic-rollout-of-new-versions-and-the-ability-to-roll-back-which-kubernetes-object-should-they-use">A team wants to ensure a fixed number of identical Pod replicas of a stateless web application are always running, with automatic rollout of new versions and the ability to roll back. Which Kubernetes object should they use?</h6>
 <p>✅ A. Deployment<br>
@@ -928,6 +935,7 @@ A: A sidecar container runs continuously alongside the main container for the li
 C: A separate Deployment would create independently scheduled Pods, not a setup step within the same Pod.<br>
 D: A DaemonSet runs one Pod per node continuously; it doesn&rsquo;t provide a pre-start setup step within a specific Pod.<br>
 <small>Source: <a href="https://kubernetes.io/docs/concepts/workloads/pods/init-containers/">Init Containers</a></small></p>
+<h3 id="domain-3-services-and-networking-20">Domain 3: Services and Networking (20%)</h3>
 <hr>
 <h6 id="a-company-wants-to-expose-a-set-of-backend-pods-to-other-pods-within-the-cluster-only-using-a-stable-internal-ip-address-and-dns-name-with-no-external-access-which-service-type-should-they-use">A company wants to expose a set of backend Pods to other Pods within the cluster only, using a stable internal IP address and DNS name, with no external access. Which Service type should they use?</h6>
 <p>✅ A. ClusterIP<br>
@@ -1055,6 +1063,7 @@ B: PodDisruptionBudget limits voluntary disruptions to Pods; it is unrelated to 
 C: The Horizontal Pod Autoscaler scales workloads based on metrics; it has nothing to do with ingress routing.<br>
 D: Admission webhooks intercept API requests for validation/mutation; they are unrelated to ingress traffic routing configuration.<br>
 <small>Source: <a href="https://kubernetes.io/docs/concepts/services-networking/gateway/">Gateway API</a></small></p>
+<h3 id="domain-4-storage-10">Domain 4: Storage (10%)</h3>
 <hr>
 <h6 id="a-cluster-administrator-has-provisioned-a-piece-of-network-storage-as-a-cluster-resource-and-a-developer-wants-their-pod-to-consume-some-of-that-storage-without-needing-to-know-the-underlying-storage-implementation-details-which-two-objects-work-together-to-achieve-this">A cluster administrator has provisioned a piece of network storage as a cluster resource, and a developer wants their Pod to consume some of that storage without needing to know the underlying storage implementation details. Which two objects work together to achieve this?</h6>
 <p>⬜ A. ConfigMap and Secret<br>
@@ -1120,6 +1129,7 @@ A: CNI is the standard for pluggable networking, not storage.<br>
 C: CRI is the standard for pluggable container runtimes (like containerd or CRI-O), not storage.<br>
 D: A CRD lets you define new API object types; it is not the mechanism for implementing a storage driver.<br>
 <small>Source: <a href="https://kubernetes.io/docs/concepts/storage/volumes/#csi">Volumes (CSI)</a></small></p>
+<h3 id="domain-5-troubleshooting-30">Domain 5: Troubleshooting (30%)</h3>
 <hr>
 <h6 id="a-pod-is-stuck-in-pending-status-and-never-gets-scheduled-which-command-should-an-administrator-run-first-to-see-the-scheduling-related-events-explaining-why">A Pod is stuck in <code>Pending</code> status and never gets scheduled. Which command should an administrator run FIRST to see the scheduling-related events explaining why?</h6>
 <p>⬜ A. kubectl logs <pod-name><br>
@@ -1428,6 +1438,9 @@ D: Cordoning a node affects scheduling of new Pods; it does not cause a running 
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--prev">
 		<a class="post-nav__link" href="/cloud/kubernetes-application-developer-ckad-exam-questions/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Certified Kubernetes Application Developer (CKAD) Exam Questions</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next">
+		<a class="post-nav__link" href="/cloud/kubernetes-security-specialist-cks-exam-questions/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Certified Kubernetes Security Specialist (CKS) Exam Questions</p></a>
 	</div>
 </nav>
 

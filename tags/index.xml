@@ -7,7 +7,39 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>CodingNConcepts</copyright>
-    <lastBuildDate>Sun, 06 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Certification</title>
+      <link>https://codingnconcepts.com/tags/certification/</link>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/certification/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DevOps</title>
+      <link>https://codingnconcepts.com/tags/devops/</link>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/devops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kubernetes</title>
+      <link>https://codingnconcepts.com/tags/kubernetes/</link>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>https://codingnconcepts.com/tags/security/</link>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/security/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AWS Certification</title>
       <link>https://codingnconcepts.com/tags/aws-certification/</link>
@@ -22,14 +54,6 @@
       <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/azure-certification/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Certification</title>
-      <link>https://codingnconcepts.com/tags/certification/</link>
-      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/certification/</guid>
       <description></description>
     </item>
     <item>
@@ -49,27 +73,11 @@
       <description></description>
     </item>
     <item>
-      <title>DevOps</title>
-      <link>https://codingnconcepts.com/tags/devops/</link>
-      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/devops/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Generative AI</title>
       <link>https://codingnconcepts.com/tags/generative-ai/</link>
       <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/generative-ai/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Kubernetes</title>
-      <link>https://codingnconcepts.com/tags/kubernetes/</link>
-      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/kubernetes/</guid>
       <description></description>
     </item>
     <item>
