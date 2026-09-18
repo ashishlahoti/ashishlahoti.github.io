@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://codingnconcepts.com/aws/aws-certified-solutions-architect-associate-exam-questions/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/aws.png" />
 <meta property="article:published_time" content="2025-04-27T00:00:00+00:00" />
-<meta property="article:modified_time" content="2026-08-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-09-18T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -81,7 +81,7 @@
     "copyrightYear": "2025",
     "dateCreated": "2025-04-27T00:00:00.00Z",
     "datePublished": "2025-04-27T00:00:00.00Z",
-    "dateModified": "2026-08-30T00:00:00.00Z",
+    "dateModified": "2026-09-18T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -95,7 +95,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/aws.png"],
     "url": "https://codingnconcepts.com/aws/aws-certified-solutions-architect-associate-exam-questions/",
-    "wordCount": 61931 ,
+    "wordCount": 62192 ,
     "genre": ["AWS Certification","Certification"],
     "keywords":  null 
 }
@@ -587,7 +587,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2026-08-30T00:00:00Z">Last Modified: Aug 30, 2026</time>
+	<time class="meta__text" datetime="2026-09-18T00:00:00Z">Last Modified: Sep 18, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -3973,6 +3973,19 @@ A. AWS Lambda is ideal for event-driven, short-lived functions. Migrating a mono
 B. AWS Amplify is targeted for modern web and mobile apps but not suitable for hosting legacy or large monolithic applications.<br>
 C. Amazon EC2 provides flexibility but requires significant operational management and does not natively support microservices separation or scalability benefits like ECS does.<br>
 <small>Source: <a href="https://aws.amazon.com/ecs/">https://aws.amazon.com/ecs/</a></small></p>
+<hr>
+<h6 id="a-rapidly-growing-tech-startup-company-is-planning-to-launch-a-new-web-application-that-will-require-a-complex-infrastructure-setup-including-multiple-amazon-ec2-instances-elastic-load-balancing-and-auto-scaling-groupsthe-application-must-be-deployed-consistently-across-different-environmentswould-aws-cloudformation-be-a-good-solution-for-managing-the-companys-infrastructure">A rapidly growing tech startup company is planning to launch a new web application that will require a complex infrastructure setup, including multiple Amazon EC2 instances, Elastic Load Balancing, and Auto Scaling groups.<br/><br/>The application must be deployed consistently across different environments.<br/><br/>Would AWS CloudFormation be a good solution for managing the company&rsquo;s infrastructure?</h6>
+<p>⬜ A. CloudFormation would not be useful in this scenario because it only supports simple infrastructure setups.<br>
+✅ B. CloudFormation would be ideal because it supports infrastructure as code (IaC), enabling consistent, repeatable deployments across different environments.<br>
+⬜ C. CloudFormation should be used only for setting up static websites, not for complex applications.<br>
+⬜ D. CloudFormation is too complicated and would slow down the deployment process.</p>
+<p><strong><u>Explanation</u>:</strong><br>
+AWS CloudFormation lets you model, provision, and manage a collection of related AWS resources — such as EC2 instances, an Elastic Load Balancer, and Auto Scaling groups — from a single template. Because the infrastructure is defined as code, the exact same template can be used to create identical environments (dev, staging, production) repeatedly and predictably, which is exactly what this startup needs.<br>
+<u>Incorrect Options</u>: <br>
+Option A: CloudFormation is designed for complex, multi-resource infrastructure, not just simple setups; this is the opposite of how it&rsquo;s actually used.<br>
+Option C: CloudFormation manages any AWS resource type, including EC2, networking, databases, and IAM — it is not limited to static websites.<br>
+Option D: CloudFormation reduces operational overhead by automating provisioning; while there is a learning curve, it speeds up consistent deployments rather than slowing them down.<br>
+<small>Source: <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html">What is AWS CloudFormation? - AWS CloudFormation</a></small></p>
 <hr>
 </div>
 		</div>

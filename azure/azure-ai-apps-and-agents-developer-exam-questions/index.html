@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://codingnconcepts.com/azure/azure-ai-apps-and-agents-developer-exam-questions/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/azure.png" />
 <meta property="article:published_time" content="2026-09-06T00:00:00+00:00" />
-<meta property="article:modified_time" content="2026-09-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-09-18T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -81,7 +81,7 @@
     "copyrightYear": "2026",
     "dateCreated": "2026-09-06T00:00:00.00Z",
     "datePublished": "2026-09-06T00:00:00.00Z",
-    "dateModified": "2026-09-15T00:00:00.00Z",
+    "dateModified": "2026-09-18T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -95,7 +95,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/azure.png"],
     "url": "https://codingnconcepts.com/azure/azure-ai-apps-and-agents-developer-exam-questions/",
-    "wordCount": 12395 ,
+    "wordCount": 12770 ,
     "genre": ["Azure Certification","Certification"],
     "keywords":  null 
 }
@@ -587,7 +587,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2026-09-15T00:00:00Z">Last Modified: Sep 15, 2026</time>
+	<time class="meta__text" datetime="2026-09-18T00:00:00Z">Last Modified: Sep 18, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -602,7 +602,7 @@
 		<nav id="TableOfContents">
   <ul>
     <li><a href="#overview">Overview</a></li>
-    <li><a href="#59-practice-questions">59 Practice Questions</a>
+    <li><a href="#61-practice-questions">61 Practice Questions</a>
       <ul>
         <li><a href="#domain-1-plan-and-manage-an-azure-ai-solution-28">Domain 1: Plan and Manage an Azure AI Solution (28%)</a></li>
         <li><a href="#domain-2-implement-generative-ai-and-agentic-solutions-32">Domain 2: Implement Generative AI and Agentic Solutions (32%)</a></li>
@@ -632,7 +632,7 @@
 <li>Like other Microsoft Associate certifications, it is valid for <strong>1 year</strong> and can be renewed with a free online assessment.</li>
 <li><a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-103">Study Guide</a> for more details.</li>
 </ol>
-<h2 id="59-practice-questions">59 Practice Questions</h2>
+<h2 id="61-practice-questions">61 Practice Questions</h2>
 <hr>
 <table>
 	<thead>
@@ -654,7 +654,7 @@
 					<td>2</td>
 					<td>Implement Generative AI and Agentic Solutions</td>
 					<td>32%</td>
-					<td>16</td>
+					<td>18</td>
 			</tr>
 			<tr>
 					<td>3</td>
@@ -1268,6 +1268,38 @@ The token usage metric in Foundry&rsquo;s agent observability dashboard shows th
 <strong>C.</strong> Latency measures how long a run takes to complete; slower runs don&rsquo;t necessarily mean higher token consumption or cost.<br>
 <strong>D.</strong> Run success rate reports the percentage of runs that complete successfully; it says nothing about token consumption or cost drivers.</p>
 <p><small>Source: <a href="https://learn.microsoft.com/en-us/azure/foundry/observability/how-to/how-to-monitor-agents-dashboard">Monitor agents with the Agent Monitoring Dashboard - Microsoft Learn</a></small></p>
+
+</div>
+
+<h6 id="what-are-the-components-of-the-prompt-in-a-generative-model-using-retrieval-augmented-generation-rag-select-all-that-apply">What are the components of the prompt in a generative model using retrieval-augmented generation (RAG)? (Select all that apply.)</h6>
+<p>✅ A. The retrieved data as context<br>
+✅ B. The query<br>
+✅ C. Instructions for the response, such as tone, length, and specificity<br>
+⬜ D. The vector embeddings</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer: A, B, C</strong><br>
+In a RAG pattern, the prompt sent to the generative model is assembled from the user&rsquo;s query, the retrieved context (grounding data pulled back from the search/index), and instructions that shape the response (tone, length, format, specificity). These are combined into the text the model actually receives.</p>
+<p><strong>Why D is incorrect</strong><br>
+Vector embeddings are the numeric representations used <em>during retrieval</em> to find relevant context in the index — they are not themselves included as text in the prompt sent to the generative model. Only the retrieved content they point to becomes part of the prompt.</p>
+<p><small>Source: <a href="https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview">Retrieval Augmented Generation (RAG) in Azure AI Search - Microsoft Learn</a></small></p>
+
+</div>
+
+<h6 id="how-does-an-agent-determine-which-azure-ai-language-mcp-tool-to-call-when-processing-a-users-prompt">How does an agent determine which Azure AI Language MCP tool to call when processing a user&rsquo;s prompt?</h6>
+<p>⬜ A. The developer writes routing logic to direct each prompt to a specific tool.<br>
+✅ B. The agent matches the prompt to tool descriptions received from the MCP server.<br>
+⬜ C. The MCP server analyzes the prompt and automatically routes it to a tool.<br>
+⬜ D. The client randomly selects among all available tools.</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer: B</strong><br>
+The Model Context Protocol (MCP) specification describes tools as &ldquo;model-controlled&rdquo;: the MCP server exposes a list of tools with names, descriptions, and input schemas, and the language model itself (via the agent/client) reasons over the user&rsquo;s prompt and those descriptions to decide which tool to invoke — no separate routing logic or server-side dispatch is required.</p>
+<p><strong>Why other options are incorrect</strong><br>
+<strong>A.</strong> MCP is specifically designed so developers don&rsquo;t need to hand-write per-prompt routing rules; tool selection is handled dynamically by the model based on tool descriptions.<br>
+<strong>C.</strong> The MCP server&rsquo;s job is to expose tools (via <code>tools/list</code>) and execute calls (via <code>tools/call</code>); it does not itself analyze prompts or choose which tool to invoke.<br>
+<strong>D.</strong> Tool selection is driven by the model matching intent to tool descriptions, not random selection.</p>
+<p><small>Source: <a href="https://modelcontextprotocol.io/specification/2025-06-18/server/tools">Tools - Model Context Protocol Specification</a></small></p>
 
 </div>
 

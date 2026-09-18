@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://codingnconcepts.com/aws/aws-certified-cloud-practitioner-exam-questions/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/aws.png" />
 <meta property="article:published_time" content="2026-09-06T00:00:00+00:00" />
-<meta property="article:modified_time" content="2026-09-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-09-18T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -82,7 +82,7 @@
     "copyrightYear": "2026",
     "dateCreated": "2026-09-06T00:00:00.00Z",
     "datePublished": "2026-09-06T00:00:00.00Z",
-    "dateModified": "2026-09-15T00:00:00.00Z",
+    "dateModified": "2026-09-18T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -96,7 +96,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/aws.png"],
     "url": "https://codingnconcepts.com/aws/aws-certified-cloud-practitioner-exam-questions/",
-    "wordCount": 7515 ,
+    "wordCount": 7946 ,
     "genre": ["AWS Certification","Certification","Cloud Practitioner"],
     "keywords":  null 
 }
@@ -588,7 +588,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2026-09-15T00:00:00Z">Last Modified: Sep 15, 2026</time>
+	<time class="meta__text" datetime="2026-09-18T00:00:00Z">Last Modified: Sep 18, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -603,7 +603,7 @@
 		<nav id="TableOfContents">
   <ul>
     <li><a href="#overview">Overview</a></li>
-    <li><a href="#50-practice-questions">50 Practice Questions</a>
+    <li><a href="#52-practice-questions">52 Practice Questions</a>
       <ul>
         <li><a href="#domain-1-cloud-concepts-24">Domain 1: Cloud Concepts (24%)</a></li>
         <li><a href="#domain-2-security-and-compliance-30">Domain 2: Security and Compliance (30%)</a></li>
@@ -632,7 +632,7 @@
 <li>The certification is valid for <strong>3 years</strong>.</li>
 <li><a href="https://docs.aws.amazon.com/aws-certification/latest/cloud-practitioner-02/cloud-practitioner-02.html">Exam Guide</a> for more details.</li>
 </ol>
-<h2 id="50-practice-questions">50 Practice Questions</h2>
+<h2 id="52-practice-questions">52 Practice Questions</h2>
 <hr>
 <table>
 	<thead>
@@ -648,7 +648,7 @@
 					<td>1</td>
 					<td>Cloud Concepts</td>
 					<td>24%</td>
-					<td>12</td>
+					<td>13</td>
 			</tr>
 			<tr>
 					<td>2</td>
@@ -660,7 +660,7 @@
 					<td>3</td>
 					<td>Cloud Technology and Services</td>
 					<td>34%</td>
-					<td>17</td>
+					<td>18</td>
 			</tr>
 			<tr>
 					<td>4</td>
@@ -887,6 +887,23 @@ The Sustainability pillar focuses on minimizing the environmental impacts of run
 <strong>C.</strong> Cost Optimization focuses on avoiding unnecessary spending, which can be related to efficiency but is a distinct concern from environmental sustainability.<br>
 <strong>D.</strong> Security focuses on protecting data, systems, and assets, not environmental impact.</p>
 <p><small>Source: <a href="https://aws.amazon.com/architecture/well-architected/">AWS Well-Architected Framework</a></small></p>
+
+</div>
+
+<h6 id="a-user-deploys-an-amazon-rds-db-instance-in-multiple-availability-zones-this-strategy-involves-which-pillar-of-the-aws-well-architected-framework">A user deploys an Amazon RDS DB instance in multiple Availability Zones. This strategy involves which pillar of the AWS Well-Architected Framework?</h6>
+<p>⬜ A. Cost Optimization<br>
+⬜ B. Performance Efficiency<br>
+✅ C. Reliability<br>
+⬜ D. Operational Excellence</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer: C</strong><br>
+Deploying an Amazon RDS DB instance across multiple Availability Zones provides automatic failover and redundancy if the primary AZ becomes unavailable — a core pattern under the Reliability pillar, which focuses on a workload&rsquo;s ability to recover from infrastructure or service disruptions and consistently perform its intended function.</p>
+<p><strong>Why other options are incorrect</strong><br>
+<strong>A.</strong> Cost Optimization is about avoiding unnecessary spending; a Multi-AZ deployment actually increases cost in exchange for higher availability, so it isn&rsquo;t primarily a cost concern.<br>
+<strong>B.</strong> Performance Efficiency is about using computing resources efficiently as demand and technology evolve, not about failover or redundancy.<br>
+<strong>D.</strong> Operational Excellence focuses on running and monitoring systems and continuously improving processes, not on infrastructure-level redundancy.</p>
+<p><small>Source: <a href="https://aws.amazon.com/rds/features/multi-az/">Amazon RDS Multi-AZ deployments</a></small></p>
 
 </div>
 
@@ -1432,6 +1449,23 @@ Amazon Lex is a fully managed AI service for building conversational interfaces 
 <strong>C.</strong> AWS Direct Connect provides dedicated network connectivity, unrelated to AI services.<br>
 <strong>D.</strong> Amazon Route 53 is a DNS service, unrelated to conversational AI.</p>
 <p><small>Source: <a href="https://aws.amazon.com/lex/">Amazon Lex</a></small></p>
+
+</div>
+
+<h6 id="an-organization-is-currently-operating-mysql-databases-on-its-own-on-premises-servers-to-reduce-the-operational-burden-of-database-maintenance-and-management-the-organization-wants-to-move-to-a-fully-managed-aws-database-offering-which-migration-strategy-best-aligns-with-this-goal">An organization is currently operating MySQL databases on its own on-premises servers. To reduce the operational burden of database maintenance and management, the organization wants to move to a fully managed AWS database offering. Which migration strategy best aligns with this goal?</h6>
+<p>⬜ A. Rehost the MySQL databases as-is on Amazon EC2 instances, keeping full control over the operating system and database software.<br>
+✅ B. Use AWS Database Migration Service (AWS DMS) to migrate the on-premises MySQL databases to Amazon RDS for MySQL.<br>
+⬜ C. Back up the on-premises databases to Amazon S3 and manually restore them onto new self-managed database servers within a VPC.<br>
+⬜ D. Replace the MySQL databases with Amazon DynamoDB tables to remove the need for database administration entirely.</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer: B</strong><br>
+AWS DMS is purpose-built to migrate databases like MySQL into fully managed AWS database services with minimal downtime. Migrating to Amazon RDS for MySQL keeps the same database engine while AWS takes over patching, backups, and replication — directly reducing the organization&rsquo;s operational burden.</p>
+<p><strong>Why other options are incorrect</strong><br>
+<strong>A.</strong> Rehosting on Amazon EC2 still requires the organization to manage the operating system and database software itself, so it does not reduce operational burden the way a fully managed service does.<br>
+<strong>C.</strong> Manually backing up and restoring onto self-managed servers is not a request for anything managed and introduces unnecessary manual effort and downtime.<br>
+<strong>D.</strong> DynamoDB is a NoSQL database with a different data model; switching engines entirely is a re-architecture, not a straightforward migration path to a fully managed relational service.</p>
+<p><small>Source: <a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/migrate-an-on-premises-mysql-database-to-amazon-rds-for-mysql.html">Migrate an on-premises MySQL database to Amazon RDS for MySQL</a></small></p>
 
 </div>
 
