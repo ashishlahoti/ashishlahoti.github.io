@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://codingnconcepts.com/comptia/comptia-security-plus-exam-questions/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/comptia.png" />
 <meta property="article:published_time" content="2026-09-06T00:00:00+00:00" />
-<meta property="article:modified_time" content="2026-09-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-09-26T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -81,7 +81,7 @@
     "copyrightYear": "2026",
     "dateCreated": "2026-09-06T00:00:00.00Z",
     "datePublished": "2026-09-06T00:00:00.00Z",
-    "dateModified": "2026-09-18T00:00:00.00Z",
+    "dateModified": "2026-09-26T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -95,7 +95,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/comptia.png"],
     "url": "https://codingnconcepts.com/comptia/comptia-security-plus-exam-questions/",
-    "wordCount": 11015 ,
+    "wordCount": 14187 ,
     "genre": ["CompTIA","Certification"],
     "keywords":  null 
 }
@@ -595,7 +595,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2026-09-18T00:00:00Z">Last Modified: Sep 18, 2026</time>
+	<time class="meta__text" datetime="2026-09-26T00:00:00Z">Last Modified: Sep 26, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -610,7 +610,7 @@
 		<nav id="TableOfContents">
   <ul>
     <li><a href="#overview">Overview</a></li>
-    <li><a href="#54-practice-questions">54 Practice Questions</a>
+    <li><a href="#70-practice-questions">70 Practice Questions</a>
       <ul>
         <li><a href="#domain-1-general-security-concepts-12">Domain 1: General Security Concepts (12%)</a></li>
         <li><a href="#domain-2-threats-vulnerabilities-and-mitigations-22">Domain 2: Threats, Vulnerabilities, and Mitigations (22%)</a></li>
@@ -639,7 +639,7 @@
 <li>The certification is valid for <strong>3 years</strong> and must be renewed through CompTIA&rsquo;s Continuing Education (CE) program (earning CEUs or a higher-level certification) or by retaking the current exam.</li>
 <li><a href="https://www.comptia.org/certifications/security">Official exam page</a> for more details.</li>
 </ol>
-<h2 id="54-practice-questions">54 Practice Questions</h2>
+<h2 id="70-practice-questions">70 Practice Questions</h2>
 <hr>
 <table>
 	<thead>
@@ -655,31 +655,31 @@
 					<td>1</td>
 					<td>General Security Concepts</td>
 					<td>12%</td>
-					<td>7</td>
+					<td>10</td>
 			</tr>
 			<tr>
 					<td>2</td>
 					<td>Threats, Vulnerabilities, and Mitigations</td>
 					<td>22%</td>
-					<td>13</td>
+					<td>19</td>
 			</tr>
 			<tr>
 					<td>3</td>
 					<td>Security Architecture</td>
 					<td>18%</td>
-					<td>10</td>
+					<td>13</td>
 			</tr>
 			<tr>
 					<td>4</td>
 					<td>Security Operations</td>
 					<td>28%</td>
-					<td>14</td>
+					<td>17</td>
 			</tr>
 			<tr>
 					<td>5</td>
 					<td>Security Program Management and Oversight</td>
 					<td>20%</td>
-					<td>10</td>
+					<td>11</td>
 			</tr>
 	</tbody>
 </table>
@@ -816,6 +816,57 @@ Authentication (verifying the username and password) happens first, at login. Im
 <strong>C.</strong> Identification (claiming an identity, e.g., entering a username) happens before authentication, not after it.<br>
 <strong>D.</strong> Accounting records what a user does after they&rsquo;re authenticated and authorized; it is an ongoing logging process, not the step applied immediately after login.</p>
 <p><small>Source: <a href="https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final">NIST SP 800-53 Rev. 5, Security and Privacy Controls for Information Systems and Organizations</a></small></p>
+
+</div>
+
+<h6 id="logging-events-in-an-audit-log-is-what-part-of-the-access-control-system">Logging events in an audit log is what part of the access control system?</h6>
+<p>⬜ A. Non-repudiation<br>
+⬜ B. Authorization<br>
+⬜ C. Authentication<br>
+✅ D. Accounting</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer: D</strong><br>
+In the AAA (authentication, authorization, accounting) model, accounting is the function of logging and tracking what a user did — such as recording events in an audit log — for monitoring, billing, or forensic purposes.</p>
+<p><strong>Why other options are incorrect</strong><br>
+<strong>A.</strong> Non-repudiation ensures a party cannot deny having performed an action, typically supported by logs and digital signatures, but it is a broader security property, not the AAA function of logging itself.<br>
+<strong>B.</strong> Authorization determines what an already-authenticated user is permitted to do; it does not refer to recording those actions afterward.<br>
+<strong>C.</strong> Authentication verifies a user&rsquo;s identity at login; it occurs before, and is distinct from, the logging of subsequent actions.</p>
+<p><small>Source: <a href="https://csrc.nist.gov/pubs/sp/800/53/r5/final">NIST SP 800-53 Rev. 5, Audit and Accountability (AU) control family</a></small></p>
+
+</div>
+
+<h6 id="what-is-meant-by-data-at-rest">What is meant by &ldquo;data at rest&rdquo;?</h6>
+<p>⬜ A. Data present in volatile memory<br>
+⬜ B. Data being transmitted over a network<br>
+⬜ C. Data being actively processed by a computer<br>
+✅ D. Data stored on a persistent storage media</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer: D</strong><br>
+Data at rest refers to data that is stored on persistent storage media, such as hard drives, SSDs, or backup tapes, as opposed to data that is currently moving across a network or being actively processed in memory.</p>
+<p><strong>Why other options are incorrect</strong><br>
+<strong>A.</strong> Data in volatile memory (RAM) that isn&rsquo;t persisted to storage is generally considered part of data in use, not data at rest.<br>
+<strong>B.</strong> Data being transmitted over a network is classified as data in transit, a distinct state from data at rest.<br>
+<strong>C.</strong> Data being actively processed by a computer is classified as data in use, not data at rest.</p>
+<p><small>Source: <a href="https://csrc.nist.gov/glossary/term/data_at_rest">NIST SP 800-53 Rev. 5 Glossary, Data At Rest</a></small></p>
+
+</div>
+
+<h6 id="a-systems-engineer-wants-to-control-access-to-critical-data-which-of-the-following-describes-a-security-concern-regarding-storing-and-transferring-data-without-authorization">A systems engineer wants to control access to critical data. Which of the following describes a security concern regarding storing and transferring data without authorization?</h6>
+<p>⬜ A. Integrity<br>
+⬜ B. Social engineering<br>
+✅ C. Confidentiality<br>
+⬜ D. Availability</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer: C</strong><br>
+Confidentiality is the security property concerned with preventing unauthorized access to or disclosure of data, whether it is being stored or transferred — exactly the concern described in controlling access to critical data.</p>
+<p><strong>Why other options are incorrect</strong><br>
+<strong>A.</strong> Integrity concerns whether data has been altered or tampered with, not whether unauthorized parties can access or transfer it.<br>
+<strong>B.</strong> Social engineering is an attack technique that manipulates people into divulging information or granting access; it is a threat vector, not the security property being protected here.<br>
+<strong>D.</strong> Availability concerns whether authorized users can access data and systems when needed, which is the opposite concern from restricting unauthorized access.</p>
+<p><small>Source: <a href="https://csrc.nist.gov/glossary/term/confidentiality">NIST SP 800-53 Rev. 5 Glossary, Confidentiality</a></small></p>
 
 </div>
 
@@ -1042,6 +1093,108 @@ The defining risk of an unsupported system or application is that the vendor no 
 
 </div>
 
+<h6 id="an-organization-has-just-completed-an-assessment-of-all-the-points-where-a-threat-actor-might-exploit-a-vulnerability-in-the-network-this-analysis-includes-its-computer-systems-network-ports-applications-and-user-interactions-what-is-the-term-for-this-collection-of-potential-points-of-exploitation">An organization has just completed an assessment of all the points where a threat actor might exploit a vulnerability in the network. This analysis includes its computer systems, network ports, applications, and user interactions. What is the term for this collection of potential points of exploitation?</h6>
+<p>✅ A. Attack surface<br>
+⬜ B. Attack vector<br>
+⬜ C. Threat landscape<br>
+⬜ D. Threat vector</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer: A</strong><br>
+The attack surface is the complete set of points where an unauthorized user (a threat actor) could try to enter or extract data from an environment — including systems, network ports, applications, and user interactions — exactly the collection this assessment mapped out.</p>
+<p><strong>Why other options are incorrect</strong><br>
+<strong>B.</strong> An attack vector is the specific path or method a threat actor actually uses to exploit a vulnerability, not the full inventory of potential exploitation points.<br>
+<strong>C.</strong> Threat landscape describes the broader, evolving collection of threats and threat actors an organization faces, not the organization&rsquo;s own internal inventory of exploitable points.<br>
+<strong>D.</strong> A threat vector, like an attack vector, refers to a specific delivery mechanism for a threat, not the complete mapped set of potential entry points.</p>
+<p><small>Source: <a href="https://csrc.nist.gov/glossary/term/attack_surface">NIST SP 800-53 Rev. 5 Glossary, Attack Surface</a></small></p>
+
+</div>
+
+<h6 id="a-group-of-hackers-exploiting-vulnerabilities-in-a-certain-organizations-online-platforms-and-using-spear-phishing-techniques-launches-a-series-of-attacks-disrupting-the-organizations-services-these-attack-vectors-target-both-software-flaws-and-human-elements-of-the-organization-driven-by-disdain-for-the-organizations-practices-their-primary-objective-is-to-raise-awareness-and-bring-about-changes-in-the-organizations-conduct-based-on-this-information-what-is-the-primary-motivation-of-these-threat-actors">A group of hackers, exploiting vulnerabilities in a certain organization&rsquo;s online platforms and using spear-phishing techniques, launches a series of attacks disrupting the organization&rsquo;s services. These attack vectors target both software flaws and human elements of the organization. Driven by disdain for the organization&rsquo;s practices, their primary objective is to raise awareness and bring about changes in the organization&rsquo;s conduct. Based on this information, what is the primary motivation of these threat actors?</h6>
+<p>⬜ A. Financial gain<br>
+⬜ B. Espionage<br>
+✅ C. Political change<br>
+⬜ D. Vandalism</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer: C</strong><br>
+This scenario describes hacktivism: the group is driven by disdain for the organization&rsquo;s practices and is explicitly trying to raise awareness and force changes in its conduct, which is the defining, ideology-driven motivation of political/social change rather than personal profit or espionage.</p>
+<p><strong>Why other options are incorrect</strong><br>
+<strong>A.</strong> Financial gain describes attackers motivated by profit, such as ransomware or fraud operators; this scenario explicitly describes an ideological, not financial, motive.<br>
+<strong>B.</strong> Espionage is about covertly stealing information for intelligence purposes, typically staying hidden; this group is openly disruptive and seeking public awareness, the opposite of quiet espionage.<br>
+<strong>D.</strong> Vandalism is destruction or defacement for its own sake without a stated cause; here the group has an explicit ideological objective of changing organizational conduct, which is hacktivism, not simple vandalism.</p>
+<p><small>Source: <a href="https://www.cisa.gov/topics/cyber-threats-and-advisories">CISA, Cyber Threats and Advisories</a></small></p>
+
+</div>
+
+<h6 id="a-network-administrator-conducts-an-analysis-on-the-companys-network-in-attempts-to-determine-attack-surface-with-the-intent-of-reducing-exploitable-vectors-when-analyzing-the-potential-attack-surface-which-layer-model-allows-unauthorized-hosts-to-obtain-a-valid-network-address-possibly-by-spoofing-and-communicate-with-hosts-in-other-zones">A network administrator conducts an analysis on the company&rsquo;s network in attempts to determine attack surface, with the intent of reducing exploitable vectors. When analyzing the potential attack surface, which layer model allows unauthorized hosts to obtain a valid network address, possibly by spoofing, and communicate with hosts in other zones?</h6>
+<p>⬜ A. Layer 4<br>
+⬜ B. Layer 1<br>
+✅ C. Layer 3<br>
+⬜ D. Layer 7</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer: C</strong><br>
+Layer 3 (the Network layer) is where logical IP addressing and routing occur; an unauthorized host obtaining a valid network address (for example, through DHCP or address spoofing) operates at this layer, and that address is what lets it route and communicate with hosts in other network zones.</p>
+<p><strong>Why other options are incorrect</strong><br>
+<strong>A.</strong> Layer 4 (Transport) handles end-to-end connections and ports (TCP/UDP); it doesn&rsquo;t govern how a host obtains a network address in the first place.<br>
+<strong>B.</strong> Layer 1 (Physical) covers raw electrical/optical signaling and cabling; it has no concept of addresses or spoofing.<br>
+<strong>D.</strong> Layer 7 (Application) is where application data and protocols like HTTP/DNS operate; address assignment and routing occur below it, at Layer 3.</p>
+<p><small>Source: <a href="https://www.rfc-editor.org/rfc/rfc791">RFC 791, Internet Protocol</a></small></p>
+
+</div>
+
+<h6 id="a-security-engineer-discovered-that-an-active-employee-copied-sensitive-information-from-the-companys-shared-drive-and-sold-it-online-what-kind-of-actor-describes-this-employee">A security engineer discovered that an active employee copied sensitive information from the company&rsquo;s shared drive and sold it online. What kind of actor describes this employee?</h6>
+<p>⬜ A. Advanced persistent threat<br>
+⬜ B. Nation-state<br>
+✅ C. Insider threat<br>
+⬜ D. Hacktivist</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer: C</strong><br>
+An insider threat originates from someone with legitimate, authorized access to an organization&rsquo;s systems and data — such as an active employee — who misuses that access for unauthorized or malicious purposes, exactly as described here.</p>
+<p><strong>Why other options are incorrect</strong><br>
+<strong>A.</strong> An advanced persistent threat describes a sophisticated, typically external actor conducting a prolonged, stealthy campaign, not a single active employee&rsquo;s misuse of legitimate access.<br>
+<strong>B.</strong> A nation-state actor is a government-sponsored external threat group, not an internal employee acting alone for personal gain.<br>
+<strong>D.</strong> A hacktivist is motivated by ideology and typically operates externally to disrupt or embarrass an organization publicly, not to quietly sell stolen data for profit.</p>
+<p><small>Source: <a href="https://www.cisa.gov/topics/physical-security/insider-threat-mitigation">CISA, Insider Threat Mitigation</a></small></p>
+
+</div>
+
+<h6 id="a-company-identifies-that-an-external-threat-actor-has-penetrated-system-protections-and-likely-exfiltrated-company-information-upon-investigation-you-identify-that-the-threat-actor-found-a-way-to-capture-a-password-hash-while-it-was-being-transmitted-during-a-users-authentication-which-type-of-password-attack-does-this-scenario-describe">A company identifies that an external threat actor has penetrated system protections and likely exfiltrated company information. Upon investigation, you identify that the threat actor found a way to capture a password hash while it was being transmitted during a user&rsquo;s authentication. Which type of password attack does this scenario describe?</h6>
+<p>⬜ A. Dictionary attack<br>
+⬜ B. Brute force attack<br>
+✅ C. On-path attack<br>
+⬜ D. XSS attack</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer: C</strong><br>
+An on-path (man-in-the-middle) attack occurs when an attacker intercepts communications between two parties — here, capturing the password hash as it was transmitted in transit during authentication — rather than guessing or computing the password offline.</p>
+<p><strong>Why other options are incorrect</strong><br>
+<strong>A.</strong> A dictionary attack tries common words or phrases against a stored or captured hash offline; it doesn&rsquo;t describe intercepting a hash in transit.<br>
+<strong>B.</strong> A brute force attack systematically tries all possible password combinations; it also doesn&rsquo;t describe intercepting data as it travels over the network.<br>
+<strong>D.</strong> An XSS (cross-site scripting) attack injects malicious scripts into web content viewed by other users; it is unrelated to intercepting authentication traffic on the network.</p>
+<p><small>Source: <a href="https://csrc.nist.gov/pubs/sp/800/63/3/final">NIST SP 800-63-3, Digital Identity Guidelines</a></small></p>
+
+</div>
+
+<h6 id="a-business-development-team-reports-that-files-are-missing-from-the-database-system-and-the-server-log-in-screens-are-showing-a-lock-symbol-that-requires-users-to-contact-an-email-address-to-access-the-system-and-data-which-of-the-following-attacks-is-the-company-facing">A business development team reports that files are missing from the database system and the server log-in screens are showing a lock symbol that requires users to contact an email address to access the system and data. Which of the following attacks is the company facing?</h6>
+<p>⬜ A. Rootkit<br>
+✅ B. Ransomware<br>
+⬜ C. Spyware<br>
+⬜ D. Bloatware</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer: B</strong><br>
+A lock screen demanding contact with an attacker-controlled email (or payment) to regain access to files and systems is the defining behavior of ransomware, which encrypts or locks data and extorts the victim for its release.</p>
+<p><strong>Why other options are incorrect</strong><br>
+<strong>A.</strong> A rootkit is malware designed to hide its presence and maintain privileged access; it does not typically lock the screen and demand contact to restore access.<br>
+<strong>C.</strong> Spyware secretly monitors and collects user activity or data without the user&rsquo;s knowledge; it does not lock systems or demand payment/contact.<br>
+<strong>D.</strong> Bloatware refers to unwanted pre-installed or unnecessary software that consumes resources; it is a nuisance, not an extortion-based attack.</p>
+<p><small>Source: <a href="https://www.cisa.gov/topics/cyber-threats-and-advisories/malware-phishing-and-ransomware">CISA, Malware, Phishing, and Ransomware</a></small></p>
+
+</div>
+
 <h3 id="domain-3-security-architecture-18">Domain 3: Security Architecture (18%)</h3>
 <hr>
 <h6 id="a-company-places-its-public-facing-web-server-in-a-separate-network-segment-that-is-isolated-from-both-the-internet-and-the-internal-corporate-network-with-firewall-rules-strictly-controlling-traffic-in-and-out-of-that-segment-which-architecture-concept-is-being-applied">A company places its public-facing web server in a separate network segment that is isolated from both the internet and the internal corporate network, with firewall rules strictly controlling traffic in and out of that segment. Which architecture concept is being applied?</h6>
@@ -1213,6 +1366,57 @@ CompTIA Security+ (SY0-701) objective 3.1 lists a specific set of architecture-m
 <strong>B.</strong> Risk transference (e.g., via cyber insurance) is explicitly listed as an architecture consideration.<br>
 <strong>C.</strong> Cost is explicitly listed as an architecture consideration when choosing between architecture models.</p>
 <p><small>Source: <a href="https://www.comptia.org/certifications/security">CompTIA Security+ SY0-701 Exam Objectives</a></small></p>
+
+</div>
+
+<h6 id="which-of-the-following-mitigation-techniques-refers-to-the-process-of-protecting-all-information-on-a-hard-drive-including-the-programs-responsible-for-booting-an-operating-system">Which of the following mitigation techniques refers to the process of protecting all information on a hard drive, including the programs responsible for booting an operating system?</h6>
+<p>⬜ A. Network segmentation<br>
+⬜ B. Patch management<br>
+✅ C. Full-disk encryption<br>
+⬜ D. Device isolation</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer: C</strong><br>
+Full-disk encryption (FDE) encrypts an entire storage volume, including the boot loader and system files needed to start the operating system, so all data on the drive — not just user files — is protected if the device is lost or stolen.</p>
+<p><strong>Why other options are incorrect</strong><br>
+<strong>A.</strong> Network segmentation divides a network into isolated zones to limit lateral movement; it has no effect on protecting data stored on a hard drive.<br>
+<strong>B.</strong> Patch management keeps software up to date to close known vulnerabilities; it does not encrypt or otherwise protect data at rest on a drive.<br>
+<strong>D.</strong> Device isolation restricts a device&rsquo;s network connectivity or access; it does not protect the contents of the drive itself.</p>
+<p><small>Source: <a href="https://csrc.nist.gov/pubs/sp/800/111/final">NIST SP 800-111, Guide to Storage Encryption Technologies for End User Devices</a></small></p>
+
+</div>
+
+<h6 id="which-of-the-following-describes-the-placement-and-role-of-a-firewall-in-a-network-with-a-defense-in-depth-strategy">Which of the following describes the placement and role of a firewall in a network with a defense-in-depth strategy?</h6>
+<p>⬜ A. A firewall is typically on internal routers and serves as a corrective control to mitigate denial of service (DoS) attacks.<br>
+⬜ B. A firewall is typically inline behind the border firewall and serves as a preventive control to enforce access rules.<br>
+✅ C. A firewall is typically at the network border and serves as a preventive control to enforce access rules for ingress and egress traffic.<br>
+⬜ D. A firewall is typically at the network border and serves as a detective control to identify malicious traffic.</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer: C</strong><br>
+In a defense-in-depth strategy, a firewall is commonly placed at the network border, where it acts as a preventive control that enforces access rules on both inbound (ingress) and outbound (egress) traffic before it can reach or leave the internal network.</p>
+<p><strong>Why other options are incorrect</strong><br>
+<strong>A.</strong> A firewall is a preventive control, not a corrective one — corrective controls act after an incident to restore normal operation, whereas a firewall blocks unwanted traffic before it does harm.<br>
+<strong>B.</strong> This describes a secondary, inline firewall placement rather than the typical border placement, and understates the firewall&rsquo;s primary role of enforcing border access rules.<br>
+<strong>D.</strong> A firewall primarily prevents unauthorized traffic by enforcing rules; detecting and identifying malicious traffic after the fact is more characteristic of a detective control like an IDS.</p>
+<p><small>Source: <a href="https://csrc.nist.gov/pubs/sp/800/41/r1/final">NIST SP 800-41 Rev. 1, Guidelines on Firewalls and Firewall Policy</a></small></p>
+
+</div>
+
+<h6 id="an-organization-wants-to-ensure-the-security-of-its-sensitive-data-stored-on-the-companys-physical-drives-with-varying-levels-of-access-for-different-users-which-of-the-following-encryption-methods-would-best-suit-this-requirement">An organization wants to ensure the security of its sensitive data stored on the company&rsquo;s physical drives, with varying levels of access for different users. Which of the following encryption methods would best suit this requirement?</h6>
+<p>⬜ A. Volume encryption only<br>
+✅ B. A combination of volume and file encryption<br>
+⬜ C. Full disk encryption (FDE) only<br>
+⬜ D. Partition encryption only</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer: B</strong><br>
+Volume encryption protects the drive as a whole, while file-level encryption allows individual files to be protected with separate keys or permissions — combining the two provides broad protection plus the granular, varying access control per file or user that this scenario requires.</p>
+<p><strong>Why other options are incorrect</strong><br>
+<strong>A.</strong> Volume encryption alone protects the drive as a whole but doesn&rsquo;t provide the per-file, per-user granularity needed when different users require different access levels.<br>
+<strong>C.</strong> Full-disk encryption alone protects data when the device is powered off or stolen, but once the system is unlocked it does not restrict which authenticated users can access which specific files.<br>
+<strong>D.</strong> Partition encryption is similar in scope to volume encryption and, alone, doesn&rsquo;t provide file-level granularity for varying user access.</p>
+<p><small>Source: <a href="https://csrc.nist.gov/pubs/sp/800/111/final">NIST SP 800-111, Guide to Storage Encryption Technologies for End User Devices</a></small></p>
 
 </div>
 
@@ -1458,6 +1662,57 @@ Threat hunting is a proactive, analyst-driven activity that searches for signs o
 
 </div>
 
+<h6 id="the-companys-system-has-recently-detected-suspicious-network-activity-signaling-a-possible-cybersecurity-incident-the-incident-response-team-has-assembled-and-after-going-through-the-detection-and-analysis-phases-the-containment-phase-of-the-incident-response-process-has-started-in-this-phase-what-is-the-primary-objective">The company&rsquo;s system has recently detected suspicious network activity, signaling a possible cybersecurity incident. The incident response team has assembled, and after going through the detection and analysis phases, the containment phase of the incident response process has started. In this phase, what is the primary objective?</h6>
+<p>⬜ A. Continuing the discovery of indicators of the threat actor activity<br>
+⬜ B. Removing the source of the threat and restoring the affected systems to a secure state<br>
+✅ C. Limiting the scope and magnitude of the incident<br>
+⬜ D. Analyzing the incident and responses to identify whether procedures or systems could be improved</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer: C</strong><br>
+The primary objective of the containment phase is to limit the scope and magnitude of an incident — for example, isolating affected systems — before it spreads further, buying time for a proper eradication and recovery plan.</p>
+<p><strong>Why other options are incorrect</strong><br>
+<strong>A.</strong> Continued discovery of indicators of compromise is part of the detection and analysis phase, which the scenario states has already been completed before containment began.<br>
+<strong>B.</strong> Removing the threat source and restoring systems describes the eradication and recovery phases, which follow containment rather than define it.<br>
+<strong>D.</strong> Reviewing and improving procedures based on the incident describes the lessons-learned (post-incident activity) phase, which happens after the incident is resolved.</p>
+<p><small>Source: <a href="https://csrc.nist.gov/pubs/sp/800/61/r2/final">NIST SP 800-61 Rev. 2, Computer Security Incident Handling Guide</a></small></p>
+
+</div>
+
+<h6 id="an-organizations-automated-scanner-has-just-flagged-a-vulnerability-with-the-identifier-cve-2023-0150-what-are-some-initial-steps-the-organization-should-take-to-understand-and-potentially-address-this-vulnerability">An organization&rsquo;s automated scanner has just flagged a vulnerability with the identifier CVE-2023-0150. What are some initial steps the organization should take to understand and potentially address this vulnerability?</h6>
+<p>✅ A. Look up the identifier in the vulnerability database and assess the vulnerability.<br>
+⬜ B. Modify the scanner settings to avoid detecting similar vulnerabilities in the future.<br>
+⬜ C. Consult the scanner&rsquo;s manufacturer for advice on the vulnerability.<br>
+⬜ D. Ignore the identifier since it might not be significant.</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer: A</strong><br>
+A CVE identifier is a standardized reference; the appropriate first step is to look it up in an authoritative vulnerability database, such as the National Vulnerability Database, to understand its description, severity (CVSS score), and affected products before deciding how to remediate it.</p>
+<p><strong>Why other options are incorrect</strong><br>
+<strong>B.</strong> Reconfiguring the scanner to stop detecting similar vulnerabilities would hide real risk rather than address it, and is the opposite of good vulnerability management practice.<br>
+<strong>C.</strong> The scanner manufacturer is not the authoritative source for a specific CVE&rsquo;s details; the CVE/NVD record itself and the affected product&rsquo;s vendor advisories are the appropriate references.<br>
+<strong>D.</strong> Ignoring a flagged CVE without assessment risks leaving a genuine, potentially severe vulnerability unaddressed.</p>
+<p><small>Source: <a href="https://nvd.nist.gov/">NIST National Vulnerability Database</a></small></p>
+
+</div>
+
+<h6 id="at-a-healthcare-technology-company-a-cybersecurity-alert-flagged-an-unusual-pattern-of-data-traffic-from-one-of-its-key-database-servers-initial-analysis-indicates-a-potential-data-breach-that-is-not-yet-conclusively-confirmed-the-server-contains-sensitive-patient-data-if-confirmed-it-could-have-severe-legal-and-reputational-implications-for-the-company-what-steps-should-the-incident-response-team-take-to-better-understand-the-situation">At a healthcare technology company, a cybersecurity alert flagged an unusual pattern of data traffic from one of its key database servers. Initial analysis indicates a potential data breach that is not yet conclusively confirmed. The server contains sensitive patient data. If confirmed, it could have severe legal and reputational implications for the company. What steps should the incident response team take to better understand the situation?</h6>
+<p>⬜ A. Focus on other network abnormalities and wait for additional alerts before conducting a detailed analysis<br>
+⬜ B. Immediately shut down the server to prevent further data leaks<br>
+⬜ C. Announce the potential data breach to all stakeholders and the public to maintain transparency<br>
+✅ D. Conduct a detailed analysis of the alert using threat intelligence and incident response playbooks</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer: D</strong><br>
+Since the breach is not yet conclusively confirmed, the appropriate next step is a thorough analysis of the alert using threat intelligence and the organization&rsquo;s incident response playbooks to validate the finding and scope the incident before taking more drastic or public action.</p>
+<p><strong>Why other options are incorrect</strong><br>
+<strong>A.</strong> Waiting for more alerts instead of analyzing the current one delays understanding a potentially serious breach involving sensitive patient data.<br>
+<strong>B.</strong> Immediately shutting down the server is a containment action taken once the incident is properly scoped; jumping straight to it, before analysis, can destroy volatile evidence and may be premature.<br>
+<strong>C.</strong> Publicly announcing a breach that is not yet confirmed risks reputational harm and regulatory issues from a false or premature disclosure; analysis and confirmation come first.</p>
+<p><small>Source: <a href="https://csrc.nist.gov/pubs/sp/800/61/r2/final">NIST SP 800-61 Rev. 2, Computer Security Incident Handling Guide</a></small></p>
+
+</div>
+
 <h3 id="domain-5-security-program-management-and-oversight-20">Domain 5: Security Program Management and Oversight (20%)</h3>
 <hr>
 <h6 id="a-security-team-implements-automated-tools-and-processes-to-continuously-collect-security-related-metrics-assess-the-security-posture-of-systems-against-a-defined-baseline-and-report-deviations-to-stakeholders-on-an-ongoing-basis-rather-than-relying-only-on-periodic-annual-assessments-which-security-operations-practice-does-this-describe">A security team implements automated tools and processes to continuously collect security-related metrics, assess the security posture of systems against a defined baseline, and report deviations to stakeholders on an ongoing basis, rather than relying only on periodic annual assessments. Which security operations practice does this describe?</h6>
@@ -1627,6 +1882,23 @@ A privacy notice communicates to individuals what personal information an organi
 <strong>C.</strong> A vulnerability disclosure policy defines how external researchers should report discovered security vulnerabilities to the organization, unrelated to communicating personal data handling practices to customers.<br>
 <strong>D.</strong> A network diagram is a technical illustration of network architecture and connectivity; it does not address privacy communication to data subjects.</p>
 <p><small>Source: <a href="https://csrc.nist.gov/pubs/sp/800/122/final">NIST SP 800-122, Guide to Protecting the Confidentiality of Personally Identifiable Information (PII)</a></small></p>
+
+</div>
+
+<h6 id="a-software-development-company-recognizes-that-some-of-its-employees-are-vulnerable-to-phishing-attacks-to-address-this-the-company-plans-to-set-up-a-training-program-what-factors-should-the-company-primarily-consider-while-defining-such-training-programs">A software development company recognizes that some of its employees are vulnerable to phishing attacks. To address this, the company plans to set up a training program. What factors should the company primarily consider while defining such training programs?</h6>
+<p>✅ A. The roles performed by the employees<br>
+⬜ B. The length of service of the employees<br>
+⬜ C. The job titles of the employees<br>
+⬜ D. The personal interests of the employees</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer: A</strong><br>
+Effective security awareness training is role-based: employees with access to more sensitive systems or data, or who are more likely to be targeted (such as finance or IT staff), need training tailored to the risks their specific role actually exposes them to.</p>
+<p><strong>Why other options are incorrect</strong><br>
+<strong>B.</strong> Length of service does not determine what phishing risks an employee&rsquo;s day-to-day responsibilities expose them to; a new hire and a veteran in the same role face similar risks.<br>
+<strong>C.</strong> Job titles alone can be misleading; what matters is the actual role, responsibilities, and system access the person has, which titles don&rsquo;t always capture precisely.<br>
+<strong>D.</strong> Personal interests have no bearing on an employee&rsquo;s exposure to phishing risk tied to their job function.</p>
+<p><small>Source: <a href="https://csrc.nist.gov/pubs/sp/800/50/r1/final">NIST SP 800-50 Rev. 1, Building a Cybersecurity and Privacy Learning Program</a></small></p>
 
 </div>
 

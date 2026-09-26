@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://codingnconcepts.com/azure/azure-ai-apps-and-agents-developer-exam-questions/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/azure.png" />
 <meta property="article:published_time" content="2026-09-06T00:00:00+00:00" />
-<meta property="article:modified_time" content="2026-09-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-09-26T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -81,7 +81,7 @@
     "copyrightYear": "2026",
     "dateCreated": "2026-09-06T00:00:00.00Z",
     "datePublished": "2026-09-06T00:00:00.00Z",
-    "dateModified": "2026-09-18T00:00:00.00Z",
+    "dateModified": "2026-09-26T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -95,7 +95,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/azure.png"],
     "url": "https://codingnconcepts.com/azure/azure-ai-apps-and-agents-developer-exam-questions/",
-    "wordCount": 12770 ,
+    "wordCount": 13454 ,
     "genre": ["Azure Certification","Certification"],
     "keywords":  null 
 }
@@ -595,7 +595,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2026-09-18T00:00:00Z">Last Modified: Sep 18, 2026</time>
+	<time class="meta__text" datetime="2026-09-26T00:00:00Z">Last Modified: Sep 26, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -610,7 +610,7 @@
 		<nav id="TableOfContents">
   <ul>
     <li><a href="#overview">Overview</a></li>
-    <li><a href="#61-practice-questions">61 Practice Questions</a>
+    <li><a href="#64-practice-questions">64 Practice Questions</a>
       <ul>
         <li><a href="#domain-1-plan-and-manage-an-azure-ai-solution-28">Domain 1: Plan and Manage an Azure AI Solution (28%)</a></li>
         <li><a href="#domain-2-implement-generative-ai-and-agentic-solutions-32">Domain 2: Implement Generative AI and Agentic Solutions (32%)</a></li>
@@ -640,7 +640,7 @@
 <li>Like other Microsoft Associate certifications, it is valid for <strong>1 year</strong> and can be renewed with a free online assessment.</li>
 <li><a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-103">Study Guide</a> for more details.</li>
 </ol>
-<h2 id="61-practice-questions">61 Practice Questions</h2>
+<h2 id="64-practice-questions">64 Practice Questions</h2>
 <hr>
 <table>
 	<thead>
@@ -656,13 +656,13 @@
 					<td>1</td>
 					<td>Plan and Manage an Azure AI Solution</td>
 					<td>28%</td>
-					<td>18</td>
+					<td>19</td>
 			</tr>
 			<tr>
 					<td>2</td>
 					<td>Implement Generative AI and Agentic Solutions</td>
 					<td>32%</td>
-					<td>18</td>
+					<td>20</td>
 			</tr>
 			<tr>
 					<td>3</td>
@@ -1007,6 +1007,23 @@ A Foundry project connection stores the Azure AI Search endpoint and credentials
 
 </div>
 
+<h6 id="which-statement-best-describes-how-keys-secrets-and-endpoints-work-together-in-an-azure-based-ai-application">Which statement best describes how keys, secrets, and endpoints work together in an Azure-based AI application?</h6>
+<p>⬜ A. The key is the location where model responses are stored, and the endpoint retrieves those responses from Azure Key Vault.<br>
+⬜ B. The endpoint stores sensitive values for an AI application, and the key determines how much data the endpoint can return.<br>
+✅ C. The endpoint is a URL for calling a deployed model, and the key (stored as a secret in Azure Key Vault) authenticates the request made to that endpoint.<br>
+⬜ D. The secret is the model&rsquo;s raw training data, and the endpoint encrypts it before storage in Azure Key Vault.</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer: C</strong><br>
+An Azure AI resource exposes an endpoint — a URL that client code calls to reach the deployed model or service — and access to that endpoint is authenticated using a key. Storing that key as a secret in Azure Key Vault keeps it out of source code while still letting the application retrieve it at runtime to authenticate each request.</p>
+<p><strong>Why other options are incorrect</strong><br>
+<strong>A.</strong> Azure Key Vault stores secrets such as keys; it does not store or retrieve model responses, which is not its purpose.<br>
+<strong>B.</strong> The endpoint does not store sensitive values — the key does. The endpoint is simply the callable URL, and it does not govern how much data can be returned.<br>
+<strong>D.</strong> Neither the key nor the endpoint has anything to do with storing or encrypting a model&rsquo;s training data — Key Vault secrets are credentials, not training datasets.</p>
+<p><small>Source: <a href="https://learn.microsoft.com/en-us/azure/key-vault/general/basic-concepts">Azure Key Vault basic concepts - Microsoft Learn</a></small></p>
+
+</div>
+
 <h3 id="domain-2-implement-generative-ai-and-agentic-solutions-32">Domain 2: Implement Generative AI and Agentic Solutions (32%)</h3>
 <hr>
 <h6 id="a-developer-deploys-a-gpt-model-in-microsoft-foundry-and-wants-to-establish-the-assistants-persona-tone-and-behavioral-constraints-such-as-always-respond-in-formal-english-and-never-provide-medical-advice-before-any-user-messages-are-sent-where-should-this-instruction-be-placed-in-the-chat-completion-request">A developer deploys a GPT model in Microsoft Foundry and wants to establish the assistant&rsquo;s persona, tone, and behavioral constraints (such as &ldquo;always respond in formal English and never provide medical advice&rdquo;) before any user messages are sent. Where should this instruction be placed in the chat completion request?</h6>
@@ -1308,6 +1325,40 @@ The Model Context Protocol (MCP) specification describes tools as &ldquo;model-c
 <strong>C.</strong> The MCP server&rsquo;s job is to expose tools (via <code>tools/list</code>) and execute calls (via <code>tools/call</code>); it does not itself analyze prompts or choose which tool to invoke.<br>
 <strong>D.</strong> Tool selection is driven by the model matching intent to tool descriptions, not random selection.</p>
 <p><small>Source: <a href="https://modelcontextprotocol.io/specification/2025-06-18/server/tools">Tools - Model Context Protocol Specification</a></small></p>
+
+</div>
+
+<h6 id="what-capability-of-microsoft-foundry-helps-mitigate-harmful-content-generation-at-the-safety-system-level">What capability of Microsoft Foundry helps mitigate harmful content generation at the safety system level?</h6>
+<p>⬜ A. Fine-tuning<br>
+⬜ B. DALL-E model support<br>
+✅ C. Guardrails and controls (content safety filtering)<br>
+⬜ D. Prompt flow orchestration</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer: C</strong><br>
+Microsoft Foundry&rsquo;s guardrails and controls, built on Azure AI Content Safety, operate at the safety system level to detect and filter harmful content — such as hate speech, violence, self-harm, and sexual content — in both prompts and model outputs, independent of any individual model&rsquo;s own behavior.</p>
+<p><strong>Why other options are incorrect</strong><br>
+<strong>A.</strong> Fine-tuning adjusts a model&rsquo;s weights on custom training data to change its behavior for a task; it is not a content-safety mitigation mechanism.<br>
+<strong>B.</strong> DALL-E model support refers to the availability of that image-generation model in the catalog; it is a model offering, not a safety mitigation capability.<br>
+<strong>D.</strong> Prompt flow orchestration is used to design and manage the execution flow of an AI application&rsquo;s logic, not to filter or block harmful content.</p>
+<p><small>Source: <a href="https://learn.microsoft.com/en-us/azure/ai-services/content-safety/overview">Azure AI Content Safety documentation - Microsoft Learn</a></small></p>
+
+</div>
+
+<h6 id="when-constructing-a-prompt-for-a-generative-ai-model-in-a-retrieval-augmented-application-which-of-the-following-is-typically-authored-as-part-of-the-prompt-itself-rather-than-produced-internally-by-the-retrieval-system">When constructing a prompt for a generative AI model in a retrieval-augmented application, which of the following is typically authored as part of the prompt itself, rather than produced internally by the retrieval system?</h6>
+<p>✅ A. Instructions for the response, such as desired tone, length, and specificity<br>
+⬜ B. The vector embeddings computed for the retrieved documents<br>
+⬜ C. The similarity scores calculated between the query and indexed vectors<br>
+⬜ D. The index metadata describing how documents were chunked and embedded</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer: A</strong><br>
+A prompt sent to a generative model typically combines the user&rsquo;s query, retrieved context, and explicit instructions about the desired response — such as tone, length, and specificity — all authored or assembled as text. Vector embeddings, similarity scores, and chunking metadata are internal artifacts the retrieval system uses to find and rank content before the prompt is even assembled.</p>
+<p><strong>Why other options are incorrect</strong><br>
+<strong>B.</strong> Vector embeddings are numeric representations used internally by the retrieval/search system to find relevant content; they are not written into the natural-language prompt itself.<br>
+<strong>C.</strong> Similarity scores are an internal ranking signal from the retrieval step; they inform which content gets included but are not themselves part of the prompt text.<br>
+<strong>D.</strong> Index metadata about chunking and embedding is infrastructure detail from the ingestion pipeline, not content that appears in the prompt sent to the model.</p>
+<p><small>Source: <a href="https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview">Retrieval Augmented Generation (RAG) in Azure AI Search - Microsoft Learn</a></small></p>
 
 </div>
 

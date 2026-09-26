@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://codingnconcepts.com/mongodb/mongodb-certified-database-administrator-exam-questions/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/mongodb.jpg" />
 <meta property="article:published_time" content="2026-09-18T00:00:00+00:00" />
-<meta property="article:modified_time" content="2026-09-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-09-26T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -82,7 +82,7 @@
     "copyrightYear": "2026",
     "dateCreated": "2026-09-18T00:00:00.00Z",
     "datePublished": "2026-09-18T00:00:00.00Z",
-    "dateModified": "2026-09-18T00:00:00.00Z",
+    "dateModified": "2026-09-26T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -96,7 +96,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/mongodb.jpg"],
     "url": "https://codingnconcepts.com/mongodb/mongodb-certified-database-administrator-exam-questions/",
-    "wordCount": 12092 ,
+    "wordCount": 12291 ,
     "genre": ["MongoDB","Certification","Database Administration"],
     "keywords":  null 
 }
@@ -596,7 +596,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2026-09-18T00:00:00Z">Last Modified: Sep 18, 2026</time>
+	<time class="meta__text" datetime="2026-09-26T00:00:00Z">Last Modified: Sep 26, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -611,7 +611,7 @@
 		<nav id="TableOfContents">
   <ul>
     <li><a href="#overview">Overview</a></li>
-    <li><a href="#50-practice-questions">50 Practice Questions</a>
+    <li><a href="#51-practice-questions">51 Practice Questions</a>
       <ul>
         <li><a href="#domain-1-mongodb-architecture-and-core-operations-15">Domain 1: MongoDB Architecture and Core Operations (15%)</a></li>
         <li><a href="#domain-2-indexing-and-query-optimization-13">Domain 2: Indexing and Query Optimization (13%)</a></li>
@@ -641,7 +641,7 @@
 <li>MongoDB certifications currently <strong>do not expire</strong> and are governed by MongoDB&rsquo;s own product versioning.</li>
 <li><a href="https://learn.mongodb.com/courses/mongodb-associate-dba-exam-study-guide">DBA Exam Study Guide</a> and <a href="https://learn.mongodb.com/pages/mongodb-database-administrator-exam">official exam registration page</a> for more details.</li>
 </ol>
-<h2 id="50-practice-questions">50 Practice Questions</h2>
+<h2 id="51-practice-questions">51 Practice Questions</h2>
 <hr>
 <table>
 	<thead>
@@ -657,7 +657,7 @@
 					<td>1</td>
 					<td>MongoDB Architecture and Core Operations</td>
 					<td>15%</td>
-					<td>8</td>
+					<td>9</td>
 			</tr>
 			<tr>
 					<td>2</td>
@@ -841,6 +841,22 @@ The $set update operator &ldquo;replaces the value of a field with the specified
 <strong>B.</strong> Passing a plain field-value document (without $set or another update operator) to updateOne() is invalid — MongoDB update operations require update operators like $set to modify specific fields.<br>
 <strong>C.</strong> Deleting the document and reinserting one with only <code>status</code> destroys all the order&rsquo;s other fields and changes its <code>_id</code> — far more destructive than a targeted field update.</p>
 <p><small>Source: <a href="https://www.mongodb.com/docs/manual/reference/operator/update/set/">$set</a></small></p>
+
+</div>
+
+<h6 id="a-database-administrator-is-considering-moving-from-a-self-managed-database-system-to-a-fully-managed-database-as-a-service-dbaas-such-as-mongodb-atlas-the-administrator-wants-to-focus-more-on-application-development-rather-than-database-maintenance-what-are-two-benefits-of-using-a-fully-managed-dbaas-in-this-scenario-choose-two">A database administrator is considering moving from a self-managed database system to a fully-managed database as a service (DBaaS), such as MongoDB Atlas. The administrator wants to focus more on application development rather than database maintenance. What are two benefits of using a fully-managed DBaaS in this scenario? (Choose two.)</h6>
+<p>⬜ A. Full control over hardware and software configurations<br>
+✅ B. Automatic handling of operational tasks, such as upgrades and backups<br>
+✅ C. Reduced need for manual security updates and maintenance<br>
+⬜ D. Ability to host the database on personal servers</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer: B and C</strong><br>
+A fully-managed DBaaS like MongoDB Atlas takes over operational tasks such as patching, upgrades, and backups, and it also handles routine security updates and maintenance — both directly reducing the operational burden on the team and freeing them to focus on application development instead.</p>
+<p><strong>Why other options are incorrect</strong><br>
+<strong>A.</strong> Full control over hardware and software configuration is a characteristic of self-managed infrastructure, not a benefit of a managed DBaaS — Atlas intentionally abstracts this away.<br>
+<strong>D.</strong> A managed DBaaS runs on the provider&rsquo;s infrastructure; hosting on personal servers is the opposite of what a fully-managed service offers.</p>
+<p><small>Source: <a href="https://www.mongodb.com/docs/atlas/atlas-architecture/current/">MongoDB Atlas Overview</a></small></p>
 
 </div>
 

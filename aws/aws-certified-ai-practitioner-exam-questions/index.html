@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://codingnconcepts.com/aws/aws-certified-ai-practitioner-exam-questions/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/aws.png" />
 <meta property="article:published_time" content="2026-09-06T00:00:00+00:00" />
-<meta property="article:modified_time" content="2026-09-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-09-26T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -82,7 +82,7 @@
     "copyrightYear": "2026",
     "dateCreated": "2026-09-06T00:00:00.00Z",
     "datePublished": "2026-09-06T00:00:00.00Z",
-    "dateModified": "2026-09-15T00:00:00.00Z",
+    "dateModified": "2026-09-26T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -96,7 +96,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/aws.png"],
     "url": "https://codingnconcepts.com/aws/aws-certified-ai-practitioner-exam-questions/",
-    "wordCount": 7723 ,
+    "wordCount": 8364 ,
     "genre": ["AWS Certification","Certification","Generative AI"],
     "keywords":  null 
 }
@@ -596,7 +596,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2026-09-15T00:00:00Z">Last Modified: Sep 15, 2026</time>
+	<time class="meta__text" datetime="2026-09-26T00:00:00Z">Last Modified: Sep 26, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -611,7 +611,7 @@
 		<nav id="TableOfContents">
   <ul>
     <li><a href="#overview">Overview</a></li>
-    <li><a href="#50-practice-questions">50 Practice Questions</a>
+    <li><a href="#53-practice-questions">53 Practice Questions</a>
       <ul>
         <li><a href="#domain-1-fundamentals-of-ai-and-ml-20">Domain 1: Fundamentals of AI and ML (20%)</a></li>
         <li><a href="#domain-2-fundamentals-of-generative-ai-24">Domain 2: Fundamentals of Generative AI (24%)</a></li>
@@ -640,7 +640,7 @@
 <li>Up to <strong>6 months</strong> of exposure to AI/ML technologies on AWS (in any role) is recommended, though there are no formal prerequisites.</li>
 <li><a href="https://docs.aws.amazon.com/aws-certification/latest/examguides/ai-practitioner-01.html">Exam Guide</a> for more details.</li>
 </ol>
-<h2 id="50-practice-questions">50 Practice Questions</h2>
+<h2 id="53-practice-questions">53 Practice Questions</h2>
 <hr>
 <table>
 	<thead>
@@ -662,19 +662,19 @@
 					<td>2</td>
 					<td>Fundamentals of Generative AI</td>
 					<td>24%</td>
-					<td>13</td>
+					<td>14</td>
 			</tr>
 			<tr>
 					<td>3</td>
 					<td>Applications of Foundation Models</td>
 					<td>28%</td>
-					<td>14</td>
+					<td>15</td>
 			</tr>
 			<tr>
 					<td>4</td>
 					<td>Guidelines for Responsible AI</td>
 					<td>14%</td>
-					<td>7</td>
+					<td>8</td>
 			</tr>
 			<tr>
 					<td>5</td>
@@ -1068,6 +1068,23 @@ Nondeterminism means a generative model can produce different outputs for the sa
 
 </div>
 
+<h6 id="a-company-wants-to-increase-the-consistency-and-quality-of-large-language-model-llm-responses-by-providing-the-model-with-access-to-external-sources-of-knowledge-which-technique-will-meet-the-requirement-with-the-least-development-effort">A company wants to increase the consistency and quality of large language model (LLM) responses by providing the model with access to external sources of knowledge. Which technique will meet the requirement with the least development effort?</h6>
+<p>⬜ A. Pre-train a new foundation model from scratch on the company&rsquo;s proprietary data.<br>
+✅ B. Use Retrieval Augmented Generation (RAG) to retrieve relevant external data at query time and include it in the model&rsquo;s prompt.<br>
+⬜ C. Fine-tune the foundation model on the company&rsquo;s proprietary data.<br>
+⬜ D. Increase the model&rsquo;s temperature parameter to make responses more consistent.</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer: B</strong><br>
+Retrieval Augmented Generation (RAG), such as with an Amazon Bedrock knowledge base, retrieves relevant information from external data sources at query time and injects it into the prompt — grounding the model&rsquo;s responses in current, authoritative knowledge without retraining the model, making it the lowest-effort way to improve consistency and quality.</p>
+<p><strong>Why other options are incorrect</strong><br>
+<strong>A.</strong> Pre-training a new foundation model from scratch requires enormous data, compute, and time — by far the highest-effort option, not the least.<br>
+<strong>C.</strong> Fine-tuning updates the model&rsquo;s weights on proprietary data and requires curated training data, compute for training jobs, and ongoing retraining as knowledge changes — far more development effort than RAG.<br>
+<strong>D.</strong> Temperature controls the randomness/creativity of generated output; increasing it makes responses less consistent and has nothing to do with grounding responses in external knowledge.</p>
+<p><small>Source: <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html">Retrieval Augmented Generation (RAG) - Amazon Bedrock Knowledge Bases</a></small></p>
+
+</div>
+
 <h3 id="domain-3-applications-of-foundation-models-28">Domain 3: Applications of Foundation Models (28%)</h3>
 <hr>
 <h6 id="a-company-wants-its-customer-support-chatbot-to-answer-questions-using-the-most-current-internal-knowledge-base-articles-without-retraining-or-fine-tuning-the-underlying-foundation-model-every-time-an-article-changes-which-technique-best-meets-this-requirement">A company wants its customer-support chatbot to answer questions using the most current internal knowledge-base articles, without retraining or fine-tuning the underlying foundation model every time an article changes. Which technique BEST meets this requirement?</h6>
@@ -1303,6 +1320,23 @@ Business objective alignment metrics — such as task completion rate, user sati
 
 </div>
 
+<h6 id="a-software-development-company-is-working-on-a-new-product-with-a-very-tight-deadline-the-company-needs-a-way-to-develop-code-faster-without-sacrificing-reliability-or-security-which-service-could-best-help-this-company-meet-its-deadline">A software development company is working on a new product with a very tight deadline. The company needs a way to develop code faster without sacrificing reliability or security. Which service could best help this company meet its deadline?</h6>
+<p>⬜ A. Amazon SageMaker JumpStart<br>
+⬜ B. Amazon Bedrock<br>
+⬜ C. Amazon Q Business<br>
+✅ D. Amazon Q Developer</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer: D</strong><br>
+Amazon Q Developer is a generative-AI-powered assistant built specifically for software development tasks — it can generate, explain, and transform code, review code for security vulnerabilities, and answer AWS-specific questions directly in the IDE, helping developers ship faster without sacrificing reliability or security.</p>
+<p><strong>Why other options are incorrect</strong><br>
+<strong>A.</strong> Amazon SageMaker JumpStart provides pre-built ML models and solutions to accelerate machine learning projects; it is not a coding assistant for general application development.<br>
+<strong>B.</strong> Amazon Bedrock provides API access to foundation models for building generative AI applications; it is a platform for building AI features, not a developer coding assistant itself.<br>
+<strong>C.</strong> Amazon Q Business is a generative AI assistant for business users to find information and automate tasks across enterprise data sources; it is not focused on writing or reviewing application code.</p>
+<p><small>Source: <a href="https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is.html">Amazon Q Developer User Guide</a></small></p>
+
+</div>
+
 <h3 id="domain-4-guidelines-for-responsible-ai-14">Domain 4: Guidelines for Responsible AI (14%)</h3>
 <hr>
 <h6 id="a-company-wants-to-detect-and-filter-harmful-biased-or-off-topic-content-generated-by-its-foundation-model-before-it-reaches-end-users-which-amazon-bedrock-capability-is-purpose-built-for-this">A company wants to detect and filter harmful, biased, or off-topic content generated by its foundation model before it reaches end users. Which Amazon Bedrock capability is purpose-built for this?</h6>
@@ -1409,6 +1443,23 @@ This scenario describes the classic tradeoff between model interpretability (how
 <p><strong>Why other options are incorrect</strong><br>
 <strong>B, C, and D.</strong> These describe infrastructure and storage tradeoffs, unrelated to the model transparency vs. performance decision described.</p>
 <p><small>Source: <a href="https://aws.amazon.com/machine-learning/responsible-ai/">Responsible AI</a></small></p>
+
+</div>
+
+<h6 id="a-deep-learning-system-developer-doesnt-document-the-origin-of-the-training-data-or-whether-it-has-been-manipulated-reviewers-raise-concerns-about-fairness-and-bias-in-the-systems-results-which-step-of-promoting-ai-training-transparency-does-this-scenario-represent">A deep learning system developer doesn&rsquo;t document the origin of the training data or whether it has been manipulated. Reviewers raise concerns about fairness and bias in the system&rsquo;s results. Which step of promoting AI training transparency does this scenario represent?</h6>
+<p>⬜ A. Model evaluation<br>
+⬜ B. Human-in-the-loop review<br>
+✅ C. Data lineage and provenance documentation<br>
+⬜ D. Model monitoring</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer: C</strong><br>
+Data lineage and provenance documentation records where training data came from and whether it was modified along the way; without it, reviewers cannot trace or verify the data behind a model&rsquo;s outputs, which is exactly the gap described and a key contributor to unexplained fairness and bias concerns.</p>
+<p><strong>Why other options are incorrect</strong><br>
+<strong>A.</strong> Model evaluation assesses a trained model&rsquo;s performance and behavior using metrics and test data; it doesn&rsquo;t address documenting where the training data itself came from.<br>
+<strong>B.</strong> Human-in-the-loop review involves people reviewing or correcting model outputs during operation; it doesn&rsquo;t address the missing documentation of training data origin.<br>
+<strong>D.</strong> Model monitoring tracks a deployed model&rsquo;s performance and drift over time; it is a post-deployment activity, not documentation of the training data&rsquo;s provenance.</p>
+<p><small>Source: <a href="https://aws.amazon.com/ai/responsible-ai/">AWS Responsible AI - Governance</a></small></p>
 
 </div>
 
