@@ -3,18 +3,38 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://codingnconcepts.com/categories/azure/</loc>
+    <lastmod>2026-09-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/azure-certification/</loc>
+    <lastmod>2026-09-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/categories/</loc>
-    <lastmod>2026-09-19T00:00:00+00:00</lastmod>
+    <lastmod>2026-09-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/certification/</loc>
-    <lastmod>2026-09-19T00:00:00+00:00</lastmod>
+    <lastmod>2026-09-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/azure/azure-cloud-and-ai-security-engineer-sc500-exam-questions/</loc>
+    <lastmod>2026-09-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/</loc>
-    <lastmod>2026-09-19T00:00:00+00:00</lastmod>
+    <lastmod>2026-09-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/</loc>
+    <lastmod>2026-09-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -48,18 +68,13 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/</loc>
-    <lastmod>2026-09-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/cloud/kubernetes-security-specialist-cks-exam-questions/</loc>
     <lastmod>2026-09-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/categories/cloud/</loc>
-    <lastmod>2026-09-15T00:00:00+00:00</lastmod>
+    <lastmod>2026-09-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -128,17 +143,7 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/categories/azure/</loc>
-    <lastmod>2026-09-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/azure/azure-ai-apps-and-agents-developer-exam-questions/</loc>
-    <lastmod>2026-09-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/azure-certification/</loc>
     <lastmod>2026-09-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -299,7 +304,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/agile/safe-scrum-master-ssm-exam-notes/</loc>
-    <lastmod>2026-08-30T00:00:00+00:00</lastmod>
+    <lastmod>2026-09-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -409,12 +414,12 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/terraform/</loc>
-    <lastmod>2026-08-30T00:00:00+00:00</lastmod>
+    <lastmod>2026-09-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/post/terraform-associate-exam-guide/</loc>
-    <lastmod>2025-04-22T00:00:00+00:00</lastmod>
+    <lastmod>2026-09-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -659,7 +664,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/agile/leading-safe/</loc>
-    <lastmod>2026-08-30T00:00:00+00:00</lastmod>
+    <lastmod>2026-09-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
