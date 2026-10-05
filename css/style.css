@@ -29,10 +29,10 @@
 	--bg-subtle: #f3f6fb;
 	--bg-card: #ffffff;
 	--bg-inset: #eef2f7;
-	--border: #e3e8ef;
-	--border-strong: #d3dae6;
-	--text: #121c2e;
-	--text-muted: #526079;
+	--border: #d9e2f0;
+	--border-strong: #c5d1e3;
+	--text: #0f172a;
+	--text-muted: #475569;
 	--text-faint: #8792a6;
 	--link: #1d63d8;
 	--link-hover: #1550b3;
@@ -42,7 +42,7 @@
 
 	/* Code (light) */
 	--code-bg: #f3f6fb;
-	--code-border: #e3e8ef;
+	--code-border: #d9e2f0;
 	--code-text: #292c33;
 
 	/* Chroma tokens (light — GitHub-ish) */
@@ -85,21 +85,21 @@
 
 	--bg: #0b1120;
 	--bg-subtle: #0f1626;
-	--bg-card: #121a2b;
+	--bg-card: #111827;
 	--bg-inset: #182237;
-	--border: #22304a;
-	--border-strong: #2c3b58;
-	--text: #e6ebf3;
-	--text-muted: #9aa7bd;
+	--border: #263449;
+	--border-strong: #33445f;
+	--text: #f8fafc;
+	--text-muted: #cbd5e1;
 	--text-faint: #6f7d96;
-	--link: #8fb0ff;
-	--link-hover: #b3caff;
+	--link: #6c8cff;
+	--link-hover: #93a8ff;
 	--shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
 	--shadow-md: 0 4px 20px rgba(0, 0, 0, 0.4);
 	--shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.5);
 
-	--code-bg: #121a2b;
-	--code-border: #22304a;
+	--code-bg: #111827;
+	--code-border: #263449;
 	--code-text: #dfe2ea;
 
 	--chroma-bg: #0f1626;
