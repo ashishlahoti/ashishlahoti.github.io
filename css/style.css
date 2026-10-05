@@ -9,31 +9,40 @@
  * 1. Design tokens
  * ------------------------------------------------------------------ */
 :root {
-	/* Brand — a refined version of the site's original coral/red */
-	--accent: #e0293d;
-	--accent-hover: #c81f32;
-	--accent-soft: #fdecee;
-	--accent-soft-border: #f8ccd2;
+	/* Brand — navy + gold (rebrand 2026-10). Navy = brand and emphasis,
+	   gold = signature highlight (header bar, FREE box), blue = links.
+	   Red is kept for errors only. Same palette as exams.codingnconcepts.com. */
+	--accent: #011d4a;
+	--accent-hover: #0a2d66;
+	--accent-soft: #e8eefb;
+	--accent-soft-border: #c9d6f2;
+	--accent-contrast: #ffffff;      /* text on an --accent background */
+	--gold: #ffb10f;                 /* backgrounds only, never text on white */
+	--gold-soft: #fff3d6;
+	--gold-border: #f6d58a;
+	--danger: #b42318;
+	--danger-soft: #fdecea;
+	--danger-border: #f6c9c4;
 
 	/* Neutrals (light) */
 	--bg: #ffffff;
-	--bg-subtle: #f6f7f9;
+	--bg-subtle: #f3f6fb;
 	--bg-card: #ffffff;
-	--bg-inset: #f1f2f5;
-	--border: #e6e8ec;
-	--border-strong: #d6d9e0;
-	--text: #1a1d24;
-	--text-muted: #5b6270;
-	--text-faint: #8890a0;
-	--link: #c81f32;
-	--link-hover: #a5182a;
+	--bg-inset: #eef2f7;
+	--border: #e3e8ef;
+	--border-strong: #d3dae6;
+	--text: #121c2e;
+	--text-muted: #526079;
+	--text-faint: #8792a6;
+	--link: #1d63d8;
+	--link-hover: #1550b3;
 	--shadow-sm: 0 1px 2px rgba(20, 22, 30, 0.05);
 	--shadow-md: 0 4px 16px rgba(20, 22, 30, 0.08);
 	--shadow-lg: 0 12px 32px rgba(20, 22, 30, 0.12);
 
 	/* Code (light) */
-	--code-bg: #f6f7f9;
-	--code-border: #e6e8ec;
+	--code-bg: #f3f6fb;
+	--code-border: #e3e8ef;
 	--code-text: #292c33;
 
 	/* Chroma tokens (light — GitHub-ish) */
@@ -62,31 +71,38 @@
 }
 
 :root[data-theme="dark"] {
-	--accent: #ff5468;
-	--accent-hover: #ff7183;
-	--accent-soft: #33161a;
-	--accent-soft-border: #4a1f25;
+	--accent: #ffb10f;
+	--accent-hover: #ffc24d;
+	--accent-soft: #16264a;
+	--accent-soft-border: #2a3d66;
+	--accent-contrast: #011d4a;
+	--gold: #ffb10f;
+	--gold-soft: #2a2410;
+	--gold-border: #4d4115;
+	--danger: #f87171;
+	--danger-soft: #321a1c;
+	--danger-border: #5a2a2e;
 
-	--bg: #0e1015;
-	--bg-subtle: #14171e;
-	--bg-card: #171a22;
-	--bg-inset: #1c1f28;
-	--border: #262a35;
-	--border-strong: #333846;
-	--text: #e8eaf0;
-	--text-muted: #a3a9b8;
-	--text-faint: #767c8c;
-	--link: #ff8a97;
-	--link-hover: #ffaab3;
+	--bg: #0b1120;
+	--bg-subtle: #0f1626;
+	--bg-card: #121a2b;
+	--bg-inset: #182237;
+	--border: #22304a;
+	--border-strong: #2c3b58;
+	--text: #e6ebf3;
+	--text-muted: #9aa7bd;
+	--text-faint: #6f7d96;
+	--link: #8fb0ff;
+	--link-hover: #b3caff;
 	--shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
 	--shadow-md: 0 4px 20px rgba(0, 0, 0, 0.4);
 	--shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.5);
 
-	--code-bg: #171a22;
-	--code-border: #262a35;
+	--code-bg: #121a2b;
+	--code-border: #22304a;
 	--code-text: #dfe2ea;
 
-	--chroma-bg: #12141a;
+	--chroma-bg: #0f1626;
 	--chroma-text: #d7dae1;
 	--chroma-comment: #7a8194;
 	--chroma-keyword: #ff7b94;
@@ -171,7 +187,7 @@ a:hover { color: var(--link-hover); text-decoration: underline; }
  * ------------------------------------------------------------------ */
 .header {
 	background: var(--bg);
-	border-bottom: 3px solid var(--accent);
+	border-bottom: 3px solid var(--gold);
 	position: sticky;
 	top: 0;
 	z-index: 100;
@@ -230,6 +246,12 @@ a:hover { color: var(--link-hover); text-decoration: underline; }
 }
 
 .logo__title img { height: 32px; width: 32px; border-radius: 8px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12); }
+/* official logo (Platform/brand/logo): navy version on light, white version in dark mode */
+.logo__title img.logo__img { height: 56px; width: auto; border-radius: 0; box-shadow: none; }
+.logo__img--dark { display: none; }
+:root[data-theme="dark"] .logo__img--light { display: none; }
+:root[data-theme="dark"] .logo__img--dark { display: block; }
+@media (max-width: 600px) { .logo__title img.logo__img { height: 44px; } }
 
 .logo__tagline {
 	font-family: var(--font-brand);
@@ -551,7 +573,7 @@ kbd {
 	margin: 0 0 10px;
 	color: var(--text-muted);
 }
-.code_error { color: var(--accent); font-family: var(--font-mono); }
+.code_error { color: var(--danger); font-family: var(--font-mono); }
 
 .notices {
 	margin: 1.3em 0;
@@ -562,7 +584,7 @@ kbd {
 }
 .notices.info, .notices.note { border-color: #b8d4f5; background: #eef5ff; color: #1c4c85; }
 .notices.warning { border-color: #f5dfa3; background: #fff8e6; color: #8a5a00; }
-.notices.error, .notices.danger { border-color: var(--accent-soft-border); background: var(--accent-soft); color: var(--accent-hover); }
+.notices.error, .notices.danger { border-color: var(--danger-border); background: var(--danger-soft); color: var(--danger); }
 :root[data-theme="dark"] .notices.info, :root[data-theme="dark"] .notices.note { background: #12233a; color: #a9cdf5; border-color: #1f3f63; }
 :root[data-theme="dark"] .notices.warning { background: #362a0c; color: #ecc873; border-color: #57430f; }
 
@@ -621,18 +643,19 @@ kbd {
 	color: var(--text);
 }
 
-/* "free" notice: same banner layout as tip/buy, in violet with a gift icon,
-   for the free online practice exam links (exams.codingnconcepts.com). */
-.notices.free { border-color: #d9c8fb; }
-.notices.free p { border-top-color: #7c3aed; background: #f5f0ff; }
+/* "free" notice: gold banner (CnC Gold) with navy label and a gift icon, for the
+   free online practice exam links (exams.codingnconcepts.com).
+   "buy" notice: navy banner (CnC Navy) for paid products (Udemy, PDFs). */
+.notices.free { border-color: var(--gold-border); }
+.notices.free p { border-top-color: var(--gold); background: var(--gold-soft); }
 .notices.free p:first-child::before { content: "\1F381"; }
-.notices.free p:first-child::after { content: "Free"; }
-.notices.free a { color: #6d28d9; }
-.notices.free a:hover { color: #5b21b6; }
-:root[data-theme="dark"] .notices.free { border-color: #3b2a63; }
-:root[data-theme="dark"] .notices.free p { border-top-color: #6d28d9; background: #1d1631; }
-:root[data-theme="dark"] .notices.free a { color: #c4b5fd; }
-:root[data-theme="dark"] .notices.free a:hover { color: #ddd6fe; }
+.notices.free p:first-child::after { content: "Free"; color: #011d4a; }
+.notices.free a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--gold); text-decoration-thickness: 2px; }
+.notices.free a:hover { color: var(--accent-hover); }
+.notices.buy { border-color: var(--accent-soft-border); }
+.notices.buy p { border-top-color: #011d4a; background: var(--accent-soft); }
+:root[data-theme="dark"] .notices.free p { border-top-color: var(--gold); background: var(--gold-soft); }
+:root[data-theme="dark"] .notices.buy p { border-top-color: #22304a; background: var(--accent-soft); }
 
 .count-badge {
 	display: inline-flex;
@@ -643,7 +666,7 @@ kbd {
 	padding: 0 0.4em;
 	border-radius: 999px;
 	background: var(--accent);
-	color: #fff;
+	color: var(--accent-contrast);
 	font-size: 0.55em;
 	font-weight: 700;
 	vertical-align: middle;
@@ -955,7 +978,7 @@ kbd {
 	color: var(--text-muted);
 	font-weight: 700;
 }
-.pagination__item--current { background: var(--accent); border-color: var(--accent); color: #fff; }
+.pagination__item--current { background: var(--accent); border-color: var(--accent); color: var(--accent-contrast); }
 .pagination__item:not(.pagination__item--current):hover { border-color: var(--accent-soft-border); color: var(--accent); text-decoration: none; }
 
 /* ------------------------------------------------------------------ *
@@ -1023,7 +1046,7 @@ kbd {
 	border-radius: var(--radius-sm);
 	border: 1px solid var(--accent);
 	background: var(--accent);
-	color: #fff;
+	color: var(--accent-contrast);
 	cursor: pointer;
 }
 .widget-search__submit svg { width: 16px; height: 16px; }
