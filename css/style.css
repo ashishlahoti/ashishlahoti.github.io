@@ -571,7 +571,7 @@ kbd {
    the content sitting below it. Both keep sharing the original's green
    banner (they're only told apart by their icon/label), just with
    light/dark-aware colors instead of a single hardcoded green. */
-.notices.tip, .notices.buy {
+.notices.tip, .notices.buy, .notices.free {
 	position: relative;
 	padding: 0;
 	border: 1px solid var(--border);
@@ -579,7 +579,7 @@ kbd {
 	overflow: hidden;
 	box-shadow: var(--shadow-sm);
 }
-.notices.tip p, .notices.buy p {
+.notices.tip p, .notices.buy p, .notices.free p {
 	margin: 0;
 	padding: 16px 14px;
 	border-top: 30px solid #5cb85c;
@@ -587,10 +587,10 @@ kbd {
 	color: var(--text);
 	font-weight: 700;
 }
-.notices.tip img, .notices.buy img {
+.notices.tip img, .notices.buy img, .notices.free img {
 	margin: 0;
 }
-.notices.tip p:first-child::before, .notices.buy p:first-child::before {
+.notices.tip p:first-child::before, .notices.buy p:first-child::before, .notices.free p:first-child::before {
 	content: "\1F4A1";
 	position: absolute;
 	top: 15px;
@@ -599,7 +599,7 @@ kbd {
 	font-size: 1.05rem;
 	line-height: 1;
 }
-.notices.tip p:first-child::after, .notices.buy p:first-child::after {
+.notices.tip p:first-child::after, .notices.buy p:first-child::after, .notices.free p:first-child::after {
 	position: absolute;
 	top: 15px;
 	left: 42px;
@@ -620,6 +620,19 @@ kbd {
 	background: #12261a;
 	color: var(--text);
 }
+
+/* "free" notice: same banner layout as tip/buy, in violet with a gift icon,
+   for the free online practice exam links (exams.codingnconcepts.com). */
+.notices.free { border-color: #d9c8fb; }
+.notices.free p { border-top-color: #7c3aed; background: #f5f0ff; }
+.notices.free p:first-child::before { content: "\1F381"; }
+.notices.free p:first-child::after { content: "Free"; }
+.notices.free a { color: #6d28d9; }
+.notices.free a:hover { color: #5b21b6; }
+:root[data-theme="dark"] .notices.free { border-color: #3b2a63; }
+:root[data-theme="dark"] .notices.free p { border-top-color: #6d28d9; background: #1d1631; }
+:root[data-theme="dark"] .notices.free a { color: #c4b5fd; }
+:root[data-theme="dark"] .notices.free a:hover { color: #ddd6fe; }
 
 .count-badge {
 	display: inline-flex;
