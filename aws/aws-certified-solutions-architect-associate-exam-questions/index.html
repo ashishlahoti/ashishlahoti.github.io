@@ -8,9 +8,9 @@
 	<title>AWS Certified Solutions Architect Associate (SAA-C03) Exam Questions - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
-	<meta name="description" content="Free practice exam questions for AWS Certified Solutions Architect Associate (SAA-C03), with verified answers and explanations, plus timed online practice exams (first test free).">
+	<meta name="description" content="Free AWS Solutions Architect Associate (SAA-C03) exam questions with verified answers and explanations, plus timed online practice exams (first test free).">
 	<meta property="og:title" content="AWS Certified Solutions Architect Associate (SAA-C03) Exam Questions" />
-<meta property="og:description" content="Free practice exam questions for AWS Certified Solutions Architect Associate (SAA-C03), with verified answers and explanations, plus timed online practice exams (first test free)." />
+<meta property="og:description" content="Free AWS Solutions Architect Associate (SAA-C03) exam questions with verified answers and explanations, plus timed online practice exams (first test free)." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/aws/aws-certified-solutions-architect-associate-exam-questions/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/aws.png" />
@@ -28,7 +28,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:image" content="https://codingnconcepts.com/img/logo/aws.png">
 	<meta name="twitter:title" content="AWS Certified Solutions Architect Associate (SAA-C03) Exam Questions">
-	<meta name="twitter:description" content="Free practice exam questions for AWS Certified Solutions Architect Associate (SAA-C03), with verified answers and explanations, plus timed online practice exams (first test free).">
+	<meta name="twitter:description" content="Free AWS Solutions Architect Associate (SAA-C03) exam questions with verified answers and explanations, plus timed online practice exams (first test free).">
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -58,7 +58,7 @@
     "name": "AWS Certified Solutions Architect Associate (SAA-C03) Exam Questions",
     "headline": "AWS Certified Solutions Architect Associate (SAA-C03) Exam Questions",
     "alternativeHeadline":  null ,
-    "description": "Free practice exam questions for AWS Certified Solutions Architect Associate (SAA-C03), with verified answers and explanations, plus timed online practice exams (first test free).",
+    "description": "Free AWS Solutions Architect Associate (SAA-C03) exam questions with verified answers and explanations, plus timed online practice exams (first test free).",
     "inLanguage": "en-US",
 	"isFamilyFriendly": true,
     "mainEntityOfPage": {
@@ -95,7 +95,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/aws.png"],
     "url": "https://codingnconcepts.com/aws/aws-certified-solutions-architect-associate-exam-questions/",
-    "wordCount": 99135 ,
+    "wordCount": 99612 ,
     "genre": ["AWS Certification","Certification"],
     "keywords":  null 
 }
@@ -715,15 +715,15 @@ This is a standard, scalable design for AWS Organizations environments using IAM
 <small>Source: <a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/howtocreategroups.html">https://docs.aws.amazon.com/singlesignon/latest/userguide/howtocreategroups.html</a></small></p>
 <hr>
 <h6 id="how-can-a-company-detect-and-notify-security-teams-about-pii-in-s3-buckets">How can a company detect and notify security teams about PII in S3 buckets?</h6>
-<p>✅ A. Use Amazon Macie. Create an EventBridge rule for SensitiveData findings and send an SNS notification.<br>
-⬜ B. Use Amazon GuardDuty. Create an EventBridge rule for CRITICAL findings and send an SNS notification.<br>
-⬜ C. Use Amazon Macie. Create an EventBridge rule for SensitiveData:S3Object/Personal findings and send an SQS notification.<br>
-⬜ D. Use Amazon GuardDuty. Create an EventBridge rule for CRITICAL findings and send an SQS notification.</p>
+<p>✅ Use Amazon Macie. Create an EventBridge rule for SensitiveData findings and send an SNS notification.<br>
+⬜ Use Amazon GuardDuty. Create an EventBridge rule for CRITICAL findings and send an SNS notification.<br>
+⬜ Use Amazon Macie. Create an EventBridge rule for SensitiveData:S3Object/Personal findings and send an SQS notification.<br>
+⬜ Use Amazon GuardDuty. Create an EventBridge rule for CRITICAL findings and send an SQS notification.</p>
 <p><strong><u>Explanation</u>:</strong> <br>
 Amazon Macie is purpose-built for detecting PII in S3.<br>
-Option A uses EventBridge to filter SensitiveData findings and notify via SNS, meeting the requirements.<br>
-Options B and D involve GuardDuty, which is not designed for PII detection.<br>
-Option C uses SQS, which is less suitable for immediate notifications.<br>
+Amazon Macie with an EventBridge rule for SensitiveData findings and an SNS notification meets the requirements.<br>
+The GuardDuty options don&rsquo;t fit: GuardDuty is not designed for PII detection.<br>
+Sending the Macie findings to SQS is less suitable for immediate notifications.<br>
 <small>Source: <a href="https://docs.aws.amazon.com/macie/latest/user/monitoring-eventbridge.html">Monitoring Amazon Macie with Amazon EventBridge</a></small></p>
 <hr>
 <h6 id="a-company-is-building-an-application-in-the-aws-cloud-the-application-is-hosted-on-amazon-ec2-instances-behind-an-application-load-balancer-alb-the-company-uses-amazon-route-53-for-the-dnsthe-company-needs-a-managed-solution-with-proactive-engagement-to-detect-against-ddos-attackswhich-solution-will-meet-these-requirements">A company is building an application in the AWS Cloud. The application is hosted on Amazon EC2 instances behind an Application Load Balancer (ALB). The company uses Amazon Route 53 for the DNS.<br/><br/>The company needs a managed solution with proactive engagement to detect against DDoS attacks.<br/><br/>Which solution will meet these requirements?</h6>
@@ -1716,17 +1716,17 @@ The correct approach to enforce strong password authentication and secure in-tra
 <small>Source: <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock-overview.html">https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock-overview.html</a></small></p>
 <hr>
 <h6 id="a-company-is-planning-to-move-its-data-to-an-amazon-s3-bucket-the-data-must-be-encrypted-when-it-is-stored-in-the-s3-bucket-additionally-the-encryption-key-must-be-automatically-rotated-every-yearwhich-solution-will-meet-these-requirements-with-the-least-operational-overhead">A company is planning to move its data to an Amazon S3 bucket. The data must be encrypted when it is stored in the S3 bucket. Additionally, the encryption key must be automatically rotated every year.<br/><br/>Which solution will meet these requirements with the LEAST operational overhead?</h6>
-<p>⬜ A. Move the data to the S3 bucket. Use server-side encryption with Amazon S3 managed encryption keys (SSE-S3). Use the built-in key rotation behavior of SSE-S3 encryption keys.<br>
-✅ B. Create an AWS Key Management Service (AWS KMS) customer managed key. Enable automatic key rotation. Set the S3 bucket’s default encryption behavior to use the customer managed KMS key. Move the data to the S3 bucket.<br>
-⬜ C. Create an AWS Key Management Service (AWS KMS) customer managed key. Set the S3 bucket’s default encryption behavior to use the customer managed KMS key. Move the data to the S3 bucket. Manually rotate the KMS key every year.<br>
-⬜ D. Encrypt the data with customer key material before moving the data to the S3 bucket. Create an AWS Key Management Service (AWS KMS) key without key material. Import the customer key material into the KMS key. Enable automatic key rotation.</p>
+<p>⬜ Move the data to the S3 bucket. Use server-side encryption with Amazon S3 managed encryption keys (SSE-S3). Use the built-in key rotation behavior of SSE-S3 encryption keys.<br>
+✅ Create an AWS Key Management Service (AWS KMS) customer managed key. Enable automatic key rotation. Set the S3 bucket’s default encryption behavior to use the customer managed KMS key. Move the data to the S3 bucket.<br>
+⬜ Create an AWS Key Management Service (AWS KMS) customer managed key. Set the S3 bucket’s default encryption behavior to use the customer managed KMS key. Move the data to the S3 bucket. Manually rotate the KMS key every year.<br>
+⬜ Encrypt the data with customer key material before moving the data to the S3 bucket. Create an AWS Key Management Service (AWS KMS) key without key material. Import the customer key material into the KMS key. Enable automatic key rotation.</p>
 <p><strong><u>Explanation</u>:</strong><br>
-● Option B is correct because AWS KMS customer managed keys support automatic annual rotation when enabled, which reduces operational overhead.<br>
+● Using an AWS KMS customer managed key with automatic key rotation enabled is correct, because customer managed keys support automatic annual rotation, which reduces operational overhead.<br>
 ● You can configure the S3 bucket to use this KMS key for default server-side encryption, ensuring that all uploaded objects are encrypted without additional effort.<br>
 <u>Why other options are wrong:</u><br>
-A. SSE-S3 uses S3-managed keys but does not support automatic key rotation that is user-visible or configurable.<br>
-C. Manually rotating the key increases operational burden, violating the “least operational overhead” requirement.<br>
-D. Imported key material into KMS cannot be automatically rotated—only customer-managed KMS keys with AWS-managed material can be auto-rotated.<br>
+● <strong>Move the data to the S3 bucket. Use server-side encryption with Amazon S3 managed encryption keys (SSE-S3). Use the built-in key rotation behavior of SSE-S3 encryption keys.</strong> — SSE-S3 uses S3-managed keys but does not support automatic key rotation that is user-visible or configurable.<br>
+● <strong>Create an AWS Key Management Service (AWS KMS) customer managed key. Set the S3 bucket’s default encryption behavior to use the customer managed KMS key. Move the data to the S3 bucket. Manually rotate the KMS key every year.</strong> — Manually rotating the key increases operational burden, violating the “least operational overhead” requirement.<br>
+● <strong>Encrypt the data with customer key material before moving the data to the S3 bucket. Create an AWS Key Management Service (AWS KMS) key without key material. Import the customer key material into the KMS key. Enable automatic key rotation.</strong> — Imported key material into KMS cannot be automatically rotated—only customer-managed KMS keys with AWS-managed material can be auto-rotated.<br>
 <small>Source: <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingKMSEncryption.html">https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingKMSEncryption.html</a></small></p>
 <hr>
 <h6 id="a-company-runs-thousands-of-aws-lambda-functions-the-company-needs-a-solution-to-securely-store-sensitive-information-that-all-the-lambda-functions-use-the-solution-must-also-manage-the-automatic-rotation-of-the-sensitive-informationwhich-combination-of-steps-will-meet-these-requirements-with-the-least-operational-overhead-choose-two">A company runs thousands of AWS Lambda functions. The company needs a solution to securely store sensitive information that all the Lambda functions use. The solution must also manage the automatic rotation of the sensitive information.<br/><br/>Which combination of steps will meet these requirements with the LEAST operational overhead? (Choose two.)</h6>
@@ -2009,17 +2009,17 @@ Amazon GuardDuty is a managed threat detection service that continuously analyze
 <p>Covers designing scalable and loosely coupled architectures, and designing highly available and/or fault-tolerant architectures — Multi-AZ deployments, Auto Scaling, Elastic Load Balancing, SQS/SNS decoupling, backup and disaster recovery strategies.</p>
 <hr>
 <h6 id="a-developer-is-creating-an-ecommerce-workflow-in-an-aws-step-functions-state-machine-that-includes-an-http-task-state-the-task-passes-shipping-information-and-order-details-to-an-endpointthe-developer-needs-to-test-the-workflow-to-confirm-that-the-http-headers-and-body-are-correct-and-that-the-responses-meet-expectationswhich-solution-will-meet-these-requirements">A developer is creating an ecommerce workflow in an AWS Step Functions state machine that includes an HTTP Task state. The task passes shipping information and order details to an endpoint.<br/><br/>The developer needs to test the workflow to confirm that the HTTP headers and body are correct and that the responses meet expectations.<br/><br/>Which solution will meet these requirements?</h6>
-<p>⬜ A. Use the TestState API to invoke only the HTTP Task. Set the inspection level to TRACE.<br>
-⬜ B. Use the TestState API to invoke the state machine. Set the inspection level to DEBUG.<br>
-⬜ C. Use the data flow simulator to invoke only the HTTP Task. View the request and response data.<br>
-✅ D. Change the log level of the state machine to ALL. Run the state machine.</p>
+<p>✅ Use the TestState API to invoke only the HTTP Task. Set the inspection level to TRACE.<br>
+⬜ Use the TestState API to invoke the state machine. Set the inspection level to DEBUG.<br>
+⬜ Use the data flow simulator to invoke only the HTTP Task. View the request and response data.<br>
+⬜ Change the log level of the state machine to ALL. Run the state machine.</p>
 <p><strong><u>Explanation</u>:</strong><br>
-State Machine Testing with Logs:<br>
-Changing the log level to ALL enables capturing detailed request and response data. This helps verify HTTP headers, body, and responses.<br>
+The TestState API tests a single state in isolation. With the inspection level set to TRACE, the result for an HTTP Task includes the raw HTTP request and response (headers and body), which is exactly what the developer needs to verify, without running the whole workflow.<br>
 <u>Incorrect Options</u>:<br>
-Option A and B: The TestState API is not a valid option for Step Functions.<br>
-Option C: A data flow simulator does not exist for AWS Step Functions.<br>
-<small>Source: <a href="https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html">What is Step Functions?</a></small></p>
+● <strong>Use the TestState API to invoke the state machine. Set the inspection level to DEBUG.</strong> — TestState tests one state at a time, not a whole state machine, and the DEBUG level shows input and output data processing but not the raw HTTP request and response.<br>
+● <strong>Use the data flow simulator to invoke only the HTTP Task. View the request and response data.</strong> — The data flow simulator only shows how input and output paths transform JSON; it doesn&rsquo;t call the endpoint, so it can&rsquo;t show real request and response data.<br>
+● <strong>Change the log level of the state machine to ALL. Run the state machine.</strong> — Execution logging records history events and state input and output, but not the raw HTTP request the task sent, and it requires running the full state machine.<br>
+<small>Source: <a href="https://docs.aws.amazon.com/step-functions/latest/dg/test-state-isolation.html">Testing state machines with TestState API</a></small></p>
 <hr>
 <h6 id="a-company-is-deploying-a-critical-application-by-using-amazon-rds-for-mysql-the-application-must-be-highly-available-and-must-recover-automatically-the-company-needs-to-support-interactive-users-transactional-queries-and-batch-reporting-analytical-queries-with-no-more-than-a-4-hour-lag-the-analytical-queries-must-not-affect-the-performance-of-the-transactional-queries">A company is deploying a critical application by using Amazon RDS for MySQL. The application must be highly available and must recover automatically. The company needs to support interactive users (transactional queries) and batch reporting (analytical queries) with no more than a 4-hour lag. The analytical queries must not affect the performance of the transactional queries.</h6>
 <p>⬜ Configure Amazon RDS for MySQL in a Multi-AZ DB instance deployment with one standby instance. Point the transactional queries to the primary DB instance. Point the analytical queries to a secondary DB instance that runs in a different Availability Zone.<br>
@@ -2853,16 +2853,16 @@ The best solution to allow the browser to permit JavaScript requests from a diff
 <small>Source: <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html">https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html</a></small></p>
 <hr>
 <h6 id="a-company-has-an-automobile-sales-website-that-stores-its-listings-in-a-database-on-amazon-rds-when-an-automobile-is-sold-the-listing-needs-to-be-removed-from-the-website-and-the-data-must-be-sent-to-multiple-target-systems-which-design-should-a-solutions-architect-recommend">A company has an automobile sales website that stores its listings in a database on Amazon RDS. When an automobile is sold, the listing needs to be removed from the website and the data must be sent to multiple target systems. Which design should a solutions architect recommend?</h6>
-<p>✅ A. Create an AWS Lambda function triggered when the database on Amazon RDS is updated to send the information to an Amazon Simple Queue Service (Amazon SQS) queue for the targets to consume.<br>
-⬜ B. Create an AWS Lambda function triggered when the database on Amazon RDS is updated to send the information to an Amazon Simple Queue Service (Amazon SQS) FIFO queue for the targets to consume.<br>
-⬜ C. Subscribe to an RDS event notification and send an Amazon Simple Queue Service (Amazon SQS) queue fanned out to multiple Amazon Simple Notification Service (Amazon SNS) topics. Use AWS Lambda functions to update the targets.<br>
-⬜ D. Subscribe to an RDS event notification and send an Amazon Simple Notification Service (Amazon SNS) topic fanned out to multiple Amazon Simple Queue Service (Amazon SQS) queues. Use AWS Lambda functions to update the targets.</p>
+<p>✅ Create an AWS Lambda function triggered when the database on Amazon RDS is updated to send the information to an Amazon Simple Queue Service (Amazon SQS) queue for the targets to consume.<br>
+⬜ Create an AWS Lambda function triggered when the database on Amazon RDS is updated to send the information to an Amazon Simple Queue Service (Amazon SQS) FIFO queue for the targets to consume.<br>
+⬜ Subscribe to an RDS event notification and send an Amazon Simple Queue Service (Amazon SQS) queue fanned out to multiple Amazon Simple Notification Service (Amazon SNS) topics. Use AWS Lambda functions to update the targets.<br>
+⬜ Subscribe to an RDS event notification and send an Amazon Simple Notification Service (Amazon SNS) topic fanned out to multiple Amazon Simple Queue Service (Amazon SQS) queues. Use AWS Lambda functions to update the targets.</p>
 <p><strong><u>Explanation</u>:</strong><br>
-A. Using an AWS Lambda function triggered by an update to the RDS database is a highly efficient way to decouple the application logic. The Lambda function can push the information to an Amazon SQS queue, allowing multiple consumers to process the update asynchronously and reliably.<br>
+● <strong>Create an AWS Lambda function triggered when the database on Amazon RDS is updated to send the information to an Amazon Simple Queue Service (Amazon SQS) queue for the targets to consume.</strong> — Using an AWS Lambda function triggered by an update to the RDS database is a highly efficient way to decouple the application logic. The Lambda function can push the information to an Amazon SQS queue, allowing multiple consumers to process the update asynchronously and reliably.<br>
 <u>Why other options are wrong</u>:<br>
-B. FIFO queues are used when strict message order is required, which is unnecessary for this use case. A standard SQS queue is more cost-effective and sufficient.<br>
-C. RDS event notifications primarily alert about changes in the RDS instance state, not fine-grained database record changes (like a listing being sold). Hence, they are not suitable for this use case.<br>
-D. Similar to option C, RDS event notifications do not detect individual row updates, so using SNS with RDS event notifications will not satisfy the requirement.<br>
+● <strong>Create an AWS Lambda function triggered when the database on Amazon RDS is updated to send the information to an Amazon Simple Queue Service (Amazon SQS) FIFO queue for the targets to consume.</strong> — FIFO queues are used when strict message order is required, which is unnecessary for this use case. A standard SQS queue is more cost-effective and sufficient.<br>
+● <strong>Subscribe to an RDS event notification and send an Amazon Simple Queue Service (Amazon SQS) queue fanned out to multiple Amazon Simple Notification Service (Amazon SNS) topics. Use AWS Lambda functions to update the targets.</strong> — RDS event notifications primarily alert about changes in the RDS instance state, not fine-grained database record changes (like a listing being sold). Hence, they are not suitable for this use case.<br>
+● <strong>Subscribe to an RDS event notification and send an Amazon Simple Notification Service (Amazon SNS) topic fanned out to multiple Amazon Simple Queue Service (Amazon SQS) queues. Use AWS Lambda functions to update the targets.</strong> — Like the other RDS event notification option, RDS event notifications do not detect individual row updates, so this will not satisfy the requirement.<br>
 <small>Source: <a href="https://docs.aws.amazon.com/lambda/latest/dg/services-rds.html">https://docs.aws.amazon.com/lambda/latest/dg/services-rds.html</a></small></p>
 <hr>
 <h6 id="a-company-has-a-three-tier-web-application-that-is-in-a-single-server-the-company-wants-to-migrate-the-application-to-the-aws-cloud-the-company-also-wants-the-application-to-align-with-the-aws-well-architected-framework-and-to-be-consistent-with-aws-recommended-best-practices-for-security-scalability-and-resiliencywhich-combination-of-solutions-will-meet-these-requirements-choose-three">A company has a three-tier web application that is in a single server. The company wants to migrate the application to the AWS Cloud. The company also wants the application to align with the AWS Well-Architected Framework and to be consistent with AWS recommended best practices for security, scalability, and resiliency.<br/><br/>Which combination of solutions will meet these requirements? (Choose three.)</h6>
@@ -2987,18 +2987,18 @@ D. Similar to option C, RDS event notifications do not detect individual row upd
 <small>Source: <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication.html">https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication.html</a></small></p>
 <hr>
 <h6 id="a-software-company-needs-to-upgrade-a-critical-web-application-the-application-currently-runs-on-a-single-amazon-ec2-instance-that-the-company-hosts-in-a-public-subnet-the-ec2-instance-runs-a-mysql-database-the-applications-dns-records-are-published-in-an-amazon-route-53-zonea-solutions-architect-must-reconfigure-the-application-to-be-scalable-and-highly-available-the-solutions-architect-must-also-reduce-mysql-read-latencywhich-combination-of-solutions-will-meet-these-requirements-choose-two">A software company needs to upgrade a critical web application. The application currently runs on a single Amazon EC2 instance that the company hosts in a public subnet. The EC2 instance runs a MySQL database. The application&rsquo;s DNS records are published in an Amazon Route 53 zone.<br/><br/>A solutions architect must reconfigure the application to be scalable and highly available. The solutions architect must also reduce MySQL read latency.<br/><br/>Which combination of solutions will meet these requirements? (Choose two.)</h6>
-<p>⬜ A. Launch a second EC2 instance in a second AWS Region. Use a Route 53 failover routing policy to redirect the traffic to the second EC2 instance.<br>
-✅ B. Create and configure an Auto Scaling group to launch private EC2 instances in multiple Availability Zones. Add the instances to a target group behind a new Application Load Balancer.<br>
-✅ C. Migrate the database to an Amazon Aurora MySQL cluster. Create the primary DB instance and reader DB instance in separate Availability Zones.<br>
-⬜ D. Create and configure an Auto Scaling group to launch private EC2 instances in multiple AWS Regions. Add the instances to a target group behind a new Application Load Balancer.<br>
-⬜ E. Migrate the database to an Amazon Aurora MySQL cluster with cross-Region read replicas.</p>
+<p>⬜ Launch a second EC2 instance in a second AWS Region. Use a Route 53 failover routing policy to redirect the traffic to the second EC2 instance.<br>
+✅ Create and configure an Auto Scaling group to launch private EC2 instances in multiple Availability Zones. Add the instances to a target group behind a new Application Load Balancer.<br>
+✅ Migrate the database to an Amazon Aurora MySQL cluster. Create the primary DB instance and reader DB instance in separate Availability Zones.<br>
+⬜ Create and configure an Auto Scaling group to launch private EC2 instances in multiple AWS Regions. Add the instances to a target group behind a new Application Load Balancer.<br>
+⬜ Migrate the database to an Amazon Aurora MySQL cluster with cross-Region read replicas.</p>
 <p><strong><u>Explanation</u>:</strong><br>
-● Option B enables horizontal scalability and high availability by using EC2 Auto Scaling across multiple Availability Zones behind an Application Load Balancer.<br>
-● Option C ensures the database tier is highly available and provides low-latency read capability by using an Aurora MySQL cluster with a reader instance in a separate AZ.<br>
+● An Auto Scaling group across multiple Availability Zones behind an Application Load Balancer gives horizontal scalability and high availability for the web tier.<br>
+● An Aurora MySQL cluster with a reader instance in a separate AZ makes the database tier highly available and provides low-latency reads.<br>
 <u>Why other options are wrong:</u><br>
-A. Multi-Region deployment with Route 53 failover is more appropriate for disaster recovery, not for scalability and low latency.<br>
-D. Deploying across Regions with an ALB is not feasible; ALBs are Regional, not global.<br>
-E. Cross-Region replicas add unnecessary complexity and are not required for in-Region scalability and availability.<br>
+● <strong>Launch a second EC2 instance in a second AWS Region. Use a Route 53 failover routing policy to redirect the traffic to the second EC2 instance.</strong> — Multi-Region deployment with Route 53 failover is more appropriate for disaster recovery, not for scalability and low latency.<br>
+● <strong>Create and configure an Auto Scaling group to launch private EC2 instances in multiple AWS Regions. Add the instances to a target group behind a new Application Load Balancer.</strong> — Deploying across Regions with an ALB is not feasible; ALBs are Regional, not global.<br>
+● <strong>Migrate the database to an Amazon Aurora MySQL cluster with cross-Region read replicas.</strong> — Cross-Region replicas add unnecessary complexity and are not required for in-Region scalability and availability.<br>
 <small>Source: <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-introduction.html">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-introduction.html</a></small></p>
 <hr>
 <h6 id="a-digital-image-processing-company-wants-to-migrate-its-on-premises-monolithic-application-to-the-aws-cloud-the-company-processes-thousands-of-images-and-generates-large-files-as-part-of-the-processing-workflowthe-company-needs-a-solution-to-manage-the-growing-number-of-image-processing-jobs-the-solution-must-also-reduce-the-manual-tasks-in-the-image-processing-workflow-the-company-does-not-want-to-manage-the-underlying-infrastructure-of-the-solutionwhich-solution-will-meet-these-requirements-with-the-least-operational-overhead">A digital image processing company wants to migrate its on-premises monolithic application to the AWS Cloud. The company processes thousands of images and generates large files as part of the processing workflow.<br/><br/>The company needs a solution to manage the growing number of image processing jobs. The solution must also reduce the manual tasks in the image processing workflow. The company does not want to manage the underlying infrastructure of the solution.<br/><br/>Which solution will meet these requirements with the LEAST operational overhead?</h6>
@@ -3677,16 +3677,16 @@ The best solution with minimal operational overhead is:<br>
 <small>Source: <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/what-is.html">https://docs.aws.amazon.com/fsx/latest/LustreGuide/what-is.html</a></small></p>
 <hr>
 <h6 id="a-global-company-hosts-its-web-application-on-amazon-ec2-instances-behind-an-application-load-balancer-alb-the-web-application-has-static-data-and-dynamic-data-the-company-stores-its-static-data-in-an-amazon-s3-bucket-the-company-wants-to-improve-performance-and-reduce-latency-for-the-static-data-and-dynamic-data-the-company-is-using-its-own-domain-name-registered-with-amazon-route-53what-should-a-solutions-architect-do-to-meet-these-requirements">A global company hosts its web application on Amazon EC2 instances behind an Application Load Balancer (ALB). The web application has static data and dynamic data. The company stores its static data in an Amazon S3 bucket. The company wants to improve performance and reduce latency for the static data and dynamic data. The company is using its own domain name registered with Amazon Route 53.<br/><br/>What should a solutions architect do to meet these requirements?</h6>
-<p>✅ A. Create an Amazon CloudFront distribution that has the S3 bucket and the ALB as origins. Configure Route 53 to route traffic to the CloudFront distribution.<br>
-⬜ B. Create an Amazon CloudFront distribution that has the ALB as an origin. Create an AWS Global Accelerator standard accelerator that has the S3 bucket as an endpoint. Configure Route 53 to route traffic to the CloudFront distribution.<br>
-⬜ C. Create an Amazon CloudFront distribution that has the S3 bucket as an origin. Create an AWS Global Accelerator standard accelerator that has the ALB and the CloudFront distribution as endpoints. Create a custom domain name that points to the accelerator DNS name. Use the custom domain name as an endpoint for the web application.<br>
-⬜ D. Create an Amazon CloudFront distribution that has the ALB as an origin. Create an AWS Global Accelerator standard accelerator that has the S3 bucket as an endpoint. Create two domain names. Point one domain name to the CloudFront DNS name for dynamic content. Point the other domain name to the accelerator DNS name for static content. Use the domain names as endpoints for the web application.</p>
+<p>✅ Create an Amazon CloudFront distribution that has the S3 bucket and the ALB as origins. Configure Route 53 to route traffic to the CloudFront distribution.<br>
+⬜ Create an Amazon CloudFront distribution that has the ALB as an origin. Create an AWS Global Accelerator standard accelerator that has the S3 bucket as an endpoint. Configure Route 53 to route traffic to the CloudFront distribution.<br>
+⬜ Create an Amazon CloudFront distribution that has the S3 bucket as an origin. Create an AWS Global Accelerator standard accelerator that has the ALB and the CloudFront distribution as endpoints. Create a custom domain name that points to the accelerator DNS name. Use the custom domain name as an endpoint for the web application.<br>
+⬜ Create an Amazon CloudFront distribution that has the ALB as an origin. Create an AWS Global Accelerator standard accelerator that has the S3 bucket as an endpoint. Create two domain names. Point one domain name to the CloudFront DNS name for dynamic content. Point the other domain name to the accelerator DNS name for static content. Use the domain names as endpoints for the web application.</p>
 <p><strong><u>Explanation</u>:</strong><br>
 The correct and most efficient solution is:<br>
 ● A. Use Amazon CloudFront as a single distribution with multiple origins (S3 for static content and ALB for dynamic content).<br>
 ● This provides global caching to reduce latency, improve performance, and simplify routing with one unified domain via Route 53.<br>
 <u>Why other options are wrong</u>: <br>
-● B, C, and D involve using AWS Global Accelerator, which primarily optimizes TCP/UDP traffic rather than providing caching and content distribution like CloudFront.<br>
+● The other three options use AWS Global Accelerator, which primarily optimizes TCP/UDP traffic rather than providing caching and content distribution like CloudFront.<br>
 ● Additionally, creating multiple domain names and accelerators unnecessarily increases complexity without providing better performance for static content caching compared to CloudFront.<br>
 <small>Source: <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html">https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html</a></small></p>
 <hr>
@@ -3847,7 +3847,9 @@ The best solution to automatically maintain optimal capacity and avoid over-prov
 <u>Why other options are wrong</u>:  <br>
 ● <strong>Amazon RDS with provisioned IOPS</strong> — RDS with provisioned IOPS offers predictable performance but may not auto-scale rapidly.<br>
 ● <strong>Amazon EC2 Auto Scaling</strong> — EC2 Auto Scaling adjusts compute but not the database layer.<br>
-● <strong>AWS Lambda</strong> — Lambda provides serverless compute, not directly related to database scalability.</p>
+● <strong>AWS Lambda</strong> — Lambda provides serverless compute, not directly related to database scalability.<br>
+<small>Source: <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/on-demand-capacity-mode.html">DynamoDB on-demand capacity mode</a></small><br>
+<small>Source: <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/WhatIs.html">What is Amazon ElastiCache?</a></small></p>
 <hr>
 <h6 id="a-solutions-architect-needs-to-improve-the-data-processing-speed-of-a-large-scale-analytics-application-the-current-setup-uses-multiple-ec2-instances-accessing-data-stored-in-amazon-s3-which-service-should-be-implemented-to-enhance-the-processing-speed-without-significant-changes-to-the-existing-infrastructure">A Solutions Architect needs to improve the data processing speed of a large-scale analytics application. The current setup uses multiple EC2 instances accessing data stored in Amazon S3. Which service should be implemented to enhance the processing speed without significant changes to the existing infrastructure?</h6>
 <p>⬜ Amazon EBS<br>
@@ -4553,18 +4555,18 @@ The best approach to cost-effectively and reliably scale temporarily without ris
 <small>Source: <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using-fargate-capacity-providers.html">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using-fargate-capacity-providers.html</a></small></p>
 <hr>
 <h6 id="a-company-is-running-a-custom-application-on-amazon-ec2-on-demand-instances-the-application-has-frontend-nodes-that-need-to-run-24-hours-a-day-7-days-a-week-and-backend-nodes-that-need-to-run-only-for-a-short-time-based-on-workload-the-number-of-backend-nodes-varies-during-the-daybrthe-company-needs-to-scale-out-and-scale-in-more-instances-based-on-workloadbrwhich-solution-will-meet-these-requirements-most-cost-effectively">A company is running a custom application on Amazon EC2 On-Demand Instances. The application has frontend nodes that need to run 24 hours a day, 7 days a week, and backend nodes that need to run only for a short time based on workload. The number of backend nodes varies during the day.<br/>&lt;/br/&gt;The company needs to scale out and scale in more instances based on workload.<br/>&lt;/br/&gt;Which solution will meet these requirements MOST cost-effectively?</h6>
-<p>⬜ A. Use Reserved Instances for the frontend nodes. Use AWS Fargate for the backend nodes.<br>
-✅ B. Use Reserved Instances for the frontend nodes. Use Spot Instances for the backend nodes.<br>
-⬜ C. Use Spot Instances for the frontend nodes. Use Reserved Instances for the backend nodes.<br>
-⬜ D. Use Spot Instances for the frontend nodes. Use AWS Fargate for the backend nodes.</p>
+<p>⬜ Use Reserved Instances for the frontend nodes. Use AWS Fargate for the backend nodes.<br>
+✅ Use Reserved Instances for the frontend nodes. Use Spot Instances for the backend nodes.<br>
+⬜ Use Spot Instances for the frontend nodes. Use Reserved Instances for the backend nodes.<br>
+⬜ Use Spot Instances for the frontend nodes. Use AWS Fargate for the backend nodes.</p>
 <p><strong><u>Explanation</u>:</strong><br>
 ● Reserved Instances provide cost savings for predictable, 24/7 workloads such as frontend nodes.<br>
 ● Spot Instances are ideal for backend nodes that are short-lived and scalable based on fluctuating demand, making them highly cost-effective.<br>
 ● Auto Scaling can be used with Spot Instances to dynamically scale based on demand while minimizing cost.<br>
 <u>Why other options are wrong:</u><br>
-A. AWS Fargate is intended for containerized workloads, not EC2-based ones. It&rsquo;s generally more expensive than Spot Instances for dynamic workloads.<br>
-C. Spot Instances are unsuitable for the always-on frontend nodes due to possible interruptions.<br>
-D. Similar to A and C—using Spot for frontend is unreliable, and Fargate adds unnecessary cost for backend EC2-based processing.<br>
+● <strong>Use Reserved Instances for the frontend nodes. Use AWS Fargate for the backend nodes.</strong> — AWS Fargate is intended for containerized workloads, not EC2-based ones. It&rsquo;s generally more expensive than Spot Instances for dynamic workloads.<br>
+● <strong>Use Spot Instances for the frontend nodes. Use Reserved Instances for the backend nodes.</strong> — Spot Instances are unsuitable for the always-on frontend nodes due to possible interruptions.<br>
+● <strong>Use Spot Instances for the frontend nodes. Use AWS Fargate for the backend nodes.</strong> — Like the other options that put the frontend on Spot, this is unreliable, and Fargate adds unnecessary cost for backend EC2-based processing.<br>
 <small>Source: <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instances-reserved.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instances-reserved.html</a></small><br>
 <small>Source: <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html</a></small></p>
 <hr>
@@ -5205,7 +5207,7 @@ AWS Database Migration Service (AWS DMS) can migrate an on-premises MySQL databa
       
       
       <li>
-        <a href="whatsapp://send?text=AWS%20Certified%20Solutions%20Architect%20Associate%20%28SAA-C03%29%20Exam%20Questions%2c%20by%20Coding%20N%20Concepts%0aFree%20practice%20exam%20questions%20for%20AWS%20Certified%20Solutions%20Architect%20Associate%20%28SAA-C03%29%2c%20with%20verified%20answers%20and%20explanations%2c%20plus%20timed%20online%20practice%20exams%20%28first%20test%20free%29.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2faws%2faws-certified-solutions-architect-associate-exam-questions%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=AWS%20Certified%20Solutions%20Architect%20Associate%20%28SAA-C03%29%20Exam%20Questions%2c%20by%20Coding%20N%20Concepts%0aFree%20AWS%20Solutions%20Architect%20Associate%20%28SAA-C03%29%20exam%20questions%20with%20verified%20answers%20and%20explanations%2c%20plus%20timed%20online%20practice%20exams%20%28first%20test%20free%29.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2faws%2faws-certified-solutions-architect-associate-exam-questions%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>WhatsApp</p>
         </a>
@@ -5215,7 +5217,7 @@ AWS Database Migration Service (AWS DMS) can migrate an on-premises MySQL databa
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - AWS%20Certified%20Solutions%20Architect%20Associate%20%28SAA-C03%29%20Exam%20Questions.&amp;body=AWS%20Certified%20Solutions%20Architect%20Associate%20%28SAA-C03%29%20Exam%20Questions%2c%20by%20Coding%20N%20Concepts%0aFree%20practice%20exam%20questions%20for%20AWS%20Certified%20Solutions%20Architect%20Associate%20%28SAA-C03%29%2c%20with%20verified%20answers%20and%20explanations%2c%20plus%20timed%20online%20practice%20exams%20%28first%20test%20free%29.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2faws%2faws-certified-solutions-architect-associate-exam-questions%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - AWS%20Certified%20Solutions%20Architect%20Associate%20%28SAA-C03%29%20Exam%20Questions.&amp;body=AWS%20Certified%20Solutions%20Architect%20Associate%20%28SAA-C03%29%20Exam%20Questions%2c%20by%20Coding%20N%20Concepts%0aFree%20AWS%20Solutions%20Architect%20Associate%20%28SAA-C03%29%20exam%20questions%20with%20verified%20answers%20and%20explanations%2c%20plus%20timed%20online%20practice%20exams%20%28first%20test%20free%29.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2faws%2faws-certified-solutions-architect-associate-exam-questions%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>
