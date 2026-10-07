@@ -7,7 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>CodingNConcepts</copyright>
-    <lastBuildDate>Sat, 26 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloud</title>
+      <link>https://codingnconcepts.com/categories/cloud/</link>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/categories/cloud/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AWS</title>
       <link>https://codingnconcepts.com/categories/aws/</link>
@@ -30,14 +38,6 @@
       <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/categories/database/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Cloud</title>
-      <link>https://codingnconcepts.com/categories/cloud/</link>
-      <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/categories/cloud/</guid>
       <description></description>
     </item>
     <item>

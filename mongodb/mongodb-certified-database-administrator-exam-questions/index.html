@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://codingnconcepts.com/mongodb/mongodb-certified-database-administrator-exam-questions/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/mongodb.jpg" />
 <meta property="article:published_time" content="2026-09-18T00:00:00+00:00" />
-<meta property="article:modified_time" content="2026-10-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-10-07T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -84,7 +84,7 @@
     "copyrightYear": "2026",
     "dateCreated": "2026-09-18T00:00:00.00Z",
     "datePublished": "2026-09-18T00:00:00.00Z",
-    "dateModified": "2026-10-05T00:00:00.00Z",
+    "dateModified": "2026-10-07T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -98,7 +98,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/mongodb.jpg"],
     "url": "https://codingnconcepts.com/mongodb/mongodb-certified-database-administrator-exam-questions/",
-    "wordCount": 13973 ,
+    "wordCount": 14698 ,
     "genre": ["MongoDB","Certification","Database Administration"],
     "keywords":  null 
 }
@@ -597,7 +597,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2026-10-05T00:00:00Z">Last Modified: Oct 05, 2026</time>
+	<time class="meta__text" datetime="2026-10-07T00:00:00Z">Last Modified: Oct 07, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -613,7 +613,7 @@
   <ul>
     <li><a href="#free-online-practice-exam">Free Online Practice Exam</a></li>
     <li><a href="#overview">Overview</a></li>
-    <li><a href="#51-practice-questions">51 Practice Questions</a>
+    <li><a href="#53-practice-questions">53 Practice Questions</a>
       <ul>
         <li><a href="#domain-1-mongodb-architecture-and-core-operations-15">Domain 1: MongoDB Architecture and Core Operations (15%)</a></li>
         <li><a href="#domain-2-indexing-and-query-optimization-13">Domain 2: Indexing and Query Optimization (13%)</a></li>
@@ -633,7 +633,7 @@
 <p><strong>Disclaimer:</strong> <em><a href="https://www.mongodb.com/">MongoDB</a> is a protected Brand. These exam questions are neither endorsed by nor affiliated with MongoDB, Inc. These are <strong>not the official MongoDB Associate Database Administrator exam questions/dumps.</strong> These questions are created from the official <a href="https://www.mongodb.com/docs/manual/">MongoDB Documentation</a> and <a href="https://www.mongodb.com/docs/atlas/">MongoDB Atlas Documentation</a>. These questions cover all the domains/objectives of the <a href="https://learn.mongodb.com/pages/mongodb-database-administrator-exam">MongoDB Associate Database Administrator official exam</a>, and once you go through these questions and their concepts, you are more than ready to crack the exam in first attempt.</em></p>
 <h2 id="free-online-practice-exam">Free Online Practice Exam</h2>
 <hr>
-<p><strong>Take all 51 questions as a timed online practice exam, free:-</strong></p>
+<p><strong>Take all 53 questions as a timed online practice exam, free:-</strong></p>
 
 <div class="notices free" ><p>Free <a href="https://exams.codingnconcepts.com/c/mongodb-dba">MongoDB Certified Associate Database Administrator Online Practice Exam</a></p>
 </div>
@@ -649,7 +649,7 @@
 <li>MongoDB certifications currently <strong>do not expire</strong> and are governed by MongoDB&rsquo;s own product versioning.</li>
 <li><a href="https://learn.mongodb.com/courses/mongodb-associate-dba-exam-study-guide">DBA Exam Study Guide</a> and <a href="https://learn.mongodb.com/pages/mongodb-database-administrator-exam">official exam registration page</a> for more details.</li>
 </ol>
-<h2 id="51-practice-questions">51 Practice Questions</h2>
+<h2 id="53-practice-questions">53 Practice Questions</h2>
 <hr>
 <table>
 	<thead>
@@ -665,13 +665,13 @@
 					<td>1</td>
 					<td>MongoDB Architecture and Core Operations</td>
 					<td>15%</td>
-					<td>9</td>
+					<td>10</td>
 			</tr>
 			<tr>
 					<td>2</td>
 					<td>Indexing and Query Optimization</td>
 					<td>13%</td>
-					<td>6</td>
+					<td>7</td>
 			</tr>
 			<tr>
 					<td>3</td>
@@ -868,6 +868,23 @@ A fully-managed DBaaS like MongoDB Atlas takes over operational tasks such as pa
 
 </div>
 
+<h6 id="a-database-administrator-is-working-on-a-project-to-optimize-the-performance-of-a-mongodb-database-that-stores-a-large-number-of-user-reviews-the-reviews-are-frequently-accessed-when-they-are-new-but-become-rarely-accessed-after-a-year-what-steps-should-the-administrator-take-to-optimize-the-majority-of-the-queries">A database administrator is working on a project to optimize the performance of a MongoDB database that stores a large number of user reviews. The reviews are frequently accessed when they are new but become rarely accessed after a year. What steps should the administrator take to optimize the majority of the queries?</h6>
+<p>⬜ Permanently delete reviews older than a year once they stop being frequently accessed<br>
+✅ Move reviews older than a year into a separate archive collection, keeping any related reference data together with them<br>
+⬜ Create an index on every field of the reviews collection so any possible query stays fast regardless of age<br>
+⬜ Shard the reviews collection using the review&rsquo;s creation date as the shard key</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer:</strong> Move reviews older than a year into a separate archive collection, keeping any related reference data together with them<br>
+This is MongoDB&rsquo;s documented Archive Pattern. The schema design guidance explains the underlying problem directly: &ldquo;If you need to store historical data dating back a number of years, storing your oldest data in the same database as your more recent data can negatively impact performance, especially if the old data does not need to be accessed frequently.&rdquo; The recommended fix moves the rarely-accessed data to a separate collection (one of the pattern&rsquo;s documented storage options, alongside external file storage or a separate cluster), which keeps the &ldquo;hot,&rdquo; frequently-queried recent reviews in a smaller, faster working set. The docs add that archived data &ldquo;should use an embedded data model, rather than using references to other collections,&rdquo; since &ldquo;all relevant components of the data must be from the same time&rdquo; when it&rsquo;s queried later — hence keeping related reference data together with the archived reviews.</p>
+<p><strong>Why the other options are incorrect:</strong><br>
+● <strong>Permanently delete reviews older than a year once they stop being frequently accessed</strong> — Deleting the data destroys it entirely rather than optimizing access to it; the Archive Pattern is specifically about preserving older data in a cheaper, separate location, not discarding it.<br>
+● <strong>Create an index on every field of the reviews collection so any possible query stays fast regardless of age</strong> — Indexing every field doesn&rsquo;t shrink the working set the majority of queries scan, and MongoDB&rsquo;s own guidance warns that creating indexes for every field &ldquo;can lead to bloated collections and negatively impact write performance&rdquo; rather than solving an aging-data access pattern.<br>
+● <strong>Shard the reviews collection using the review&rsquo;s creation date as the shard key</strong> — A monotonically increasing field like a creation date is a documented anti-pattern for shard keys, since it concentrates all new writes onto a single shard rather than addressing which reviews are frequently queried.</p>
+<p><small>Source: <a href="https://www.mongodb.com/docs/manual/data-modeling/design-patterns/archive/">Archive Pattern</a></small></p>
+
+</div>
+
 <h3 id="domain-2-indexing-and-query-optimization-13">Domain 2: Indexing and Query Optimization (13%)</h3>
 <hr>
 <h6 id="a-collection-stores-documents-with-a-tags-field-that-holds-an-array-of-strings-when-a-developer-creates-an-index-on-the-tags-field-what-type-of-index-does-mongodb-automatically-create">A collection stores documents with a tags field that holds an array of strings. When a developer creates an index on the tags field, what type of index does MongoDB automatically create?</h6>
@@ -968,6 +985,23 @@ MongoDB&rsquo;s schema design guidance for this exact problem says: &ldquo;To de
 ● <strong>The $lookup aggregation stage</strong> — $lookup performs a join-like operation between collections; it has nothing to do with reporting index usage statistics.<br>
 ● <strong>Increasing the oplog size</strong> — Increasing the oplog size affects how much replication history is retained; it doesn&rsquo;t help identify unused indexes or reduce write overhead from them.<br>
 ● <strong>Enabling sharding on the collection</strong> — Enabling sharding redistributes data across shards; it doesn&rsquo;t identify or remove unnecessary indexes, and every shard would still maintain its own copy of each index.</p>
+<p><small>Source: <a href="https://www.mongodb.com/docs/manual/data-modeling/design-antipatterns/unnecessary-indexes/">Remove Unnecessary Indexes</a></small></p>
+
+</div>
+
+<h6 id="a-database-administrator-notices-degraded-write-performance-on-a-mongodb-collection-and-observes-an-unusually-high-number-of-indexes-on-that-collection-what-is-one-way-to-improve-write-performance">A database administrator notices degraded write performance on a MongoDB collection and observes an unusually high number of indexes on that collection. What is one way to improve write performance?</h6>
+<p>⬜ Upgrade the network infrastructure<br>
+⬜ Increase the storage capacity<br>
+⬜ Add more indexes so queries have more options to choose from<br>
+✅ Consolidate overlapping and unnecessary indexes</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer:</strong> Consolidate overlapping and unnecessary indexes<br>
+MongoDB&rsquo;s schema design guidance on this exact anti-pattern states: &ldquo;Creating indexes for every query can lead to unnecessary indexes, which can degrade database performance&hellip; To optimize database performance, it&rsquo;s important to minimize the number of indexes you use,&rdquo; and specifically: &ldquo;Creating indexes for every field in a collection can lead to bloated collections and negatively impact write performance.&rdquo; Every index on a collection must be updated on every write, so when a collection has accumulated redundant or overlapping indexes (for example, single-field indexes already covered by a compound index), consolidating them down to the smaller set actually needed directly reduces that per-write overhead.</p>
+<p><strong>Why the other options are incorrect:</strong><br>
+● <strong>Upgrade the network infrastructure</strong> — Network infrastructure affects data transfer between the client and server; it has no bearing on the per-write cost of maintaining every index on a collection.<br>
+● <strong>Increase the storage capacity</strong> — More storage capacity addresses disk space, not the CPU/IO overhead of updating multiple indexes on every write — the degraded write performance would persist even with unlimited storage.<br>
+● <strong>Add more indexes so queries have more options to choose from</strong> — Adding more indexes makes the documented problem worse, not better, since each additional index adds more write-time maintenance overhead.</p>
 <p><small>Source: <a href="https://www.mongodb.com/docs/manual/data-modeling/design-antipatterns/unnecessary-indexes/">Remove Unnecessary Indexes</a></small></p>
 
 </div>

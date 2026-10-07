@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://codingnconcepts.com/azure/azure-cloud-and-ai-security-engineer-sc500-exam-questions/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/azure.png" />
 <meta property="article:published_time" content="2026-09-26T00:00:00+00:00" />
-<meta property="article:modified_time" content="2026-10-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-10-07T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -83,7 +83,7 @@
     "copyrightYear": "2026",
     "dateCreated": "2026-09-26T00:00:00.00Z",
     "datePublished": "2026-09-26T00:00:00.00Z",
-    "dateModified": "2026-10-05T00:00:00.00Z",
+    "dateModified": "2026-10-07T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -97,7 +97,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/azure.png"],
     "url": "https://codingnconcepts.com/azure/azure-cloud-and-ai-security-engineer-sc500-exam-questions/",
-    "wordCount": 14603 ,
+    "wordCount": 15104 ,
     "genre": ["Azure Certification","Certification"],
     "keywords":  null 
 }
@@ -596,7 +596,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2026-10-05T00:00:00Z">Last Modified: Oct 05, 2026</time>
+	<time class="meta__text" datetime="2026-10-07T00:00:00Z">Last Modified: Oct 07, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -612,7 +612,7 @@
   <ul>
     <li><a href="#online-practice-exams">Online Practice Exams</a></li>
     <li><a href="#overview">Overview</a></li>
-    <li><a href="#51-practice-questions">51 Practice Questions</a>
+    <li><a href="#53-practice-questions">53 Practice Questions</a>
       <ul>
         <li><a href="#domain-1-manage-identity-access-and-governance-24">Domain 1: Manage identity, access, and governance (24%)</a></li>
         <li><a href="#domain-2-secure-storage-databases-and-networking-28">Domain 2: Secure storage, databases, and networking (28%)</a></li>
@@ -631,7 +631,7 @@
 <p><strong>Note:</strong> <em>SC-500 is a brand-new Microsoft certification (GA in 2026) that replaces AZ-500 (Microsoft Azure Security Technologies), which retires on August 31, 2026. If you currently hold or are studying for AZ-500, SC-500 is the exam you&rsquo;ll need going forward — it covers everything AZ-500 did (identity, network, and data security) plus new domains for securing compute and, notably, securing AI workloads themselves (Microsoft Foundry, Copilot, AI agents, and Microsoft Entra Agent ID).</em></p>
 <h2 id="online-practice-exams">Online Practice Exams</h2>
 <hr>
-<p><strong>Take all 51 questions as timed online practice exams in the real exam format:-</strong></p>
+<p><strong>Take all 53 questions as timed online practice exams in the real exam format:-</strong></p>
 
 <div class="notices free" ><p>Free <a href="https://exams.codingnconcepts.com/c/azure-sc-500">Cloud and AI Security Engineer (SC-500) Online Practice Exam</a></p>
 </div>
@@ -647,7 +647,7 @@
 <li>Like other Microsoft Associate certifications, it is valid for <strong>1 year</strong> and can be renewed with a free online assessment before it expires.</li>
 <li><a href="https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/sc-500">Study Guide</a> for more details.</li>
 </ol>
-<h2 id="51-practice-questions">51 Practice Questions</h2>
+<h2 id="53-practice-questions">53 Practice Questions</h2>
 <hr>
 <table>
 	<thead>
@@ -681,7 +681,7 @@
 					<td>4</td>
 					<td>Manage and monitor security posture</td>
 					<td>24%</td>
-					<td>12</td>
+					<td>14</td>
 			</tr>
 	</tbody>
 </table>
@@ -1573,10 +1573,44 @@ The Security Store is Security Copilot&rsquo;s catalog of prebuilt Microsoft and
 
 </div>
 
+<h6 id="you-restrict-the-microsoft-defender-xdr-plugin-to-owners-only-in-your-security-copilot-workspace-which-statement-best-describes-the-result">You restrict the Microsoft Defender XDR plugin to owners only in your Security Copilot workspace. Which statement best describes the result?</h6>
+<p>⬜ The plugin is disabled only for new contributors added after the restriction<br>
+✅ Analysts using Security Copilot in the Microsoft Defender portal see a restricted or degraded embedded experience<br>
+⬜ The plugin is removed from all workspaces in the tenant, not just this one<br>
+⬜ Existing contributors must individually reconfigure their own plugin settings to regain access</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer:</strong> Analysts using Security Copilot in the Microsoft Defender portal see a restricted or degraded embedded experience<br>
+Restricting a plugin like Microsoft Defender XDR (or the natural language to KQL plugin) to owners only doesn&rsquo;t just affect the standalone Security Copilot experience — it also affects embedded experiences. Analysts working in the Microsoft Defender portal see a degraded or unavailable Copilot experience there, since that embedded experience depends on the plugin. Microsoft&rsquo;s own guidance is to plan such restrictions carefully and communicate the change to affected teams before applying it.</p>
+<p><strong>Why the other options are incorrect:</strong><br>
+● <strong>The plugin is disabled only for new contributors added after the restriction</strong> — The restriction applies to all non-owner users immediately, not just contributors added going forward.<br>
+● <strong>The plugin is removed from all workspaces in the tenant, not just this one</strong> — Plugin settings are scoped to the individual workspace; restricting a plugin in one workspace doesn&rsquo;t affect other workspaces in the tenant.<br>
+● <strong>Existing contributors must individually reconfigure their own plugin settings to regain access</strong> — Plugin access is controlled centrally by workspace role, not by a per-user setting that contributors can reconfigure themselves.</p>
+<p><small>Source: <a href="https://learn.microsoft.com/en-us/training/modules/manage-plugins-agents-security-copilot/2-configure-plug-in-settings">Configure plugin settings in Security Copilot - Microsoft Learn</a></small></p>
+
+</div>
+
+<h6 id="you-need-to-assign-the-soc-team-lead-permissions-to-configure-plugins-and-manage-user-access-within-the-soc-workspace-which-security-copilot-role-provides-these-capabilities">You need to assign the SOC team lead permissions to configure plugins and manage user access within the SOC workspace. Which Security Copilot role provides these capabilities?</h6>
+<p>⬜ Contributor<br>
+⬜ Security Administrator<br>
+✅ Owner<br>
+⬜ Azure Contributor</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer:</strong> Owner<br>
+Security Copilot defines its workspace permissions with two roles: Owner and Contributor. The Owner role can configure workspace settings, manage role assignments (who is an Owner or Contributor), enable or restrict plugins, deploy agents, and manage capacity — exactly the combination of configuring plugins and managing user access the SOC team lead needs. Role assignments are workspace-scoped, so this Owner assignment applies only within the SOC workspace.</p>
+<p><strong>Why the other options are incorrect:</strong><br>
+● <strong>Contributor</strong> — The Contributor role can use Security Copilot features, submit prompts, and run promptbooks, but cannot configure workspace settings, manage role assignments, or enable/restrict plugins.<br>
+● <strong>Security Administrator</strong> — Security Administrator is a Microsoft Entra ID directory role for managing security configuration across Microsoft 365/Entra services; it is not a Security Copilot workspace role and does not by itself grant Security Copilot plugin or access management.<br>
+● <strong>Azure Contributor</strong> — Azure Contributor is an Azure RBAC role for managing Azure resources; it has no bearing on Security Copilot&rsquo;s own workspace role model.</p>
+<p><small>Source: <a href="https://learn.microsoft.com/en-us/training/modules/configure-security-copilot-workspaces/4-configure-workspace-access-settings">Configure workspace access and settings - Microsoft Learn</a></small></p>
+
+</div>
+
 </div>
 <hr>
 <br/>
-<h4 id="take-all-51-questions-as-timed-online-practice-exams-in-the-real-exam-format-">Take all 51 questions as timed online practice exams in the real exam format:-</h4>
+<h4 id="take-all-53-questions-as-timed-online-practice-exams-in-the-real-exam-format-">Take all 53 questions as timed online practice exams in the real exam format:-</h4>
 
 <div class="notices free" ><p>Free <a href="https://exams.codingnconcepts.com/c/azure-sc-500">Cloud and AI Security Engineer (SC-500) Online Practice Exam</a></p>
 </div>

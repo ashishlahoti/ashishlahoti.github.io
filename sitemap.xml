@@ -3,6 +3,46 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://codingnconcepts.com/categories/</loc>
+    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/certification/</loc>
+    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/cloud/</loc>
+    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/</loc>
+    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/hashicorp/</loc>
+    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/hashicorp/hashicorp-vault-associate-exam-questions/</loc>
+    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/</loc>
+    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/vault/</loc>
+    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/categories/aws/</loc>
     <lastmod>2026-10-05T00:00:00+00:00</lastmod>
   </url>
@@ -19,32 +59,17 @@
   
   <url>
     <loc>https://codingnconcepts.com/categories/azure/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/azure-certification/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/certification/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/azure/azure-cloud-and-ai-security-engineer-sc500-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -63,47 +88,37 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/categories/database/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/database-administration/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/mongodb/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/mongodb/mongodb-certified-database-administrator-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/mongodb/mongodb-certified-developer-associate-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/software-development/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/cloud/kubernetes-security-specialist-cks-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/cloud/</loc>
     <lastmod>2026-10-05T00:00:00+00:00</lastmod>
   </url>
   
@@ -164,7 +179,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/azure/azure-ai-apps-and-agents-developer-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -184,17 +199,17 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/comptia/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/comptia/comptia-security-plus-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/azure/azure-fundamentals-az-900-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -234,7 +249,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/categories/security/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>

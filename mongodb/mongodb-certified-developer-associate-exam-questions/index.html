@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://codingnconcepts.com/mongodb/mongodb-certified-developer-associate-exam-questions/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/mongodb.jpg" />
 <meta property="article:published_time" content="2026-09-18T00:00:00+00:00" />
-<meta property="article:modified_time" content="2026-10-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-10-07T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -84,7 +84,7 @@
     "copyrightYear": "2026",
     "dateCreated": "2026-09-18T00:00:00.00Z",
     "datePublished": "2026-09-18T00:00:00.00Z",
-    "dateModified": "2026-10-05T00:00:00.00Z",
+    "dateModified": "2026-10-07T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -98,7 +98,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/mongodb.jpg"],
     "url": "https://codingnconcepts.com/mongodb/mongodb-certified-developer-associate-exam-questions/",
-    "wordCount": 14927 ,
+    "wordCount": 16367 ,
     "genre": ["MongoDB","Certification","Software Development"],
     "keywords":  null 
 }
@@ -597,7 +597,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2026-10-05T00:00:00Z">Last Modified: Oct 05, 2026</time>
+	<time class="meta__text" datetime="2026-10-07T00:00:00Z">Last Modified: Oct 07, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -613,7 +613,7 @@
   <ul>
     <li><a href="#free-online-practice-exam">Free Online Practice Exam</a></li>
     <li><a href="#overview">Overview</a></li>
-    <li><a href="#50-practice-questions">50 Practice Questions</a>
+    <li><a href="#55-practice-questions">55 Practice Questions</a>
       <ul>
         <li><a href="#domain-1-mongodb-overview-and-the-document-model-8">Domain 1: MongoDB Overview and the Document Model (8%)</a></li>
         <li><a href="#domain-2-crud-51">Domain 2: CRUD (51%)</a></li>
@@ -632,7 +632,7 @@
 <p><strong>Disclaimer:</strong> <em><a href="https://www.mongodb.com/">MongoDB</a> is a protected Brand. These exam questions are neither endorsed by nor affiliated with MongoDB, Inc. These are <strong>not the official MongoDB Associate Developer exam questions/dumps.</strong> These questions are created from the official <a href="https://www.mongodb.com/docs/manual/">MongoDB Documentation</a> and the official <a href="https://www.mongodb.com/docs/drivers/node/current/">MongoDB Node.js Driver Documentation</a>. These questions cover all the domains/objectives of the <a href="https://learn.mongodb.com/pages/mongodb-associate-developer-exam">MongoDB Associate Developer official exam</a>, and once you go through these questions and their concepts, you are more than ready to crack the exam in first attempt.</em></p>
 <h2 id="free-online-practice-exam">Free Online Practice Exam</h2>
 <hr>
-<p><strong>Take all 50 questions as a timed online practice exam, free:-</strong></p>
+<p><strong>Take all 55 questions as a timed online practice exam, free:-</strong></p>
 
 <div class="notices free" ><p>Free <a href="https://exams.codingnconcepts.com/c/mongodb-developer">MongoDB Certified Associate Developer Online Practice Exam</a></p>
 </div>
@@ -648,7 +648,7 @@
 <li>MongoDB certifications currently <strong>do not expire</strong> and are governed by MongoDB&rsquo;s own product versioning.</li>
 <li><a href="https://learn.mongodb.com/courses/mongodb-associate-developer-exam-study-guide">Associate Developer Exam Study Guide</a> and <a href="https://learn.mongodb.com/pages/mongodb-associate-developer-exam">official exam registration page</a> for more details.</li>
 </ol>
-<h2 id="50-practice-questions">50 Practice Questions</h2>
+<h2 id="55-practice-questions">55 Practice Questions</h2>
 <hr>
 <table>
 	<thead>
@@ -664,13 +664,13 @@
 					<td>1</td>
 					<td>MongoDB Overview and the Document Model</td>
 					<td>8%</td>
-					<td>4</td>
+					<td>5</td>
 			</tr>
 			<tr>
 					<td>2</td>
 					<td>CRUD</td>
 					<td>51%</td>
-					<td>26</td>
+					<td>29</td>
 			</tr>
 			<tr>
 					<td>3</td>
@@ -694,7 +694,7 @@
 					<td>6</td>
 					<td>Drivers</td>
 					<td>18%</td>
-					<td>9</td>
+					<td>10</td>
 			</tr>
 	</tbody>
 </table>
@@ -778,6 +778,21 @@ This is exactly the scenario MongoDB&rsquo;s Polymorphic Pattern documentation d
 ● <strong>Only if each shape is stored in its own separate sub-collection</strong> — Splitting each shape into its own sub-collection defeats the purpose of the Polymorphic Pattern, which is specifically to query differently-shaped documents together in one collection.<br>
 ● <strong>Only if schema validation is explicitly disabled for the entire database</strong> — Schema validation is an optional, opt-in feature; its presence or absence doesn&rsquo;t determine whether documents of different shapes can exist in a collection — MongoDB allows this by default regardless of validation.</p>
 <p><small>Source: <a href="https://www.mongodb.com/docs/manual/data-modeling/design-patterns/polymorphic-data/polymorphic-schema-pattern/">Store Polymorphic Data</a></small></p>
+
+</div>
+
+<h6 id="which-of-the-following-statements-about-the-_id-field-in-mongodb-are-true-select-three">Which of the following statements about the _id field in MongoDB are true? (Select three.)</h6>
+<p>⬜ The application must always explicitly define a value for the _id field before inserting a document<br>
+✅ Every document in a standard collection is required to have a unique _id field that acts as its primary key<br>
+✅ If an inserted document omits the _id field, the MongoDB driver automatically generates an ObjectId for it<br>
+✅ The value of the _id field is immutable once the document has been inserted</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answers:</strong> Every document in a standard collection is required to have a unique _id field that acts as its primary key; If an inserted document omits the _id field, the MongoDB driver automatically generates an ObjectId for it; The value of the _id field is immutable once the document has been inserted<br>
+MongoDB&rsquo;s documentation on documents states plainly: &ldquo;In MongoDB, each document stored in a standard collection requires a unique _id field that acts as a primary key,&rdquo; and that this field&rsquo;s &ldquo;value must be unique in the collection, is immutable.&rdquo; On insertion, the field does not need to be supplied by the application — the docs note that &ldquo;if an inserted document omits the _id field, the MongoDB driver automatically generates an ObjectId for the _id field,&rdquo; and if the driver doesn&rsquo;t add it, &ldquo;the mongod adds the _id field and generates the ObjectId&rdquo; itself.</p>
+<p><strong>Why the other option is incorrect:</strong><br>
+● <strong>The application must always explicitly define a value for the _id field before inserting a document</strong> — This is the opposite of documented behavior: an application can omit _id entirely and let the driver or mongod auto-generate an ObjectId; explicitly defining it is optional, not required.</p>
+<p><small>Source: <a href="https://www.mongodb.com/docs/manual/core/document/">Documents</a></small></p>
 
 </div>
 
@@ -1223,6 +1238,57 @@ For atomicity across two separate documents like this, MongoDB supports transact
 
 </div>
 
+<h6 id="a-developer-wants-to-insert-a-single-document-into-the-students-collection-in-the-school-database-which-command-should-the-developer-use">A developer wants to insert a single document into the students collection in the school database. Which command should the developer use?</h6>
+<p>✅ db.students.insertOne({ name: &ldquo;Ava&rdquo;, grade: 10 })<br>
+⬜ db.students.insertMany({ name: &ldquo;Ava&rdquo;, grade: 10 })<br>
+⬜ db.students.insert([{ name: &ldquo;Ava&rdquo;, grade: 10 }])<br>
+⬜ db.students.save({ name: &ldquo;Ava&rdquo;, grade: 10 })</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer:</strong> db.students.insertOne({ name: &ldquo;Ava&rdquo;, grade: 10 })<br>
+MongoDB&rsquo;s documentation is explicit about this method&rsquo;s contract: &ldquo;Use the insertOne() method when you want to insert a single document.&rdquo; It takes the document to insert as a plain object argument, creates the <code>school</code> database and <code>students</code> collection automatically if they don&rsquo;t already exist, and returns an <code>_id</code> for the newly inserted document.</p>
+<p><strong>Why the other options are incorrect:</strong><br>
+● <strong>db.students.insertMany({ name: &ldquo;Ava&rdquo;, grade: 10 })</strong> — <code>insertMany()</code> expects an array of documents, not a single document object; passing a bare object here is not its documented, valid form.<br>
+● <strong>db.students.insert([{ name: &ldquo;Ava&rdquo;, grade: 10 }])</strong> — <code>insert()</code> is a deprecated legacy method removed from current <code>mongosh</code>-recommended usage; current MongoDB documentation directs developers to <code>insertOne()</code>/<code>insertMany()</code> instead.<br>
+● <strong>db.students.save({ name: &ldquo;Ava&rdquo;, grade: 10 })</strong> — <code>save()</code> is a deprecated legacy method no longer part of MongoDB&rsquo;s current driver/shell CRUD API; it has been replaced by <code>insertOne()</code>, <code>updateOne()</code>, and <code>replaceOne()</code>.</p>
+<p><small>Source: <a href="https://www.mongodb.com/docs/manual/reference/method/db.collection.insertOne/">db.collection.insertOne()</a></small></p>
+
+</div>
+
+<h6 id="what-is-the-main-difference-between-the-set-and-project-aggregation-stages">What is the main difference between the $set and $project aggregation stages?</h6>
+<p>⬜ $set and $project are interchangeable aliases for the exact same aggregation stage<br>
+✅ $set adds new fields or overwrites existing field values while automatically keeping every other field in the document, whereas $project must explicitly specify which fields to include, exclude, or compute<br>
+⬜ $set can exclude fields from the output, whereas $project is only able to add new fields<br>
+⬜ $project automatically keeps every existing field by default, whereas $set requires every field to be explicitly listed</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer:</strong> $set adds new fields or overwrites existing field values while automatically keeping every other field in the document, whereas $project must explicitly specify which fields to include, exclude, or compute<br>
+MongoDB&rsquo;s documentation describes <code>$set</code> as a stage that &ldquo;adds new fields to documents&rdquo; and &ldquo;outputs documents that contain all existing fields from the input documents and the new fields&rdquo; — it&rsquo;s an alias for <code>$addFields</code>. By contrast, <code>$project</code> &ldquo;passes along the documents with the requested fields to the next stage,&rdquo; and the docs note it &ldquo;can include fields&hellip; suppress the _id field&hellip; add new fields, or reset the values of existing fields&rdquo; — critically, <code>$project</code> requires you to explicitly list which fields survive, and it can drop fields outright, something <code>$set</code>/<code>$addFields</code> cannot do.</p>
+<p><strong>Why the other options are incorrect:</strong><br>
+● <strong>$set and $project are interchangeable aliases for the exact same aggregation stage</strong> — <code>$set</code> is documented as an alias for <code>$addFields</code>, not for <code>$project</code>; the two stages have different behavior and are not interchangeable.<br>
+● <strong>$set can exclude fields from the output, whereas $project is only able to add new fields</strong> — This reverses the documented behavior: <code>$project</code> is the stage that can exclude/suppress fields, while <code>$set</code> can only add or overwrite field values, never remove them.<br>
+● <strong>$project automatically keeps every existing field by default, whereas $set requires every field to be explicitly listed</strong> — This is also reversed: it&rsquo;s <code>$set</code> that automatically preserves every existing field, while <code>$project</code> must explicitly specify each field a developer wants to keep.</p>
+<p><small>Source: <a href="https://www.mongodb.com/docs/manual/reference/operator/aggregation/set/">$set (aggregation)</a></small></p>
+
+</div>
+
+<h6 id="which-atlas-search-operator-groups-search-results-into-buckets--such-as-by-string-values-numeric-ranges-or-date-ranges--and-returns-a-count-for-each-group">Which Atlas Search operator groups search results into buckets — such as by string values, numeric ranges, or date ranges — and returns a count for each group?</h6>
+<p>⬜ $group<br>
+⬜ compound<br>
+⬜ near<br>
+✅ facet</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer:</strong> facet<br>
+MongoDB Atlas documentation describes the <code>facet</code> collector as one that &ldquo;groups results by values or ranges in the specified faceted fields and returns the count for each of those groups,&rdquo; supporting string facets (grouping by the most frequent string values), numeric facets (bucketing by numeric ranges), and date facets (bucketing by date ranges). Atlas recommends using <code>facet</code> with the <code>$searchMeta</code> stage to retrieve just the metadata/counts for a query, though it can also be used with <code>$search</code>.</p>
+<p><strong>Why the other options are incorrect:</strong><br>
+● <strong>$group</strong> — <code>$group</code> is a general-purpose aggregation stage that groups documents by an expression; it doesn&rsquo;t run against a Search index and isn&rsquo;t an Atlas Search operator used inside <code>$search</code>/<code>$searchMeta</code>.<br>
+● <strong>compound</strong> — The <code>compound</code> operator combines multiple Atlas Search clauses (<code>must</code>, <code>should</code>, <code>filter</code>, <code>mustNot</code>); it builds complex query logic, but it doesn&rsquo;t group results into buckets.<br>
+● <strong>near</strong> — The <code>near</code> operator finds documents with a numeric, date, or geo value close to a given point; it&rsquo;s a matching operator, not a grouping/faceting one.</p>
+<p><small>Source: <a href="https://www.mongodb.com/docs/atlas/atlas-search/facet/">facet</a></small></p>
+
+</div>
+
 <h3 id="domain-3-indexes-17">Domain 3: Indexes (17%)</h3>
 <hr>
 <h6 id="a-developer-notices-that-a-query-filtering-on-the-customeremail-field-of-a-large-customers-collection-is-performing-a-full-collection-scan-which-type-of-index-would-most-directly-improve-this-querys-performance">A developer notices that a query filtering on the customerEmail field of a large customers collection is performing a full collection scan. Which type of index would most directly improve this query&rsquo;s performance?</h6>
@@ -1568,6 +1634,23 @@ The Node.js driver documentation explains that write concern &ldquo;specif[ies] 
 ● <strong>It must be passed as a separate argument to every single insertOne() and updateOne() call, with no way to set a client-wide default</strong> — While write concern <em>can</em> be overridden per operation, it does not have to be repeated everywhere — setting it once at the client level (as shown above) provides the shared default the scenario asks for.<br>
 ● <strong>Write concern can only be set once per calendar day and then locks for 24 hours</strong> — Write concern has no such time-based locking behavior; it&rsquo;s a per-connection/per-operation configuration setting, not a rate-limited one.</p>
 <p><small>Source: <a href="https://www.mongodb.com/docs/drivers/node/current/crud/configure/">Configure CRUD Operations — Node.js Driver</a></small></p>
+
+</div>
+
+<h6 id="how-is-bson-converted-into-json-javascript-objects-when-using-the-mongodb-driver-for-nodejs">How is BSON converted into JSON (JavaScript objects) when using the MongoDB driver for Node.js?</h6>
+<p>✅ The driver automatically serializes and deserializes between BSON and native JavaScript objects, so application code works with plain objects without any manual conversion step<br>
+⬜ The application must manually call JSON.parse() on every document returned from a query before it can be used<br>
+⬜ A separate, third-party JSON conversion library must be installed and called explicitly for every read and write<br>
+⬜ The driver returns every document as a raw JSON string, which the developer must parse before accessing any field</p>
+<div class="quiz-explanation">
+<div class="quiz-explanation-title">Explanation</div>
+<p><strong>Correct answer:</strong> The driver automatically serializes and deserializes between BSON and native JavaScript objects, so application code works with plain objects without any manual conversion step<br>
+MongoDB&rsquo;s Node.js driver documentation states directly: &ldquo;The Node.js driver automatically converts JavaScript objects into BSON documents when inserting them into a collection,&rdquo; and the reverse holds for reads — the driver&rsquo;s own CRUD usage examples show <code>findOne()</code> resolving directly to a plain, usable JavaScript object (for example, <code>{ title: 'The Room', imdb: { rating: 3.5, ... } }</code>) with no manual parsing step shown or required. The driver bundles its own BSON package specifically so this conversion happens transparently as part of every operation; a developer only needs to call <code>BSON.serialize()</code>/<code>BSON.deserialize()</code> manually for separate file I/O use cases, not for normal database reads and writes.</p>
+<p><strong>Why the other options are incorrect:</strong><br>
+● <strong>The application must manually call JSON.parse() on every document returned from a query before it can be used</strong> — Documents returned by the driver are already native JavaScript objects, not JSON strings, so there is nothing for <code>JSON.parse()</code> to parse, and the docs show direct field access immediately after a query resolves.<br>
+● <strong>A separate, third-party JSON conversion library must be installed and called explicitly for every read and write</strong> — The conversion is handled by the official driver&rsquo;s own bundled BSON package automatically; no separate third-party library is documented as required for ordinary CRUD operations.<br>
+● <strong>The driver returns every document as a raw JSON string, which the developer must parse before accessing any field</strong> — The documented usage examples show fields accessed directly off the returned object (e.g., <code>movie.title</code>), which would not work if the result were still a raw string.</p>
+<p><small>Source: <a href="https://www.mongodb.com/docs/drivers/node/current/data-formats/bson/">BSON — Node.js Driver</a></small></p>
 
 </div>
 
