@@ -3,283 +3,288 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://codingnconcepts.com/categories/agile/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/agile/safe-product-owner-product-manager-popm-exam-questions/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/categories/</loc>
-    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/certification/</loc>
-    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/cloud/</loc>
-    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/</loc>
-    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/hashicorp/</loc>
-    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/hashicorp/hashicorp-vault-associate-exam-questions/</loc>
-    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/</loc>
-    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/vault/</loc>
-    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/aws/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/aws-certification/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/aws/aws-certified-generative-ai-developer-professional-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/azure/</loc>
-    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/azure-certification/</loc>
-    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/azure/azure-cloud-and-ai-security-engineer-sc500-exam-questions/</loc>
-    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/generative-ai/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/azure/azure-security-compliance-and-identity-fundamentals-sc900-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/azure/azure-security-operations-analyst-sc200-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/database/</loc>
-    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/database-administration/</loc>
-    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/mongodb/</loc>
-    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/mongodb/mongodb-certified-database-administrator-exam-questions/</loc>
-    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/mongodb/mongodb-certified-developer-associate-exam-questions/</loc>
-    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/software-development/</loc>
-    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/cloud/kubernetes-security-specialist-cks-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/devops/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/gcp/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/gcp/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/google-cloud/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/gcp/gcp-associate-cloud-engineer-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/kubernetes/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/security/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/agile/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/agile/safe-advanced-scrum-master-sasm-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/aws/aws-certified-ai-practitioner-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/aws/aws-certified-cloud-practitioner-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/azure/azure-ai-apps-and-agents-developer-exam-questions/</loc>
-    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/cloud/kubernetes-administrator-cka-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/cloud/kubernetes-application-developer-ckad-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/cloud-practitioner/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/comptia/</loc>
-    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/comptia/comptia-security-plus-exam-questions/</loc>
-    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/azure/azure-fundamentals-az-900-exam-questions/</loc>
-    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/agile/professional-scrum-master-psm-1-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/agile/professional-scrum-product-owner-pspo-1-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/safe/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/cloud/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/hashicorp/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/hashicorp/hashicorp-vault-associate-exam-questions/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/vault/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/aws/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/aws-certification/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/aws/aws-certified-generative-ai-developer-professional-exam-questions/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/azure/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/azure-certification/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/azure/azure-cloud-and-ai-security-engineer-sc500-exam-questions/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/generative-ai/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/azure/azure-security-compliance-and-identity-fundamentals-sc900-exam-questions/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/azure/azure-security-operations-analyst-sc200-exam-questions/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/database/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/database-administration/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/mongodb/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/mongodb/mongodb-certified-database-administrator-exam-questions/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/mongodb/mongodb-certified-developer-associate-exam-questions/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/software-development/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/cloud/kubernetes-security-specialist-cks-exam-questions/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/devops/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/gcp/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/gcp/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/google-cloud/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/gcp/gcp-associate-cloud-engineer-exam-questions/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/kubernetes/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/security/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/agile/safe-advanced-scrum-master-sasm-exam-questions/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/aws/aws-certified-ai-practitioner-exam-questions/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/aws/aws-certified-cloud-practitioner-exam-questions/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/azure/azure-ai-apps-and-agents-developer-exam-questions/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/cloud/kubernetes-administrator-cka-exam-questions/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/cloud/kubernetes-application-developer-ckad-exam-questions/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/cloud-practitioner/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/comptia/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/comptia/comptia-security-plus-exam-questions/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/azure/azure-fundamentals-az-900-exam-questions/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/agile/professional-scrum-master-psm-1-exam-questions/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/agile/professional-scrum-product-owner-pspo-1-exam-questions/</loc>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/agile/safe-agile-software-engineer-ase-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/agile/safe-for-architects-arch-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/agile/safe-lean-portfolio-management-lpm-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/scrum-certification/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/categories/security/</loc>
-    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/agile/implementing-safe-practice-consultant-spc-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/implementing-safe/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/spc/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/categories/salesforce/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/salesforce/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/salesforce/salesforce-platform-developer-i-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -289,27 +294,27 @@
   
   <url>
     <loc>https://codingnconcepts.com/aws/aws-certified-solutions-architect-associate-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/agile/safe-government-practitioner-sgp-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/agile/safe-devops-practitioner-sdp-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/agile/safe-practitioner-for-teams-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/agile/safe-release-train-engineer-rte-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -329,7 +334,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/agile/safe-scrum-master-ssm-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -359,7 +364,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/agile/leading-safe-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -439,12 +444,12 @@
   
   <url>
     <loc>https://codingnconcepts.com/post/terraform-associate-exam-questions/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/terraform/</loc>
-    <lastmod>2026-10-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>

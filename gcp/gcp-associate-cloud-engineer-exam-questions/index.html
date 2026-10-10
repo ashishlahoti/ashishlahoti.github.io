@@ -8,14 +8,14 @@
 	<title>Google Cloud Associate Cloud Engineer (ACE) Exam Questions - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
-	<meta name="description" content="Free Google Cloud Associate Cloud Engineer (ACE) exam questions with verified answers and explanations, plus a free timed online practice exam.">
+	<meta name="description" content="Free Google Cloud Associate Cloud Engineer (ACE) exam questions by exam domain, plus a timed online practice exam with answers and explanations.">
 	<meta property="og:title" content="Google Cloud Associate Cloud Engineer (ACE) Exam Questions" />
-<meta property="og:description" content="Free Google Cloud Associate Cloud Engineer (ACE) exam questions with verified answers and explanations, plus a free timed online practice exam." />
+<meta property="og:description" content="Free Google Cloud Associate Cloud Engineer (ACE) exam questions by exam domain, plus a timed online practice exam with answers and explanations." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/gcp/gcp-associate-cloud-engineer-exam-questions/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/gcp.png" />
 <meta property="article:published_time" content="2026-09-15T00:00:00+00:00" />
-<meta property="article:modified_time" content="2026-10-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-10-10T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -29,7 +29,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:image" content="https://codingnconcepts.com/img/logo/gcp.png">
 	<meta name="twitter:title" content="Google Cloud Associate Cloud Engineer (ACE) Exam Questions">
-	<meta name="twitter:description" content="Free Google Cloud Associate Cloud Engineer (ACE) exam questions with verified answers and explanations, plus a free timed online practice exam.">
+	<meta name="twitter:description" content="Free Google Cloud Associate Cloud Engineer (ACE) exam questions by exam domain, plus a timed online practice exam with answers and explanations.">
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -61,7 +61,7 @@
     "name": "Google Cloud Associate Cloud Engineer (ACE) Exam Questions",
     "headline": "Google Cloud Associate Cloud Engineer (ACE) Exam Questions",
     "alternativeHeadline":  null ,
-    "description": "Free Google Cloud Associate Cloud Engineer (ACE) exam questions with verified answers and explanations, plus a free timed online practice exam.",
+    "description": "Free Google Cloud Associate Cloud Engineer (ACE) exam questions by exam domain, plus a timed online practice exam with answers and explanations.",
     "inLanguage": "en-US",
 	"isFamilyFriendly": true,
     "mainEntityOfPage": {
@@ -84,7 +84,7 @@
     "copyrightYear": "2026",
     "dateCreated": "2026-09-15T00:00:00.00Z",
     "datePublished": "2026-09-15T00:00:00.00Z",
-    "dateModified": "2026-10-05T00:00:00.00Z",
+    "dateModified": "2026-10-10T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -98,7 +98,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/gcp.png"],
     "url": "https://codingnconcepts.com/gcp/gcp-associate-cloud-engineer-exam-questions/",
-    "wordCount": 15324 ,
+    "wordCount": 5932 ,
     "genre": ["Google Cloud","GCP","Certification"],
     "keywords":  null 
 }
@@ -597,7 +597,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2026-10-05T00:00:00Z">Last Modified: Oct 05, 2026</time>
+	<time class="meta__text" datetime="2026-10-10T00:00:00Z">Last Modified: Oct 10, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -698,863 +698,259 @@ div[autonumbering] p { font-size: 15px;}
 <h6 id="a-city-governments-google-cloud-organization-has-three-folders-production-development-and-shared-services-the-security-team-wants-a-constraint-that-disables-external-ip-addresses-on-vm-instances-to-apply-automatically-to-every-current-and-future-project-in-the-production-folder-without-configuring-it-separately-for-each-project">A city government&rsquo;s Google Cloud organization has three folders: &ldquo;Production&rdquo;, &ldquo;Development&rdquo;, and &ldquo;Shared-Services&rdquo;. The security team wants a constraint that disables external IP addresses on VM instances to apply automatically to every current and future project in the &ldquo;Production&rdquo; folder, without configuring it separately for each project.</h6>
 <p>⬜ Apply the organization policy constraint <code>constraints/compute.vmExternalIpAccess</code> directly to each project inside Production individually<br>
 ⬜ Apply the constraint at the organization node and use IAM conditions to scope it to Production only<br>
-✅ Apply the constraint on the &ldquo;Production&rdquo; folder so it is inherited by all projects and sub-folders beneath it<br>
+⬜ Apply the constraint on the &ldquo;Production&rdquo; folder so it is inherited by all projects and sub-folders beneath it<br>
 ⬜ Create a custom IAM role that denies the <code>compute.instances.setMetadata</code> permission for Production projects</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Apply the constraint on the &ldquo;Production&rdquo; folder so it is inherited by all projects and sub-folders beneath it<br>
-Organization policy constraints applied at a folder node are inherited down the resource hierarchy by every project and sub-folder beneath it, so a single policy set on &ldquo;Production&rdquo; automatically covers current and future projects there.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Apply the organization policy constraint <code>constraints/compute.vmExternalIpAccess</code> directly to each project inside Production individually</strong> — Applying the constraint project-by-project works but does not scale and must be repeated for every new project, defeating the goal of automatic inheritance.<br>
-● <strong>Apply the constraint at the organization node and use IAM conditions to scope it to Production only</strong> — Organization policies are not scoped using IAM conditions; IAM conditions apply to IAM role bindings, not to Organization Policy Service constraints.<br>
-● <strong>Create a custom IAM role that denies the <code>compute.instances.setMetadata</code> permission for Production projects</strong> — IAM roles and permissions control who can perform actions; they cannot disable a resource configuration option like external IP assignment — that is what organization policy constraints are for.</p>
-<p><small>Source: <a href="https://cloud.google.com/resource-manager/docs/organization-policy/understanding-hierarchy">Understanding hierarchy evaluation</a></small></p>
-
-</div>
-
-<style>
-.quiz-explanation { background: var(--bg-subtle); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 6px 8px; margin-top: 12px; }
-.quiz-explanation-title { font-size: 1em; font-weight: 700; color: grey; }
-.quiz-explanation p { margin: 10px 0; }
-.quiz-explanation p:first-of-type { margin-top: 0; }
-</style>
-
 <h6 id="a-data-analytics-team-needs-a-small-set-of-engineers-to-run-bigquery-jobs-and-read-datasets-but-the-built-in-bigquery-admin-role-grants-far-more-permissions-than-required-including-deleting-datasets-and-managing-iam-policies-what-should-the-cloud-administrator-do-to-follow-the-principle-of-least-privilege">A data analytics team needs a small set of engineers to run BigQuery jobs and read datasets, but the built-in BigQuery Admin role grants far more permissions than required, including deleting datasets and managing IAM policies. What should the cloud administrator do to follow the principle of least privilege?</h6>
 <p>⬜ Grant the engineers the primitive Editor role, which includes BigQuery permissions along with broad project-wide access<br>
-✅ Grant the predefined <code>roles/bigquery.jobUser</code> and <code>roles/bigquery.dataViewer</code> roles instead of BigQuery Admin<br>
+⬜ Grant the predefined <code>roles/bigquery.jobUser</code> and <code>roles/bigquery.dataViewer</code> roles instead of BigQuery Admin<br>
 ⬜ Grant BigQuery Admin but use IAM Conditions to restrict it to business hours only<br>
 ⬜ Create a service account with BigQuery Admin and have engineers impersonate it for all queries</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Grant the predefined <code>roles/bigquery.jobUser</code> and <code>roles/bigquery.dataViewer</code> roles instead of BigQuery Admin<br>
-The predefined BigQuery Job User and BigQuery Data Viewer roles grant exactly the permissions needed to run queries and read data, without administrative permissions like dataset deletion or IAM policy management — matching the principle of least privilege.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Grant the engineers the primitive Editor role, which includes BigQuery permissions along with broad project-wide access</strong> — The primitive Editor role is even broader than BigQuery Admin, granting write access across most services in the project, which is the opposite of least privilege.<br>
-● <strong>Grant BigQuery Admin but use IAM Conditions to restrict it to business hours only</strong> — An IAM Condition can restrict <em>when</em> a role applies, but BigQuery Admin still grants the same overly broad set of permissions during allowed hours.<br>
-● <strong>Create a service account with BigQuery Admin and have engineers impersonate it for all queries</strong> — Having engineers impersonate an admin service account still ultimately grants admin-level permissions to the engineers&rsquo; workflow; impersonation is indirection, not a reduction in privilege.</p>
-<p><small>Source: <a href="https://cloud.google.com/iam/docs/choose-role-type">Choose which type of role to use</a></small></p>
-
-</div>
-
 <h6 id="a-company-with-200-engineers-onboards-and-offboards-staff-frequently-and-wants-new-hires-on-the-data-team-to-automatically-receive-the-same-set-of-iam-roles-on-relevant-projects-as-soon-as-they-join-without-an-administrator-manually-granting-roles-to-each-new-user-account">A company with 200 engineers onboards and offboards staff frequently and wants new hires on the &ldquo;data-team&rdquo; to automatically receive the same set of IAM roles on relevant projects as soon as they join, without an administrator manually granting roles to each new user account.</h6>
-<p>✅ Create a Google Group in Cloud Identity, grant IAM roles to the group, and add or remove members as staffing changes<br>
+<p>⬜ Create a Google Group in Cloud Identity, grant IAM roles to the group, and add or remove members as staffing changes<br>
 ⬜ Grant IAM roles directly to each user&rsquo;s individual Google Account and update policies whenever staffing changes<br>
 ⬜ Create a new custom IAM role for every new engineer that copies permissions from an existing engineer<br>
 ⬜ Use Workforce Identity Federation to map each new hire&rsquo;s corporate directory attribute directly to a project-level primitive role</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Create a Google Group in Cloud Identity, grant IAM roles to the group, and add or remove members as staffing changes<br>
-Google Cloud IAM best practice is to bind roles to Cloud Identity Google Groups rather than individual users; access changes as staffing changes simply by adding or removing group membership, with no per-user IAM policy edits required.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Grant IAM roles directly to each user&rsquo;s individual Google Account and update policies whenever staffing changes</strong> — Binding roles to individual accounts requires manual IAM policy updates for every hire and departure, which does not scale and is exactly what the team wants to avoid.<br>
-● <strong>Create a new custom IAM role for every new engineer that copies permissions from an existing engineer</strong> — Creating a brand-new custom role per engineer is unnecessary overhead and does not automatically apply to new hires without manual role creation and assignment.<br>
-● <strong>Use Workforce Identity Federation to map each new hire&rsquo;s corporate directory attribute directly to a project-level primitive role</strong> — Workforce Identity Federation is for federating external identity providers so workforce users can authenticate without Google-managed accounts; it is not the mechanism for automatically applying a reusable set of project IAM roles to new hires — group-based IAM binding is.</p>
-<p><small>Source: <a href="https://cloud.google.com/iam/docs/groups-in-cloud-console">Create and manage Google groups in the Google Cloud console</a></small></p>
-
-</div>
-
 <h6 id="a-developer-just-created-a-brand-new-google-cloud-project-and-immediately-tries-to-run-gcloud-compute-instances-create-but-the-command-fails-with-an-error-indicating-the-compute-engine-api-is-not-enabled-for-the-project-what-is-the-correct-way-to-resolve-this-before-creating-the-instance">A developer just created a brand-new Google Cloud project and immediately tries to run <code>gcloud compute instances create</code>, but the command fails with an error indicating the Compute Engine API is not enabled for the project. What is the correct way to resolve this before creating the instance?</h6>
 <p>⬜ Request a quota increase for the Compute Engine API from Cloud Quotas<br>
 ⬜ Grant the developer the Owner role at the organization level<br>
 ⬜ Recreate the project inside a folder that already has Compute Engine enabled<br>
-✅ Run <code>gcloud services enable compute.googleapis.com</code> (or enable it under &ldquo;APIs &amp; Services&rdquo; in the console) for the project</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Run <code>gcloud services enable compute.googleapis.com</code> (or enable it under &ldquo;APIs &amp; Services&rdquo; in the console) for the project<br>
-APIs must be explicitly enabled per project using the Service Usage API before their resources can be created; <code>gcloud services enable compute.googleapis.com</code> (or the equivalent console action) enables the Compute Engine API for that specific project.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Request a quota increase for the Compute Engine API from Cloud Quotas</strong> — A quota increase adjusts a numeric limit on an already-enabled service; it has no effect if the API itself has never been enabled.<br>
-● <strong>Grant the developer the Owner role at the organization level</strong> — Holding the Owner role controls what the developer is authorized to do, but it does not itself enable any API for the project.<br>
-● <strong>Recreate the project inside a folder that already has Compute Engine enabled</strong> — API enablement is a per-project setting managed through Service Usage; it is not inherited automatically from a folder, and there is no concept of a folder having &ldquo;Compute Engine enabled&rdquo; for its child projects.</p>
-<p><small>Source: <a href="https://cloud.google.com/sdk/gcloud/reference/services/enable">gcloud services enable</a></small></p>
-
-</div>
-
+⬜ Run <code>gcloud services enable compute.googleapis.com</code> (or enable it under &ldquo;APIs &amp; Services&rdquo; in the console) for the project</p>
 <h6 id="the-operations-team-wants-to-be-paged-automatically-via-slack-whenever-the-average-cpu-utilization-of-a-production-compute-engine-instance-group-exceeds-90-for-5-minutes-which-google-cloud-observability-capability-should-they-configure">The operations team wants to be paged automatically via Slack whenever the average CPU utilization of a production Compute Engine instance group exceeds 90% for 5 minutes. Which Google Cloud Observability capability should they configure?</h6>
 <p>⬜ A Cloud Logging log-based metric with no alerting configured, reviewed manually each morning<br>
-✅ A Cloud Monitoring alerting policy with a metric-threshold condition and a Slack notification channel<br>
+⬜ A Cloud Monitoring alerting policy with a metric-threshold condition and a Slack notification channel<br>
 ⬜ A budget alert on the billing account tied to compute spend<br>
 ⬜ An organization policy constraint that blocks instances from exceeding 90% CPU</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> A Cloud Monitoring alerting policy with a metric-threshold condition and a Slack notification channel<br>
-Cloud Monitoring alerting policies let you define a condition on a metric (such as CPU utilization exceeding a threshold for a set duration) and attach notification channels, including Slack, so the team is paged automatically when the condition is met.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>A Cloud Logging log-based metric with no alerting configured, reviewed manually each morning</strong> — A log-based metric without an attached alerting policy requires someone to manually check it, which does not meet the requirement for automatic paging.<br>
-● <strong>A budget alert on the billing account tied to compute spend</strong> — Budget alerts notify on billing spend thresholds, not on runtime performance metrics like CPU utilization.<br>
-● <strong>An organization policy constraint that blocks instances from exceeding 90% CPU</strong> — Organization policy constraints govern resource configuration options (such as disabling features), not runtime behavior; there is no constraint that throttles or blocks high CPU usage.</p>
-<p><small>Source: <a href="https://cloud.google.com/monitoring/alerts">Alerting overview</a></small></p>
-
-</div>
-
 <h6 id="a-teams-batch-processing-job-is-being-throttled-because-it-needs-to-create-50-compute-engine-instances-simultaneously-in-us-central1-but-the-projects-regional-cpu-quota-only-allows-24-vcpus-what-should-they-do-to-run-the-job-without-redesigning-the-architecture">A team&rsquo;s batch-processing job is being throttled because it needs to create 50 Compute Engine instances simultaneously in <code>us-central1</code>, but the project&rsquo;s regional CPU quota only allows 24 vCPUs. What should they do to run the job without redesigning the architecture?</h6>
 <p>⬜ Move the workload to a different Google Cloud organization that has no quotas<br>
 ⬜ Contact Google Cloud sales to purchase additional committed use discounts<br>
-✅ Request a quota increase for the relevant CPU quota in that region from the Quotas page (IAM &amp; Admin) or via the Cloud Quotas API<br>
+⬜ Request a quota increase for the relevant CPU quota in that region from the Quotas page (IAM &amp; Admin) or via the Cloud Quotas API<br>
 ⬜ Delete the default VPC network to free up additional compute quota</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Request a quota increase for the relevant CPU quota in that region from the Quotas page (IAM &amp; Admin) or via the Cloud Quotas API<br>
-Quotas are per-project, per-region limits that can be raised by submitting a quota increase request through the Quotas page in the console or the Cloud Quotas API; approval typically restores the ability to create the needed number of instances.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Move the workload to a different Google Cloud organization that has no quotas</strong> — Quotas are enforced per project regardless of which organization it belongs to, and Google Cloud projects always have quotas; there is no quota-free organization.<br>
-● <strong>Contact Google Cloud sales to purchase additional committed use discounts</strong> — Committed use discounts are a pricing mechanism for reduced rates on sustained usage; they do not raise or bypass regional resource quotas.<br>
-● <strong>Delete the default VPC network to free up additional compute quota</strong> — Deleting the default VPC network has no effect on Compute Engine CPU quota, which is unrelated to VPC network configuration.</p>
-<p><small>Source: <a href="https://cloud.google.com/docs/quotas/view-manage">View and manage quotas</a></small></p>
-
-</div>
-
 <h6 id="a-security-team-needs-to-answer-which-compute-engine-firewall-rules-and-iam-policies-existed-on-this-project-20-days-ago-for-an-audit-without-having-manually-taken-snapshots-at-the-time-which-google-cloud-service-is-designed-for-this">A security team needs to answer &ldquo;which Compute Engine firewall rules and IAM policies existed on this project 20 days ago&rdquo; for an audit, without having manually taken snapshots at the time. Which Google Cloud service is designed for this?</h6>
-<p>✅ Cloud Asset Inventory, which retains a history of resource metadata changes and lets you query state as of a past point in time<br>
+<p>⬜ Cloud Asset Inventory, which retains a history of resource metadata changes and lets you query state as of a past point in time<br>
 ⬜ Recommender, which only provides forward-looking cost and security recommendations<br>
 ⬜ VPC Flow Logs, which capture only network traffic metadata, not IAM policy changes<br>
 ⬜ Security Command Center Standard tier, which does not retain historical resource metadata the way Cloud Asset Inventory does</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Cloud Asset Inventory, which retains a history of resource metadata changes and lets you query state as of a past point in time<br>
-Cloud Asset Inventory keeps up to 35 days of create, update, and delete history for asset metadata — including firewall rule configurations and IAM policies — and supports querying or exporting that historical state, making it possible to answer &ldquo;what existed 20 days ago.&rdquo;</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Recommender, which only provides forward-looking cost and security recommendations</strong> — Recommender surfaces forward-looking suggestions (cost, security, performance) based on current usage; it does not provide historical point-in-time resource state.<br>
-● <strong>VPC Flow Logs, which capture only network traffic metadata, not IAM policy changes</strong> — VPC Flow Logs record network traffic metadata between instances; they do not capture firewall rule definitions or IAM policy history.<br>
-● <strong>Security Command Center Standard tier, which does not retain historical resource metadata the way Cloud Asset Inventory does</strong> — Security Command Center focuses on security findings and posture, and relies on Cloud Asset Inventory data under the hood rather than providing its own independent historical asset timeline.</p>
-<p><small>Source: <a href="https://cloud.google.com/asset-inventory/docs/overview">Cloud Asset Inventory overview</a></small></p>
-
-</div>
-
 <h6 id="an-enterprise-wants-its-employees-to-sign-in-to-the-google-cloud-console-using-their-existing-okta-credentials-without-google-managing-separate-passwords-for-each-employee-and-without-syncing-every-employee-into-cloud-identity-as-a-google-managed-user">An enterprise wants its employees to sign in to the Google Cloud console using their existing Okta credentials, without Google managing separate passwords for each employee and without syncing every employee into Cloud Identity as a Google-managed user.</h6>
 <p>⬜ Enable Workload Identity Federation and configure Okta as an attribute-based workload pool<br>
 ⬜ Deploy Google Cloud Directory Sync (GCDS) to continuously sync all Okta users into Cloud Identity<br>
 ⬜ Create individual Cloud Identity accounts for each employee and enable 2-Step Verification<br>
-✅ Configure Workforce Identity Federation with Okta as the external identity provider so employees federate in via SAML or OIDC without Google-managed accounts</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Configure Workforce Identity Federation with Okta as the external identity provider so employees federate in via SAML or OIDC without Google-managed accounts<br>
-Workforce Identity Federation lets an external identity provider such as Okta authenticate workforce users (employees, partners, contractors) via SAML or OIDC; it is sync-less, meaning Google Cloud does not store or manage a separate Google account or password for each user.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Enable Workload Identity Federation and configure Okta as an attribute-based workload pool</strong> — Workload Identity Federation is designed for non-human workloads (applications or services running outside Google Cloud) to access Google Cloud resources, not for human employees signing in to the console — that is what Workforce Identity Federation is for.<br>
-● <strong>Deploy Google Cloud Directory Sync (GCDS) to continuously sync all Okta users into Cloud Identity</strong> — GCDS synchronizes directory users into Cloud Identity as Google-managed accounts, which is exactly what the requirement says to avoid.<br>
-● <strong>Create individual Cloud Identity accounts for each employee and enable 2-Step Verification</strong> — Manually creating individual Cloud Identity accounts still means Google manages separate credentials per employee, contradicting the requirement to use existing Okta credentials without Google-managed accounts.</p>
-<p><small>Source: <a href="https://cloud.google.com/iam/docs/workforce-identity-federation">Workforce Identity Federation</a></small></p>
-
-</div>
-
+⬜ Configure Workforce Identity Federation with Okta as the external identity provider so employees federate in via SAML or OIDC without Google-managed accounts</p>
 <h6 id="a-cloud-administrator-creates-a-new-google-cloud-project-for-a-proof-of-concept-but-when-trying-to-create-a-cloud-storage-bucket-the-console-shows-billing-is-not-enabled-for-this-project-and-most-apis-cannot-be-used-what-must-the-administrator-do-first">A cloud administrator creates a new Google Cloud project for a proof-of-concept, but when trying to create a Cloud Storage bucket, the console shows &ldquo;billing is not enabled for this project&rdquo; and most APIs cannot be used. What must the administrator do first?</h6>
 <p>⬜ Set an IAM policy granting the Billing Account Administrator role to the project itself<br>
-✅ Link the project to an active Cloud Billing account, either at project creation or afterward through the Billing page<br>
+⬜ Link the project to an active Cloud Billing account, either at project creation or afterward through the Billing page<br>
 ⬜ Enable a budget on the project so charges can start being tracked<br>
 ⬜ Request a quota increase for the project&rsquo;s billing budget</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Link the project to an active Cloud Billing account, either at project creation or afterward through the Billing page<br>
-Most resource creation on Google Cloud requires the project to be linked to an active Cloud Billing account; this is done from the Billing page in the console (or with <code>gcloud billing projects link</code>), either during project creation or afterward.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Set an IAM policy granting the Billing Account Administrator role to the project itself</strong> — The Billing Account Administrator IAM role is granted to a principal such as a user or group so they can manage a billing account; granting it &ldquo;to the project&rdquo; does not link the project to a billing account.<br>
-● <strong>Enable a budget on the project so charges can start being tracked</strong> — Budgets track and alert on spending after billing is already enabled for a project; creating a budget does not itself enable billing.<br>
-● <strong>Request a quota increase for the project&rsquo;s billing budget</strong> — There is no such thing as a &ldquo;billing budget quota&rdquo; to increase; quotas govern resource usage limits, not the billing-linkage status of a project.</p>
-<p><small>Source: <a href="https://cloud.google.com/billing/docs/how-to/modify-project">Enable, disable, or change billing for a project</a></small></p>
-
-</div>
-
 <h6 id="a-finance-manager-sets-up-a-cloud-billing-budget-of-5000month-for-a-project-with-alert-thresholds-at-50-90-and-100-sent-to-their-email-after-the-projects-spend-reaches-100-of-the-budget-in-the-middle-of-the-month-what-happens-by-default">A finance manager sets up a Cloud Billing budget of $5,000/month for a project with alert thresholds at 50%, 90%, and 100%, sent to their email. After the project&rsquo;s spend reaches 100% of the budget in the middle of the month, what happens by default?</h6>
 <p>⬜ Google Cloud automatically disables billing for the project, stopping all resource usage<br>
 ⬜ All running Compute Engine instances are automatically stopped to prevent further charges<br>
-✅ The finance manager receives an email alert, but spending continues uninterrupted unless automated actions are separately configured to cap or stop usage<br>
+⬜ The finance manager receives an email alert, but spending continues uninterrupted unless automated actions are separately configured to cap or stop usage<br>
 ⬜ The project&rsquo;s quota for every service is automatically reduced to zero</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> The finance manager receives an email alert, but spending continues uninterrupted unless automated actions are separately configured to cap or stop usage<br>
-By default, Cloud Billing budgets and budget alerts only send notifications (email, or a Pub/Sub message that can drive custom automation) when a threshold is crossed; they do not automatically disable billing, stop instances, or cap spending unless the administrator explicitly builds or enables that automated response.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Google Cloud automatically disables billing for the project, stopping all resource usage</strong> — Budgets do not automatically disable project billing; that would require a separately built automation reacting to the budget&rsquo;s Pub/Sub notification.<br>
-● <strong>All running Compute Engine instances are automatically stopped to prevent further charges</strong> — Reaching a budget threshold does not trigger any automatic instance shutdown; instances keep running and continue to incur charges.<br>
-● <strong>The project&rsquo;s quota for every service is automatically reduced to zero</strong> — Budget alerts have no effect on service quotas; quotas and budgets are independent mechanisms.</p>
-<p><small>Source: <a href="https://cloud.google.com/billing/docs/how-to/budgets">Create, edit, or delete budgets and budget alerts</a></small></p>
-
-</div>
-
 <h3 id="domain-2-planning-and-implementing-a-cloud-solution-30">Domain 2: Planning and implementing a cloud solution (30%)</h3>
 <hr>
 <h6 id="a-team-is-building-a-stateless-rest-api-that-receives-unpredictable-bursty-traffic--sometimes-zero-requests-for-hours--and-wants-to-avoid-managing-servers-clusters-or-scaling-configuration-while-paying-only-for-actual-request-handling-time-which-compute-option-best-fits">A team is building a stateless REST API that receives unpredictable, bursty traffic — sometimes zero requests for hours — and wants to avoid managing servers, clusters, or scaling configuration, while paying only for actual request-handling time. Which compute option best fits?</h6>
-<p>✅ Cloud Run, which runs stateless containers on a fully managed serverless platform that scales automatically, including to zero<br>
+<p>⬜ Cloud Run, which runs stateless containers on a fully managed serverless platform that scales automatically, including to zero<br>
 ⬜ A GKE Standard cluster with a fixed 3-node pool, so the API always has capacity to absorb bursts<br>
 ⬜ A single Compute Engine e2-standard-4 VM running the container with a static IP address<br>
 ⬜ A zonal managed instance group with a fixed instance count of 5 machines</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Cloud Run, which runs stateless containers on a fully managed serverless platform that scales automatically, including to zero<br>
-Cloud Run is Google Cloud&rsquo;s fully managed serverless platform for stateless containers; it scales automatically based on incoming requests, including down to zero instances during idle periods, and bills only for the resources used while handling requests.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>A GKE Standard cluster with a fixed 3-node pool, so the API always has capacity to absorb bursts</strong> — A GKE Standard cluster with a fixed node pool requires the team to manage cluster and node infrastructure, and fixed nodes keep incurring cost even when there is zero traffic.<br>
-● <strong>A single Compute Engine e2-standard-4 VM running the container with a static IP address</strong> — A single always-on VM has no automatic scaling for bursts, represents a single point of failure, and keeps incurring cost during idle periods.<br>
-● <strong>A zonal managed instance group with a fixed instance count of 5 machines</strong> — A managed instance group with a fixed instance count does not scale to zero or automatically respond to bursty traffic; it still requires managing an instance template and health checks.</p>
-<p><small>Source: <a href="https://cloud.google.com/run/docs/overview/what-is-cloud-run">What is Cloud Run</a></small></p>
-
-</div>
-
 <h6 id="a-platform-team-manages-300-compute-engine-vms-across-many-projects-currently-whenever-an-engineer-joins-or-leaves-the-team-someone-must-manually-add-or-remove-that-engineers-ssh-public-key-in-each-vms-instance-metadata--an-error-prone-hard-to-audit-process-which-feature-should-they-enable-to-centralize-ssh-access-control-through-iam-instead">A platform team manages 300 Compute Engine VMs across many projects. Currently, whenever an engineer joins or leaves the team, someone must manually add or remove that engineer&rsquo;s SSH public key in each VM&rsquo;s instance metadata — an error-prone, hard-to-audit process. Which feature should they enable to centralize SSH access control through IAM instead?</h6>
 <p>⬜ VPC firewall rules that allow SSH only from the corporate office IP range<br>
 ⬜ Shielded VM, to cryptographically verify each engineer&rsquo;s identity before SSH<br>
 ⬜ Adding the SSH keys to project-wide metadata instead of per-instance metadata<br>
-✅ OS Login, which links each engineer&rsquo;s Google identity to their Linux OS user account and grants or revokes SSH access via IAM roles</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> OS Login, which links each engineer&rsquo;s Google identity to their Linux OS user account and grants or revokes SSH access via IAM roles<br>
-OS Login links a user&rsquo;s Google identity to a Linux OS user account; SSH access is then granted or revoked centrally by assigning or removing IAM roles such as <code>roles/compute.osLogin</code>, so access changes take effect immediately across all VMs without touching per-instance metadata.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>VPC firewall rules that allow SSH only from the corporate office IP range</strong> — Firewall rules control network-level reachability (which source IPs can reach port 22); they do not manage or audit per-user SSH key authorization.<br>
-● <strong>Shielded VM, to cryptographically verify each engineer&rsquo;s identity before SSH</strong> — Shielded VM protects boot integrity and detects rootkits/bootkits; it has nothing to do with managing which individual users can SSH into a VM.<br>
-● <strong>Adding the SSH keys to project-wide metadata instead of per-instance metadata</strong> — Moving keys to project-wide metadata still requires manually adding and removing individual SSH keys and does not use IAM roles for centralized, auditable, instantly revocable access.</p>
-<p><small>Source: <a href="https://cloud.google.com/compute/docs/oslogin">About OS Login</a></small></p>
-
-</div>
-
+⬜ OS Login, which links each engineer&rsquo;s Google identity to their Linux OS user account and grants or revokes SSH access via IAM roles</p>
 <h6 id="a-team-runs-a-stateful-database-on-a-single-compute-engine-vm-and-wants-the-underlying-disk-to-keep-serving-with-no-data-loss-if-the-entire-zone-the-vm-is-running-in-becomes-unavailable-without-relying-on-database-level-replication-which-storage-option-should-they-choose">A team runs a stateful database on a single Compute Engine VM and wants the underlying disk to keep serving with no data loss if the entire zone the VM is running in becomes unavailable, without relying on database-level replication. Which storage option should they choose?</h6>
 <p>⬜ A zonal Persistent Disk with daily scheduled snapshots<br>
-✅ A Regional Persistent Disk, which synchronously replicates data across two zones in the same region<br>
+⬜ A Regional Persistent Disk, which synchronously replicates data across two zones in the same region<br>
 ⬜ Local SSD, which offers the highest IOPS but is physically attached to a single server<br>
 ⬜ A Cloud Storage bucket configured with the Standard storage class, mounted as a filesystem</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> A Regional Persistent Disk, which synchronously replicates data across two zones in the same region<br>
-Regional Persistent Disk synchronously replicates data between two zones in the same region, providing high availability for disk data through a single zonal failure without requiring the database itself to implement replication.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>A zonal Persistent Disk with daily scheduled snapshots</strong> — Zonal Persistent Disk snapshots are point-in-time backups taken on a schedule, not synchronous replication; there is a data-loss window between the last snapshot and the zone failure, and restoring requires manual intervention.<br>
-● <strong>Local SSD, which offers the highest IOPS but is physically attached to a single server</strong> — Local SSD is physically attached to the host server, and its data is lost if that server or its zone fails; it cannot survive a zonal outage.<br>
-● <strong>A Cloud Storage bucket configured with the Standard storage class, mounted as a filesystem</strong> — Cloud Storage is an object storage service, not designed to be mounted as low-latency, POSIX-style block storage for a running database.</p>
-<p><small>Source: <a href="https://cloud.google.com/compute/docs/disks/high-availability-regional-persistent-disk">Build highly available services using regional persistent disks</a></small></p>
-
-</div>
-
 <h6 id="a-web-applications-traffic-varies-significantly-between-weekdays-and-weekends-the-team-wants-compute-engine-to-automatically-add-or-remove-vm-instances-based-on-average-cpu-utilization-using-a-consistent-versioned-vm-configuration-for-every-instance-it-creates-what-should-they-set-up">A web application&rsquo;s traffic varies significantly between weekdays and weekends. The team wants Compute Engine to automatically add or remove VM instances based on average CPU utilization, using a consistent, versioned VM configuration for every instance it creates. What should they set up?</h6>
 <p>⬜ A single Compute Engine VM resized manually with <code>gcloud compute instances set-machine-type</code> during peak hours<br>
 ⬜ Multiple independent VMs created from separate <code>gcloud compute instances create</code> commands with matching configurations<br>
-✅ A managed instance group (MIG) built from an instance template, with autoscaling configured on a CPU-utilization target<br>
+⬜ A managed instance group (MIG) built from an instance template, with autoscaling configured on a CPU-utilization target<br>
 ⬜ An unmanaged instance group behind a load balancer, with an administrator manually adding VMs when Cloud Monitoring shows high CPU</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> A managed instance group (MIG) built from an instance template, with autoscaling configured on a CPU-utilization target<br>
-A managed instance group built from an instance template ensures every instance is created with the same versioned configuration, and an autoscaler attached to the MIG can automatically add or remove instances based on a target metric such as average CPU utilization.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>A single Compute Engine VM resized manually with <code>gcloud compute instances set-machine-type</code> during peak hours</strong> — Manually resizing a single VM does not scale out or in automatically and typically requires stopping and restarting the instance, causing downtime.<br>
-● <strong>Multiple independent VMs created from separate <code>gcloud compute instances create</code> commands with matching configurations</strong> — Independently created VMs are not managed as a group; there is no automatic scaling, health-based recreation, or template versioning across them.<br>
-● <strong>An unmanaged instance group behind a load balancer, with an administrator manually adding VMs when Cloud Monitoring shows high CPU</strong> — An unmanaged instance group does not support autoscaling or automated health checking, and relying on a person to manually add VMs does not meet the requirement for automatic scaling.</p>
-<p><small>Source: <a href="https://cloud.google.com/compute/docs/autoscaler">Autoscaling groups of instances</a></small></p>
-
-</div>
-
 <h6 id="a-regulated-fintech-company-is-deploying-a-gke-cluster-and-requires-that-worker-nodes-must-not-be-reachable-from-or-able-to-directly-reach-the-public-internet-while-still-allowing-engineers-to-manage-the-cluster-from-the-corporate-network-which-gke-configuration-should-they-use">A regulated fintech company is deploying a GKE cluster and requires that worker nodes must not be reachable from, or able to directly reach, the public internet, while still allowing engineers to manage the cluster from the corporate network. Which GKE configuration should they use?</h6>
-<p>✅ A private cluster, where nodes are provisioned with only internal IP addresses, combined with authorized networks restricting control plane access<br>
+<p>⬜ A private cluster, where nodes are provisioned with only internal IP addresses, combined with authorized networks restricting control plane access<br>
 ⬜ A zonal Standard cluster with default networking, where nodes receive ephemeral external IPs<br>
 ⬜ A GKE Autopilot cluster with public endpoint access enabled for all IP ranges (0.0.0.0/0)<br>
 ⬜ A cluster in the default VPC with a firewall rule allowing SSH from anywhere</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> A private cluster, where nodes are provisioned with only internal IP addresses, combined with authorized networks restricting control plane access<br>
-In a GKE private cluster, nodes are provisioned with only internal IP addresses, preventing direct inbound or outbound internet access to the nodes; pairing this with authorized networks for the control plane restricts cluster management access to trusted ranges such as the corporate network.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>A zonal Standard cluster with default networking, where nodes receive ephemeral external IPs</strong> — Default networking with ephemeral external node IPs gives nodes public internet reachability, which is the opposite of the stated requirement.<br>
-● <strong>A GKE Autopilot cluster with public endpoint access enabled for all IP ranges (0.0.0.0/0)</strong> — Enabling public control plane access for 0.0.0.0/0 exposes the cluster&rsquo;s management endpoint to the entire internet rather than restricting it to trusted networks.<br>
-● <strong>A cluster in the default VPC with a firewall rule allowing SSH from anywhere</strong> — Allowing SSH from anywhere widens exposure to the nodes rather than restricting their internet reachability, and does not address node IP configuration at all.</p>
-<p><small>Source: <a href="https://cloud.google.com/kubernetes-engine/docs/concepts/network-isolation">About network isolation in GKE</a></small></p>
-
-</div>
-
 <h6 id="a-retailer-wants-to-run-ad-hoc-sql-analytics-over-many-years-of-point-of-sale-transaction-data-totaling-tens-of-terabytes-with-fast-query-response-and-no-need-to-manage-servers-or-clusters-which-google-cloud-data-product-is-the-best-fit">A retailer wants to run ad-hoc SQL analytics over many years of point-of-sale transaction data, totaling tens of terabytes, with fast query response and no need to manage servers or clusters. Which Google Cloud data product is the best fit?</h6>
 <p>⬜ Cloud SQL for MySQL, scaled to the largest available machine type<br>
 ⬜ Firestore, using collection group queries across all transaction documents<br>
 ⬜ Memorystore for Redis, with transaction data cached in memory<br>
-✅ BigQuery, a serverless, highly scalable enterprise data warehouse designed for fast SQL analytics over large datasets</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> BigQuery, a serverless, highly scalable enterprise data warehouse designed for fast SQL analytics over large datasets<br>
-BigQuery is a serverless, fully managed enterprise data warehouse purpose-built for running fast SQL analytics over very large datasets, without requiring the team to provision or manage any servers or clusters.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Cloud SQL for MySQL, scaled to the largest available machine type</strong> — Cloud SQL is a relational OLTP database with vertical scaling limits on a single instance; it is not designed for ad-hoc analytical scans over tens of terabytes of historical data.<br>
-● <strong>Firestore, using collection group queries across all transaction documents</strong> — Firestore is a NoSQL document database optimized for application data and low-latency lookups, not for large-scale ad-hoc SQL analytics across years of transactions.<br>
-● <strong>Memorystore for Redis, with transaction data cached in memory</strong> — Memorystore for Redis is an in-memory cache with limited capacity and no durability guarantees suited to being a system of record; it is not designed to hold years of historical transaction data for analytics.</p>
-<p><small>Source: <a href="https://cloud.google.com/bigquery/docs/introduction">BigQuery overview</a></small></p>
-
-</div>
-
+⬜ BigQuery, a serverless, highly scalable enterprise data warehouse designed for fast SQL analytics over large datasets</p>
 <h6 id="a-hospital-must-retain-patient-imaging-records-for-regulatory-compliance-for-at-least-7-years-and-expects-to-access-any-given-file-less-than-once-per-year-but-occasionally-needs-to-retrieve-a-specific-file-immediately-when-requested-by-auditors-which-cloud-storage-class-minimizes-storage-cost-while-meeting-the-retrieval-need">A hospital must retain patient imaging records for regulatory compliance for at least 7 years and expects to access any given file less than once per year, but occasionally needs to retrieve a specific file immediately when requested by auditors. Which Cloud Storage class minimizes storage cost while meeting the retrieval need?</h6>
 <p>⬜ Standard storage class, since it has no minimum storage duration and the lowest per-request retrieval fees<br>
-✅ Archive storage class, the lowest-cost class, intended for data accessed less than once a year while still retrievable within milliseconds<br>
+⬜ Archive storage class, the lowest-cost class, intended for data accessed less than once a year while still retrievable within milliseconds<br>
 ⬜ Nearline storage class, since its 30-day minimum storage duration matches monthly compliance reviews<br>
 ⬜ A Persistent Disk snapshot stored in the same zone as the compute instance that originally wrote the data</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Archive storage class, the lowest-cost class, intended for data accessed less than once a year while still retrievable within milliseconds<br>
-Archive is Cloud Storage&rsquo;s lowest-cost storage class, intended for data accessed less than once a year, such as long-term compliance archives and disaster recovery data, while still allowing millisecond retrieval when a file is needed.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Standard storage class, since it has no minimum storage duration and the lowest per-request retrieval fees</strong> — Standard storage has the highest per-GB storage price among the classes, making it the most expensive choice for data that is rarely accessed over a 7-year retention period.<br>
-● <strong>Nearline storage class, since its 30-day minimum storage duration matches monthly compliance reviews</strong> — Nearline is intended for data accessed roughly once a month, not once a year, and its access pattern and 30-day minimum storage duration are mismatched to this hospital&rsquo;s once-a-year-or-less access profile.<br>
-● <strong>A Persistent Disk snapshot stored in the same zone as the compute instance that originally wrote the data</strong> — Persistent Disk snapshots are backups of VM disks, not a general-purpose durable archival storage product, and are not priced or designed for long-term compliance archiving.</p>
-<p><small>Source: <a href="https://cloud.google.com/storage/docs/storage-classes">Storage classes</a></small></p>
-
-</div>
-
 <h6 id="a-global-fintech-company-needs-a-relational-database-for-a-payments-ledger-that-must-scale-horizontally-across-regions-to-handle-massive-write-throughput-while-still-guaranteeing-strong-consistency-and-acid-transactions-across-all-replicas-cloud-sqls-single-instance-model-cant-meet-the-scale-requirement-which-product-should-they-choose">A global fintech company needs a relational database for a payments ledger that must scale horizontally across regions to handle massive write throughput, while still guaranteeing strong consistency and ACID transactions across all replicas. Cloud SQL&rsquo;s single-instance model can&rsquo;t meet the scale requirement. Which product should they choose?</h6>
 <p>⬜ Bigtable, since it offers unlimited horizontal scale for structured payment records<br>
 ⬜ Cloud SQL with read replicas in every region to distribute the write load<br>
-✅ Cloud Spanner, a horizontally scalable, globally distributed relational database that provides strong consistency and ACID transactions<br>
+⬜ Cloud Spanner, a horizontally scalable, globally distributed relational database that provides strong consistency and ACID transactions<br>
 ⬜ Firestore in Datastore mode, configured in a multi-region location for strong consistency</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Cloud Spanner, a horizontally scalable, globally distributed relational database that provides strong consistency and ACID transactions<br>
-Cloud Spanner is a horizontally scalable, globally distributed relational database that combines a relational schema with strong (external) consistency and ACID transactions, purpose-built for workloads that outgrow a single-instance relational database like Cloud SQL.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Bigtable, since it offers unlimited horizontal scale for structured payment records</strong> — Bigtable is a NoSQL wide-column store without a relational schema, joins, or multi-row ACID transactions across arbitrary keys, so it does not fit a relational payments ledger requirement.<br>
-● <strong>Cloud SQL with read replicas in every region to distribute the write load</strong> — Cloud SQL read replicas scale read throughput, not write throughput; all writes still go through a single primary instance, which remains the scaling bottleneck.<br>
-● <strong>Firestore in Datastore mode, configured in a multi-region location for strong consistency</strong> — Firestore is a NoSQL document database; even in Datastore mode it lacks relational schema and SQL joins needed for a relational ledger.</p>
-<p><small>Source: <a href="https://cloud.google.com/spanner">Cloud Spanner</a></small></p>
-
-</div>
-
 <h6 id="a-media-company-currently-stores-200-tb-of-video-assets-in-an-amazon-s3-bucket-and-wants-to-migrate-them-to-cloud-storage-on-a-recurring-schedule-with-built-in-retry-filtering-and-validation-without-writing-custom-migration-scripts-which-google-cloud-tool-should-they-use">A media company currently stores 200 TB of video assets in an Amazon S3 bucket and wants to migrate them to Cloud Storage on a recurring schedule, with built-in retry, filtering, and validation, without writing custom migration scripts. Which Google Cloud tool should they use?</h6>
-<p>✅ Storage Transfer Service, which supports scheduled, managed transfers from Amazon S3 and other sources directly into Cloud Storage<br>
+<p>⬜ Storage Transfer Service, which supports scheduled, managed transfers from Amazon S3 and other sources directly into Cloud Storage<br>
 ⬜ <code>gsutil rsync</code> run manually once per day from an administrator&rsquo;s laptop<br>
 ⬜ Cloud Data Fusion, a visual ETL tool intended for building custom data pipelines with transformation logic<br>
 ⬜ BigQuery Data Transfer Service, since it can load any file type from S3 into a Cloud Storage bucket</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Storage Transfer Service, which supports scheduled, managed transfers from Amazon S3 and other sources directly into Cloud Storage<br>
-Storage Transfer Service is purpose-built for large-scale, scheduled, and managed data transfers into Cloud Storage from sources such as Amazon S3, S3-compatible storage, and other Cloud Storage buckets, with built-in scheduling, retries, and transfer validation.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong><code>gsutil rsync</code> run manually once per day from an administrator&rsquo;s laptop</strong> — Running <code>gsutil rsync</code> manually from a laptop is not scheduled or managed at scale, lacks the reliability guarantees needed for 200 TB, and requires the laptop to remain online for the transfer to complete.<br>
-● <strong>Cloud Data Fusion, a visual ETL tool intended for building custom data pipelines with transformation logic</strong> — Cloud Data Fusion is designed for building visual ETL/data transformation pipelines, not as the simplest, purpose-built tool for a straightforward object migration from S3.<br>
-● <strong>BigQuery Data Transfer Service, since it can load any file type from S3 into a Cloud Storage bucket</strong> — BigQuery Data Transfer Service loads data into BigQuery tables from supported sources; it does not transfer arbitrary files into a Cloud Storage bucket.</p>
-<p><small>Source: <a href="https://cloud.google.com/storage-transfer/docs/overview">Storage Transfer Service overview</a></small></p>
-
-</div>
-
 <h6 id="an-enterprises-network-security-team-wants-sole-control-over-creating-subnets-routes-and-firewall-rules-while-individual-application-teams--each-working-in-their-own-project--should-be-able-to-deploy-vms-and-gke-clusters-into-those-centrally-managed-networks-without-being-able-to-modify-network-configuration-themselves-which-google-cloud-networking-approach-fits-this-requirement">An enterprise&rsquo;s network security team wants sole control over creating subnets, routes, and firewall rules, while individual application teams — each working in their own project — should be able to deploy VMs and GKE clusters into those centrally managed networks without being able to modify network configuration themselves. Which Google Cloud networking approach fits this requirement?</h6>
 <p>⬜ VPC Network Peering between each application team&rsquo;s own independent VPC and a central &ldquo;hub&rdquo; VPC<br>
 ⬜ A separate VPC network duplicated in every application team&rsquo;s project and kept in sync manually<br>
 ⬜ Granting every application team&rsquo;s project the Network Admin role on its own project&rsquo;s default VPC<br>
-✅ Shared VPC, where a host project holds the centrally managed VPC network and application teams&rsquo; service projects attach to it to deploy resources using its subnets</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Shared VPC, where a host project holds the centrally managed VPC network and application teams&rsquo; service projects attach to it to deploy resources using its subnets<br>
-Shared VPC lets a host project centrally hold and administer the VPC network — subnets, routes, and firewall rules — while application teams work in service projects attached to that host project, deploying VMs and GKE clusters into the shared subnets without being able to modify the network configuration themselves.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>VPC Network Peering between each application team&rsquo;s own independent VPC and a central &ldquo;hub&rdquo; VPC</strong> — VPC Network Peering connects two independently administered VPC networks as peers; each side still manages its own network configuration, so it does not centralize control with the security team.<br>
-● <strong>A separate VPC network duplicated in every application team&rsquo;s project and kept in sync manually</strong> — Manually duplicating a VPC network across projects is not centralized administration, does not scale, and is prone to configuration drift.<br>
-● <strong>Granting every application team&rsquo;s project the Network Admin role on its own project&rsquo;s default VPC</strong> — Granting each application team&rsquo;s project the Network Admin role on its own VPC gives that team full control over its own networking, which is the opposite of centralizing control with the security team.</p>
-<p><small>Source: <a href="https://cloud.google.com/vpc/docs/shared-vpc">Shared VPC</a></small></p>
-
-</div>
-
+⬜ Shared VPC, where a host project holds the centrally managed VPC network and application teams&rsquo; service projects attach to it to deploy resources using its subnets</p>
 <h6 id="a-team-has-web-tier-and-database-tier-vms-in-the-same-vpc-network-and-wants-a-firewall-rule-that-allows-tcp5432-only-from-the-web-tier-vms-to-the-database-tier-vms-regardless-of-which-subnet-or-ip-range-the-web-tier-vms-happen-to-get-and-without-maintaining-a-manually-updated-list-of-ip-addresses-what-should-they-use-to-define-the-rules-source-and-target">A team has web-tier and database-tier VMs in the same VPC network and wants a firewall rule that allows TCP:5432 only from the web-tier VMs to the database-tier VMs, regardless of which subnet or IP range the web-tier VMs happen to get, and without maintaining a manually updated list of IP addresses. What should they use to define the rule&rsquo;s source and target?</h6>
 <p>⬜ Source and destination IP address ranges (CIDR blocks) covering the entire VPC&rsquo;s primary subnet<br>
-✅ Target tags (or service accounts) applied to the database-tier VMs, and a matching source tag (or service account) applied to the web-tier VMs<br>
+⬜ Target tags (or service accounts) applied to the database-tier VMs, and a matching source tag (or service account) applied to the web-tier VMs<br>
 ⬜ A single firewall rule with direction set to both INGRESS and EGRESS and no source or target specified<br>
 ⬜ Cloud NAT configuration applied to the database-tier VMs to restrict inbound connections</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Target tags (or service accounts) applied to the database-tier VMs, and a matching source tag (or service account) applied to the web-tier VMs<br>
-VPC firewall rules can use network tags or service accounts to identify sources and targets, decoupling the rule from specific IP addresses so it continues to apply correctly to exactly the intended instances even as IP addresses or subnets change.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Source and destination IP address ranges (CIDR blocks) covering the entire VPC&rsquo;s primary subnet</strong> — A rule scoped to the entire subnet&rsquo;s CIDR range would apply to every instance on that subnet, not just the web-tier VMs, and still requires tracking IP ranges manually as instances change.<br>
-● <strong>A single firewall rule with direction set to both INGRESS and EGRESS and no source or target specified</strong> — A single firewall rule can only specify one direction (INGRESS or EGRESS), and omitting a source or target would apply the rule far more broadly than intended.<br>
-● <strong>Cloud NAT configuration applied to the database-tier VMs to restrict inbound connections</strong> — Cloud NAT provides outbound internet connectivity for instances without external IP addresses; it does not control which internal instances can reach which other internal instances on a specific port.</p>
-<p><small>Source: <a href="https://cloud.google.com/firewall/docs/firewalls">VPC firewall rules</a></small></p>
-
-</div>
-
 <h6 id="a-manufacturing-company-needs-a-private-high-bandwidth-10-gbps-low-latency-connection-between-its-on-premises-data-center-and-its-google-cloud-vpc-that-does-not-traverse-the-public-internet-and-it-already-has-a-presence-in-a-colocation-facility-where-google-has-a-point-of-presence-which-connectivity-option-best-fits">A manufacturing company needs a private, high-bandwidth (10 Gbps), low-latency connection between its on-premises data center and its Google Cloud VPC that does not traverse the public internet, and it already has a presence in a colocation facility where Google has a point of presence. Which connectivity option best fits?</h6>
 <p>⬜ Cloud VPN using HA VPN, since it can deliver up to 10 Gbps over an IPsec tunnel across the public internet<br>
 ⬜ VPC Network Peering directly between the on-premises router and the Google Cloud VPC<br>
-✅ Dedicated Interconnect, which provides a direct physical, private connection between the on-premises network and Google&rsquo;s network at a colocation facility<br>
+⬜ Dedicated Interconnect, which provides a direct physical, private connection between the on-premises network and Google&rsquo;s network at a colocation facility<br>
 ⬜ A Shared VPC host project configured to allow on-premises traffic through Google&rsquo;s front-end load balancers</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Dedicated Interconnect, which provides a direct physical, private connection between the on-premises network and Google&rsquo;s network at a colocation facility<br>
-Dedicated Interconnect provides a direct, private physical connection (available at 10, 100, or 400 Gbps) between an on-premises network and Google&rsquo;s network at a shared colocation facility, keeping traffic off the public internet — matching the private, high-bandwidth, low-latency requirement.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Cloud VPN using HA VPN, since it can deliver up to 10 Gbps over an IPsec tunnel across the public internet</strong> — Cloud VPN, including HA VPN, tunnels traffic over the public internet using IPsec encryption; it does not provide a private, off-internet path even though it can reach high throughput.<br>
-● <strong>VPC Network Peering directly between the on-premises router and the Google Cloud VPC</strong> — VPC Network Peering connects two Google Cloud VPC networks to each other; it is not a mechanism for connecting an on-premises data center to Google Cloud.<br>
-● <strong>A Shared VPC host project configured to allow on-premises traffic through Google&rsquo;s front-end load balancers</strong> — Shared VPC centralizes network administration across Google Cloud projects; it is not a hybrid connectivity method for linking an on-premises data center to Google Cloud.</p>
-<p><small>Source: <a href="https://cloud.google.com/network-connectivity/docs/interconnect/concepts/overview">Cloud Interconnect overview</a></small></p>
-
-</div>
-
 <h6 id="a-company-runs-a-web-application-with-backends-in-multiple-google-cloud-regions-and-wants-a-single-anycast-ip-address-that-routes-each-users-https-request-to-the-closest-healthy-regional-backend-with-support-for-url-based-routing-to-different-backend-services-which-load-balancer-type-should-they-deploy">A company runs a web application with backends in multiple Google Cloud regions and wants a single anycast IP address that routes each user&rsquo;s HTTPS request to the closest healthy regional backend, with support for URL-based routing to different backend services. Which load balancer type should they deploy?</h6>
-<p>✅ The Global external Application Load Balancer, which uses a single global anycast IP and can route by URL path or host to backends across multiple regions<br>
+<p>⬜ The Global external Application Load Balancer, which uses a single global anycast IP and can route by URL path or host to backends across multiple regions<br>
 ⬜ An internal passthrough Network Load Balancer, scoped to a single region&rsquo;s internal IP range<br>
 ⬜ A regional external Application Load Balancer deployed separately in each region, each with its own IP address<br>
 ⬜ Cloud DNS geo-based routing alone, without any load balancer in front of the backends</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> The Global external Application Load Balancer, which uses a single global anycast IP and can route by URL path or host to backends across multiple regions<br>
-The Global external Application Load Balancer provides a single global anycast IP address, automatically routes users to the closest healthy backend across multiple regions, and supports host- and path-based URL routing to different backend services.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>An internal passthrough Network Load Balancer, scoped to a single region&rsquo;s internal IP range</strong> — An internal passthrough Network Load Balancer only serves clients within a single region over internal IP addresses; it is not designed for global, internet-facing HTTPS traffic.<br>
-● <strong>A regional external Application Load Balancer deployed separately in each region, each with its own IP address</strong> — Deploying a separate regional load balancer in each region means each one has its own IP address, so there is no single global anycast IP and no automatic nearest-region routing across them.<br>
-● <strong>Cloud DNS geo-based routing alone, without any load balancer in front of the backends</strong> — DNS-based geo routing alone provides no health checking, TLS termination, or URL-based routing to backend services, so it cannot substitute for a load balancer.</p>
-<p><small>Source: <a href="https://cloud.google.com/load-balancing/docs/https">External Application Load Balancer overview</a></small></p>
-
-</div>
-
 <h6 id="a-platform-team-wants-to-define-their-google-cloud-infrastructure--vpcs-gke-clusters-iam-bindings--as-version-controlled-configuration-files-so-the-same-environment-can-be-reproducibly-created-reviewed-via-pull-requests-and-torn-down-in-a-predictable-repeatable-way-which-tooling-approach-fits-this-requirement">A platform team wants to define their Google Cloud infrastructure — VPCs, GKE clusters, IAM bindings — as version-controlled configuration files so the same environment can be reproducibly created, reviewed via pull requests, and torn down in a predictable, repeatable way. Which tooling approach fits this requirement?</h6>
 <p>⬜ Manually clicking through the Google Cloud console and documenting each step in a wiki page for future reference<br>
 ⬜ A shell script of sequential <code>gcloud</code> commands with no state tracking of what has already been created<br>
 ⬜ Cloud Shell used interactively each time infrastructure needs to be recreated<br>
-✅ Terraform, using the Google Cloud provider to declare desired infrastructure state in version-controlled configuration files applied through a plan/apply workflow</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Terraform, using the Google Cloud provider to declare desired infrastructure state in version-controlled configuration files applied through a plan/apply workflow<br>
-Terraform is a declarative infrastructure-as-code tool; using the Google Cloud provider, the desired state of resources is defined in version-controlled configuration files, and Terraform tracks state so that <code>plan</code> and <code>apply</code> can reproducibly create, update, or destroy infrastructure in a predictable way.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Manually clicking through the Google Cloud console and documenting each step in a wiki page for future reference</strong> — Manually clicking through the console produces changes that are neither version-controlled nor guaranteed to be reproducible, since a wiki page can drift from what was actually clicked.<br>
-● <strong>A shell script of sequential <code>gcloud</code> commands with no state tracking of what has already been created</strong> — A plain sequence of <code>gcloud</code> commands has no state tracking, so there is no reliable way to know what has already been created or to safely reconcile configuration drift.<br>
-● <strong>Cloud Shell used interactively each time infrastructure needs to be recreated</strong> — Cloud Shell is just a terminal environment; running commands interactively there still requires manually repeating steps each time and provides no state management or repeatable plan/apply workflow.</p>
-<p><small>Source: <a href="https://cloud.google.com/docs/terraform/terraform-overview">Overview of Terraform on Google Cloud</a></small></p>
-
-</div>
-
+⬜ Terraform, using the Google Cloud provider to declare desired infrastructure state in version-controlled configuration files applied through a plan/apply workflow</p>
 <h6 id="a-cloud-architect-is-designing-a-new-multi-tier-application-architecture-on-google-cloud-and-wants-ai-assisted-help-generating-an-initial-architecture-diagram-from-a-natural-language-description-along-with-suggested-terraform-code-directly-within-the-google-cloud-console-which-google-cloud-capability-should-they-use">A cloud architect is designing a new multi-tier application architecture on Google Cloud and wants AI-assisted help generating an initial architecture diagram from a natural-language description, along with suggested Terraform code, directly within the Google Cloud console. Which Google Cloud capability should they use?</h6>
 <p>⬜ Cloud Asset Inventory, which generates architecture diagrams automatically from natural-language prompts<br>
-✅ Gemini Cloud Assist, including its Application Design Center, which uses natural-language input to help design architectures and generate infrastructure-as-code such as Terraform<br>
+⬜ Gemini Cloud Assist, including its Application Design Center, which uses natural-language input to help design architectures and generate infrastructure-as-code such as Terraform<br>
 ⬜ Security Command Center, which recommends architecture changes based only on active threat findings<br>
 ⬜ Recommender, which only surfaces cost and performance recommendations for existing deployed resources</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Gemini Cloud Assist, including its Application Design Center, which uses natural-language input to help design architectures and generate infrastructure-as-code such as Terraform<br>
-Gemini Cloud Assist, including the Application Design Center, provides AI-assisted, natural-language architecture design within the Google Cloud console and can generate infrastructure-as-code such as Terraform, kubectl manifests, or Cloud CLI commands from that design.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Cloud Asset Inventory, which generates architecture diagrams automatically from natural-language prompts</strong> — Cloud Asset Inventory is a metadata inventory and history service for existing resources; it does not generate architecture diagrams from natural-language descriptions.<br>
-● <strong>Security Command Center, which recommends architecture changes based only on active threat findings</strong> — Security Command Center focuses on detecting threats and assessing security posture; it does not provide general-purpose, natural-language architecture design assistance.<br>
-● <strong>Recommender, which only surfaces cost and performance recommendations for existing deployed resources</strong> — Recommender surfaces recommendations (such as rightsizing or IAM cleanup) for resources that already exist; it does not help design a new architecture from a natural-language description or generate Terraform for it.</p>
-<p><small>Source: <a href="https://cloud.google.com/products/gemini/cloud-assist">Gemini Cloud Assist</a></small></p>
-
-</div>
-
 <h3 id="domain-3-ensuring-the-successful-operation-of-a-cloud-solution-30">Domain 3: Ensuring the successful operation of a cloud solution (30%)</h3>
 <hr>
 <h6 id="your-team-runs-a-public-marketing-website-served-from-a-global-external-application-load-balancer-you-want-to-be-notified-by-email-and-sms-within-a-few-minutes-whenever-the-website-becomes-unreachable-from-multiple-locations-around-the-world-what-should-you-do">Your team runs a public marketing website served from a global external Application Load Balancer. You want to be notified by email and SMS within a few minutes whenever the website becomes unreachable from multiple locations around the world. What should you do?</h6>
 <p>⬜ Create a Cloud Function that pings the website every minute and sends an email if the request fails.<br>
-✅ Create a Cloud Monitoring uptime check for the website, then create an alerting policy that triggers on the uptime check and attach email and SMS notification channels.<br>
+⬜ Create a Cloud Monitoring uptime check for the website, then create an alerting policy that triggers on the uptime check and attach email and SMS notification channels.<br>
 ⬜ Enable Cloud Logging on the load balancer and create a log-based metric that counts 5xx responses, with no alerting policy attached.<br>
 ⬜ Configure a Cloud Armor security policy to block traffic when the backend is unhealthy.</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Create a Cloud Monitoring uptime check for the website, then create an alerting policy that triggers on the uptime check and attach email and SMS notification channels.<br>
-Cloud Monitoring uptime checks test endpoint availability from multiple global locations; pairing an uptime check with an alerting policy and notification channels (email, SMS, etc.) is the built-in way to get notified of outages.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Create a Cloud Function that pings the website every minute and sends an email if the request fails.</strong> — This reinvents functionality Cloud Monitoring already provides natively, with more operational overhead and no built-in multi-location checks.<br>
-● <strong>Enable Cloud Logging on the load balancer and create a log-based metric that counts 5xx responses, with no alerting policy attached.</strong> — A log-based metric with no alerting policy attached will never notify anyone, and 5xx counts alone don&rsquo;t capture a fully unreachable endpoint the way an uptime check does.<br>
-● <strong>Configure a Cloud Armor security policy to block traffic when the backend is unhealthy.</strong> — Cloud Armor is a WAF/DDoS protection tool for load balancers; it does not send notifications or monitor availability.</p>
-<p><small>Source: <a href="https://cloud.google.com/monitoring/uptime-checks/uptime-alerting-policies">Create alerting policies for uptime checks</a></small></p>
-
-</div>
-
 <h6 id="your-application-writes-structured-log-entries-to-cloud-logging-that-include-a-severityerror-field-you-want-to-automatically-alert-your-on-call-team-if-error-log-entries-exceed-50-per-minute-for-5-consecutive-minutes-without-changing-the-application-code-what-should-you-do">Your application writes structured log entries to Cloud Logging that include a <code>severity=ERROR</code> field. You want to automatically alert your on-call team if error log entries exceed 50 per minute for 5 consecutive minutes, without changing the application code. What should you do?</h6>
 <p>⬜ Manually search Cloud Logging every hour for error spikes.<br>
-✅ Create a log-based metric that counts matching error log entries, then create a Cloud Monitoring alerting policy that triggers when that metric exceeds the threshold over the specified duration.<br>
+⬜ Create a log-based metric that counts matching error log entries, then create a Cloud Monitoring alerting policy that triggers when that metric exceeds the threshold over the specified duration.<br>
 ⬜ Export logs to BigQuery and run a saved SQL query every night.<br>
 ⬜ Set the log bucket&rsquo;s retention period to 400 days so errors are never lost.</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Create a log-based metric that counts matching error log entries, then create a Cloud Monitoring alerting policy that triggers when that metric exceeds the threshold over the specified duration.<br>
-Cloud Logging supports user-defined log-based metrics derived from a log filter; that metric can then drive a Cloud Monitoring alerting policy with a threshold and duration condition, exactly matching this requirement.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Manually search Cloud Logging every hour for error spikes.</strong> — Manual searches don&rsquo;t scale, aren&rsquo;t real-time, and don&rsquo;t page an on-call team automatically.<br>
-● <strong>Export logs to BigQuery and run a saved SQL query every night.</strong> — Nightly BigQuery queries introduce unacceptable delay for near-real-time on-call alerting and still require custom notification logic to be built.<br>
-● <strong>Set the log bucket&rsquo;s retention period to 400 days so errors are never lost.</strong> — Retention period affects how long logs are stored, not whether or when anyone is alerted about an error spike.</p>
-<p><small>Source: <a href="https://cloud.google.com/logging/docs/logs-based-metrics">Log-based metrics overview</a></small></p>
-
-</div>
-
 <h6 id="you-manage-a-fleet-of-compute-engine-vms-behind-an-external-application-load-balancer-organized-in-a-managed-instance-group-mig-traffic-to-the-application-varies-significantly-throughout-the-day-you-want-the-number-of-vms-to-automatically-increase-during-peak-hours-and-decrease-during-off-peak-hours-based-on-average-cpu-usage-without-manual-intervention-what-should-you-configure">You manage a fleet of Compute Engine VMs behind an external Application Load Balancer, organized in a managed instance group (MIG). Traffic to the application varies significantly throughout the day. You want the number of VMs to automatically increase during peak hours and decrease during off-peak hours based on average CPU usage, without manual intervention. What should you configure?</h6>
 <p>⬜ A single Compute Engine VM with a larger machine type.<br>
-✅ An autoscaling policy on the managed instance group based on average CPU utilization.<br>
+⬜ An autoscaling policy on the managed instance group based on average CPU utilization.<br>
 ⬜ A Cloud Scheduler job that resizes the instance group at fixed times every day.<br>
 ⬜ A health check that restarts VMs whenever CPU usage is high.</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> An autoscaling policy on the managed instance group based on average CPU utilization.<br>
-A MIG autoscaler can automatically add or remove instances to maintain a target average CPU utilization (or other signals), which is the standard mechanism for reactive, elastic capacity.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>A single Compute Engine VM with a larger machine type.</strong> — Vertical scaling to one large VM removes horizontal elasticity and high availability, and resizing a VM typically requires downtime.<br>
-● <strong>A Cloud Scheduler job that resizes the instance group at fixed times every day.</strong> — A fixed daily schedule doesn&rsquo;t respond to the actual variability in traffic described, unlike CPU-based autoscaling which reacts to real demand.<br>
-● <strong>A health check that restarts VMs whenever CPU usage is high.</strong> — Health checks manage instance health and replacement, not capacity scaling.</p>
-<p><small>Source: <a href="https://cloud.google.com/compute/docs/autoscaler">Autoscaling groups of instances</a></small></p>
-
-</div>
-
 <h6 id="your-application-runs-as-a-deployment-on-a-google-kubernetes-engine-gke-standard-cluster-during-a-load-test-pod-cpu-usage-spikes-and-some-pods-stay-in-a-pending-state-because-there-is-not-enough-allocatable-capacity-on-any-existing-node-you-want-the-cluster-to-automatically-add-pod-replicas-when-cpu-usage-is-high-and-automatically-add-nodes-when-there-isnt-enough-room-to-schedule-pods-which-two-gke-features-should-you-enable-choose-two">Your application runs as a Deployment on a Google Kubernetes Engine (GKE) Standard cluster. During a load test, pod CPU usage spikes and some pods stay in a Pending state because there is not enough allocatable capacity on any existing node. You want the cluster to automatically add pod replicas when CPU usage is high and automatically add nodes when there isn&rsquo;t enough room to schedule pods. Which two GKE features should you enable? (Choose two.)</h6>
 <p>⬜ Node auto-repair<br>
-✅ Horizontal Pod Autoscaler (HPA)<br>
+⬜ Horizontal Pod Autoscaler (HPA)<br>
 ⬜ Vertical Pod Autoscaler (VPA) in recommendation-only mode<br>
-✅ Cluster autoscaler</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answers:</strong> Horizontal Pod Autoscaler (HPA); Cluster autoscaler<br>
-HPA automatically increases or decreases the number of pod replicas based on observed CPU (or other) metrics, while the cluster autoscaler automatically resizes node pools by adding or removing nodes based on pending pods and their resource requests — directly addressing both symptoms described.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Node auto-repair</strong> — Node auto-repair replaces unhealthy nodes; it does not add capacity for scheduling or scale pod replica counts.<br>
-● <strong>Vertical Pod Autoscaler (VPA) in recommendation-only mode</strong> — VPA in recommendation-only mode only advises on resource requests; it does not automatically change pod resources or add cluster capacity.</p>
-<p><small>Source: <a href="https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler">About GKE cluster autoscaling</a></small></p>
-
-</div>
-
+⬜ Cluster autoscaler</p>
 <h6 id="you-are-rolling-out-a-new-version-of-an-app-engine-standard-environment-service-and-want-to-gradually-shift-a-percentage-of-traffic-to-the-new-version-while-ensuring-that-any-given-end-users-browser-session-is-consistently-routed-to-the-same-version-for-the-whole-test-to-avoid-a-confusing-mixed-experience-which-traffic-splitting-method-should-you-use">You are rolling out a new version of an App Engine standard environment service and want to gradually shift a percentage of traffic to the new version while ensuring that any given end user&rsquo;s browser session is consistently routed to the same version for the whole test, to avoid a confusing mixed experience. Which traffic-splitting method should you use?</h6>
 <p>⬜ IP address–based splitting<br>
-✅ Cookie-based splitting<br>
+⬜ Cookie-based splitting<br>
 ⬜ Deploying the new version with no traffic split, then switching 100% at once<br>
 ⬜ Deleting the old version so only the new version can serve traffic</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Cookie-based splitting<br>
-Cookie-based traffic splitting sets a cookie on the user&rsquo;s browser after the first request so subsequent requests from that browser are consistently routed to the same version — ideal for A/B testing or gradual rollouts where session consistency matters.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>IP address–based splitting</strong> — IP-based splitting hashes the client&rsquo;s IP address; it is less precise because many users share IPs behind NATs or corporate proxies, and it doesn&rsquo;t guarantee the same consistency cookie-based splitting does.<br>
-● <strong>Deploying the new version with no traffic split, then switching 100% at once</strong> — An all-at-once cutover is not a gradual rollout and provides no way to test with partial traffic first.<br>
-● <strong>Deleting the old version so only the new version can serve traffic</strong> — Deleting the old version removes any ability to split traffic or roll back, sending 100% of traffic immediately to the untested new version.</p>
-<p><small>Source: <a href="https://cloud.google.com/appengine/docs/standard/splitting-traffic">Splitting traffic</a></small></p>
-
-</div>
-
 <h6 id="you-deployed-a-new-revision-of-a-cloud-run-service-before-sending-it-all-production-traffic-you-want-to-send-only-10-of-traffic-to-the-new-revision-while-the-remaining-90-continues-to-go-to-the-last-known-good-revision-so-you-can-monitor-error-rates-before-a-full-rollout-what-should-you-do">You deployed a new revision of a Cloud Run service. Before sending it all production traffic, you want to send only 10% of traffic to the new revision while the remaining 90% continues to go to the last known-good revision, so you can monitor error rates before a full rollout. What should you do?</h6>
 <p>⬜ Delete the old revision so only the new revision can receive traffic.<br>
-✅ Use <code>gcloud run services update-traffic</code> (or the console Traffic tab) to split traffic between the new and previous revisions by percentage.<br>
+⬜ Use <code>gcloud run services update-traffic</code> (or the console Traffic tab) to split traffic between the new and previous revisions by percentage.<br>
 ⬜ Create a second Cloud Run service and manually load-balance between them using DNS round robin.<br>
 ⬜ Set the new revision&rsquo;s minimum instance count to 10% of the old revision&rsquo;s maximum instance count.</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Use <code>gcloud run services update-traffic</code> (or the console Traffic tab) to split traffic between the new and previous revisions by percentage.<br>
-Cloud Run natively supports splitting traffic across multiple revisions of the same service by percentage, enabling canary-style gradual rollouts before shifting 100% of traffic to a new revision.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Delete the old revision so only the new revision can receive traffic.</strong> — Deleting the old revision removes your fallback and sends 100% of traffic to the new, unproven revision instead of just 10%.<br>
-● <strong>Create a second Cloud Run service and manually load-balance between them using DNS round robin.</strong> — Cloud Run already provides native revision-level traffic splitting; standing up a second service with DNS-based balancing is unnecessary and loses Cloud Run&rsquo;s built-in rollback and tagging features.<br>
-● <strong>Set the new revision&rsquo;s minimum instance count to 10% of the old revision&rsquo;s maximum instance count.</strong> — Instance counts control scaling capacity, not the percentage of traffic routed to a given revision.</p>
-<p><small>Source: <a href="https://cloud.google.com/run/docs/rollouts-rollbacks-traffic-migration">Rollouts, gradual rollouts, and traffic migration</a></small></p>
-
-</div>
-
 <h6 id="your-company-stores-application-log-files-in-a-cloud-storage-bucket-logs-are-frequently-accessed-for-the-first-30-days-occasionally-accessed-for-the-next-60-days-rarely-needed-after-that-and-must-be-deleted-entirely-once-they-are-365-days-old-for-compliance-reasons-you-want-this-handled-automatically-with-no-application-changes-what-should-you-do">Your company stores application log files in a Cloud Storage bucket. Logs are frequently accessed for the first 30 days, occasionally accessed for the next 60 days, rarely needed after that, and must be deleted entirely once they are 365 days old for compliance reasons. You want this handled automatically with no application changes. What should you do?</h6>
 <p>⬜ Manually move objects between buckets using a cron job on a Compute Engine VM.<br>
-✅ Configure an Object Lifecycle Management rule that transitions the storage class to Nearline after 30 days, to Coldline after 90 days, and deletes objects after 365 days.<br>
+⬜ Configure an Object Lifecycle Management rule that transitions the storage class to Nearline after 30 days, to Coldline after 90 days, and deletes objects after 365 days.<br>
 ⬜ Enable Object Versioning on the bucket.<br>
 ⬜ Set the bucket&rsquo;s default storage class to Archive so all new objects immediately use the cheapest tier.</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Configure an Object Lifecycle Management rule that transitions the storage class to Nearline after 30 days, to Coldline after 90 days, and deletes objects after 365 days.<br>
-Object Lifecycle Management (OLM) lets you define rules with Age conditions that automatically trigger <code>SetStorageClass</code> and <code>Delete</code> actions on objects, matching the tiered retention and expiration requirement exactly.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Manually move objects between buckets using a cron job on a Compute Engine VM.</strong> — This reinvents native functionality that Cloud Storage already provides, adding unnecessary operational overhead and failure risk.<br>
-● <strong>Enable Object Versioning on the bucket.</strong> — Object Versioning preserves prior versions of overwritten or deleted objects; it does not change an object&rsquo;s storage class over time or expire objects on a schedule.<br>
-● <strong>Set the bucket&rsquo;s default storage class to Archive so all new objects immediately use the cheapest tier.</strong> — Defaulting to Archive class would make the first 30 days of frequently accessed logs expensive to retrieve, and doesn&rsquo;t implement the tiered transition/expiration policy described.</p>
-<p><small>Source: <a href="https://cloud.google.com/storage/docs/lifecycle-configurations">Configuration examples for Object Lifecycle Management</a></small></p>
-
-</div>
-
 <h6 id="your-production-cloud-sql-for-postgresql-instance-must-remain-available-with-minimal-downtime-if-the-primary-zone-in-a-region-experiences-an-outage-with-failover-to-a-standby-happening-automatically-what-should-you-do">Your production Cloud SQL for PostgreSQL instance must remain available with minimal downtime if the primary zone in a region experiences an outage, with failover to a standby happening automatically. What should you do?</h6>
 <p>⬜ Create a read replica in a different region and manually promote it if the primary fails.<br>
-✅ Enable the high availability (HA) configuration for the instance, which provisions a standby instance in a different zone with synchronous replication and automatic failover.<br>
+⬜ Enable the high availability (HA) configuration for the instance, which provisions a standby instance in a different zone with synchronous replication and automatic failover.<br>
 ⬜ Take manual on-demand backups every hour.<br>
 ⬜ Increase the instance&rsquo;s machine type to have more vCPUs.</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Enable the high availability (HA) configuration for the instance, which provisions a standby instance in a different zone with synchronous replication and automatic failover.<br>
-Cloud SQL&rsquo;s HA configuration creates a standby instance in a different zone of the same region, keeps it synchronized using regional persistent disks, and automatically fails over if the primary becomes unavailable.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Create a read replica in a different region and manually promote it if the primary fails.</strong> — Read replicas support manual promotion, not automatic failover, and are typically used for read scaling or cross-region disaster recovery rather than automated same-region HA.<br>
-● <strong>Take manual on-demand backups every hour.</strong> — Backups protect against data loss but do not provide automatic failover or reduce downtime during a zonal outage.<br>
-● <strong>Increase the instance&rsquo;s machine type to have more vCPUs.</strong> — A larger machine type improves performance, not availability during an outage.</p>
-<p><small>Source: <a href="https://cloud.google.com/sql/docs/postgres/high-availability">About high availability | Cloud SQL for PostgreSQL</a></small></p>
-
-</div>
-
 <h6 id="your-read-heavy-reporting-application-is-putting-sustained-load-on-your-cloud-sql-for-mysql-primary-instance-causing-degraded-write-performance-you-want-to-offload-reporting-queries-without-impacting-the-primarys-write-throughput-and-without-requiring-automatic-failover-behavior-what-should-you-do">Your read-heavy reporting application is putting sustained load on your Cloud SQL for MySQL primary instance, causing degraded write performance. You want to offload reporting queries without impacting the primary&rsquo;s write throughput and without requiring automatic failover behavior. What should you do?</h6>
 <p>⬜ Enable the high availability configuration on the primary instance.<br>
-✅ Create one or more read replicas and point the reporting application at the replica endpoint(s).<br>
+⬜ Create one or more read replicas and point the reporting application at the replica endpoint(s).<br>
 ⬜ Increase the storage size of the primary instance.<br>
 ⬜ Add more application server VMs behind a load balancer.</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Create one or more read replicas and point the reporting application at the replica endpoint(s).<br>
-Cloud SQL read replicas are read-only copies kept in sync through replication and can serve read traffic such as reporting queries, offloading the primary instance without affecting its write path.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Enable the high availability configuration on the primary instance.</strong> — HA provisions a standby for automatic failover during outages; that standby is not intended to serve regular application read traffic the way a replica is.<br>
-● <strong>Increase the storage size of the primary instance.</strong> — Increasing storage size addresses capacity, not query contention on the primary.<br>
-● <strong>Add more application server VMs behind a load balancer.</strong> — Adding more application servers increases the number of clients querying the same primary instance; it does not offload database read load.</p>
-<p><small>Source: <a href="https://cloud.google.com/sql/docs/mysql/replication">About replication in Cloud SQL for MySQL</a></small></p>
-
-</div>
-
 <h6 id="you-need-a-recurring-fully-managed-way-to-back-up-all-documents-in-your-firestore-database-to-cloud-storage-every-night-without-writing-custom-export-code-what-should-you-use">You need a recurring, fully managed way to back up all documents in your Firestore database to Cloud Storage every night without writing custom export code. What should you use?</h6>
 <p>⬜ Enable Cloud Storage Object Versioning on a bucket linked to Firestore.<br>
-✅ Use Cloud Scheduler together with the managed export feature (<code>gcloud firestore export</code>) to export data to a Cloud Storage bucket on a schedule.<br>
+⬜ Use Cloud Scheduler together with the managed export feature (<code>gcloud firestore export</code>) to export data to a Cloud Storage bucket on a schedule.<br>
 ⬜ Manually download each document using the Firestore console every day.<br>
 ⬜ Enable point-in-time recovery, which fully replaces the need for any export.</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Use Cloud Scheduler together with the managed export feature (<code>gcloud firestore export</code>) to export data to a Cloud Storage bucket on a schedule.<br>
-Firestore&rsquo;s managed export/import feature, invoked via <code>gcloud firestore export</code> and scheduled with Cloud Scheduler (plus a trigger such as Cloud Functions), writes a consistent backup of your database to a Cloud Storage bucket — the supported way to automate recurring backups.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Enable Cloud Storage Object Versioning on a bucket linked to Firestore.</strong> — Object Versioning applies to objects already stored in a Cloud Storage bucket; it has no relationship to exporting Firestore data.<br>
-● <strong>Manually download each document using the Firestore console every day.</strong> — Manual console downloads do not scale and are not a fully managed, recurring process.<br>
-● <strong>Enable point-in-time recovery, which fully replaces the need for any export.</strong> — Point-in-time recovery lets you recover to a moment within a limited retention window; it is a different capability from a scheduled export and doesn&rsquo;t substitute for exporting to Cloud Storage for long-term or cross-project archival.</p>
-<p><small>Source: <a href="https://cloud.google.com/firestore/native/docs/solutions/schedule-export">Schedule data exports | Firestore in Native mode</a></small></p>
-
-</div>
-
 <h6 id="you-are-deploying-a-custom-tcp-application-not-http-on-compute-engine-and-need-the-backend-vms-to-see-the-original-clients-source-ip-address-directly-without-relying-on-headers-like-x-forwarded-for-which-type-of-google-cloud-load-balancer-should-you-use">You are deploying a custom TCP application (not HTTP) on Compute Engine and need the backend VMs to see the original client&rsquo;s source IP address directly, without relying on headers like X-Forwarded-For. Which type of Google Cloud load balancer should you use?</h6>
 <p>⬜ External Application Load Balancer (global HTTP(S))<br>
-✅ External passthrough Network Load Balancer<br>
+⬜ External passthrough Network Load Balancer<br>
 ⬜ Cloud CDN<br>
 ⬜ Cloud Armor</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> External passthrough Network Load Balancer<br>
-The external passthrough Network Load Balancer is a pass-through, regional Layer 4 load balancer: it does not proxy or terminate connections, so backend VMs see the client&rsquo;s actual source IP address, and it supports arbitrary TCP/UDP traffic, not just HTTP(S).</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>External Application Load Balancer (global HTTP(S))</strong> — The external Application Load Balancer is a reverse proxy for HTTP(S) traffic; backends see the load balancer&rsquo;s IP and must read the client IP from the X-Forwarded-For header instead.<br>
-● <strong>Cloud CDN</strong> — Cloud CDN caches HTTP(S) content at the edge; it is not a load balancer type and doesn&rsquo;t apply to a custom TCP application.<br>
-● <strong>Cloud Armor</strong> — Cloud Armor provides WAF/DDoS protection for proxy-based load balancers; it does not preserve client source IPs at the backend on its own.</p>
-<p><small>Source: <a href="https://cloud.google.com/load-balancing/docs/passthrough-network-load-balancer">Passthrough Network Load Balancer overview</a></small></p>
-
-</div>
-
 <h6 id="your-organization-runs-internal-services-on-vm-instances-inside-a-vpc-network-and-wants-those-vms-to-resolve-internal-hostnames-like-dbinternalexamplecom-to-private-ip-addresses-without-exposing-these-dns-records-to-the-public-internet-what-should-you-configure">Your organization runs internal services on VM instances inside a VPC network and wants those VMs to resolve internal hostnames like <code>db.internal.example.com</code> to private IP addresses, without exposing these DNS records to the public internet. What should you configure?</h6>
 <p>⬜ A Cloud DNS public zone for <code>example.com</code>.<br>
-✅ A Cloud DNS private zone visible only within the specified VPC network(s).<br>
+⬜ A Cloud DNS private zone visible only within the specified VPC network(s).<br>
 ⬜ A public A record pointing to the VM&rsquo;s external IP address.<br>
 ⬜ A Cloud NAT gateway.</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> A Cloud DNS private zone visible only within the specified VPC network(s).<br>
-A Cloud DNS private zone is resolvable only from the VPC networks you authorize, letting you serve internal-only DNS names — such as internal hostnames mapped to private IPs — without publishing them externally.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>A Cloud DNS public zone for <code>example.com</code>.</strong> — A public zone publishes records to the internet-facing DNS system, the opposite of what&rsquo;s required here.<br>
-● <strong>A public A record pointing to the VM&rsquo;s external IP address.</strong> — A public A record to an external IP both exposes the record publicly and requires the VM to have an external IP, neither of which is desired.<br>
-● <strong>A Cloud NAT gateway.</strong> — Cloud NAT provides outbound internet connectivity for instances without external IPs; it has no role in internal name resolution.</p>
-<p><small>Source: <a href="https://cloud.google.com/dns/docs/zones/zones-overview">DNS zones overview</a></small></p>
-
-</div>
-
 <h6 id="you-create-a-new-custom-mode-vpc-network-named-prod-vpc-and-launch-two-compute-engine-vms-into-it-each-in-a-different-subnet-when-you-try-to-ping-one-vm-from-the-other-using-their-internal-ip-addresses-the-ping-fails-what-is-the-most-likely-cause">You create a new custom-mode VPC network named <code>prod-vpc</code> and launch two Compute Engine VMs into it, each in a different subnet. When you try to ping one VM from the other using their internal IP addresses, the ping fails. What is the most likely cause?</h6>
 <p>⬜ Custom-mode VPC networks do not support internal VM-to-VM communication under any configuration.<br>
-✅ A custom-mode VPC network does not automatically include a rule allowing internal traffic between subnets; you must create an explicit ingress firewall rule to allow it.<br>
+⬜ A custom-mode VPC network does not automatically include a rule allowing internal traffic between subnets; you must create an explicit ingress firewall rule to allow it.<br>
 ⬜ The VMs are using ephemeral external IP addresses, which blocks all internal traffic.<br>
 ⬜ ICMP (ping) is permanently blocked on all Google Cloud networks by default and cannot be enabled.</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> A custom-mode VPC network does not automatically include a rule allowing internal traffic between subnets; you must create an explicit ingress firewall rule to allow it.<br>
-Unlike the auto mode default network (which comes with a preconfigured &ldquo;allow internal&rdquo; rule), a custom-mode VPC network is created with no implied allow-internal ingress rule — only the implied allow-egress and implied deny-ingress rules exist by default — so the administrator must explicitly create firewall rules permitting VM-to-VM traffic.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Custom-mode VPC networks do not support internal VM-to-VM communication under any configuration.</strong> — Custom-mode VPCs fully support internal communication once appropriate firewall rules exist; the network mode itself is not the limiter.<br>
-● <strong>The VMs are using ephemeral external IP addresses, which blocks all internal traffic.</strong> — External IP assignment status has no bearing on whether internal-IP-to-internal-IP traffic is allowed; that is governed by firewall rules.<br>
-● <strong>ICMP (ping) is permanently blocked on all Google Cloud networks by default and cannot be enabled.</strong> — ICMP is not blocked platform-wide; whether it&rsquo;s allowed depends entirely on the firewall rules configured for the network.</p>
-<p><small>Source: <a href="https://cloud.google.com/firewall/docs/firewalls">VPC firewall rules</a></small></p>
-
-</div>
-
 <h6 id="an-operations-engineer-wants-to-use-cloud-deployment-manager-to-define-and-deploy-new-google-cloud-infrastructure-for-a-project-starting-today-as-of-2026-what-should-you-tell-them">An operations engineer wants to use Cloud Deployment Manager to define and deploy new Google Cloud infrastructure for a project starting today. As of 2026, what should you tell them?</h6>
 <p>⬜ Deployment Manager is the current recommended tool for all new infrastructure-as-code projects on Google Cloud.<br>
-✅ Deployment Manager&rsquo;s standard support has already ended (April 1, 2026), with a full shutdown planned for June 30, 2027; Google recommends migrating to Infrastructure Manager (which uses Terraform) or another IaC tool such as Terraform directly.<br>
+⬜ Deployment Manager&rsquo;s standard support has already ended (April 1, 2026), with a full shutdown planned for June 30, 2027; Google recommends migrating to Infrastructure Manager (which uses Terraform) or another IaC tool such as Terraform directly.<br>
 ⬜ Deployment Manager was shut off completely and is no longer usable as of January 2026.<br>
 ⬜ Deployment Manager only supports deploying Compute Engine resources, so it must be paired with gcloud for everything else.</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Deployment Manager&rsquo;s standard support has already ended (April 1, 2026), with a full shutdown planned for June 30, 2027; Google recommends migrating to Infrastructure Manager (which uses Terraform) or another IaC tool such as Terraform directly.<br>
-Google has published a formal deprecation timeline for Cloud Deployment Manager: standard support ended April 1, 2026, extended support runs through March 31, 2027, and the service fully shuts down June 30, 2027. Google recommends migrating configurations to Infrastructure Manager (Terraform-based), using the DM Convert tool, or adopting another IaC technology such as Terraform directly.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Deployment Manager is the current recommended tool for all new infrastructure-as-code projects on Google Cloud.</strong> — It is explicitly deprecated with a published shutdown timeline, not the current recommendation for new infrastructure projects.<br>
-● <strong>Deployment Manager was shut off completely and is no longer usable as of January 2026.</strong> — It has not been shut off; it remains usable through extended support until March 31, 2027, and fully until June 30, 2027.<br>
-● <strong>Deployment Manager only supports deploying Compute Engine resources, so it must be paired with gcloud for everything else.</strong> — Deployment Manager supports deploying most Google Cloud resource types through its declarative configurations and templates, not only Compute Engine.</p>
-<p><small>Source: <a href="https://cloud.google.com/deployment-manager/docs/deprecations">Deployment Manager deprecation</a></small></p>
-
-</div>
-
 <h6 id="your-team-manages-google-cloud-infrastructure-using-terraform-before-applying-any-change-to-a-shared-production-environment-you-want-to-1-see-exactly-what-resources-will-be-created-changed-or-destroyed-and-2-ensure-the-change-is-reviewed-by-a-teammate-before-it-is-applied-which-two-practices-should-you-follow-choose-two">Your team manages Google Cloud infrastructure using Terraform. Before applying any change to a shared production environment, you want to (1) see exactly what resources will be created, changed, or destroyed, and (2) ensure the change is reviewed by a teammate before it is applied. Which two practices should you follow? (Choose two.)</h6>
-<p>✅ Run <code>terraform plan</code> and review its output (or a saved plan file) before applying, requiring that output to be reviewed/approved (e.g., in a pull request or CI pipeline) prior to <code>terraform apply</code>.<br>
+<p>⬜ Run <code>terraform plan</code> and review its output (or a saved plan file) before applying, requiring that output to be reviewed/approved (e.g., in a pull request or CI pipeline) prior to <code>terraform apply</code>.<br>
 ⬜ Skip <code>terraform plan</code> entirely and run <code>terraform apply -auto-approve</code> to save time.<br>
-✅ Store Terraform state remotely (e.g., in a Cloud Storage backend with locking) so the team works from a single source of truth and avoids concurrent conflicting applies.<br>
+⬜ Store Terraform state remotely (e.g., in a Cloud Storage backend with locking) so the team works from a single source of truth and avoids concurrent conflicting applies.<br>
 ⬜ Manually edit resources in the Cloud Console after every <code>terraform apply</code> to fine-tune them.</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answers:</strong> Run <code>terraform plan</code> and review its output (or a saved plan file) before applying, requiring that output to be reviewed/approved (e.g., in a pull request or CI pipeline) prior to <code>terraform apply</code>.; Store Terraform state remotely (e.g., in a Cloud Storage backend with locking) so the team works from a single source of truth and avoids concurrent conflicting applies.<br>
-<code>terraform plan</code> shows the proposed diff (create/change/destroy) so it can be reviewed before any change is made, and a remote backend with state locking (such as a Cloud Storage bucket) keeps a single, consistent state file and prevents simultaneous, conflicting applies by different team members.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Skip <code>terraform plan</code> entirely and run <code>terraform apply -auto-approve</code> to save time.</strong> — <code>-auto-approve</code> skips the review step entirely, which is the opposite of the stated goal of reviewing the diff before applying.<br>
-● <strong>Manually edit resources in the Cloud Console after every <code>terraform apply</code> to fine-tune them.</strong> — Manual console edits after <code>terraform apply</code> cause configuration drift between real infrastructure and the Terraform state/config, undermining IaC as the single source of truth.</p>
-<p><small>Source: <a href="https://cloud.google.com/docs/terraform/resource-management/store-state">Store Terraform state in a Cloud Storage bucket</a></small></p>
-
-</div>
-
 <h3 id="domain-4-configuring-access-and-security-20">Domain 4: Configuring access and security (20%)</h3>
 <hr>
 <h6 id="your-operations-team-needs-the-ability-to-start-stop-and-reset-compute-engine-vm-instances-as-part-of-routine-maintenance-but-they-should-not-be-able-to-create-new-instances-delete-instances-or-modify-firewall-rules-granting-the-editor-primitive-role-would-give-far-more-access-than-needed-what-is-the-best-approach">Your operations team needs the ability to start, stop, and reset Compute Engine VM instances as part of routine maintenance, but they should not be able to create new instances, delete instances, or modify firewall rules. Granting the Editor primitive role would give far more access than needed. What is the best approach?</h6>
 <p>⬜ Grant the Editor primitive role since it is the simplest option.<br>
 ⬜ Grant the predefined <code>roles/compute.instanceAdmin.v1</code> role, since it includes exactly start/stop/reset and nothing else.<br>
-✅ Create a custom IAM role containing only the specific permissions needed (e.g., <code>compute.instances.start</code>, <code>compute.instances.stop</code>, <code>compute.instances.reset</code>, <code>compute.instances.get</code>, <code>compute.instances.list</code>) and grant that role to the team.<br>
+⬜ Create a custom IAM role containing only the specific permissions needed (e.g., <code>compute.instances.start</code>, <code>compute.instances.stop</code>, <code>compute.instances.reset</code>, <code>compute.instances.get</code>, <code>compute.instances.list</code>) and grant that role to the team.<br>
 ⬜ Grant the Viewer primitive role and ask the team to request temporary Owner access whenever maintenance is needed.</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Create a custom IAM role containing only the specific permissions needed (e.g., <code>compute.instances.start</code>, <code>compute.instances.stop</code>, <code>compute.instances.reset</code>, <code>compute.instances.get</code>, <code>compute.instances.list</code>) and grant that role to the team.<br>
-When no predefined role matches the exact set of permissions required, Google recommends creating a custom role scoped to only the needed permissions, following the principle of least privilege.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Grant the Editor primitive role since it is the simplest option.</strong> — Editor is a broad primitive role granting create, modify, and delete permissions across most services, far exceeding what&rsquo;s needed and violating least privilege.<br>
-● <strong>Grant the predefined <code>roles/compute.instanceAdmin.v1</code> role, since it includes exactly start/stop/reset and nothing else.</strong> — <code>roles/compute.instanceAdmin.v1</code> grants full lifecycle control of instances, including create and delete, plus access to related resources like disks — broader than just start/stop/reset.<br>
-● <strong>Grant the Viewer primitive role and ask the team to request temporary Owner access whenever maintenance is needed.</strong> — Viewer is read-only and cannot start or stop instances; routinely elevating to Owner for maintenance is excessive access and poor security practice.</p>
-<p><small>Source: <a href="https://cloud.google.com/iam/docs/choose-role-type">Choose which type of role to use</a></small></p>
-
-</div>
-
 <h6 id="a-contractor-needs-temporary-access-to-view-logs-in-a-project-but-only-for-the-next-30-days-after-which-the-access-should-automatically-expire-without-anyone-needing-to-remember-to-revoke-it-what-should-you-do">A contractor needs temporary access to view logs in a project, but only for the next 30 days, after which the access should automatically expire without anyone needing to remember to revoke it. What should you do?</h6>
 <p>⬜ Grant the <code>roles/logging.viewer</code> role and set a calendar reminder to manually remove it in 30 days.<br>
-✅ Grant the <code>roles/logging.viewer</code> role with an IAM Condition that expires the binding on a specific date 30 days from now.<br>
+⬜ Grant the <code>roles/logging.viewer</code> role with an IAM Condition that expires the binding on a specific date 30 days from now.<br>
 ⬜ Create a new project just for the contractor and delete the entire project after 30 days.<br>
 ⬜ Grant the Owner role and tell the contractor to self-revoke access after 30 days.</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Grant the <code>roles/logging.viewer</code> role with an IAM Condition that expires the binding on a specific date 30 days from now.<br>
-IAM Conditions let you attach a CEL-based condition, including a date/time expression, to a role binding so that access automatically stops applying after a specified date, with no manual follow-up required.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Grant the <code>roles/logging.viewer</code> role and set a calendar reminder to manually remove it in 30 days.</strong> — This relies on a manual process that can be forgotten or missed, defeating the goal of automatic expiration.<br>
-● <strong>Create a new project just for the contractor and delete the entire project after 30 days.</strong> — Creating and deleting an entire project is unnecessary overhead just to time-box access to logs.<br>
-● <strong>Grant the Owner role and tell the contractor to self-revoke access after 30 days.</strong> — Granting Owner is excessive privilege for viewing logs, and relying on the contractor to self-revoke is not a reliable or auditable control.</p>
-<p><small>Source: <a href="https://cloud.google.com/iam/docs/conditions-overview">Overview of IAM Conditions</a></small></p>
-
-</div>
-
 <h6 id="your-organization-has-the-resource-hierarchy-organization--folder-finance--project-billing-prod-a-user-is-granted-the-rolesviewer-role-at-the-organization-level-a-project-administrator-on-billing-prod-wants-to-prevent-that-same-user-from-viewing-resources-in-just-that-one-project-while-still-allowing-them-to-view-resources-in-every-other-project-can-this-be-done-by-editing-only-the-iam-allow-policy-on-the-billing-prod-project">Your organization has the resource hierarchy Organization &gt; Folder &ldquo;Finance&rdquo; &gt; Project &ldquo;billing-prod&rdquo;. A user is granted the <code>roles/viewer</code> role at the Organization level. A project administrator on &ldquo;billing-prod&rdquo; wants to prevent that same user from viewing resources in just that one project, while still allowing them to view resources in every other project. Can this be done by editing only the IAM allow policy on the &ldquo;billing-prod&rdquo; project?</h6>
 <p>⬜ Yes, adding a &ldquo;deny Viewer&rdquo; binding on the project&rsquo;s allow policy will override the inherited grant for that project only.<br>
-✅ No; IAM allow policies are inherited down the resource hierarchy and are additive, so removing (or never adding) project-level access is not sufficient — the org-level grant still applies to that project.<br>
+⬜ No; IAM allow policies are inherited down the resource hierarchy and are additive, so removing (or never adding) project-level access is not sufficient — the org-level grant still applies to that project.<br>
 ⬜ Yes, because project-level policies always take precedence over organization-level policies.<br>
 ⬜ No, because roles granted at the organization level can never be viewed or audited from the project level.</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> No; IAM allow policies are inherited down the resource hierarchy and are additive, so removing (or never adding) project-level access is not sufficient — the org-level grant still applies to that project.<br>
-Google Cloud IAM allow policies are inherited down the resource hierarchy, and the effective policy on a resource is the union of the policy set directly on it plus all policies inherited from ancestors; a lower-level allow policy cannot revoke a permission granted at a higher level (a separate IAM Deny policy would be needed for that).</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Yes, adding a &ldquo;deny Viewer&rdquo; binding on the project&rsquo;s allow policy will override the inherited grant for that project only.</strong> — Standard IAM allow policies have no &ldquo;deny&rdquo; binding; permissions are only additive at the resource level.<br>
-● <strong>Yes, because project-level policies always take precedence over organization-level policies.</strong> — Project-level policies do not override or replace inherited organization-level grants; they combine with them.<br>
-● <strong>No, because roles granted at the organization level can never be viewed or audited from the project level.</strong> — Organization-level grants remain visible and auditable from lower levels using IAM tools such as Policy Analyzer; this statement is simply false.</p>
-<p><small>Source: <a href="https://cloud.google.com/resource-manager/docs/access-control-org">Access control for organization resources with IAM</a></small></p>
-
-</div>
-
 <h6 id="your-security-team-is-reviewing-how-application-code-authenticates-to-google-cloud-apis-and-wants-to-reduce-the-risk-associated-with-long-lived-service-account-json-keys-which-two-practices-should-you-recommend-choose-two">Your security team is reviewing how application code authenticates to Google Cloud APIs and wants to reduce the risk associated with long-lived service account JSON keys. Which two practices should you recommend? (Choose two.)</h6>
 <p>⬜ Download a new service account key and hardcode it directly into your application&rsquo;s source code repository for convenience.<br>
-✅ Where possible, avoid creating downloadable service account keys altogether, using service account impersonation (short-lived credentials) or attached service accounts (e.g., Workload Identity Federation for GKE, Compute Engine attached accounts) instead.<br>
+⬜ Where possible, avoid creating downloadable service account keys altogether, using service account impersonation (short-lived credentials) or attached service accounts (e.g., Workload Identity Federation for GKE, Compute Engine attached accounts) instead.<br>
 ⬜ Never rotate service account keys once created, since rotation increases risk.<br>
-✅ If a downloadable key is truly unavoidable, restrict its permissions to least privilege, store it securely (e.g., in Secret Manager), and rotate or delete it regularly.</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answers:</strong> Where possible, avoid creating downloadable service account keys altogether, using service account impersonation (short-lived credentials) or attached service accounts (e.g., Workload Identity Federation for GKE, Compute Engine attached accounts) instead.; If a downloadable key is truly unavoidable, restrict its permissions to least privilege, store it securely (e.g., in Secret Manager), and rotate or delete it regularly.<br>
-Google&rsquo;s guidance is to prefer keyless authentication mechanisms (impersonation, attached service accounts, Workload Identity Federation) whenever possible, and when a key truly must exist, to scope it tightly, store it securely, and rotate it regularly — minimizing the blast radius of any long-lived credential.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Download a new service account key and hardcode it directly into your application&rsquo;s source code repository for convenience.</strong> — Hardcoding keys in source control is a common cause of credential leaks and is explicitly discouraged.<br>
-● <strong>Never rotate service account keys once created, since rotation increases risk.</strong> — Never rotating a long-lived key increases risk over time; Google recommends periodic rotation (or better, eliminating keys entirely) for any key that must exist.</p>
-<p><small>Source: <a href="https://cloud.google.com/iam/docs/best-practices-for-managing-service-account-keys">Best practices for managing service account keys</a></small></p>
-
-</div>
-
+⬜ If a downloadable key is truly unavoidable, restrict its permissions to least privilege, store it securely (e.g., in Secret Manager), and rotate or delete it regularly.</p>
 <h6 id="pods-running-in-your-gke-cluster-need-to-call-google-cloud-apis-eg-cloud-storage-bigquery-using-the-permissions-of-a-google-service-account-your-security-policy-prohibits-exporting-and-storing-service-account-key-files-anywhere-in-the-cluster-what-should-you-use">Pods running in your GKE cluster need to call Google Cloud APIs (e.g., Cloud Storage, BigQuery) using the permissions of a Google service account. Your security policy prohibits exporting and storing service account key files anywhere in the cluster. What should you use?</h6>
 <p>⬜ Mount a downloaded service account JSON key as a Kubernetes Secret and reference it from each pod.<br>
-✅ Enable Workload Identity Federation for GKE, which lets Kubernetes service accounts impersonate Google service accounts without needing an exported key.<br>
+⬜ Enable Workload Identity Federation for GKE, which lets Kubernetes service accounts impersonate Google service accounts without needing an exported key.<br>
 ⬜ Disable IAM entirely for the cluster&rsquo;s project.<br>
 ⬜ Grant the GKE nodes&rsquo; default service account the Owner role at the project level.</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Enable Workload Identity Federation for GKE, which lets Kubernetes service accounts impersonate Google service accounts without needing an exported key.<br>
-Workload Identity Federation for GKE lets a Kubernetes service account authenticate as, and inherit the IAM permissions of, a Google service account using short-lived, automatically rotated credentials, with no service account key files needed anywhere in the cluster.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Mount a downloaded service account JSON key as a Kubernetes Secret and reference it from each pod.</strong> — This is exactly the key-file approach the security policy prohibits, and Kubernetes Secrets holding raw keys are a common exfiltration risk.<br>
-● <strong>Disable IAM entirely for the cluster&rsquo;s project.</strong> — Disabling IAM is not a meaningful action and would remove all access control rather than solving the authentication problem.<br>
-● <strong>Grant the GKE nodes&rsquo; default service account the Owner role at the project level.</strong> — Granting Owner to the node service account is unrelated to the authentication mechanism and severely violates least privilege, since every pod on every node would effectively gain project-wide Owner access.</p>
-<p><small>Source: <a href="https://cloud.google.com/kubernetes-engine/docs/concepts/workload-identity">About Workload Identity Federation for GKE</a></small></p>
-
-</div>
-
 <h6 id="your-compliance-team-wants-all-access-to-a-sensitive-cloud-storage-bucket-to-be-governed-solely-through-iam-policies-with-no-possibility-of-a-per-object-acl-granting-access-that-bypasses-iam-review-what-should-you-do">Your compliance team wants all access to a sensitive Cloud Storage bucket to be governed solely through IAM policies, with no possibility of a per-object ACL granting access that bypasses IAM review. What should you do?</h6>
 <p>⬜ Grant <code>roles/storage.objectViewer</code> at the project level and simply stop creating new ACLs going forward, leaving existing per-object ACLs untouched.<br>
-✅ Enable uniform bucket-level access on the bucket, which disables ACLs and makes IAM the sole access control mechanism for that bucket and its objects.<br>
+⬜ Enable uniform bucket-level access on the bucket, which disables ACLs and makes IAM the sole access control mechanism for that bucket and its objects.<br>
 ⬜ Delete every object and re-upload it without specifying an ACL.<br>
 ⬜ Set the bucket&rsquo;s default object ACL to <code>private</code> for newly created objects only.</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Enable uniform bucket-level access on the bucket, which disables ACLs and makes IAM the sole access control mechanism for that bucket and its objects.<br>
-Uniform bucket-level access disables fine-grained ACLs (at both the bucket and object level) for a bucket, so all access is controlled exclusively by Cloud IAM — satisfying the requirement that no ACL can bypass IAM review.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Grant <code>roles/storage.objectViewer</code> at the project level and simply stop creating new ACLs going forward, leaving existing per-object ACLs untouched.</strong> — Leaving existing ACLs untouched means any prior per-object ACL grant can still take effect, since ACLs and IAM are both evaluated together in fine-grained access mode.<br>
-● <strong>Delete every object and re-upload it without specifying an ACL.</strong> — Re-uploading objects doesn&rsquo;t disable ACL evaluation for the bucket, and newly created objects could still receive ACLs later.<br>
-● <strong>Set the bucket&rsquo;s default object ACL to <code>private</code> for newly created objects only.</strong> — This only changes the default ACL applied to newly created objects; ACL evaluation itself remains enabled for the bucket, and non-default ACLs could still be set.</p>
-<p><small>Source: <a href="https://cloud.google.com/storage/docs/uniform-bucket-level-access">Uniform bucket-level access</a></small></p>
-
-</div>
-
 <h6 id="a-compliance-requirement-mandates-that-your-organization-capture-every-read-of-objects-in-a-specific-set-of-sensitive-cloud-storage-buckets-including-reads-by-users-with-legitimate-iam-permissions-you-check-cloud-logging-and-find-that-object-read-events-are-not-being-recorded-what-is-the-correct-fix">A compliance requirement mandates that your organization capture every read of objects in a specific set of sensitive Cloud Storage buckets, including reads by users with legitimate IAM permissions. You check Cloud Logging and find that object read events are not being recorded. What is the correct fix?</h6>
 <p>⬜ Grant the auditors the <code>roles/owner</code> role so they can see everything.<br>
-✅ Enable Data Access audit logs (the DATA_READ log type) for the Cloud Storage service in the project&rsquo;s or organization&rsquo;s audit configuration.<br>
+⬜ Enable Data Access audit logs (the DATA_READ log type) for the Cloud Storage service in the project&rsquo;s or organization&rsquo;s audit configuration.<br>
 ⬜ Nothing can be done; Cloud Storage cannot log read access under any configuration.<br>
 ⬜ Enable Admin Activity audit logs, since they also capture object reads.</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Enable Data Access audit logs (the DATA_READ log type) for the Cloud Storage service in the project&rsquo;s or organization&rsquo;s audit configuration.<br>
-Object reads are recorded as Data Access audit logs (DATA_READ), which — unlike Admin Activity logs — are disabled by default for most services (with an exception for some BigQuery logging) and must be explicitly enabled in the IAM Audit Logs configuration.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Grant the auditors the <code>roles/owner</code> role so they can see everything.</strong> — Granting broader IAM roles to auditors changes their access, not what gets logged; it doesn&rsquo;t enable read logging.<br>
-● <strong>Nothing can be done; Cloud Storage cannot log read access under any configuration.</strong> — Cloud Storage does support Data Access (read) audit logging once explicitly enabled; it is simply off by default.<br>
-● <strong>Enable Admin Activity audit logs, since they also capture object reads.</strong> — Admin Activity audit logs record configuration and metadata changes, not reads of object data, and are always on regardless — they will never capture object GET operations.</p>
-<p><small>Source: <a href="https://cloud.google.com/logging/docs/audit/configure-data-access">Enable Data Access audit logs</a></small></p>
-
-</div>
-
 <h6 id="your-security-team-wants-to-detect-active-threats-such-as-malware-outbound-ddos-activity-and-cryptomining-across-your-google-cloud-organization-in-addition-to-basic-misconfiguration-findings-which-security-command-center-capability-should-they-use">Your security team wants to detect active threats such as malware, outbound DDoS activity, and cryptomining across your Google Cloud organization, in addition to basic misconfiguration findings. Which Security Command Center capability should they use?</h6>
 <p>⬜ Security Command Center Standard tier alone, which includes full threat detection at no additional cost.<br>
-✅ Security Command Center Premium (or higher) tier, which adds capabilities such as Event Threat Detection and Container Threat Detection on top of the misconfiguration/vulnerability findings available in Standard.<br>
+⬜ Security Command Center Premium (or higher) tier, which adds capabilities such as Event Threat Detection and Container Threat Detection on top of the misconfiguration/vulnerability findings available in Standard.<br>
 ⬜ Cloud Armor, since it fully replaces the need for Security Command Center.<br>
 ⬜ VPC Flow Logs alone, since they automatically generate threat alerts without any additional service.</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Security Command Center Premium (or higher) tier, which adds capabilities such as Event Threat Detection and Container Threat Detection on top of the misconfiguration/vulnerability findings available in Standard.<br>
-Security Command Center&rsquo;s Standard tier focuses on foundational security health and misconfiguration findings, while the Premium (and Enterprise) tiers add advanced threat detection services such as Event Threat Detection and Container Threat Detection needed to identify active malware, DDoS, and cryptomining behavior.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Security Command Center Standard tier alone, which includes full threat detection at no additional cost.</strong> — Standard tier does not include the advanced threat detection services described; those require Premium or Enterprise.<br>
-● <strong>Cloud Armor, since it fully replaces the need for Security Command Center.</strong> — Cloud Armor is a WAF/DDoS mitigation product for load balancers; it does not provide organization-wide threat detection findings the way Security Command Center does.<br>
-● <strong>VPC Flow Logs alone, since they automatically generate threat alerts without any additional service.</strong> — VPC Flow Logs are raw network telemetry; they don&rsquo;t analyze traffic or generate threat findings on their own without a detection service consuming them.</p>
-<p><small>Source: <a href="https://cloud.google.com/security-command-center/docs/service-tiers">Security Command Center service tiers</a></small></p>
-
-</div>
-
 <h6 id="an-administrator-wants-to-create-a-custom-iam-role-that-can-be-assigned-across-every-project-inside-a-specific-folder-and-tries-to-create-the-custom-role-directly-at-the-folder-level-what-will-happen">An administrator wants to create a custom IAM role that can be assigned across every project inside a specific folder, and tries to create the custom role directly at the folder level. What will happen?</h6>
 <p>⬜ The custom role is created successfully at the folder level and can immediately be used on any project inside that folder.<br>
-✅ Custom roles cannot be defined at the folder level; the administrator must create the custom role at the organization level (so it can be granted across the folder&rsquo;s projects) or individually at each project level.<br>
+⬜ Custom roles cannot be defined at the folder level; the administrator must create the custom role at the organization level (so it can be granted across the folder&rsquo;s projects) or individually at each project level.<br>
 ⬜ The folder will automatically be converted into a project so the custom role can be created.<br>
 ⬜ Custom roles can only be created scoped to an individual resource, such as a single Cloud Storage bucket.</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Custom roles cannot be defined at the folder level; the administrator must create the custom role at the organization level (so it can be granted across the folder&rsquo;s projects) or individually at each project level.<br>
-Google Cloud IAM only supports defining custom roles at the organization level or the project level; there is no folder-level custom role resource, so a role intended for use across a folder&rsquo;s projects must be created at the organization level instead.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>The custom role is created successfully at the folder level and can immediately be used on any project inside that folder.</strong> — This is not supported; the IAM console and API do not allow creating a custom role scoped directly to a folder.<br>
-● <strong>The folder will automatically be converted into a project so the custom role can be created.</strong> — Folders are never converted into projects as part of custom role creation.<br>
-● <strong>Custom roles can only be created scoped to an individual resource, such as a single Cloud Storage bucket.</strong> — Custom roles are created at the org or project level and can then be granted at various resource levels; they are not &ldquo;created&rdquo; scoped to an individual resource like a single bucket.</p>
-<p><small>Source: <a href="https://cloud.google.com/iam/docs/creating-custom-roles">Create and manage custom roles</a></small></p>
-
-</div>
-
 <h6 id="you-discover-that-a-cloud-storage-bucket-containing-internal-documents-has-allusers-granted-the-storage-object-viewer-role-making-every-object-in-the-bucket-publicly-readable-on-the-internet-you-need-to-remove-this-public-access-immediately-and-prevent-it-from-being-re-added-by-mistake-in-the-future-what-should-you-do">You discover that a Cloud Storage bucket containing internal documents has <code>allUsers</code> granted the Storage Object Viewer role, making every object in the bucket publicly readable on the internet. You need to remove this public access immediately and prevent it from being re-added by mistake in the future. What should you do?</h6>
-<p>✅ Remove the <code>allUsers</code> IAM binding from the bucket, and additionally enable the &ldquo;Public access prevention&rdquo; setting (or the equivalent organization policy) so public access cannot be re-granted.<br>
+<p>⬜ Remove the <code>allUsers</code> IAM binding from the bucket, and additionally enable the &ldquo;Public access prevention&rdquo; setting (or the equivalent organization policy) so public access cannot be re-granted.<br>
 ⬜ Rename the bucket, since public access does not carry over to buckets with a different name.<br>
 ⬜ Set the bucket&rsquo;s storage class to Archive, which automatically blocks public reads.<br>
 ⬜ Do nothing, since <code>allUsers</code> only grants access to authenticated Google accounts, not the general public.</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Remove the <code>allUsers</code> IAM binding from the bucket, and additionally enable the &ldquo;Public access prevention&rdquo; setting (or the equivalent organization policy) so public access cannot be re-granted.<br>
-<code>allUsers</code> is a special identifier meaning literally anyone on the internet, so removing that IAM binding immediately revokes public read access; enabling public access prevention (as a bucket-level setting or an organization policy constraint) then blocks any future attempt to grant <code>allUsers</code> or <code>allAuthenticatedUsers</code> access, preventing recurrence.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Rename the bucket, since public access does not carry over to buckets with a different name.</strong> — Renaming a bucket does not remove existing IAM bindings; the objects, still carrying the public grant, would remain exposed under the new name.<br>
-● <strong>Set the bucket&rsquo;s storage class to Archive, which automatically blocks public reads.</strong> — Storage class affects cost and retrieval characteristics only; it has no effect on access control or public exposure.<br>
-● <strong>Do nothing, since <code>allUsers</code> only grants access to authenticated Google accounts, not the general public.</strong> — <code>allUsers</code> specifically means anyone on the internet, including anonymous, unauthenticated requests; <code>allAuthenticatedUsers</code> is the separate identifier limited to any authenticated Google account.</p>
-<p><small>Source: <a href="https://cloud.google.com/storage/docs/public-access-prevention">Public access prevention</a></small></p>
-
-</div>
-
 </div>
 <hr>
 <br/>
@@ -1630,7 +1026,7 @@ Google Cloud IAM only supports defining custom roles at the organization level o
       
       
       <li>
-        <a href="whatsapp://send?text=Google%20Cloud%20Associate%20Cloud%20Engineer%20%28ACE%29%20Exam%20Questions%2c%20by%20Coding%20N%20Concepts%0aFree%20Google%20Cloud%20Associate%20Cloud%20Engineer%20%28ACE%29%20exam%20questions%20with%20verified%20answers%20and%20explanations%2c%20plus%20a%20free%20timed%20online%20practice%20exam.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fgcp%2fgcp-associate-cloud-engineer-exam-questions%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=Google%20Cloud%20Associate%20Cloud%20Engineer%20%28ACE%29%20Exam%20Questions%2c%20by%20Coding%20N%20Concepts%0aFree%20Google%20Cloud%20Associate%20Cloud%20Engineer%20%28ACE%29%20exam%20questions%20by%20exam%20domain%2c%20plus%20a%20timed%20online%20practice%20exam%20with%20answers%20and%20explanations.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fgcp%2fgcp-associate-cloud-engineer-exam-questions%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>WhatsApp</p>
         </a>
@@ -1640,7 +1036,7 @@ Google Cloud IAM only supports defining custom roles at the organization level o
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - Google%20Cloud%20Associate%20Cloud%20Engineer%20%28ACE%29%20Exam%20Questions.&amp;body=Google%20Cloud%20Associate%20Cloud%20Engineer%20%28ACE%29%20Exam%20Questions%2c%20by%20Coding%20N%20Concepts%0aFree%20Google%20Cloud%20Associate%20Cloud%20Engineer%20%28ACE%29%20exam%20questions%20with%20verified%20answers%20and%20explanations%2c%20plus%20a%20free%20timed%20online%20practice%20exam.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fgcp%2fgcp-associate-cloud-engineer-exam-questions%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - Google%20Cloud%20Associate%20Cloud%20Engineer%20%28ACE%29%20Exam%20Questions.&amp;body=Google%20Cloud%20Associate%20Cloud%20Engineer%20%28ACE%29%20Exam%20Questions%2c%20by%20Coding%20N%20Concepts%0aFree%20Google%20Cloud%20Associate%20Cloud%20Engineer%20%28ACE%29%20exam%20questions%20by%20exam%20domain%2c%20plus%20a%20timed%20online%20practice%20exam%20with%20answers%20and%20explanations.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fgcp%2fgcp-associate-cloud-engineer-exam-questions%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>

@@ -8,14 +8,14 @@
 	<title>Certified Kubernetes Security Specialist (CKS) Exam Questions - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
-	<meta name="description" content="Free Certified Kubernetes Security Specialist (CKS) exam questions with verified answers and explanations, plus a free timed online practice exam.">
+	<meta name="description" content="Free Certified Kubernetes Security Specialist (CKS) exam questions by exam domain, plus a timed online practice exam with answers and explanations.">
 	<meta property="og:title" content="Certified Kubernetes Security Specialist (CKS) Exam Questions" />
-<meta property="og:description" content="Free Certified Kubernetes Security Specialist (CKS) exam questions with verified answers and explanations, plus a free timed online practice exam." />
+<meta property="og:description" content="Free Certified Kubernetes Security Specialist (CKS) exam questions by exam domain, plus a timed online practice exam with answers and explanations." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/cloud/kubernetes-security-specialist-cks-exam-questions/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/kubernetes.png" />
 <meta property="article:published_time" content="2026-09-15T00:00:00+00:00" />
-<meta property="article:modified_time" content="2026-10-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-10-10T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -30,7 +30,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:image" content="https://codingnconcepts.com/img/logo/kubernetes.png">
 	<meta name="twitter:title" content="Certified Kubernetes Security Specialist (CKS) Exam Questions">
-	<meta name="twitter:description" content="Free Certified Kubernetes Security Specialist (CKS) exam questions with verified answers and explanations, plus a free timed online practice exam.">
+	<meta name="twitter:description" content="Free Certified Kubernetes Security Specialist (CKS) exam questions by exam domain, plus a timed online practice exam with answers and explanations.">
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -62,7 +62,7 @@
     "name": "Certified Kubernetes Security Specialist (CKS) Exam Questions",
     "headline": "Certified Kubernetes Security Specialist (CKS) Exam Questions",
     "alternativeHeadline":  null ,
-    "description": "Free Certified Kubernetes Security Specialist (CKS) exam questions with verified answers and explanations, plus a free timed online practice exam.",
+    "description": "Free Certified Kubernetes Security Specialist (CKS) exam questions by exam domain, plus a timed online practice exam with answers and explanations.",
     "inLanguage": "en-US",
 	"isFamilyFriendly": true,
     "mainEntityOfPage": {
@@ -85,7 +85,7 @@
     "copyrightYear": "2026",
     "dateCreated": "2026-09-15T00:00:00.00Z",
     "datePublished": "2026-09-15T00:00:00.00Z",
-    "dateModified": "2026-10-05T00:00:00.00Z",
+    "dateModified": "2026-10-10T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -99,7 +99,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/kubernetes.png"],
     "url": "https://codingnconcepts.com/cloud/kubernetes-security-specialist-cks-exam-questions/",
-    "wordCount": 12025 ,
+    "wordCount": 4398 ,
     "genre": ["Kubernetes","Certification","DevOps","Security"],
     "keywords":  null 
 }
@@ -598,7 +598,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2026-10-05T00:00:00Z">Last Modified: Oct 05, 2026</time>
+	<time class="meta__text" datetime="2026-10-10T00:00:00Z">Last Modified: Oct 10, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -712,871 +712,264 @@ div[autonumbering] p { font-size: 15px;}
 <hr>
 <h6 id="two-microservices-in-the-same-namespace-should-only-be-able-to-reach-each-other-on-their-required-ports-and-neither-should-be-reachable-from-any-other-pod-in-the-cluster-by-default-what-implements-this">Two microservices in the same namespace should only be able to reach each other on their required ports, and neither should be reachable from any other Pod in the cluster by default. What implements this?</h6>
 <p>⬜ A ResourceQuota scoping the namespace<br>
-✅ NetworkPolicies that default-deny ingress/egress and then explicitly allow only the required Pod-to-Pod traffic<br>
+⬜ NetworkPolicies that default-deny ingress/egress and then explicitly allow only the required Pod-to-Pod traffic<br>
 ⬜ A Horizontal Pod Autoscaler<br>
 ⬜ Labels alone, with no NetworkPolicy objects</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> NetworkPolicies that default-deny ingress/egress and then explicitly allow only the required Pod-to-Pod traffic<br>
-NetworkPolicy objects are the mechanism for microsegmentation between Pods; a common CKS pattern is a default-deny-all policy for the namespace, followed by narrowly scoped policies that allow only the specific Pod-to-Pod, port-level traffic a service actually needs.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>A ResourceQuota scoping the namespace</strong> — A ResourceQuota constrains object counts/compute usage, not network reachability.<br>
-● <strong>A Horizontal Pod Autoscaler</strong> — An HPA scales replicas based on metrics and has no effect on traffic segmentation.<br>
-● <strong>Labels alone, with no NetworkPolicy objects</strong> — Labels are only meaningful to NetworkPolicy when a policy&rsquo;s selector references them — labels with no policy enforce nothing on their own.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/concepts/services-networking/network-policies/">Network Policies</a></small></p>
-
-</div>
-
-<style>
-.quiz-explanation { background: var(--bg-subtle); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 6px 8px; margin-top: 12px; }
-.quiz-explanation-title { font-size: 1em; font-weight: 700; color: grey; }
-.quiz-explanation p { margin: 10px 0; }
-.quiz-explanation p:first-of-type { margin-top: 0; }
-</style>
-
 <h6 id="during-cluster-setup-which-tool-is-purpose-built-to-run-automated-checks-of-a-clusters-configuration-against-the-cis-kubernetes-benchmark">During cluster setup, which tool is purpose-built to run automated checks of a cluster&rsquo;s configuration against the CIS Kubernetes Benchmark?</h6>
 <p>⬜ kubectl top<br>
-✅ kube-bench<br>
+⬜ kube-bench<br>
 ⬜ kubeadm upgrade<br>
 ⬜ etcdctl</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> kube-bench<br>
-<code>kube-bench</code> runs the checks defined by the CIS Kubernetes Benchmark against a running cluster&rsquo;s control-plane and node configuration, flagging any setting that deviates from the recommended hardened baseline — a standard first step when securing a cluster at setup time.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>kubectl top</strong> — <code>kubectl top</code> reports resource usage metrics; it has no security-benchmarking capability.<br>
-● <strong>kubeadm upgrade</strong> — <code>kubeadm upgrade</code> performs version upgrades of a kubeadm-managed cluster; it doesn&rsquo;t audit configuration against CIS controls.<br>
-● <strong>etcdctl</strong> — <code>etcdctl</code> is etcd&rsquo;s administrative CLI (snapshots, member management); it doesn&rsquo;t run benchmark checks.</p>
-<p><small>Source: <a href="https://github.com/aquasecurity/kube-bench">CIS Benchmarks / kube-bench</a></small></p>
-
-</div>
-
 <h6 id="kube-bench-flags-a-kubelet-running-with---authorization-modealwaysallow-why-is-this-a-finding-and-what-should-it-be-changed-to"><code>kube-bench</code> flags a kubelet running with <code>--authorization-mode=AlwaysAllow</code>. Why is this a finding, and what should it be changed to?</h6>
 <p>⬜ It isn&rsquo;t a real finding — <code>AlwaysAllow</code> is the recommended kubelet setting<br>
-✅ <code>AlwaysAllow</code> lets any authenticated request to the kubelet API succeed regardless of permissions; it should be set to <code>Webhook</code> so requests are checked against the cluster&rsquo;s RBAC rules<br>
+⬜ <code>AlwaysAllow</code> lets any authenticated request to the kubelet API succeed regardless of permissions; it should be set to <code>Webhook</code> so requests are checked against the cluster&rsquo;s RBAC rules<br>
 ⬜ It should be changed to <code>AlwaysDeny</code>, which blocks all kubelet API access entirely<br>
 ⬜ Authorization mode only affects the API server, not the kubelet, so the finding is a false positive</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> <code>AlwaysAllow</code> lets any authenticated request to the kubelet API succeed regardless of permissions; it should be set to <code>Webhook</code> so requests are checked against the cluster&rsquo;s RBAC rules<br>
-<code>--authorization-mode=AlwaysAllow</code> on the kubelet bypasses any permission check for requests reaching its API; setting it to <code>Webhook</code> delegates authorization decisions to the API server&rsquo;s RBAC rules, so a request to the kubelet is only allowed if RBAC actually permits it.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>It isn&rsquo;t a real finding — <code>AlwaysAllow</code> is the recommended kubelet setting</strong> — <code>AlwaysAllow</code> is explicitly the insecure setting CIS benchmarks flag, not the recommendation.<br>
-● <strong>It should be changed to <code>AlwaysDeny</code>, which blocks all kubelet API access entirely</strong> — <code>AlwaysDeny</code> would break all legitimate kubelet API access, not just unauthorized requests.<br>
-● <strong>Authorization mode only affects the API server, not the kubelet, so the finding is a false positive</strong> — The kubelet has its own authorization mode setting, independent of the API server&rsquo;s.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/reference/access-authn-authz/kubelet-authn-authz/">Kubelet authentication/authorization</a></small></p>
-
-</div>
-
 <h6 id="which-practice-most-directly-reduces-the-risk-exposed-by-leaving-the-kubernetes-dashboard-deployed-on-a-cluster">Which practice most directly reduces the risk exposed by leaving the Kubernetes Dashboard deployed on a cluster?</h6>
-<p>✅ Avoid deploying the Dashboard where it isn&rsquo;t needed, and if it must run, restrict access via RBAC, disable its skip-login option, and expose it only through an authenticated proxy<br>
+<p>⬜ Avoid deploying the Dashboard where it isn&rsquo;t needed, and if it must run, restrict access via RBAC, disable its skip-login option, and expose it only through an authenticated proxy<br>
 ⬜ Deploy the Dashboard with a wildcard ClusterRoleBinding to <code>cluster-admin</code> so any user can self-service<br>
 ⬜ Expose the Dashboard on a NodePort reachable from the public internet for convenience<br>
 ⬜ Disable TLS on the Dashboard to simplify troubleshooting</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Avoid deploying the Dashboard where it isn&rsquo;t needed, and if it must run, restrict access via RBAC, disable its skip-login option, and expose it only through an authenticated proxy<br>
-The Dashboard has repeatedly been a real-world attack vector when left publicly reachable with permissive access; CKS-aligned hardening means minimizing use of GUI elements like this one, and when it is needed, binding it to a least-privilege RBAC identity, disabling anonymous/skip-login access, and fronting it with authenticated, TLS-protected access.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Deploy the Dashboard with a wildcard ClusterRoleBinding to <code>cluster-admin</code> so any user can self-service</strong> — Binding the Dashboard to <code>cluster-admin</code> is the opposite of least privilege and is exactly how Dashboard compromises escalate to full cluster takeover.<br>
-● <strong>Expose the Dashboard on a NodePort reachable from the public internet for convenience</strong> — A public NodePort removes the network-level barrier that limits who can even reach the login page.<br>
-● <strong>Disable TLS on the Dashboard to simplify troubleshooting</strong> — Disabling TLS exposes credentials and session data in plaintext over the network.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/">Kubernetes Dashboard security considerations</a></small></p>
-
-</div>
-
 <h6 id="an-administrator-is-provisioning-a-new-cluster-and-wants-to-ensure-etcds-client-to-server-and-peer-to-peer-traffic-cannot-be-read-or-tampered-with-on-the-network-what-should-be-configured">An administrator is provisioning a new cluster and wants to ensure etcd&rsquo;s client-to-server and peer-to-peer traffic cannot be read or tampered with on the network. What should be configured?</h6>
 <p>⬜ Nothing — etcd traffic is encrypted by default with no configuration required<br>
-✅ TLS certificates for both etcd client-server and peer communication<br>
+⬜ TLS certificates for both etcd client-server and peer communication<br>
 ⬜ A NetworkPolicy denying all egress from the etcd Pods<br>
 ⬜ Running etcd with <code>--insecure-transport</code> for simplicity</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> TLS certificates for both etcd client-server and peer communication<br>
-etcd holds the entirety of cluster state, so both its client-to-server API traffic and its inter-member peer traffic must be configured with TLS certificates (<code>--cert-file</code>/<code>--peer-cert-file</code> and related flags) to prevent eavesdropping or tampering on the network.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Nothing — etcd traffic is encrypted by default with no configuration required</strong> — TLS for etcd is not automatic — it must be explicitly configured with certificates during cluster setup.<br>
-● <strong>A NetworkPolicy denying all egress from the etcd Pods</strong> — A NetworkPolicy can restrict which Pods talk to etcd but does nothing to encrypt or authenticate the traffic itself.<br>
-● <strong>Running etcd with <code>--insecure-transport</code> for simplicity</strong> — <code>--insecure-transport</code> deliberately disables the very TLS protection this scenario requires.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/">Operating etcd clusters for Kubernetes</a></small></p>
-
-</div>
-
 <h6 id="a-service-is-exposed-externally-through-an-ingress-resource-which-combination-best-reflects-setting-up-that-ingress-with-appropriate-security-control">A Service is exposed externally through an Ingress resource. Which combination best reflects setting up that Ingress with appropriate security control?</h6>
-<p>✅ Terminate TLS at the Ingress with a valid certificate, avoid wildcard/overly broad host rules, and restrict it to only the specific paths and backends it needs to expose<br>
+<p>⬜ Terminate TLS at the Ingress with a valid certificate, avoid wildcard/overly broad host rules, and restrict it to only the specific paths and backends it needs to expose<br>
 ⬜ Leave the Ingress on plain HTTP since TLS can always be added later<br>
 ⬜ Route all traffic for every hostname to every Service in the cluster by default, to save configuration effort<br>
 ⬜ Grant the Ingress controller&rsquo;s ServiceAccount <code>cluster-admin</code> so it can never be blocked by RBAC</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Terminate TLS at the Ingress with a valid certificate, avoid wildcard/overly broad host rules, and restrict it to only the specific paths and backends it needs to expose<br>
-An Ingress is often a cluster&rsquo;s actual internet-facing edge, so CKS-aligned setup means terminating TLS properly, scoping host/path rules narrowly to what should actually be reachable, and never widening the controller&rsquo;s own permissions beyond what routing requires.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Leave the Ingress on plain HTTP since TLS can always be added later</strong> — Plain HTTP exposes traffic (including credentials) in cleartext to anyone on the network path.<br>
-● <strong>Route all traffic for every hostname to every Service in the cluster by default, to save configuration effort</strong> — A catch-all routing rule needlessly exposes every Service, including ones never meant to be public.<br>
-● <strong>Grant the Ingress controller&rsquo;s ServiceAccount <code>cluster-admin</code> so it can never be blocked by RBAC</strong> — The Ingress controller only needs permission to read Ingress/Service/Secret objects it manages, not cluster-wide admin rights.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/concepts/services-networking/ingress/">Ingress</a></small></p>
-
-</div>
-
 <h6 id="a-pod-running-in-a-cloud-hosted-cluster-is-compromised-the-attackers-process-tries-to-reach-169254169254-from-inside-the-pod-what-is-this-address-and-how-should-cks-aligned-setup-prevent-this-from-being-useful-to-the-attacker">A Pod running in a cloud-hosted cluster is compromised. The attacker&rsquo;s process tries to reach <code>169.254.169.254</code> from inside the Pod. What is this address, and how should CKS-aligned setup prevent this from being useful to the attacker?</h6>
-<p>✅ It&rsquo;s the cloud provider&rsquo;s instance metadata service, which can expose node/IAM credentials; a NetworkPolicy (or metadata-service hardening) should block Pods from reaching it unless explicitly required<br>
+<p>⬜ It&rsquo;s the cloud provider&rsquo;s instance metadata service, which can expose node/IAM credentials; a NetworkPolicy (or metadata-service hardening) should block Pods from reaching it unless explicitly required<br>
 ⬜ It&rsquo;s a private DNS resolver that all Pods must reach to function, so it should never be restricted<br>
 ⬜ It&rsquo;s a Kubernetes internal Service IP that only the API server itself may reach<br>
 ⬜ It&rsquo;s an unused, non-routable address with no security relevance</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> It&rsquo;s the cloud provider&rsquo;s instance metadata service, which can expose node/IAM credentials; a NetworkPolicy (or metadata-service hardening) should block Pods from reaching it unless explicitly required<br>
-<code>169.254.169.254</code> is the well-known link-local address most cloud providers use for their instance metadata service, which can hand back node credentials or IAM role tokens — a classic pivot point after a container compromise. Protecting node metadata and endpoints means blocking unauthenticated or unnecessary Pod access to it, typically via NetworkPolicy or provider-side metadata hardening (e.g. requiring hop-limited/IMDSv2-style access).</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>It&rsquo;s a private DNS resolver that all Pods must reach to function, so it should never be restricted</strong> — General DNS resolution uses cluster DNS (CoreDNS), not the cloud metadata address.<br>
-● <strong>It&rsquo;s a Kubernetes internal Service IP that only the API server itself may reach</strong> — This address belongs to the cloud provider&rsquo;s metadata service, not a Kubernetes-internal Service.<br>
-● <strong>It&rsquo;s an unused, non-routable address with no security relevance</strong> — It is very much reachable and has been used in real-world credential-theft incidents — it is not without security relevance.</p>
-<p><small>Source: <a href="https://github.com/cncf/curriculum">CNCF Kubernetes Curriculum — Cluster Setup</a></small></p>
-
-</div>
-
 <h6 id="before-installing-kubeadm-kubelet-and-kubectl-binaries-on-a-new-node-what-should-be-verified-to-ensure-the-downloaded-platform-binaries-havent-been-tampered-with">Before installing <code>kubeadm</code>, <code>kubelet</code>, and <code>kubectl</code> binaries on a new node, what should be verified to ensure the downloaded platform binaries haven&rsquo;t been tampered with?</h6>
-<p>✅ Their checksums/signatures against the official published values before installing them<br>
+<p>⬜ Their checksums/signatures against the official published values before installing them<br>
 ⬜ Nothing — binaries downloaded over HTTPS are automatically trusted and require no further verification<br>
 ⬜ Only the file size, since a matching size guarantees an unmodified binary<br>
 ⬜ The binary&rsquo;s creation timestamp on disk</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Their checksums/signatures against the official published values before installing them<br>
-&ldquo;Verify platform binaries before deploying&rdquo; means checking downloaded <code>kubeadm</code>/<code>kubelet</code>/<code>kubectl</code> (and container runtime) binaries against their official checksums or signatures, so a compromised mirror or a tampered download is caught before it&rsquo;s ever installed on a node.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Nothing — binaries downloaded over HTTPS are automatically trusted and require no further verification</strong> — TLS during download only protects transport-layer integrity; it says nothing about whether the source file itself is authentic and untampered.<br>
-● <strong>Only the file size, since a matching size guarantees an unmodified binary</strong> — File size can coincidentally or trivially match even for a modified binary — it is not a security verification.<br>
-● <strong>The binary&rsquo;s creation timestamp on disk</strong> — A timestamp is metadata about when a file was written locally; it has no relation to the binary&rsquo;s authenticity.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/tasks/tools/install-kubeadm/">Installing kubeadm</a></small></p>
-
-</div>
-
 <h3 id="domain-2-cluster-hardening-15">Domain 2: Cluster Hardening (15%)</h3>
 <hr>
 <h6 id="on-a-self-managed-node-which-kubelet-flag-should-be-disabled-to-prevent-unauthenticated-requests-from-being-treated-as-an-anonymous-user-with-default-often-overly-broad-permissions">On a self-managed node, which kubelet flag should be disabled to prevent unauthenticated requests from being treated as an anonymous user with default (often overly broad) permissions?</h6>
 <p>⬜ <code>--read-only-port=10255</code> left enabled<br>
-✅ <code>--anonymous-auth=false</code><br>
+⬜ <code>--anonymous-auth=false</code><br>
 ⬜ <code>--kubeconfig</code> unset<br>
 ⬜ <code>--cgroup-driver=systemd</code></p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> <code>--anonymous-auth=false</code><br>
-By default, older kubelet configurations may accept anonymous requests; setting <code>--anonymous-auth=false</code> forces every request to the kubelet API to be authenticated, closing off a well-known avenue for unauthorized node-level access.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong><code>--read-only-port=10255</code> left enabled</strong> — The read-only port (10255) being left enabled is itself a hardening gap, but the option as phrased describes leaving it enabled, not disabling anonymous auth.<br>
-● <strong><code>--kubeconfig</code> unset</strong> — <code>--kubeconfig</code> configures the kubelet&rsquo;s own client credentials to talk to the API server; it&rsquo;s unrelated to anonymous requests reaching the kubelet.<br>
-● <strong><code>--cgroup-driver=systemd</code></strong> — <code>--cgroup-driver</code> is a resource-management setting with no bearing on kubelet authentication.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/reference/access-authn-authz/kubelet-authn-authz/">Kubelet authentication/authorization</a></small></p>
-
-</div>
-
 <h6 id="a-team-wants-to-grant-a-cicd-serviceaccount-permission-to-create-and-delete-deployments-but-only-within-the-staging-namespace-and-nothing-else-what-is-the-correct-least-privilege-rbac-approach">A team wants to grant a CI/CD ServiceAccount permission to create and delete Deployments, but only within the <code>staging</code> namespace, and nothing else. What is the correct, least-privilege RBAC approach?</h6>
 <p>⬜ Bind the ServiceAccount to the built-in <code>cluster-admin</code> ClusterRole<br>
-✅ Create a Role in the <code>staging</code> namespace with the needed verbs on <code>deployments</code>, and bind it to the ServiceAccount with a RoleBinding in that namespace<br>
+⬜ Create a Role in the <code>staging</code> namespace with the needed verbs on <code>deployments</code>, and bind it to the ServiceAccount with a RoleBinding in that namespace<br>
 ⬜ Create a ClusterRoleBinding granting the permissions cluster-wide<br>
 ⬜ Add the ServiceAccount to the <code>system:masters</code> group</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Create a Role in the <code>staging</code> namespace with the needed verbs on <code>deployments</code>, and bind it to the ServiceAccount with a RoleBinding in that namespace<br>
-A namespace-scoped Role listing exactly the needed verbs (e.g. <code>get</code>, <code>list</code>, <code>create</code>, <code>update</code>, <code>delete</code> on <code>deployments</code>) bound via a RoleBinding in the <code>staging</code> namespace grants exactly the access required and nothing more — textbook least privilege, and the core of &ldquo;use RBAC to minimize exposure.&rdquo;</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Bind the ServiceAccount to the built-in <code>cluster-admin</code> ClusterRole</strong> — <code>cluster-admin</code> grants unrestricted access to every resource in every namespace, far beyond what&rsquo;s needed.<br>
-● <strong>Create a ClusterRoleBinding granting the permissions cluster-wide</strong> — A ClusterRoleBinding would apply the permission across all namespaces, not just <code>staging</code>.<br>
-● <strong>Add the ServiceAccount to the <code>system:masters</code> group</strong> — <code>system:masters</code> is a superuser group baked into the API server&rsquo;s authorization logic and should never be assigned to a workload identity.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/concepts/security/rbac-good-practices/">RBAC Good Practices</a></small></p>
-
-</div>
-
 <h6 id="by-default-every-pod-gets-a-serviceaccount-token-mounted-into-it-even-if-the-application-inside-never-calls-the-kubernetes-api-what-is-the-recommended-hardening-step-for-pods-that-dont-need-api-access">By default, every Pod gets a ServiceAccount token mounted into it, even if the application inside never calls the Kubernetes API. What is the recommended hardening step for Pods that don&rsquo;t need API access?</h6>
 <p>⬜ Leave the default token mounted; unused tokens carry no risk<br>
-✅ Set <code>automountServiceAccountToken: false</code> on the Pod or its ServiceAccount, and avoid relying on the namespace&rsquo;s <code>default</code> ServiceAccount for workloads that do need one<br>
+⬜ Set <code>automountServiceAccountToken: false</code> on the Pod or its ServiceAccount, and avoid relying on the namespace&rsquo;s <code>default</code> ServiceAccount for workloads that do need one<br>
 ⬜ Rotate the ServiceAccount token every 5 minutes instead<br>
 ⬜ Grant the default ServiceAccount <code>cluster-admin</code> so any future need is already covered</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Set <code>automountServiceAccountToken: false</code> on the Pod or its ServiceAccount, and avoid relying on the namespace&rsquo;s <code>default</code> ServiceAccount for workloads that do need one<br>
-An auto-mounted token an application never uses is pure attack surface — if the container is compromised, that token can be exfiltrated and used against the API server. &ldquo;Exercise caution in using service accounts&rdquo; means disabling auto-mount where it isn&rsquo;t needed, and creating dedicated, narrowly scoped ServiceAccounts per workload instead of relying on the namespace&rsquo;s implicit <code>default</code> one.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Leave the default token mounted; unused tokens carry no risk</strong> — An unused, exfiltratable credential is exactly the kind of risk CKS hardening targets — it is not risk-free.<br>
-● <strong>Rotate the ServiceAccount token every 5 minutes instead</strong> — Faster rotation reduces the <em>window</em> of misuse but doesn&rsquo;t address a token that shouldn&rsquo;t exist in the Pod in the first place.<br>
-● <strong>Grant the default ServiceAccount <code>cluster-admin</code> so any future need is already covered</strong> — Granting broader permissions to an unused default identity increases risk rather than removing it.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/">Configure Service Accounts for Pods</a></small></p>
-
-</div>
-
 <h6 id="which-practice-best-supports-restrict-access-to-kubernetes-api-as-part-of-cluster-hardening-beyond-rbac-alone">Which practice best supports &ldquo;restrict access to Kubernetes API&rdquo; as part of cluster hardening, beyond RBAC alone?</h6>
-<p>✅ Place the API server behind a network boundary (firewall/security group) that only allows traffic from trusted administrative networks, in addition to RBAC and authentication controls<br>
+<p>⬜ Place the API server behind a network boundary (firewall/security group) that only allows traffic from trusted administrative networks, in addition to RBAC and authentication controls<br>
 ⬜ Expose the API server on a public load balancer with no IP restrictions, relying on RBAC alone<br>
 ⬜ Disable TLS on the API server to simplify client configuration<br>
 ⬜ Grant every authenticated user the <code>view</code> ClusterRole by default so nothing is ever accidentally denied</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Place the API server behind a network boundary (firewall/security group) that only allows traffic from trusted administrative networks, in addition to RBAC and authentication controls<br>
-Cluster hardening layers controls: RBAC decides <em>what</em> an authenticated identity can do, but network-level restrictions (firewalls, security groups, private endpoints) decide <em>who can even reach the API server in the first place</em> — defense in depth rather than relying on any single control.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Expose the API server on a public load balancer with no IP restrictions, relying on RBAC alone</strong> — Removing IP restrictions widens the attack surface to the entire internet, undermining defense in depth.<br>
-● <strong>Disable TLS on the API server to simplify client configuration</strong> — TLS protects API traffic confidentiality and integrity; disabling it is a direct hardening regression.<br>
-● <strong>Grant every authenticated user the <code>view</code> ClusterRole by default so nothing is ever accidentally denied</strong> — Granting broad default access to every authenticated identity violates least privilege.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/reference/access-authn-authz/authentication/">Authenticating to the API server</a></small></p>
-
-</div>
-
 <h6 id="a-cluster-is-still-running-a-kubernetes-minor-version-that-reached-end-of-life-and-no-longer-receives-security-patches-from-a-hardening-standpoint-what-is-the-most-important-remediation">A cluster is still running a Kubernetes minor version that reached end-of-life and no longer receives security patches. From a hardening standpoint, what is the most important remediation?</h6>
 <p>⬜ Add more replicas to compensate<br>
-✅ Upgrade the cluster to a supported, patched minor version<br>
+⬜ Upgrade the cluster to a supported, patched minor version<br>
 ⬜ Increase the RBAC scope of the <code>cluster-admin</code> role<br>
 ⬜ Disable audit logging to reduce noise</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Upgrade the cluster to a supported, patched minor version<br>
-An unsupported minor version stops receiving fixes for newly discovered vulnerabilities, so upgrading to a version still within the supported skew is the direct remediation — &ldquo;update Kubernetes frequently&rdquo; is a named Cluster Hardening competency for exactly this reason.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Add more replicas to compensate</strong> — Additional replicas increase capacity, not patch coverage — the vulnerability exists in every replica.<br>
-● <strong>Increase the RBAC scope of the <code>cluster-admin</code> role</strong> — Broadening <code>cluster-admin</code> scope increases, not decreases, risk and has nothing to do with patch status.<br>
-● <strong>Disable audit logging to reduce noise</strong> — Disabling audit logging removes visibility and does not address the underlying unpatched vulnerability.</p>
-<p><small>Source: <a href="https://kubernetes.io/releases/version-skew-policy/">Kubernetes Version Skew Policy</a></small></p>
-
-</div>
-
 <h6 id="a-user-was-mistakenly-added-to-the-systemmasters-group-instead-of-being-given-a-scoped-role-why-is-this-a-serious-finding-during-a-cluster-hardening-review">A user was mistakenly added to the <code>system:masters</code> group instead of being given a scoped Role. Why is this a serious finding during a cluster hardening review?</h6>
-<p>✅ <code>system:masters</code> is a hard-coded superuser identity that bypasses RBAC authorization entirely — it cannot be constrained by any Role or ClusterRole<br>
+<p>⬜ <code>system:masters</code> is a hard-coded superuser identity that bypasses RBAC authorization entirely — it cannot be constrained by any Role or ClusterRole<br>
 ⬜ It&rsquo;s a low-severity finding since <code>system:masters</code> only grants read access<br>
 ⬜ <code>system:masters</code> only affects that one user&rsquo;s own namespace<br>
 ⬜ <code>system:masters</code> is simply a naming convention with no special permissions attached</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> <code>system:masters</code> is a hard-coded superuser identity that bypasses RBAC authorization entirely — it cannot be constrained by any Role or ClusterRole<br>
-<code>system:masters</code> is recognized directly by the API server&rsquo;s authorization logic as a superuser group whose requests bypass RBAC checks entirely — membership in it cannot be scoped down by any Role, making it one of the most dangerous group memberships a hardening review can find.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>It&rsquo;s a low-severity finding since <code>system:masters</code> only grants read access</strong> — It grants unrestricted access to every action on every resource, not read-only access.<br>
-● <strong><code>system:masters</code> only affects that one user&rsquo;s own namespace</strong> — Its authority is cluster-wide, not namespace-scoped.<br>
-● <strong><code>system:masters</code> is simply a naming convention with no special permissions attached</strong> — It carries a real, hard-coded authorization bypass — it is not just a label.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/">Using RBAC Authorization — user-facing roles</a></small></p>
-
-</div>
-
 <h6 id="a-newly-created-namespace-still-uses-its-auto-generated-default-serviceaccount-for-several-deployments-none-of-which-call-the-kubernetes-api-whats-the-recommended-hardening-step-beyond-disabling-auto-mount">A newly created namespace still uses its auto-generated <code>default</code> ServiceAccount for several Deployments, none of which call the Kubernetes API. What&rsquo;s the recommended hardening step, beyond disabling auto-mount?</h6>
-<p>✅ Create purpose-specific ServiceAccounts per workload that actually needs API access, and treat the <code>default</code> ServiceAccount as something workloads should not casually rely on<br>
+<p>⬜ Create purpose-specific ServiceAccounts per workload that actually needs API access, and treat the <code>default</code> ServiceAccount as something workloads should not casually rely on<br>
 ⬜ Grant the <code>default</code> ServiceAccount <code>cluster-admin</code> so every workload in the namespace is covered no matter what it later needs<br>
 ⬜ Delete RBAC entirely for the namespace so there&rsquo;s nothing to misconfigure<br>
 ⬜ Rename the <code>default</code> ServiceAccount, which alone resolves the underlying risk</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Create purpose-specific ServiceAccounts per workload that actually needs API access, and treat the <code>default</code> ServiceAccount as something workloads should not casually rely on<br>
-Relying on the implicit <code>default</code> ServiceAccount makes it hard to reason about which workload actually needs which permission; creating a dedicated ServiceAccount per workload (bound to only the RBAC it needs) keeps blast radius contained if any single workload is compromised.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Grant the <code>default</code> ServiceAccount <code>cluster-admin</code> so every workload in the namespace is covered no matter what it later needs</strong> — Granting <code>cluster-admin</code> to a shared, implicit identity is the opposite of minimizing exposure.<br>
-● <strong>Delete RBAC entirely for the namespace so there&rsquo;s nothing to misconfigure</strong> — Removing RBAC entirely would leave the API server with no authorization control at all.<br>
-● <strong>Rename the <code>default</code> ServiceAccount, which alone resolves the underlying risk</strong> — A rename changes the object&rsquo;s identity but does nothing about the least-privilege problem of shared, over-scoped ServiceAccounts.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/">Configure Service Accounts for Pods</a></small></p>
-
-</div>
-
 <h3 id="domain-3-system-hardening-10">Domain 3: System Hardening (10%)</h3>
 <hr>
 <h6 id="a-team-wants-to-reduce-the-attack-surface-of-the-underlying-host-os-that-kubernetes-nodes-run-on-which-action-best-supports-this-goal">A team wants to reduce the attack surface of the underlying host OS that Kubernetes nodes run on. Which action best supports this goal?</h6>
-<p>✅ Run a minimal, purpose-built node OS, remove unnecessary packages and services, and keep only what&rsquo;s required for the container runtime and kubelet to operate<br>
+<p>⬜ Run a minimal, purpose-built node OS, remove unnecessary packages and services, and keep only what&rsquo;s required for the container runtime and kubelet to operate<br>
 ⬜ Install a full desktop environment on every node for easier troubleshooting<br>
 ⬜ Grant every node&rsquo;s root user password to the whole platform team for convenience<br>
 ⬜ Disable the host firewall so container traffic is never blocked</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Run a minimal, purpose-built node OS, remove unnecessary packages and services, and keep only what&rsquo;s required for the container runtime and kubelet to operate<br>
-System hardening starts with minimizing what&rsquo;s installed and running on the host: a minimal node OS with unnecessary packages, services, and open ports removed shrinks the set of things an attacker who reaches the host can exploit.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Install a full desktop environment on every node for easier troubleshooting</strong> — A full desktop environment adds unnecessary packages, services, and listening ports — the opposite of a minimal attack surface.<br>
-● <strong>Grant every node&rsquo;s root user password to the whole platform team for convenience</strong> — Broadly shared root credentials undermine accountability and least privilege at the host level.<br>
-● <strong>Disable the host firewall so container traffic is never blocked</strong> — Disabling the host firewall removes a network-level control rather than reducing exposed surface.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/concepts/security/security-checklist/">Kubernetes Security Checklist — Node Security</a></small></p>
-
-</div>
-
 <h6 id="which-linux-kernel-level-mechanism-restricts-what-system-calls-a-containers-process-is-permitted-to-make-reducing-the-impact-of-a-container-breakout-attempt">Which Linux kernel-level mechanism restricts what system calls a container&rsquo;s process is permitted to make, reducing the impact of a container-breakout attempt?</h6>
 <p>⬜ A Kubernetes NetworkPolicy<br>
-✅ A seccomp profile<br>
+⬜ A seccomp profile<br>
 ⬜ A LimitRange<br>
 ⬜ A HorizontalPodAutoscaler</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> A seccomp profile<br>
-seccomp (secure computing mode) profiles restrict the set of Linux syscalls a container&rsquo;s process may invoke; Kubernetes can apply a seccomp profile via the Pod&rsquo;s <code>securityContext.seccompProfile</code>, meaningfully narrowing what a compromised container process can attempt at the kernel level.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>A Kubernetes NetworkPolicy</strong> — A NetworkPolicy governs network traffic, not syscall access.<br>
-● <strong>A LimitRange</strong> — A LimitRange constrains compute resource requests/limits within a namespace; it has no relation to syscall filtering.<br>
-● <strong>A HorizontalPodAutoscaler</strong> — A HorizontalPodAutoscaler scales replica count based on metrics; it has no security function.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/tutorials/security/seccomp/">Restrict a Container&rsquo;s Syscalls with seccomp</a></small></p>
-
-</div>
-
 <h6 id="which-kernel-hardening-mechanism-uses-named-profiles-to-restrict-a-containers-access-to-specific-files-network-operations-and-capabilities-on-the-host-and-is-applied-via-a-pods-securitycontext-on-supported-linux-distributions">Which kernel hardening mechanism uses named profiles to restrict a container&rsquo;s access to specific files, network operations, and capabilities on the host, and is applied via a Pod&rsquo;s securityContext on supported Linux distributions?</h6>
 <p>⬜ seccomp<br>
-✅ AppArmor<br>
+⬜ AppArmor<br>
 ⬜ NetworkPolicy<br>
 ⬜ PodDisruptionBudget</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> AppArmor<br>
-AppArmor uses per-profile rules (path access, capabilities, network access) attached to a container via <code>securityContext.appArmorProfile</code> (or historically an annotation) to confine what the containerized process can do on the host, complementing seccomp&rsquo;s syscall-level restrictions.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>seccomp</strong> — seccomp restricts syscalls, not file paths, capabilities, or named profile rules — the two are complementary, not the same mechanism.<br>
-● <strong>NetworkPolicy</strong> — NetworkPolicy is a Kubernetes-native object for network traffic control, unrelated to AppArmor&rsquo;s host-level profile mechanism.<br>
-● <strong>PodDisruptionBudget</strong> — A PodDisruptionBudget has nothing to do with kernel-level access control.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/tutorials/security/apparmor/">Restrict a Container&rsquo;s Access to Resources with AppArmor</a></small></p>
-
-</div>
-
 <h6 id="a-nodes-instance-profile-cloud-iam-role-currently-grants-broad-admin-level-permissions-across-the-cloud-account-though-the-node-only-needs-to-pull-from-one-container-registry-and-write-its-own-logs-what-should-be-done">A node&rsquo;s instance profile (cloud IAM role) currently grants broad admin-level permissions across the cloud account, though the node only needs to pull from one container registry and write its own logs. What should be done?</h6>
-<p>✅ Scope the node&rsquo;s IAM role down to only the specific permissions it needs (e.g. registry pull, log write), following least privilege<br>
+<p>⬜ Scope the node&rsquo;s IAM role down to only the specific permissions it needs (e.g. registry pull, log write), following least privilege<br>
 ⬜ Leave it as-is — broad IAM roles simplify future changes and should be preferred<br>
 ⬜ Remove the IAM role entirely so the node has no cloud permissions at all, even ones it needs<br>
 ⬜ Share that same broad role across every node and every workload identity for consistency</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Scope the node&rsquo;s IAM role down to only the specific permissions it needs (e.g. registry pull, log write), following least privilege<br>
-&ldquo;Minimize IAM roles&rdquo; means each node (and workload identity) should hold only the specific cloud permissions it actually needs; a broad admin-level role attached to a node is a major escalation path if that node or a Pod on it is ever compromised.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Leave it as-is — broad IAM roles simplify future changes and should be preferred</strong> — Broad roles are precisely what least-privilege hardening seeks to eliminate, not preserve for convenience.<br>
-● <strong>Remove the IAM role entirely so the node has no cloud permissions at all, even ones it needs</strong> — Removing all permissions would break the node&rsquo;s legitimate needs (e.g. pulling images), rather than scoping the role correctly.<br>
-● <strong>Share that same broad role across every node and every workload identity for consistency</strong> — Sharing one broad role everywhere maximizes blast radius instead of containing it.</p>
-<p><small>Source: <a href="https://github.com/cncf/curriculum">CNCF Kubernetes Curriculum — System Hardening</a></small></p>
-
-</div>
-
 <h6 id="beyond-kernel-hardening-tools-which-additional-action-reduces-a-nodes-exposure-at-the-network-layer-in-line-with-minimize-external-access-to-the-network">Beyond kernel hardening tools, which additional action reduces a node&rsquo;s exposure at the network layer, in line with &ldquo;minimize external access to the network&rdquo;?</h6>
-<p>✅ Close or firewall off unnecessary open ports on the node (including restricting direct SSH access to only what&rsquo;s required, ideally via a bastion/allow-listed source), rather than leaving the host broadly reachable<br>
+<p>⬜ Close or firewall off unnecessary open ports on the node (including restricting direct SSH access to only what&rsquo;s required, ideally via a bastion/allow-listed source), rather than leaving the host broadly reachable<br>
 ⬜ Open every port on every node to the internet so troubleshooting is never blocked<br>
 ⬜ Disable the kubelet&rsquo;s TLS entirely to simplify connectivity<br>
 ⬜ Use the same SSH key across every node and hand it out to the whole engineering org</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Close or firewall off unnecessary open ports on the node (including restricting direct SSH access to only what&rsquo;s required, ideally via a bastion/allow-listed source), rather than leaving the host broadly reachable<br>
-System hardening extends past the kernel to the node&rsquo;s network exposure: unnecessary open ports and broadly reachable SSH access both widen what an external attacker can directly reach on the host, so both should be closed off or tightly restricted to trusted sources.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Open every port on every node to the internet so troubleshooting is never blocked</strong> — Opening every port to the internet is the direct opposite of minimizing external network access.<br>
-● <strong>Disable the kubelet&rsquo;s TLS entirely to simplify connectivity</strong> — Disabling kubelet TLS removes an important confidentiality/integrity control and isn&rsquo;t a network-exposure fix.<br>
-● <strong>Use the same SSH key across every node and hand it out to the whole engineering org</strong> — A single shared SSH key with broad distribution undermines both least privilege and accountability.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/concepts/security/security-checklist/">Kubernetes Security Checklist — Node Security</a></small></p>
-
-</div>
-
 <h3 id="domain-4-minimize-microservice-vulnerabilities-20">Domain 4: Minimize Microservice Vulnerabilities (20%)</h3>
 <hr>
 <h6 id="an-organization-wants-every-pod-deployed-in-the-prod-namespace-to-be-denied-if-it-requests-privileged-mode-host-networking-or-runs-as-root-what-is-the-cks-aligned-way-to-enforce-this-cluster-wide">An organization wants every Pod deployed in the <code>prod</code> namespace to be denied if it requests privileged mode, host networking, or runs as root. What is the CKS-aligned way to enforce this cluster-wide?</h6>
 <p>⬜ Rely on developers manually reviewing each other&rsquo;s manifests before every deployment<br>
-✅ Apply the <code>restricted</code> Pod Security Standard to the namespace via Pod Security Admission (or an equivalent policy engine like Kyverno/OPA Gatekeeper)<br>
+⬜ Apply the <code>restricted</code> Pod Security Standard to the namespace via Pod Security Admission (or an equivalent policy engine like Kyverno/OPA Gatekeeper)<br>
 ⬜ Add a comment in the README asking teams not to do this<br>
 ⬜ Set a ResourceQuota limiting the number of Pods in the namespace</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Apply the <code>restricted</code> Pod Security Standard to the namespace via Pod Security Admission (or an equivalent policy engine like Kyverno/OPA Gatekeeper)<br>
-Pod Security Admission enforces the built-in <code>restricted</code> Pod Security Standard at the namespace level (via a namespace label), automatically rejecting Pods that request privileged mode, host networking, or root — exactly the kind of &ldquo;set up appropriate OS-level security domains&rdquo; enforcement this domain expects, in place of manual review.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Rely on developers manually reviewing each other&rsquo;s manifests before every deployment</strong> — Manual review doesn&rsquo;t scale and isn&rsquo;t enforced by the platform — it&rsquo;s a process, not a control.<br>
-● <strong>Add a comment in the README asking teams not to do this</strong> — Documentation has no enforcement mechanism whatsoever.<br>
-● <strong>Set a ResourceQuota limiting the number of Pods in the namespace</strong> — A ResourceQuota limits object counts/compute, not the security posture of the Pods it allows.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/concepts/security/pod-security-standards/">Pod Security Standards</a></small></p>
-
-</div>
-
 <h6 id="a-cluster-needs-a-custom-policy-beyond-what-the-built-in-pod-security-standards-cover--for-example-rejecting-any-pod-that-doesnt-set-a-specific-label-required-for-cost-tracking-what-kind-of-tool-is-designed-for-this">A cluster needs a custom policy beyond what the built-in Pod Security Standards cover — for example, rejecting any Pod that doesn&rsquo;t set a specific label required for cost tracking. What kind of tool is designed for this?</h6>
 <p>⬜ A <code>LimitRange</code><br>
-✅ A policy engine such as OPA Gatekeeper or Kyverno, enforcing custom admission-time constraints<br>
+⬜ A policy engine such as OPA Gatekeeper or Kyverno, enforcing custom admission-time constraints<br>
 ⬜ A <code>HorizontalPodAutoscaler</code><br>
 ⬜ A <code>PriorityClass</code></p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> A policy engine such as OPA Gatekeeper or Kyverno, enforcing custom admission-time constraints<br>
-Pod Security Standards cover a fixed set of security-relevant fields; for arbitrary custom rules (required labels, allowed image registries, naming conventions, and more), a general-purpose policy engine like OPA Gatekeeper or Kyverno evaluates admission requests against organization-defined constraints (written as Rego or Kyverno policies).</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>A <code>LimitRange</code></strong> — A LimitRange only constrains resource requests/limits, not arbitrary custom policy.<br>
-● <strong>A <code>HorizontalPodAutoscaler</code></strong> — An HPA handles scaling, not admission-time policy enforcement.<br>
-● <strong>A <code>PriorityClass</code></strong> — A PriorityClass affects scheduling preemption, unrelated to custom policy rules.</p>
-<p><small>Source: <a href="https://open-policy-agent.github.io/gatekeeper/website/docs/">OPA Gatekeeper documentation</a></small></p>
-
-</div>
-
 <h6 id="a-pods-container-needs-to-run-as-a-specific-non-root-uid-and-must-never-be-allowed-to-escalate-privileges-even-if-the-images-dockerfile-specifies-user-root-where-should-this-be-enforced">A Pod&rsquo;s container needs to run as a specific non-root UID and must never be allowed to escalate privileges, even if the image&rsquo;s Dockerfile specifies <code>USER root</code>. Where should this be enforced?</h6>
 <p>⬜ In the image&rsquo;s Dockerfile only, since Kubernetes always trusts the image&rsquo;s declared user<br>
-✅ In the Pod&rsquo;s <code>securityContext</code>, setting <code>runAsNonRoot: true</code>, <code>runAsUser</code>, and <code>allowPrivilegeEscalation: false</code><br>
+⬜ In the Pod&rsquo;s <code>securityContext</code>, setting <code>runAsNonRoot: true</code>, <code>runAsUser</code>, and <code>allowPrivilegeEscalation: false</code><br>
 ⬜ In a ConfigMap read by the application at startup<br>
 ⬜ In an Ingress annotation</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> In the Pod&rsquo;s <code>securityContext</code>, setting <code>runAsNonRoot: true</code>, <code>runAsUser</code>, and <code>allowPrivilegeEscalation: false</code><br>
-Kubernetes lets the Pod/container <code>securityContext</code> override the image&rsquo;s declared user and explicitly forbid privilege escalation regardless of what the image itself specifies — this is the enforced control point, not a convention left to the image author.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>In the image&rsquo;s Dockerfile only, since Kubernetes always trusts the image&rsquo;s declared user</strong> — Trusting the Dockerfile alone is exactly the gap CKS hardening closes — an image can be built or altered to ignore that convention.<br>
-● <strong>In a ConfigMap read by the application at startup</strong> — A ConfigMap only supplies configuration data to an application; it has no security-enforcement capability.<br>
-● <strong>In an Ingress annotation</strong> — Ingress annotations affect routing/TLS termination at the edge, not container-level identity or privilege settings.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/tasks/configure-pod-container/security-context/">Configure a Security Context for a Pod or Container</a></small></p>
-
-</div>
-
 <h6 id="a-container-image-runs-as-non-root-and-cant-escalate-privileges-but-it-still-carries-linux-capabilities-like-net_raw-and-sys_admin-that-it-never-actually-uses-what-further-hardens-this-containers-securitycontext">A container image runs as non-root and can&rsquo;t escalate privileges, but it still carries Linux capabilities like <code>NET_RAW</code> and <code>SYS_ADMIN</code> that it never actually uses. What further hardens this container&rsquo;s <code>securityContext</code>?</h6>
-<p>✅ Drop all capabilities by default (<code>capabilities.drop: [&quot;ALL&quot;]</code>) and add back only the specific ones the container genuinely needs<br>
+<p>⬜ Drop all capabilities by default (<code>capabilities.drop: [&quot;ALL&quot;]</code>) and add back only the specific ones the container genuinely needs<br>
 ⬜ Leave the full default capability set attached, since running as non-root already removes all risk<br>
 ⬜ Add every available capability explicitly so nothing is ever unexpectedly denied<br>
 ⬜ Capabilities can only be managed at the node level, not per-container</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Drop all capabilities by default (<code>capabilities.drop: [&quot;ALL&quot;]</code>) and add back only the specific ones the container genuinely needs<br>
-Even a non-root, non-escalating process can still abuse unnecessary Linux capabilities (e.g. <code>NET_RAW</code> for packet crafting, <code>SYS_ADMIN</code> for a wide range of privileged operations); dropping all capabilities and explicitly adding back only what&rsquo;s required is the least-privilege pattern for container capabilities.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Leave the full default capability set attached, since running as non-root already removes all risk</strong> — Running as non-root reduces but does not eliminate the risk that unnecessary capabilities present.<br>
-● <strong>Add every available capability explicitly so nothing is ever unexpectedly denied</strong> — Adding every capability is the opposite of minimizing exposure and reintroduces powerful, unneeded permissions.<br>
-● <strong>Capabilities can only be managed at the node level, not per-container</strong> — Capabilities are configured per-container via <code>securityContext.capabilities</code>, not only at the node level.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/tasks/configure-pod-container/security-context/">Configure a Security Context for a Pod or Container</a></small></p>
-
-</div>
-
 <h6 id="which-kubernetes-object-is-specifically-designed-to-store-sensitive-values-such-as-passwords-or-api-keys-somewhat-more-safely-than-a-configmap-and-should-further-be-protected-with-encryption-at-rest-and-rbac-restrictions">Which Kubernetes object is specifically designed to store sensitive values such as passwords or API keys somewhat more safely than a ConfigMap, and should further be protected with encryption at rest and RBAC restrictions?</h6>
 <p>⬜ A ConfigMap<br>
-✅ A Secret<br>
+⬜ A Secret<br>
 ⬜ A LimitRange<br>
 ⬜ An Endpoint</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> A Secret<br>
-Secrets are the Kubernetes object intended for sensitive data; on their own they are only base64-encoded (not encrypted), so CKS hardening pairs them with encryption of Secret data at rest in etcd and RBAC rules that limit which identities may read them.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>A ConfigMap</strong> — A ConfigMap is meant for non-sensitive configuration data and has no special handling for confidentiality.<br>
-● <strong>A LimitRange</strong> — A LimitRange constrains resource requests/limits; it stores no application data at all.<br>
-● <strong>An Endpoint</strong> — An Endpoint object tracks the network addresses backing a Service; it isn&rsquo;t a data-storage object for credentials.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/concepts/configuration/secret/">Secrets</a></small></p>
-
-</div>
-
 <h6 id="to-prevent-secret-data-from-being-readable-in-plaintext-directly-from-the-etcd-data-store-on-disk-what-should-a-cluster-administrator-configure">To prevent Secret data from being readable in plaintext directly from the etcd data store on disk, what should a cluster administrator configure?</h6>
 <p>⬜ Nothing — etcd never persists Secret data to disk<br>
-✅ Encryption at rest for the Secrets resource, via an <code>EncryptionConfiguration</code> passed to the API server<br>
+⬜ Encryption at rest for the Secrets resource, via an <code>EncryptionConfiguration</code> passed to the API server<br>
 ⬜ A NetworkPolicy blocking traffic to etcd<br>
 ⬜ A larger etcd disk volume</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Encryption at rest for the Secrets resource, via an <code>EncryptionConfiguration</code> passed to the API server<br>
-By default, Secret data is stored in etcd as base64 (not encrypted); configuring an <code>EncryptionConfiguration</code> resource and passing it to the API server via <code>--encryption-provider-config</code> ensures Secret data is encrypted before being written to etcd&rsquo;s underlying storage.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Nothing — etcd never persists Secret data to disk</strong> — etcd does persist all cluster objects, Secrets included, to disk by default.<br>
-● <strong>A NetworkPolicy blocking traffic to etcd</strong> — A NetworkPolicy restricts network reachability to etcd but does nothing about the format the data is stored in on disk.<br>
-● <strong>A larger etcd disk volume</strong> — Disk size has no bearing on whether the data stored on it is encrypted.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/">Encrypting Confidential Data at Rest</a></small></p>
-
-</div>
-
 <h6 id="a-workload-runs-untrusted-third-party-code-and-the-team-wants-stronger-isolation-than-the-default-container-runtime-provides-up-to-and-including-isolating-the-workloads-kernel-interface-from-the-host-kernel-what-cks-aligned-control-addresses-this">A workload runs untrusted, third-party code and the team wants stronger isolation than the default container runtime provides, up to and including isolating the workload&rsquo;s kernel interface from the host kernel. What CKS-aligned control addresses this?</h6>
 <p>⬜ A resource <code>limits.cpu</code> setting<br>
-✅ A sandboxed runtime (e.g. gVisor or Kata Containers) selected via a Kubernetes <code>RuntimeClass</code><br>
+⬜ A sandboxed runtime (e.g. gVisor or Kata Containers) selected via a Kubernetes <code>RuntimeClass</code><br>
 ⬜ A <code>PodDisruptionBudget</code><br>
 ⬜ A <code>HorizontalPodAutoscaler</code></p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> A sandboxed runtime (e.g. gVisor or Kata Containers) selected via a Kubernetes <code>RuntimeClass</code><br>
-<code>RuntimeClass</code> lets a Pod opt into an alternate container runtime such as gVisor (a user-space kernel that intercepts syscalls) or Kata Containers (lightweight VM isolation), providing a much stronger isolation boundary than the default shared-kernel container runtime for workloads that can&rsquo;t be fully trusted — the recommended approach in multi-tenant environments.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>A resource <code>limits.cpu</code> setting</strong> — A CPU limit constrains resource consumption; it provides no additional kernel-level isolation.<br>
-● <strong>A <code>PodDisruptionBudget</code></strong> — A PodDisruptionBudget protects availability during voluntary disruptions, not workload isolation.<br>
-● <strong>A <code>HorizontalPodAutoscaler</code></strong> — A HorizontalPodAutoscaler adjusts replica count based on load; it&rsquo;s unrelated to sandboxing.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/concepts/containers/runtime-class/">Runtime Class</a></small></p>
-
-</div>
-
 <h6 id="two-microservices-exchange-sensitive-data-over-the-cluster-network-beyond-networkpolicy-segmentation-the-team-wants-the-traffic-itself-encrypted-and-both-sides-mutually-authenticated-at-the-connection-level-what-implements-this">Two microservices exchange sensitive data over the cluster network. Beyond NetworkPolicy segmentation, the team wants the traffic itself encrypted and both sides mutually authenticated at the connection level. What implements this?</h6>
-<p>✅ Mutual TLS (mTLS) between the services, typically provided by a service mesh (e.g. Istio, Linkerd) that automatically encrypts and authenticates Pod-to-Pod traffic<br>
+<p>⬜ Mutual TLS (mTLS) between the services, typically provided by a service mesh (e.g. Istio, Linkerd) that automatically encrypts and authenticates Pod-to-Pod traffic<br>
 ⬜ A <code>ResourceQuota</code> on both namespaces<br>
 ⬜ A <code>HorizontalPodAutoscaler</code> shared between the two Services<br>
 ⬜ Renaming both Services to use HTTPS-sounding names</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Mutual TLS (mTLS) between the services, typically provided by a service mesh (e.g. Istio, Linkerd) that automatically encrypts and authenticates Pod-to-Pod traffic<br>
-NetworkPolicy controls <em>which</em> Pods may talk to which, but not whether that traffic is encrypted or the identities on each end are verified; mTLS — commonly provided transparently by a service mesh — encrypts Pod-to-Pod traffic and authenticates both sides using certificates, directly implementing &ldquo;implement pod-to-pod encryption by use of mTLS.&rdquo;</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>A <code>ResourceQuota</code> on both namespaces</strong> — A ResourceQuota governs resource/object counts, not traffic encryption.<br>
-● <strong>A <code>HorizontalPodAutoscaler</code> shared between the two Services</strong> — An HPA is a scaling mechanism unrelated to transport security.<br>
-● <strong>Renaming both Services to use HTTPS-sounding names</strong> — A Service&rsquo;s name has no bearing on whether its traffic is actually encrypted.</p>
-<p><small>Source: <a href="https://istio.io/latest/docs/concepts/security/#mutual-tls-authentication">Istio — Mutual TLS Authentication</a></small></p>
-
-</div>
-
 <h6 id="a-pod-definition-includes-hostpid-true-and-hostnetwork-true-from-a-security-hardening-standpoint-what-is-the-concern-and-what-should-generally-be-done">A Pod definition includes <code>hostPID: true</code> and <code>hostNetwork: true</code>. From a security-hardening standpoint, what is the concern, and what should generally be done?</h6>
-<p>✅ These settings let the container see host processes and use the host&rsquo;s network namespace directly, significantly widening what a compromised container can reach; they should be avoided unless there&rsquo;s a specific, justified need and should be blocked by policy otherwise<br>
+<p>⬜ These settings let the container see host processes and use the host&rsquo;s network namespace directly, significantly widening what a compromised container can reach; they should be avoided unless there&rsquo;s a specific, justified need and should be blocked by policy otherwise<br>
 ⬜ These settings are purely cosmetic and have no security implication<br>
 ⬜ These settings only affect how the Pod is billed for compute, not its access<br>
 ⬜ These settings are required on every Pod for the cluster to function</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> These settings let the container see host processes and use the host&rsquo;s network namespace directly, significantly widening what a compromised container can reach; they should be avoided unless there&rsquo;s a specific, justified need and should be blocked by policy otherwise<br>
-<code>hostPID</code> and <code>hostNetwork</code> remove key namespace isolation boundaries between the container and the host, letting a compromised container observe host processes or interact directly with the host&rsquo;s network stack — Pod Security Standards (<code>baseline</code>/<code>restricted</code>) explicitly disallow these fields, and CKS hardening enforces that via admission policy rather than convention.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>These settings are purely cosmetic and have no security implication</strong> — These fields have direct, significant security implications — they are not cosmetic.<br>
-● <strong>These settings only affect how the Pod is billed for compute, not its access</strong> — They affect isolation and access, not billing/metering.<br>
-● <strong>These settings are required on every Pod for the cluster to function</strong> — The vast majority of workloads run correctly without either field; they are not a general requirement.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/concepts/security/pod-security-standards/">Pod Security Standards</a></small></p>
-
-</div>
-
 <h6 id="an-organization-has-multiple-teams-sharing-a-single-cluster-and-wants-strong-isolation-guarantees-between-their-workloads-without-provisioning-separate-physical-clusters-for-each-what-cks-relevant-concept-addresses-this-trade-off-directly">An organization has multiple teams sharing a single cluster and wants strong isolation guarantees between their workloads without provisioning separate physical clusters for each. What CKS-relevant concept addresses this trade-off directly?</h6>
 <p>⬜ HorizontalPodAutoscaler tuning<br>
-✅ Multi-tenancy isolation techniques (namespaces + RBAC + NetworkPolicy + resource quotas, and where needed, sandboxed runtimes or virtual clusters)<br>
+⬜ Multi-tenancy isolation techniques (namespaces + RBAC + NetworkPolicy + resource quotas, and where needed, sandboxed runtimes or virtual clusters)<br>
 ⬜ Increasing the etcd disk size<br>
 ⬜ Disabling RBAC to simplify cross-team access</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Multi-tenancy isolation techniques (namespaces + RBAC + NetworkPolicy + resource quotas, and where needed, sandboxed runtimes or virtual clusters)<br>
-Kubernetes multi-tenancy is achieved by layering several controls together — namespace-scoped RBAC, NetworkPolicy segmentation, ResourceQuotas, and where isolation needs to be stronger, sandboxed runtimes (RuntimeClass) or dedicated virtual clusters — rather than any single feature providing full tenant isolation on its own.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>HorizontalPodAutoscaler tuning</strong> — HPA tuning addresses scaling behavior, not tenant isolation.<br>
-● <strong>Increasing the etcd disk size</strong> — etcd disk sizing is a capacity concern unrelated to isolating tenants from one another.<br>
-● <strong>Disabling RBAC to simplify cross-team access</strong> — Disabling RBAC removes the primary access-control layer and would weaken, not strengthen, multi-tenant isolation.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/concepts/security/multi-tenancy/">Multi-tenancy</a></small></p>
-
-</div>
-
 <h3 id="domain-5-supply-chain-security-20">Domain 5: Supply Chain Security (20%)</h3>
 <hr>
 <h6 id="a-cluster-administrator-wants-to-restrict-which-container-registries-workloads-in-a-cluster-are-allowed-to-pull-images-from-rejecting-any-pod-that-references-an-untrusted-registry-which-mechanism-enforces-this-at-admission-time">A cluster administrator wants to restrict which container registries workloads in a cluster are allowed to pull images from, rejecting any Pod that references an untrusted registry. Which mechanism enforces this at admission time?</h6>
 <p>⬜ A NetworkPolicy scoped to egress traffic<br>
-✅ An admission controller (e.g. <code>ImagePolicyWebhook</code> or a policy engine like OPA Gatekeeper/Kyverno) that validates the image reference against an allow-list of registries<br>
+⬜ An admission controller (e.g. <code>ImagePolicyWebhook</code> or a policy engine like OPA Gatekeeper/Kyverno) that validates the image reference against an allow-list of registries<br>
 ⬜ A ResourceQuota on the namespace<br>
 ⬜ A PodDisruptionBudget</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> An admission controller (e.g. <code>ImagePolicyWebhook</code> or a policy engine like OPA Gatekeeper/Kyverno) that validates the image reference against an allow-list of registries<br>
-Whitelisting allowed registries is an admission-time decision, enforced by an admission controller such as <code>ImagePolicyWebhook</code> or a policy engine (OPA Gatekeeper, Kyverno) with a constraint that rejects any image reference outside an allow-listed set of registries.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>A NetworkPolicy scoped to egress traffic</strong> — A NetworkPolicy controls Pod-to-Pod and Pod-to-external network traffic; it has no visibility into which registry an image was pulled from.<br>
-● <strong>A ResourceQuota on the namespace</strong> — A ResourceQuota limits aggregate compute/object counts in a namespace, not image provenance.<br>
-● <strong>A PodDisruptionBudget</strong> — A PodDisruptionBudget protects application availability during voluntary disruptions; it plays no role in admission control.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/concepts/security/controlling-access/">Controlling Access to the Kubernetes API</a></small></p>
-
-</div>
-
 <h6 id="before-deploying-a-set-of-kubernetes-yaml-manifests-to-a-cluster-a-security-conscious-pipeline-should-run-which-type-of-check-to-catch-insecure-configuration-before-it-ever-reaches-the-api-server">Before deploying a set of Kubernetes YAML manifests to a cluster, a security-conscious pipeline should run which type of check to catch insecure configuration before it ever reaches the API server?</h6>
 <p>⬜ A live penetration test against the running Pods<br>
-✅ Static analysis of the manifests (e.g. with <code>kubesec</code>, <code>kube-score</code>, or <code>conftest</code>/OPA policies) as a pre-deployment pipeline step<br>
+⬜ Static analysis of the manifests (e.g. with <code>kubesec</code>, <code>kube-score</code>, or <code>conftest</code>/OPA policies) as a pre-deployment pipeline step<br>
 ⬜ A <code>kubectl get events --watch</code> session after deployment<br>
 ⬜ Manual review of node <code>/var/log</code> files post-deployment</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Static analysis of the manifests (e.g. with <code>kubesec</code>, <code>kube-score</code>, or <code>conftest</code>/OPA policies) as a pre-deployment pipeline step<br>
-Static analysis tools evaluate manifests (privileged containers, missing resource limits, host namespace usage, and similar) before they&rsquo;re ever applied, catching insecure configuration at the earliest and cheapest point — the &ldquo;static analysis of user workloads&rdquo; practice named directly in the Supply Chain Security domain.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>A live penetration test against the running Pods</strong> — Penetration testing evaluates a running system; it doesn&rsquo;t catch problems before manifests are ever deployed.<br>
-● <strong>A <code>kubectl get events --watch</code> session after deployment</strong> — Watching events reacts to what&rsquo;s already running, not to configuration before deployment.<br>
-● <strong>Manual review of node <code>/var/log</code> files post-deployment</strong> — Log review is a post-hoc, reactive check, not a pre-deployment gate.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/concepts/security/security-checklist/">Kubernetes Security Checklist</a></small></p>
-
-</div>
-
 <h6 id="which-of-the-following-is-the-most-effective-way-to-minimize-the-vulnerabilities-present-in-a-container-image-before-its-ever-deployed">Which of the following is the <em>most</em> effective way to minimize the vulnerabilities present in a container image before it&rsquo;s ever deployed?</h6>
 <p>⬜ Add a <code>readinessProbe</code> to the Pod spec<br>
-✅ Build from a minimal, actively maintained base image, keep it updated, and remove build-time tools/package managers from the final image<br>
+⬜ Build from a minimal, actively maintained base image, keep it updated, and remove build-time tools/package managers from the final image<br>
 ⬜ Increase the Pod&rsquo;s memory limit<br>
 ⬜ Add more application replicas</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Build from a minimal, actively maintained base image, keep it updated, and remove build-time tools/package managers from the final image<br>
-Minimizing the base image&rsquo;s footprint (using a minimal or distroless base, applying security patches, and not shipping compilers/package managers/shells that aren&rsquo;t needed at runtime) directly shrinks the number of known CVEs and available attack tools present in the final image.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Add a <code>readinessProbe</code> to the Pod spec</strong> — A readinessProbe affects traffic routing/health, not what&rsquo;s present inside the image.<br>
-● <strong>Increase the Pod&rsquo;s memory limit</strong> — A larger memory limit affects resource allocation, not image contents.<br>
-● <strong>Add more application replicas</strong> — More replicas increase availability, not image security.</p>
-<p><small>Source: <a href="https://github.com/cncf/curriculum">CNCF Kubernetes Curriculum — Supply Chain Security</a></small></p>
-
-</div>
-
 <h6 id="a-pipeline-needs-to-fail-the-build-automatically-if-a-container-image-contains-any-package-with-a-known-critical-severity-cve-what-kind-of-tool-should-be-integrated-into-the-ci-pipeline">A pipeline needs to fail the build automatically if a container image contains any package with a known Critical-severity CVE. What kind of tool should be integrated into the CI pipeline?</h6>
 <p>⬜ A load testing tool<br>
-✅ A container image vulnerability scanner (e.g. Trivy or Grype) run against the built image<br>
+⬜ A container image vulnerability scanner (e.g. Trivy or Grype) run against the built image<br>
 ⬜ A DNS resolver<br>
 ⬜ A log aggregator</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> A container image vulnerability scanner (e.g. Trivy or Grype) run against the built image<br>
-Image vulnerability scanners inspect an image&rsquo;s installed packages against known-CVE databases and can be wired into CI to fail the pipeline above a chosen severity threshold, stopping vulnerable images before they&rsquo;re pushed to a registry — the standard &ldquo;scan images for known vulnerabilities&rdquo; control.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>A load testing tool</strong> — Load testing evaluates performance under load, not package-level vulnerabilities.<br>
-● <strong>A DNS resolver</strong> — A DNS resolver has no role in image inspection.<br>
-● <strong>A log aggregator</strong> — A log aggregator collects runtime logs; it doesn&rsquo;t inspect image contents before deployment.</p>
-<p><small>Source: <a href="https://trivy.dev/latest/docs/">Trivy documentation</a></small></p>
-
-</div>
-
 <h6 id="an-organization-wants-to-guarantee-that-only-images-built-by-their-own-trusted-ci-pipeline--and-not-an-image-with-the-same-tag-pushed-by-someone-else--are-ever-deployed-to-production-which-practice-most-directly-supports-this">An organization wants to guarantee that only images built by their own trusted CI pipeline — and not an image with the same tag pushed by someone else — are ever deployed to production. Which practice most directly supports this?</h6>
 <p>⬜ Always use the <code>:latest</code> tag so the newest image is automatically used<br>
-✅ Cryptographically sign images at build time and enforce signature verification at admission via a policy controller (e.g. Sigstore/cosign with Kyverno or Gatekeeper)<br>
+⬜ Cryptographically sign images at build time and enforce signature verification at admission via a policy controller (e.g. Sigstore/cosign with Kyverno or Gatekeeper)<br>
 ⬜ Rely on the registry&rsquo;s search feature to manually eyeball image names before deploying<br>
 ⬜ Store all images in a public, anonymous-write registry for convenience</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Cryptographically sign images at build time and enforce signature verification at admission via a policy controller (e.g. Sigstore/cosign with Kyverno or Gatekeeper)<br>
-Image signing (e.g. with cosign/Sigstore) at build time, combined with an admission-time policy that rejects any image lacking a valid, trusted signature, is what actually guarantees provenance — it cryptographically ties a deployed image back to the pipeline that built it, closing the gap a naming convention alone can&rsquo;t close.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Always use the <code>:latest</code> tag so the newest image is automatically used</strong> — The <code>:latest</code> tag says nothing about who built the image or whether it&rsquo;s trustworthy — tags are mutable and easily spoofed.<br>
-● <strong>Rely on the registry&rsquo;s search feature to manually eyeball image names before deploying</strong> — Manual name inspection can&rsquo;t detect a maliciously substituted image with an identical name/tag.<br>
-● <strong>Store all images in a public, anonymous-write registry for convenience</strong> — An anonymous-write registry makes it trivial for anyone to push a look-alike image, the opposite of provenance guarantees.</p>
-<p><small>Source: <a href="https://docs.sigstore.dev/">Sigstore / cosign documentation</a></small></p>
-
-</div>
-
 <h6 id="a-deployment-manifest-currently-pins-its-image-with-a-mutable-tag-eg-myappv2-which-could-later-be-overwritten-in-the-registry-to-point-at-different-image-content-what-change-makes-the-reference-immutable">A Deployment manifest currently pins its image with a mutable tag (e.g. <code>myapp:v2</code>), which could later be overwritten in the registry to point at different image content. What change makes the reference immutable?</h6>
-<p>✅ Pin the image by its content digest (e.g. <code>myapp@sha256:...</code>) instead of, or in addition to, the tag<br>
+<p>⬜ Pin the image by its content digest (e.g. <code>myapp@sha256:...</code>) instead of, or in addition to, the tag<br>
 ⬜ Switch to the <code>:latest</code> tag, which is guaranteed never to change<br>
 ⬜ Remove the image reference from the manifest entirely<br>
 ⬜ Pin the image by its file size instead</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Pin the image by its content digest (e.g. <code>myapp@sha256:...</code>) instead of, or in addition to, the tag<br>
-A tag is just a mutable pointer that can be repushed to reference different image content later; pinning by digest (the content hash) guarantees the exact same image bytes are pulled every time, which matters for both reproducibility and supply-chain integrity.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Switch to the <code>:latest</code> tag, which is guaranteed never to change</strong> — <code>:latest</code> is, if anything, the <em>most</em> mutable and frequently overwritten tag in common use.<br>
-● <strong>Remove the image reference from the manifest entirely</strong> — A Deployment without an image reference has nothing to pull and won&rsquo;t run.<br>
-● <strong>Pin the image by its file size instead</strong> — File size is not a supported or reliable way to pin image content in Kubernetes.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/concepts/containers/images/#image-names">Image names — digests</a></small></p>
-
-</div>
-
 <h6 id="a-team-currently-pulls-all-images-directly-from-public-docker-hub-with-no-internal-scanning-step-what-change-most-directly-improves-their-supply-chain-posture">A team currently pulls all images directly from public Docker Hub with no internal scanning step. What change most directly improves their supply-chain posture?</h6>
-<p>✅ Mirror or proxy approved images through a private, scanning-enabled registry (e.g. Harbor) so every image is scanned and policy-checked before it&rsquo;s available for deployment<br>
+<p>⬜ Mirror or proxy approved images through a private, scanning-enabled registry (e.g. Harbor) so every image is scanned and policy-checked before it&rsquo;s available for deployment<br>
 ⬜ Continue pulling directly from public registries, since public images are inherently trustworthy<br>
 ⬜ Disable image pull authentication so deployments never fail due to registry access issues<br>
 ⬜ Increase the Deployment&rsquo;s replica count to reduce reliance on any single image pull</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Mirror or proxy approved images through a private, scanning-enabled registry (e.g. Harbor) so every image is scanned and policy-checked before it&rsquo;s available for deployment<br>
-Routing images through a private registry with built-in scanning and policy enforcement (Harbor is a common CNCF-hosted choice) gives an organization a consistent choke point to catch vulnerable or non-compliant images before they can be deployed, rather than trusting whatever a public registry currently serves.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Continue pulling directly from public registries, since public images are inherently trustworthy</strong> — Public images vary enormously in maintenance and trustworthiness and cannot be assumed safe.<br>
-● <strong>Disable image pull authentication so deployments never fail due to registry access issues</strong> — Disabling pull authentication removes a control rather than adding scanning.<br>
-● <strong>Increase the Deployment&rsquo;s replica count to reduce reliance on any single image pull</strong> — Replica count affects availability, not whether the image content itself has been vetted.</p>
-<p><small>Source: <a href="https://goharbor.io/docs/">Harbor documentation</a></small></p>
-
-</div>
-
 <h6 id="a-team-wants-a-machine-readable-record-of-exactly-which-components-libraries-and-versions-went-into-a-container-image-to-support-vulnerability-tracing-later-what-artifact-should-be-generated-as-part-of-the-build">A team wants a machine-readable record of exactly which components, libraries, and versions went into a container image, to support vulnerability tracing later. What artifact should be generated as part of the build?</h6>
 <p>⬜ A <code>kubectl get events</code> dump<br>
-✅ A Software Bill of Materials (SBOM)<br>
+⬜ A Software Bill of Materials (SBOM)<br>
 ⬜ A <code>HorizontalPodAutoscaler</code> manifest<br>
 ⬜ An <code>Ingress</code> resource</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> A Software Bill of Materials (SBOM)<br>
-An SBOM enumerates every package and dependency (with versions) that make up a built artifact; generating one during the build (e.g. with <code>syft</code> or similar tooling) lets a team later trace which images are affected when a new CVE is disclosed in a specific library.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>A <code>kubectl get events</code> dump</strong> — An events dump reflects cluster runtime activity, not an image&rsquo;s build-time component inventory.<br>
-● <strong>A <code>HorizontalPodAutoscaler</code> manifest</strong> — A HorizontalPodAutoscaler manifest configures scaling behavior and has nothing to do with build provenance.<br>
-● <strong>An <code>Ingress</code> resource</strong> — An Ingress resource configures external routing; it carries no information about image contents.</p>
-<p><small>Source: <a href="https://github.com/cncf/curriculum">CNCF Kubernetes Curriculum — Supply Chain Security</a></small></p>
-
-</div>
-
 <h6 id="a-team-is-about-to-adopt-a-third-party-helm-chart-from-a-public-chart-repository-to-deploy-a-component-into-production-what-should-they-verify-before-trusting-it-beyond-simply-reading-its-valuesyaml">A team is about to adopt a third-party Helm chart from a public chart repository to deploy a component into production. What should they verify before trusting it, beyond simply reading its <code>values.yaml</code>?</h6>
-<p>✅ The chart&rsquo;s provenance/signature (if published) and the images it references, confirming both come from a trustworthy, verifiable source before installing it<br>
+<p>⬜ The chart&rsquo;s provenance/signature (if published) and the images it references, confirming both come from a trustworthy, verifiable source before installing it<br>
 ⬜ Nothing further — any chart published publicly can be assumed safe to install as-is<br>
 ⬜ Only that the chart&rsquo;s name doesn&rsquo;t contain any unusual characters<br>
 ⬜ Only that the chart has a high download count, regardless of its contents</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> The chart&rsquo;s provenance/signature (if published) and the images it references, confirming both come from a trustworthy, verifiable source before installing it<br>
-A Helm chart can reference arbitrary images and apply arbitrary RBAC/manifests to a cluster, so checking its provenance (Helm supports chart signing/provenance files) and the images it pulls is part of securing the supply chain, not just the images built in-house.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Nothing further — any chart published publicly can be assumed safe to install as-is</strong> — Public availability alone says nothing about a chart&rsquo;s trustworthiness or safety.<br>
-● <strong>Only that the chart&rsquo;s name doesn&rsquo;t contain any unusual characters</strong> — A chart&rsquo;s name has no bearing on its actual contents or safety.<br>
-● <strong>Only that the chart has a high download count, regardless of its contents</strong> — Popularity is a weak, gameable signal and no substitute for verifying provenance and contents.</p>
-<p><small>Source: <a href="https://helm.sh/docs/topics/provenance/">Helm — Provenance and Integrity</a></small></p>
-
-</div>
-
 <h6 id="an-attacker-compromises-a-ci-runners-credentials-and-pushes-a-malicious-commit-that-gets-built-and-deployed-automatically-even-though-every-image-the-pipeline-has-ever-produced-passed-its-vulnerability-scan-what-supply-chain-gap-does-this-expose">An attacker compromises a CI runner&rsquo;s credentials and pushes a malicious commit that gets built and deployed automatically, even though every image the pipeline has ever produced passed its vulnerability scan. What supply-chain gap does this expose?</h6>
-<p>✅ The build pipeline itself — its credentials, runner integrity, and who can trigger or approve a deployment — is part of the supply chain and must be secured, not just the resulting image<br>
+<p>⬜ The build pipeline itself — its credentials, runner integrity, and who can trigger or approve a deployment — is part of the supply chain and must be secured, not just the resulting image<br>
 ⬜ This scenario is impossible if every produced image passes vulnerability scanning<br>
 ⬜ Vulnerability scanning after the fact would have prevented this regardless of pipeline security<br>
 ⬜ Only the final production cluster&rsquo;s RBAC matters; the CI system is out of scope for supply chain security</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> The build pipeline itself — its credentials, runner integrity, and who can trigger or approve a deployment — is part of the supply chain and must be secured, not just the resulting image<br>
-A clean vulnerability scan only says a given image has no known-CVE packages — it says nothing about whether the pipeline that built it was itself compromised. Securing the supply chain has to include the build system: restricting who can trigger builds, protecting CI credentials/runners, and requiring review/approval before a build reaches production, since a compromised pipeline can produce a &ldquo;clean&rdquo; but malicious image on demand.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>This scenario is impossible if every produced image passes vulnerability scanning</strong> — Compromised CI credentials leading to an unauthorized, automatically-built-and-deployed change is a well-documented real-world attack pattern (e.g. build-system compromises), not a hypothetical impossibility.<br>
-● <strong>Vulnerability scanning after the fact would have prevented this regardless of pipeline security</strong> — A vulnerability scan checks known-CVE packages; it has no way to detect a maliciously introduced code change that isn&rsquo;t a known vulnerability.<br>
-● <strong>Only the final production cluster&rsquo;s RBAC matters; the CI system is out of scope for supply chain security</strong> — Cluster-side RBAC doesn&rsquo;t help if the compromised pipeline has legitimate deploy credentials of its own — pipeline security has to be addressed directly.</p>
-<p><small>Source: <a href="https://github.com/cncf/curriculum">CNCF Kubernetes Curriculum — Supply Chain Security</a></small></p>
-
-</div>
-
 <h3 id="domain-6-monitoring-logging-and-runtime-security-20">Domain 6: Monitoring, Logging and Runtime Security (20%)</h3>
 <hr>
 <h6 id="a-security-team-wants-to-detect-unusual-behavior-at-runtime--for-example-a-container-unexpectedly-spawning-a-shell-or-writing-to-a-sensitive-host-path--as-it-happens-not-after-the-fact-in-application-logs-which-class-of-tool-is-purpose-built-for-this">A security team wants to detect unusual behavior at runtime — for example, a container unexpectedly spawning a shell or writing to a sensitive host path — as it happens, not after the fact in application logs. Which class of tool is purpose-built for this?</h6>
 <p>⬜ A container image vulnerability scanner<br>
-✅ A runtime behavioral-analytics/threat-detection tool such as Falco<br>
+⬜ A runtime behavioral-analytics/threat-detection tool such as Falco<br>
 ⬜ A <code>HorizontalPodAutoscaler</code><br>
 ⬜ A <code>NetworkPolicy</code></p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> A runtime behavioral-analytics/threat-detection tool such as Falco<br>
-Falco (and similar runtime security tools) observes kernel-level events (syscalls) in real time and matches them against rules describing suspicious behavior — an unexpected shell spawned inside a container, a write to a sensitive path, a process making an unexpected outbound connection — alerting as the activity happens.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>A container image vulnerability scanner</strong> — An image scanner evaluates a static image before deployment; it has no visibility into live runtime behavior.<br>
-● <strong>A <code>HorizontalPodAutoscaler</code></strong> — An HPA reacts to resource metrics for scaling decisions, not behavioral security events.<br>
-● <strong>A <code>NetworkPolicy</code></strong> — A NetworkPolicy is a preventive network control, not a detection/alerting mechanism for runtime behavior.</p>
-<p><small>Source: <a href="https://falco.org/docs/">Falco documentation</a></small></p>
-
-</div>
-
 <h6 id="which-kubernetes-native-feature-records-who-did-what-to-which-resource-and-when-against-the-api-server--essential-for-after-the-fact-incident-investigation">Which Kubernetes-native feature records who did what, to which resource, and when, against the API server — essential for after-the-fact incident investigation?</h6>
 <p>⬜ <code>kubectl top nodes</code><br>
-✅ Kubernetes audit logging<br>
+⬜ Kubernetes audit logging<br>
 ⬜ <code>LivenessProbe</code> results<br>
 ⬜ The Horizontal Pod Autoscaler&rsquo;s metrics history</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Kubernetes audit logging<br>
-Kubernetes audit logging records a structured trail of every request made to the API server — who made it, what verb/resource, and the outcome — configured via an audit policy and audit backend, and is the primary data source investigators use to reconstruct what happened during and after a security incident.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong><code>kubectl top nodes</code></strong> — <code>kubectl top nodes</code> shows point-in-time resource usage, not a historical record of API requests.<br>
-● <strong><code>LivenessProbe</code> results</strong> — Liveness probe results reflect container health checks, not who accessed the API and when.<br>
-● <strong>The Horizontal Pod Autoscaler&rsquo;s metrics history</strong> — HPA metrics history tracks scaling-relevant metrics, not API request auditing.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/tasks/debug/debug-cluster/audit/">Auditing</a></small></p>
-
-</div>
-
 <h6 id="the-default-audit-policy-logs-every-request-at-metadata-level-but-the-security-team-wants-full-request-and-response-bodies-captured-specifically-for-secrets-access-without-generating-that-much-data-for-every-other-resource-what-should-be-configured">The default audit policy logs every request at <code>Metadata</code> level, but the security team wants full request AND response bodies captured specifically for <code>secrets</code> access, without generating that much data for every other resource. What should be configured?</h6>
-<p>✅ An audit policy with a specific rule matching <code>secrets</code> resources set to <code>RequestResponse</code> level, while lower-sensitivity resources stay at a lighter level such as <code>Metadata</code><br>
+<p>⬜ An audit policy with a specific rule matching <code>secrets</code> resources set to <code>RequestResponse</code> level, while lower-sensitivity resources stay at a lighter level such as <code>Metadata</code><br>
 ⬜ Set the entire cluster&rsquo;s audit level to <code>None</code> so no sensitive data is ever logged<br>
 ⬜ There is no way to vary audit detail by resource type — it&rsquo;s all-or-nothing<br>
 ⬜ Enable <code>RequestResponse</code> for every resource in the cluster regardless of sensitivity</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> An audit policy with a specific rule matching <code>secrets</code> resources set to <code>RequestResponse</code> level, while lower-sensitivity resources stay at a lighter level such as <code>Metadata</code><br>
-Kubernetes audit policies support per-rule levels (<code>None</code>, <code>Metadata</code>, <code>Request</code>, <code>RequestResponse</code>) scoped by resource, verb, or namespace, so a policy can capture full request/response bodies for sensitive resources like <code>secrets</code> while keeping lighter, cheaper logging for everything else.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Set the entire cluster&rsquo;s audit level to <code>None</code> so no sensitive data is ever logged</strong> — <code>None</code> disables logging entirely for the matched requests, the opposite of the stated goal.<br>
-● <strong>There is no way to vary audit detail by resource type — it&rsquo;s all-or-nothing</strong> — Audit policies are explicitly designed to be scoped per rule/resource, not all-or-nothing.<br>
-● <strong>Enable <code>RequestResponse</code> for every resource in the cluster regardless of sensitivity</strong> — Full <code>RequestResponse</code> logging for every resource generates significant log volume and captures unnecessary detail for low-sensitivity resources.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/tasks/debug/debug-cluster/audit/">Auditing — audit policy</a></small></p>
-
-</div>
-
 <h6 id="after-a-container-is-deployed-a-policy-states-that-its-filesystem-should-not-be-modifiable-at-runtime-reducing-the-chance-a-compromised-process-can-persist-malicious-changes-which-pod-setting-enforces-this">After a container is deployed, a policy states that its filesystem should not be modifiable at runtime, reducing the chance a compromised process can persist malicious changes. Which Pod setting enforces this?</h6>
 <p>⬜ <code>resources.limits.memory</code><br>
-✅ <code>securityContext.readOnlyRootFilesystem: true</code><br>
+⬜ <code>securityContext.readOnlyRootFilesystem: true</code><br>
 ⬜ <code>restartPolicy: Always</code><br>
 ⬜ <code>terminationGracePeriodSeconds</code></p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> <code>securityContext.readOnlyRootFilesystem: true</code><br>
-Setting <code>readOnlyRootFilesystem: true</code> in the container&rsquo;s <code>securityContext</code> mounts the container&rsquo;s root filesystem as read-only, so a compromised process cannot write new files or modify existing binaries/scripts on disk — directly supporting &ldquo;ensure immutability of containers at runtime.&rdquo;</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong><code>resources.limits.memory</code></strong> — A memory limit constrains resource consumption; it has no effect on filesystem writability.<br>
-● <strong><code>restartPolicy: Always</code></strong> — <code>restartPolicy</code> controls what happens when a container exits; it doesn&rsquo;t make the filesystem immutable while running.<br>
-● <strong><code>terminationGracePeriodSeconds</code></strong> — <code>terminationGracePeriodSeconds</code> affects shutdown timing, not filesystem mutability.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/tasks/configure-pod-container/security-context/">Configure a Security Context for a Pod or Container</a></small></p>
-
-</div>
-
 <h6 id="an-investigator-notices-repeated-unexpected-kubectl-exec-sessions-into-a-production-pod-outside-normal-deployment-hours-followed-by-outbound-connections-to-an-unfamiliar-ip-which-type-of-detection-made-both-of-these-observable-and-what-do-they-together-suggest">An investigator notices repeated, unexpected <code>kubectl exec</code> sessions into a production Pod outside normal deployment hours, followed by outbound connections to an unfamiliar IP. Which type of detection made both of these observable, and what do they together suggest?</h6>
-<p>✅ Runtime behavioral monitoring (e.g. Falco rules on <code>exec</code> events) combined with network/audit visibility surfaced a likely lateral-movement or data-exfiltration attempt, not two unrelated events<br>
+<p>⬜ Runtime behavioral monitoring (e.g. Falco rules on <code>exec</code> events) combined with network/audit visibility surfaced a likely lateral-movement or data-exfiltration attempt, not two unrelated events<br>
 ⬜ Both events are routine and require no further investigation<br>
 ⬜ Only application logs could have shown this, since Kubernetes has no way to observe <code>exec</code> sessions<br>
 ⬜ This pattern can only be detected after the cluster is fully rebuilt</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Runtime behavioral monitoring (e.g. Falco rules on <code>exec</code> events) combined with network/audit visibility surfaced a likely lateral-movement or data-exfiltration attempt, not two unrelated events<br>
-<code>kubectl exec</code> events can be captured both in Kubernetes audit logs and by runtime tools like Falco (which ships default rules for exactly this), and unusual outbound connections following an unexpected exec session is a textbook lateral-movement/exfiltration pattern — correlating the two, rather than viewing them as isolated events, is what &ldquo;detect all phases of an attack&rdquo; is about.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Both events are routine and require no further investigation</strong> — Unexpected interactive access outside normal hours followed by unfamiliar outbound traffic is a strong anomaly, not routine activity.<br>
-● <strong>Only application logs could have shown this, since Kubernetes has no way to observe <code>exec</code> sessions</strong> — Kubernetes audit logging captures <code>exec</code> sub-resource requests; it is directly observable, not invisible.<br>
-● <strong>This pattern can only be detected after the cluster is fully rebuilt</strong> — Detection and investigation should happen without waiting for a full rebuild — that destroys evidence needed for the investigation itself.</p>
-<p><small>Source: <a href="https://falco.org/docs/">Falco documentation</a></small></p>
-
-</div>
-
 <h6 id="during-incident-response-a-compromised-pod-is-discovered-what-should-generally-happen-before-the-pod-is-deleted-or-the-node-is-rebooted">During incident response, a compromised Pod is discovered. What should generally happen <em>before</em> the Pod is deleted or the node is rebooted?</h6>
-<p>✅ Preserve evidence — capture logs, a process/memory snapshot if possible, and relevant audit trail — so the incident can be properly investigated, rather than destroying state that the investigation needs<br>
+<p>⬜ Preserve evidence — capture logs, a process/memory snapshot if possible, and relevant audit trail — so the incident can be properly investigated, rather than destroying state that the investigation needs<br>
 ⬜ Immediately delete the Pod and move on, since evidence preservation isn&rsquo;t relevant in Kubernetes environments<br>
 ⬜ Immediately reboot the node to &ldquo;clean&rdquo; it before anyone looks at it<br>
 ⬜ Grant the compromised Pod additional permissions so it can be observed more easily</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Preserve evidence — capture logs, a process/memory snapshot if possible, and relevant audit trail — so the incident can be properly investigated, rather than destroying state that the investigation needs<br>
-Deleting a compromised Pod or rebooting its node destroys in-memory state, running-process evidence, and often local logs before they can be captured — proper incident response captures that evidence first (or isolates the workload rather than terminating it outright), supporting deep analytical investigation and identification of what actually happened.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Immediately delete the Pod and move on, since evidence preservation isn&rsquo;t relevant in Kubernetes environments</strong> — Evidence preservation is a standard, important step in any Kubernetes incident response, not something to skip.<br>
-● <strong>Immediately reboot the node to &ldquo;clean&rdquo; it before anyone looks at it</strong> — Rebooting before investigation destroys volatile evidence the investigation depends on.<br>
-● <strong>Grant the compromised Pod additional permissions so it can be observed more easily</strong> — Granting more permissions to a compromised workload increases risk rather than aiding safe observation.</p>
-<p><small>Source: <a href="https://github.com/cncf/curriculum">CNCF Kubernetes Curriculum — Monitoring, Logging and Runtime Security</a></small></p>
-
-</div>
-
 <h6 id="a-team-wants-kubernetes-audit-logs-correlated-with-node-level-and-application-logs-in-a-central-system-so-a-security-analyst-can-investigate-an-incident-across-all-three-sources-at-once-what-supports-this">A team wants Kubernetes audit logs correlated with node-level and application logs in a central system, so a security analyst can investigate an incident across all three sources at once. What supports this?</h6>
-<p>✅ Configure an audit backend (e.g. webhook) to forward audit events to a central log aggregation/SIEM system alongside node and application logs<br>
+<p>⬜ Configure an audit backend (e.g. webhook) to forward audit events to a central log aggregation/SIEM system alongside node and application logs<br>
 ⬜ Keep audit logs only on the API server&rsquo;s local disk with no forwarding, since correlation isn&rsquo;t possible in Kubernetes<br>
 ⬜ Disable node and application logging so only audit logs need to be reviewed<br>
 ⬜ Manually copy log files between systems once a year</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Configure an audit backend (e.g. webhook) to forward audit events to a central log aggregation/SIEM system alongside node and application logs<br>
-Kubernetes supports a webhook audit backend that forwards audit events to an external system in near real time; routing audit events into the same log aggregation/SIEM platform as node and application logs is what actually enables cross-source correlation during an investigation.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Keep audit logs only on the API server&rsquo;s local disk with no forwarding, since correlation isn&rsquo;t possible in Kubernetes</strong> — Leaving logs local and unforwarded prevents exactly the kind of centralized correlation the scenario asks for.<br>
-● <strong>Disable node and application logging so only audit logs need to be reviewed</strong> — Disabling other log sources removes visibility rather than enabling correlation across sources.<br>
-● <strong>Manually copy log files between systems once a year</strong> — Infrequent manual copying is far too slow to support timely incident investigation.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/tasks/debug/debug-cluster/audit/">Auditing — audit backends</a></small></p>
-
-</div>
-
 <h6 id="a-pod-was-deployed-from-an-image-that-passed-vulnerability-scanning-and-has-readonlyrootfilesystem-true-yet-a-runtime-tool-alerts-that-a-new-unexpected-binary-appeared-inside-one-of-its-writable-volume-mounts-what-does-this-most-likely-indicate-and-what-kind-of-control-caught-it">A Pod was deployed from an image that passed vulnerability scanning and has <code>readOnlyRootFilesystem: true</code>, yet a runtime tool alerts that a new, unexpected binary appeared inside one of its writable volume mounts. What does this most likely indicate, and what kind of control caught it?</h6>
-<p>✅ Runtime integrity/behavioral monitoring caught a likely compromise or drift from the container&rsquo;s expected, immutable state — exactly the kind of detection that build-time scanning alone cannot provide<br>
+<p>⬜ Runtime integrity/behavioral monitoring caught a likely compromise or drift from the container&rsquo;s expected, immutable state — exactly the kind of detection that build-time scanning alone cannot provide<br>
 ⬜ This is expected behavior and requires no investigation, since read-only root filesystem guarantees full immutability everywhere in the Pod<br>
 ⬜ It means the vulnerability scan must have been run incorrectly and should simply be re-run<br>
 ⬜ Writable volume mounts cannot be monitored at runtime, so this alert should be ignored</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Runtime integrity/behavioral monitoring caught a likely compromise or drift from the container&rsquo;s expected, immutable state — exactly the kind of detection that build-time scanning alone cannot provide<br>
-<code>readOnlyRootFilesystem</code> only protects the container&rsquo;s root filesystem — a writable volume mount is still writable, and an unexpected new binary appearing there at runtime is a classic sign of compromise or drift that only runtime monitoring (not a one-time build-time scan) can catch, illustrating why runtime security is a distinct domain from Supply Chain Security.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>This is expected behavior and requires no investigation, since read-only root filesystem guarantees full immutability everywhere in the Pod</strong> — A read-only root filesystem does not make writable volume mounts immutable — this is not expected, benign behavior.<br>
-● <strong>It means the vulnerability scan must have been run incorrectly and should simply be re-run</strong> — A clean build-time scan says nothing about what happens to a running container afterward; re-running the scan wouldn&rsquo;t explain a runtime change.<br>
-● <strong>Writable volume mounts cannot be monitored at runtime, so this alert should be ignored</strong> — Writable mounts absolutely can and should be monitored at runtime by tools like Falco watching filesystem events.</p>
-<p><small>Source: <a href="https://falco.org/docs/">Falco documentation</a></small></p>
-
-</div>
-
 <h6 id="a-platform-team-wants-to-proactively-verify-before-granting-access-exactly-what-a-given-serviceaccount-is-authorized-to-do-against-the-api--as-a-preventive-check-rather-than-waiting-to-detect-misuse-after-the-fact-which-commandapproach-supports-this">A platform team wants to proactively verify, before granting access, exactly what a given ServiceAccount is authorized to do against the API — as a preventive check rather than waiting to detect misuse after the fact. Which command/approach supports this?</h6>
-<p>✅ <code>kubectl auth can-i --as=system:serviceaccount:&lt;ns&gt;:&lt;sa&gt; &lt;verb&gt; &lt;resource&gt;</code> to check authorization before an incident, distinct from runtime detection tools that catch misuse after it happens<br>
+<p>⬜ <code>kubectl auth can-i --as=system:serviceaccount:&lt;ns&gt;:&lt;sa&gt; &lt;verb&gt; &lt;resource&gt;</code> to check authorization before an incident, distinct from runtime detection tools that catch misuse after it happens<br>
 ⬜ Reviewing Falco alerts only, since that is the only way to know what a ServiceAccount can do<br>
 ⬜ Waiting for an audit log entry showing misuse, since permissions can&rsquo;t be checked in advance<br>
 ⬜ Assuming every ServiceAccount has the same permissions as <code>cluster-admin</code></p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> <code>kubectl auth can-i --as=system:serviceaccount:&lt;ns&gt;:&lt;sa&gt; &lt;verb&gt; &lt;resource&gt;</code> to check authorization before an incident, distinct from runtime detection tools that catch misuse after it happens<br>
-<code>kubectl auth can-i --as=...</code> is a preventive, RBAC-review tool that answers &ldquo;what is this identity actually allowed to do&rdquo; before anything runs — complementary to, and distinct from, detective controls like Falco or audit logs that surface what already happened; CKS expects candidates to be comfortable with both preventive and detective layers.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>Reviewing Falco alerts only, since that is the only way to know what a ServiceAccount can do</strong> — Falco reports observed runtime behavior; it doesn&rsquo;t answer what an identity is authorized to do in advance.<br>
-● <strong>Waiting for an audit log entry showing misuse, since permissions can&rsquo;t be checked in advance</strong> — RBAC permissions are queryable ahead of time via <code>kubectl auth can-i</code> — waiting for misuse defeats the purpose of a preventive check.<br>
-● <strong>Assuming every ServiceAccount has the same permissions as <code>cluster-admin</code></strong> — Assuming uniform <code>cluster-admin</code>-level access is both inaccurate and the opposite of least-privilege review.</p>
-<p><small>Source: <a href="https://kubernetes.io/docs/reference/access-authn-authz/authorization/#checking-api-access">Checking API Access</a></small></p>
-
-</div>
-
 <h6 id="which-statement-best-captures-why-detect-threats-within-physical-infrastructure-apps-networks-data-users-and-workloads-is-framed-as-a-single-cross-cutting-competency-rather-than-several-separate-ones">Which statement best captures why &ldquo;detect threats within physical infrastructure, apps, networks, data, users, and workloads&rdquo; is framed as a single, cross-cutting competency rather than several separate ones?</h6>
-<p>✅ Real incidents rarely stay confined to one layer — an attacker can pivot through infrastructure, network, or identity weaknesses just as easily as an application bug, so effective detection has to span every layer together<br>
+<p>⬜ Real incidents rarely stay confined to one layer — an attacker can pivot through infrastructure, network, or identity weaknesses just as easily as an application bug, so effective detection has to span every layer together<br>
 ⬜ It means only application-level logging is necessary, since Kubernetes secures the rest automatically<br>
 ⬜ It means physical hardware never needs to be considered once workloads are containerized<br>
 ⬜ It means every alert should be routed only to the application development team</p>
-<div class="quiz-explanation">
-<div class="quiz-explanation-title">Explanation</div>
-<p><strong>Correct answer:</strong> Real incidents rarely stay confined to one layer — an attacker can pivot through infrastructure, network, or identity weaknesses just as easily as an application bug, so effective detection has to span every layer together<br>
-A leaked credential (identity), a misconfigured NetworkPolicy (network), an unpatched node (infrastructure), or a vulnerable dependency (application) can each be an entry point, so monitoring and detection are only effective when they cover infrastructure, network, identity, data, and workload layers together, not just the application.</p>
-<p><strong>Why the other options are incorrect:</strong><br>
-● <strong>It means only application-level logging is necessary, since Kubernetes secures the rest automatically</strong> — Kubernetes does not automatically secure or monitor every layer on a team&rsquo;s behalf; layered monitoring must be deliberately built.<br>
-● <strong>It means physical hardware never needs to be considered once workloads are containerized</strong> — Physical/infrastructure security remains relevant even when workloads are containerized — the host and hardware are still part of the attack surface.<br>
-● <strong>It means every alert should be routed only to the application development team</strong> — Different layers typically need routing to the teams who can actually act on them (platform, network, security, application), not a single team regardless of layer.</p>
-<p><small>Source: <a href="https://github.com/cncf/curriculum">CNCF Kubernetes Curriculum — Monitoring, Logging and Runtime Security</a></small></p>
-
-</div>
-
 </div>
 <hr>
 <br/>
@@ -1653,7 +1046,7 @@ A leaked credential (identity), a misconfigured NetworkPolicy (network), an unpa
       
       
       <li>
-        <a href="whatsapp://send?text=Certified%20Kubernetes%20Security%20Specialist%20%28CKS%29%20Exam%20Questions%2c%20by%20Coding%20N%20Concepts%0aFree%20Certified%20Kubernetes%20Security%20Specialist%20%28CKS%29%20exam%20questions%20with%20verified%20answers%20and%20explanations%2c%20plus%20a%20free%20timed%20online%20practice%20exam.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fcloud%2fkubernetes-security-specialist-cks-exam-questions%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=Certified%20Kubernetes%20Security%20Specialist%20%28CKS%29%20Exam%20Questions%2c%20by%20Coding%20N%20Concepts%0aFree%20Certified%20Kubernetes%20Security%20Specialist%20%28CKS%29%20exam%20questions%20by%20exam%20domain%2c%20plus%20a%20timed%20online%20practice%20exam%20with%20answers%20and%20explanations.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fcloud%2fkubernetes-security-specialist-cks-exam-questions%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>WhatsApp</p>
         </a>
@@ -1663,7 +1056,7 @@ A leaked credential (identity), a misconfigured NetworkPolicy (network), an unpa
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - Certified%20Kubernetes%20Security%20Specialist%20%28CKS%29%20Exam%20Questions.&amp;body=Certified%20Kubernetes%20Security%20Specialist%20%28CKS%29%20Exam%20Questions%2c%20by%20Coding%20N%20Concepts%0aFree%20Certified%20Kubernetes%20Security%20Specialist%20%28CKS%29%20exam%20questions%20with%20verified%20answers%20and%20explanations%2c%20plus%20a%20free%20timed%20online%20practice%20exam.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fcloud%2fkubernetes-security-specialist-cks-exam-questions%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - Certified%20Kubernetes%20Security%20Specialist%20%28CKS%29%20Exam%20Questions.&amp;body=Certified%20Kubernetes%20Security%20Specialist%20%28CKS%29%20Exam%20Questions%2c%20by%20Coding%20N%20Concepts%0aFree%20Certified%20Kubernetes%20Security%20Specialist%20%28CKS%29%20exam%20questions%20by%20exam%20domain%2c%20plus%20a%20timed%20online%20practice%20exam%20with%20answers%20and%20explanations.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2fcloud%2fkubernetes-security-specialist-cks-exam-questions%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>
