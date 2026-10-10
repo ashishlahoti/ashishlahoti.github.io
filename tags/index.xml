@@ -9,11 +9,35 @@
     <copyright>CodingNConcepts</copyright>
     <lastBuildDate>Sat, 10 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>AI</title>
+      <link>https://codingnconcepts.com/tags/ai/</link>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI Agents</title>
+      <link>https://codingnconcepts.com/tags/ai-agents/</link>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/ai-agents/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Certification</title>
       <link>https://codingnconcepts.com/tags/certification/</link>
       <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/certification/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CI/CD</title>
+      <link>https://codingnconcepts.com/tags/ci/cd/</link>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/ci/cd/</guid>
       <description></description>
     </item>
     <item>
@@ -30,6 +54,22 @@
       <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/github/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GitHub Actions</title>
+      <link>https://codingnconcepts.com/tags/github-actions/</link>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/github-actions/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GitHub Copilot</title>
+      <link>https://codingnconcepts.com/tags/github-copilot/</link>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/github-copilot/</guid>
       <description></description>
     </item>
     <item>
