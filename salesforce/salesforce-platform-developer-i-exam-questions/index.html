@@ -97,7 +97,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/salesforce.png"],
     "url": "https://codingnconcepts.com/salesforce/salesforce-platform-developer-i-exam-questions/",
-    "wordCount": 9406 ,
+    "wordCount": 9411 ,
     "genre": ["Salesforce","Certification"],
     "keywords":  null 
 }
@@ -864,11 +864,24 @@ div[autonumbering] p { font-size: 15px;}
 <pre tabindex="0"><code>public interface Sortable { void sort(); }  
 public interface Drawable { void draw(); }
 </code></pre><p>Which is the correct implementation?</p>
-<p>⬜ <code>public class DrawList implements Sortable, implements Drawable { ... }</code> <br>
-⬜ <code>public class DrawList extends Sortable, Drawable { ... }</code><br>
-⬜ <code>public class DrawList implements Sortable, Drawable { public void sort(){} public void draw(){} }</code> <br>
-⬜ <code>public class DrawList extends Sortable, extends Drawable { ... }</code></p>
-<h6 id="a-team-of-developers-is-working-on-a-source-driven-project-that-allows-them-to-work-independently-with-many-different-org-configurations-which-type-of-salesforce-orgs-should-they-use-for-their-development">A team of developers is working on a source-driven project that allows them to work independently, with many different org configurations. Which type of Salesforce orgs should they use for their development?</h6>
+<p>⬜</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DrawList</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Sortable</span><span class="p">,</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Drawable</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// ...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>⬜</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DrawList</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Sortable</span><span class="p">,</span><span class="w"> </span><span class="n">Drawable</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// ...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>⬜</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DrawList</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Sortable</span><span class="p">,</span><span class="w"> </span><span class="n">Drawable</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">sort</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>⬜</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DrawList</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Sortable</span><span class="p">,</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Drawable</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// ...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h6 id="a-team-of-developers-is-working-on-a-source-driven-project-that-allows-them-to-work-independently-with-many-different-org-configurations-which-type-of-salesforce-orgs-should-they-use-for-their-development">A team of developers is working on a source-driven project that allows them to work independently, with many different org configurations. Which type of Salesforce orgs should they use for their development?</h6>
 <p>⬜ Developer sandboxes<br>
 ⬜ Scratch orgs<br>
 ⬜ Full Copy sandboxes<br>

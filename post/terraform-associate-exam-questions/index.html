@@ -98,7 +98,7 @@
     },
     "image": "https://codingnconcepts.com/favicon-32x32.png",
     "url": "https://codingnconcepts.com/post/terraform-associate-exam-questions/",
-    "wordCount": 21233 ,
+    "wordCount": 21241 ,
     "genre": ["HashiCorp","Terraform","Certification"],
     "keywords":  null 
 }
@@ -840,11 +840,23 @@ div[autonumbering] p { font-size: 15px;}
 </span></span><span class="line"><span class="cl">  <span class="nx">alias</span>  <span class="o">=</span> <span class="s2">&#34;west&#34;</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">region</span> <span class="o">=</span> <span class="s2">&#34;us-west-2&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>⬜ <code>resource &quot;aws_instance&quot; &quot;foo&quot; { provider = aws }</code><br>
-⬜ <code>resource &quot;aws_instance&quot; &quot;foo&quot; { provider = aws.west }</code><br>
-⬜ <code>resource &quot;aws_instance&quot; &quot;foo&quot; { provider = aws.us-west-2 }</code><br>
-⬜ <code>resource &quot;aws_instance&quot; &quot;foo&quot; { provider = west }</code></p>
-<h6 id="terraform-uses-a-lock-file-to-ensure-predictable-runs-when-using-ambiguous-provider-version-constraints-how-do-you-update-the-lock-file">Terraform uses a lock file to ensure predictable runs when using ambiguous provider version constraints. How do you update the lock file?</h6>
+</span></span></code></pre></div><p>⬜</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tf" data-lang="tf"><span class="line"><span class="cl"><span class="kr">resource</span> <span class="s2">&#34;aws_instance&#34;</span> <span class="s2">&#34;foo&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">provider</span> <span class="o">=</span> <span class="nx">aws</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>⬜</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tf" data-lang="tf"><span class="line"><span class="cl"><span class="kr">resource</span> <span class="s2">&#34;aws_instance&#34;</span> <span class="s2">&#34;foo&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">provider</span> <span class="o">=</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">west</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>⬜</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tf" data-lang="tf"><span class="line"><span class="cl"><span class="kr">resource</span> <span class="s2">&#34;aws_instance&#34;</span> <span class="s2">&#34;foo&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">provider</span> <span class="o">=</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">us</span><span class="o">-</span><span class="nx">west</span><span class="m">-2</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>⬜</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tf" data-lang="tf"><span class="line"><span class="cl"><span class="kr">resource</span> <span class="s2">&#34;aws_instance&#34;</span> <span class="s2">&#34;foo&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">provider</span> <span class="o">=</span> <span class="nx">west</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h6 id="terraform-uses-a-lock-file-to-ensure-predictable-runs-when-using-ambiguous-provider-version-constraints-how-do-you-update-the-lock-file">Terraform uses a lock file to ensure predictable runs when using ambiguous provider version constraints. How do you update the lock file?</h6>
 <p>⬜ <code>terraform providers lock</code><br>
 ⬜ <code>terraform lock</code><br>
 ⬜ <code>terraform apply lock</code><br>
@@ -911,11 +923,37 @@ div[autonumbering] p { font-size: 15px;}
 ⬜ 1.8.0<br>
 ⬜ 1.9.9</p>
 <h6 id="how-do-you-force-users-to-use-a-particular-version-of-required-providers-in-your-terraform-code">How do you force users to use a particular version of required providers in your terraform code?</h6>
-<p>⬜ <code>terraform { required_providers { aws = { source = “hashicorp/aws”  version =”3.74.1″  } } }</code> <br>
-⬜ <code>terraform { aws = { source = “hashicorp/aws”  version = “~&gt;3.74.1” } }</code>    <br>
-⬜ <code>aws = { source = “hashicorp/aws”  version = “3.74.1” }</code>  <br>
-⬜ <code>terraform { required_providers { aws = { source = “hashicorp/aws”  version =”~&gt;3.74.1″  } } }</code></p>
-<h6 id="what-is-more-accurate-description-of-the-below-version-constraint">What is more accurate description of the below version constraint?</h6>
+<p>⬜</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tf" data-lang="tf"><span class="line"><span class="cl"><span class="nx">terraform</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">required_providers</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">aws</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">source</span>  <span class="o">=</span> <span class="s2">&#34;hashicorp/aws&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">version</span> <span class="o">=</span> <span class="s2">&#34;3.74.1&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>⬜</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tf" data-lang="tf"><span class="line"><span class="cl"><span class="nx">terraform</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">aws</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">source</span>  <span class="o">=</span> <span class="s2">&#34;hashicorp/aws&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">version</span> <span class="o">=</span> <span class="s2">&#34;~&gt; 3.74.1&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>⬜</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tf" data-lang="tf"><span class="line"><span class="cl"><span class="nx">aws</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">source</span>  <span class="o">=</span> <span class="s2">&#34;hashicorp/aws&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">version</span> <span class="o">=</span> <span class="s2">&#34;3.74.1&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>⬜</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tf" data-lang="tf"><span class="line"><span class="cl"><span class="nx">terraform</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">required_providers</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">aws</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">source</span>  <span class="o">=</span> <span class="s2">&#34;hashicorp/aws&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">version</span> <span class="o">=</span> <span class="s2">&#34;~&gt; 3.74.1&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h6 id="what-is-more-accurate-description-of-the-below-version-constraint">What is more accurate description of the below version constraint?</h6>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tf" data-lang="tf"><span class="line"><span class="cl"><span class="nx">terraform</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">required_version</span> <span class="o">=</span> <span class="s2">&#34;&gt;= 1.4.7&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -1706,11 +1744,27 @@ div[autonumbering] p { font-size: 15px;}
 ⬜ A binary set of operators that tell resources how to behave with certain meta-arguments.<br>
 ⬜ Data sources are a way for terraform to keep track of all resources created in the provider&rsquo;s infrastructure.</p>
 <h6 id="in-terraform-hcl-an-object-type-of-object-name--string-age--number--would-match-which-of-these-values">*In Terraform HCL, an object type of <code>object({ name = string, age = number })</code> would match which of these values?</h6>
-<p>⬜ <code>{ name = &quot;John&quot;   age  = 52 }</code><br>
-⬜ <code>{ name = John     age  = &quot;52&quot; }</code> <br>
-⬜ <code>{ name = &quot;John&quot;   age  = fifty two}</code><br>
-⬜ <code>{ name = John     age  = fifty two}</code></p>
-<h6 id="you-are-adding-input-variables-in-the-terraform-module-for-customization-which-of-the-following-is-not-a-valid-primitive-variable-type-in-terraform">You are adding input variables in the Terraform module for customization. Which of the following is NOT a valid primitive variable type in Terraform?</h6>
+<p>⬜</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tf" data-lang="tf"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="o">=</span> <span class="s2">&#34;John&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">age</span>  <span class="o">=</span> <span class="m">52</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>⬜</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tf" data-lang="tf"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="o">=</span> <span class="nx">John</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">age</span>  <span class="o">=</span> <span class="s2">&#34;52&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>⬜</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tf" data-lang="tf"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="o">=</span> <span class="s2">&#34;John&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">age</span>  <span class="o">=</span> <span class="nx">fifty</span> <span class="nx">two</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>⬜</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tf" data-lang="tf"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="o">=</span> <span class="nx">John</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">age</span>  <span class="o">=</span> <span class="nx">fifty</span> <span class="nx">two</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h6 id="you-are-adding-input-variables-in-the-terraform-module-for-customization-which-of-the-following-is-not-a-valid-primitive-variable-type-in-terraform">You are adding input variables in the Terraform module for customization. Which of the following is NOT a valid primitive variable type in Terraform?</h6>
 <p>⬜ string<br>
 ⬜ number<br>
 ⬜ float<br>
@@ -1907,11 +1961,27 @@ div[autonumbering] p { font-size: 15px;}
 ⬜ Add preconditions that fail when the environment is different, so operators must edit the file when switching sites.<br>
 ⬜ Expose the values as outputs and override them from a second module that runs after the first.</p>
 <h6 id="which-default-value-is-valid-for-a-variable-declared-with-type--mapstring">Which default value is valid for a variable declared with <code>type = map(string)</code>?</h6>
-<p>⬜ <code>default = [{ environment = &quot;production&quot;, owner = &quot;dev-team&quot; }, { environment = &quot;staging&quot;, owner = &quot;qa-team&quot; }]</code><br>
-⬜ <code>default = { &quot;environment&quot; = &quot;production&quot;, &quot;owner&quot; = &quot;dev-team&quot; }</code><br>
-⬜ <code>default = { &quot;environment&quot; = &quot;production&quot;, &quot;tags&quot; = { team = &quot;dev&quot; } }</code><br>
-⬜ <code>default [ &quot;environment&quot; = &quot;production&quot;, &quot;owner&quot; = &quot;dev-team&quot; ]</code></p>
-<h6 id="how-do-you-reference-the-build-tag-value-of-the-variable-below-in-an-expression">How do you reference the <code>build-tag</code> value of the variable below in an expression?</h6>
+<p>⬜</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tf" data-lang="tf"><span class="line"><span class="cl"><span class="na">default</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span> <span class="nx">environment</span> <span class="o">=</span> <span class="s2">&#34;production&#34;</span><span class="p">,</span> <span class="nx">owner</span> <span class="o">=</span> <span class="s2">&#34;dev-team&#34;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span> <span class="nx">environment</span> <span class="o">=</span> <span class="s2">&#34;staging&#34;</span><span class="p">,</span> <span class="nx">owner</span> <span class="o">=</span> <span class="s2">&#34;qa-team&#34;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span></code></pre></div><p>⬜</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tf" data-lang="tf"><span class="line"><span class="cl"><span class="na">default</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;environment&#34;</span> <span class="o">=</span> <span class="s2">&#34;production&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;owner&#34;</span>       <span class="o">=</span> <span class="s2">&#34;dev-team&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>⬜</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tf" data-lang="tf"><span class="line"><span class="cl"><span class="na">default</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;environment&#34;</span> <span class="o">=</span> <span class="s2">&#34;production&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;tags&#34;</span>        <span class="o">=</span> <span class="p">{</span> <span class="nx">team</span> <span class="o">=</span> <span class="s2">&#34;dev&#34;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>⬜</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tf" data-lang="tf"><span class="line"><span class="cl"><span class="na">default</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;environment&#34;</span> <span class="o">=</span> <span class="s2">&#34;production&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;owner&#34;</span> <span class="o">=</span> <span class="s2">&#34;dev-team&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span></code></pre></div><h6 id="how-do-you-reference-the-build-tag-value-of-the-variable-below-in-an-expression">How do you reference the <code>build-tag</code> value of the variable below in an expression?</h6>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tf" data-lang="tf"><span class="line"><span class="cl"><span class="kr">variable</span> <span class="s2">&#34;metadata&#34;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">type</span> <span class="o">=</span><span class="nb"> map</span><span class="p">(</span><span class="nx">string</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">default</span> <span class="o">=</span> <span class="p">{</span>
@@ -2209,11 +2279,23 @@ div[autonumbering] p { font-size: 15px;}
 ⬜ Declare the output in both the root and child module<br>
 ⬜ None of the above</p>
 <h6 id="you-are-writing-a-child-terraform-module-that-provisions-an-aws-instance-you-want-to-reference-the-ip-address-returned-by-the-child-module-in-the-root-configuration-you-name-the-instance-resource-main-which-of-these-is-the-correct-way-to-define-the-output-value">You are writing a child Terraform module that provisions an AWS instance. You want to reference the IP address returned by the child module in the root configuration. You name the instance resource &ldquo;main&rdquo;. Which of these is the correct way to define the output value?</h6>
-<p>⬜ <code>output &quot;instance_ip_addr&quot; { value = aws_instance.main.private_ip }</code><br>
-⬜ <code>output &quot;aws_instance.instance_ip_addr&quot; { value = ${main.private_ip} }</code><br>
-⬜ <code>output &quot;instance_ip_addr&quot; { return aws_instance.main.private_ip }</code><br>
-⬜ <code>output &quot;aws_instance.instance_ip_addr&quot; { return aws_instance.main.private_ip }</code></p>
-<h6 id="in-the-module-block-below-what-are-name-cidr-and-azs-and-what-are-they-for">In the module block below, what are <code>name</code>, <code>cidr</code> and <code>azs</code>, and what are they for?</h6>
+<p>⬜</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tf" data-lang="tf"><span class="line"><span class="cl"><span class="kr">output</span> <span class="s2">&#34;instance_ip_addr&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">value</span> <span class="o">=</span> <span class="nx">aws_instance</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">private_ip</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>⬜</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tf" data-lang="tf"><span class="line"><span class="cl"><span class="kr">output</span> <span class="s2">&#34;aws_instance.instance_ip_addr&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">value</span> <span class="o">=</span> <span class="err">$</span><span class="p">{</span><span class="nx">main</span><span class="p">.</span><span class="nx">private_ip</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>⬜</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tf" data-lang="tf"><span class="line"><span class="cl"><span class="kr">output</span> <span class="s2">&#34;instance_ip_addr&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">return</span> <span class="nx">aws_instance</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">private_ip</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>⬜</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tf" data-lang="tf"><span class="line"><span class="cl"><span class="kr">output</span> <span class="s2">&#34;aws_instance.instance_ip_addr&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">return</span> <span class="nx">aws_instance</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">private_ip</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h6 id="in-the-module-block-below-what-are-name-cidr-and-azs-and-what-are-they-for">In the module block below, what are <code>name</code>, <code>cidr</code> and <code>azs</code>, and what are they for?</h6>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-tf" data-lang="tf"><span class="line"><span class="cl"><span class="kr">module</span> <span class="s2">&#34;vpc&#34;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">source</span>  <span class="o">=</span> <span class="s2">&#34;terraform-aws-modules/vpc/aws&#34;</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">version</span> <span class="o">=</span> <span class="s2">&#34;5.0.2&#34;</span>
