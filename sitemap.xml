@@ -3,13 +3,73 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://codingnconcepts.com/tags/administration/</loc>
+    <lastmod>2026-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/</loc>
+    <lastmod>2026-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/certification/</loc>
+    <lastmod>2026-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/cloud/</loc>
+    <lastmod>2026-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/</loc>
+    <lastmod>2026-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/devsecops/</loc>
+    <lastmod>2026-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/github/</loc>
+    <lastmod>2026-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/github/github-administration-gh-100-exam-questions/</loc>
+    <lastmod>2026-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/github-advanced-security/</loc>
+    <lastmod>2026-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/github/github-advanced-security-gh-500-exam-questions/</loc>
+    <lastmod>2026-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/github-enterprise/</loc>
+    <lastmod>2026-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/</loc>
+    <lastmod>2026-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/categories/agile/</loc>
     <lastmod>2026-10-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/ai/</loc>
-    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -23,48 +83,23 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/categories/</loc>
-    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/certification/</loc>
-    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/tags/ci/cd/</loc>
-    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/cloud/</loc>
-    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/</loc>
-    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/git/</loc>
-    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/github/</loc>
-    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/github-actions/</loc>
-    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/github/github-actions-gh-200-exam-questions/</loc>
-    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -74,26 +109,21 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/github-copilot/</loc>
-    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/github/github-copilot-gh-300-exam-questions/</loc>
-    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/github/github-foundations-gh-900-exam-questions/</loc>
-    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/safe/</loc>
-    <lastmod>2026-10-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/</loc>
     <lastmod>2026-10-10T00:00:00+00:00</lastmod>
   </url>
   

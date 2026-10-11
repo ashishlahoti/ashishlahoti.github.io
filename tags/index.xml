@@ -7,7 +7,55 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>CodingNConcepts</copyright>
-    <lastBuildDate>Sat, 10 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Administration</title>
+      <link>https://codingnconcepts.com/tags/administration/</link>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/administration/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Certification</title>
+      <link>https://codingnconcepts.com/tags/certification/</link>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/certification/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DevSecOps</title>
+      <link>https://codingnconcepts.com/tags/devsecops/</link>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/devsecops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GitHub</title>
+      <link>https://codingnconcepts.com/tags/github/</link>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/github/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GitHub Advanced Security</title>
+      <link>https://codingnconcepts.com/tags/github-advanced-security/</link>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/github-advanced-security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GitHub Enterprise</title>
+      <link>https://codingnconcepts.com/tags/github-enterprise/</link>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/github-enterprise/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AI</title>
       <link>https://codingnconcepts.com/tags/ai/</link>
@@ -25,14 +73,6 @@
       <description></description>
     </item>
     <item>
-      <title>Certification</title>
-      <link>https://codingnconcepts.com/tags/certification/</link>
-      <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/certification/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>CI/CD</title>
       <link>https://codingnconcepts.com/tags/ci/cd/</link>
       <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
@@ -46,14 +86,6 @@
       <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/git/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>GitHub</title>
-      <link>https://codingnconcepts.com/tags/github/</link>
-      <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/github/</guid>
       <description></description>
     </item>
     <item>
