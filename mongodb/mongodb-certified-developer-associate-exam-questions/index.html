@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://codingnconcepts.com/mongodb/mongodb-certified-developer-associate-exam-questions/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/mongodb.jpg" />
 <meta property="article:published_time" content="2026-09-18T00:00:00+00:00" />
-<meta property="article:modified_time" content="2026-10-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-10-16T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -84,7 +84,7 @@
     "copyrightYear": "2026",
     "dateCreated": "2026-09-18T00:00:00.00Z",
     "datePublished": "2026-09-18T00:00:00.00Z",
-    "dateModified": "2026-10-10T00:00:00.00Z",
+    "dateModified": "2026-10-16T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -98,7 +98,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/mongodb.jpg"],
     "url": "https://codingnconcepts.com/mongodb/mongodb-certified-developer-associate-exam-questions/",
-    "wordCount": 4946 ,
+    "wordCount": 5203 ,
     "genre": ["MongoDB","Certification","Software Development"],
     "keywords":  null 
 }
@@ -253,6 +253,14 @@
 					<a class="menu__link" href="/github">
 						
 						<span class="menu__text">Github</span>
+						
+					</a>
+					</li>
+				
+					<li class="menu__item">
+					<a class="menu__link" href="/anthropic">
+						
+						<span class="menu__text">Anthropic (Claude)</span>
 						
 					</a>
 					</li>
@@ -605,7 +613,7 @@
 </div>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2026-10-10T00:00:00Z">Last Modified: Oct 10, 2026</time>
+	<time class="meta__text" datetime="2026-10-16T00:00:00Z">Last Modified: Oct 16, 2026</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -621,7 +629,7 @@
   <ul>
     <li><a href="#free-online-practice-exam">Free Online Practice Exam</a></li>
     <li><a href="#overview">Overview</a></li>
-    <li><a href="#55-practice-questions">55 Practice Questions</a>
+    <li><a href="#57-practice-questions">57 Practice Questions</a>
       <ul>
         <li><a href="#domain-1-mongodb-overview-and-the-document-model-8">Domain 1: MongoDB Overview and the Document Model (8%)</a></li>
         <li><a href="#domain-2-crud-51">Domain 2: CRUD (51%)</a></li>
@@ -656,7 +664,7 @@
 <li>MongoDB certifications currently <strong>do not expire</strong> and are governed by MongoDB&rsquo;s own product versioning.</li>
 <li><a href="https://learn.mongodb.com/courses/mongodb-associate-developer-exam-study-guide">Associate Developer Exam Study Guide</a> and <a href="https://learn.mongodb.com/pages/mongodb-associate-developer-exam">official exam registration page</a> for more details.</li>
 </ol>
-<h2 id="55-practice-questions">55 Practice Questions</h2>
+<h2 id="57-practice-questions">57 Practice Questions</h2>
 <hr>
 <table>
 	<thead>
@@ -678,7 +686,7 @@
 					<td>2</td>
 					<td>CRUD</td>
 					<td>51%</td>
-					<td>29</td>
+					<td>30</td>
 			</tr>
 			<tr>
 					<td>3</td>
@@ -690,7 +698,7 @@
 					<td>4</td>
 					<td>Data Modeling</td>
 					<td>4%</td>
-					<td>2</td>
+					<td>3</td>
 			</tr>
 			<tr>
 					<td>5</td>
@@ -888,6 +896,11 @@ div[autonumbering] p { font-size: 15px;}
 ⬜ compound<br>
 ⬜ near<br>
 ⬜ facet</p>
+<h6 id="a-software-developer-is-considering-mongodb-for-an-applications-search-functionality-the-application-needs-to-support-an-increasing-number-of-search-queries-while-maintaining-optimal-operational-database-performance-and-managing-infrastructure-costs-how-do-atlas-dedicated-search-nodes-support-this-requirement">A software developer is considering MongoDB for an application&rsquo;s search functionality. The application needs to support an increasing number of search queries while maintaining optimal operational database performance and managing infrastructure costs. How do Atlas Dedicated Search Nodes support this requirement?</h6>
+<p>⬜ By requiring every search operation to be processed through the operational database&rsquo;s own query engine<br>
+⬜ By storing vector embeddings in a format that only the operational database&rsquo;s primary nodes can read<br>
+⬜ By isolating search and vector search workloads onto their own compute, separate from the operational database, so each can scale independently<br>
+⬜ By being used only for storage scaling, and not for running search or vector search queries</p>
 <h3 id="domain-3-indexes-17">Domain 3: Indexes (17%)</h3>
 <hr>
 <h6 id="a-developer-notices-that-a-query-filtering-on-the-customeremail-field-of-a-large-customers-collection-is-performing-a-full-collection-scan-which-type-of-index-would-most-directly-improve-this-querys-performance">A developer notices that a query filtering on the customerEmail field of a large customers collection is performing a full collection scan. Which type of index would most directly improve this query&rsquo;s performance?</h6>
@@ -942,6 +955,11 @@ div[autonumbering] p { font-size: 15px;}
 ⬜ Embed a small, relevant subset of product fields (like name and price) directly into each order document, so the frequently-needed data can be read in a single query without a $lookup<br>
 ⬜ Convert the products collection into a capped collection to speed up joins<br>
 ⬜ Disable indexing on the products collection entirely</p>
+<h6 id="a-developer-is-building-the-details-page-for-a-movie-streaming-application-the-page-is-expected-to-have-very-high-traffic-and-must-display-each-movie-together-with-the-names-of-its-actors-movies-and-actors-are-stored-in-separate-collections-and-actor-documents-also-contain-large-fields-like-biography-and-full-filmography-that-the-movie-page-never-needs-which-approach-best-applies-the-extended-reference-pattern-here">A developer is building the details page for a movie-streaming application. The page is expected to have very high traffic and must display each movie together with the names of its actors. Movies and actors are stored in separate collections, and actor documents also contain large fields like biography and full filmography that the movie page never needs. Which approach best applies the Extended Reference Pattern here?</h6>
+<p>⬜ Use the $lookup aggregation operator on every page load to join the actors collection with the movies collection<br>
+⬜ Embed just the frequently-needed actor fields (such as actor ID and name) directly in each movie document, while keeping full actor records in their own collection<br>
+⬜ Embed the complete actor documents, including biography and filmography, directly inside each movie document<br>
+⬜ Create a new collection that merges every movie and actor document into one combined document</p>
 <h3 id="domain-5-tools-and-tooling-2">Domain 5: Tools and Tooling (2%)</h3>
 <hr>
 <h6 id="a-developer-wants-to-quickly-experiment-with-realistic-data-in-a-new-atlas-cluster-without-writing-their-own-dataset-first-and-then-browse-the-loaded-collections-and-their-documents-directly-in-the-atlas-ui-what-should-the-developer-use">A developer wants to quickly experiment with realistic data in a new Atlas cluster without writing their own dataset first, and then browse the loaded collections and their documents directly in the Atlas UI. What should the developer use?</h6>
