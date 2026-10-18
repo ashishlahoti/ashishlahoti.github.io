@@ -8,12 +8,27 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/tags/ai-architecture/</loc>
+    <lastmod>2026-10-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/tags/anthropic/</loc>
     <lastmod>2026-10-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/tags/apache-kafka/</loc>
+    <lastmod>2026-10-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/categories/</loc>
+    <lastmod>2026-10-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/ccdak/</loc>
     <lastmod>2026-10-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -38,6 +53,11 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/anthropic/claude-certified-architect-professional-ccar-p-exam-questions/</loc>
+    <lastmod>2026-10-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/anthropic/claude-certified-developer-foundations-ccdv-f-exam-questions/</loc>
     <lastmod>2026-10-18T00:00:00+00:00</lastmod>
   </url>
@@ -49,6 +69,21 @@
   
   <url>
     <loc>https://codingnconcepts.com/</loc>
+    <lastmod>2026-10-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/confluent/</loc>
+    <lastmod>2026-10-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/confluent/confluent-certified-developer-apache-kafka-ccdak-exam-questions/</loc>
+    <lastmod>2026-10-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/kafka/</loc>
     <lastmod>2026-10-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -520,11 +555,6 @@
   <url>
     <loc>https://codingnconcepts.com/spring-boot/configure-multiple-kafka-producer/</loc>
     <lastmod>2026-08-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/kafka/</loc>
-    <lastmod>2026-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1804,11 +1834,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/post/apache-kafka-ccdak-exam-notes/</loc>
-    <lastmod>2026-09-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/ccdak/</loc>
     <lastmod>2026-09-01T00:00:00+00:00</lastmod>
   </url>
   
