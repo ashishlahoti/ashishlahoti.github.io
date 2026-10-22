@@ -66,17 +66,13 @@
 </head>
 <body class="body">
 	<div class="container container--outer">
-		<header class="header">
+		<header class="header header--home">
 	<div class="container--inner">
 		<div class="logo">
 			<a class="logo__link" href="/" title="Coding N Concepts" rel="home">
 				<div class="logo__title"><img class="logo__img logo__img--light" src="/img/logo/cnc-logo-compact-light.svg" alt="Coding N Concepts — Learn, Practice, Get Certified" width="317" height="56"><img class="logo__img logo__img--dark" src="/img/logo/cnc-logo-compact-dark.svg" alt="Coding N Concepts — Learn, Practice, Get Certified" width="317" height="56"></div>
 			</a>
 		</div>
-		<form class="header-search" role="search" method="get" action="https://codingnconcepts.com/search">
-			<label class="menu__text--sr" for="headerSearchInput">Find related posts&hellip;</label>
-			<input class="header-search__field" id="headerSearchInput" type="search" placeholder="Find related posts&hellip;" name="s" aria-label="Find related posts">
-		</form>
 		
 <nav class="menu">
 	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
@@ -110,9 +106,17 @@
 					</li>
 				
 					<li class="menu__item">
-					<a class="menu__link" href="/azure">
+					<a class="menu__link" href="/anthropic">
 						
-						<span class="menu__text">Microsoft Azure</span>
+						<span class="menu__text">Anthropic (Claude)</span>
+						
+					</a>
+					</li>
+				
+					<li class="menu__item">
+					<a class="menu__link" href="/github">
+						
+						<span class="menu__text">GitHub</span>
 						
 					</a>
 					</li>
@@ -126,17 +130,17 @@
 					</li>
 				
 					<li class="menu__item">
-					<a class="menu__link" href="/gcp">
+					<a class="menu__link" href="/azure">
 						
-						<span class="menu__text">Google Cloud Platform (GCP)</span>
+						<span class="menu__text">Microsoft Azure</span>
 						
 					</a>
 					</li>
 				
 					<li class="menu__item">
-					<a class="menu__link" href="/tags/hashicorp">
+					<a class="menu__link" href="/gcp">
 						
-						<span class="menu__text">Hashicorp</span>
+						<span class="menu__text">Google Cloud Platform (GCP)</span>
 						
 					</a>
 					</li>
@@ -150,6 +154,14 @@
 					</li>
 				
 					<li class="menu__item">
+					<a class="menu__link" href="/tags/hashicorp">
+						
+						<span class="menu__text">HashiCorp</span>
+						
+					</a>
+					</li>
+				
+					<li class="menu__item">
 					<a class="menu__link" href="/mongodb">
 						
 						<span class="menu__text">MongoDB</span>
@@ -158,7 +170,7 @@
 					</li>
 				
 					<li class="menu__item">
-					<a class="menu__link" href="/tags/ccdak">
+					<a class="menu__link" href="/confluent/">
 						
 						<span class="menu__text">Confluent Kafka</span>
 						
@@ -182,17 +194,9 @@
 					</li>
 				
 					<li class="menu__item">
-					<a class="menu__link" href="/github">
+					<a class="menu__link" href="/salesforce/">
 						
-						<span class="menu__text">Github</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/anthropic">
-						
-						<span class="menu__text">Anthropic (Claude)</span>
+						<span class="menu__text">Salesforce</span>
 						
 					</a>
 					</li>
@@ -200,217 +204,17 @@
 			</ul>
 		</li>
 		<li class="menu__item menu__dropdown">
-			<a class="menu__link" href="/java/">
+			<a class="menu__link" href="/categories/">
 				
-				<span class="menu__text">Java</span>
-				<label class="drop-icon" for="Java">▾</label>
+				<span class="menu__text">Tutorials</span>
+				<label class="drop-icon" for="Tutorials">▾</label>
 				
 			</a>
-			<input type="checkbox" id="Java">
+			<input type="checkbox" id="Tutorials">
 			<ul class="submenu__list">
 				
 					<li class="menu__item">
-					<a class="menu__link" href="/tags/core-java/">
-						
-						<span class="menu__text">Core Java</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/advance-java/">
-						
-						<span class="menu__text">Advance Java</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/java-collection/">
-						
-						<span class="menu__text">Java Collections</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/java-streams/">
-						
-						<span class="menu__text">Java Streams</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/java-design-pattern/">
-						
-						<span class="menu__text">Design Patterns</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/java-algorithm/">
-						
-						<span class="menu__text">Algorithm</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/java-assertion/">
-						
-						<span class="menu__text">Assertions</span>
-						
-					</a>
-					</li>
-				
-			</ul>
-		</li>
-		<li class="menu__item menu__dropdown">
-			<a class="menu__link" href="/javascript/">
-				
-				<span class="menu__text">JavaScript</span>
-				<label class="drop-icon" for="JavaScript">▾</label>
-				
-			</a>
-			<input type="checkbox" id="JavaScript">
-			<ul class="submenu__list">
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/javascript-core/">
-						
-						<span class="menu__text">JS Core</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/javascript-string/">
-						
-						<span class="menu__text">JS String</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/javascript-object/">
-						
-						<span class="menu__text">JS Object</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/javascript-array/">
-						
-						<span class="menu__text">JS Array</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/javascript-operator/">
-						
-						<span class="menu__text">JS Operator</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/javascript-console/">
-						
-						<span class="menu__text">JS Console</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/javascript-es6/">
-						
-						<span class="menu__text">ES6</span>
-						
-					</a>
-					</li>
-				
-			</ul>
-		</li>
-		<li class="menu__item menu__dropdown">
-			<a class="menu__link" href="/spring-boot/">
-				
-				<span class="menu__text">Spring Boot</span>
-				<label class="drop-icon" for="Spring Boot">▾</label>
-				
-			</a>
-			<input type="checkbox" id="Spring Boot">
-			<ul class="submenu__list">
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/spring-boot-basics/">
-						
-						<span class="menu__text">Spring Boot Basics</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/spring-boot-api/">
-						
-						<span class="menu__text">Spring Boot API</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/spring-boot-kafka/">
-						
-						<span class="menu__text">Spring Boot KAFKA</span>
-						
-					</a>
-					</li>
-				
-			</ul>
-		</li>
-		<li class="menu__item menu__dropdown">
-			<a class="menu__link" href="/puzzle/">
-				
-				<span class="menu__text">Puzzles</span>
-				<label class="drop-icon" for="Puzzles">▾</label>
-				
-			</a>
-			<input type="checkbox" id="Puzzles">
-			<ul class="submenu__list">
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/maths-puzzle/">
-						
-						<span class="menu__text">Maths Puzzles</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/weight-puzzle/">
-						
-						<span class="menu__text">Weight Puzzles</span>
-						
-					</a>
-					</li>
-				
-			</ul>
-		</li>
-		<li class="menu__item menu__dropdown">
-			<a class="menu__link" href="/interview-questions/">
-				
-				<span class="menu__text">Interview Q&amp;A</span>
-				<label class="drop-icon" for="Interview Q&amp;A">▾</label>
-				
-			</a>
-			<input type="checkbox" id="Interview Q&amp;A">
-			<ul class="submenu__list">
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/java-qa/">
+					<a class="menu__link" href="/java/">
 						
 						<span class="menu__text">Java</span>
 						
@@ -418,7 +222,7 @@
 					</li>
 				
 					<li class="menu__item">
-					<a class="menu__link" href="/tags/javascript-qa/">
+					<a class="menu__link" href="/javascript/">
 						
 						<span class="menu__text">JavaScript</span>
 						
@@ -426,25 +230,25 @@
 					</li>
 				
 					<li class="menu__item">
-					<a class="menu__link" href="/tags/css-qa/">
+					<a class="menu__link" href="/spring-boot/">
 						
-						<span class="menu__text">CSS</span>
-						
-					</a>
-					</li>
-				
-					<li class="menu__item">
-					<a class="menu__link" href="/tags/spring-qa/">
-						
-						<span class="menu__text">Spring</span>
+						<span class="menu__text">Spring Boot</span>
 						
 					</a>
 					</li>
 				
 					<li class="menu__item">
-					<a class="menu__link" href="/tags/microservice-qa/">
+					<a class="menu__link" href="/interview-questions/">
 						
-						<span class="menu__text">Microservices</span>
+						<span class="menu__text">Interview Q&amp;A</span>
+						
+					</a>
+					</li>
+				
+					<li class="menu__item">
+					<a class="menu__link" href="/puzzle/">
+						
+						<span class="menu__text">Puzzles</span>
 						
 					</a>
 					</li>
@@ -533,19 +337,27 @@
 	</div>
 </header>
 		
-<div class="page-header">
-	<div class="content main__content clearfix">
-		<h1 id="all-posts-hahahugoshortcode1s0hbhb">All Posts <span class="count-badge">247</span></h1>
-<hr>
-
+<section class="home-hero">
+	<div class="home-hero__inner">
+		<p class="home-hero__eyebrow">46 certification exam guides &middot; 13 providers</p>
+		<h1 class="home-hero__title">Learn <span class="home-hero__arrow" aria-hidden="true">&rarr;</span> Practice <span class="home-hero__arrow" aria-hidden="true">&rarr;</span> <span class="home-hero__gold">Get Certified</span></h1>
+		<p class="home-hero__lead">Free exam questions grouped by official exam domain, plus timed online practice tests with answers and explanations.</p>
+		<form class="home-hero__search" role="search" method="get" action="https://codingnconcepts.com/search">
+			<label class="menu__text--sr" for="homeSearchInput">Find certifications or exam questions</label>
+			<input class="home-hero__field" id="homeSearchInput" type="search" name="s" placeholder="Find certifications or exam questions&hellip;" autocomplete="off">
+			<button class="home-hero__submit" type="submit">Search</button>
+		</form>
 	</div>
-</div>
+</section>
 
 		<div class="wrapper flex">
 			<div class="primary">
 			
-<main class="main list" role="main">
-	<article class="list__item post">
+<main class="main list home" role="main">
+	<header class="home-section__header home-section__header--posts">
+		<h2 class="home-section__title">All posts <span class="count-badge">247</span>
+</h2>
+	</header><article class="list__item post">
 	<figure class="list__thumbnail">
 		<a href="https://codingnconcepts.com/agile/safe-government-practitioner-sgp-exam-questions/">
 			<img src="/img/logo/safe.png" alt="SAFe Government Practitioner SGP Exam Questions" loading="lazy" decoding="async" />
@@ -896,7 +708,49 @@
 
 
 			</div>
-			<aside class="sidebar">
+			
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__columns">
+		<nav class="footer__col" aria-label="Certifications">
+			<h2 class="footer__heading">Certifications</h2>
+			<ul class="footer__list">
+				<li><a class="footer__link" href="/tags/safe">Scaled Agile (SAFe)</a></li>
+				<li><a class="footer__link" href="/anthropic">Anthropic (Claude)</a></li>
+				<li><a class="footer__link" href="/github">GitHub</a></li>
+				<li><a class="footer__link" href="/aws">AWS</a></li>
+				<li><a class="footer__link" href="/azure">Microsoft Azure</a></li>
+				<li><a class="footer__link" href="/gcp">Google Cloud (GCP)</a></li>
+				<li><a class="footer__link" href="/tags/kubernetes">Kubernetes</a></li>
+				<li><a class="footer__link" href="/tags/hashicorp">HashiCorp</a></li>
+				<li><a class="footer__link" href="/mongodb">MongoDB</a></li>
+				<li><a class="footer__link" href="/confluent/">Confluent Kafka</a></li>
+				<li><a class="footer__link" href="/comptia">CompTIA</a></li>
+				<li><a class="footer__link" href="/tags/scrum-certification">Scrum.org</a></li>
+				<li><a class="footer__link" href="/salesforce/">Salesforce</a></li>
+			</ul>
+		</nav>
+		<nav class="footer__col" aria-label="Tutorials">
+			<h2 class="footer__heading">Tutorials</h2>
+			<ul class="footer__list">
+				<li><a class="footer__link" href="/java/">Java</a></li>
+				<li><a class="footer__link" href="/javascript/">JavaScript</a></li>
+				<li><a class="footer__link" href="/spring-boot/">Spring Boot</a></li>
+				<li><a class="footer__link" href="/interview-questions/">Interview Q&amp;A</a></li>
+				<li><a class="footer__link" href="/puzzle/">Puzzles</a></li>
+			</ul>
+		</nav>
+		<nav class="footer__col" aria-label="About">
+			<h2 class="footer__heading">About</h2>
+			<ul class="footer__list">
+				<li><a class="footer__link" href="/about/">About Us</a></li>
+				<li><a class="footer__link" href="/contact/">Contact Us</a></li>
+				<li><a class="footer__link" href="/follow/">Follow Us</a></li>
+			</ul>
+		</nav>
+		<div class="footer__col footer__col--social">
+			
 <div class="widget-social widget">
 	<h4 class="widget-social__title widget__title">Follow Us</h4>
 	<div class="widget-social__content widget__content">
@@ -985,164 +839,8 @@
 	
 	</div>
 </div>
-<div class="widget-categories widget">
-	<h4 class="widget__title">Categories</h4>
-	<div class="widget__content">
-		<a class="widget-categories__link widget__link btn" href="/categories/agile/" title="Agile">Agile <span class="widget-categories__count">(18)</span></a>
-		<a class="widget-categories__link widget__link btn" href="/categories/aws/" title="AWS">AWS <span class="widget-categories__count">(7)</span></a>
-		<a class="widget-categories__link widget__link btn" href="/categories/azure/" title="Azure">Azure <span class="widget-categories__count">(5)</span></a>
-		<a class="widget-categories__link widget__link btn" href="/categories/cloud/" title="Cloud">Cloud <span class="widget-categories__count">(16)</span></a>
-		<a class="widget-categories__link widget__link btn" href="/categories/css/" title="CSS">CSS <span class="widget-categories__count">(1)</span></a>
-		<a class="widget-categories__link widget__link btn" href="/categories/database/" title="Database">Database <span class="widget-categories__count">(2)</span></a>
-		<a class="widget-categories__link widget__link btn" href="/categories/gcp/" title="GCP">GCP <span class="widget-categories__count">(1)</span></a>
-		<a class="widget-categories__link widget__link btn" href="/categories/hugo/" title="Hugo">Hugo <span class="widget-categories__count">(12)</span></a>
-		<a class="widget-categories__link widget__link btn" href="/categories/interview-questions/" title="Interview Questions">Interview Questions <span class="widget-categories__count">(13)</span></a>
-		<a class="widget-categories__link widget__link btn" href="/categories/java/" title="Java">Java <span class="widget-categories__count">(52)</span></a>
-		<a class="widget-categories__link widget__link btn" href="/categories/javascript/" title="Javascript">Javascript <span class="widget-categories__count">(36)</span></a>
-		<a class="widget-categories__link widget__link btn" href="/categories/kafka/" title="Kafka">Kafka <span class="widget-categories__count">(9)</span></a>
-		<a class="widget-categories__link widget__link btn" href="/categories/kotlin/" title="Kotlin">Kotlin <span class="widget-categories__count">(4)</span></a>
-		<a class="widget-categories__link widget__link btn" href="/categories/markdown/" title="Markdown">Markdown <span class="widget-categories__count">(4)</span></a>
-		<a class="widget-categories__link widget__link btn" href="/categories/networking/" title="Networking">Networking <span class="widget-categories__count">(1)</span></a>
-		<a class="widget-categories__link widget__link btn" href="/categories/postman/" title="Postman">Postman <span class="widget-categories__count">(2)</span></a>
-		<a class="widget-categories__link widget__link btn" href="/categories/puzzles/" title="Puzzles">Puzzles <span class="widget-categories__count">(13)</span></a>
-		<a class="widget-categories__link widget__link btn" href="/categories/salesforce/" title="Salesforce">Salesforce <span class="widget-categories__count">(1)</span></a>
-		<a class="widget-categories__link widget__link btn" href="/categories/security/" title="Security">Security <span class="widget-categories__count">(1)</span></a>
-		<a class="widget-categories__link widget__link btn" href="/categories/sg/" title="SG">SG <span class="widget-categories__count">(1)</span></a>
-		<a class="widget-categories__link widget__link btn" href="/categories/spring-boot/" title="Spring Boot">Spring Boot <span class="widget-categories__count">(37)</span></a>
-		<a class="widget-categories__link widget__link btn" href="/categories/tools/" title="Tools">Tools <span class="widget-categories__count">(4)</span></a>
-	</div>
-</div>
-
-<div class="widget-taglist widget">
-	<h4 class="widget__title">Tags</h4>
-	<div class="widget__content">
-		<a class="widget-taglist__link widget__link btn" href="/tags/administration/" title="Administration">Administration</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/advance-java/" title="Advance Java">Advance Java</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/ai/" title="AI">AI</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/ai-agents/" title="AI Agents">AI Agents</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/ai-architecture/" title="AI Architecture">AI Architecture</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/algorithm/" title="Algorithm">Algorithm</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/annotation/" title="Annotation">Annotation</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/anthropic/" title="Anthropic">Anthropic</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/apache-kafka/" title="Apache Kafka">Apache Kafka</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/async/" title="Async">Async</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/aws/" title="AWS">AWS</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/aws-certification/" title="AWS Certification">AWS Certification</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/azure-certification/" title="Azure Certification">Azure Certification</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/blockchain/" title="Blockchain">Blockchain</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/calculator/" title="Calculator">Calculator</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/ccaak/" title="CCAAK">CCAAK</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/ccdak/" title="CCDAK">CCDAK</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/certification/" title="Certification">Certification</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/cheatsheet/" title="Cheatsheet">Cheatsheet</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/ci/cd/" title="CI/CD">CI/CD</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/claude/" title="Claude">Claude</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/claude-api/" title="Claude API">Claude API</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/cloud-practitioner/" title="Cloud Practitioner">Cloud Practitioner</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/comptia/" title="CompTIA">CompTIA</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/confluent/" title="Confluent">Confluent</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/converter/" title="Converter">Converter</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/core-java/" title="Core Java">Core Java</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/coroutines/" title="Coroutines">Coroutines</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/css/" title="CSS">CSS</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/css-qa/" title="CSS Q&amp;A">CSS Q&amp;A</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/database-administration/" title="Database Administration">Database Administration</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/database-qa/" title="Database Q&amp;A">Database Q&amp;A</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/devops/" title="DevOps">DevOps</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/devsecops/" title="DevSecOps">DevSecOps</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/die-hard-puzzle/" title="Die Hard Puzzle">Die Hard Puzzle</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/docker/" title="Docker">Docker</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/eclipse-ide/" title="Eclipse IDE">Eclipse IDE</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/einstein-riddle/" title="Einstein Riddle">Einstein Riddle</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/elasticsearch/" title="ElasticSearch">ElasticSearch</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/feign/" title="Feign">Feign</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/file/" title="File">File</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/gcp/" title="GCP">GCP</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/generative-ai/" title="Generative AI">Generative AI</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/git/" title="Git">Git</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/github/" title="GitHub">GitHub</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/github-actions/" title="GitHub Actions">GitHub Actions</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/github-advanced-security/" title="GitHub Advanced Security">GitHub Advanced Security</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/github-copilot/" title="GitHub Copilot">GitHub Copilot</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/github-enterprise/" title="GitHub Enterprise">GitHub Enterprise</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/google-cloud/" title="Google Cloud">Google Cloud</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/google-interview-puzzle/" title="Google Interview Puzzle">Google Interview Puzzle</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/graphql/" title="GraphQL">GraphQL</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/hashicorp/" title="HashiCorp">HashiCorp</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/html/" title="HTML">HTML</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/implementing-safe/" title="Implementing SAFe">Implementing SAFe</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/interview-puzzle/" title="Interview Puzzle">Interview Puzzle</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/interview-qa/" title="Interview Q&amp;A">Interview Q&amp;A</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/jackson/" title="Jackson">Jackson</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/java-algorithm/" title="Java Algorithm">Java Algorithm</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/java-assertion/" title="Java Assertion">Java Assertion</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/java-coding/" title="Java Coding">Java Coding</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/java-collection/" title="Java Collection">Java Collection</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/java-date/" title="Java Date">Java Date</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/java-design-pattern/" title="Java Design Pattern">Java Design Pattern</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/java-kafka/" title="Java Kafka">Java Kafka</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/java-qa/" title="Java Q&amp;A">Java Q&amp;A</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/java-streams/" title="Java Streams">Java Streams</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/java-threads/" title="Java Threads">Java Threads</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/javascript-array/" title="Javascript Array">Javascript Array</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/javascript-coding/" title="Javascript Coding">Javascript Coding</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/javascript-console/" title="Javascript Console">Javascript Console</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/javascript-core/" title="Javascript Core">Javascript Core</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/javascript-es6/" title="Javascript ES6">Javascript ES6</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/javascript-interview/" title="Javascript Interview">Javascript Interview</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/javascript-object/" title="Javascript Object">Javascript Object</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/javascript-operator/" title="Javascript Operator">Javascript Operator</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/javascript-qa/" title="JavaScript Q&amp;A">JavaScript Q&amp;A</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/javascript-string/" title="Javascript String">Javascript String</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/jenkins/" title="Jenkins">Jenkins</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/jetty/" title="Jetty">Jetty</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/json-ld/" title="JSON-LD">JSON-LD</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/junit/" title="JUnit">JUnit</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/kafka/" title="Kafka">Kafka</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/kotlin/" title="Kotlin">Kotlin</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/kubernetes/" title="Kubernetes">Kubernetes</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/log/" title="Log">Log</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/log4j/" title="Log4j">Log4j</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/markdown/" title="Markdown">Markdown</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/maths-puzzle/" title="Maths Puzzle">Maths Puzzle</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/microservice-qa/" title="Microservice Q&amp;A">Microservice Q&amp;A</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/mongodb/" title="MongoDB">MongoDB</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/numbers/" title="Numbers">Numbers</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/popular-posts/" title="Popular Posts">Popular Posts</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/recursive/" title="Recursive">Recursive</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/regex/" title="Regex">Regex</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/rem/" title="REM">REM</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/rest/" title="REST">REST</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/roman/" title="Roman">Roman</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/safe/" title="SAFe">SAFe</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/salesforce/" title="Salesforce">Salesforce</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/scrum-certification/" title="Scrum Certification">Scrum Certification</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/security/" title="Security">Security</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/software-development/" title="Software Development">Software Development</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/sorting/" title="Sorting">Sorting</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/spc/" title="SPC">SPC</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/spring-boot-api/" title="Spring Boot API">Spring Boot API</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/spring-boot-basics/" title="Spring Boot Basics">Spring Boot Basics</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/spring-boot-email/" title="Spring Boot Email">Spring Boot Email</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/spring-boot-jpa/" title="Spring Boot JPA">Spring Boot JPA</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/spring-boot-kafka/" title="Spring Boot Kafka">Spring Boot Kafka</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/spring-qa/" title="Spring Q&amp;A">Spring Q&amp;A</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/string/" title="String">String</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/swagger/" title="Swagger">Swagger</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/system-design/" title="System Design">System Design</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/terraform/" title="Terraform">Terraform</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/testing-qa/" title="Testing Q&amp;A">Testing Q&amp;A</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/undertow/" title="Undertow">Undertow</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/vault/" title="Vault">Vault</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/weight-puzzle/" title="Weight Puzzle">Weight Puzzle</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/xml/" title="XML">XML</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/yaml/" title="YAML">YAML</a>
-	</div>
-</div>
-</aside>
-			
 		</div>
-		<footer class="footer">
+	</div>
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
@@ -1150,6 +848,7 @@
 		</div>
 	</div>
 </footer>
+
 	</div>
 <script async defer src="/js/menu.js"></script>
 <script defer src="/js/theme-toggle.js"></script>
