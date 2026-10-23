@@ -1,4 +1,30 @@
+# Search engines (Google, Bing, etc.) can crawl the site as usual.
 User-Agent: *
 Disallow: /search/
+
+# AI training and AI answer-engine crawlers are not allowed to crawl the site.
+User-Agent: GPTBot
+User-Agent: ChatGPT-User
+User-Agent: ClaudeBot
+User-Agent: Claude-User
+User-Agent: anthropic-ai
+User-Agent: Google-Extended
+User-Agent: Applebot-Extended
+User-Agent: CCBot
+User-Agent: PerplexityBot
+User-Agent: Perplexity-User
+User-Agent: Bytespider
+User-Agent: meta-externalagent
+User-Agent: FacebookBot
+User-Agent: Amazonbot
+User-Agent: cohere-ai
+User-Agent: cohere-training-data-crawler
+User-Agent: Diffbot
+User-Agent: ImagesiftBot
+User-Agent: Omgilibot
+User-Agent: Timpibot
+User-Agent: AI2Bot
+User-Agent: DuckAssistBot
+Disallow: /
 
 Sitemap: https://codingnconcepts.com/sitemap.xml

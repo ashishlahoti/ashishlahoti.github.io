@@ -412,7 +412,7 @@
 			<div class="primary">
 			
 <main class="main" role="main">
-	<article class="post" data-pagefind-body>
+	<article class="post post--protected" data-pagefind-body>
 		<header class="post__header">
 			<h1 class="post__title"><img class="post__thumbnail" src="/img/logo/scrum.png" alt="Professional Scrum Product Owner I (PSPO I) Exam Questions"> Professional Scrum Product Owner I (PSPO I) Exam Questions</h1>
 			<div class="post__meta meta" data-pagefind-ignore><div class="meta__item-author meta__item">
@@ -804,6 +804,19 @@ div[autonumbering] p { font-size: 15px;}
 </div>
 		</footer>
 	</article>
+	<style>
+		.post--protected { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-touch-callout: none; }
+		.post--protected img { -webkit-user-drag: none; pointer-events: none; }
+	</style>
+	<script>
+		(function () {
+			var el = document.querySelector('.post--protected');
+			if (!el) return;
+			['contextmenu', 'copy', 'cut', 'dragstart', 'selectstart'].forEach(function (ev) {
+				el.addEventListener(ev, function (e) { e.preventDefault(); });
+			});
+		})();
+	</script>
 </main>
 
   
