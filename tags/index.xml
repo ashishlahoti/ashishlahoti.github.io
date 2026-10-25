@@ -7,11 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>CodingNConcepts</copyright>
-    <lastBuildDate>Fri, 23 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Agentforce</title>
+      <link>https://codingnconcepts.com/tags/agentforce/</link>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/agentforce/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI</title>
+      <link>https://codingnconcepts.com/tags/ai/</link>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/ai/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Azure Certification</title>
       <link>https://codingnconcepts.com/tags/azure-certification/</link>
-      <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/azure-certification/</guid>
       <description></description>
@@ -19,9 +35,73 @@
     <item>
       <title>Certification</title>
       <link>https://codingnconcepts.com/tags/certification/</link>
-      <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/certification/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Copilot</title>
+      <link>https://codingnconcepts.com/tags/copilot/</link>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/copilot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Databricks</title>
+      <link>https://codingnconcepts.com/tags/databricks/</link>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/databricks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GCP</title>
+      <link>https://codingnconcepts.com/tags/gcp/</link>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/gcp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Google Cloud</title>
+      <link>https://codingnconcepts.com/tags/google-cloud/</link>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/google-cloud/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LLM</title>
+      <link>https://codingnconcepts.com/tags/llm/</link>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/llm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Microsoft 365</title>
+      <link>https://codingnconcepts.com/tags/microsoft-365/</link>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/microsoft-365/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NVIDIA</title>
+      <link>https://codingnconcepts.com/tags/nvidia/</link>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/nvidia/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Salesforce</title>
+      <link>https://codingnconcepts.com/tags/salesforce/</link>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/salesforce/</guid>
       <description></description>
     </item>
     <item>
@@ -102,14 +182,6 @@
       <pubDate>Sun, 18 Oct 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/claude-api/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>AI</title>
-      <link>https://codingnconcepts.com/tags/ai/</link>
-      <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/ai/</guid>
       <description></description>
     </item>
     <item>
@@ -257,22 +329,6 @@
       <description></description>
     </item>
     <item>
-      <title>GCP</title>
-      <link>https://codingnconcepts.com/tags/gcp/</link>
-      <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/gcp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Google Cloud</title>
-      <link>https://codingnconcepts.com/tags/google-cloud/</link>
-      <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/google-cloud/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Kubernetes</title>
       <link>https://codingnconcepts.com/tags/kubernetes/</link>
       <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
@@ -318,14 +374,6 @@
       <pubDate>Sat, 03 Jan 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/spc/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Salesforce</title>
-      <link>https://codingnconcepts.com/tags/salesforce/</link>
-      <pubDate>Mon, 25 Aug 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/salesforce/</guid>
       <description></description>
     </item>
     <item>

@@ -7,13 +7,45 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>CodingNConcepts</copyright>
-    <lastBuildDate>Fri, 23 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Azure</title>
       <link>https://codingnconcepts.com/categories/azure/</link>
-      <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/categories/azure/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Databricks</title>
+      <link>https://codingnconcepts.com/categories/databricks/</link>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/categories/databricks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GCP</title>
+      <link>https://codingnconcepts.com/categories/gcp/</link>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/categories/gcp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NVIDIA</title>
+      <link>https://codingnconcepts.com/categories/nvidia/</link>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/categories/nvidia/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Salesforce</title>
+      <link>https://codingnconcepts.com/categories/salesforce/</link>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/categories/salesforce/</guid>
       <description></description>
     </item>
     <item>
@@ -65,27 +97,11 @@
       <description></description>
     </item>
     <item>
-      <title>GCP</title>
-      <link>https://codingnconcepts.com/categories/gcp/</link>
-      <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/categories/gcp/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Security</title>
       <link>https://codingnconcepts.com/categories/security/</link>
       <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/categories/security/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Salesforce</title>
-      <link>https://codingnconcepts.com/categories/salesforce/</link>
-      <pubDate>Mon, 25 Aug 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/categories/salesforce/</guid>
       <description></description>
     </item>
     <item>
