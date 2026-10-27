@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/categories/agile/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/tags/ai/</loc>
     <lastmod>2026-10-26T00:00:00+00:00</lastmod>
   </url>
@@ -39,7 +44,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/ai-security/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -59,6 +64,11 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/azure-certification/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/azure-machine-learning/</loc>
     <lastmod>2026-10-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -93,6 +103,16 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/tags/copilot-studio/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/cybersecurity/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/categories/databricks/</loc>
     <lastmod>2026-10-25T00:00:00+00:00</lastmod>
   </url>
@@ -118,6 +138,11 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/tags/dynamics-365/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/tags/eu-ai-act/</loc>
     <lastmod>2026-10-25T00:00:00+00:00</lastmod>
   </url>
@@ -129,6 +154,11 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/gcp/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/generative-ai/</loc>
     <lastmod>2026-10-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -179,6 +209,36 @@
   
   <url>
     <loc>https://codingnconcepts.com/isaca/isaca-advanced-in-ai-security-management-aaism-exam-questions/</loc>
+    <lastmod>2026-10-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/isc2/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/isc2/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/isc2/isc2-certified-information-systems-security-professional-cissp-exam-questions/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/istqb/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/istqb/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/istqb/istqb-certified-tester-testing-with-generative-ai-ct-genai-exam-questions/</loc>
     <lastmod>2026-10-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -203,12 +263,32 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/azure/azure-agentic-ai-business-solutions-architect-ab-100-exam-questions/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/azure/azure-ai-business-professional-ab-730-exam-questions/</loc>
     <lastmod>2026-10-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/azure/azure-ai-transformation-leader-ab-731-exam-questions/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/azure/azure-ai-cloud-developer-ai-200-exam-questions/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/azure/azure-machine-learning-operations-engineer-ai-300-exam-questions/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/mlops/</loc>
     <lastmod>2026-10-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -238,6 +318,11 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/nvidia/nvidia-generative-ai-llms-professional-ncp-genl-exam-questions/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/categories/pmi/</loc>
     <lastmod>2026-10-25T00:00:00+00:00</lastmod>
   </url>
@@ -249,6 +334,16 @@
   
   <url>
     <loc>https://codingnconcepts.com/pmi/pmi-certified-professional-managing-ai-cpmai-exam-questions/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/agile/professional-scrum-master-ai-essentials-psm-ai-exam-questions/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/agile/professional-scrum-product-owner-ai-essentials-pspo-ai-exam-questions/</loc>
     <lastmod>2026-10-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -268,7 +363,17 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/tags/scrum-certification/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/categories/security/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/software-testing/</loc>
     <lastmod>2026-10-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -418,11 +523,6 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/categories/agile/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/agile/safe-product-owner-product-manager-popm-exam-questions/</loc>
     <lastmod>2026-10-25T00:00:00+00:00</lastmod>
   </url>
@@ -504,11 +604,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/azure/azure-cloud-and-ai-security-engineer-sc500-exam-questions/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/generative-ai/</loc>
     <lastmod>2026-10-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -644,11 +739,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/agile/safe-lean-portfolio-management-lpm-exam-questions/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/scrum-certification/</loc>
     <lastmod>2026-10-25T00:00:00+00:00</lastmod>
   </url>
   
