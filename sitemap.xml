@@ -88,8 +88,23 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/comptia/comptia-cysa-plus-exam-questions/</loc>
+    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/comptia/comptia-pentest-plus-exam-questions/</loc>
+    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/tags/csa/</loc>
     <lastmod>2026-10-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/cysa&#43;/</loc>
+    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -115,6 +130,31 @@
   <url>
     <loc>https://codingnconcepts.com/databricks/databricks-data-engineer-associate-exam-questions/</loc>
     <lastmod>2026-10-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/ex200/</loc>
+    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/fortigate/</loc>
+    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/fortinet/</loc>
+    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/fortinet/</loc>
+    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/fortinet/fortinet-nse4-fortios-administrator-exam-questions/</loc>
+    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -148,12 +188,27 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/tags/linux/</loc>
+    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/tags/microsoft/</loc>
     <lastmod>2026-10-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/azure/azure-power-bi-data-analyst-pl-300-exam-questions/</loc>
+    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/nse-4/</loc>
+    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/pentest&#43;/</loc>
     <lastmod>2026-10-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -180,6 +235,26 @@
   <url>
     <loc>https://codingnconcepts.com/tags/project-management/</loc>
     <lastmod>2026-10-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/red-hat/</loc>
+    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/red-hat/</loc>
+    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/redhat/redhat-certified-system-administrator-rhcsa-ex200-exam-questions/</loc>
+    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/rhcsa/</loc>
+    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -309,12 +384,12 @@
   
   <url>
     <loc>https://codingnconcepts.com/databricks/databricks-generative-ai-engineer-associate-exam-questions/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/databricks/databricks-machine-learning-associate-exam-questions/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -414,12 +489,12 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/llm/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/machine-learning/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -519,7 +594,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/categories/security/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -549,7 +624,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/apache-kafka/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -559,7 +634,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/confluent/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -569,7 +644,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/categories/kafka/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -589,7 +664,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/ccdak/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -624,7 +699,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/confluent/confluent-certified-developer-apache-kafka-ccdak-exam-questions/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -839,7 +914,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/comptia/comptia-security-plus-exam-questions/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
