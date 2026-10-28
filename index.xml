@@ -7,7 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>CodingNConcepts</copyright>
-    <lastBuildDate>Tue, 27 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Google Cloud Professional Data Engineer (PDE) Exam Questions</title>
+      <link>https://codingnconcepts.com/gcp/gcp-professional-data-engineer-exam-questions/</link>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/gcp/gcp-professional-data-engineer-exam-questions/</guid>
+      <description>&lt;p&gt;Comprehensive list of Free &lt;strong&gt;Google Cloud Professional Data Engineer (PDE)&lt;/strong&gt; exam questions, grouped by official exam section, curated for cracking the exam with confidence.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ISACA Certified Information Security Manager (CISM) Exam Questions</title>
+      <link>https://codingnconcepts.com/isaca/isaca-certified-information-security-manager-cism-exam-questions/</link>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/isaca/isaca-certified-information-security-manager-cism-exam-questions/</guid>
+      <description>&lt;p&gt;Comprehensive list of Free &lt;strong&gt;ISACA Certified Information Security Manager (CISM)&lt;/strong&gt; exam questions, grouped by official exam domain, curated for cracking the exam with confidence.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>AWS Certified CloudOps Engineer – Associate (SOA-C03) Exam Questions</title>
       <link>https://codingnconcepts.com/aws/aws-certified-cloudops-engineer-associate-exam-questions/</link>
@@ -15,6 +31,30 @@
       
       <guid>https://codingnconcepts.com/aws/aws-certified-cloudops-engineer-associate-exam-questions/</guid>
       <description>&lt;p&gt;Comprehensive list of Free &lt;strong&gt;AWS Certified CloudOps Engineer – Associate (SOA-C03)&lt;/strong&gt; exam questions, grouped by official exam domain, curated for cracking the exam with confidence.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cisco CCNA (200-301) Exam Questions</title>
+      <link>https://codingnconcepts.com/cisco/cisco-ccna-200-301-exam-questions/</link>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/cisco/cisco-ccna-200-301-exam-questions/</guid>
+      <description>&lt;p&gt;Comprehensive list of Free &lt;strong&gt;Cisco CCNA (200-301)&lt;/strong&gt; exam questions, grouped by official exam domain, curated for cracking the exam with confidence.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cisco CCNP Enterprise ENCOR (350-401) Exam Questions</title>
+      <link>https://codingnconcepts.com/cisco/cisco-ccnp-encor-350-401-exam-questions/</link>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/cisco/cisco-ccnp-encor-350-401-exam-questions/</guid>
+      <description>&lt;p&gt;Comprehensive list of Free &lt;strong&gt;Cisco CCNP Enterprise ENCOR (350-401)&lt;/strong&gt; exam questions, grouped by official exam domain, curated for cracking the exam with confidence.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cisco CCNP Security SCOR (350-701) Exam Questions</title>
+      <link>https://codingnconcepts.com/cisco/cisco-ccnp-security-scor-350-701-exam-questions/</link>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/cisco/cisco-ccnp-security-scor-350-701-exam-questions/</guid>
+      <description>&lt;p&gt;Comprehensive list of Free &lt;strong&gt;Cisco CCNP Security SCOR (350-701)&lt;/strong&gt; exam questions, grouped by official exam domain, curated for cracking the exam with confidence.&lt;/p&gt;</description>
     </item>
     <item>
       <title>CompTIA A&#43; Core 1 (220-1201) Exam Questions</title>
@@ -33,12 +73,28 @@
       <description>&lt;p&gt;Comprehensive list of Free &lt;strong&gt;CompTIA A+ Core 2 (220-1202)&lt;/strong&gt; exam questions, grouped by official exam domain, curated for cracking the exam with confidence.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>CompTIA Cloud&#43; (CV0-004) Exam Questions</title>
+      <link>https://codingnconcepts.com/comptia/comptia-cloud-plus-exam-questions/</link>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/comptia/comptia-cloud-plus-exam-questions/</guid>
+      <description>&lt;p&gt;Comprehensive list of Free &lt;strong&gt;CompTIA Cloud+ (CV0-004)&lt;/strong&gt; exam questions, grouped by official exam domain, curated for cracking the exam with confidence.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>CompTIA CySA&#43; (CS0-004) Exam Questions</title>
       <link>https://codingnconcepts.com/comptia/comptia-cysa-plus-exam-questions/</link>
       <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/comptia/comptia-cysa-plus-exam-questions/</guid>
       <description>&lt;p&gt;Comprehensive list of Free &lt;strong&gt;CompTIA CySA+ (CS0-004)&lt;/strong&gt; exam questions, grouped by official exam domain, curated for cracking the exam with confidence.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CompTIA Linux&#43; (XK0-006) Exam Questions</title>
+      <link>https://codingnconcepts.com/comptia/comptia-linux-plus-exam-questions/</link>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/comptia/comptia-linux-plus-exam-questions/</guid>
+      <description>&lt;p&gt;Comprehensive list of Free &lt;strong&gt;CompTIA Linux+ (XK0-006)&lt;/strong&gt; exam questions, grouped by official exam domain, curated for cracking the exam with confidence.&lt;/p&gt;</description>
     </item>
     <item>
       <title>CompTIA PenTest&#43; (PT0-003) Exam Questions</title>

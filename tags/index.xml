@@ -7,7 +7,71 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>CodingNConcepts</copyright>
-    <lastBuildDate>Tue, 27 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BigQuery</title>
+      <link>https://codingnconcepts.com/tags/bigquery/</link>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/bigquery/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Certification</title>
+      <link>https://codingnconcepts.com/tags/certification/</link>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/certification/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CISM</title>
+      <link>https://codingnconcepts.com/tags/cism/</link>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/cism/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data Engineering</title>
+      <link>https://codingnconcepts.com/tags/data-engineering/</link>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/data-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GCP</title>
+      <link>https://codingnconcepts.com/tags/gcp/</link>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/gcp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Google Cloud</title>
+      <link>https://codingnconcepts.com/tags/google-cloud/</link>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/google-cloud/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ISACA</title>
+      <link>https://codingnconcepts.com/tags/isaca/</link>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/isaca/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security Management</title>
+      <link>https://codingnconcepts.com/tags/security-management/</link>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/security-management/</guid>
+      <description></description>
+    </item>
     <item>
       <title>A&#43;</title>
       <link>https://codingnconcepts.com/tags/a&#43;/</link>
@@ -49,11 +113,35 @@
       <description></description>
     </item>
     <item>
-      <title>Certification</title>
-      <link>https://codingnconcepts.com/tags/certification/</link>
+      <title>CCNA</title>
+      <link>https://codingnconcepts.com/tags/ccna/</link>
       <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
       
-      <guid>https://codingnconcepts.com/tags/certification/</guid>
+      <guid>https://codingnconcepts.com/tags/ccna/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CCNP</title>
+      <link>https://codingnconcepts.com/tags/ccnp/</link>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/ccnp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cisco</title>
+      <link>https://codingnconcepts.com/tags/cisco/</link>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/cisco/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cloud</title>
+      <link>https://codingnconcepts.com/tags/cloud/</link>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/cloud/</guid>
       <description></description>
     </item>
     <item>
@@ -62,6 +150,14 @@
       <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/cloud-architecture/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cloud&#43;</title>
+      <link>https://codingnconcepts.com/tags/cloud&#43;/</link>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/cloud&#43;/</guid>
       <description></description>
     </item>
     <item>
@@ -105,19 +201,19 @@
       <description></description>
     </item>
     <item>
-      <title>Data Engineering</title>
-      <link>https://codingnconcepts.com/tags/data-engineering/</link>
-      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/data-engineering/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Databricks</title>
       <link>https://codingnconcepts.com/tags/databricks/</link>
       <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/databricks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ENCOR</title>
+      <link>https://codingnconcepts.com/tags/encor/</link>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/encor/</guid>
       <description></description>
     </item>
     <item>
@@ -145,22 +241,6 @@
       <description></description>
     </item>
     <item>
-      <title>GCP</title>
-      <link>https://codingnconcepts.com/tags/gcp/</link>
-      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/gcp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Google Cloud</title>
-      <link>https://codingnconcepts.com/tags/google-cloud/</link>
-      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/google-cloud/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Hardware</title>
       <link>https://codingnconcepts.com/tags/hardware/</link>
       <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
@@ -185,11 +265,27 @@
       <description></description>
     </item>
     <item>
+      <title>Linux&#43;</title>
+      <link>https://codingnconcepts.com/tags/linux&#43;/</link>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/linux&#43;/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Microsoft</title>
       <link>https://codingnconcepts.com/tags/microsoft/</link>
       <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/microsoft/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Networking</title>
+      <link>https://codingnconcepts.com/tags/networking/</link>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/networking/</guid>
       <description></description>
     </item>
     <item>
@@ -254,6 +350,14 @@
       <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/salesforce/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SCOR</title>
+      <link>https://codingnconcepts.com/tags/scor/</link>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/scor/</guid>
       <description></description>
     </item>
     <item>
@@ -422,14 +526,6 @@
       <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/iapp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>ISACA</title>
-      <link>https://codingnconcepts.com/tags/isaca/</link>
-      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/isaca/</guid>
       <description></description>
     </item>
     <item>
