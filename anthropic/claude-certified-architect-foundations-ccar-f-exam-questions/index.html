@@ -1741,7 +1741,7 @@ div[autonumbering] p { font-size: 15px;}
 ⬜ Add a CLAUDE.md rule that author_email must be an address from the employee directory.<br>
 ⬜ Replace the format annotation with a regex pattern for email syntax.<br>
 ⬜ Re-run the job whenever the notifier rejects a batch.</p>
-<h6 id="a-team-split-a-long-claudemd-into-topic-files-under-clauderules-deploymentmd-now-loads-in-every-session-even-ones-that-never-touch-deploy-files-it-begins--paths-deploydeployyml-use-blue-green-deployment-steps-for-every-service-rollout-what-is-the-correct-fix">A team split a long CLAUDE.md into topic files under .claude/rules/. deployment.md now loads in every session, even ones that never touch deploy files. It begins: &mdash; paths: [&ldquo;deploy/<strong>/*&rdquo;, &ldquo;</strong>/*.deploy.yml&rdquo;] Use blue-green deployment steps for every service rollout. What is the correct fix?</h6>
+<h6 id="a-team-split-a-long-claudemd-into-topic-files-under-clauderules-deploymentmd-now-loads-in-every-session-even-ones-that-never-touch-deploy-files-it-begins--paths-deploy-deployyml-use-blue-green-deployment-steps-for-every-service-rollout-what-is-the-correct-fix">A team split a long CLAUDE.md into topic files under .claude/rules/. deployment.md now loads in every session, even ones that never touch deploy files. It begins: &mdash; paths: [&ldquo;deploy/<strong>/*&rdquo;, &ldquo;</strong>/*.deploy.yml&rdquo;] Use blue-green deployment steps for every service rollout. What is the correct fix?</h6>
 <p>⬜ Move the guidance into a CLAUDE.md inside the deploy/ folder.<br>
 ⬜ Convert deployment.md into a skill invoked when reviewing deployment changes.<br>
 ⬜ Add a closing &mdash; line after the paths entry so the frontmatter block parses.<br>
@@ -1851,7 +1851,7 @@ div[autonumbering] p { font-size: 15px;}
 ⬜ A pipeline step that checks each finding&rsquo;s file and line against the diff before any comment is posted.<br>
 ⬜ A per-run schema listing the changed files as the only allowed paths.<br>
 ⬜ A retry that reruns the whole review whenever the API rejects a comment.</p>
-<h6 id="a-team-has-two-rule-files-with-identical-text-one-scoped-to-srcapits-engineers-keep-updating-one-and-forgetting-the-other-what-is-the-simplest-fix-that-keeps-the-same-scope">A team has two rule files with identical text, one scoped to src/api/<strong>/*.ts and the other to src/jobs/</strong>/*.ts. Engineers keep updating one and forgetting the other. What is the simplest fix that keeps the same scope?</h6>
+<h6 id="a-team-has-two-rule-files-with-identical-text-one-scoped-to-srcapits-and-the-other-to-srcjobsts-engineers-keep-updating-one-and-forgetting-the-other-what-is-the-simplest-fix-that-keeps-the-same-scope">A team has two rule files with identical text, one scoped to src/api/<strong>/*.ts and the other to src/jobs/</strong>/*.ts. Engineers keep updating one and forgetting the other. What is the simplest fix that keeps the same scope?</h6>
 <p>⬜ Move the text into src/CLAUDE.md, which covers both folders.<br>
 ⬜ Keep both files and add a CI check that they match.<br>
 ⬜ Keep one rule file and list both glob patterns under paths.<br>

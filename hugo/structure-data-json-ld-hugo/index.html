@@ -524,7 +524,7 @@
 	<div class="toc__menu">
 		<nav id="TableOfContents">
   <ul>
-    <li><a href="#create-site_-partial">Create <em>site_schema.html</em> Partial</a></li>
+    <li><a href="#create-site_schemahtml-partial">Create <em>site_schema.html</em> Partial</a></li>
     <li><a href="#relevant-front-matter">Relevant <em>front-matter</em></a>
       <ul>
         <li></li>
@@ -556,7 +556,7 @@
 <p>Schema of structure data for all type of websites and web pages can be found in <a href="https://schema.org/docs/full.html">documentation</a> of <a href="https://schema.org">schema.org</a></p>
 <p><strong>Microdata</strong> and <strong>JSON-LD</strong> are two ways to add mark up in order to structure your data. Google recommends using <strong>JSON-LD</strong> as it is more cleaner approach to express the structure of the data in JSON format embedded as a <code>&lt;script&gt;</code> in the <code>&lt;head&gt;</code> tag of your HTML. Its a clear separation of structure from HTML elements as compare to <strong>Microdata</strong> where you add special properties like <code>itemprop</code>, <code>itemtype</code> in HTML element tags everywhere.</p>
 <p>Now we know that JSON-LD is way to go. There are the steps to add structure data using JSON-LD in hugo website:</p>
-<h2 id="create-site_-partial">Create <em>site_schema.html</em> Partial</h2>
+<h2 id="create-site_schemahtml-partial">Create <em>site_schema.html</em> Partial</h2>
 <p>First of all we are going to create a partial called <code>site_schema.html</code> which is responsible to generate structure data JSON-LD for hugo website and hugo blog pages. All you need to do is copy the below code snippet and save it under <code>$hugo/layouts/partials/site_schema.html</code>.</p>
 <pre tabindex="0"><code>{{ if .IsHome -}}
 &lt;script type=&#34;application/ld+json&#34;&gt;

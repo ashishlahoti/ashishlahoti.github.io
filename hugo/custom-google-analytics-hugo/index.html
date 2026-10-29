@@ -529,12 +529,12 @@
         <li></li>
       </ul>
     </li>
-    <li><a href="#create-google_-partial">Create <em>google_analytics.html</em> Partial</a>
+    <li><a href="#create-google_analyticshtml-partial">Create <em>google_analytics.html</em> Partial</a>
       <ul>
         <li></li>
       </ul>
     </li>
-    <li><a href="#add-google_-partial-to-baseofhtml">Add <em>google_analytics.html</em> partial to <em>baseof.html</em></a>
+    <li><a href="#add-google_analyticshtml-partial-to-baseofhtml">Add <em>google_analytics.html</em> partial to <em>baseof.html</em></a>
       <ul>
         <li></li>
       </ul>
@@ -551,7 +551,7 @@
 <h6 id="configtoml">config.toml</h6>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">googleAnalytics</span> <span class="p">=</span> <span class="s2">&#34;UA-123456789-1&#34;</span>  <span class="c"># Get this Tracking-ID from your google analytics account</span>
 </span></span></code></pre></div><p>You can create an account to register your website with <a href="https://analytics.google.com/">Google Analytics</a> if you don&rsquo;t have one and get this Tracking-ID.</p>
-<h2 id="create-google_-partial">Create <em>google_analytics.html</em> Partial</h2>
+<h2 id="create-google_analyticshtml-partial">Create <em>google_analytics.html</em> Partial</h2>
 <p>Next, We are going to create a partial called <code>google_analytics.html</code> which is responsible for injecting google analytics script in your hugo blog pages. All you need to do is copy the below code snippet and save it under <code>$hugo/layouts/partials/google_analytics.html</code>.</p>
 <h6 id="google_analyticshtml">google_analytics.html</h6>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- with .Site.GoogleAnalytics -}}
@@ -564,7 +564,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">async</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://www.googletagmanager.com/gtag/js?id={{ . }}&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">{{- end -}}
-</span></span></code></pre></div><h2 id="add-google_-partial-to-baseofhtml">Add <em>google_analytics.html</em> partial to <em>baseof.html</em></h2>
+</span></span></code></pre></div><h2 id="add-google_analyticshtml-partial-to-baseofhtml">Add <em>google_analytics.html</em> partial to <em>baseof.html</em></h2>
 <p>Next, You need to add <code>google_analytics.html</code> partial to <code>baseof.html</code> file (or any other file which is responsible to generate <code>&lt;head&gt;&lt;/head&gt;</code> section of Hugo pages) as below:-</p>
 <h6 id="baseofhtml">baseof.html</h6>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
