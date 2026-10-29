@@ -7,21 +7,45 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>CodingNConcepts</copyright>
-    <lastBuildDate>Wed, 28 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 29 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Certification</title>
+      <link>https://codingnconcepts.com/tags/certification/</link>
+      <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/certification/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CTFL</title>
+      <link>https://codingnconcepts.com/tags/ctfl/</link>
+      <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/ctfl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ISTQB</title>
+      <link>https://codingnconcepts.com/tags/istqb/</link>
+      <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/istqb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software Testing</title>
+      <link>https://codingnconcepts.com/tags/software-testing/</link>
+      <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/software-testing/</guid>
+      <description></description>
+    </item>
     <item>
       <title>BigQuery</title>
       <link>https://codingnconcepts.com/tags/bigquery/</link>
       <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/bigquery/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Certification</title>
-      <link>https://codingnconcepts.com/tags/certification/</link>
-      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/certification/</guid>
       <description></description>
     </item>
     <item>
@@ -553,14 +577,6 @@
       <description></description>
     </item>
     <item>
-      <title>ISTQB</title>
-      <link>https://codingnconcepts.com/tags/istqb/</link>
-      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/istqb/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>LLM</title>
       <link>https://codingnconcepts.com/tags/llm/</link>
       <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
@@ -606,14 +622,6 @@
       <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/scrum-certification/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Software Testing</title>
-      <link>https://codingnconcepts.com/tags/software-testing/</link>
-      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/software-testing/</guid>
       <description></description>
     </item>
     <item>

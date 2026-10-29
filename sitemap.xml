@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://codingnconcepts.com/tags/bigquery/</loc>
-    <lastmod>2026-10-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/categories/</loc>
     <lastmod>2026-10-29T00:00:00+00:00</lastmod>
   </url>
@@ -18,17 +13,52 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/</loc>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/ctfl/</loc>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/istqb/</loc>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/istqb/</loc>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/istqb/istqb-certified-tester-foundation-level-ctfl-v4-exam-questions/</loc>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/software-testing/</loc>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/</loc>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/bigquery/</loc>
+    <lastmod>2026-10-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/tags/cisa/</loc>
     <lastmod>2026-10-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/cism/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/</loc>
     <lastmod>2026-10-29T00:00:00+00:00</lastmod>
   </url>
   
@@ -84,11 +114,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/security-management/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/</loc>
     <lastmod>2026-10-29T00:00:00+00:00</lastmod>
   </url>
   
@@ -264,27 +289,27 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/ex200/</loc>
-    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/fortigate/</loc>
-    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/categories/fortinet/</loc>
-    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/fortinet/</loc>
-    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/fortinet/fortinet-nse4-fortios-administrator-exam-questions/</loc>
-    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -304,7 +329,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/linux/</loc>
-    <lastmod>2026-10-28T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -329,7 +354,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/nse-4/</loc>
-    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -364,22 +389,22 @@
   
   <url>
     <loc>https://codingnconcepts.com/categories/red-hat/</loc>
-    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/red-hat/</loc>
-    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/redhat/redhat-certified-system-administrator-rhcsa-ex200-exam-questions/</loc>
-    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/rhcsa/</loc>
-    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -588,18 +613,8 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/categories/istqb/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/istqb/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/istqb/istqb-certified-tester-testing-with-generative-ai-ct-genai-exam-questions/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -710,11 +725,6 @@
   <url>
     <loc>https://codingnconcepts.com/categories/security/</loc>
     <lastmod>2026-10-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/software-testing/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
