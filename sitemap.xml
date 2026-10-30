@@ -3,6 +3,51 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://codingnconcepts.com/categories/aws/</loc>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/aws/</loc>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/aws-certification/</loc>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/aws/aws-certified-data-engineer-associate-exam-questions/</loc>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/</loc>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/certification/</loc>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/</loc>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/data-engineering/</loc>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/</loc>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/categories/azure/</loc>
     <lastmod>2026-10-29T00:00:00+00:00</lastmod>
   </url>
@@ -14,21 +59,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/azure/azure-devops-engineer-expert-az-400-exam-questions/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/certification/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/</loc>
     <lastmod>2026-10-29T00:00:00+00:00</lastmod>
   </url>
   
@@ -79,31 +109,26 @@
   
   <url>
     <loc>https://codingnconcepts.com/categories/snowflake/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/snowflake/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/snowflake/snowflake-snowpro-core-cof-c03-exam-questions/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/snowpro/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/software-testing/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/</loc>
     <lastmod>2026-10-29T00:00:00+00:00</lastmod>
   </url>
   
@@ -119,11 +144,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/cism/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/data-engineering/</loc>
     <lastmod>2026-10-29T00:00:00+00:00</lastmod>
   </url>
   
@@ -193,23 +213,8 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/categories/aws/</loc>
-    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/aws/</loc>
-    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/aws-certification/</loc>
-    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/aws/aws-certified-cloudops-engineer-associate-exam-questions/</loc>
-    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -264,7 +269,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/cloudops/</loc>
-    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
