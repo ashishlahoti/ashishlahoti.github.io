@@ -63,6 +63,21 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/categories/databricks/</loc>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/databricks/</loc>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/databricks/databricks-data-engineer-professional-exam-questions/</loc>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/tags/devops/</loc>
     <lastmod>2026-10-30T00:00:00+00:00</lastmod>
   </url>
@@ -79,6 +94,11 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/security/</loc>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/spark/</loc>
     <lastmod>2026-10-30T00:00:00+00:00</lastmod>
   </url>
   
@@ -363,18 +383,8 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/categories/databricks/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/databricks/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/databricks/databricks-data-engineer-associate-exam-questions/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -529,11 +539,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/servicenow/servicenow-certified-system-administrator-csa-exam-questions/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/spark/</loc>
     <lastmod>2026-10-29T00:00:00+00:00</lastmod>
   </url>
   
