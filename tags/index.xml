@@ -7,13 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>CodingNConcepts</copyright>
-    <lastBuildDate>Sat, 31 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Certification</title>
       <link>https://codingnconcepts.com/tags/certification/</link>
-      <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/certification/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cybersecurity</title>
+      <link>https://codingnconcepts.com/tags/cybersecurity/</link>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/cybersecurity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Entry Level</title>
+      <link>https://codingnconcepts.com/tags/entry-level/</link>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/entry-level/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ISC2</title>
+      <link>https://codingnconcepts.com/tags/isc2/</link>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/isc2/</guid>
       <description></description>
     </item>
     <item>
@@ -22,14 +46,6 @@
       <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/cloud/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Cybersecurity</title>
-      <link>https://codingnconcepts.com/tags/cybersecurity/</link>
-      <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/cybersecurity/</guid>
       <description></description>
     </item>
     <item>
@@ -54,14 +70,6 @@
       <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/google-cloud/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>ISC2</title>
-      <link>https://codingnconcepts.com/tags/isc2/</link>
-      <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/isc2/</guid>
       <description></description>
     </item>
     <item>
