@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://codingnconcepts.com/tags/agile/</loc>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/categories/azure/</loc>
     <lastmod>2026-11-04T00:00:00+00:00</lastmod>
   </url>
@@ -39,6 +44,21 @@
   
   <url>
     <loc>https://codingnconcepts.com/azure/azure-identity-and-access-administrator-sc300-exam-questions/</loc>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/pmi/</loc>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/pmi/</loc>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/pmi/pmi-agile-certified-practitioner-acp-exam-questions/</loc>
     <lastmod>2026-11-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -538,18 +558,8 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/categories/pmi/</loc>
-    <lastmod>2026-10-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/pmi/</loc>
-    <lastmod>2026-10-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/pmi/pmi-project-management-professional-pmp-exam-questions/</loc>
-    <lastmod>2026-10-28T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -559,7 +569,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/project-management/</loc>
-    <lastmod>2026-10-28T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -629,7 +639,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/ai/</loc>
-    <lastmod>2026-11-03T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -649,7 +659,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/ai-project-management/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -844,7 +854,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/pmi/pmi-certified-professional-managing-ai-cpmai-exam-questions/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
