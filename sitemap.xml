@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://codingnconcepts.com/categories/agile/</loc>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/tags/agile/</loc>
     <lastmod>2026-11-04T00:00:00+00:00</lastmod>
   </url>
@@ -189,6 +194,21 @@
   
   <url>
     <loc>https://codingnconcepts.com/salesforce/salesforce-platform-app-builder-exam-questions/</loc>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/scrum-alliance/</loc>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/agile/scrum-alliance-certified-scrummaster-csm-exam-questions/</loc>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/scrum-certification/</loc>
     <lastmod>2026-11-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -708,11 +728,6 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/categories/agile/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/tags/ai/</loc>
     <lastmod>2026-11-04T00:00:00+00:00</lastmod>
   </url>
@@ -935,11 +950,6 @@
   <url>
     <loc>https://codingnconcepts.com/salesforce/salesforce-agentforce-specialist-exam-questions/</loc>
     <lastmod>2026-11-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/scrum-certification/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
