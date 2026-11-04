@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>CodingNConcepts</copyright>
-    <lastBuildDate>Tue, 03 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 04 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Azure Certification</title>
       <link>https://codingnconcepts.com/tags/azure-certification/</link>
-      <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/azure-certification/</guid>
       <description></description>
@@ -19,9 +19,17 @@
     <item>
       <title>Certification</title>
       <link>https://codingnconcepts.com/tags/certification/</link>
-      <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/certification/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Microsoft Fabric</title>
+      <link>https://codingnconcepts.com/tags/microsoft-fabric/</link>
+      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/microsoft-fabric/</guid>
       <description></description>
     </item>
     <item>
@@ -54,14 +62,6 @@
       <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/isc2/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Microsoft Fabric</title>
-      <link>https://codingnconcepts.com/tags/microsoft-fabric/</link>
-      <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/microsoft-fabric/</guid>
       <description></description>
     </item>
     <item>
