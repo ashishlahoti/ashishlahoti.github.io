@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/tags/app-builder/</loc>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/categories/azure/</loc>
     <lastmod>2026-11-04T00:00:00+00:00</lastmod>
   </url>
@@ -69,6 +74,21 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/project-management/</loc>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/salesforce/</loc>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/salesforce/</loc>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/salesforce/salesforce-platform-app-builder-exam-questions/</loc>
     <lastmod>2026-11-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -369,12 +389,12 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/admin/</loc>
-    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/agentforce/</loc>
-    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -598,18 +618,8 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/categories/salesforce/</loc>
-    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/salesforce/</loc>
-    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/salesforce/salesforce-platform-administrator-exam-questions/</loc>
-    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -874,7 +884,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/salesforce/salesforce-agentforce-specialist-exam-questions/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
