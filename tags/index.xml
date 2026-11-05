@@ -17,6 +17,22 @@
       <description></description>
     </item>
     <item>
+      <title>Cloud Native</title>
+      <link>https://codingnconcepts.com/tags/cloud-native/</link>
+      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/cloud-native/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kubernetes</title>
+      <link>https://codingnconcepts.com/tags/kubernetes/</link>
+      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Sales Cloud</title>
       <link>https://codingnconcepts.com/tags/sales-cloud/</link>
       <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
@@ -46,6 +62,14 @@
       <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/scrum-master/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>https://codingnconcepts.com/tags/security/</link>
+      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/security/</guid>
       <description></description>
     </item>
     <item>
@@ -233,14 +257,6 @@
       <description></description>
     </item>
     <item>
-      <title>Security</title>
-      <link>https://codingnconcepts.com/tags/security/</link>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/security/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Cybersecurity</title>
       <link>https://codingnconcepts.com/tags/cybersecurity/</link>
       <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
@@ -305,27 +321,11 @@
       <description></description>
     </item>
     <item>
-      <title>Cloud Native</title>
-      <link>https://codingnconcepts.com/tags/cloud-native/</link>
-      <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/cloud-native/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Data Engineering</title>
       <link>https://codingnconcepts.com/tags/data-engineering/</link>
       <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/data-engineering/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Kubernetes</title>
-      <link>https://codingnconcepts.com/tags/kubernetes/</link>
-      <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/kubernetes/</guid>
       <description></description>
     </item>
     <item>
