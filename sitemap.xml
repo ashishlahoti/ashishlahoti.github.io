@@ -58,6 +58,11 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/tags/data/</loc>
+    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/tags/data-analytics/</loc>
     <lastmod>2026-11-05T00:00:00+00:00</lastmod>
   </url>
@@ -84,6 +89,26 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/databricks-sql/</loc>
+    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/gcp/</loc>
+    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/gcp/</loc>
+    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/google-cloud/</loc>
+    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/gcp/gcp-associate-data-practitioner-exam-questions/</loc>
     <lastmod>2026-11-05T00:00:00+00:00</lastmod>
   </url>
   
@@ -224,21 +249,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/developer/</loc>
-    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/gcp/</loc>
-    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/gcp/</loc>
-    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/google-cloud/</loc>
     <lastmod>2026-11-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -399,11 +409,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/cybersecurity/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/data/</loc>
     <lastmod>2026-11-05T00:00:00+00:00</lastmod>
   </url>
   
@@ -584,7 +589,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/bigquery/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -599,7 +604,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/gcp/gcp-professional-data-engineer-exam-questions/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1354,7 +1359,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/gcp/gcp-associate-cloud-engineer-exam-questions/</loc>
-    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
