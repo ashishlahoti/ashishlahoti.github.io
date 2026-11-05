@@ -7,7 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>CodingNConcepts</copyright>
-    <lastBuildDate>Wed, 04 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Salesforce</title>
+      <link>https://codingnconcepts.com/categories/salesforce/</link>
+      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/categories/salesforce/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Agile</title>
       <link>https://codingnconcepts.com/categories/agile/</link>
@@ -62,14 +70,6 @@
       <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/categories/pmi/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Salesforce</title>
-      <link>https://codingnconcepts.com/categories/salesforce/</link>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/categories/salesforce/</guid>
       <description></description>
     </item>
     <item>
