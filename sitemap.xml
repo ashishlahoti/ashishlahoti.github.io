@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://codingnconcepts.com/categories/agile/</loc>
+    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/categories/</loc>
     <lastmod>2026-11-05T00:00:00+00:00</lastmod>
   </url>
@@ -14,6 +19,11 @@
   
   <url>
     <loc>https://codingnconcepts.com/</loc>
+    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/agile/professional-scrum-master-psm-2-exam-questions/</loc>
     <lastmod>2026-11-05T00:00:00+00:00</lastmod>
   </url>
   
@@ -43,17 +53,22 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/tags/scrum-certification/</loc>
+    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/scrum-master/</loc>
+    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/tags/service-cloud/</loc>
     <lastmod>2026-11-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/agile/</loc>
     <lastmod>2026-11-05T00:00:00+00:00</lastmod>
   </url>
   
@@ -999,7 +1014,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/agile/professional-scrum-master-ai-essentials-psm-ai-exam-questions/</loc>
-    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1010,11 +1025,6 @@
   <url>
     <loc>https://codingnconcepts.com/salesforce/salesforce-agentforce-specialist-exam-questions/</loc>
     <lastmod>2026-11-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/scrum-certification/</loc>
-    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
