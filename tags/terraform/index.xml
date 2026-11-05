@@ -7,7 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>CodingNConcepts</copyright>
-    <lastBuildDate>Sat, 13 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/terraform/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/terraform/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HashiCorp Terraform Authoring and Operations Advanced Exam Questions</title>
+      <link>https://codingnconcepts.com/hashicorp/terraform-authoring-operations-advanced-exam-questions/</link>
+      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/hashicorp/terraform-authoring-operations-advanced-exam-questions/</guid>
+      <description>&lt;p&gt;Comprehensive list of Free &lt;strong&gt;HashiCorp Terraform Authoring and Operations Advanced&lt;/strong&gt; exam questions, grouped by official exam objective, curated for cracking the exam with confidence.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>HashiCorp Terraform Associate (004) Exam Questions</title>
       <link>https://codingnconcepts.com/post/terraform-associate-exam-questions/</link>

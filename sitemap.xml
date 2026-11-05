@@ -118,6 +118,26 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/categories/hashicorp/</loc>
+    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/hashicorp/</loc>
+    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/hashicorp/terraform-authoring-operations-advanced-exam-questions/</loc>
+    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/infrastructure-as-code/</loc>
+    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/tags/it-fundamentals/</loc>
     <lastmod>2026-11-05T00:00:00+00:00</lastmod>
   </url>
@@ -214,6 +234,11 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/tech&#43;/</loc>
+    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/terraform/</loc>
     <lastmod>2026-11-05T00:00:00+00:00</lastmod>
   </url>
   
@@ -1293,18 +1318,13 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/hashicorp/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/hashicorp/hashicorp-vault-associate-exam-questions/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/vault/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1609,11 +1629,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/post/terraform-associate-exam-questions/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/terraform/</loc>
     <lastmod>2026-10-25T00:00:00+00:00</lastmod>
   </url>
   
