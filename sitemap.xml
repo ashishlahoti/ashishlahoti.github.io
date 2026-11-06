@@ -3,32 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://codingnconcepts.com/categories/azure/</loc>
+    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/azure-certification/</loc>
+    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/</loc>
+    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/certification/</loc>
+    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/</loc>
+    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/azure/azure-endpoint-administrator-md-102-exam-questions/</loc>
+    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/microsoft-intune/</loc>
+    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/</loc>
+    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/categories/agile/</loc>
     <lastmod>2026-11-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/categories/azure/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/azure-certification/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/tags/azure-virtual-desktop/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/certification/</loc>
     <lastmod>2026-11-05T00:00:00+00:00</lastmod>
   </url>
   
@@ -39,11 +59,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/cloud-native/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/</loc>
     <lastmod>2026-11-05T00:00:00+00:00</lastmod>
   </url>
   
@@ -254,7 +269,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/security/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -269,11 +284,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/sscp/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/</loc>
     <lastmod>2026-11-05T00:00:00+00:00</lastmod>
   </url>
   
@@ -349,12 +359,12 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/microsoft-365/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/azure/azure-microsoft-365-administrator-ms-102-exam-questions/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -379,7 +389,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/azure/azure-identity-and-access-administrator-sc300-exam-questions/</loc>
-    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1154,7 +1164,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/azure/azure-administrator-az-104-exam-questions/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
