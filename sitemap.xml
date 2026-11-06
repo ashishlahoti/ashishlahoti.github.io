@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://codingnconcepts.com/categories/agile/</loc>
+    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/agile-leadership/</loc>
+    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/tags/apex/</loc>
     <lastmod>2026-11-06T00:00:00+00:00</lastmod>
   </url>
@@ -78,6 +88,11 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/agile/professional-agile-leadership-pal-1-exam-questions/</loc>
+    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/categories/salesforce/</loc>
     <lastmod>2026-11-06T00:00:00+00:00</lastmod>
   </url>
@@ -113,6 +128,11 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/tags/scrum-certification/</loc>
+    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/tags/tableau/</loc>
     <lastmod>2026-11-06T00:00:00+00:00</lastmod>
   </url>
@@ -120,11 +140,6 @@
   <url>
     <loc>https://codingnconcepts.com/tags/</loc>
     <lastmod>2026-11-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/agile/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -299,7 +314,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/agile/professional-scrum-master-psm-2-exam-questions/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -328,13 +343,8 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/scrum-certification/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/tags/scrum-master/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
