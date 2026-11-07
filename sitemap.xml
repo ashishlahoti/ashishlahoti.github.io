@@ -18,6 +18,11 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/tags/application-development/</loc>
+    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/categories/azure/</loc>
     <lastmod>2026-11-06T00:00:00+00:00</lastmod>
   </url>
@@ -33,18 +38,23 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/categories/</loc>
+    <loc>https://codingnconcepts.com/tags/cad/</loc>
     <lastmod>2026-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/</loc>
+    <lastmod>2026-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/certification/</loc>
-    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/</loc>
-    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -153,13 +163,28 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/categories/servicenow/</loc>
+    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/servicenow/</loc>
+    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/servicenow/servicenow-certified-application-developer-cad-exam-questions/</loc>
+    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/tags/tableau/</loc>
     <lastmod>2026-11-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/</loc>
-    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -209,7 +234,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/data/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -244,27 +269,27 @@
   
   <url>
     <loc>https://codingnconcepts.com/categories/gcp/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/gcp/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/google-cloud/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/gcp/gcp-associate-data-practitioner-exam-questions/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/gcp/gcp-professional-cloud-network-engineer-exam-questions/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -324,7 +349,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/networking/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -369,7 +394,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/security/</loc>
-    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -429,12 +454,12 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/developer/</loc>
-    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/gcp/gcp-professional-cloud-developer-exam-questions/</loc>
-    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -584,27 +609,27 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/cloud/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/devops/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/gcp/gcp-cloud-digital-leader-exam-questions/</loc>
-    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/gcp/gcp-professional-cloud-devops-engineer-exam-questions/</loc>
-    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/gcp/gcp-professional-cloud-security-engineer-exam-questions/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -644,7 +669,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/data-engineering/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -704,7 +729,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/itsm/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -734,7 +759,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/bigquery/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -749,7 +774,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/gcp/gcp-professional-data-engineer-exam-questions/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -829,7 +854,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/cloud-architecture/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -874,7 +899,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/csa/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -919,7 +944,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/gcp/gcp-professional-cloud-architect-exam-questions/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -998,18 +1023,8 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/categories/servicenow/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/servicenow/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/servicenow/servicenow-certified-system-administrator-csa-exam-questions/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
