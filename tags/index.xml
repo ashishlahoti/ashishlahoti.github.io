@@ -81,6 +81,14 @@
       <description></description>
     </item>
     <item>
+      <title>Databricks</title>
+      <link>https://codingnconcepts.com/tags/databricks/</link>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/databricks/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Flux</title>
       <link>https://codingnconcepts.com/tags/flux/</link>
       <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
@@ -102,6 +110,22 @@
       <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/gitops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Machine Learning</title>
+      <link>https://codingnconcepts.com/tags/machine-learning/</link>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MLOps</title>
+      <link>https://codingnconcepts.com/tags/mlops/</link>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/mlops/</guid>
       <description></description>
     </item>
     <item>
@@ -358,14 +382,6 @@
       <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/data&#43;/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Databricks</title>
-      <link>https://codingnconcepts.com/tags/databricks/</link>
-      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/databricks/</guid>
       <description></description>
     </item>
     <item>
@@ -1078,22 +1094,6 @@
       <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/llm/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Machine Learning</title>
-      <link>https://codingnconcepts.com/tags/machine-learning/</link>
-      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/machine-learning/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>MLOps</title>
-      <link>https://codingnconcepts.com/tags/mlops/</link>
-      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/mlops/</guid>
       <description></description>
     </item>
     <item>
