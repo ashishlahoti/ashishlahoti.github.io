@@ -8,12 +8,22 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/categories/agile/</loc>
+    <lastmod>2026-11-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/tags/ai-agents/</loc>
     <lastmod>2026-11-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/ai-testing/</loc>
+    <lastmod>2026-11-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/ai-native/</loc>
     <lastmod>2026-11-10T00:00:00+00:00</lastmod>
   </url>
   
@@ -298,6 +308,16 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/tags/safe/</loc>
+    <lastmod>2026-11-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/agile/safe-ai-native-foundations-exam-questions/</loc>
+    <lastmod>2026-11-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/tags/security-operations/</loc>
     <lastmod>2026-11-10T00:00:00+00:00</lastmod>
   </url>
@@ -355,11 +375,6 @@
   <url>
     <loc>https://codingnconcepts.com/tags/windows-server/</loc>
     <lastmod>2026-11-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/agile/</loc>
-    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1654,11 +1669,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/github/github-foundations-gh-900-exam-questions/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/safe/</loc>
     <lastmod>2026-10-25T00:00:00+00:00</lastmod>
   </url>
   
