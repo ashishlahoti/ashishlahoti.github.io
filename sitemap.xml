@@ -78,6 +78,21 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/categories/comptia/</loc>
+    <lastmod>2026-11-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/comptia/</loc>
+    <lastmod>2026-11-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/comptia/comptia-project-plus-pk0-005-exam-questions/</loc>
+    <lastmod>2026-11-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/tags/flux/</loc>
     <lastmod>2026-11-10T00:00:00+00:00</lastmod>
   </url>
@@ -114,6 +129,16 @@
   
   <url>
     <loc>https://codingnconcepts.com/cloud/opentelemetry-certified-associate-otca-exam-questions/</loc>
+    <lastmod>2026-11-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/project-management/</loc>
+    <lastmod>2026-11-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/project&#43;/</loc>
     <lastmod>2026-11-10T00:00:00+00:00</lastmod>
   </url>
   
@@ -314,16 +339,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/azure-virtual-desktop/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/comptia/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/comptia/</loc>
     <lastmod>2026-11-05T00:00:00+00:00</lastmod>
   </url>
   
@@ -654,11 +669,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/pmi/pmi-certified-associate-project-management-capm-exam-questions/</loc>
-    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/project-management/</loc>
     <lastmod>2026-11-04T00:00:00+00:00</lastmod>
   </url>
   
