@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://codingnconcepts.com/tags/administration/</loc>
+    <lastmod>2026-11-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/tags/ai-agents/</loc>
     <lastmod>2026-11-10T00:00:00+00:00</lastmod>
   </url>
@@ -118,6 +123,11 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/categories/gcp/</loc>
+    <lastmod>2026-11-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/tags/generative-ai/</loc>
     <lastmod>2026-11-10T00:00:00+00:00</lastmod>
   </url>
@@ -129,6 +139,21 @@
   
   <url>
     <loc>https://codingnconcepts.com/cloud/gitops-certified-associate-cgoa-exam-questions/</loc>
+    <lastmod>2026-11-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/google-cloud/</loc>
+    <lastmod>2026-11-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/gcp/gcp-associate-google-workspace-administrator-exam-questions/</loc>
+    <lastmod>2026-11-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/google-workspace/</loc>
     <lastmod>2026-11-10T00:00:00+00:00</lastmod>
   </url>
   
@@ -428,17 +453,7 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/categories/gcp/</loc>
-    <lastmod>2026-11-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/tags/gcp/</loc>
-    <lastmod>2026-11-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/google-cloud/</loc>
     <lastmod>2026-11-07T00:00:00+00:00</lastmod>
   </url>
   
@@ -1474,11 +1489,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/anthropic/claude-certified-associate-foundations-ccao-f-exam-questions/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/administration/</loc>
     <lastmod>2026-10-25T00:00:00+00:00</lastmod>
   </url>
   

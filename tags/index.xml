@@ -9,6 +9,14 @@
     <copyright>CodingNConcepts</copyright>
     <lastBuildDate>Tue, 10 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Administration</title>
+      <link>https://codingnconcepts.com/tags/administration/</link>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/administration/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>AI Agents</title>
       <link>https://codingnconcepts.com/tags/ai-agents/</link>
       <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
@@ -110,6 +118,22 @@
       <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/gitops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Google Cloud</title>
+      <link>https://codingnconcepts.com/tags/google-cloud/</link>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/google-cloud/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Google Workspace</title>
+      <link>https://codingnconcepts.com/tags/google-workspace/</link>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/google-workspace/</guid>
       <description></description>
     </item>
     <item>
@@ -398,14 +422,6 @@
       <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/gcp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Google Cloud</title>
-      <link>https://codingnconcepts.com/tags/google-cloud/</link>
-      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/google-cloud/</guid>
       <description></description>
     </item>
     <item>
@@ -1166,14 +1182,6 @@
       <pubDate>Sun, 18 Oct 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/claude-api/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Administration</title>
-      <link>https://codingnconcepts.com/tags/administration/</link>
-      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/administration/</guid>
       <description></description>
     </item>
     <item>
