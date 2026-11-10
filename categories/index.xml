@@ -9,6 +9,14 @@
     <copyright>CodingNConcepts</copyright>
     <lastBuildDate>Tue, 10 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Cisco</title>
+      <link>https://codingnconcepts.com/categories/cisco/</link>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/categories/cisco/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Cloud</title>
       <link>https://codingnconcepts.com/categories/cloud/</link>
       <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
@@ -150,14 +158,6 @@
       <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/categories/snowflake/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Cisco</title>
-      <link>https://codingnconcepts.com/categories/cisco/</link>
-      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/categories/cisco/</guid>
       <description></description>
     </item>
     <item>

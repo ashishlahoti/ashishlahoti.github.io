@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://codingnconcepts.com/tags/ai-agents/</loc>
+    <lastmod>2026-11-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/aitech/</loc>
+    <lastmod>2026-11-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/tags/argo/</loc>
     <lastmod>2026-11-10T00:00:00+00:00</lastmod>
   </url>
@@ -28,6 +38,21 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/categories/cisco/</loc>
+    <lastmod>2026-11-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/cisco/</loc>
+    <lastmod>2026-11-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/cisco/cisco-ai-technical-practitioner-810-110-aitech-exam-questions/</loc>
+    <lastmod>2026-11-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/categories/cloud/</loc>
     <lastmod>2026-11-10T00:00:00+00:00</lastmod>
   </url>
@@ -44,6 +69,11 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/flux/</loc>
+    <lastmod>2026-11-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/generative-ai/</loc>
     <lastmod>2026-11-10T00:00:00+00:00</lastmod>
   </url>
   
@@ -893,16 +923,6 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/categories/cisco/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/cisco/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/cisco/cisco-ccna-200-301-exam-questions/</loc>
     <lastmod>2026-10-29T00:00:00+00:00</lastmod>
   </url>
@@ -1178,11 +1198,6 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/generative-ai/</loc>
-    <lastmod>2026-10-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/gcp/gcp-generative-ai-leader-exam-questions/</loc>
     <lastmod>2026-10-31T00:00:00+00:00</lastmod>
   </url>
@@ -1370,11 +1385,6 @@
   <url>
     <loc>https://codingnconcepts.com/categories/kafka/</loc>
     <lastmod>2026-10-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/ai-agents/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
