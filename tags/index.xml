@@ -9,6 +9,14 @@
     <copyright>CodingNConcepts</copyright>
     <lastBuildDate>Wed, 11 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>AI Agents</title>
+      <link>https://codingnconcepts.com/tags/ai-agents/</link>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/ai-agents/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>AWS</title>
       <link>https://codingnconcepts.com/tags/aws/</link>
       <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
@@ -25,11 +33,27 @@
       <description></description>
     </item>
     <item>
+      <title>Azure Certification</title>
+      <link>https://codingnconcepts.com/tags/azure-certification/</link>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/azure-certification/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Certification</title>
       <link>https://codingnconcepts.com/tags/certification/</link>
       <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/certification/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Copilot Studio</title>
+      <link>https://codingnconcepts.com/tags/copilot-studio/</link>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/copilot-studio/</guid>
       <description></description>
     </item>
     <item>
@@ -86,14 +110,6 @@
       <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/ai/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>AI Agents</title>
-      <link>https://codingnconcepts.com/tags/ai-agents/</link>
-      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/ai-agents/</guid>
       <description></description>
     </item>
     <item>
@@ -598,14 +614,6 @@
       <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/application-development/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Azure Certification</title>
-      <link>https://codingnconcepts.com/tags/azure-certification/</link>
-      <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/azure-certification/</guid>
       <description></description>
     </item>
     <item>
@@ -1318,14 +1326,6 @@
       <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/copilot/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Copilot Studio</title>
-      <link>https://codingnconcepts.com/tags/copilot-studio/</link>
-      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/copilot-studio/</guid>
       <description></description>
     </item>
     <item>
