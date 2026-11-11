@@ -9,6 +9,14 @@
     <copyright>CodingNConcepts</copyright>
     <lastBuildDate>Wed, 11 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>AI</title>
+      <link>https://codingnconcepts.com/tags/ai/</link>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>AI Agents</title>
       <link>https://codingnconcepts.com/tags/ai-agents/</link>
       <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
@@ -81,6 +89,22 @@
       <description></description>
     </item>
     <item>
+      <title>Power Apps</title>
+      <link>https://codingnconcepts.com/tags/power-apps/</link>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/power-apps/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Power Platform</title>
+      <link>https://codingnconcepts.com/tags/power-platform/</link>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/power-platform/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Scaling Scrum</title>
       <link>https://codingnconcepts.com/tags/scaling-scrum/</link>
       <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
@@ -118,14 +142,6 @@
       <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/administration/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>AI</title>
-      <link>https://codingnconcepts.com/tags/ai/</link>
-      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/ai/</guid>
       <description></description>
     </item>
     <item>
@@ -678,14 +694,6 @@
       <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/oracle/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Power Platform</title>
-      <link>https://codingnconcepts.com/tags/power-platform/</link>
-      <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/power-platform/</guid>
       <description></description>
     </item>
     <item>
