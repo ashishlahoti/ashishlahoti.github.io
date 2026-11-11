@@ -43,6 +43,11 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/tags/azure-databricks/</loc>
+    <lastmod>2026-11-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/categories/</loc>
     <lastmod>2026-11-11T00:00:00+00:00</lastmod>
   </url>
@@ -63,7 +68,17 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/tags/data-engineering/</loc>
+    <lastmod>2026-11-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/azure/azure-ai-agent-builder-associate-ab-620-exam-questions/</loc>
+    <lastmod>2026-11-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/azure/azure-databricks-data-engineer-associate-dp-750-exam-questions/</loc>
     <lastmod>2026-11-11T00:00:00+00:00</lastmod>
   </url>
   
@@ -1155,11 +1170,6 @@
   <url>
     <loc>https://codingnconcepts.com/aws/aws-certified-security-specialty-exam-questions/</loc>
     <lastmod>2026-10-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/data-engineering/</loc>
-    <lastmod>2026-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
