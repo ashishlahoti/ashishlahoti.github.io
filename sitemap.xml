@@ -38,6 +38,11 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/tags/data-science/</loc>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/categories/istqb/</loc>
     <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
@@ -54,6 +59,11 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/mlops/</loc>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/nca-ads/</loc>
     <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -78,12 +88,22 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/nvidia/nvidia-accelerated-data-science-associate-nca-ads-exam-questions/</loc>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/nvidia/nvidia-ai-infrastructure-professional-ncp-aii-exam-questions/</loc>
     <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/nvidia/nvidia-ai-operations-professional-ncp-aio-exam-questions/</loc>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/rapids/</loc>
     <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -390,11 +410,6 @@
   <url>
     <loc>https://codingnconcepts.com/tags/ct-ai/</loc>
     <lastmod>2026-11-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/data-science/</loc>
-    <lastmod>2026-11-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
