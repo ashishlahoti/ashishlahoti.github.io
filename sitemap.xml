@@ -474,7 +474,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/kubernetes/</loc>
-    <lastmod>2026-11-11T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -764,26 +764,21 @@
   
   <url>
     <loc>https://codingnconcepts.com/categories/salesforce/</loc>
-    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/salesforce/</loc>
-    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/salesforce-administrator/</loc>
-    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/salesforce/salesforce-business-analyst-exam-questions/</loc>
-    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/salesforce/salesforce-platform-administrator-2-exam-questions/</loc>
     <lastmod>2026-11-06T00:00:00+00:00</lastmod>
   </url>
   
@@ -795,6 +790,11 @@
   <url>
     <loc>https://codingnconcepts.com/salesforce/salesforce-tableau-data-analyst-exam-questions/</loc>
     <lastmod>2026-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/salesforce/salesforce-platform-administrator-2-exam-questions/</loc>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1009,7 +1009,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/app-builder/</loc>
-    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1129,7 +1129,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/salesforce/salesforce-platform-app-builder-exam-questions/</loc>
-    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1174,7 +1174,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/devops/</loc>
-    <lastmod>2026-11-11T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1244,17 +1244,17 @@
   
   <url>
     <loc>https://codingnconcepts.com/categories/itil/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/itil/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/peoplecert/itil-foundation-version-5-exam-questions/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1434,22 +1434,22 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/fortigate/</loc>
-    <lastmod>2026-11-10T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/categories/fortinet/</loc>
-    <lastmod>2026-11-10T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/fortinet/</loc>
-    <lastmod>2026-11-10T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/fortinet/fortinet-nse4-fortios-administrator-exam-questions/</loc>
-    <lastmod>2026-11-10T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1484,7 +1484,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/nse-4/</loc>
-    <lastmod>2026-11-10T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1974,7 +1974,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/cloud/kubernetes-administrator-cka-exam-questions/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -2039,7 +2039,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/salesforce/salesforce-platform-developer-i-exam-questions/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
