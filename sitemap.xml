@@ -3,6 +3,56 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://codingnconcepts.com/categories/</loc>
+    <lastmod>2026-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/certification/</loc>
+    <lastmod>2026-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/</loc>
+    <lastmod>2026-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/firewall/</loc>
+    <lastmod>2026-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/netsec-pro/</loc>
+    <lastmod>2026-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/network-security/</loc>
+    <lastmod>2026-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/palo-alto-networks/</loc>
+    <lastmod>2026-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/palo-alto-networks/</loc>
+    <lastmod>2026-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/palo-alto-networks/palo-alto-networks-network-security-professional-netsec-pro-exam-questions/</loc>
+    <lastmod>2026-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/</loc>
+    <lastmod>2026-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/tags/agile-testing/</loc>
     <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
@@ -73,11 +123,6 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/categories/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/tags/cbrops/</loc>
     <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
@@ -89,11 +134,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/ccna-cybersecurity/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/certification/</loc>
     <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -129,11 +169,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/cisco/cisco-ccna-cybersecurity-200-201-cbrops-exam-questions/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/</loc>
     <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -429,11 +464,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/system-administration/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/</loc>
     <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
   
