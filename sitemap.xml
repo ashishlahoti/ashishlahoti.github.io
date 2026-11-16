@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/tags/ai/</loc>
+    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/categories/</loc>
     <lastmod>2026-11-16T00:00:00+00:00</lastmod>
   </url>
@@ -33,6 +38,11 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/tags/context-engineering/</loc>
+    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/tags/ctal-at/</loc>
     <lastmod>2026-11-16T00:00:00+00:00</lastmod>
   </url>
@@ -54,6 +64,21 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/data-privacy/</loc>
+    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/databricks/</loc>
+    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/databricks/</loc>
+    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/databricks/databricks-context-engineer-associate-exam-questions/</loc>
     <lastmod>2026-11-16T00:00:00+00:00</lastmod>
   </url>
   
@@ -598,11 +623,6 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/ai/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/tags/aws/</loc>
     <lastmod>2026-11-11T00:00:00+00:00</lastmod>
   </url>
@@ -849,16 +869,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/databases/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/databricks/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/databricks/</loc>
     <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -1954,7 +1964,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/databricks/databricks-generative-ai-engineer-associate-exam-questions/</loc>
-    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -2009,7 +2019,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/llm/</loc>
-    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
