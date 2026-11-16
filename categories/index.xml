@@ -9,6 +9,14 @@
     <copyright>CodingNConcepts</copyright>
     <lastBuildDate>Mon, 16 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>ISC2</title>
+      <link>https://codingnconcepts.com/categories/isc2/</link>
+      <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/categories/isc2/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>ISTQB</title>
       <link>https://codingnconcepts.com/categories/istqb/</link>
       <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
@@ -190,14 +198,6 @@
       <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/categories/hashicorp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>ISC2</title>
-      <link>https://codingnconcepts.com/categories/isc2/</link>
-      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/categories/isc2/</guid>
       <description></description>
     </item>
     <item>
