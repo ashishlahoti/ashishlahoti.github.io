@@ -33,6 +33,11 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/tags/data-engineering/</loc>
+    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/categories/istqb/</loc>
     <lastmod>2026-11-16T00:00:00+00:00</lastmod>
   </url>
@@ -49,6 +54,21 @@
   
   <url>
     <loc>https://codingnconcepts.com/istqb/istqb-certified-tester-advanced-level-test-analyst-ctal-ta-v4-exam-questions/</loc>
+    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/snowflake/</loc>
+    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/snowflake/</loc>
+    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/snowflake/snowflake-snowpro-advanced-data-engineer-dea-c02-exam-questions/</loc>
     <lastmod>2026-11-16T00:00:00+00:00</lastmod>
   </url>
   
@@ -538,11 +558,6 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/data-engineering/</loc>
-    <lastmod>2026-11-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/azure/azure-ai-agent-builder-associate-ab-620-exam-questions/</loc>
     <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
@@ -819,7 +834,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/generative-ai/</loc>
-    <lastmod>2026-11-11T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1003,18 +1018,8 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/categories/snowflake/</loc>
-    <lastmod>2026-11-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/snowflake/</loc>
-    <lastmod>2026-11-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/snowflake/snowflake-snowpro-specialty-gen-ai-ges-c02-exam-questions/</loc>
-    <lastmod>2026-11-10T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1624,12 +1629,12 @@
   
   <url>
     <loc>https://codingnconcepts.com/snowflake/snowflake-snowpro-core-cof-c03-exam-questions/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/snowpro/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
