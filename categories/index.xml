@@ -7,7 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>CodingNConcepts</copyright>
-    <lastBuildDate>Mon, 16 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Oracle</title>
+      <link>https://codingnconcepts.com/categories/oracle/</link>
+      <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/categories/oracle/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Databricks</title>
       <link>https://codingnconcepts.com/categories/databricks/</link>
@@ -46,14 +54,6 @@
       <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/categories/istqb/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Oracle</title>
-      <link>https://codingnconcepts.com/categories/oracle/</link>
-      <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/categories/oracle/</guid>
       <description></description>
     </item>
     <item>
