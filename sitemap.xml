@@ -38,6 +38,11 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/tags/database-administration/</loc>
+    <lastmod>2026-11-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/tags/generative-ai/</loc>
     <lastmod>2026-11-17T00:00:00+00:00</lastmod>
   </url>
@@ -78,7 +83,17 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/oracle/oracle-ai-database-administration-associate-1z0-182-exam-questions/</loc>
+    <lastmod>2026-11-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/oracle/oracle-cloud-infrastructure-architect-associate-1z0-1072-exam-questions/</loc>
+    <lastmod>2026-11-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/oracle/oracle-cloud-infrastructure-architect-professional-1z0-997-exam-questions/</loc>
     <lastmod>2026-11-17T00:00:00+00:00</lastmod>
   </url>
   
@@ -99,6 +114,11 @@
   
   <url>
     <loc>https://codingnconcepts.com/oracle/oracle-database-sql-1z0-071-exam-questions/</loc>
+    <lastmod>2026-11-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/security/</loc>
     <lastmod>2026-11-17T00:00:00+00:00</lastmod>
   </url>
   
@@ -1453,11 +1473,6 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/security/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/tags/securityx/</loc>
     <lastmod>2026-11-11T00:00:00+00:00</lastmod>
   </url>
@@ -2354,11 +2369,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/categories/database/</loc>
-    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/database-administration/</loc>
     <lastmod>2026-10-25T00:00:00+00:00</lastmod>
   </url>
   
