@@ -3,6 +3,76 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://codingnconcepts.com/categories/</loc>
+    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/certification/</loc>
+    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/cloud-native/</loc>
+    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/cloud-security/</loc>
+    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/</loc>
+    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/iam/</loc>
+    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/kubernetes/</loc>
+    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/oci/</loc>
+    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/oracle/</loc>
+    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/oracle/</loc>
+    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/oracle/oracle-cloud-infrastructure-developer-professional-1z0-1084-exam-questions/</loc>
+    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/oracle/oracle-cloud-infrastructure-security-professional-1z0-1104-exam-questions/</loc>
+    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/serverless/</loc>
+    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/</loc>
+    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/tags/ai/</loc>
     <lastmod>2026-11-17T00:00:00+00:00</lastmod>
   </url>
@@ -13,23 +83,8 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/categories/</loc>
-    <lastmod>2026-11-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/certification/</loc>
-    <lastmod>2026-11-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/tags/cloud-architecture/</loc>
-    <lastmod>2026-11-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/</loc>
-    <lastmod>2026-11-17T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -64,22 +119,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/networking/</loc>
-    <lastmod>2026-11-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/oci/</loc>
-    <lastmod>2026-11-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/oracle/</loc>
-    <lastmod>2026-11-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/oracle/</loc>
-    <lastmod>2026-11-17T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -109,12 +149,12 @@
   
   <url>
     <loc>https://codingnconcepts.com/oracle/oracle-cloud-infrastructure-architect-associate-1z0-1072-exam-questions/</loc>
-    <lastmod>2026-11-17T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/oracle/oracle-cloud-infrastructure-architect-professional-1z0-997-exam-questions/</loc>
-    <lastmod>2026-11-17T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -154,16 +194,11 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/security/</loc>
-    <lastmod>2026-11-17T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/sql/</loc>
-    <lastmod>2026-11-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/</loc>
     <lastmod>2026-11-17T00:00:00+00:00</lastmod>
   </url>
   
@@ -988,11 +1023,6 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/cloud-native/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/tags/cloud-sql/</loc>
     <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
@@ -1094,11 +1124,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/istqb/istqb-certified-tester-ai-testing-ct-ai-exam-questions/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/kubernetes/</loc>
     <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
   

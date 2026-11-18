@@ -7,7 +7,71 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>CodingNConcepts</copyright>
-    <lastBuildDate>Tue, 17 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Certification</title>
+      <link>https://codingnconcepts.com/tags/certification/</link>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/certification/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cloud Native</title>
+      <link>https://codingnconcepts.com/tags/cloud-native/</link>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/cloud-native/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cloud Security</title>
+      <link>https://codingnconcepts.com/tags/cloud-security/</link>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/cloud-security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>IAM</title>
+      <link>https://codingnconcepts.com/tags/iam/</link>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/iam/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kubernetes</title>
+      <link>https://codingnconcepts.com/tags/kubernetes/</link>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OCI</title>
+      <link>https://codingnconcepts.com/tags/oci/</link>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/oci/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Oracle</title>
+      <link>https://codingnconcepts.com/tags/oracle/</link>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/oracle/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Serverless</title>
+      <link>https://codingnconcepts.com/tags/serverless/</link>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/serverless/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AI</title>
       <link>https://codingnconcepts.com/tags/ai/</link>
@@ -22,14 +86,6 @@
       <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/ai-agents/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Certification</title>
-      <link>https://codingnconcepts.com/tags/certification/</link>
-      <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/certification/</guid>
       <description></description>
     </item>
     <item>
@@ -86,22 +142,6 @@
       <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/networking/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>OCI</title>
-      <link>https://codingnconcepts.com/tags/oci/</link>
-      <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/oci/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Oracle</title>
-      <link>https://codingnconcepts.com/tags/oracle/</link>
-      <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/oracle/</guid>
       <description></description>
     </item>
     <item>
@@ -937,14 +977,6 @@
       <description></description>
     </item>
     <item>
-      <title>Cloud Native</title>
-      <link>https://codingnconcepts.com/tags/cloud-native/</link>
-      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/cloud-native/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Cloud SQL</title>
       <link>https://codingnconcepts.com/tags/cloud-sql/</link>
       <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
@@ -1014,14 +1046,6 @@
       <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/google-workspace/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Kubernetes</title>
-      <link>https://codingnconcepts.com/tags/kubernetes/</link>
-      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/kubernetes/</guid>
       <description></description>
     </item>
     <item>
