@@ -5,17 +5,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="color-scheme" content="light dark">
-	<title>Pixel to Rem Converter - Coding N Concepts</title>
+	<title>PX to REM Converter: Pixels ⇄ Rem for Any Root Font Size - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
-	<meta name="description" content="Enter the base font-size and calculate the font-size from pixel (px) to rem">
-	<meta property="og:title" content="Pixel to Rem Converter" />
-<meta property="og:description" content="Enter the base font-size and calculate the font-size from pixel (px) to rem" />
+	<meta name="description" content="Free px to rem and rem to px converter: type pixels or rem and see the result as you type, for the default 16px root font size or any other, with a px to rem table and tips on when to use rem.">
+	<meta property="og:title" content="PX to REM Converter: Pixels ⇄ Rem for Any Root Font Size" />
+<meta property="og:description" content="Free px to rem and rem to px converter: type pixels or rem and see the result as you type, for the default 16px root font size or any other, with a px to rem table and tips on when to use rem." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/tools/pixel-to-rem/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/converter.png" />
 <meta property="article:published_time" content="2020-07-12T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-07-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-11-22T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -28,8 +28,8 @@
 	
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:image" content="https://codingnconcepts.com/img/logo/converter.png">
-	<meta name="twitter:title" content="Pixel to Rem Converter">
-	<meta name="twitter:description" content="Enter the base font-size and calculate the font-size from pixel (px) to rem">
+	<meta name="twitter:title" content="PX to REM Converter: Pixels ⇄ Rem for Any Root Font Size">
+	<meta name="twitter:description" content="Free px to rem and rem to px converter: type pixels or rem and see the result as you type, for the default 16px root font size or any other, with a px to rem table and tips on when to use rem.">
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -58,10 +58,10 @@
     "@context": "http://schema.org",
     "@type": "BlogPosting",
     "articleSection": "tools",
-    "name": "Pixel to Rem Converter",
-    "headline": "Pixel to Rem Converter",
+    "name": "PX to REM Converter: Pixels ⇄ Rem for Any Root Font Size",
+    "headline": "PX to REM Converter: Pixels ⇄ Rem for Any Root Font Size",
     "alternativeHeadline":  null ,
-    "description": "Enter the base font-size and calculate the font-size from pixel (px) to rem",
+    "description": "Free px to rem and rem to px converter: type pixels or rem and see the result as you type, for the default 16px root font size or any other, with a px to rem table and tips on when to use rem.",
     "inLanguage": "en-US",
 	"isFamilyFriendly": true,
     "mainEntityOfPage": {
@@ -84,7 +84,7 @@
     "copyrightYear": "2020",
     "dateCreated": "2020-07-12T00:00:00.00Z",
     "datePublished": "2020-07-12T00:00:00.00Z",
-    "dateModified": "2020-07-12T00:00:00.00Z",
+    "dateModified": "2026-11-22T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -98,7 +98,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/converter.png"],
     "url": "https://codingnconcepts.com/tools/pixel-to-rem/",
-    "wordCount": 15 ,
+    "wordCount": 383 ,
     "genre": ["CSS","Converter","REM"],
     "keywords":  null 
 }
@@ -123,7 +123,7 @@
         {
             "@type": "ListItem",
             "position": 3,
-            "name": "Pixel to Rem Converter",
+            "name": "PX to REM Converter: Pixels ⇄ Rem for Any Root Font Size",
             "item": "https://codingnconcepts.com/tools/pixel-to-rem/"
         }
     ]
@@ -583,7 +583,7 @@
 <main class="main" role="main">
 	<article class="post" data-pagefind-body>
 		<header class="post__header">
-			<h1 class="post__title"><img class="post__thumbnail" src="/img/logo/converter.png" alt="Pixel to Rem Converter"> Pixel to Rem Converter</h1>
+			<h1 class="post__title"><img class="post__thumbnail" src="/img/logo/converter.png" alt="PX to REM Converter: Pixels ⇄ Rem for Any Root Font Size"> PX to REM Converter: Pixels ⇄ Rem for Any Root Font Size</h1>
 			<span hidden data-pagefind-filter="Type:Articles"></span>
 <span hidden data-pagefind-meta="image:/img/logo/converter.png"></span>
 <span hidden data-pagefind-meta="image_alt:"></span>
@@ -706,33 +706,162 @@
     background: url("/icon/clipboard.svg") no-repeat 16px 16px;
     padding-left: 35px;    
 }
+/* converter icon spins while converting */
+@keyframes converter-spin { to { transform: rotate(360deg); } }
+.converter-icon img.spinning { animation: converter-spin .6s linear infinite; }
+.converter-icon img.spinning.reverse { animation-direction: reverse; }
+@media (prefers-reduced-motion: reduce) {
+  .converter-icon img.spinning { animation: none; opacity: .6; }
+}
+/* keep wide tables from stretching the page on phones */
+.primary { min-width: 0; max-width: 100%; }
+.table-scroll { overflow-x: auto; }
+.converter-message { margin: -12px 0 16px; font-size: 0.95rem; text-align: left; }
+.converter-message.is-error { color: #b42318; }
 </style>
-<form id="pxToRemConverter" class="form-converter">
-  <h3>Enter root element font-size (default 16px)*</h3>
+<p>Convert pixels to rem, or rem back to pixels, as you type. With the default root font size of 16px, <strong>24px = 1.5rem</strong> and <strong>0.875rem = 14px</strong>.</p>
+<form id="pxToRemConverter" class="form-converter" onsubmit="return false">
+  <h3><label for="defaultFontSize">Root font size (default 16px)</label></h3>
   <div class="input-group">
     <div class="input-group-prepend">
       <div class="input-group-text">px</div>
     </div>
-    <input type="number" id="defaultFontSize" name="defaultFontSize" class="form-control" value="16" onchange="changeInDefaultFontSize(this.value)">
+    <input type="text" inputmode="decimal" autocomplete="off" id="defaultFontSize" name="defaultFontSize" class="form-control" value="16">
   </div>
-  <h3>Enter font-size in pixel* </h3>
+  <h3><label for="pixel">Pixels</label></h3>
   <div class="input-group">
     <div class="input-group-prepend">
       <div class="input-group-text">px</div>
     </div>
-    <input type="number" id="pixel" name="pixel" class="form-control" onchange="changeInPixel(this.value)">
+    <input type="text" inputmode="decimal" autocomplete="off" id="pixel" name="pixel" class="form-control" placeholder="e.g. 24" aria-describedby="rem-message">
+    <div class="input-group-append">
+      <button id="copy-px" class="icon-button icon-copy" type="button" aria-label="Copy pixel value" title="Copy pixel value"></button>
+    </div>
   </div>
-  <h3>Converted rem</h3>
+  <figure class="converter-icon center"><img src="/img/logo/converter.png">
+  </figure>
+ 
+  <h3><label for="rem">Rem</label></h3>
   <div class="input-group">
     <div class="input-group-prepend">
       <div class="input-group-text">rem</div>
     </div>
-    <input type="text" id="rem" name="rem" class="form-control" onclick="this.select()">
-     <div class="input-group-append">
-      <button class="icon-button icon-copy" type="button" onclick="copyRemToClipboard()"></button>
+    <input type="text" inputmode="decimal" autocomplete="off" id="rem" name="rem" class="form-control" placeholder="e.g. 1.5" aria-describedby="rem-message">
+    <div class="input-group-append">
+      <button id="copy-rem" class="icon-button icon-copy" type="button" aria-label="Copy rem value" title="Copy rem value"></button>
     </div>
   </div>
+  <p id="rem-message" class="converter-message" aria-live="polite"></p>
 </form>
+<p><em>Type in either box: pixels convert to rem and rem converts to pixels. Change the root font size if your site sets a different size on the <code>html</code> element.</em></p>
+<br />
+<hr />
+<h3 id="how-to-convert-px-to-rem">How to Convert PX to REM</h3>
+<p><code>rem</code> is relative to the font size of the root (<code>html</code>) element, which is 16px in every major browser unless the user or your CSS changes it:</p>
+<ul>
+<li><strong>rem = px ÷ root font size</strong>, so 24px ÷ 16 = <strong>1.5rem</strong></li>
+<li><strong>px = rem × root font size</strong>, so 0.875rem × 16 = <strong>14px</strong></li>
+</ul>
+<h3 id="px-to-rem-table-16px-root">PX to REM Table (16px root)</h3>
+<div class="table-scroll">
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: center">Pixels</th>
+					<th style="text-align: center">Rem</th>
+					<th style="text-align: center">Pixels</th>
+					<th style="text-align: center">Rem</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: center">8px</td>
+					<td style="text-align: center">0.5rem</td>
+					<td style="text-align: center">24px</td>
+					<td style="text-align: center">1.5rem</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">10px</td>
+					<td style="text-align: center">0.625rem</td>
+					<td style="text-align: center">28px</td>
+					<td style="text-align: center">1.75rem</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">11px</td>
+					<td style="text-align: center">0.6875rem</td>
+					<td style="text-align: center">32px</td>
+					<td style="text-align: center">2rem</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">12px</td>
+					<td style="text-align: center">0.75rem</td>
+					<td style="text-align: center">36px</td>
+					<td style="text-align: center">2.25rem</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">13px</td>
+					<td style="text-align: center">0.8125rem</td>
+					<td style="text-align: center">40px</td>
+					<td style="text-align: center">2.5rem</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">14px</td>
+					<td style="text-align: center">0.875rem</td>
+					<td style="text-align: center">48px</td>
+					<td style="text-align: center">3rem</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">15px</td>
+					<td style="text-align: center">0.9375rem</td>
+					<td style="text-align: center">56px</td>
+					<td style="text-align: center">3.5rem</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">16px</td>
+					<td style="text-align: center">1rem</td>
+					<td style="text-align: center">64px</td>
+					<td style="text-align: center">4rem</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">18px</td>
+					<td style="text-align: center">1.125rem</td>
+					<td style="text-align: center">72px</td>
+					<td style="text-align: center">4.5rem</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">20px</td>
+					<td style="text-align: center">1.25rem</td>
+					<td style="text-align: center">80px</td>
+					<td style="text-align: center">5rem</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">22px</td>
+					<td style="text-align: center">1.375rem</td>
+					<td style="text-align: center">96px</td>
+					<td style="text-align: center">6rem</td>
+			</tr>
+	</tbody>
+</table>
+</div>
+<h3 id="why-use-rem-instead-of-px">Why Use REM Instead of PX?</h3>
+<ul>
+<li><strong>Accessibility:</strong> if a reader increases the default font size in their browser settings, sizes in rem grow with it, while sizes in px stay fixed.</li>
+<li><strong>Consistent scaling:</strong> change the root font size once and every rem-based size on the page scales with it.</li>
+<li><strong>rem vs em:</strong> <code>rem</code> is always relative to the root element, while <code>em</code> is relative to the font size of the element&rsquo;s parent, so nested <code>em</code> sizes compound and are harder to predict.</li>
+</ul>
+<h3 id="frequently-asked-questions">Frequently Asked Questions</h3>
+<h4 id="how-many-pixels-is-1rem">How many pixels is 1rem?</h4>
+<p>16px by default. 1rem always equals the root font size, so if you set <code>html { font-size: 20px; }</code>, then 1rem = 20px.</p>
+<h4 id="what-is-the-625-trick">What is the 62.5% trick?</h4>
+<p>Setting <code>html { font-size: 62.5%; }</code> makes the root font size 10px (62.5% of 16px), so 1.4rem = 14px and the maths is easier. Set the root font size to 10 in the converter to work this way.</p>
+<h4 id="should-i-use-rem-for-everything">Should I use rem for everything?</h4>
+<p>rem works well for font sizes, spacing and layout widths. Borders and very thin lines are often better in px, because you usually want them to stay 1px wide at any text size.</p>
+<br />
+<h3 id="related-tools">Related Tools</h3>
+<ul>
+<li><a href="https://codingnconcepts.com/tools/rgb-to-hex/">RGB to Hex Converter</a></li>
+<li><a href="https://codingnconcepts.com/tools/number-to-roman/">Roman Numeral Converter</a></li>
+</ul>
 		</div>
 		<footer class="post__footer" data-pagefind-ignore="all">
 			
@@ -765,7 +894,7 @@
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?hashtags=codingnconcepts&amp;url=https%3a%2f%2fcodingnconcepts.com%2ftools%2fpixel-to-rem%2f&amp;text=Pixel%20to%20Rem%20Converter" target="_blank" rel="noopener" aria-label="Share on Twitter" class="share-btn twitter">
+        <a href="https://twitter.com/intent/tweet?hashtags=codingnconcepts&amp;url=https%3a%2f%2fcodingnconcepts.com%2ftools%2fpixel-to-rem%2f&amp;text=PX%20to%20REM%20Converter%3a%20Pixels%20%e2%87%84%20Rem%20for%20Any%20Root%20Font%20Size" target="_blank" rel="noopener" aria-label="Share on Twitter" class="share-btn twitter">
           <svg class="widget-social__link-icon icon icon-twitter" width="24" height="24" viewBox="0 0 384 312"><path d="m384 36.9c-14.1 6.3-29.3 10.5-45.2 12.4 16.3-9.7 28.8-25.2 34.6-43.6-15.2 9-32.1 15.6-50 19.1-14.4-15.2-34.9-24.8-57.5-24.8-43.5 0-78.8 35.3-78.8 78.8 0 6.2.7 12.2 2 17.9-65.5-3.3-123.5-34.6-162.4-82.3-6.7 11.6-10.6 25.2-10.6 39.6 0 27.3 13.9 51.4 35 65.6-12.9-.4-25.1-4-35.7-9.9v1c0 38.2 27.2 70 63.2 77.2-6.6 1.8-13.6 2.8-20.8 2.8-5.1 0-10-.5-14.8-1.4 10 31.3 39.1 54.1 73.6 54.7-27 21.1-60.9 33.7-97.8 33.7-6.4 0-12.6-.4-18.8-1.1 34.9 22.4 76.3 35.4 120.8 35.4 144.9 0 224.1-120 224.1-224.1 0-3.4-.1-6.8-.2-10.2 15.4-11.1 28.7-25 39.3-40.8z"/></svg>
           <p>Twitter</p>
           </a>
@@ -785,7 +914,7 @@
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fcodingnconcepts.com%2ftools%2fpixel-to-rem%2f&amp;source=https%3a%2f%2fcodingnconcepts.com%2ftools%2fpixel-to-rem%2f&amp;title=Pixel%20to%20Rem%20Converter&amp;summary=Pixel%20to%20Rem%20Converter" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="share-btn linkedin">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fcodingnconcepts.com%2ftools%2fpixel-to-rem%2f&amp;source=https%3a%2f%2fcodingnconcepts.com%2ftools%2fpixel-to-rem%2f&amp;title=PX%20to%20REM%20Converter%3a%20Pixels%20%e2%87%84%20Rem%20for%20Any%20Root%20Font%20Size&amp;summary=PX%20to%20REM%20Converter%3a%20Pixels%20%e2%87%84%20Rem%20for%20Any%20Root%20Font%20Size" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="share-btn linkedin">
           <svg class="widget-social__link-icon icon icon-linkedin" width="24" height="24" viewBox="0 0 352 352"><path d="M0,40v272c0,21.9,18.1,40,40,40h272c21.9,0,40-18.1,40-40V40c0-21.9-18.1-40-40-40H40C18.1,0,0,18.1,0,40z M312,32 c4.6,0,8,3.4,8,8v272c0,4.6-3.4,8-8,8H40c-4.6,0-8-3.4-8-8V40c0-4.6,3.4-8,8-8H312z M59.5,87c0,15.2,12.3,27.5,27.5,27.5 c15.2,0,27.5-12.3,27.5-27.5c0-15.2-12.3-27.5-27.5-27.5C71.8,59.5,59.5,71.8,59.5,87z M187,157h-1v-21h-45v152h47v-75 c0-19.8,3.9-39,28.5-39c24.2,0,24.5,22.4,24.5,40v74h47v-83.5c0-40.9-8.7-72-56.5-72C208.5,132.5,193.3,145.1,187,157z M64,288h47.5 V136H64V288z"/></svg>
             <p>LinkedIn</p>
           </a>
@@ -795,7 +924,7 @@
       
       
       <li>
-        <a href="whatsapp://send?text=Pixel%20to%20Rem%20Converter%2c%20by%20Coding%20N%20Concepts%0aEnter%20the%20base%20font-size%20and%20calculate%20the%20font-size%20from%20pixel%20%28px%29%20to%20rem%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2ftools%2fpixel-to-rem%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=PX%20to%20REM%20Converter%3a%20Pixels%20%e2%87%84%20Rem%20for%20Any%20Root%20Font%20Size%2c%20by%20Coding%20N%20Concepts%0aFree%20px%20to%20rem%20and%20rem%20to%20px%20converter%3a%20type%20pixels%20or%20rem%20and%20see%20the%20result%20as%20you%20type%2c%20for%20the%20default%2016px%20root%20font%20size%20or%20any%20other%2c%20with%20a%20px%20to%20rem%20table%20and%20tips%20on%20when%20to%20use%20rem.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2ftools%2fpixel-to-rem%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>WhatsApp</p>
         </a>
@@ -805,7 +934,7 @@
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - Pixel%20to%20Rem%20Converter.&amp;body=Pixel%20to%20Rem%20Converter%2c%20by%20Coding%20N%20Concepts%0aEnter%20the%20base%20font-size%20and%20calculate%20the%20font-size%20from%20pixel%20%28px%29%20to%20rem%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2ftools%2fpixel-to-rem%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - PX%20to%20REM%20Converter%3a%20Pixels%20%e2%87%84%20Rem%20for%20Any%20Root%20Font%20Size.&amp;body=PX%20to%20REM%20Converter%3a%20Pixels%20%e2%87%84%20Rem%20for%20Any%20Root%20Font%20Size%2c%20by%20Coding%20N%20Concepts%0aFree%20px%20to%20rem%20and%20rem%20to%20px%20converter%3a%20type%20pixels%20or%20rem%20and%20see%20the%20result%20as%20you%20type%2c%20for%20the%20default%2016px%20root%20font%20size%20or%20any%20other%2c%20with%20a%20px%20to%20rem%20table%20and%20tips%20on%20when%20to%20use%20rem.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2ftools%2fpixel-to-rem%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>
@@ -820,7 +949,7 @@
     <h2 class="related_post_title">See Also</h2>
     <ul class="related_post">
         
-        <li><a href="/tools/rgb-to-hex/"><img class="related_post__thumb" src="/img/logo/converter.png" alt="" loading="lazy"><span class="related_post__title">RGB to HEX Converter</span></a></li>
+        <li><a href="/tools/rgb-to-hex/"><img class="related_post__thumb" src="/img/logo/converter.png" alt="" loading="lazy"><span class="related_post__title">RGB to Hex Converter: RGB ⇄ Hex Color Codes with Color Picker</span></a></li>
         
         <li><a href="/css/font-size-units-px-em-and-rem/"><img class="related_post__thumb" src="/img/logo/css3.png" alt="" loading="lazy"><span class="related_post__title">CSS units for font-size: px, em and rem</span></a></li>
         
@@ -841,7 +970,7 @@
 
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="/tools/rgb-to-hex/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">RGB to HEX Converter</p></a>
+		<a class="post-nav__link" href="/tools/rgb-to-hex/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">RGB to Hex Converter: RGB ⇄ Hex Color Codes with Color Picker</p></a>
 	</div>
 	<div class="post-nav__item post-nav__item--next">
 		<a class="post-nav__link" href="/tools/number-to-roman/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Roman Numeral Converter: Numbers ⇄ Roman Numerals</p></a>

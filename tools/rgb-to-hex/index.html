@@ -5,17 +5,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="color-scheme" content="light dark">
-	<title>RGB to HEX Converter - Coding N Concepts</title>
+	<title>RGB to Hex Converter: RGB ⇄ Hex Color Codes with Color Picker - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
-	<meta name="description" content="Enter Color code in RGB to calculate the HEX value and vice versa.">
-	<meta property="og:title" content="RGB to HEX Converter" />
-<meta property="og:description" content="Enter Color code in RGB to calculate the HEX value and vice versa." />
+	<meta name="description" content="Free RGB to Hex and Hex to RGB color converter: type R, G, B or a hex code like #FF6347 and see the result as you type, with a color picker, CSS rgb() and hsl() values, and a table of named colors.">
+	<meta property="og:title" content="RGB to Hex Converter: RGB ⇄ Hex Color Codes with Color Picker" />
+<meta property="og:description" content="Free RGB to Hex and Hex to RGB color converter: type R, G, B or a hex code like #FF6347 and see the result as you type, with a color picker, CSS rgb() and hsl() values, and a table of named colors." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/tools/rgb-to-hex/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/converter.png" />
 <meta property="article:published_time" content="2020-07-12T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-07-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-11-22T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -27,8 +27,8 @@
 	
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:image" content="https://codingnconcepts.com/img/logo/converter.png">
-	<meta name="twitter:title" content="RGB to HEX Converter">
-	<meta name="twitter:description" content="Enter Color code in RGB to calculate the HEX value and vice versa.">
+	<meta name="twitter:title" content="RGB to Hex Converter: RGB ⇄ Hex Color Codes with Color Picker">
+	<meta name="twitter:description" content="Free RGB to Hex and Hex to RGB color converter: type R, G, B or a hex code like #FF6347 and see the result as you type, with a color picker, CSS rgb() and hsl() values, and a table of named colors.">
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -57,10 +57,10 @@
     "@context": "http://schema.org",
     "@type": "BlogPosting",
     "articleSection": "tools",
-    "name": "RGB to HEX Converter",
-    "headline": "RGB to HEX Converter",
+    "name": "RGB to Hex Converter: RGB ⇄ Hex Color Codes with Color Picker",
+    "headline": "RGB to Hex Converter: RGB ⇄ Hex Color Codes with Color Picker",
     "alternativeHeadline":  null ,
-    "description": "Enter Color code in RGB to calculate the HEX value and vice versa.",
+    "description": "Free RGB to Hex and Hex to RGB color converter: type R, G, B or a hex code like #FF6347 and see the result as you type, with a color picker, CSS rgb() and hsl() values, and a table of named colors.",
     "inLanguage": "en-US",
 	"isFamilyFriendly": true,
     "mainEntityOfPage": {
@@ -83,7 +83,7 @@
     "copyrightYear": "2020",
     "dateCreated": "2020-07-12T00:00:00.00Z",
     "datePublished": "2020-07-12T00:00:00.00Z",
-    "dateModified": "2020-07-12T00:00:00.00Z",
+    "dateModified": "2026-11-22T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -97,7 +97,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/converter.png"],
     "url": "https://codingnconcepts.com/tools/rgb-to-hex/",
-    "wordCount": 716 ,
+    "wordCount": 946 ,
     "genre": ["CSS","Converter"],
     "keywords":  null 
 }
@@ -122,7 +122,7 @@
         {
             "@type": "ListItem",
             "position": 3,
-            "name": "RGB to HEX Converter",
+            "name": "RGB to Hex Converter: RGB ⇄ Hex Color Codes with Color Picker",
             "item": "https://codingnconcepts.com/tools/rgb-to-hex/"
         }
     ]
@@ -582,7 +582,7 @@
 <main class="main" role="main">
 	<article class="post" data-pagefind-body>
 		<header class="post__header">
-			<h1 class="post__title"><img class="post__thumbnail" src="/img/logo/converter.png" alt="RGB to HEX Converter"> RGB to HEX Converter</h1>
+			<h1 class="post__title"><img class="post__thumbnail" src="/img/logo/converter.png" alt="RGB to Hex Converter: RGB ⇄ Hex Color Codes with Color Picker"> RGB to Hex Converter: RGB ⇄ Hex Color Codes with Color Picker</h1>
 			<span hidden data-pagefind-filter="Type:Articles"></span>
 <span hidden data-pagefind-meta="image:/img/logo/converter.png"></span>
 <span hidden data-pagefind-meta="image_alt:"></span>
@@ -714,54 +714,105 @@
     background: url("/icon/clipboard.svg") no-repeat 16px 16px;
     padding-left: 35px;    
 }
+/* converter icon spins while converting */
+@keyframes converter-spin { to { transform: rotate(360deg); } }
+.converter-icon img.spinning { animation: converter-spin .6s linear infinite; }
+.converter-icon img.spinning.reverse { animation-direction: reverse; }
+@media (prefers-reduced-motion: reduce) {
+  .converter-icon img.spinning { animation: none; opacity: .6; }
+}
+/* keep wide tables from stretching the page on phones */
+.primary { min-width: 0; max-width: 100%; }
+.table-scroll { overflow-x: auto; }
+.converter-message { margin: -12px 0 16px; font-size: 0.95rem; text-align: left; }
+.converter-message.is-error { color: #b42318; }
 </style>
-<form>
-  <h3>Enter color code in RGB</h3>
+<p>Convert RGB to Hex or Hex to RGB as you type, or pick a color. For example, <strong>rgb(255, 99, 71) = #FF6347</strong> (tomato).</p>
+<form id="rgbToHexConverter" class="form-converter" onsubmit="return false">
+  <h3>RGB color code</h3>
   <div class="input-group">
     <div class="input-group-prepend">
-      <div class="input-group-text">R</div>
+      <div class="input-group-text"><label for="valueR">R</label></div>
     </div>
-    <input type="number" id="valueR" name="valueR" class="form-control" onchange="changeInValueR(this.value)">
+    <input type="text" inputmode="numeric" autocomplete="off" id="valueR" name="valueR" class="form-control" placeholder="0–255">
   </div>
   <div class="input-group">
     <div class="input-group-prepend">
-      <div class="input-group-text">G</div>
+      <div class="input-group-text"><label for="valueG">G</label></div>
     </div>
-    <input type="number" id="valueG" name="valueG" class="form-control" onchange="changeInValueG(this.value)">
+    <input type="text" inputmode="numeric" autocomplete="off" id="valueG" name="valueG" class="form-control" placeholder="0–255">
   </div>
   <div class="input-group">
     <div class="input-group-prepend">
-      <div class="input-group-text">B</div>
+      <div class="input-group-text"><label for="valueB">B</label></div>
     </div>
-    <input type="number" id="valueB" name="valueB" class="form-control" onchange="changeInValueB(this.value)">
+    <input type="text" inputmode="numeric" autocomplete="off" id="valueB" name="valueB" class="form-control" placeholder="0–255">
   </div>
-   <figure class="converter-icon center"><img src="/img/logo/converter.png">
-   </figure>
+  <figure class="converter-icon center"><img src="/img/logo/converter.png">
+  </figure>
  
-  <h3>Converted Hex value</h3>
+  <h3>Hex color code</h3>
   <div class="input-group">
     <div class="input-group-prepend">
-      <div class="input-group-text">Hex</div>
+      <div class="input-group-text"><label for="hex">Hex</label></div>
     </div>
-    <input type="text" id="hex" name="hex" class="form-control" onclick="this.select()" onchange="changeInHex(this.value)">
+    <input type="text" autocomplete="off" spellcheck="false" id="hex" name="hex" class="form-control" placeholder="#FF6347" aria-describedby="color-message">
     <div class="input-group-append">
-      <button class="icon-button icon-copy" type="button" onclick="copyHexToClipboard()"></button>
+      <button id="copy-hex" class="icon-button icon-copy" type="button" aria-label="Copy hex code" title="Copy hex code"></button>
     </div>
+  </div>
+  <p id="color-message" class="converter-message" aria-live="polite"></p>
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <div class="input-group-text"><label for="colorPicker">Pick</label></div>
+    </div>
+    <input type="color" id="colorPicker" name="colorPicker" class="form-control" value="#ff6347" style="height:44px">
   </div>
   <div class="input-group">
     <div class="input-group-prepend">
       <div class="input-group-text">Color</div>
     </div>
-    <input type="text" id="colorDisplay" name="colorDisplay" class="form-control" readonly>
+    <input type="text" id="colorDisplay" name="colorDisplay" class="form-control" readonly aria-label="Color preview">
+  </div>
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <div class="input-group-text">CSS rgb()</div>
+    </div>
+    <input type="text" id="rgbText" name="rgbText" class="form-control" readonly aria-label="CSS rgb value">
+    <div class="input-group-append">
+      <button id="copy-rgb" class="icon-button icon-copy" type="button" aria-label="Copy rgb value" title="Copy rgb value"></button>
+    </div>
+  </div>
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <div class="input-group-text">CSS hsl()</div>
+    </div>
+    <input type="text" id="hslText" name="hslText" class="form-control" readonly aria-label="CSS hsl value">
+    <div class="input-group-append">
+      <button id="copy-hsl" class="icon-button icon-copy" type="button" aria-label="Copy hsl value" title="Copy hsl value"></button>
+    </div>
   </div>
 </form>
-<p><em>Note: You can also enter Hex value to convert to RGB</em></p>
+<p><em>Type R, G and B (or paste a value like rgb(255, 99, 71) into the R box), type a hex code such as #FF6347 or #F63, or use the color picker. You can also click any color in the table below.</em></p>
 <br />
 <hr />
-<h3 id="frequently-used-color-codes">Frequently used color codes</h3>
-<!--more-->
+<h3 id="how-to-convert-rgb-to-hex">How to Convert RGB to Hex</h3>
+<p>Each of R, G and B is a number from 0 to 255. Write each one as two hexadecimal digits (00 to FF) and join them after a <code>#</code>:</p>
+<ul>
+<li>R = 255 → <strong>FF</strong>, G = 99 → <strong>63</strong>, B = 71 → <strong>47</strong></li>
+<li>So rgb(255, 99, 71) = <strong>#FF6347</strong></li>
+</ul>
+<p>To find the two hex digits, divide the number by 16: the whole part is the first digit and the remainder is the second (digits 10 to 15 are written A to F). For example, 99 ÷ 16 = 6 remainder 3, so 99 = <strong>63</strong>.</p>
+<h3 id="how-to-convert-hex-to-rgb">How to Convert Hex to RGB</h3>
+<p>Split the six digits into three pairs and convert each pair from hexadecimal to decimal:</p>
+<ul>
+<li>#FF6347 → FF = 15 × 16 + 15 = <strong>255</strong>, 63 = 6 × 16 + 3 = <strong>99</strong>, 47 = 4 × 16 + 7 = <strong>71</strong></li>
+<li>A three-digit code doubles each digit: #F63 = #FF6633 = rgb(255, 102, 51)</li>
+</ul>
+<br />
+<h3 id="frequently-used-color-codes">Frequently Used Color Codes</h3>
 <div class="table-scroll">
-<table>
+<table class="color-table">
     <thead>
     <tr style="text-align:left;">
         <th>Color</th>
@@ -1607,6 +1658,12 @@
 </tbody>
 </table>
 </div>
+<br />
+<h3 id="related-tools">Related Tools</h3>
+<ul>
+<li><a href="https://codingnconcepts.com/tools/pixel-to-rem/">PX to REM Converter</a></li>
+<li><a href="https://codingnconcepts.com/tools/number-to-roman/">Roman Numeral Converter</a></li>
+</ul>
 		</div>
 		<footer class="post__footer" data-pagefind-ignore="all">
 			
@@ -1638,7 +1695,7 @@
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?hashtags=codingnconcepts&amp;url=https%3a%2f%2fcodingnconcepts.com%2ftools%2frgb-to-hex%2f&amp;text=RGB%20to%20HEX%20Converter" target="_blank" rel="noopener" aria-label="Share on Twitter" class="share-btn twitter">
+        <a href="https://twitter.com/intent/tweet?hashtags=codingnconcepts&amp;url=https%3a%2f%2fcodingnconcepts.com%2ftools%2frgb-to-hex%2f&amp;text=RGB%20to%20Hex%20Converter%3a%20RGB%20%e2%87%84%20Hex%20Color%20Codes%20with%20Color%20Picker" target="_blank" rel="noopener" aria-label="Share on Twitter" class="share-btn twitter">
           <svg class="widget-social__link-icon icon icon-twitter" width="24" height="24" viewBox="0 0 384 312"><path d="m384 36.9c-14.1 6.3-29.3 10.5-45.2 12.4 16.3-9.7 28.8-25.2 34.6-43.6-15.2 9-32.1 15.6-50 19.1-14.4-15.2-34.9-24.8-57.5-24.8-43.5 0-78.8 35.3-78.8 78.8 0 6.2.7 12.2 2 17.9-65.5-3.3-123.5-34.6-162.4-82.3-6.7 11.6-10.6 25.2-10.6 39.6 0 27.3 13.9 51.4 35 65.6-12.9-.4-25.1-4-35.7-9.9v1c0 38.2 27.2 70 63.2 77.2-6.6 1.8-13.6 2.8-20.8 2.8-5.1 0-10-.5-14.8-1.4 10 31.3 39.1 54.1 73.6 54.7-27 21.1-60.9 33.7-97.8 33.7-6.4 0-12.6-.4-18.8-1.1 34.9 22.4 76.3 35.4 120.8 35.4 144.9 0 224.1-120 224.1-224.1 0-3.4-.1-6.8-.2-10.2 15.4-11.1 28.7-25 39.3-40.8z"/></svg>
           <p>Twitter</p>
           </a>
@@ -1658,7 +1715,7 @@
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fcodingnconcepts.com%2ftools%2frgb-to-hex%2f&amp;source=https%3a%2f%2fcodingnconcepts.com%2ftools%2frgb-to-hex%2f&amp;title=RGB%20to%20HEX%20Converter&amp;summary=RGB%20to%20HEX%20Converter" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="share-btn linkedin">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fcodingnconcepts.com%2ftools%2frgb-to-hex%2f&amp;source=https%3a%2f%2fcodingnconcepts.com%2ftools%2frgb-to-hex%2f&amp;title=RGB%20to%20Hex%20Converter%3a%20RGB%20%e2%87%84%20Hex%20Color%20Codes%20with%20Color%20Picker&amp;summary=RGB%20to%20Hex%20Converter%3a%20RGB%20%e2%87%84%20Hex%20Color%20Codes%20with%20Color%20Picker" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="share-btn linkedin">
           <svg class="widget-social__link-icon icon icon-linkedin" width="24" height="24" viewBox="0 0 352 352"><path d="M0,40v272c0,21.9,18.1,40,40,40h272c21.9,0,40-18.1,40-40V40c0-21.9-18.1-40-40-40H40C18.1,0,0,18.1,0,40z M312,32 c4.6,0,8,3.4,8,8v272c0,4.6-3.4,8-8,8H40c-4.6,0-8-3.4-8-8V40c0-4.6,3.4-8,8-8H312z M59.5,87c0,15.2,12.3,27.5,27.5,27.5 c15.2,0,27.5-12.3,27.5-27.5c0-15.2-12.3-27.5-27.5-27.5C71.8,59.5,59.5,71.8,59.5,87z M187,157h-1v-21h-45v152h47v-75 c0-19.8,3.9-39,28.5-39c24.2,0,24.5,22.4,24.5,40v74h47v-83.5c0-40.9-8.7-72-56.5-72C208.5,132.5,193.3,145.1,187,157z M64,288h47.5 V136H64V288z"/></svg>
             <p>LinkedIn</p>
           </a>
@@ -1668,7 +1725,7 @@
       
       
       <li>
-        <a href="whatsapp://send?text=RGB%20to%20HEX%20Converter%2c%20by%20Coding%20N%20Concepts%0aEnter%20Color%20code%20in%20RGB%20to%20calculate%20the%20HEX%20value%20and%20vice%20versa.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2ftools%2frgb-to-hex%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=RGB%20to%20Hex%20Converter%3a%20RGB%20%e2%87%84%20Hex%20Color%20Codes%20with%20Color%20Picker%2c%20by%20Coding%20N%20Concepts%0aFree%20RGB%20to%20Hex%20and%20Hex%20to%20RGB%20color%20converter%3a%20type%20R%2c%20G%2c%20B%20or%20a%20hex%20code%20like%20%23FF6347%20and%20see%20the%20result%20as%20you%20type%2c%20with%20a%20color%20picker%2c%20CSS%20rgb%28%29%20and%20hsl%28%29%20values%2c%20and%20a%20table%20of%20named%20colors.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2ftools%2frgb-to-hex%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>WhatsApp</p>
         </a>
@@ -1678,7 +1735,7 @@
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - RGB%20to%20HEX%20Converter.&amp;body=RGB%20to%20HEX%20Converter%2c%20by%20Coding%20N%20Concepts%0aEnter%20Color%20code%20in%20RGB%20to%20calculate%20the%20HEX%20value%20and%20vice%20versa.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2ftools%2frgb-to-hex%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - RGB%20to%20Hex%20Converter%3a%20RGB%20%e2%87%84%20Hex%20Color%20Codes%20with%20Color%20Picker.&amp;body=RGB%20to%20Hex%20Converter%3a%20RGB%20%e2%87%84%20Hex%20Color%20Codes%20with%20Color%20Picker%2c%20by%20Coding%20N%20Concepts%0aFree%20RGB%20to%20Hex%20and%20Hex%20to%20RGB%20color%20converter%3a%20type%20R%2c%20G%2c%20B%20or%20a%20hex%20code%20like%20%23FF6347%20and%20see%20the%20result%20as%20you%20type%2c%20with%20a%20color%20picker%2c%20CSS%20rgb%28%29%20and%20hsl%28%29%20values%2c%20and%20a%20table%20of%20named%20colors.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2ftools%2frgb-to-hex%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>
@@ -1693,7 +1750,7 @@
     <h2 class="related_post_title">See Also</h2>
     <ul class="related_post">
         
-        <li><a href="/tools/pixel-to-rem/"><img class="related_post__thumb" src="/img/logo/converter.png" alt="" loading="lazy"><span class="related_post__title">Pixel to Rem Converter</span></a></li>
+        <li><a href="/tools/pixel-to-rem/"><img class="related_post__thumb" src="/img/logo/converter.png" alt="" loading="lazy"><span class="related_post__title">PX to REM Converter: Pixels ⇄ Rem for Any Root Font Size</span></a></li>
         
         <li><a href="/css/font-size-units-px-em-and-rem/"><img class="related_post__thumb" src="/img/logo/css3.png" alt="" loading="lazy"><span class="related_post__title">CSS units for font-size: px, em and rem</span></a></li>
         
@@ -1713,11 +1770,8 @@
 </div>
 
 <nav class="post-nav flex">
-	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="/tools/unicode-characters/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Unicode Characters</p></a>
-	</div>
 	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="/tools/pixel-to-rem/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Pixel to Rem Converter</p></a>
+		<a class="post-nav__link" href="/tools/pixel-to-rem/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">PX to REM Converter: Pixels ⇄ Rem for Any Root Font Size</p></a>
 	</div>
 </nav>
 

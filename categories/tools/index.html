@@ -14,7 +14,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://codingnconcepts.com/categories/tools/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/og-default.jpg"/>
-<meta property="og:updated_time" content="2021-03-19T00:00:00+00:00" />
+<meta property="og:updated_time" content="2021-05-23T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 <meta property="fb:admins" content="177784346770196" />
 	
@@ -504,6 +504,58 @@
 			<div class="primary">
 			
 <main class="main list" role="main"><article class="list__item post">
+	<div class="list__body">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/tools/unicode-characters/" rel="bookmark">
+				Copy and Paste Symbols: Stars ★, Hearts ♥, Arrows →, Check Marks ✓ and More
+				</a>
+			</h3>
+			
+		</header>
+		<div class="content list__excerpt post__content clearfix">
+			<style>
+  .cs {
+    margin-left: 4px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    border-style: outset;
+    border: 1px solid #000;
+    background-color: #fff;
+    display: inline-block;  
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .cs:hover {
+    background-color: #ccf5ff;
+    border-color: rgb(255, 51, 0);
+  }
+  .cs:focus {
+    background-color: #ccf5ff;
+    border-color: rgb(255, 51, 0);
+  }
+  .get_symbols_instruction {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .symbol-search { width: 100%; padding: 10px; font-size: 16px; margin: 8px 0 12px; border: 1px solid #ced4da; border-radius: .25rem; }
+  .symbol-jump { font-size: 0.9rem; line-height: 1.9; }
+  .symbol-jump a { white-space: nowrap; margin-right: 10px; }
+  .symbol-hidden { display: none !important; }
+</style>
+<p>Click any symbol to copy it, then paste it into a message, social media post, document or code. Use the search box to filter by name, for example &ldquo;heart&rdquo;, &ldquo;arrow&rdquo;, &ldquo;check&rdquo; or &ldquo;currency&rdquo;, or paste a symbol to find its group.</p>
+		</div>
+	</div>
+</article><article class="list__item post">
 	<figure class="list__thumbnail">
 		<a href="https://codingnconcepts.com/tools/singapore-income-tax/">
 			<img src="/img/logo/calculator.png" alt="Singapore Income Tax Calculator 2026 for Residents and Non-Residents" loading="lazy" decoding="async" />
@@ -823,14 +875,14 @@ select.form-control {
 </article><article class="list__item post">
 	<figure class="list__thumbnail">
 		<a href="https://codingnconcepts.com/tools/pixel-to-rem/">
-			<img src="/img/logo/converter.png" alt="Pixel to Rem Converter" loading="lazy" decoding="async" />
+			<img src="/img/logo/converter.png" alt="PX to REM Converter: Pixels ⇄ Rem for Any Root Font Size" loading="lazy" decoding="async" />
 		</a>
 	</figure>
 	<div class="list__body">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
 				<a href="/tools/pixel-to-rem/" rel="bookmark">
-				Pixel to Rem Converter
+				PX to REM Converter: Pixels ⇄ Rem for Any Root Font Size
 				</a>
 			</h3>
 			
@@ -953,20 +1005,33 @@ select.form-control {
     background: url("/icon/clipboard.svg") no-repeat 16px 16px;
     padding-left: 35px;    
 }
+/* converter icon spins while converting */
+@keyframes converter-spin { to { transform: rotate(360deg); } }
+.converter-icon img.spinning { animation: converter-spin .6s linear infinite; }
+.converter-icon img.spinning.reverse { animation-direction: reverse; }
+@media (prefers-reduced-motion: reduce) {
+  .converter-icon img.spinning { animation: none; opacity: .6; }
+}
+/* keep wide tables from stretching the page on phones */
+.primary { min-width: 0; max-width: 100%; }
+.table-scroll { overflow-x: auto; }
+.converter-message { margin: -12px 0 16px; font-size: 0.95rem; text-align: left; }
+.converter-message.is-error { color: #b42318; }
 </style>
+<p>Convert pixels to rem, or rem back to pixels, as you type. With the default root font size of 16px, <strong>24px = 1.5rem</strong> and <strong>0.875rem = 14px</strong>.</p>
 		</div>
 	</div>
 </article><article class="list__item post">
 	<figure class="list__thumbnail">
 		<a href="https://codingnconcepts.com/tools/rgb-to-hex/">
-			<img src="/img/logo/converter.png" alt="RGB to HEX Converter" loading="lazy" decoding="async" />
+			<img src="/img/logo/converter.png" alt="RGB to Hex Converter: RGB ⇄ Hex Color Codes with Color Picker" loading="lazy" decoding="async" />
 		</a>
 	</figure>
 	<div class="list__body">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
 				<a href="/tools/rgb-to-hex/" rel="bookmark">
-				RGB to HEX Converter
+				RGB to Hex Converter: RGB ⇄ Hex Color Codes with Color Picker
 				</a>
 			</h3>
 			
@@ -1098,7 +1163,20 @@ select.form-control {
     background: url("/icon/clipboard.svg") no-repeat 16px 16px;
     padding-left: 35px;    
 }
+/* converter icon spins while converting */
+@keyframes converter-spin { to { transform: rotate(360deg); } }
+.converter-icon img.spinning { animation: converter-spin .6s linear infinite; }
+.converter-icon img.spinning.reverse { animation-direction: reverse; }
+@media (prefers-reduced-motion: reduce) {
+  .converter-icon img.spinning { animation: none; opacity: .6; }
+}
+/* keep wide tables from stretching the page on phones */
+.primary { min-width: 0; max-width: 100%; }
+.table-scroll { overflow-x: auto; }
+.converter-message { margin: -12px 0 16px; font-size: 0.95rem; text-align: left; }
+.converter-message.is-error { color: #b42318; }
 </style>
+<p>Convert RGB to Hex or Hex to RGB as you type, or pick a color. For example, <strong>rgb(255, 99, 71) = #FF6347</strong> (tomato).</p>
 		</div>
 	</div>
 </article>
@@ -1242,7 +1320,7 @@ select.form-control {
 		<a class="widget-categories__link widget__link btn" href="/categories/snowflake/" title="Snowflake">Snowflake <span class="widget-categories__count">(3)</span></a>
 		<a class="widget-categories__link widget__link btn" href="/categories/splunk/" title="Splunk">Splunk <span class="widget-categories__count">(1)</span></a>
 		<a class="widget-categories__link widget__link btn" href="/categories/spring-boot/" title="Spring Boot">Spring Boot <span class="widget-categories__count">(37)</span></a>
-		<a class="widget-categories__link widget__link btn" href="/categories/tools/" title="Tools">Tools <span class="widget-categories__count">(4)</span></a>
+		<a class="widget-categories__link widget__link btn" href="/categories/tools/" title="Tools">Tools <span class="widget-categories__count">(5)</span></a>
 	</div>
 </div>
 
@@ -1579,6 +1657,7 @@ select.form-control {
 		<a class="widget-taglist__link widget__link btn" href="/tags/sscp/" title="SSCP">SSCP</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/string/" title="String">String</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/swagger/" title="Swagger">Swagger</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/symbols/" title="Symbols">Symbols</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/system-administration/" title="System Administration">System Administration</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/system-design/" title="System Design">System Design</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/tableau/" title="Tableau">Tableau</a>
@@ -1586,6 +1665,7 @@ select.form-control {
 		<a class="widget-taglist__link widget__link btn" href="/tags/terraform/" title="Terraform">Terraform</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/testing-qa/" title="Testing Q&amp;A">Testing Q&amp;A</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/undertow/" title="Undertow">Undertow</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/unicode/" title="Unicode">Unicode</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/user-experience/" title="User Experience">User Experience</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/vault/" title="Vault">Vault</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/vector-search/" title="Vector Search">Vector Search</a>

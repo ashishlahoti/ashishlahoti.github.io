@@ -3178,6 +3178,11 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/tools/unicode-characters/</loc>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/tags/html/</loc>
     <lastmod>2026-08-30T00:00:00+00:00</lastmod>
   </url>
@@ -3188,8 +3193,23 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/tags/symbols/</loc>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/markdown/markdown-syntax/</loc>
     <lastmod>2021-05-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/tools/</loc>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/unicode/</loc>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -3234,11 +3254,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/tools/singapore-income-tax/</loc>
-    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/tools/</loc>
     <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -3514,22 +3529,22 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/css/</loc>
-    <lastmod>2020-07-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tools/pixel-to-rem/</loc>
-    <lastmod>2020-07-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/rem/</loc>
-    <lastmod>2020-07-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tools/rgb-to-hex/</loc>
-    <lastmod>2020-07-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -4100,10 +4115,6 @@
   <url>
     <loc>https://codingnconcepts.com/puzzle/contaminated-pills/</loc>
     <lastmod>2020-05-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tools/unicode-characters/</loc>
   </url>
   
 </urlset>
