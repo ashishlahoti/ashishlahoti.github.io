@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/tools/chmod-calculator/</loc>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/</loc>
     <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
@@ -29,6 +34,11 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/javascript-algorithm/</loc>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/linux/</loc>
     <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -599,7 +609,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/ansible/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -694,7 +704,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/categories/comptia/</loc>
-    <lastmod>2026-11-20T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -734,7 +744,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/ex294/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -779,27 +789,22 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/lfcs/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/linux/</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/categories/linux-foundation/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/linux-foundation/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/linux-foundation/linux-foundation-certified-system-administrator-lfcs-exam-questions/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -924,22 +929,22 @@
   
   <url>
     <loc>https://codingnconcepts.com/categories/red-hat/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/red-hat/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/redhat/redhat-certified-engineer-rhce-ex294-exam-questions/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/rhce/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -959,7 +964,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/system-administration/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -2074,7 +2079,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/comptia/comptia-linux-plus-exam-questions/</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -2104,7 +2109,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/ex200/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -2139,7 +2144,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/linux&#43;/</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -2174,12 +2179,12 @@
   
   <url>
     <loc>https://codingnconcepts.com/redhat/redhat-certified-system-administrator-rhcsa-ex200-exam-questions/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/rhcsa/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
