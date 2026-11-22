@@ -5,17 +5,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="color-scheme" content="light dark">
-	<title>Singapore Income Tax Calculator for Tax Residents - Coding N Concepts</title>
+	<title>Singapore Income Tax Calculator 2026 for Residents and Non-Residents - Coding N Concepts</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();</script>
-	<meta name="description" content="Free Singapore income tax calculator for tax residents. Estimate your tax using the latest IRAS resident tax rates, with salary, bonus, and relief inputs.">
-	<meta property="og:title" content="Singapore Income Tax Calculator for Tax Residents" />
-<meta property="og:description" content="Free Singapore income tax calculator for tax residents. Estimate your tax using the latest IRAS resident tax rates, with salary, bonus, and relief inputs." />
+	<meta name="description" content="Free Singapore income tax calculator for YA 2026: tax residents, non-residents (15% flat or resident rates) and work pass holders, with salary, bonus, reliefs, monthly tax and a band-by-band breakdown.">
+	<meta property="og:title" content="Singapore Income Tax Calculator 2026 for Residents and Non-Residents" />
+<meta property="og:description" content="Free Singapore income tax calculator for YA 2026: tax residents, non-residents (15% flat or resident rates) and work pass holders, with salary, bonus, reliefs, monthly tax and a band-by-band breakdown." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codingnconcepts.com/tools/singapore-income-tax/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/logo/calculator.png" />
 <meta property="article:published_time" content="2021-03-19T00:00:00+00:00" />
-<meta property="article:modified_time" content="2026-08-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-11-22T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 
 <meta property="article:author" content="https://www.facebook.com/codingnconcepts" />
@@ -26,8 +26,8 @@
 	
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:image" content="https://codingnconcepts.com/img/logo/calculator.png">
-	<meta name="twitter:title" content="Singapore Income Tax Calculator for Tax Residents">
-	<meta name="twitter:description" content="Free Singapore income tax calculator for tax residents. Estimate your tax using the latest IRAS resident tax rates, with salary, bonus, and relief inputs.">
+	<meta name="twitter:title" content="Singapore Income Tax Calculator 2026 for Residents and Non-Residents">
+	<meta name="twitter:description" content="Free Singapore income tax calculator for YA 2026: tax residents, non-residents (15% flat or resident rates) and work pass holders, with salary, bonus, reliefs, monthly tax and a band-by-band breakdown.">
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -56,10 +56,10 @@
     "@context": "http://schema.org",
     "@type": "BlogPosting",
     "articleSection": "tools",
-    "name": "Singapore Income Tax Calculator for Tax Residents",
-    "headline": "Singapore Income Tax Calculator for Tax Residents",
+    "name": "Singapore Income Tax Calculator 2026 for Residents and Non-Residents",
+    "headline": "Singapore Income Tax Calculator 2026 for Residents and Non-Residents",
     "alternativeHeadline":  null ,
-    "description": "Free Singapore income tax calculator for tax residents. Estimate your tax using the latest IRAS resident tax rates, with salary, bonus, and relief inputs.",
+    "description": "Free Singapore income tax calculator for YA 2026: tax residents, non-residents (15% flat or resident rates) and work pass holders, with salary, bonus, reliefs, monthly tax and a band-by-band breakdown.",
     "inLanguage": "en-US",
 	"isFamilyFriendly": true,
     "mainEntityOfPage": {
@@ -82,7 +82,7 @@
     "copyrightYear": "2021",
     "dateCreated": "2021-03-19T00:00:00.00Z",
     "datePublished": "2021-03-19T00:00:00.00Z",
-    "dateModified": "2026-08-30T00:00:00.00Z",
+    "dateModified": "2026-11-22T00:00:00.00Z",
     "publisher":{
         "@type":"Organization",
         "name": "Coding N Concepts",
@@ -96,7 +96,7 @@
     },
     "image": ["https://codingnconcepts.com/img/logo/calculator.png"],
     "url": "https://codingnconcepts.com/tools/singapore-income-tax/",
-    "wordCount": 451 ,
+    "wordCount": 713 ,
     "genre": ["Calculator"],
     "keywords":  null 
 }
@@ -121,7 +121,7 @@
         {
             "@type": "ListItem",
             "position": 3,
-            "name": "Singapore Income Tax Calculator for Tax Residents",
+            "name": "Singapore Income Tax Calculator 2026 for Residents and Non-Residents",
             "item": "https://codingnconcepts.com/tools/singapore-income-tax/"
         }
     ]
@@ -581,7 +581,7 @@
 <main class="main" role="main">
 	<article class="post" data-pagefind-body>
 		<header class="post__header">
-			<h1 class="post__title"><img class="post__thumbnail" src="/img/logo/calculator.png" alt="Singapore Income Tax Calculator for Tax Residents"> Singapore Income Tax Calculator for Tax Residents</h1>
+			<h1 class="post__title"><img class="post__thumbnail" src="/img/logo/calculator.png" alt="Singapore Income Tax Calculator 2026 for Residents and Non-Residents"> Singapore Income Tax Calculator 2026 for Residents and Non-Residents</h1>
 			<span hidden data-pagefind-filter="Type:Articles"></span>
 <span hidden data-pagefind-meta="image:/img/logo/calculator.png"></span>
 <span hidden data-pagefind-meta="image_alt:"></span>
@@ -687,52 +687,72 @@ select.form-control {
 .output, #income-tax {
   font-weight: bold;
 }
+/* converter icon spins while recalculating */
+@keyframes converter-spin { to { transform: rotate(360deg); } }
+.converter-icon img.spinning { animation: converter-spin .6s linear infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .converter-icon img.spinning { animation: none; opacity: .6; }
+}
+/* keep wide tables from stretching the page on phones */
+.primary { min-width: 0; max-width: 100%; }
+.table-scroll { overflow-x: auto; }
+.tax-note { font-size: 0.95rem; color: #475467; }
+.tax-breakdown table { font-size: 0.85rem; }
 </style>
-<p>Calculate Income Tax for Singapore Tax Residents based on latest tax rates provided by <a href="https://www.iras.gov.sg/irashome/default.aspx">IRAS</a></p>
+<p>Estimate your Singapore income tax for Year of Assessment (YA) 2026, as a tax resident or a non-resident, using the latest <a href="https://www.iras.gov.sg/">IRAS</a> rates. The tax updates as you type.</p>
 <br />
-<form id="singaporeIncomeTaxCalculator" class="form-converter">
+<form id="singaporeIncomeTaxCalculator" class="form-converter" onsubmit="return false">
   <div class="input-group">
     <div class="input-group-prepend">
-      <div class="input-group-text">(A) Salary</div>
+      <div class="input-group-text"><label for="residency">Tax residency</label></div>
     </div>
-    <input type="number" id="salary" name="salary" class="form-control" onchange="calculateIncomeTax()">
-    <select class="form-control" name="salary-period" id="salary-period" onchange="calculateIncomeTax()">
+    <select class="form-control" name="residency" id="residency">
+      <option value="resident" selected="selected">Tax resident (183 days or more)</option>
+      <option value="non-resident">Non-resident (61 to 182 days)</option>
+      <option value="short-term">Short-term (60 days or less)</option>
+    </select>
+  </div>
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <div class="input-group-text"><label for="salary">(A) Salary</label></div>
+    </div>
+    <input type="text" inputmode="decimal" id="salary" name="salary" class="form-control" placeholder="e.g. 6000">
+    <select class="form-control" name="salary-period" id="salary-period" aria-label="Salary period">
       <option value="monthly">Monthly</option>
       <option value="yearly" selected="selected">Yearly</option>
     </select>
   </div>
   <div class="input-group">
     <div class="input-group-prepend">
-      <div class="input-group-text">(B) Bonus</div>
+      <div class="input-group-text"><label for="bonus">(B) Bonus</label></div>
     </div>
-    <input type="text" id="bonus" name="bonus" class="form-control" onchange="calculateIncomeTax()">
-    <select class="form-control" name="bonus-period" id="bonus-period" onchange="calculateIncomeTax()">
+    <input type="text" inputmode="decimal" id="bonus" name="bonus" class="form-control">
+    <select class="form-control" name="bonus-period" id="bonus-period" aria-label="Bonus period">
       <option value="monthly">Monthly</option>
       <option value="yearly" selected="selected">Yearly</option>
     </select>
   </div>
-  <div class="input-group">
+  <div class="input-group" id="tax-saving-row">
     <div class="input-group-prepend">
-      <div class="input-group-text">(C) Tax Saving</div>
+      <div class="input-group-text"><label for="tax-saving">(C) Tax Saving</label></div>
     </div>
-    <input type="text" id="tax-saving" name="tax-saving" class="form-control" onchange="calculateIncomeTax()">
-    <select class="form-control" name="tax-saving-period" id="tax-saving-period" onchange="calculateIncomeTax()">
+    <input type="text" inputmode="decimal" id="tax-saving" name="tax-saving" class="form-control" placeholder="SRS, CPF cash top-up">
+    <select class="form-control" name="tax-saving-period" id="tax-saving-period" aria-label="Tax saving period">
       <option value="monthly">Monthly</option>
       <option value="yearly" selected="selected">Yearly</option>
     </select>
   </div>
-  *Age is used to calculate Tax Relief
-  <div class="input-group">
+  <div class="input-group" id="age-row">
     <div class="input-group-prepend">
-      <div class="input-group-text">Your Age</div>
+      <div class="input-group-text"><label for="age">Your Age</label></div>
     </div>
-    <input type="text" id="age" name="age" class="form-control" onchange="calculateTaxRelief()">
+    <input type="text" inputmode="numeric" id="age" name="age" class="form-control" placeholder="fills in Earned Income Relief">
   </div>
-  <div class="input-group">
+  <div class="input-group" id="tax-relief-row">
     <div class="input-group-prepend">
-      <div class="input-group-text">(D) Tax Relief</div>
+      <div class="input-group-text"><label for="tax-relief">(D) Tax Relief</label></div>
     </div>
-    <input type="text" id="tax-relief" name="tax-relief" class="form-control" onchange="calculateIncomeTax()">
+    <input type="text" inputmode="decimal" id="tax-relief" name="tax-relief" class="form-control">
   </div>
 </form>
 <figure class="converter-icon center"><img src="/img/logo/calculator.png">
@@ -740,16 +760,30 @@ select.form-control {
 
 <div class="input-group">
   <div class="input-group-prepend">
-    <div class="input-group-text">(A+B-C-D) Taxable Income</div>
+    <div class="input-group-text">Chargeable Income</div>
   </div>
-  <input type="text" id="taxable-income" name="taxable-income" class="form-control" readonly>
+  <input type="text" id="taxable-income" name="taxable-income" class="form-control" readonly aria-label="Chargeable income">
 </div>
 <div class="input-group output">
   <div class="input-group-prepend">
-    <div class="input-group-text output">Income Tax $</div>
+    <div class="input-group-text output">Income Tax (yearly)</div>
   </div>
-  <input type="text" id="income-tax" name="income-tax" class="form-control" readonly>
+  <input type="text" id="income-tax" name="income-tax" class="form-control" readonly aria-label="Income tax per year">
 </div>
+<div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text">Per month</div>
+  </div>
+  <input type="text" id="monthly-tax" name="monthly-tax" class="form-control" readonly aria-label="Income tax per month">
+</div>
+<div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text">Effective rate</div>
+  </div>
+  <input type="text" id="effective-rate" name="effective-rate" class="form-control" readonly aria-label="Effective tax rate">
+</div>
+<p id="tax-note" class="tax-note" aria-live="polite"></p>
+<div id="tax-breakdown" class="table-scroll tax-breakdown"></div>
 <br />
 <h3 id="income-tax-rates-for-singapore-residents">Income Tax Rates for Singapore Residents</h3>
 <div class="table-scroll" style="font-size:0.8rem">
@@ -858,10 +892,10 @@ select.form-control {
 </table>
 <p><small>Reference: <a href="https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-residency-and-tax-rates/individual-income-tax-rates">https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-residency-and-tax-rates/individual-income-tax-rates</a></small>
 <br /></p>
-<h3 id="worked-example">Worked Example</h3>
-<p>Say you&rsquo;re 40 years old with a $96,000 yearly salary, a $8,000 yearly bonus, and $3,000 in tax-saving contributions (e.g. SRS or CPF Cash Top-up relief) — the calculator applies these in order:</p>
+<h3 id="worked-example-tax-resident">Worked Example: Tax Resident</h3>
+<p>Say you&rsquo;re 40 years old with a $96,000 yearly salary, a $8,000 yearly bonus, and $3,000 in tax-saving contributions (e.g. SRS or CPF Cash Top-up relief). The calculator applies these in order:</p>
 <ol>
-<li><strong>Taxable Income</strong> = Salary + Bonus − Tax Saving − Tax Relief = $96,000 + $8,000 − $3,000 − $1,000 (Earned Income Relief for under-55) = <strong>$100,000</strong></li>
+<li><strong>Chargeable Income</strong> = Salary + Bonus − Tax Saving − Tax Relief = $96,000 + $8,000 − $3,000 − $1,000 (Earned Income Relief for under-55) = <strong>$100,000</strong></li>
 <li>Singapore&rsquo;s tax brackets are progressive, so each portion of your income is taxed at the rate for its own band, not your whole income at one flat rate:
 <ul>
 <li>First $80,000 → $3,350 (per the table above)</li>
@@ -870,9 +904,49 @@ select.form-control {
 </ul>
 </li>
 </ol>
-<p>This &ldquo;layered&rdquo; calculation is why the calculator&rsquo;s result is usually lower than multiplying your full income by the rate of your top bracket — only the income <em>within</em> each band is taxed at that band&rsquo;s rate.</p>
+<p>This &ldquo;layered&rdquo; calculation is why the calculator&rsquo;s result is usually lower than multiplying your full income by the rate of your top bracket: only the income <em>within</em> each band is taxed at that band&rsquo;s rate.</p>
+<h3 id="non-residents-and-work-pass-holders">Non-Residents and Work Pass Holders</h3>
+<p>Your tax depends on how many days you worked in Singapore in the calendar year, not on your type of work pass (Employment Pass, S Pass or Work Permit):</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">Days of employment in Singapore</th>
+					<th style="text-align: left">Tax residency</th>
+					<th style="text-align: left">How employment income is taxed</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">60 days or less</td>
+					<td style="text-align: left">Non-resident</td>
+					<td style="text-align: left">Exempt (except company directors, public entertainers and professionals)</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">61 to 182 days</td>
+					<td style="text-align: left">Non-resident</td>
+					<td style="text-align: left">Higher of 15% flat or the resident rates, with no personal reliefs</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">183 days or more</td>
+					<td style="text-align: left">Tax resident</td>
+					<td style="text-align: left">Progressive resident rates, with reliefs</td>
+			</tr>
+	</tbody>
+</table>
+<p>Non-residents&rsquo; director&rsquo;s fees and other income (such as rental income) are taxed at 24% from YA 2024. Choose <strong>Non-resident</strong> or <strong>Short-term</strong> in the calculator to apply these rules.</p>
+<p><small>Reference: <a href="https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-residency-and-tax-rates/working-out-my-tax-residency">Working out my tax residency | IRAS</a></small></p>
+<h4 id="example-work-permit-or-s-pass-holder-in-their-first-year">Example: Work Permit or S Pass holder in their first year</h4>
+<p>You start work in August and earn $2,500 a month, so $12,500 for 5 months (fewer than 183 days):</p>
+<ul>
+<li>15% flat: $12,500 × 15% = <strong>$1,875</strong></li>
+<li>Resident rates: $0 (the first $20,000 is taxed at 0%)</li>
+<li>As a non-resident you pay the higher amount: <strong>$1,875</strong></li>
+</ul>
+<p>If you had worked 183 days or more, you would be a tax resident and pay $0 on the same income.</p>
+<h4 id="example-employment-pass-holder-non-resident">Example: Employment Pass holder, non-resident</h4>
+<p>You earn $250,000 in 6 months. 15% flat is $37,500, while the resident rates give $30,700 ($28,750 on the first $240,000 plus 19.5% of the next $10,000). The flat rate is higher, so you pay <strong>$37,500</strong>.</p>
 <h3 id="a-note-on-accuracy">A Note on Accuracy</h3>
-<p>The tax brackets in this calculator match IRAS&rsquo;s individual resident tax rates in effect for Year of Assessment 2026. IRAS occasionally announces one-off personal income tax rebates for a specific year of assessment (for example, a percentage rebate capped at a fixed dollar amount) — this calculator does <strong>not</strong> apply any such rebate, since it changes from year to year, so treat the result as your tax <em>before</em> any rebate you may separately qualify for. For your official assessment, always cross-check with the <a href="https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-residency-and-tax-rates/individual-income-tax-rates">IRAS individual income tax rates page</a> or your Notice of Assessment.</p>
+<p>The tax brackets match IRAS&rsquo;s individual income tax rates for YA 2024 onwards, which are unchanged for YA 2026. Budget 2026 did not announce a personal income tax rebate for YA 2026 (YA 2025 had a 60% rebate capped at $200), so the result here is your full tax. Personal reliefs are capped at $80,000 a year, and this calculator doesn&rsquo;t cover the NOR scheme, which has ended. For your official assessment, always cross-check with the <a href="https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-residency-and-tax-rates/individual-income-tax-rates">IRAS individual income tax rates page</a> or your Notice of Assessment.</p>
 		</div>
 		<footer class="post__footer" data-pagefind-ignore="all">
 			
@@ -903,7 +977,7 @@ select.form-control {
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?hashtags=codingnconcepts&amp;url=https%3a%2f%2fcodingnconcepts.com%2ftools%2fsingapore-income-tax%2f&amp;text=Singapore%20Income%20Tax%20Calculator%20for%20Tax%20Residents" target="_blank" rel="noopener" aria-label="Share on Twitter" class="share-btn twitter">
+        <a href="https://twitter.com/intent/tweet?hashtags=codingnconcepts&amp;url=https%3a%2f%2fcodingnconcepts.com%2ftools%2fsingapore-income-tax%2f&amp;text=Singapore%20Income%20Tax%20Calculator%202026%20for%20Residents%20and%20Non-Residents" target="_blank" rel="noopener" aria-label="Share on Twitter" class="share-btn twitter">
           <svg class="widget-social__link-icon icon icon-twitter" width="24" height="24" viewBox="0 0 384 312"><path d="m384 36.9c-14.1 6.3-29.3 10.5-45.2 12.4 16.3-9.7 28.8-25.2 34.6-43.6-15.2 9-32.1 15.6-50 19.1-14.4-15.2-34.9-24.8-57.5-24.8-43.5 0-78.8 35.3-78.8 78.8 0 6.2.7 12.2 2 17.9-65.5-3.3-123.5-34.6-162.4-82.3-6.7 11.6-10.6 25.2-10.6 39.6 0 27.3 13.9 51.4 35 65.6-12.9-.4-25.1-4-35.7-9.9v1c0 38.2 27.2 70 63.2 77.2-6.6 1.8-13.6 2.8-20.8 2.8-5.1 0-10-.5-14.8-1.4 10 31.3 39.1 54.1 73.6 54.7-27 21.1-60.9 33.7-97.8 33.7-6.4 0-12.6-.4-18.8-1.1 34.9 22.4 76.3 35.4 120.8 35.4 144.9 0 224.1-120 224.1-224.1 0-3.4-.1-6.8-.2-10.2 15.4-11.1 28.7-25 39.3-40.8z"/></svg>
           <p>Twitter</p>
           </a>
@@ -923,7 +997,7 @@ select.form-control {
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fcodingnconcepts.com%2ftools%2fsingapore-income-tax%2f&amp;source=https%3a%2f%2fcodingnconcepts.com%2ftools%2fsingapore-income-tax%2f&amp;title=Singapore%20Income%20Tax%20Calculator%20for%20Tax%20Residents&amp;summary=Singapore%20Income%20Tax%20Calculator%20for%20Tax%20Residents" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="share-btn linkedin">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fcodingnconcepts.com%2ftools%2fsingapore-income-tax%2f&amp;source=https%3a%2f%2fcodingnconcepts.com%2ftools%2fsingapore-income-tax%2f&amp;title=Singapore%20Income%20Tax%20Calculator%202026%20for%20Residents%20and%20Non-Residents&amp;summary=Singapore%20Income%20Tax%20Calculator%202026%20for%20Residents%20and%20Non-Residents" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="share-btn linkedin">
           <svg class="widget-social__link-icon icon icon-linkedin" width="24" height="24" viewBox="0 0 352 352"><path d="M0,40v272c0,21.9,18.1,40,40,40h272c21.9,0,40-18.1,40-40V40c0-21.9-18.1-40-40-40H40C18.1,0,0,18.1,0,40z M312,32 c4.6,0,8,3.4,8,8v272c0,4.6-3.4,8-8,8H40c-4.6,0-8-3.4-8-8V40c0-4.6,3.4-8,8-8H312z M59.5,87c0,15.2,12.3,27.5,27.5,27.5 c15.2,0,27.5-12.3,27.5-27.5c0-15.2-12.3-27.5-27.5-27.5C71.8,59.5,59.5,71.8,59.5,87z M187,157h-1v-21h-45v152h47v-75 c0-19.8,3.9-39,28.5-39c24.2,0,24.5,22.4,24.5,40v74h47v-83.5c0-40.9-8.7-72-56.5-72C208.5,132.5,193.3,145.1,187,157z M64,288h47.5 V136H64V288z"/></svg>
             <p>LinkedIn</p>
           </a>
@@ -933,7 +1007,7 @@ select.form-control {
       
       
       <li>
-        <a href="whatsapp://send?text=Singapore%20Income%20Tax%20Calculator%20for%20Tax%20Residents%2c%20by%20Coding%20N%20Concepts%0aFree%20Singapore%20income%20tax%20calculator%20for%20tax%20residents.%20Estimate%20your%20tax%20using%20the%20latest%20IRAS%20resident%20tax%20rates%2c%20with%20salary%2c%20bonus%2c%20and%20relief%20inputs.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2ftools%2fsingapore-income-tax%2f%0a" target="_blank" class="share-btn whatsapp">
+        <a href="whatsapp://send?text=Singapore%20Income%20Tax%20Calculator%202026%20for%20Residents%20and%20Non-Residents%2c%20by%20Coding%20N%20Concepts%0aFree%20Singapore%20income%20tax%20calculator%20for%20YA%202026%3a%20tax%20residents%2c%20non-residents%20%2815%25%20flat%20or%20resident%20rates%29%20and%20work%20pass%20holders%2c%20with%20salary%2c%20bonus%2c%20reliefs%2c%20monthly%20tax%20and%20a%20band-by-band%20breakdown.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2ftools%2fsingapore-income-tax%2f%0a" target="_blank" class="share-btn whatsapp">
           <svg class="widget-social__link-icon icon icon-whatsapp" width="24" height="24" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
           <p>WhatsApp</p>
         </a>
@@ -943,7 +1017,7 @@ select.form-control {
       
       
       <li>
-        <a href="mailto:?subject=Coding%20N%20Concepts - Singapore%20Income%20Tax%20Calculator%20for%20Tax%20Residents.&amp;body=Singapore%20Income%20Tax%20Calculator%20for%20Tax%20Residents%2c%20by%20Coding%20N%20Concepts%0aFree%20Singapore%20income%20tax%20calculator%20for%20tax%20residents.%20Estimate%20your%20tax%20using%20the%20latest%20IRAS%20resident%20tax%20rates%2c%20with%20salary%2c%20bonus%2c%20and%20relief%20inputs.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2ftools%2fsingapore-income-tax%2f%0a" target="_blank" class="share-btn email">
+        <a href="mailto:?subject=Coding%20N%20Concepts - Singapore%20Income%20Tax%20Calculator%202026%20for%20Residents%20and%20Non-Residents.&amp;body=Singapore%20Income%20Tax%20Calculator%202026%20for%20Residents%20and%20Non-Residents%2c%20by%20Coding%20N%20Concepts%0aFree%20Singapore%20income%20tax%20calculator%20for%20YA%202026%3a%20tax%20residents%2c%20non-residents%20%2815%25%20flat%20or%20resident%20rates%29%20and%20work%20pass%20holders%2c%20with%20salary%2c%20bonus%2c%20reliefs%2c%20monthly%20tax%20and%20a%20band-by-band%20breakdown.%0a%0ahttps%3a%2f%2fcodingnconcepts.com%2ftools%2fsingapore-income-tax%2f%0a" target="_blank" class="share-btn email">
           <svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
           <p>Email</p>
         </a>

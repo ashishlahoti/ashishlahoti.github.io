@@ -506,14 +506,14 @@
 <main class="main list" role="main"><article class="list__item post">
 	<figure class="list__thumbnail">
 		<a href="https://codingnconcepts.com/tools/singapore-income-tax/">
-			<img src="/img/logo/calculator.png" alt="Singapore Income Tax Calculator for Tax Residents" loading="lazy" decoding="async" />
+			<img src="/img/logo/calculator.png" alt="Singapore Income Tax Calculator 2026 for Residents and Non-Residents" loading="lazy" decoding="async" />
 		</a>
 	</figure>
 	<div class="list__body">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
 				<a href="/tools/singapore-income-tax/" rel="bookmark">
-				Singapore Income Tax Calculator for Tax Residents
+				Singapore Income Tax Calculator 2026 for Residents and Non-Residents
 				</a>
 			</h3>
 			
@@ -619,6 +619,17 @@ select.form-control {
 .output, #income-tax {
   font-weight: bold;
 }
+/* converter icon spins while recalculating */
+@keyframes converter-spin { to { transform: rotate(360deg); } }
+.converter-icon img.spinning { animation: converter-spin .6s linear infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .converter-icon img.spinning { animation: none; opacity: .6; }
+}
+/* keep wide tables from stretching the page on phones */
+.primary { min-width: 0; max-width: 100%; }
+.table-scroll { overflow-x: auto; }
+.tax-note { font-size: 0.95rem; color: #475467; }
+.tax-breakdown table { font-size: 0.85rem; }
 </style>
 		</div>
 	</div>
