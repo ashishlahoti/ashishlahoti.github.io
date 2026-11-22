@@ -728,6 +728,14 @@
 .table-scroll {
   overflow-x: auto;
 }
+/* converter icon spins while converting */
+@keyframes converter-spin { to { transform: rotate(360deg); } }
+.converter-icon img { transition: transform .2s ease; }
+.converter-icon img.spinning { animation: converter-spin .6s linear infinite; }
+.converter-icon img.spinning.reverse { animation-direction: reverse; }
+@media (prefers-reduced-motion: reduce) {
+  .converter-icon img.spinning { animation: none; opacity: .6; }
+}
 .converter-message {
   margin: -12px 0 16px;
   font-size: 0.95rem;

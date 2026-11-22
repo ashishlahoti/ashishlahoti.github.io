@@ -135,13 +135,26 @@ if (typeof document !== 'undefined') {
     alertNotification('Copied to clipboard: ' + value);
   };
 
+  // Spin the middle converter icon while the user types (reverse direction for Roman -> number)
+  let spinTimer = null;
+  const spin = (reverse) => {
+    const icon = document.querySelector('#numberToRomanConverter .converter-icon img');
+    if (!icon) return;
+    icon.classList.toggle('reverse', !!reverse);
+    icon.classList.add('spinning');
+    clearTimeout(spinTimer);
+    spinTimer = setTimeout(() => icon.classList.remove('spinning'), 600);
+  };
+
   const onNumberInput = () => {
+    spin(false);
     const result = convertNumber(byId('decimal-number').value);
     byId('roman-number').value = result.roman;
     show('roman-message', '', false);
     show('number-message', result.message, !result.ok);
   };
   const onRomanInput = () => {
+    spin(true);
     const result = convertRoman(byId('roman-number').value);
     byId('decimal-number').value = result.ok ? formatNumber(result.value) : '';
     show('number-message', '', false);
