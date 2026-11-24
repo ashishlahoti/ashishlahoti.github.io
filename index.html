@@ -16,7 +16,7 @@
 <meta property="og:image" content="https://codingnconcepts.com/img/og-default.jpg" />
 <meta property="og:image" content="https://codingnconcepts.com/android-chrome-512x512.png" />
 <meta property="og:image" content="https://codingnconcepts.com/android-chrome-192x192.png" />
-<meta property="og:updated_time" content="2026-11-22T00:00:00+00:00" />
+<meta property="og:updated_time" content="2026-11-24T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 <meta property="fb:admins" content="177784346770196" />
 	
@@ -1106,9 +1106,838 @@
 	</section>
 
 	<header class="home-section__header home-section__header--posts">
-		<h2 class="home-section__title">Latest posts <span class="count-badge">441</span>
+		<h2 class="home-section__title">Latest posts <span class="count-badge">446</span>
 </h2>
 	</header><article class="list__item post">
+	<figure class="list__thumbnail">
+		<a href="https://codingnconcepts.com/tools/base64-encode-decode/">
+			<img src="/img/logo/converter.png" alt="Base64 Encode and Decode Online: Text ⇄ Base64" loading="lazy" decoding="async" />
+		</a>
+	</figure>
+	<div class="list__body">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/tools/base64-encode-decode/" rel="bookmark">
+				Base64 Encode and Decode Online: Text ⇄ Base64
+				</a>
+			</h3>
+			
+		</header>
+		<div class="content list__excerpt post__content clearfix">
+			<style>
+.form-label, .form-input {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.form-input {
+  padding: 10px;
+  font-size: 16px;
+}
+.form-group {
+  margin: auto;
+  min-width: 50%;
+}
+.input-group {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  width: 100%;
+}
+.input-group-append, .input-group-prepend {
+  margin-right: -1px;
+  display: flex;
+}
+.input-group-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: .375rem .75rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  min-width: 60px;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.input-group>.form-control:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group>.form-control:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.input-group>.input-group-prepend>.input-group-text {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.input-group>.input-group-append>.input-group-text {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group>.form-control {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 1%;
+  margin-bottom: 0;
+  padding: 10px;
+}
+.input-group {
+  padding-bottom: 20px;
+}
+.converter-icon {
+  width: 3em;
+  margin: auto;
+  padding-bottom: 1em;
+}
+.input-group>.input-group-append> .icon-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.icon-button {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    background-color: #ced4da;
+    border-color: #ced4da;
+    border-left: none;    
+}
+.icon-button:active {
+    background-color: #e9ecef
+}
+.icon-copy {
+    background: url("/icon/clipboard.svg") no-repeat 16px 16px;
+    padding-left: 35px;    
+}
+/* converter icon spins while converting */
+@keyframes converter-spin { to { transform: rotate(360deg); } }
+.converter-icon img.spinning { animation: converter-spin .6s linear infinite; }
+.converter-icon img.spinning.reverse { animation-direction: reverse; }
+@media (prefers-reduced-motion: reduce) {
+  .converter-icon img.spinning { animation: none; opacity: .6; }
+}
+/* keep wide tables from stretching the page on phones */
+.primary { min-width: 0; max-width: 100%; }
+.table-scroll { overflow-x: auto; }
+.converter-message { margin: -12px 0 16px; font-size: 0.95rem; text-align: left; }
+.converter-message.is-error { color: #b42318; }
+.b64-area { font-family: monospace; font-size: 0.95rem; min-height: 110px; resize: vertical; }
+.b64-option { display: block; margin: -8px 0 8px; font-size: 0.95rem; }
+.b64-sizes { font-size: 0.85rem; color: #475467; }
+</style>
+<p>Encode text to Base64 or decode Base64 back to text, as you type. For example, <strong>Hello, World!</strong> is <strong>SGVsbG8sIFdvcmxkIQ==</strong>. Everything runs in your browser; nothing is sent to a server.</p>
+		</div>
+	</div>
+</article><article class="list__item post">
+	<figure class="list__thumbnail">
+		<a href="https://codingnconcepts.com/tools/number-base-converter/">
+			<img src="/img/logo/converter.png" alt="Binary, Hex, Decimal and Octal Converter" loading="lazy" decoding="async" />
+		</a>
+	</figure>
+	<div class="list__body">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/tools/number-base-converter/" rel="bookmark">
+				Binary, Hex, Decimal and Octal Converter
+				</a>
+			</h3>
+			
+		</header>
+		<div class="content list__excerpt post__content clearfix">
+			<style>
+.form-label, .form-input {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.form-input {
+  padding: 10px;
+  font-size: 16px;
+}
+.form-group {
+  margin: auto;
+  min-width: 50%;
+}
+.input-group {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  width: 100%;
+}
+.input-group-append, .input-group-prepend {
+  margin-right: -1px;
+  display: flex;
+}
+.input-group-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: .375rem .75rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  min-width: 60px;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.input-group>.form-control:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group>.form-control:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.input-group>.input-group-prepend>.input-group-text {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.input-group>.input-group-append>.input-group-text {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group>.form-control {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 1%;
+  margin-bottom: 0;
+  padding: 10px;
+}
+.input-group {
+  padding-bottom: 20px;
+}
+.converter-icon {
+  width: 3em;
+  margin: auto;
+  padding-bottom: 1em;
+}
+.input-group>.input-group-append> .icon-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.icon-button {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    background-color: #ced4da;
+    border-color: #ced4da;
+    border-left: none;    
+}
+.icon-button:active {
+    background-color: #e9ecef
+}
+.icon-copy {
+    background: url("/icon/clipboard.svg") no-repeat 16px 16px;
+    padding-left: 35px;    
+}
+/* converter icon spins while converting */
+@keyframes converter-spin { to { transform: rotate(360deg); } }
+.converter-icon img.spinning { animation: converter-spin .6s linear infinite; }
+.converter-icon img.spinning.reverse { animation-direction: reverse; }
+@media (prefers-reduced-motion: reduce) {
+  .converter-icon img.spinning { animation: none; opacity: .6; }
+}
+/* keep wide tables from stretching the page on phones */
+.primary { min-width: 0; max-width: 100%; }
+.table-scroll { overflow-x: auto; }
+.converter-message { margin: -12px 0 16px; font-size: 0.95rem; text-align: left; }
+.converter-message.is-error { color: #b42318; }
+.base-input { font-family: monospace; font-size: 1.05rem; }
+.base-options { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; font-size: 0.95rem; margin-bottom: 10px; }
+.base-options select { padding: 4px 8px; border: 1px solid #ced4da; border-radius: .25rem; }
+.base-extra th { text-align: left; white-space: nowrap; }
+.base-extra td { font-family: monospace; word-break: break-all; }
+</style>
+<p>Convert numbers between binary, hexadecimal, decimal and octal as you type. For example, <strong>255</strong> in decimal is <strong>FF</strong> in hex, <strong>1111 1111</strong> in binary and <strong>377</strong> in octal.</p>
+		</div>
+	</div>
+</article><article class="list__item post">
+	<figure class="list__thumbnail">
+		<a href="https://codingnconcepts.com/tools/cron-expression-explainer/">
+			<img src="/img/logo/converter.png" alt="Cron Expression Explainer: Crontab Schedule in Plain English" loading="lazy" decoding="async" />
+		</a>
+	</figure>
+	<div class="list__body">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/tools/cron-expression-explainer/" rel="bookmark">
+				Cron Expression Explainer: Crontab Schedule in Plain English
+				</a>
+			</h3>
+			
+		</header>
+		<div class="content list__excerpt post__content clearfix">
+			<style>
+.form-label, .form-input {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.form-input {
+  padding: 10px;
+  font-size: 16px;
+}
+.form-group {
+  margin: auto;
+  min-width: 50%;
+}
+.input-group {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  width: 100%;
+}
+.input-group-append, .input-group-prepend {
+  margin-right: -1px;
+  display: flex;
+}
+.input-group-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: .375rem .75rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  min-width: 60px;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.input-group>.form-control:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group>.form-control:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.input-group>.input-group-prepend>.input-group-text {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.input-group>.input-group-append>.input-group-text {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group>.form-control {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 1%;
+  margin-bottom: 0;
+  padding: 10px;
+}
+.input-group {
+  padding-bottom: 20px;
+}
+.converter-icon {
+  width: 3em;
+  margin: auto;
+  padding-bottom: 1em;
+}
+.input-group>.input-group-append> .icon-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.icon-button {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    background-color: #ced4da;
+    border-color: #ced4da;
+    border-left: none;    
+}
+.icon-button:active {
+    background-color: #e9ecef
+}
+.icon-copy {
+    background: url("/icon/clipboard.svg") no-repeat 16px 16px;
+    padding-left: 35px;    
+}
+/* converter icon spins while converting */
+@keyframes converter-spin { to { transform: rotate(360deg); } }
+.converter-icon img.spinning { animation: converter-spin .6s linear infinite; }
+.converter-icon img.spinning.reverse { animation-direction: reverse; }
+@media (prefers-reduced-motion: reduce) {
+  .converter-icon img.spinning { animation: none; opacity: .6; }
+}
+/* keep wide tables from stretching the page on phones */
+.primary { min-width: 0; max-width: 100%; }
+.table-scroll { overflow-x: auto; }
+.converter-message { margin: -12px 0 16px; font-size: 0.95rem; text-align: left; }
+.converter-message.is-error { color: #b42318; }
+.cron-input { font-family: monospace; font-size: 1.15rem; letter-spacing: 1px; }
+.cron-fields { display: flex; gap: 6px; flex-wrap: wrap; font-size: 0.8rem; color: #475467; margin: -14px 0 10px; }
+.cron-fields span { border: 1px solid #d0d5dd; border-radius: 4px; padding: 1px 6px; }
+.cron-english { font-size: 1.2rem; font-weight: 600; text-align: center; }
+.cron-next { font-family: monospace; font-size: 0.95rem; }
+.cron-option { font-size: 0.95rem; }
+</style>
+<p>Paste a cron expression to read it in plain English and see when it will run next. For example, <strong>*/15 9-17 * * 1-5</strong> means &ldquo;every 15 minutes, from 09:00 to 17:59, Monday through Friday&rdquo;.</p>
+		</div>
+	</div>
+</article><article class="list__item post">
+	<figure class="list__thumbnail">
+		<a href="https://codingnconcepts.com/tools/jwt-decoder/">
+			<img src="/img/logo/converter.png" alt="JWT Decoder: Decode JSON Web Tokens and Explain the Claims" loading="lazy" decoding="async" />
+		</a>
+	</figure>
+	<div class="list__body">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/tools/jwt-decoder/" rel="bookmark">
+				JWT Decoder: Decode JSON Web Tokens and Explain the Claims
+				</a>
+			</h3>
+			
+		</header>
+		<div class="content list__excerpt post__content clearfix">
+			<style>
+.form-label, .form-input {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.form-input {
+  padding: 10px;
+  font-size: 16px;
+}
+.form-group {
+  margin: auto;
+  min-width: 50%;
+}
+.input-group {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  width: 100%;
+}
+.input-group-append, .input-group-prepend {
+  margin-right: -1px;
+  display: flex;
+}
+.input-group-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: .375rem .75rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  min-width: 60px;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.input-group>.form-control:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group>.form-control:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.input-group>.input-group-prepend>.input-group-text {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.input-group>.input-group-append>.input-group-text {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group>.form-control {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 1%;
+  margin-bottom: 0;
+  padding: 10px;
+}
+.input-group {
+  padding-bottom: 20px;
+}
+.converter-icon {
+  width: 3em;
+  margin: auto;
+  padding-bottom: 1em;
+}
+.input-group>.input-group-append> .icon-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.icon-button {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    background-color: #ced4da;
+    border-color: #ced4da;
+    border-left: none;    
+}
+.icon-button:active {
+    background-color: #e9ecef
+}
+.icon-copy {
+    background: url("/icon/clipboard.svg") no-repeat 16px 16px;
+    padding-left: 35px;    
+}
+/* converter icon spins while converting */
+@keyframes converter-spin { to { transform: rotate(360deg); } }
+.converter-icon img.spinning { animation: converter-spin .6s linear infinite; }
+.converter-icon img.spinning.reverse { animation-direction: reverse; }
+@media (prefers-reduced-motion: reduce) {
+  .converter-icon img.spinning { animation: none; opacity: .6; }
+}
+/* keep wide tables from stretching the page on phones */
+.primary { min-width: 0; max-width: 100%; }
+.table-scroll { overflow-x: auto; }
+.converter-message { margin: -12px 0 16px; font-size: 0.95rem; text-align: left; }
+.converter-message.is-error { color: #b42318; }
+.jwt-area { font-family: monospace; font-size: 0.9rem; min-height: 110px; resize: vertical; word-break: break-all; }
+.jwt-colored { font-family: monospace; font-size: 0.85rem; word-break: break-all; }
+.jwt-h { color: #d92d20; }
+.jwt-p { color: #7a2ed6; }
+.jwt-s { color: #1570ef; }
+.jwt-title { margin-top: 18px; }
+.jwt-json { font-size: 0.85rem; white-space: pre-wrap; word-break: break-word; }
+.jwt-claims { font-size: 0.85rem; }
+.jwt-value { word-break: break-all; font-family: monospace; }
+.jwt-status { text-align: center; font-weight: 600; }
+.jwt-status ul { text-align: left; font-weight: 400; }
+.jwt-good { color: #067647; }
+.jwt-bad { color: #b42318; }
+.jwt-warn { color: #b54708; }
+.inline-copy { padding: 2px 10px; vertical-align: middle; }
+</style>
+<p>Paste a JSON Web Token (JWT) to decode its header and payload, see what each claim means, and check whether it has expired. Decoding happens entirely in your browser; the token is never sent to a server.</p>
+		</div>
+	</div>
+</article><article class="list__item post">
+	<figure class="list__thumbnail">
+		<a href="https://codingnconcepts.com/tools/unix-timestamp-converter/">
+			<img src="/img/logo/converter.png" alt="Unix Timestamp Converter: Epoch to Date and Date to Epoch" loading="lazy" decoding="async" />
+		</a>
+	</figure>
+	<div class="list__body">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/tools/unix-timestamp-converter/" rel="bookmark">
+				Unix Timestamp Converter: Epoch to Date and Date to Epoch
+				</a>
+			</h3>
+			
+		</header>
+		<div class="content list__excerpt post__content clearfix">
+			<style>
+.form-label, .form-input {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.form-input {
+  padding: 10px;
+  font-size: 16px;
+}
+.form-group {
+  margin: auto;
+  min-width: 50%;
+}
+.input-group {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  width: 100%;
+}
+.input-group-append, .input-group-prepend {
+  margin-right: -1px;
+  display: flex;
+}
+.input-group-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: .375rem .75rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  min-width: 60px;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.input-group>.form-control:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group>.form-control:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.input-group>.input-group-prepend>.input-group-text {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.input-group>.input-group-append>.input-group-text {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group>.form-control {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 1%;
+  margin-bottom: 0;
+  padding: 10px;
+}
+.input-group {
+  padding-bottom: 20px;
+}
+.converter-icon {
+  width: 3em;
+  margin: auto;
+  padding-bottom: 1em;
+}
+.input-group>.input-group-append> .icon-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.icon-button {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    background-color: #ced4da;
+    border-color: #ced4da;
+    border-left: none;    
+}
+.icon-button:active {
+    background-color: #e9ecef
+}
+.icon-copy {
+    background: url("/icon/clipboard.svg") no-repeat 16px 16px;
+    padding-left: 35px;    
+}
+/* converter icon spins while converting */
+@keyframes converter-spin { to { transform: rotate(360deg); } }
+.converter-icon img.spinning { animation: converter-spin .6s linear infinite; }
+.converter-icon img.spinning.reverse { animation-direction: reverse; }
+@media (prefers-reduced-motion: reduce) {
+  .converter-icon img.spinning { animation: none; opacity: .6; }
+}
+/* keep wide tables from stretching the page on phones */
+.primary { min-width: 0; max-width: 100%; }
+.table-scroll { overflow-x: auto; }
+.converter-message { margin: -12px 0 16px; font-size: 0.95rem; text-align: left; }
+.converter-message.is-error { color: #b42318; }
+.now-line { font-size: 1rem; }
+.now-copy { padding: 2px 10px; vertical-align: middle; }
+.ts-result th { text-align: left; white-space: nowrap; }
+.ts-result th select { max-width: 170px; }
+.ts-result td { font-family: monospace; }
+.inline-copy { padding: 2px 10px; vertical-align: middle; }
+@media (max-width: 640px) {
+  .ts-result th, .ts-result td { display: block; width: 100%; }
+  .ts-result td { padding-top: 0; border-top: none; }
+}
+</style>
+<p>Convert a Unix (epoch) timestamp to a human-readable date, or a date to a timestamp, in any time zone. For example, <strong>1767225600</strong> is <strong>1 January 2026, 00:00:00 UTC</strong>.</p>
+		</div>
+	</div>
+</article><article class="list__item post">
 	<figure class="list__thumbnail">
 		<a href="https://codingnconcepts.com/tools/chmod-calculator/">
 			<img src="/img/logo/calculator.png" alt="chmod Calculator: Linux File Permissions (755, 644, rwxr-xr-x)" loading="lazy" decoding="async" />
@@ -1663,176 +2492,6 @@
 			<p>Comprehensive list of Free <strong>GIAC Security Essentials (GSEC)</strong> practice questions, grouped by the 26 GSEC certification objectives, curated for getting ready for the GSEC exam.</p>
 				<div class="list__footer clearfix">
 					<a class="list__footer-readmore" href="/giac/giac-security-essentials-gsec-exam-questions/">Read more…</a>
-				</div>
-		</div>
-	</div>
-</article><article class="list__item post">
-	<figure class="list__thumbnail">
-		<a href="https://codingnconcepts.com/prince2/prince2-7-foundation-exam-questions/">
-			<img src="/img/badge/prince2-7-foundation.png" alt="PRINCE2 7 Foundation Exam Questions" loading="lazy" decoding="async" />
-		</a>
-	</figure>
-	<div class="list__body">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/prince2/prince2-7-foundation-exam-questions/" rel="bookmark">
-				PRINCE2 7 Foundation Exam Questions
-				</a>
-			</h3>
-			<div class="list__meta meta"><div class="meta__item-author meta__item">
-	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg> <span class="meta__text">Ashish Lahoti</span>
-</div>
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2026-11-20T00:00:00Z">Last Modified: Nov 20, 2026</time>
-</div>
-
-<div class="meta__item-categories meta__item">
-	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/prince2/" rel="category">PRINCE2</a>
-	</span>
-</div></div>
-		</header>
-		<div class="content list__excerpt post__content clearfix">
-			<p>Comprehensive list of Free <strong>PRINCE2 7 Foundation</strong> exam questions and answers, grouped by the five learning outcomes of the official syllabus, curated for cracking the exam with confidence.</p>
-				<div class="list__footer clearfix">
-					<a class="list__footer-readmore" href="/prince2/prince2-7-foundation-exam-questions/">Read more…</a>
-				</div>
-		</div>
-	</div>
-</article><article class="list__item post">
-	<figure class="list__thumbnail">
-		<a href="https://codingnconcepts.com/oracle/oracle-mysql-database-administration-professional-1z0-918-exam-questions/">
-			<img src="/img/badge/oracle-database.png" alt="MySQL Database Administration Professional (1Z0-918) Exam Questions" loading="lazy" decoding="async" />
-		</a>
-	</figure>
-	<div class="list__body">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/oracle/oracle-mysql-database-administration-professional-1z0-918-exam-questions/" rel="bookmark">
-				MySQL Database Administration Professional (1Z0-918) Exam Questions
-				</a>
-			</h3>
-			<div class="list__meta meta"><div class="meta__item-author meta__item">
-	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg> <span class="meta__text">Ashish Lahoti</span>
-</div>
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2026-11-20T00:00:00Z">Last Modified: Nov 20, 2026</time>
-</div>
-
-<div class="meta__item-categories meta__item">
-	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/oracle/" rel="category">Oracle</a>
-	</span>
-</div></div>
-		</header>
-		<div class="content list__excerpt post__content clearfix">
-			<p>Comprehensive list of Free <strong>MySQL Database Administration Professional (1Z0-918)</strong> exam questions, grouped by the official exam topics, curated for cracking the MySQL Database Administration Professional exam with confidence.</p>
-				<div class="list__footer clearfix">
-					<a class="list__footer-readmore" href="/oracle/oracle-mysql-database-administration-professional-1z0-918-exam-questions/">Read more…</a>
-				</div>
-		</div>
-	</div>
-</article><article class="list__item post">
-	<figure class="list__thumbnail">
-		<a href="https://codingnconcepts.com/oracle/oracle-autonomous-ai-database-professional-1z0-931-exam-questions/">
-			<img src="/img/badge/oracle-cloud.png" alt="Oracle Autonomous AI Database Professional (1Z0-931-26) Exam Questions" loading="lazy" decoding="async" />
-		</a>
-	</figure>
-	<div class="list__body">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/oracle/oracle-autonomous-ai-database-professional-1z0-931-exam-questions/" rel="bookmark">
-				Oracle Autonomous AI Database Professional (1Z0-931-26) Exam Questions
-				</a>
-			</h3>
-			<div class="list__meta meta"><div class="meta__item-author meta__item">
-	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg> <span class="meta__text">Ashish Lahoti</span>
-</div>
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2026-11-20T00:00:00Z">Last Modified: Nov 20, 2026</time>
-</div>
-
-<div class="meta__item-categories meta__item">
-	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/oracle/" rel="category">Oracle</a>
-	</span>
-</div></div>
-		</header>
-		<div class="content list__excerpt post__content clearfix">
-			<p>Comprehensive list of Free <strong>Oracle Autonomous AI Database Professional (1Z0-931-26)</strong> exam questions, grouped by the official exam topics, curated for cracking the Autonomous AI Database Professional exam with confidence.</p>
-				<div class="list__footer clearfix">
-					<a class="list__footer-readmore" href="/oracle/oracle-autonomous-ai-database-professional-1z0-931-exam-questions/">Read more…</a>
-				</div>
-		</div>
-	</div>
-</article><article class="list__item post">
-	<figure class="list__thumbnail">
-		<a href="https://codingnconcepts.com/oracle/oracle-cloud-infrastructure-developer-professional-1z0-1084-exam-questions/">
-			<img src="/img/badge/oracle-cloud.png" alt="Oracle Cloud Infrastructure Developer Professional (1Z0-1084-26) Exam Questions" loading="lazy" decoding="async" />
-		</a>
-	</figure>
-	<div class="list__body">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/oracle/oracle-cloud-infrastructure-developer-professional-1z0-1084-exam-questions/" rel="bookmark">
-				Oracle Cloud Infrastructure Developer Professional (1Z0-1084-26) Exam Questions
-				</a>
-			</h3>
-			<div class="list__meta meta"><div class="meta__item-author meta__item">
-	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg> <span class="meta__text">Ashish Lahoti</span>
-</div>
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2026-11-20T00:00:00Z">Last Modified: Nov 20, 2026</time>
-</div>
-
-<div class="meta__item-categories meta__item">
-	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/oracle/" rel="category">Oracle</a>
-	</span>
-</div></div>
-		</header>
-		<div class="content list__excerpt post__content clearfix">
-			<p>Comprehensive list of Free <strong>Oracle Cloud Infrastructure Developer Professional (1Z0-1084-26)</strong> exam questions, grouped by the official exam topics, curated for cracking the OCI Developer Professional exam with confidence.</p>
-				<div class="list__footer clearfix">
-					<a class="list__footer-readmore" href="/oracle/oracle-cloud-infrastructure-developer-professional-1z0-1084-exam-questions/">Read more…</a>
-				</div>
-		</div>
-	</div>
-</article><article class="list__item post">
-	<figure class="list__thumbnail">
-		<a href="https://codingnconcepts.com/oracle/oracle-cloud-infrastructure-devops-professional-1z0-1109-exam-questions/">
-			<img src="/img/badge/oracle-cloud.png" alt="Oracle Cloud Infrastructure DevOps Professional (1Z0-1109-26) Exam Questions" loading="lazy" decoding="async" />
-		</a>
-	</figure>
-	<div class="list__body">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/oracle/oracle-cloud-infrastructure-devops-professional-1z0-1109-exam-questions/" rel="bookmark">
-				Oracle Cloud Infrastructure DevOps Professional (1Z0-1109-26) Exam Questions
-				</a>
-			</h3>
-			<div class="list__meta meta"><div class="meta__item-author meta__item">
-	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg> <span class="meta__text">Ashish Lahoti</span>
-</div>
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2026-11-20T00:00:00Z">Last Modified: Nov 20, 2026</time>
-</div>
-
-<div class="meta__item-categories meta__item">
-	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/oracle/" rel="category">Oracle</a>
-	</span>
-</div></div>
-		</header>
-		<div class="content list__excerpt post__content clearfix">
-			<p>Comprehensive list of Free <strong>Oracle Cloud Infrastructure DevOps Professional (1Z0-1109-26)</strong> exam questions, grouped by the official exam topics, curated for cracking the OCI DevOps Professional exam with confidence.</p>
-				<div class="list__footer clearfix">
-					<a class="list__footer-readmore" href="/oracle/oracle-cloud-infrastructure-devops-professional-1z0-1109-exam-questions/">Read more…</a>
 				</div>
 		</div>
 	</div>

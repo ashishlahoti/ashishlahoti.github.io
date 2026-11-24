@@ -14,7 +14,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://codingnconcepts.com/tags/linux/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/og-default.jpg"/>
-<meta property="og:updated_time" content="2026-11-22T00:00:00+00:00" />
+<meta property="og:updated_time" content="2026-11-24T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 <meta property="fb:admins" content="177784346770196" />
 	
@@ -505,6 +505,170 @@
 			
 <main class="main list" role="main"><article class="list__item post">
 	<figure class="list__thumbnail">
+		<a href="https://codingnconcepts.com/tools/cron-expression-explainer/">
+			<img src="/img/logo/converter.png" alt="Cron Expression Explainer: Crontab Schedule in Plain English" loading="lazy" decoding="async" />
+		</a>
+	</figure>
+	<div class="list__body">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/tools/cron-expression-explainer/" rel="bookmark">
+				Cron Expression Explainer: Crontab Schedule in Plain English
+				</a>
+			</h3>
+			
+		</header>
+		<div class="content list__excerpt post__content clearfix">
+			<style>
+.form-label, .form-input {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.form-input {
+  padding: 10px;
+  font-size: 16px;
+}
+.form-group {
+  margin: auto;
+  min-width: 50%;
+}
+.input-group {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  width: 100%;
+}
+.input-group-append, .input-group-prepend {
+  margin-right: -1px;
+  display: flex;
+}
+.input-group-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: .375rem .75rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  min-width: 60px;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.input-group>.form-control:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group>.form-control:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.input-group>.input-group-prepend>.input-group-text {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.input-group>.input-group-append>.input-group-text {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group>.form-control {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 1%;
+  margin-bottom: 0;
+  padding: 10px;
+}
+.input-group {
+  padding-bottom: 20px;
+}
+.converter-icon {
+  width: 3em;
+  margin: auto;
+  padding-bottom: 1em;
+}
+.input-group>.input-group-append> .icon-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.icon-button {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    background-color: #ced4da;
+    border-color: #ced4da;
+    border-left: none;    
+}
+.icon-button:active {
+    background-color: #e9ecef
+}
+.icon-copy {
+    background: url("/icon/clipboard.svg") no-repeat 16px 16px;
+    padding-left: 35px;    
+}
+/* converter icon spins while converting */
+@keyframes converter-spin { to { transform: rotate(360deg); } }
+.converter-icon img.spinning { animation: converter-spin .6s linear infinite; }
+.converter-icon img.spinning.reverse { animation-direction: reverse; }
+@media (prefers-reduced-motion: reduce) {
+  .converter-icon img.spinning { animation: none; opacity: .6; }
+}
+/* keep wide tables from stretching the page on phones */
+.primary { min-width: 0; max-width: 100%; }
+.table-scroll { overflow-x: auto; }
+.converter-message { margin: -12px 0 16px; font-size: 0.95rem; text-align: left; }
+.converter-message.is-error { color: #b42318; }
+.cron-input { font-family: monospace; font-size: 1.15rem; letter-spacing: 1px; }
+.cron-fields { display: flex; gap: 6px; flex-wrap: wrap; font-size: 0.8rem; color: #475467; margin: -14px 0 10px; }
+.cron-fields span { border: 1px solid #d0d5dd; border-radius: 4px; padding: 1px 6px; }
+.cron-english { font-size: 1.2rem; font-weight: 600; text-align: center; }
+.cron-next { font-family: monospace; font-size: 0.95rem; }
+.cron-option { font-size: 0.95rem; }
+</style>
+<p>Paste a cron expression to read it in plain English and see when it will run next. For example, <strong>*/15 9-17 * * 1-5</strong> means &ldquo;every 15 minutes, from 09:00 to 17:59, Monday through Friday&rdquo;.</p>
+		</div>
+	</div>
+</article><article class="list__item post">
+	<figure class="list__thumbnail">
 		<a href="https://codingnconcepts.com/tools/chmod-calculator/">
 			<img src="/img/logo/calculator.png" alt="chmod Calculator: Linux File Permissions (755, 644, rwxr-xr-x)" loading="lazy" decoding="async" />
 		</a>
@@ -910,7 +1074,7 @@
 		<a class="widget-categories__link widget__link btn" href="/categories/snowflake/" title="Snowflake">Snowflake <span class="widget-categories__count">(3)</span></a>
 		<a class="widget-categories__link widget__link btn" href="/categories/splunk/" title="Splunk">Splunk <span class="widget-categories__count">(1)</span></a>
 		<a class="widget-categories__link widget__link btn" href="/categories/spring-boot/" title="Spring Boot">Spring Boot <span class="widget-categories__count">(37)</span></a>
-		<a class="widget-categories__link widget__link btn" href="/categories/tools/" title="Tools">Tools <span class="widget-categories__count">(8)</span></a>
+		<a class="widget-categories__link widget__link btn" href="/categories/tools/" title="Tools">Tools <span class="widget-categories__count">(13)</span></a>
 	</div>
 </div>
 

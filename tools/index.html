@@ -14,7 +14,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://codingnconcepts.com/tools/" />
 <meta property="og:image" content="https://codingnconcepts.com/img/og-default.jpg"/>
-<meta property="og:updated_time" content="2026-11-22T00:00:00+00:00" />
+<meta property="og:updated_time" content="2026-11-24T00:00:00+00:00" />
 <meta property="og:site_name" content="CodingNConcepts" />
 <meta property="fb:admins" content="177784346770196" />
 	
@@ -504,6 +504,835 @@
 			<div class="primary">
 			
 <main class="main list" role="main"><article class="list__item post">
+	<figure class="list__thumbnail">
+		<a href="https://codingnconcepts.com/tools/base64-encode-decode/">
+			<img src="/img/logo/converter.png" alt="Base64 Encode and Decode Online: Text ⇄ Base64" loading="lazy" decoding="async" />
+		</a>
+	</figure>
+	<div class="list__body">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/tools/base64-encode-decode/" rel="bookmark">
+				Base64 Encode and Decode Online: Text ⇄ Base64
+				</a>
+			</h3>
+			
+		</header>
+		<div class="content list__excerpt post__content clearfix">
+			<style>
+.form-label, .form-input {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.form-input {
+  padding: 10px;
+  font-size: 16px;
+}
+.form-group {
+  margin: auto;
+  min-width: 50%;
+}
+.input-group {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  width: 100%;
+}
+.input-group-append, .input-group-prepend {
+  margin-right: -1px;
+  display: flex;
+}
+.input-group-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: .375rem .75rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  min-width: 60px;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.input-group>.form-control:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group>.form-control:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.input-group>.input-group-prepend>.input-group-text {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.input-group>.input-group-append>.input-group-text {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group>.form-control {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 1%;
+  margin-bottom: 0;
+  padding: 10px;
+}
+.input-group {
+  padding-bottom: 20px;
+}
+.converter-icon {
+  width: 3em;
+  margin: auto;
+  padding-bottom: 1em;
+}
+.input-group>.input-group-append> .icon-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.icon-button {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    background-color: #ced4da;
+    border-color: #ced4da;
+    border-left: none;    
+}
+.icon-button:active {
+    background-color: #e9ecef
+}
+.icon-copy {
+    background: url("/icon/clipboard.svg") no-repeat 16px 16px;
+    padding-left: 35px;    
+}
+/* converter icon spins while converting */
+@keyframes converter-spin { to { transform: rotate(360deg); } }
+.converter-icon img.spinning { animation: converter-spin .6s linear infinite; }
+.converter-icon img.spinning.reverse { animation-direction: reverse; }
+@media (prefers-reduced-motion: reduce) {
+  .converter-icon img.spinning { animation: none; opacity: .6; }
+}
+/* keep wide tables from stretching the page on phones */
+.primary { min-width: 0; max-width: 100%; }
+.table-scroll { overflow-x: auto; }
+.converter-message { margin: -12px 0 16px; font-size: 0.95rem; text-align: left; }
+.converter-message.is-error { color: #b42318; }
+.b64-area { font-family: monospace; font-size: 0.95rem; min-height: 110px; resize: vertical; }
+.b64-option { display: block; margin: -8px 0 8px; font-size: 0.95rem; }
+.b64-sizes { font-size: 0.85rem; color: #475467; }
+</style>
+<p>Encode text to Base64 or decode Base64 back to text, as you type. For example, <strong>Hello, World!</strong> is <strong>SGVsbG8sIFdvcmxkIQ==</strong>. Everything runs in your browser; nothing is sent to a server.</p>
+		</div>
+	</div>
+</article><article class="list__item post">
+	<figure class="list__thumbnail">
+		<a href="https://codingnconcepts.com/tools/number-base-converter/">
+			<img src="/img/logo/converter.png" alt="Binary, Hex, Decimal and Octal Converter" loading="lazy" decoding="async" />
+		</a>
+	</figure>
+	<div class="list__body">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/tools/number-base-converter/" rel="bookmark">
+				Binary, Hex, Decimal and Octal Converter
+				</a>
+			</h3>
+			
+		</header>
+		<div class="content list__excerpt post__content clearfix">
+			<style>
+.form-label, .form-input {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.form-input {
+  padding: 10px;
+  font-size: 16px;
+}
+.form-group {
+  margin: auto;
+  min-width: 50%;
+}
+.input-group {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  width: 100%;
+}
+.input-group-append, .input-group-prepend {
+  margin-right: -1px;
+  display: flex;
+}
+.input-group-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: .375rem .75rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  min-width: 60px;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.input-group>.form-control:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group>.form-control:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.input-group>.input-group-prepend>.input-group-text {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.input-group>.input-group-append>.input-group-text {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group>.form-control {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 1%;
+  margin-bottom: 0;
+  padding: 10px;
+}
+.input-group {
+  padding-bottom: 20px;
+}
+.converter-icon {
+  width: 3em;
+  margin: auto;
+  padding-bottom: 1em;
+}
+.input-group>.input-group-append> .icon-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.icon-button {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    background-color: #ced4da;
+    border-color: #ced4da;
+    border-left: none;    
+}
+.icon-button:active {
+    background-color: #e9ecef
+}
+.icon-copy {
+    background: url("/icon/clipboard.svg") no-repeat 16px 16px;
+    padding-left: 35px;    
+}
+/* converter icon spins while converting */
+@keyframes converter-spin { to { transform: rotate(360deg); } }
+.converter-icon img.spinning { animation: converter-spin .6s linear infinite; }
+.converter-icon img.spinning.reverse { animation-direction: reverse; }
+@media (prefers-reduced-motion: reduce) {
+  .converter-icon img.spinning { animation: none; opacity: .6; }
+}
+/* keep wide tables from stretching the page on phones */
+.primary { min-width: 0; max-width: 100%; }
+.table-scroll { overflow-x: auto; }
+.converter-message { margin: -12px 0 16px; font-size: 0.95rem; text-align: left; }
+.converter-message.is-error { color: #b42318; }
+.base-input { font-family: monospace; font-size: 1.05rem; }
+.base-options { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; font-size: 0.95rem; margin-bottom: 10px; }
+.base-options select { padding: 4px 8px; border: 1px solid #ced4da; border-radius: .25rem; }
+.base-extra th { text-align: left; white-space: nowrap; }
+.base-extra td { font-family: monospace; word-break: break-all; }
+</style>
+<p>Convert numbers between binary, hexadecimal, decimal and octal as you type. For example, <strong>255</strong> in decimal is <strong>FF</strong> in hex, <strong>1111 1111</strong> in binary and <strong>377</strong> in octal.</p>
+		</div>
+	</div>
+</article><article class="list__item post">
+	<figure class="list__thumbnail">
+		<a href="https://codingnconcepts.com/tools/cron-expression-explainer/">
+			<img src="/img/logo/converter.png" alt="Cron Expression Explainer: Crontab Schedule in Plain English" loading="lazy" decoding="async" />
+		</a>
+	</figure>
+	<div class="list__body">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/tools/cron-expression-explainer/" rel="bookmark">
+				Cron Expression Explainer: Crontab Schedule in Plain English
+				</a>
+			</h3>
+			
+		</header>
+		<div class="content list__excerpt post__content clearfix">
+			<style>
+.form-label, .form-input {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.form-input {
+  padding: 10px;
+  font-size: 16px;
+}
+.form-group {
+  margin: auto;
+  min-width: 50%;
+}
+.input-group {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  width: 100%;
+}
+.input-group-append, .input-group-prepend {
+  margin-right: -1px;
+  display: flex;
+}
+.input-group-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: .375rem .75rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  min-width: 60px;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.input-group>.form-control:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group>.form-control:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.input-group>.input-group-prepend>.input-group-text {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.input-group>.input-group-append>.input-group-text {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group>.form-control {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 1%;
+  margin-bottom: 0;
+  padding: 10px;
+}
+.input-group {
+  padding-bottom: 20px;
+}
+.converter-icon {
+  width: 3em;
+  margin: auto;
+  padding-bottom: 1em;
+}
+.input-group>.input-group-append> .icon-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.icon-button {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    background-color: #ced4da;
+    border-color: #ced4da;
+    border-left: none;    
+}
+.icon-button:active {
+    background-color: #e9ecef
+}
+.icon-copy {
+    background: url("/icon/clipboard.svg") no-repeat 16px 16px;
+    padding-left: 35px;    
+}
+/* converter icon spins while converting */
+@keyframes converter-spin { to { transform: rotate(360deg); } }
+.converter-icon img.spinning { animation: converter-spin .6s linear infinite; }
+.converter-icon img.spinning.reverse { animation-direction: reverse; }
+@media (prefers-reduced-motion: reduce) {
+  .converter-icon img.spinning { animation: none; opacity: .6; }
+}
+/* keep wide tables from stretching the page on phones */
+.primary { min-width: 0; max-width: 100%; }
+.table-scroll { overflow-x: auto; }
+.converter-message { margin: -12px 0 16px; font-size: 0.95rem; text-align: left; }
+.converter-message.is-error { color: #b42318; }
+.cron-input { font-family: monospace; font-size: 1.15rem; letter-spacing: 1px; }
+.cron-fields { display: flex; gap: 6px; flex-wrap: wrap; font-size: 0.8rem; color: #475467; margin: -14px 0 10px; }
+.cron-fields span { border: 1px solid #d0d5dd; border-radius: 4px; padding: 1px 6px; }
+.cron-english { font-size: 1.2rem; font-weight: 600; text-align: center; }
+.cron-next { font-family: monospace; font-size: 0.95rem; }
+.cron-option { font-size: 0.95rem; }
+</style>
+<p>Paste a cron expression to read it in plain English and see when it will run next. For example, <strong>*/15 9-17 * * 1-5</strong> means &ldquo;every 15 minutes, from 09:00 to 17:59, Monday through Friday&rdquo;.</p>
+		</div>
+	</div>
+</article><article class="list__item post">
+	<figure class="list__thumbnail">
+		<a href="https://codingnconcepts.com/tools/jwt-decoder/">
+			<img src="/img/logo/converter.png" alt="JWT Decoder: Decode JSON Web Tokens and Explain the Claims" loading="lazy" decoding="async" />
+		</a>
+	</figure>
+	<div class="list__body">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/tools/jwt-decoder/" rel="bookmark">
+				JWT Decoder: Decode JSON Web Tokens and Explain the Claims
+				</a>
+			</h3>
+			
+		</header>
+		<div class="content list__excerpt post__content clearfix">
+			<style>
+.form-label, .form-input {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.form-input {
+  padding: 10px;
+  font-size: 16px;
+}
+.form-group {
+  margin: auto;
+  min-width: 50%;
+}
+.input-group {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  width: 100%;
+}
+.input-group-append, .input-group-prepend {
+  margin-right: -1px;
+  display: flex;
+}
+.input-group-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: .375rem .75rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  min-width: 60px;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.input-group>.form-control:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group>.form-control:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.input-group>.input-group-prepend>.input-group-text {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.input-group>.input-group-append>.input-group-text {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group>.form-control {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 1%;
+  margin-bottom: 0;
+  padding: 10px;
+}
+.input-group {
+  padding-bottom: 20px;
+}
+.converter-icon {
+  width: 3em;
+  margin: auto;
+  padding-bottom: 1em;
+}
+.input-group>.input-group-append> .icon-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.icon-button {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    background-color: #ced4da;
+    border-color: #ced4da;
+    border-left: none;    
+}
+.icon-button:active {
+    background-color: #e9ecef
+}
+.icon-copy {
+    background: url("/icon/clipboard.svg") no-repeat 16px 16px;
+    padding-left: 35px;    
+}
+/* converter icon spins while converting */
+@keyframes converter-spin { to { transform: rotate(360deg); } }
+.converter-icon img.spinning { animation: converter-spin .6s linear infinite; }
+.converter-icon img.spinning.reverse { animation-direction: reverse; }
+@media (prefers-reduced-motion: reduce) {
+  .converter-icon img.spinning { animation: none; opacity: .6; }
+}
+/* keep wide tables from stretching the page on phones */
+.primary { min-width: 0; max-width: 100%; }
+.table-scroll { overflow-x: auto; }
+.converter-message { margin: -12px 0 16px; font-size: 0.95rem; text-align: left; }
+.converter-message.is-error { color: #b42318; }
+.jwt-area { font-family: monospace; font-size: 0.9rem; min-height: 110px; resize: vertical; word-break: break-all; }
+.jwt-colored { font-family: monospace; font-size: 0.85rem; word-break: break-all; }
+.jwt-h { color: #d92d20; }
+.jwt-p { color: #7a2ed6; }
+.jwt-s { color: #1570ef; }
+.jwt-title { margin-top: 18px; }
+.jwt-json { font-size: 0.85rem; white-space: pre-wrap; word-break: break-word; }
+.jwt-claims { font-size: 0.85rem; }
+.jwt-value { word-break: break-all; font-family: monospace; }
+.jwt-status { text-align: center; font-weight: 600; }
+.jwt-status ul { text-align: left; font-weight: 400; }
+.jwt-good { color: #067647; }
+.jwt-bad { color: #b42318; }
+.jwt-warn { color: #b54708; }
+.inline-copy { padding: 2px 10px; vertical-align: middle; }
+</style>
+<p>Paste a JSON Web Token (JWT) to decode its header and payload, see what each claim means, and check whether it has expired. Decoding happens entirely in your browser; the token is never sent to a server.</p>
+		</div>
+	</div>
+</article><article class="list__item post">
+	<figure class="list__thumbnail">
+		<a href="https://codingnconcepts.com/tools/unix-timestamp-converter/">
+			<img src="/img/logo/converter.png" alt="Unix Timestamp Converter: Epoch to Date and Date to Epoch" loading="lazy" decoding="async" />
+		</a>
+	</figure>
+	<div class="list__body">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/tools/unix-timestamp-converter/" rel="bookmark">
+				Unix Timestamp Converter: Epoch to Date and Date to Epoch
+				</a>
+			</h3>
+			
+		</header>
+		<div class="content list__excerpt post__content clearfix">
+			<style>
+.form-label, .form-input {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.form-input {
+  padding: 10px;
+  font-size: 16px;
+}
+.form-group {
+  margin: auto;
+  min-width: 50%;
+}
+.input-group {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  width: 100%;
+}
+.input-group-append, .input-group-prepend {
+  margin-right: -1px;
+  display: flex;
+}
+.input-group-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: .375rem .75rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  min-width: 60px;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.input-group>.form-control:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group>.form-control:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.input-group>.input-group-prepend>.input-group-text {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.input-group>.input-group-append>.input-group-text {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group>.form-control {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 1%;
+  margin-bottom: 0;
+  padding: 10px;
+}
+.input-group {
+  padding-bottom: 20px;
+}
+.converter-icon {
+  width: 3em;
+  margin: auto;
+  padding-bottom: 1em;
+}
+.input-group>.input-group-append> .icon-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.icon-button {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    background-color: #ced4da;
+    border-color: #ced4da;
+    border-left: none;    
+}
+.icon-button:active {
+    background-color: #e9ecef
+}
+.icon-copy {
+    background: url("/icon/clipboard.svg") no-repeat 16px 16px;
+    padding-left: 35px;    
+}
+/* converter icon spins while converting */
+@keyframes converter-spin { to { transform: rotate(360deg); } }
+.converter-icon img.spinning { animation: converter-spin .6s linear infinite; }
+.converter-icon img.spinning.reverse { animation-direction: reverse; }
+@media (prefers-reduced-motion: reduce) {
+  .converter-icon img.spinning { animation: none; opacity: .6; }
+}
+/* keep wide tables from stretching the page on phones */
+.primary { min-width: 0; max-width: 100%; }
+.table-scroll { overflow-x: auto; }
+.converter-message { margin: -12px 0 16px; font-size: 0.95rem; text-align: left; }
+.converter-message.is-error { color: #b42318; }
+.now-line { font-size: 1rem; }
+.now-copy { padding: 2px 10px; vertical-align: middle; }
+.ts-result th { text-align: left; white-space: nowrap; }
+.ts-result th select { max-width: 170px; }
+.ts-result td { font-family: monospace; }
+.inline-copy { padding: 2px 10px; vertical-align: middle; }
+@media (max-width: 640px) {
+  .ts-result th, .ts-result td { display: block; width: 100%; }
+  .ts-result td { padding-top: 0; border-top: none; }
+}
+</style>
+<p>Convert a Unix (epoch) timestamp to a human-readable date, or a date to a timestamp, in any time zone. For example, <strong>1767225600</strong> is <strong>1 January 2026, 00:00:00 UTC</strong>.</p>
+		</div>
+	</div>
+</article><article class="list__item post">
 	<figure class="list__thumbnail">
 		<a href="https://codingnconcepts.com/tools/chmod-calculator/">
 			<img src="/img/logo/calculator.png" alt="chmod Calculator: Linux File Permissions (755, 644, rwxr-xr-x)" loading="lazy" decoding="async" />
@@ -1175,502 +2004,13 @@ select.form-control {
 </style>
 		</div>
 	</div>
-</article><article class="list__item post">
-	<figure class="list__thumbnail">
-		<a href="https://codingnconcepts.com/tools/number-to-roman/">
-			<img src="/img/logo/converter.png" alt="Roman Numeral Converter: Numbers ⇄ Roman Numerals" loading="lazy" decoding="async" />
-		</a>
-	</figure>
-	<div class="list__body">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/tools/number-to-roman/" rel="bookmark">
-				Roman Numeral Converter: Numbers ⇄ Roman Numerals
-				</a>
-			</h3>
-			
-		</header>
-		<div class="content list__excerpt post__content clearfix">
-			<p>Convert a number to Roman numerals, or Roman numerals back to a normal number, as you type. For example, <strong>2026 = MMXXVI</strong> and <strong>MCMXCIV = 1994</strong>.</p>
-<style>
-.form-label, .form-input {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-.form-input {
-  padding: 10px;
-  font-size: 16px;
-}
-.form-group {
-  margin: auto;
-  min-width: 50%;
-}
-.input-group {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  width: 100%;
-}
-.input-group-append, .input-group-prepend {
-  margin-right: -1px;
-  display: flex;
-}
-.input-group-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: .375rem .75rem;
-  margin-bottom: 0;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #495057;
-  text-align: center;
-  white-space: nowrap;
-  background-color: #e9ecef;
-  border: 1px solid #ced4da;
-  border-radius: .25rem;
-  min-width: 60px;
-}
-.form-control {
-  display: block;
-  width: 100%;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: .25rem;
-  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-.input-group>.form-control:not(:first-child) {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.input-group>.form-control:not(:last-child) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-.input-group>.input-group-prepend>.input-group-text {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.input-group>.input-group-append>.input-group-text {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.input-group>.form-control {
-  position: relative;
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 1%;
-  margin-bottom: 0;
-  padding: 10px;
-}
-.input-group {
-  padding-bottom: 20px;
-}
-.roman {
-  font-family: roman;
-}
-.converter-icon {
-  width: 3em;
-  margin: auto;
-  padding-bottom: 1em;
-}
-.label {
-  text-align: left;
-}
-.input-group>.input-group-append> .icon-button {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-.icon-button {
-    display: inline-block;
-    font-weight: 400;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    border: 1px solid transparent;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    background-color: #ced4da;
-    border-color: #ced4da;
-    border-left: none;    
-}
-.icon-button:active {
-    background-color: #e9ecef
-}
-.icon-copy {
-    background: url("/icon/clipboard.svg") no-repeat 16px 16px;
-    padding-left: 35px;    
-}
-/* keep wide tables from stretching the page on phones */
-.primary {
-  min-width: 0;
-  max-width: 100%;
-}
-.table-scroll {
-  overflow-x: auto;
-}
-/* converter icon spins while converting */
-@keyframes converter-spin { to { transform: rotate(360deg); } }
-.converter-icon img { transition: transform .2s ease; }
-.converter-icon img.spinning { animation: converter-spin .6s linear infinite; }
-.converter-icon img.spinning.reverse { animation-direction: reverse; }
-@media (prefers-reduced-motion: reduce) {
-  .converter-icon img.spinning { animation: none; opacity: .6; }
-}
-.converter-message {
-  margin: -12px 0 16px;
-  font-size: 0.95rem;
-  text-align: left;
-}
-.converter-message.is-error { color: #b42318; }
-.converter-message.is-info { color: #475467; }
-.date-options {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  padding-bottom: 20px;
-}
-.date-options select {
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  border: 1px solid #ced4da;
-  border-radius: .25rem;
-}
-</style>
-		</div>
-	</div>
-</article><article class="list__item post">
-	<figure class="list__thumbnail">
-		<a href="https://codingnconcepts.com/tools/pixel-to-rem/">
-			<img src="/img/logo/converter.png" alt="PX to REM Converter: Pixels ⇄ Rem for Any Root Font Size" loading="lazy" decoding="async" />
-		</a>
-	</figure>
-	<div class="list__body">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/tools/pixel-to-rem/" rel="bookmark">
-				PX to REM Converter: Pixels ⇄ Rem for Any Root Font Size
-				</a>
-			</h3>
-			
-		</header>
-		<div class="content list__excerpt post__content clearfix">
-			<style>
-.form-label, .form-input {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-.form-input {
-  padding: 10px;
-  font-size: 16px;
-}
-.form-group {
-  margin: auto;
-  min-width: 50%;
-}
-.input-group {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  width: 100%;
-}
-.input-group-append, .input-group-prepend {
-  margin-right: -1px;
-  display: flex;
-}
-.input-group-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: .375rem .75rem;
-  margin-bottom: 0;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #495057;
-  text-align: center;
-  white-space: nowrap;
-  background-color: #e9ecef;
-  border: 1px solid #ced4da;
-  border-radius: .25rem;
-  min-width: 60px;
-}
-.form-control {
-  display: block;
-  width: 100%;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: .25rem;
-  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-.input-group>.form-control:not(:first-child) {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.input-group>.form-control:not(:last-child) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-.input-group>.input-group-prepend>.input-group-text {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.input-group>.form-control {
-  position: relative;
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 1%;
-  margin-bottom: 0;
-  padding: 10px;
-}
-.input-group {
-  padding-bottom: 20px;
-}
-.input-group>.input-group-append> .icon-button {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-.icon-button {
-    display: inline-block;
-    font-weight: 400;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    border: 1px solid transparent;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    background-color: #ced4da;
-    border-color: #ced4da;
-    border-left: none;    
-}
-.icon-button:active {
-    background-color: #e9ecef
-}
-.icon-copy {
-    background: url("/icon/clipboard.svg") no-repeat 16px 16px;
-    padding-left: 35px;    
-}
-/* converter icon spins while converting */
-@keyframes converter-spin { to { transform: rotate(360deg); } }
-.converter-icon img.spinning { animation: converter-spin .6s linear infinite; }
-.converter-icon img.spinning.reverse { animation-direction: reverse; }
-@media (prefers-reduced-motion: reduce) {
-  .converter-icon img.spinning { animation: none; opacity: .6; }
-}
-/* keep wide tables from stretching the page on phones */
-.primary { min-width: 0; max-width: 100%; }
-.table-scroll { overflow-x: auto; }
-.converter-message { margin: -12px 0 16px; font-size: 0.95rem; text-align: left; }
-.converter-message.is-error { color: #b42318; }
-</style>
-<p>Convert pixels to rem, or rem back to pixels, as you type. With the default root font size of 16px, <strong>24px = 1.5rem</strong> and <strong>0.875rem = 14px</strong>.</p>
-		</div>
-	</div>
-</article><article class="list__item post">
-	<figure class="list__thumbnail">
-		<a href="https://codingnconcepts.com/tools/rgb-to-hex/">
-			<img src="/img/logo/converter.png" alt="RGB to Hex Converter: RGB ⇄ Hex Color Codes with Color Picker" loading="lazy" decoding="async" />
-		</a>
-	</figure>
-	<div class="list__body">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/tools/rgb-to-hex/" rel="bookmark">
-				RGB to Hex Converter: RGB ⇄ Hex Color Codes with Color Picker
-				</a>
-			</h3>
-			
-		</header>
-		<div class="content list__excerpt post__content clearfix">
-			<style>
-.form-label, .form-input {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-.form-input {
-  padding: 10px;
-  font-size: 16px;
-}
-.form-group {
-  margin: auto;
-  min-width: 50%;
-}
-.input-group {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  width: 100%;
-}
-.input-group-append, .input-group-prepend {
-  margin-right: -1px;
-  display: flex;
-}
-.input-group-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: .375rem .75rem;
-  margin-bottom: 0;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #495057;
-  text-align: center;
-  white-space: nowrap;
-  background-color: #e9ecef;
-  border: 1px solid #ced4da;
-  border-radius: .25rem;
-  min-width: 60px;
-}
-.form-control {
-  display: block;
-  width: 100%;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: .25rem;
-  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-.input-group>.form-control:not(:first-child) {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.input-group>.form-control:not(:last-child) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-.input-group>.input-group-prepend>.input-group-text {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.input-group>.input-group-append>.input-group-text {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.input-group>.form-control {
-  position: relative;
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 1%;
-  margin-bottom: 0;
-  padding: 10px;
-}
-.input-group {
-  padding-bottom: 20px;
-}
-.converter-icon {
-  width: 3em;
-  margin: auto;
-  padding-bottom: 1em;
-}
-.input-group>.input-group-append> .icon-button {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-.icon-button {
-    display: inline-block;
-    font-weight: 400;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    border: 1px solid transparent;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    background-color: #ced4da;
-    border-color: #ced4da;
-    border-left: none;    
-}
-.icon-button:active {
-    background-color: #e9ecef
-}
-.icon-copy {
-    background: url("/icon/clipboard.svg") no-repeat 16px 16px;
-    padding-left: 35px;    
-}
-/* converter icon spins while converting */
-@keyframes converter-spin { to { transform: rotate(360deg); } }
-.converter-icon img.spinning { animation: converter-spin .6s linear infinite; }
-.converter-icon img.spinning.reverse { animation-direction: reverse; }
-@media (prefers-reduced-motion: reduce) {
-  .converter-icon img.spinning { animation: none; opacity: .6; }
-}
-/* keep wide tables from stretching the page on phones */
-.primary { min-width: 0; max-width: 100%; }
-.table-scroll { overflow-x: auto; }
-.converter-message { margin: -12px 0 16px; font-size: 0.95rem; text-align: left; }
-.converter-message.is-error { color: #b42318; }
-</style>
-<p>Convert RGB to Hex or Hex to RGB as you type, or pick a color. For example, <strong>rgb(255, 99, 71) = #FF6347</strong> (tomato).</p>
-		</div>
-	</div>
 </article>
 </main>
+
+<div class="pagination">
+	<span class="pagination__item pagination__item--current">1/2</span>
+	<a class="pagination__item pagination__item--next btn" href="/tools/page/2/">»</a>
+</div>
 
 
 			</div>
@@ -1810,7 +2150,7 @@ select.form-control {
 		<a class="widget-categories__link widget__link btn" href="/categories/snowflake/" title="Snowflake">Snowflake <span class="widget-categories__count">(3)</span></a>
 		<a class="widget-categories__link widget__link btn" href="/categories/splunk/" title="Splunk">Splunk <span class="widget-categories__count">(1)</span></a>
 		<a class="widget-categories__link widget__link btn" href="/categories/spring-boot/" title="Spring Boot">Spring Boot <span class="widget-categories__count">(37)</span></a>
-		<a class="widget-categories__link widget__link btn" href="/categories/tools/" title="Tools">Tools <span class="widget-categories__count">(8)</span></a>
+		<a class="widget-categories__link widget__link btn" href="/categories/tools/" title="Tools">Tools <span class="widget-categories__count">(13)</span></a>
 	</div>
 </div>
 
