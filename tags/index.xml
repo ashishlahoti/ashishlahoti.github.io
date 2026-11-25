@@ -9,6 +9,38 @@
     <copyright>CodingNConcepts</copyright>
     <lastBuildDate>Tue, 24 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Application Security</title>
+      <link>https://codingnconcepts.com/tags/application-security/</link>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/application-security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Azure Certification</title>
+      <link>https://codingnconcepts.com/tags/azure-certification/</link>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/azure-certification/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Azure SQL</title>
+      <link>https://codingnconcepts.com/tags/azure-sql/</link>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/azure-sql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Certification</title>
+      <link>https://codingnconcepts.com/tags/certification/</link>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/certification/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Converter</title>
       <link>https://codingnconcepts.com/tags/converter/</link>
       <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
@@ -17,11 +49,59 @@
       <description></description>
     </item>
     <item>
+      <title>CSSLP</title>
+      <link>https://codingnconcepts.com/tags/csslp/</link>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/csslp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cybersecurity</title>
+      <link>https://codingnconcepts.com/tags/cybersecurity/</link>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/cybersecurity/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Developer</title>
       <link>https://codingnconcepts.com/tags/developer/</link>
       <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/developer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GCIH</title>
+      <link>https://codingnconcepts.com/tags/gcih/</link>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/gcih/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GIAC</title>
+      <link>https://codingnconcepts.com/tags/giac/</link>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/giac/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Incident Response</title>
+      <link>https://codingnconcepts.com/tags/incident-response/</link>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/incident-response/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ISC2</title>
+      <link>https://codingnconcepts.com/tags/isc2/</link>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/isc2/</guid>
       <description></description>
     </item>
     <item>
@@ -41,19 +121,19 @@
       <description></description>
     </item>
     <item>
+      <title>SQL Server</title>
+      <link>https://codingnconcepts.com/tags/sql-server/</link>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/sql-server/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Calculator</title>
       <link>https://codingnconcepts.com/tags/calculator/</link>
       <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/calculator/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Certification</title>
-      <link>https://codingnconcepts.com/tags/certification/</link>
-      <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/certification/</guid>
       <description></description>
     </item>
     <item>
@@ -78,22 +158,6 @@
       <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/roman/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Cybersecurity</title>
-      <link>https://codingnconcepts.com/tags/cybersecurity/</link>
-      <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/cybersecurity/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>GIAC</title>
-      <link>https://codingnconcepts.com/tags/giac/</link>
-      <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/giac/</guid>
       <description></description>
     </item>
     <item>
@@ -457,14 +521,6 @@
       <description></description>
     </item>
     <item>
-      <title>ISC2</title>
-      <link>https://codingnconcepts.com/tags/isc2/</link>
-      <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/isc2/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>ISTQB</title>
       <link>https://codingnconcepts.com/tags/istqb/</link>
       <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
@@ -606,14 +662,6 @@
       <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/aws-certification/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Azure Certification</title>
-      <link>https://codingnconcepts.com/tags/azure-certification/</link>
-      <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/azure-certification/</guid>
       <description></description>
     </item>
     <item>
@@ -942,14 +990,6 @@
       <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/azure-databricks/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Azure SQL</title>
-      <link>https://codingnconcepts.com/tags/azure-sql/</link>
-      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/azure-sql/</guid>
       <description></description>
     </item>
     <item>

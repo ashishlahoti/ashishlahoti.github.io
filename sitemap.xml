@@ -3,6 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://codingnconcepts.com/tags/application-security/</loc>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/azure/</loc>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/azure-certification/</loc>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/azure-sql/</loc>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/tools/base64-encode-decode/</loc>
     <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
@@ -14,6 +34,11 @@
   
   <url>
     <loc>https://codingnconcepts.com/categories/</loc>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/certification/</loc>
     <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
@@ -33,7 +58,57 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/tags/csslp/</loc>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/cybersecurity/</loc>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/tags/developer/</loc>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/gcih/</loc>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/giac/</loc>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/giac/</loc>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/giac/giac-certified-incident-handler-gcih-exam-questions/</loc>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/incident-response/</loc>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/isc2/</loc>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/isc2/</loc>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/isc2/isc2-certified-secure-software-lifecycle-professional-csslp-exam-questions/</loc>
     <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
@@ -48,7 +123,17 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/azure/azure-database-administrator-dp-300-exam-questions/</loc>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/tags/security/</loc>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/sql-server/</loc>
     <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
@@ -70,11 +155,6 @@
   <url>
     <loc>https://codingnconcepts.com/tags/calculator/</loc>
     <lastmod>2026-11-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/certification/</loc>
-    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -118,28 +198,13 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/cybersecurity/</loc>
-    <lastmod>2026-11-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/giac/</loc>
-    <lastmod>2026-11-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/giac/</loc>
-    <lastmod>2026-11-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/giac/giac-security-essentials-gsec-exam-questions/</loc>
-    <lastmod>2026-11-19T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/gsec/</loc>
-    <lastmod>2026-11-19T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -164,12 +229,12 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/project-management/</loc>
-    <lastmod>2026-11-20T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/ai/</loc>
-    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -299,7 +364,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/ai-agents/</loc>
-    <lastmod>2026-11-20T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -319,7 +384,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/generative-ai/</loc>
-    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -414,7 +479,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/agile-testing/</loc>
-    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -424,7 +489,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/cdpse/</loc>
-    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -434,17 +499,17 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/context-engineering/</loc>
-    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/ctal-at/</loc>
-    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/ctal-ta/</loc>
-    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -454,22 +519,22 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/data-privacy/</loc>
-    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/categories/databricks/</loc>
-    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/databricks/</loc>
-    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/databricks/databricks-context-engineer-associate-exam-questions/</loc>
-    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -494,27 +559,17 @@
   
   <url>
     <loc>https://codingnconcepts.com/categories/isaca/</loc>
-    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/isaca/</loc>
-    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/isaca/isaca-certified-data-privacy-solutions-engineer-cdpse-exam-questions/</loc>
-    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/isc2/</loc>
-    <lastmod>2026-11-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/isc2/</loc>
-    <lastmod>2026-11-19T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -529,22 +584,22 @@
   
   <url>
     <loc>https://codingnconcepts.com/categories/istqb/</loc>
-    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/istqb/</loc>
-    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/istqb/istqb-certified-tester-advanced-level-agile-tester-ctal-at-v2-exam-questions/</loc>
-    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/istqb/istqb-certified-tester-advanced-level-test-analyst-ctal-ta-v4-exam-questions/</loc>
-    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -589,7 +644,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/software-testing/</loc>
-    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -634,12 +689,12 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/ai-infrastructure/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/ai-networking/</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -683,16 +738,6 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/categories/azure/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/azure-certification/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/tags/cbrops/</loc>
     <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
@@ -709,17 +754,17 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/cipm/</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/cipp/e/</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/cipt/</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -759,7 +804,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/ctfl-at/</loc>
-    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -774,12 +819,12 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/dynamics-365-contact-center/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/dynamics-365-sales/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -789,42 +834,42 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/gdpr/</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/categories/iapp/</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/iapp/</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/iapp/iapp-certified-information-privacy-manager-cipm-exam-questions/</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/iapp/iapp-certified-information-privacy-professional-europe-cipp-e-exam-questions/</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/iapp/iapp-certified-information-privacy-technologist-cipt-exam-questions/</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/infiniband/</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/istqb/istqb-certified-tester-foundation-level-agile-tester-ctfl-at-exam-questions/</loc>
-    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -849,17 +894,17 @@
   
   <url>
     <loc>https://codingnconcepts.com/azure/azure-dynamics-365-contact-center-ai-engineer-ab-250-exam-questions/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/azure/azure-dynamics-365-sales-ai-consultant-ab-210-exam-questions/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/mlops/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -879,12 +924,12 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/ncp-ain/</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/ncp-aio/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -894,12 +939,12 @@
   
   <url>
     <loc>https://codingnconcepts.com/categories/nvidia/</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/nvidia/</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -919,47 +964,47 @@
   
   <url>
     <loc>https://codingnconcepts.com/nvidia/nvidia-ai-networking-professional-ncp-ain-exam-questions/</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/nvidia/nvidia-ai-operations-professional-ncp-aio-exam-questions/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/categories/pmi/</loc>
-    <lastmod>2026-11-20T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/pmi/</loc>
-    <lastmod>2026-11-20T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/pmi/pmi-risk-management-professional-rmp-exam-questions/</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/pmi-rmp/</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/privacy/</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/privacy-engineering/</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/privacy-program-management/</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -989,7 +1034,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/risk-management/</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1009,7 +1054,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/categories/agile/</loc>
-    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1025,11 +1070,6 @@
   <url>
     <loc>https://codingnconcepts.com/tags/azure-databricks/</loc>
     <lastmod>2026-11-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/azure-sql/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1054,7 +1094,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/azure/azure-sql-ai-developer-associate-dp-800-exam-questions/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1104,7 +1144,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/vector-search/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1119,12 +1159,12 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/ai-governance/</loc>
-    <lastmod>2026-11-11T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/tags/ai-risk/</loc>
-    <lastmod>2026-11-11T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1134,7 +1174,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/ai-native/</loc>
-    <lastmod>2026-11-10T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1314,7 +1354,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/isaca/isaca-advanced-in-ai-risk-aair-exam-questions/</loc>
-    <lastmod>2026-11-11T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1409,12 +1449,12 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/safe/</loc>
-    <lastmod>2026-11-22T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://codingnconcepts.com/agile/safe-ai-native-foundations-exam-questions/</loc>
-    <lastmod>2026-11-10T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1619,7 +1659,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/data/</loc>
-    <lastmod>2026-11-11T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1879,7 +1919,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/azure/azure-data-fundamentals-dp-900-exam-questions/</loc>
-    <lastmod>2026-11-11T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1899,7 +1939,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/cloud/</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1919,7 +1959,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/isc2/isc2-certified-cloud-security-professional-ccsp-exam-questions/</loc>
-    <lastmod>2026-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -2319,7 +2359,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/isc2/isc2-certified-information-systems-security-professional-cissp-exam-questions/</loc>
-    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
