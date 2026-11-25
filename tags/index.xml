@@ -7,7 +7,39 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>CodingNConcepts</copyright>
-    <lastBuildDate>Tue, 24 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Certification</title>
+      <link>https://codingnconcepts.com/tags/certification/</link>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/certification/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SPL</title>
+      <link>https://codingnconcepts.com/tags/spl/</link>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/spl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SPLK-1002</title>
+      <link>https://codingnconcepts.com/tags/splk-1002/</link>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/splk-1002/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Splunk</title>
+      <link>https://codingnconcepts.com/tags/splunk/</link>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/tags/splunk/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Application Security</title>
       <link>https://codingnconcepts.com/tags/application-security/</link>
@@ -30,14 +62,6 @@
       <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/azure-sql/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Certification</title>
-      <link>https://codingnconcepts.com/tags/certification/</link>
-      <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/certification/</guid>
       <description></description>
     </item>
     <item>
@@ -1377,27 +1401,11 @@
       <description></description>
     </item>
     <item>
-      <title>SPL</title>
-      <link>https://codingnconcepts.com/tags/spl/</link>
-      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/spl/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>SPLK-1001</title>
       <link>https://codingnconcepts.com/tags/splk-1001/</link>
       <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://codingnconcepts.com/tags/splk-1001/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Splunk</title>
-      <link>https://codingnconcepts.com/tags/splunk/</link>
-      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://codingnconcepts.com/tags/splunk/</guid>
       <description></description>
     </item>
     <item>
