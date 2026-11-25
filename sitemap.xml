@@ -28,7 +28,17 @@
   </url>
   
   <url>
+    <loc>https://codingnconcepts.com/tags/cis-itsm/</loc>
+    <lastmod>2026-11-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/</loc>
+    <lastmod>2026-11-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/itsm/</loc>
     <lastmod>2026-11-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -44,6 +54,21 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/microsoft-365-copilot/</loc>
+    <lastmod>2026-11-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/servicenow/</loc>
+    <lastmod>2026-11-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/servicenow/</loc>
+    <lastmod>2026-11-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/servicenow/servicenow-certified-implementation-specialist-itsm-cis-itsm-exam-questions/</loc>
     <lastmod>2026-11-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -1564,7 +1589,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/application-development/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1574,7 +1599,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/cad/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1648,18 +1673,8 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/categories/servicenow/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/servicenow/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/servicenow/servicenow-certified-application-developer-cad-exam-questions/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -2048,11 +2063,6 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/itsm/</loc>
-    <lastmod>2026-11-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/snowflake/snowflake-snowpro-core-cof-c03-exam-questions/</loc>
     <lastmod>2026-11-16T00:00:00+00:00</lastmod>
   </url>
@@ -2189,7 +2199,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/csa/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -2299,7 +2309,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/servicenow/servicenow-certified-system-administrator-csa-exam-questions/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
