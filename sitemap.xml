@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://codingnconcepts.com/tags/agent-365/</loc>
+    <lastmod>2026-11-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/categories/azure/</loc>
+    <lastmod>2026-11-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/azure-certification/</loc>
+    <lastmod>2026-11-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codingnconcepts.com/categories/</loc>
     <lastmod>2026-11-25T00:00:00+00:00</lastmod>
   </url>
@@ -14,6 +29,21 @@
   
   <url>
     <loc>https://codingnconcepts.com/</loc>
+    <lastmod>2026-11-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/microsoft-365/</loc>
+    <lastmod>2026-11-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/azure/azure-microsoft-365-ai-services-administrator-ab-650-exam-questions/</loc>
+    <lastmod>2026-11-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codingnconcepts.com/tags/microsoft-365-copilot/</loc>
     <lastmod>2026-11-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -49,16 +79,6 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/application-security/</loc>
-    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/categories/azure/</loc>
-    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codingnconcepts.com/tags/azure-certification/</loc>
     <lastmod>2026-11-24T00:00:00+00:00</lastmod>
   </url>
   
@@ -259,7 +279,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/ai/</loc>
-    <lastmod>2026-11-24T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1843,13 +1863,8 @@
   </url>
   
   <url>
-    <loc>https://codingnconcepts.com/tags/microsoft-365/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codingnconcepts.com/azure/azure-microsoft-365-administrator-ms-102-exam-questions/</loc>
-    <lastmod>2026-11-06T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -2319,7 +2334,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/tags/copilot/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -2384,7 +2399,7 @@
   
   <url>
     <loc>https://codingnconcepts.com/azure/azure-copilot-agent-administration-fundamentals-ab-900-exam-questions/</loc>
-    <lastmod>2026-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
