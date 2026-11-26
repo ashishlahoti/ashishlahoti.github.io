@@ -7,7 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>CodingNConcepts</copyright>
-    <lastBuildDate>Wed, 25 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://codingnconcepts.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LPI</title>
+      <link>https://codingnconcepts.com/categories/lpi/</link>
+      <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingnconcepts.com/categories/lpi/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Azure</title>
       <link>https://codingnconcepts.com/categories/azure/</link>
